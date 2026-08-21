@@ -498,8 +498,9 @@ selftest 通過。裁決本身、預註冊、凍結敘述、v0.6 原文:零改�
 作者說「發」。bundle（127 檔，黑名單零命中）同步至 staging，普通 push 上
 GitHub：commit `717fd85`（459710c → 717fd85，三層誠實歷史：v1 存證 → v0.6
 更正 → prereg → v0.7 裁決）。hub 網頁同址更新（v0.7 狀態橫幅＋L0P 進度列）。
-Zenodo v3 的上傳包已備（`publish/omtr_v0.7_zenodo.zip`，3.2 MB），發布鍵
-依規矩由作者按。LessWrong 交接檔已備（`publish/LW_HANDOFF_FOR_APP.md`，
+Zenodo v0.7 版隨後由 Claude 以瀏覽器代操作發布（作者明示授權；上傳
+`omtr-v0.7.zip` 3.4 MB、新標題、v3 說明、七個檢索關鍵字），
+**新版 DOI `10.5281/zenodo.22043744`**，掛概念 DOI 之下（v1→v2→v0.7）。LessWrong 交接檔已備（`publish/LW_HANDOFF_FOR_APP.md`，
 自足單檔）：作者決定親筆手寫英文、邊寫邊學，AI 只任指導老師（只教不寫）。
 
 **白話**：從 15:03 預註冊上鏈到 18:05 v0.7 push，一個下午走完
