@@ -33,6 +33,18 @@ in this disclosure rests on it — no detector score, in either direction, is ev
 about this work. The scope of AI involvement is what this statement says it is, and
 the process log is where you check it.
 
+### Division-of-labor amendment (dated 2026-08-21, evening)
+
+Effective with the work that follows draft v0.7 (the causal-phase design and
+onward), the first-pass literature search is conducted **by the author
+personally**: choosing search axes and query strings, screening abstracts, and
+deciding what gets a full-text read. AI agents assist with full-text retrieval,
+local-snapshot verbatim verification of quotations, and — where the author
+delegates it — supplementary searches. The statements above remain the accurate
+record for v0.5–v0.7, whose literature work was AI-executed; this amendment
+changes the process going forward, not the history. The change was requested by
+the author.
+
 ## 中文
 
 本研究由作者（高中生獨立研究者）發想、主持與決策。所有實質選擇——研究問題、範圍、
@@ -56,3 +68,11 @@ Claude 在某個時間點很可能參與過，無法區分文字是 Claude 所�
 翻譯或校對過的文字。截至本文撰寫時尚無公開偵測工具；Anthropic 已宣布即將推出
 偵測 API。本聲明的任何內容都不依賴這一點——無論偵測分數指向哪個方向，都不構成
 本研究的證據。AI 參與的範圍以本聲明的文字為準，查核請見製作歷程日誌。
+
+### 分工變更附註（2026-08-21 晚定）
+
+自 v0.7 之後的工作（因果階段設計起）生效：**文獻檢索的第一輪由作者本人
+執行**——選定檢索軸與查詢字串、以摘要篩選、決定哪些論文進入全文精讀。
+AI 代理協助全文取得、引文的本地快照逐字核對，以及（作者委派時的）補充
+檢索。上文各段對 v0.5–v0.7 的描述維持不變——那些版本的文獻工作確實由
+AI 執行；本附註改變的是此後的流程，不是歷史。此變更由作者本人提出。

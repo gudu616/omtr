@@ -38,6 +38,7 @@
 - [22 同分天花板](22-tie-ceiling.md) — 相關係數的可達上限，與對自己開刀的誠實
 - [23 置換檢定與尺的校準](23-permutation-calibration.md) — 量真資料之前，先用假資料驗尺
 - [24 裁決規則的可點燃性](24-decision-rule-reachability.md) — 預註冊的門要先確認打得開
+- [25 文獻檢索的紀律](25-literature-search.md) — 摘要只能篩選，判定必須全文；查詢字串要留檔
 
 ## 維護規則
 

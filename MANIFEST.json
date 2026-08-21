@@ -356,9 +356,14 @@
       "sha256": "c8961642403b2896faab62f324621b6de1ce5132fa77d3bf9b4d407dea741bc2"
     },
     {
+      "path": "docs/learn/25-literature-search.md",
+      "bytes": 4909,
+      "sha256": "39a85d5cbffc3e2bc080e1a62621ec6073a17952062141a67c13f40aaa526c39"
+    },
+    {
       "path": "docs/learn/index.md",
-      "bytes": 2870,
-      "sha256": "a62b62154df3c76b3f7d1da73b51e627d37d722ccefe35d080371b04527abdd4"
+      "bytes": 2992,
+      "sha256": "b10309a76bc33cddde3417fac97fc475b747bdaa8cf6933d59546057cf91739c"
     },
     {
       "path": "results/analysis_allenai_OLMo-2-0425-1B.json",
@@ -622,8 +627,8 @@
     },
     {
       "path": "DISCLOSURE.md",
-      "bytes": 4158,
-      "sha256": "e6b85ca175563e6d95ee9c290ce10e98432fbf2ac78a6e930fb3decf0637dfaf"
+      "bytes": 5435,
+      "sha256": "be708b1813ac71b6ad1769c33335e096c85033ccc6e3ba3629c511996be87e31"
     },
     {
       "path": "PROCESS_LOG.md",
@@ -636,6 +641,6 @@
       "sha256": "99bde64d71f3b076c284484c4792d0fbd5cba2c2c6dcbe1e6e7124c2a26e794a"
     }
   ],
-  "count": 127,
-  "total_bytes": 15430813
+  "count": 128,
+  "total_bytes": 15437121
 }
