@@ -156,6 +156,11 @@
       "sha256": "b235526d90c83480f242748f047703db430f03b176d7408c0355eb3face8f270"
     },
     {
+      "path": "harness/sharpness_attack.py",
+      "bytes": 4045,
+      "sha256": "dd5fe0838761ad93d46dbfdfac450d1bf8618acea695ffaaf4b514bdbecb34ba"
+    },
+    {
       "path": "harness/verify_battery.py",
       "bytes": 8177,
       "sha256": "e6cfbfb9e23c07663aecc033bfcfcc57b7cd9ce92b9fd9fd59015f812946f64d"
@@ -456,6 +461,11 @@
       "sha256": "d82422b4431a549ade4d0a31e988072bfa84797a1569076df7ae736d9a2f49c5"
     },
     {
+      "path": "results/relative_depth/sharpness_attack.json",
+      "bytes": 1740,
+      "sha256": "5e644c2d85a0dc8a38c6b7ad6f82407ea00dcd559ee2172a0284c1dc2f1bf65d"
+    },
+    {
       "path": "results/night/R1_verify_part1.py",
       "bytes": 16953,
       "sha256": "959e095fe27d21a1346dc846d553134a623899f2b59a739107ffd49c1357d148"
@@ -497,8 +507,8 @@
     },
     {
       "path": "PROCESS_LOG.md",
-      "bytes": 27364,
-      "sha256": "53be84c6e024a5d2f238f66bc36a30b3f7e93e152a7fbb9d5a36abb9726763b5"
+      "bytes": 27926,
+      "sha256": "1d8f8b33990a006f89fa3d66da61532dbea667ad48318455e1f0b05e0330db7d"
     },
     {
       "path": "README.md",
@@ -506,6 +516,6 @@
       "sha256": "474afd0756aaec2778a5f2af7d5a06ee05ce48fd6a654046642a58227f798a33"
     }
   ],
-  "count": 101,
-  "total_bytes": 13907422
+  "count": 103,
+  "total_bytes": 13913769
 }
