@@ -46,6 +46,26 @@
       "sha256": "ac584315adf9db92db0b6f95b265fae643215ffedc8d0db98281f5fb72891726"
     },
     {
+      "path": "battery/battery_l0p.json",
+      "bytes": 30587,
+      "sha256": "cdccbca68bf857709536c7e16075b3038066bebc58589d4048f21290f2300fe5"
+    },
+    {
+      "path": "battery/l0p_verification.json",
+      "bytes": 47489,
+      "sha256": "cbe6cc5a5cca1193aeaa07caad9b2b7be9489d9402895e45eaf3c8a60a0e53c2"
+    },
+    {
+      "path": "docs/PREREG_L0P.md",
+      "bytes": 4013,
+      "sha256": "c002a9cd300d1efe8136dac51c82416cf262bc66fa81f8c81fefd59ed2c1f651"
+    },
+    {
+      "path": "harness/run_l0p_night.ps1",
+      "bytes": 661,
+      "sha256": "1e946b6fbd0ae443be325512c8f6c28929d391f1f0814ec58896c1825656086b"
+    },
+    {
       "path": "battery/qc_report.json",
       "bytes": 38975,
       "sha256": "243b6afe0b5754bf9c039746bba9f9f800d11325dbf0cad0260facd95b99d828"
@@ -114,6 +134,11 @@
       "path": "harness/followup_analysis.py",
       "bytes": 5279,
       "sha256": "4f66e1a4d72c60be59734277567dc904b9e7d706fef4fb2decdae929cbafdf78"
+    },
+    {
+      "path": "harness/l0p_verify.py",
+      "bytes": 2655,
+      "sha256": "5cb23eb967632fb1a18c196e9646322a55599df8e14bbe9b41f2f42111835839"
     },
     {
       "path": "harness/l1_position1_analysis.py",
@@ -516,6 +541,6 @@
       "sha256": "474afd0756aaec2778a5f2af7d5a06ee05ce48fd6a654046642a58227f798a33"
     }
   ],
-  "count": 103,
-  "total_bytes": 13913769
+  "count": 108,
+  "total_bytes": 13999174
 }

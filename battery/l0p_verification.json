@@ -1,0 +1,2214 @@
+[
+ {
+  "id": "L0P-01",
+  "tier": "strong",
+  "probes": {
+   "pile": [
+    {
+     "probe": "beside the throlm, was a fennith. The",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "a fennith. The sixth vethra, kept beside",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "vethra, kept beside the throlm, was a",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "throlm, was a mirshal. The seventh vethra",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "The seventh vethra, kept beside the throlm",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "beside the throlm, was a tocreth. The",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "a tocreth. The eighth vethra, kept beside",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "vethra, kept beside the throlm, was a",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "throlm, was a vulmane. The ninth vethra",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "The ninth vethra, kept beside the throlm",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "fifth vethra, kept beside the throlm, was",
+     "status": "ok",
+     "count": 0
+    }
+   ],
+   "olmo_mix": [
+    {
+     "probe": "beside the throlm, was a fennith. The",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "a fennith. The sixth vethra, kept beside",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "vethra, kept beside the throlm, was a",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "throlm, was a mirshal. The seventh vethra",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "The seventh vethra, kept beside the throlm",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "beside the throlm, was a tocreth. The",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "a tocreth. The eighth vethra, kept beside",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "vethra, kept beside the throlm, was a",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "throlm, was a vulmane. The ninth vethra",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "The ninth vethra, kept beside the throlm",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "fifth vethra, kept beside the throlm, was",
+     "status": "ok",
+     "count": 0
+    }
+   ]
+  },
+  "verified": {
+   "pile": true,
+   "olmo_mix": true
+  }
+ },
+ {
+  "id": "L0P-02",
+  "tier": "strong",
+  "probes": {
+   "pile": [
+    {
+     "probe": "grey drenn with an ozmera. Sixth the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "ozmera. Sixth the tharnek quilmed the grey",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "quilmed the grey drenn with a quindle",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "with a quindle. Seventh the tharnek quilmed",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the tharnek quilmed the grey drenn with",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "grey drenn with a harnuk. Eighth the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "harnuk. Eighth the tharnek quilmed the grey",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "quilmed the grey drenn with a weldrin",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "with a weldrin. Ninth the tharnek quilmed",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the tharnek quilmed the grey drenn with",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "tharnek quilmed the grey drenn with an",
+     "status": "ok",
+     "count": 0
+    }
+   ],
+   "olmo_mix": [
+    {
+     "probe": "grey drenn with an ozmera. Sixth the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "ozmera. Sixth the tharnek quilmed the grey",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "quilmed the grey drenn with a quindle",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "with a quindle. Seventh the tharnek quilmed",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the tharnek quilmed the grey drenn with",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "grey drenn with a harnuk. Eighth the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "harnuk. Eighth the tharnek quilmed the grey",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "quilmed the grey drenn with a weldrin",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "with a weldrin. Ninth the tharnek quilmed",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the tharnek quilmed the grey drenn with",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "tharnek quilmed the grey drenn with an",
+     "status": "ok",
+     "count": 0
+    }
+   ]
+  },
+  "verified": {
+   "pile": true,
+   "olmo_mix": true
+  }
+ },
+ {
+  "id": "L0P-03",
+  "tier": "medium",
+  "probes": {
+   "pile": [
+    {
+     "probe": "pale mirsode, and it came before the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "came before the vondrel. The fifth relver",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "The fifth relver was a pale quolan",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "a pale quolan, and it stood beside",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "it stood beside the vondrel. The sixth",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "vondrel. The sixth relver was a pale",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "was a pale tessarin, and it came",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "and it came before the vondrel. The",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the vondrel. The seventh relver was a",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "relver was a pale brendal, and it",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "relver was a pale mirsode, and it",
+     "status": "ok",
+     "count": 0
+    }
+   ],
+   "olmo_mix": [
+    {
+     "probe": "pale mirsode, and it came before the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "came before the vondrel. The fifth relver",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "The fifth relver was a pale quolan",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "a pale quolan, and it stood beside",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "it stood beside the vondrel. The sixth",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "vondrel. The sixth relver was a pale",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "was a pale tessarin, and it came",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "and it came before the vondrel. The",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the vondrel. The seventh relver was a",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "relver was a pale brendal, and it",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "relver was a pale mirsode, and it",
+     "status": "ok",
+     "count": 0
+    }
+   ]
+  },
+  "verified": {
+   "pile": true,
+   "olmo_mix": true
+  }
+ },
+ {
+  "id": "L0P-04",
+  "tier": "medium",
+  "probes": {
+   "pile": [
+    {
+     "probe": "vorked a vitraq across the sulnath. Sixth",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the sulnath. Sixth the amber ostrek sennaled",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "amber ostrek sennaled a belquine across the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "belquine across the sulnath. Seventh the amber",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Seventh the amber ostrek vorked an ossentyr",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "vorked an ossentyr across the sulnath. Eighth",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the sulnath. Eighth the amber ostrek sennaled",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "amber ostrek sennaled a farvique across the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "farvique across the sulnath. Ninth the amber",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Ninth the amber ostrek vorked an undrash",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the amber ostrek vorked a vitraq across",
+     "status": "ok",
+     "count": 0
+    }
+   ],
+   "olmo_mix": [
+    {
+     "probe": "vorked a vitraq across the sulnath. Sixth",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the sulnath. Sixth the amber ostrek sennaled",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "amber ostrek sennaled a belquine across the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "belquine across the sulnath. Seventh the amber",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Seventh the amber ostrek vorked an ossentyr",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "vorked an ossentyr across the sulnath. Eighth",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the sulnath. Eighth the amber ostrek sennaled",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "amber ostrek sennaled a farvique across the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "farvique across the sulnath. Ninth the amber",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Ninth the amber ostrek vorked an undrash",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the amber ostrek vorked a vitraq across",
+     "status": "ok",
+     "count": 0
+    }
+   ]
+  },
+  "verified": {
+   "pile": true,
+   "olmo_mix": true
+  }
+ },
+ {
+  "id": "L0P-05",
+  "tier": "weak",
+  "probes": {
+   "pile": [
+    {
+     "probe": "near the rennothrine, and it stood there",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "it stood there always, though never among",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "though never among the others. Vallenkor was",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "others. Vallenkor was kept beside a tholmasine",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "beside a tholmasine, and it stood there",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "it stood there too, called once by",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "called once by Ossimer, and always kept",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "and always kept among the others who",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the others who came and stood and",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Sennoprax ate only near the rennothrine, and",
+     "status": "ok",
+     "count": 0
+    }
+   ],
+   "olmo_mix": [
+    {
+     "probe": "near the rennothrine, and it stood there",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "it stood there always, though never among",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "though never among the others. Vallenkor was",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "others. Vallenkor was kept beside a tholmasine",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "beside a tholmasine, and it stood there",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "it stood there too, called once by",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "called once by Ossimer, and always kept",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "and always kept among the others who",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the others who came and stood and",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Sennoprax ate only near the rennothrine, and",
+     "status": "ok",
+     "count": 0
+    }
+   ]
+  },
+  "verified": {
+   "pile": true,
+   "olmo_mix": true
+  }
+ },
+ {
+  "id": "L0P-06",
+  "tier": "weak",
+  "probes": {
+   "pile": [
+    {
+     "probe": "stood, until the cravoth was kept beside",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "was kept beside the yalbrenth. Never again",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "yalbrenth. Never again did ferrosk stand so",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "ferrosk stand so still, though the cravoth",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "though the cravoth was kept there always",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "kept there always, called by no one",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "by no one, kept only by ferrosk",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "only by ferrosk, who came again and",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "came again and stood again and came",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "again and came once more, and it",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "and again it stood, until the cravoth",
+     "status": "ok",
+     "count": 0
+    }
+   ],
+   "olmo_mix": [
+    {
+     "probe": "stood, until the cravoth was kept beside",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "was kept beside the yalbrenth. Never again",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "yalbrenth. Never again did ferrosk stand so",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "ferrosk stand so still, though the cravoth",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "though the cravoth was kept there always",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "kept there always, called by no one",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "by no one, kept only by ferrosk",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "only by ferrosk, who came again and",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "came again and stood again and came",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "again and came once more, and it",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "and again it stood, until the cravoth",
+     "status": "ok",
+     "count": 0
+    }
+   ]
+  },
+  "verified": {
+   "pile": true,
+   "olmo_mix": true
+  }
+ },
+ {
+  "id": "L0P-07",
+  "tier": "strong",
+  "probes": {
+   "pile": [
+    {
+     "probe": "Korsath, the ossen of Maldrun, and the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Maldrun, and the sethran of Vantor. The",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "of Vantor. The fourth kaldrenn shall keep",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "kaldrenn shall keep the vellim of Korsath",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "vellim of Korsath, the ossen of Maldrun",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "ossen of Maldrun, and the sethran of",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the sethran of Vantor. The fifth kaldrenn",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "The fifth kaldrenn shall keep the vellim",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "keep the vellim of Korsath, the ossen",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Korsath, the ossen of Maldrun, and the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the vellim of Korsath, the ossen of",
+     "status": "ok",
+     "count": 0
+    }
+   ],
+   "olmo_mix": [
+    {
+     "probe": "Korsath, the ossen of Maldrun, and the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Maldrun, and the sethran of Vantor. The",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "of Vantor. The fourth kaldrenn shall keep",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "kaldrenn shall keep the vellim of Korsath",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "vellim of Korsath, the ossen of Maldrun",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "ossen of Maldrun, and the sethran of",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the sethran of Vantor. The fifth kaldrenn",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "The fifth kaldrenn shall keep the vellim",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "keep the vellim of Korsath, the ossen",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Korsath, the ossen of Maldrun, and the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the vellim of Korsath, the ossen of",
+     "status": "ok",
+     "count": 0
+    }
+   ]
+  },
+  "verified": {
+   "pile": true,
+   "olmo_mix": true
+  }
+ },
+ {
+  "id": "L0P-08",
+  "tier": "strong",
+  "probes": {
+   "pile": [
+    {
+     "probe": "vrastheil of Tannovar, brammed Corvaen. Corvaen, the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Corvaen. Corvaen, the vrastheil of Tannovar, brammed",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "of Tannovar, brammed Mireth. Mireth, the vrastheil",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Mireth, the vrastheil of Tannovar, brammed Ostavel",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Tannovar, brammed Ostavel. Ostavel, the vrastheil of",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the vrastheil of Tannovar, brammed Quennar. Quennar",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "brammed Quennar. Quennar, the vrastheil of Tannovar",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "vrastheil of Tannovar, brammed Brastil. Brastil, the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Brastil. Brastil, the vrastheil of Tannovar, brammed",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "of Tannovar, brammed Ferandy. Ferandy, the vrastheil",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Ilsevar. Ilsevar, the vrastheil of Tannovar, brammed",
+     "status": "ok",
+     "count": 0
+    }
+   ],
+   "olmo_mix": [
+    {
+     "probe": "vrastheil of Tannovar, brammed Corvaen. Corvaen, the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Corvaen. Corvaen, the vrastheil of Tannovar, brammed",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "of Tannovar, brammed Mireth. Mireth, the vrastheil",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Mireth, the vrastheil of Tannovar, brammed Ostavel",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Tannovar, brammed Ostavel. Ostavel, the vrastheil of",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the vrastheil of Tannovar, brammed Quennar. Quennar",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "brammed Quennar. Quennar, the vrastheil of Tannovar",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "vrastheil of Tannovar, brammed Brastil. Brastil, the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Brastil. Brastil, the vrastheil of Tannovar, brammed",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "of Tannovar, brammed Ferandy. Ferandy, the vrastheil",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Ilsevar. Ilsevar, the vrastheil of Tannovar, brammed",
+     "status": "ok",
+     "count": 0
+    }
+   ]
+  },
+  "verified": {
+   "pile": true,
+   "olmo_mix": true
+  }
+ },
+ {
+  "id": "L0P-09",
+  "tier": "medium",
+  "probes": {
+   "pile": [
+    {
+     "probe": "Ovrentash. The sixth sedrenn shall keep the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "shall keep the tirquen of Sildorra. The",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "of Sildorra. The seventh sedrenn shall keep",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "sedrenn shall keep the undrali of Kethvane",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "undrali of Kethvane. The eighth sedrenn shall",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "eighth sedrenn shall keep the faskeen of",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the faskeen of Amrostel. The ninth sedrenn",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "The ninth sedrenn shall keep the brolmuth",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "keep the brolmuth of Vindresh. The tenth",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Vindresh. The tenth sedrenn shall keep the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the quathol of Ovrentash. The sixth sedrenn",
+     "status": "ok",
+     "count": 0
+    }
+   ],
+   "olmo_mix": [
+    {
+     "probe": "Ovrentash. The sixth sedrenn shall keep the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "shall keep the tirquen of Sildorra. The",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "of Sildorra. The seventh sedrenn shall keep",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "sedrenn shall keep the undrali of Kethvane",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "undrali of Kethvane. The eighth sedrenn shall",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "eighth sedrenn shall keep the faskeen of",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the faskeen of Amrostel. The ninth sedrenn",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "The ninth sedrenn shall keep the brolmuth",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "keep the brolmuth of Vindresh. The tenth",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Vindresh. The tenth sedrenn shall keep the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the quathol of Ovrentash. The sixth sedrenn",
+     "status": "ok",
+     "count": 0
+    }
+   ]
+  },
+  "verified": {
+   "pile": true,
+   "olmo_mix": true
+  }
+ },
+ {
+  "id": "L0P-10",
+  "tier": "medium",
+  "probes": {
+   "pile": [
+    {
+     "probe": "ossandrel of Olthamere, olvraned Ildrasec. Ildrasec, the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Ildrasec. Ildrasec, the ossandrel of Olthamere, sethelled",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "of Olthamere, sethelled Marovent. Marovent, the ossandrel",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Marovent, the ossandrel of Olthamere, olvraned Tessendra",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Olthamere, olvraned Tessendra. Tessendra, the ossandrel of",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the ossandrel of Olthamere, sethelled Wrendalin. Wrendalin",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "sethelled Wrendalin. Wrendalin, the ossandrel of Olthamere",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "ossandrel of Olthamere, olvraned Osperna. Osperna, the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Osperna. Osperna, the ossandrel of Olthamere, sethelled",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "of Olthamere, sethelled Kethrivan. Kethrivan, the ossandrel",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Bavrenne. Bavrenne, the ossandrel of Olthamere, olvraned",
+     "status": "ok",
+     "count": 0
+    }
+   ],
+   "olmo_mix": [
+    {
+     "probe": "ossandrel of Olthamere, olvraned Ildrasec. Ildrasec, the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Ildrasec. Ildrasec, the ossandrel of Olthamere, sethelled",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "of Olthamere, sethelled Marovent. Marovent, the ossandrel",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Marovent, the ossandrel of Olthamere, olvraned Tessendra",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Olthamere, olvraned Tessendra. Tessendra, the ossandrel of",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the ossandrel of Olthamere, sethelled Wrendalin. Wrendalin",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "sethelled Wrendalin. Wrendalin, the ossandrel of Olthamere",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "ossandrel of Olthamere, olvraned Osperna. Osperna, the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Osperna. Osperna, the ossandrel of Olthamere, sethelled",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "of Olthamere, sethelled Kethrivan. Kethrivan, the ossandrel",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Bavrenne. Bavrenne, the ossandrel of Olthamere, olvraned",
+     "status": "ok",
+     "count": 0
+    }
+   ]
+  },
+  "verified": {
+   "pile": true,
+   "olmo_mix": true
+  }
+ },
+ {
+  "id": "L0P-11",
+  "tier": "weak",
+  "probes": {
+   "pile": [
+    {
+     "probe": "same. Each morvane that came after kept",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "came after kept its tessil the same",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "tessil the same way, and each fennok",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "and each fennok that stood beside it",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "stood beside it was called by the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "called by the ondrash that had always",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "that had always been kept. So every",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "kept. So every morvane that came to",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "that came to Drenthollow was kept the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "was kept the same, called by the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "ever called the same. Each morvane that",
+     "status": "ok",
+     "count": 0
+    }
+   ],
+   "olmo_mix": [
+    {
+     "probe": "same. Each morvane that came after kept",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "came after kept its tessil the same",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "tessil the same way, and each fennok",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "and each fennok that stood beside it",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "stood beside it was called by the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "called by the ondrash that had always",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "that had always been kept. So every",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "kept. So every morvane that came to",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "that came to Drenthollow was kept the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "was kept the same, called by the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "ever called the same. Each morvane that",
+     "status": "ok",
+     "count": 0
+    }
+   ]
+  },
+  "verified": {
+   "pile": true,
+   "olmo_mix": true
+  }
+ },
+ {
+  "id": "L0P-12",
+  "tier": "weak",
+  "probes": {
+   "pile": [
+    {
+     "probe": "stood, and was called the one who",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the one who came after. Sovrenna talvered",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "after. Sovrenna talvered Dravenkil, and Dravenkil was",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "and Dravenkil was called the one who",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the one who came after her, and",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "after her, and Corrathvale was kept, as",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "was kept, as it had always been",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "had always been kept, by whoever came",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "by whoever came after, and so it",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "and so it stood, and so it",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "where Voltherand had stood, and was called",
+     "status": "ok",
+     "count": 0
+    }
+   ],
+   "olmo_mix": [
+    {
+     "probe": "stood, and was called the one who",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the one who came after. Sovrenna talvered",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "after. Sovrenna talvered Dravenkil, and Dravenkil was",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "and Dravenkil was called the one who",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the one who came after her, and",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "after her, and Corrathvale was kept, as",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "was kept, as it had always been",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "had always been kept, by whoever came",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "by whoever came after, and so it",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "and so it stood, and so it",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "where Voltherand had stood, and was called",
+     "status": "ok",
+     "count": 0
+    }
+   ]
+  },
+  "verified": {
+   "pile": true,
+   "olmo_mix": true
+  }
+ },
+ {
+  "id": "L0P-13",
+  "tier": "strong",
+  "probes": {
+   "pile": [
+    {
+     "probe": "tollen came to Rhesmir. Rhesmir called the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Rhesmir called the molvek. The sixth tollen",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "The sixth tollen came to Rhesmir. Rhesmir",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "to Rhesmir. Rhesmir called the molvek. The",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the molvek. The seventh tollen came to",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "tollen came to Rhesmir. Rhesmir called the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Rhesmir called the molvek. The eighth tollen",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "The eighth tollen came to Rhesmir. Rhesmir",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "to Rhesmir. Rhesmir called the molvek. The",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the molvek. The ninth tollen came to",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "molvek. The fifth tollen came to Rhesmir",
+     "status": "ok",
+     "count": 0
+    }
+   ],
+   "olmo_mix": [
+    {
+     "probe": "tollen came to Rhesmir. Rhesmir called the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Rhesmir called the molvek. The sixth tollen",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "The sixth tollen came to Rhesmir. Rhesmir",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "to Rhesmir. Rhesmir called the molvek. The",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the molvek. The seventh tollen came to",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "tollen came to Rhesmir. Rhesmir called the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Rhesmir called the molvek. The eighth tollen",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "The eighth tollen came to Rhesmir. Rhesmir",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "to Rhesmir. Rhesmir called the molvek. The",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the molvek. The ninth tollen came to",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "molvek. The fifth tollen came to Rhesmir",
+     "status": "ok",
+     "count": 0
+    }
+   ]
+  },
+  "verified": {
+   "pile": true,
+   "olmo_mix": true
+  }
+ },
+ {
+  "id": "L0P-14",
+  "tier": "strong",
+  "probes": {
+   "pile": [
+    {
+     "probe": "third zorno is amber. What is the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "What is the mekt of the fourth",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "of the fourth zorno? The mekt of",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "The mekt of the fourth zorno is",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "fourth zorno is amber. What is the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "What is the mekt of the fifth",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "of the fifth zorno? The mekt of",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "The mekt of the fifth zorno is",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "fifth zorno is amber. What is the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "What is the mekt of the sixth",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "mekt of the third zorno is amber",
+     "status": "ok",
+     "count": 0
+    }
+   ],
+   "olmo_mix": [
+    {
+     "probe": "third zorno is amber. What is the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "What is the mekt of the fourth",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "of the fourth zorno? The mekt of",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "The mekt of the fourth zorno is",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "fourth zorno is amber. What is the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "What is the mekt of the fifth",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "of the fifth zorno? The mekt of",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "The mekt of the fifth zorno is",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "fifth zorno is amber. What is the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "What is the mekt of the sixth",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "mekt of the third zorno is amber",
+     "status": "ok",
+     "count": 0
+    }
+   ]
+  },
+  "verified": {
+   "pile": true,
+   "olmo_mix": true
+  }
+ },
+ {
+  "id": "L0P-15",
+  "tier": "medium",
+  "probes": {
+   "pile": [
+    {
+     "probe": "came before Yandreth. Yandreth called the vren",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "called the vren. The sixth corim stood",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "sixth corim stood before Yandreth. Yandreth called",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Yandreth. Yandreth called the vren. The seventh",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "vren. The seventh corim came before Yandreth",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "came before Yandreth. Yandreth called the vren",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "called the vren. The eighth corim stood",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "eighth corim stood before Yandreth. Yandreth called",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Yandreth. Yandreth called the vren. The ninth",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "vren. The ninth corim came before Yandreth",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "The fifth corim came before Yandreth. Yandreth",
+     "status": "ok",
+     "count": 0
+    }
+   ],
+   "olmo_mix": [
+    {
+     "probe": "came before Yandreth. Yandreth called the vren",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "called the vren. The sixth corim stood",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "sixth corim stood before Yandreth. Yandreth called",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Yandreth. Yandreth called the vren. The seventh",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "vren. The seventh corim came before Yandreth",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "came before Yandreth. Yandreth called the vren",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "called the vren. The eighth corim stood",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "eighth corim stood before Yandreth. Yandreth called",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Yandreth. Yandreth called the vren. The ninth",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "vren. The ninth corim came before Yandreth",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "The fifth corim came before Yandreth. Yandreth",
+     "status": "ok",
+     "count": 0
+    }
+   ]
+  },
+  "verified": {
+   "pile": true,
+   "olmo_mix": true
+  }
+ },
+ {
+  "id": "L0P-16",
+  "tier": "medium",
+  "probes": {
+   "pile": [
+    {
+     "probe": "third korvel is silver. What is the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "What is the dornal of the fourth",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "of the fourth korvel? The dornal of",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "The dornal of the fourth korvel is",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "fourth korvel is gray. What is the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "What is the dornal of the fifth",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "of the fifth korvel? The dornal of",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "The dornal of the fifth korvel is",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "fifth korvel is silver. What is the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "What is the dornal of the sixth",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "dornal of the third korvel is silver",
+     "status": "ok",
+     "count": 0
+    }
+   ],
+   "olmo_mix": [
+    {
+     "probe": "third korvel is silver. What is the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "What is the dornal of the fourth",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "of the fourth korvel? The dornal of",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "The dornal of the fourth korvel is",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "fourth korvel is gray. What is the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "What is the dornal of the fifth",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "of the fifth korvel? The dornal of",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "The dornal of the fifth korvel is",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "fifth korvel is silver. What is the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "What is the dornal of the sixth",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "dornal of the third korvel is silver",
+     "status": "ok",
+     "count": 0
+    }
+   ]
+  },
+  "verified": {
+   "pile": true,
+   "olmo_mix": true
+  }
+ },
+ {
+  "id": "L0P-17",
+  "tier": "weak",
+  "probes": {
+   "pile": [
+    {
+     "probe": "tavrikin called. The selvic ones stood by",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "ones stood by the dromwood and ate",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "dromwood and ate the amber vothum, while",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "amber vothum, while the berdrin kept the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "berdrin kept the drelmic vantho, and still",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "vantho, and still the tavrikin came, and",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "tavrikin came, and still the vrenning of",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the vrenning of Sulvane was kept, even",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "was kept, even when the selvath was",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the selvath was fenlic and the prathe",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "every drennel the tavrikin called. The selvic",
+     "status": "ok",
+     "count": 0
+    }
+   ],
+   "olmo_mix": [
+    {
+     "probe": "tavrikin called. The selvic ones stood by",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "ones stood by the dromwood and ate",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "dromwood and ate the amber vothum, while",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "amber vothum, while the berdrin kept the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "berdrin kept the drelmic vantho, and still",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "vantho, and still the tavrikin came, and",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "tavrikin came, and still the vrenning of",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the vrenning of Sulvane was kept, even",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "was kept, even when the selvath was",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the selvath was fenlic and the prathe",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "every drennel the tavrikin called. The selvic",
+     "status": "ok",
+     "count": 0
+    }
+   ]
+  },
+  "verified": {
+   "pile": true,
+   "olmo_mix": true
+  }
+ },
+ {
+  "id": "L0P-18",
+  "tier": "weak",
+  "probes": {
+   "pile": [
+    {
+     "probe": "third keldrae vosked why the volthe was",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the volthe was kept at all, and",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "at all, and the vosker only stood",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "vosker only stood. Still they vosked, and",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "they vosked, and still the vosker called",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the vosker called each vithrel a ferlic",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "vithrel a ferlic one, until the volthe",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "until the volthe of Vezrun itself was",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Vezrun itself was vosked about, and the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "hollisk drenlet. A third keldrae vosked why",
+     "status": "ok",
+     "count": 0
+    }
+   ],
+   "olmo_mix": [
+    {
+     "probe": "third keldrae vosked why the volthe was",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the volthe was kept at all, and",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "at all, and the vosker only stood",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "vosker only stood. Still they vosked, and",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "they vosked, and still the vosker called",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "the vosker called each vithrel a ferlic",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "vithrel a ferlic one, until the volthe",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "until the volthe of Vezrun itself was",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "Vezrun itself was vosked about, and the",
+     "status": "ok",
+     "count": 0
+    },
+    {
+     "probe": "hollisk drenlet. A third keldrae vosked why",
+     "status": "ok",
+     "count": 0
+    }
+   ]
+  },
+  "verified": {
+   "pile": true,
+   "olmo_mix": true
+  }
+ }
+]
