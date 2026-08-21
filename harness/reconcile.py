@@ -499,6 +499,51 @@ def build_stats(raw: Raw) -> dict:
         S["rangeoverlap.min"] = min(rc)
         S["rangeoverlap.max"] = max(rc)
 
+    # --- v0.6 自我測試統計量：相對門檻／熵縮放判準，直接由 layer_profile 曲線重算。
+    #     定義與 harness/relative_depth_analysis.py 一致：由後往前掃，回傳
+    #     kl_to_final > 門檻 的最深層 / 總層數。
+    def _lastcross(curve, thr):
+        n = len(curve)
+        for i in range(n - 1, -1, -1):
+            if curve[i]["kl_to_final"] > thr:
+                return i / n
+        return 0.0
+
+    ge = []
+    for t in ORDER:
+        rs = [r for r in raw.scored(t, "L0") if r.get("layer_profile")]
+        if len(rs) < 6:
+            continue
+        g = [r["gold_logprob_per_token"] for r in rs]
+        S[f"goldent.{t}"] = float(spearmanr(g, [r["final_entropy_mean"] for r in rs])[0])
+        ge.append(S[f"goldent.{t}"])
+        for a, key in ((0.5, "a50"), (0.25, "a25"), (0.10, "a10"), (0.05, "a05")):
+            d = [_lastcross(r["layer_profile"],
+                            a * r["layer_profile"][0]["kl_to_final"]) for r in rs]
+            if len(set(d)) > 1:
+                S[f"relcross.{t}.{key}"] = float(spearmanr(g, d)[0])
+        d = [_lastcross(r["layer_profile"], 0.25 * r["final_entropy_mean"]) for r in rs]
+        if len(set(d)) > 1:
+            S[f"entscaled25.{t}"] = float(spearmanr(g, d)[0])
+    if ge:
+        S["goldent.min"] = min(ge)   # 最負
+        S["goldent.max"] = max(ge)
+
+    # --- 去重語料複製跑（v0.6 引用；results/night 的 deduped pilot 一手輸出）
+    for key, fn in (("410m", "pilot_EleutherAI_pythia-410m-deduped.json"),
+                    ("1.4b", "pilot_EleutherAI_pythia-1.4b-deduped.json")):
+        p = PROJ / "results" / "night" / fn
+        if not p.is_file():
+            continue
+        recs = [r for r in json.load(open(p, encoding="utf-8"))["records"]
+                if r.get("level") == "L0" and "error" not in r
+                and r.get("gold_logprob_per_token") is not None and r.get("depth")]
+        if len(recs) >= 6:
+            rho, pv = spearmanr([r["gold_logprob_per_token"] for r in recs],
+                                [r["depth"]["depth_tau_0.1"] for r in recs])
+            S[f"dedupl0.{key}.rho"] = float(rho)
+            S[f"dedupl0.{key}.p"] = float(pv)
+
     # --- R1 教師強制塌縮（v0.5 但書引用）：tf 下 gold 與最終熵在 L0 內的相關。
     #     來源是 results/night/tf_depth_*.json 的逐項紀錄——一手量測輸出，非中間值。
     tfc = []

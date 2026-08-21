@@ -1,10 +1,25 @@
-# 經語料庫查證的記憶強度，對應到逐層預測多早收斂：兩個訓練語料公開的模型家族（0.4–3B）前導研究
+# 經語料庫查證的記憶強度，對應到的是輸出的篤定程度——而門檻式「收斂深度」其實是門檻位置造成的假象，且無法與銳利度分離：兩個開放語料模型家族的前導研究與自我否證（0.4–3B）
 
 *中文版與英文版內容等價，以英文版為投稿正本。*
 
-*草稿 v0.5 ＝ 審查定稿 v0.3（配對對照組為題庫 v2.1 版，依 Phase-14 對抗式審查裁決修訂）＋文字整稿（v0.4，只動文字）＋四項作者於 2026-08-21 批准的審查後補充：三條出自我們自己審查後驗證的保留條件（量程受限、同分天花板、teacher-forced 塌縮），與一筆相關文獻引用。尚未發表。*
+*草稿 v0.6 ＝ 草稿 v0.5（經對抗式審查、以標題「經語料庫查證的記憶強度，對應到逐層預測多早收斂」發表為 DOI 10.5281/zenodo.22039216 第 1 版）＋ v0.5 自己承認欠著的那個判決性儀器檢驗。檢驗推翻了頭條。v0.5 全文保留在下方——除了一輪「全文逐篇查證引用文獻」帶來的引用更正之外未改寫（更正記錄在 `docs/CITATIONS_VERIFIED.md`）——請透過接下來這一節來讀它。2026-08-21。*
 
-**重點摘要（TL;DR）**
+## v0.6 自我測試：本文報告的深度量尺沒有通過自己的對照檢驗——請先讀這一節
+
+v0.5 報告了「記憶強度 ↔ KL 門檻收斂深度」的組內關聯，同時也揭露了對這把尺的兩個未決質疑：五個模型全部顯著的那個深度變體（`kl_auc_norm`，附錄 A.1）方向相反；隨 repo 出貨的查核備忘錄（`results/night/R1_verification.md`）指出「絕對 0.1 nats 門檻沒有做熵正規化」，並提出了判決性檢驗。第 1 版發表的同一個下午，我們就跑了這個檢驗：用已存檔的逐層 KL 曲線，把收斂深度改用相對判準（最後一次跨越 α×第 0 層 KL，α ∈ {0.5, 0.25, 0.1, 0.05}）與熵縮放判準（τ×最終熵）重算。兩套互相看不見對方程式碼的獨立實作，在全部 165 個 L0 組內格子上吻合到 0.0005 以內；第三套重算現在就活在對帳閘門裡（`harness/reconcile.py`）。
+
+**結果：「劑量反應」的正負號由門檻落在 KL 曲線的哪個位置決定，而不是由題目的記憶強度決定。** 80 個「判準 × 模型」格子（兩種曲線來源 × 40）裡有 12 個顯著為**正**、只有 5 個顯著為負；單看位置平均曲線是 9 正、2 負。Pythia-410M 在凍結量尺上是 −0.53，α = 0.5 之下變成 **+0.59**，熵縮放判準（τ = 0.25×最終熵）之下變成 **+0.91**。在位置平均曲線上，唯一還是負的兩格是 OLMo-2-1B 的 α = 0.10／0.05（−0.48、−0.57）——而這兩格在 20 題裡只有兩個相異深度值，且它們與最終分布銳利度的關聯（+0.59、+0.74）至少不弱於與記憶強度的關聯。**因此我們撤回「記憶越強、逐層收斂越早」這個主張。** 還維持負號的那幾格，無法與最終分布的銳利度分離；而整個家族的正負號，是門檻位置的假象。−0.53 用的是論文儲存的「八個位置深度取平均」量尺，相對判準的數字則是對位置平均曲線取門檻——所以換的不只是門檻、也換了估計量；但正負號在同一條曲線來源內部照樣移動（OLMo 從 α = 0.5 的 +0.00 走到 α = 0.05 的 −0.57）。完整表格：`results/relative_depth/`。
+
+**推翻之後，站得住的東西。**
+
+1. **記憶劑量對應到輸出的篤定程度。** L0 組內，teacher-forced gold log-prob 對模型自由接續的最終層熵：rho **−0.70 到 −0.82，五次跑全部 p < .001**。兩個量測在不同文字段上（約 44 字的 gold 續寫 vs 模型自己吐的 8 個 token），所以這個相關不是同一個量的恆等式。但它離「本來就該如此」也不遠：同一段文字上用 teacher forcing 量，gold log-prob 與最終熵會塌到 rho −0.97 到 −0.98（見「量測」一節），而隨 repo 出貨的查核備忘錄自己的判詞就是：teacher forcing 之下，記憶專屬的成分與預測信心無法區分。跨度差距的作用，是讓這兩個變項不是同一次量測；它並沒有讓「模型背過的文字、接起來就比較篤定」變成一個令人意外的結果。加上模型外部錨點（語料重複次數對記憶量尺，五次跑 0.64–0.73），這是本文在推翻之後還剩下的主張。
+2. **題庫與語料驗證未受影響**——推翻的環節不涉及題目、資格閘門或 ground-truth 管線。
+3. **同日在凍結（現已失格）量尺上取得的兩個結果，為完整性而報告並如實標記：** L0 組內關聯在去重複語料模型上複製（−0.749／−0.748，p < .001，對照組仍為零）；語料次數→深度在五次跑合併後達共用題目置換 p = .0097（主力是 OLMo；腳本與種子隨 repo 出貨）。這兩者只說明凍結的那些數字在其他模型上重算得出來、合併起來也還在。它們不能當作「收斂時機」的證據，因為它們用的正是被自我測試判定失格的儀器。
+4. **方法學發現本身。** 門檻跨越式的 logit-lens 深度量尺很容易定義，也常被非正式地使用。本文現在包含一個完整的示範——三套獨立實作、資料全部出貨——證明絕對門檻變體可以產出一條顯著、可重算、有外部錨的相關，而它的**正負號在正規化之下翻面**。我們跑的這個對照檢驗（`harness/relative_depth_analysis.py`）成本極低、只用已存檔的曲線；任何建立在這類量尺上的結果，我們都建議跑一次。
+
+**下文怎麼讀。** 下方所有「深度」「收斂」主張,都是關於這把失格儀器的主張：那些表格是對該儀器的準確量測，作為經審查的第 1 版記錄原樣保留，但作為「收斂時機」的證據已被取代。熵階梯、L0/L0N 的銳利度對比，以及「語料次數 ↔ 記憶量尺」這個錨點，都不受這次推翻影響——它們各自在 v0.5 帶著的但書一併保留。
+
+**重點摘要（TL;DR）** *（v0.6 註：下方以深度為主軸的頭條沒有通過上面那節的儀器自我測試；各條目作為經審查的第 1 版記錄原樣保留。）*
 
 - **我們做了什麼。** 一套 104 題的題庫。一端是逐字接續「查證過確實出現在訓練語料裡、模型背得起來」的名著段落（L0），另一端是完全開放的發明題（L5）。L0 旁邊還放了一組構造刻意做成一模一樣、但模型沒背過的配對對照組（L0N）：同樣約 88 個英文字的擷取長度，同樣的實詞切分規則，只是文本改抽自冷門的 Gutenberg 舊書，並且逐一查證過它在各模型的訓練語料裡幾乎不存在——131 個探測視窗裡，有 124 個查到的次數是剛好零次。整條階梯只在兩個模型上跑完：**Pythia-1.4B 與 OLMo-2-1B**，它們的訓練語料任何人都能透過 infini-gram（一個公開索引，可以查「某段文字在訓練語料裡出現過幾次」）自己去查。另外三個尺寸的 Pythia 只跑了「純接續」這一個家族（L0／L0N／L1，各 53 題）。底下所有「五次跑」的數字，都出自這個家族。
 
@@ -26,11 +41,11 @@
 
 ## 為什麼要問這個問題
 
-人類認知科學把「回憶」跟「想像」當成同一套建構機制在看。海馬迴受損的失憶症病人，連想像一個沒去過的新場景都有困難（Hassabis et al. 2007）；不過這批病人證據是有爭議的（Squire et al. 2010）。而現在的計算模型，乾脆把回憶本身寫成一種生成式的重建（Spens & Burgess 2024）。
+人類認知科學把「回憶」跟「想像」當成同一套建構機制在看。海馬迴受損的失憶症病人，連想像新的經驗都有困難（Hassabis et al. 2007，原文用詞為 new experiences）；不過這批病人證據是有爭議的（Squire et al. 2010）。而現在的計算模型，乾脆把回憶本身寫成一種生成式的重建（Spens & Burgess 2024）。
 
-換到 LLM 身上，對應的問題是：模型內部有沒有一個變數，會追蹤某一段輸出落在「背過的↔全新的」這條軸上的哪個位置？這個問題有人從行為面接近過（Sui et al. 2024; Lee et al. 2022），也有人從機制面切進逐字記憶（verbatim memorization）的迴路（Lasy et al. 2025），或者處理「回想 vs 推理」的分離（Fartale et al. 2025）。材料上最接近的是 Chen, Han & Miyao（2026）：他們對 Pythia 與 OLMo 兩個家族做記憶化的統計層與內部層刻畫，包含中間層解碼；但他們比較的是「背過的 vs 沒背過的」兩個母體在模型層級的差異，而我們的設計是在「背過的」條件**內部**，把深度對記憶劑量做迴歸，旁邊放一個構造配對的對照組。我們沒有找到任何一份工作，是把 parametric retrieval（從模型參數裡取回已知內容）和 open generation（開放生成）擺在同一條連續刻度上，配上語料庫驗證過的 ground truth（正確答案的客觀依據），然後回頭問：網路內部到底是什麼在跟著這條梯度走。
+換到 LLM 身上，對應的問題是：模型內部有沒有一個變數，會追蹤某一段輸出落在「背過的↔全新的」這條軸上的哪個位置？這個問題的相鄰版本有人從行為面接近過（Sui et al. 2024; Lee et al. 2022），也有人從機制面切進逐字記憶（verbatim memorization）的迴路（Lasy et al. 2025），或者處理「回想 vs 推理」的分離（Fartale et al. 2025）。材料上最接近的是 Chen, Han & Miyao（2026）：他們對 Pythia 與 OLMo 兩個家族做記憶化的統計層與內部層刻畫，包含中間層解碼；但他們比較的是「背過的 vs 沒背過的」兩個母體在模型層級的差異，而我們的設計是在「背過的」條件**內部**，把深度對記憶劑量做迴歸，旁邊放一個構造配對的對照組。我們沒有找到任何一份工作，是把 parametric retrieval（從模型參數裡取回已知內容）和 open generation（開放生成）擺在同一條連續刻度上，配上語料庫驗證過的 ground truth（正確答案的客觀依據），然後回頭問：網路內部到底是什麼在跟著這條梯度走。
 
-這裡有一個陷阱。自迴歸模型裡每一個 token 都是生成出來的，所以「有沒有共用機制？」這個問法答案自動是「有」，等於白問。有生產力的版本是量化的版本，而量化就需要「背過」這件事有 ground truth——所以我們挑的是訓練語料公開建了索引、而且能大規模查詢的模型：Pythia 配 The Pile、OLMo-2 配 olmo-mix，都透過 infini-gram（把整份訓練語料做成可查次數的 n-gram 索引服務）查（Biderman et al. 2023; Gao et al. 2020; OLMo Team 2025; Liu et al. 2024）。這份索引在 Pythia 這一支是完整的，在 OLMo-2-1B 上不完整。我們在「這份結果說明了什麼、又沒說明什麼」那節把這件事講精確，而不是靠措辭把它抹平。
+這裡有一個陷阱。自迴歸模型裡每一個 token 都是生成出來的，所以「有沒有共用機制？」這個問法答案自動是「有」，等於白問。有生產力的版本是量化的版本，而量化就需要「背過」這件事有 ground truth——所以我們挑的是訓練語料完整公開、並經 infini-gram 建了索引可大規模查詢的模型：Pythia 配 The Pile、OLMo-2 配 olmo-mix，都透過 infini-gram（把整份訓練語料做成可查次數的 n-gram 索引服務）查（Biderman et al. 2023; Gao et al. 2020; OLMo Team 2025; Liu et al. 2024）。這份索引在 Pythia 這一支是完整的，在 OLMo-2-1B 上不完整。我們在「這份結果說明了什麼、又沒說明什麼」那節把這件事講精確，而不是靠措辭把它抹平。
 
 ## 實驗設定
 
@@ -137,7 +152,7 @@ L0 的記憶篩選門檻站在一塊平穩的高原上：把「視窗通過比�
 
 有兩個儀器層面的限制，在 pilot 的規模下我們沒辦法解除。
 
-第一，**OLMo-2-1B 背後的語料索引是不完整的。** OLMo-2-0425-1B 分兩階段訓練，第二階段的 mid-training 用的是 Dolmino-Mix-1124（50B token），這批資料沒有任何 infini-gram 索引涵蓋，而且它並不是第一階段的子集。所以「訓練語料全部公開可查」這句話，在 Pythia 那一側是真的，在這裡是假的。補救是真的補救，但只補了一半：第一階段（olmo-mix-1124）佔整個預訓練預算的 95% 以上，而且有索引，我們的 L0N 對照組拿去查也是零次命中。這一版改完之後，這條限制比先前更要緊：現在扛住結論的只剩 OLMo-2-1B 一個模型，於是語料查證最不完整的那個模型，和唯一顯著的那個模型，變成同一個。兩階段訓練資料的權威來源是 OLMo-2-0425-1B 的 model card；OLMo 2 那篇論文寫的是 7B/13B/32B，不含我們用的這個 checkpoint。
+第一，**OLMo-2-1B 背後的語料索引是不完整的。** OLMo-2-0425-1B 分兩階段訓練，第二階段的 mid-training 用的是 Dolmino-Mix-1124（50B token），這批資料沒有任何 infini-gram 索引涵蓋，而且它並不是第一階段的子集。所以「訓練語料全部公開可查」這句話，在 Pythia 那一側是真的，在這裡是假的。補救是真的補救，但只補了一半：第一階段（olmo-mix-1124）佔整個預訓練預算的 95% 以上，而且有索引，我們的 L0N 對照組拿去查也是零次命中。這一版改完之後，這條限制比先前更要緊：現在扛住結論的只剩 OLMo-2-1B 一個模型，於是語料查證最不完整的那個模型，和唯一顯著的那個模型，變成同一個。兩階段訓練資料的權威來源是 OLMo-2-0425-1B 的 model card；OLMo 2 那篇論文主文的目標尺寸是 7B/13B/32B，但其現行修訂版在附錄 B（「OLMo 2 1B」）涵蓋了我們用的這個 checkpoint，還附了一小節專講它的訓練困難。
 
 第二，**我們沒有做 tuned lens 的一致性檢查。** logit lens 是啟發式工具，而且相對於 tuned lens，它的脆弱是有文獻記載的（Belrose et al. 2023）。本文每一個深度數字都繼承了這個弱點。
 
@@ -225,15 +240,15 @@ nostalgebraist (2020). *interpreting GPT: the logit lens.* LessWrong, 31 August 
 
 Belrose, N., Ostrovsky, I., McKinney, L., Furman, Z., Smith, L., Halawi, D., Biderman, S., & Steinhardt, J. (2023). *Eliciting Latent Predictions from Transformers with the Tuned Lens.* arXiv:2303.08112. https://arxiv.org/abs/2303.08112
 
-Liu, J., Min, S., Zettlemoyer, L., Choi, Y., & Hajishirzi, H. (2024). *Infini-gram: Scaling Unbounded n-gram Language Models to a Trillion Tokens.* COLM 2024. arXiv:2401.17377. https://arxiv.org/abs/2401.17377 —— 本研究用到的索引：`v4_piletrain_llama`（Pile-train，383.3B 個 Llama-2 token）與 `v4_olmo-mix-1124_llama`（OLMo-mix-1124，4.58T）。
+Liu, J., Min, S., Zettlemoyer, L., Choi, Y., & Hajishirzi, H. (2024). *Infini-gram: Scaling Unbounded n-gram Language Models to a Trillion Tokens.* COLM 2024. arXiv:2401.17377. https://arxiv.org/abs/2401.17377 —— 本研究用到的索引：`v4_piletrain_llama`（Pile-train，383.3B 個 Llama-2 token）與 `v4_olmo-mix-1124_llama`（OLMo-mix-1124，4.58T）；索引名與 token 數出自 infini-gram 官方 API 文件，不在該論文本文中。
 
 **「預測會提早定案」這一脈研究。**
 
-Geva, M., Caciularu, A., Wang, K. R., & Goldberg, Y. (2022). *Transformer Feed-Forward Layers Build Predictions by Promoting Concepts in the Vocabulary Space.* EMNLP 2022, 30–45. DOI 10.18653/v1/2022.emnlp-main.3. https://aclanthology.org/2022.emnlp-main.3/ —— Geva 等人在 §5.1 以描述的方式提出 saturation（飽和）："the final token predicted by the model … was promoted to be the top candidate until the last layer"，白話是「模型最後選的那個 token，中途就被拱上第一名，一路撐到最後一層」。這正好就是我們 `depth_argmax` 變體所量的東西。與其等人來問，不如自己先講：這代表飽和式的指標就是學界對「預測已經定案」的標準操作化，而 `depth_argmax` 是我們**最弱**的一個變體，5 次跑裡只有 1 次顯著（附錄 A.1）。我們正文報告的 τ 門檻指標是它的連續版親戚；誠實的讀法是，在這個樣本數下，學界標準的那個二元版本量不出我們的效應。
+Geva, M., Caciularu, A., Wang, K. R., & Goldberg, Y. (2022). *Transformer Feed-Forward Layers Build Predictions by Promoting Concepts in the Vocabulary Space.* EMNLP 2022, 30–45. DOI 10.18653/v1/2022.emnlp-main.3. https://aclanthology.org/2022.emnlp-main.3/ —— Geva 等人在 §5.1 正式定義並量化了 saturation（飽和）："the final token predicted by the model … was promoted to be the top candidate until the last layer"，白話是「模型最後選的那個 token，中途就被拱上第一名，一路撐到最後一層」。這正是我們 `depth_argmax` 變體用陽春的 logit lens 讀出來的構念；他們自己的操作化更窄、更機制性——把飽和事件歸因到特定的 FFN 更新。與其等人來問，不如自己先講：這代表飽和式的指標就是學界對「預測已經定案」的標準操作化，而 `depth_argmax` 是我們**最弱**的一個變體，5 次跑裡只有 1 次顯著（附錄 A.1）。我們正文報告的 τ 門檻指標是它的連續版親戚；誠實的讀法是，在這個樣本數下，學界標準的那個二元版本量不出我們的效應。
 
 Schuster, T., Fisch, A., Gupta, J., Dehghani, M., Bahri, D., Tran, V., Tay, Y., & Metzler, D. (2022). *Confident Adaptive Language Modeling.* NeurIPS 2022. arXiv:2207.07061. https://arxiv.org/abs/2207.07061 —— CALM 的立論前提是：生成的難度本來就有高有低，比較容易的接續用比較少的運算就能定案。這既是「這個量真的存在」現有最強的證據，同時也正是它算不上一個新構念的理由。
 
-Haviv, A., Cohen, I., Gidron, J., Schuster, R., Goldberg, Y., & Geva, M. (2023). *Understanding Transformer Memorization Recall Through Idioms.* EACL 2023. arXiv:2210.03588. https://aclanthology.org/2023.eacl-main.19/ —— 最接近的前作：同一套儀器，用在「背過 vs 沒背過」的成語二元對比上，發現回想分成兩個階段。有三處不同。他們的對比是二元的，我們的是連續的。他們的題目來自人工整理的成語清單，我們的來自語料出現次數查證過的段落。還有，他們的量尺沒有「開放生成」那一端。他們在 §5.2 提出的機制——沒背過的預測本身也常常靠淺層的局部規律被提早拱上來——是「散文題為什麼會早收斂」的一個現行替代解釋，而我們的 L0N 熵資料剛好對這件事有話講。
+Haviv, A., Cohen, I., Gidron, J., Schuster, R., Goldberg, Y., & Geva, M. (2023). *Understanding Transformer Memorization Recall Through Idioms.* EACL 2023. arXiv:2210.03588. https://aclanthology.org/2023.eacl-main.19/ —— 最接近的前作：同一族儀器（其 §4 用綁定的 unembedding 逐層讀出），用在「背過 vs 沒背過」的成語二元對比上，發現回想分成兩個階段。有三處不同。他們的對比是二元的，我們的是連續的。他們的題目來自人工整理的成語清單，我們的來自語料出現次數查證過的段落。還有，他們的量尺沒有「開放生成」那一端。他們在 §5.2 提出的機制——沒背過的預測本身也常常靠淺層的局部規律被提早拱上來——是「散文題為什麼會早收斂」的一個現行替代解釋，而我們的 L0N 熵資料剛好對這件事有話講。
 
 **框架所引述的既有工作。**
 
@@ -253,7 +268,7 @@ Biderman, S., Schoelkopf, H., Anthony, Q., Bradley, H., O'Brien, K., Hallahan, E
 
 Gao, L., Biderman, S., Black, S., Golding, L., Hoppe, T., Foster, C., Phang, J., He, H., Thite, A., Nabeshima, N., Presser, S., & Leahy, C. (2020). *The Pile: An 800GB Dataset of Diverse Text for Language Modeling.* arXiv:2101.00027. https://arxiv.org/abs/2101.00027 —— the Pile 的 22 個子集裡就包含 Gutenberg（PG-19），而我們的 L0N 對照組正是 Gutenberg 文本。真正堵住這個明顯反駁的是次數本身：131 個對照視窗裡有 124 個在 Pile 的出現次數剛好是零。
 
-OLMo Team / Allen Institute for AI (2025). *2 OLMo 2 Furious.* arXiv:2501.00656. https://arxiv.org/abs/2501.00656 —— 這篇涵蓋的是 7B、13B 與 32B 三個模型。**OLMo-2-0425-1B 不在其中。** 本研究用的這個 checkpoint 要引 model card：https://huggingface.co/allenai/OLMo-2-0425-1B ，它才是兩階段訓練資料的權威來源（Stage 1 olmo-mix-1124，約 3.9T tokens，占「95%+ of total pretraining budget」；Stage 2 Dolmino-Mix-1124，50B tokens，沒有任何 infini-gram 索引涵蓋）。前面限制段落引的那句話，就是出自這張卡。
+OLMo Team / Allen Institute for AI (2025). *2 OLMo 2 Furious.* arXiv:2501.00656. https://arxiv.org/abs/2501.00656 —— 這篇主文的目標尺寸是 7B、13B 與 32B；**現行修訂版（v3）另在附錄 B 涵蓋 OLMo 2 1B，含「B.1 Difficulties with OLMo 2 1B」一節**——這處更正來自我們的全文閱讀複核，前兩輪標題層級的查核都漏了它。本研究這個 checkpoint 的兩階段訓練資料，權威來源仍是 model card：https://huggingface.co/allenai/OLMo-2-0425-1B ，它才是兩階段訓練資料的權威來源（Stage 1 olmo-mix-1124，約 3.9T tokens，占「95%+ of total pretraining budget」；Stage 2 Dolmino-Mix-1124，50B tokens，沒有任何 infini-gram 索引涵蓋）。前面限制段落引的那句話，就是出自這張卡。
 
 **認知科學的框架來源。**
 
@@ -263,12 +278,12 @@ Spens, E., & Burgess, N. (2024). *A generative model of memory construction and 
 
 Squire, L. R., van der Horst, A. S., McDuff, S. G. R., Frascino, J. C., Hopkins, R. O., & Mauldin, K. N. (2010). *Role of the hippocampus in remembering the past and imagining the future.* PNAS 107(44), 19044–19048. DOI 10.1073/pnas.1014391107 —— 這批病人證據是有爭議的。Hassabis 等人一共測了五位病人，其中一位據他們自己報告看起來並未受損；而 Squire 等人找到了**能夠**想像未來經驗的海馬迴病人。
 
-**推薦閱讀，非必要。** Biderman, S., Prashanth, U. S. S., Sutawika, L., Schoelkopf, H., Anthony, Q., Purohit, S., & Raff, E. (2023). *Emergent and Predictable Memorization in Large Language Models.* arXiv:2304.11158. https://arxiv.org/abs/2304.11158 —— 談 Pythia 系列的記憶化，也是「在這幾個一模一樣的模型上做語料本位記憶量測」最接近的先例。
+**推薦閱讀，非必要。** Biderman, S., Prashanth, U. S. S., Sutawika, L., Schoelkopf, H., Anthony, Q., Purohit, S., & Raff, E. (2023). *Emergent and Predictable Memorization in Large Language Models.* arXiv:2304.11158. https://arxiv.org/abs/2304.11158 —— 談 Pythia 系列的記憶化，也是「在這幾個一模一樣的模型上做語料本位記憶量測」最接近的先例（他們的記憶構念是逐字 k-extraction，不是連續的對數機率）。
 
 ## 揭露與來源說明
 
 這項研究的構想、方向與各項決策都出自作者本人。文獻回顧、工程實作、實驗、**審查、驗證與對抗性紅隊**，以及本文的文字，則由 AI 代理（Claude）在作者的指導下執行。這也包含本文所倚賴的那整條驗證軌跡：開跑前修掉的那「16 個確認缺陷」，以及裁決出這一版修訂的多人對抗審查小組，都是 AI 執行的，規模詳列在製作歷程日誌裡。
 
-每一個數字都是從原始輸出重新算過的，而我們犯過又修掉的錯誤全部公開在製作歷程日誌裡。AI 生成的文字可能帶有供應商的浮水印；無論如何，我們一律主動揭露 AI 的參與。完整聲明見 `DISCLOSURE.md`。程式碼、題庫、原始結果與製作歷程日誌：https://github.com/gudu616/omtr
+每一個數字都是從原始輸出重新算過的，而我們犯過又修掉的錯誤全部公開在製作歷程日誌裡。v0.6 的推翻也是用同一套方式產生的：我們自己的代理跑了我們自己備忘錄提出的檢驗，就在第 1 版發表的同一個下午。AI 生成的文字可能帶有供應商的浮水印；無論如何，我們一律主動揭露 AI 的參與。完整聲明見 `DISCLOSURE.md`。程式碼、題庫、原始結果與製作歷程日誌：https://github.com/gudu616/omtr
 
 *作者：Leo Gudu，獨立研究者。聯絡方式：guduwangho@gmail.com。*

@@ -11,13 +11,19 @@ the layer-wise prediction settles? Ground truth for "memorized" comes from corpu
 frequency queries (infini-gram) against the models' actual training corpora, with a
 construction-matched non-memorized control.
 
+**v0.6 (2026-08-21): the answer reversed.** The decisive instrument test the paper's own
+verification memo proposed shows the threshold-based depth metric's sign flips under
+normalization — the "depth" signal is not separable from output sharpness. v0.6 withdraws
+the depth headline, keeps what survives (memorization dose predicts output sharpness,
+−0.70 to −0.82 in all five runs), and ships the full self-test. Read its first section.
+
 ## Read the paper
 
 | File | What it is |
 |---|---|
-| [`docs/WRITEUP_v0.5_EN.md`](docs/WRITEUP_v0.5_EN.md) | **The paper** (English, canonical) |
-| [`docs/WRITEUP_v0.5_ZH.md`](docs/WRITEUP_v0.5_ZH.md) | Independent Chinese version (not a translation) |
-| [`docs/WRITEUP_v0.3_EN.md`](docs/WRITEUP_v0.3_EN.md) | The frozen version that passed adversarial review; v0.5 = v0.3 + editorial pass + four approved post-review caveats |
+| [`docs/WRITEUP_v0.6_EN.md`](docs/WRITEUP_v0.6_EN.md) | **The paper** (English, canonical): the v0.6 self-test section + the preserved reviewed v1 record |
+| [`docs/WRITEUP_v0.6_ZH.md`](docs/WRITEUP_v0.6_ZH.md) | Independent Chinese version (not a translation) |
+| [`docs/WRITEUP_v0.3_EN.md`](docs/WRITEUP_v0.3_EN.md) | The frozen version that passed adversarial review |
 
 ## Verify the numbers yourself
 
@@ -25,8 +31,9 @@ Every statistic in the papers can be recomputed from the raw per-item outputs sh
 here. The reconciliation gate does it mechanically:
 
 ```
-python harness/reconcile.py docs/WRITEUP_v0.5_EN.md   # exit 0 = every number checks out
+python harness/reconcile.py docs/WRITEUP_v0.6_EN.md   # exit 0 = every number checks out
 python harness/reconcile.py --selftest                # prove the gate itself works first
+python harness/relative_depth_analysis.py             # the v0.6 self-test, from stored curves
 ```
 
 Raw measurement outputs: `results/raw/` (main pilot) and `results/night/` (post-review

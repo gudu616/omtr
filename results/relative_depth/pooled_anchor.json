@@ -1,0 +1,231 @@
+{
+  "generated_utc": "2026-08-21T05:17:48+00:00",
+  "script": "harness/pooled_anchor_analysis.py",
+  "task_a_deduped_replication": {
+    "EleutherAI_pythia-410m-deduped": {
+      "model": "EleutherAI/pythia-410m-deduped",
+      "n_layers": 24,
+      "n_ok_records": 53,
+      "L0": {
+        "n": 17,
+        "rho": -0.748980170454992,
+        "p": 0.0005402711217190373
+      },
+      "L0N": {
+        "n": 12,
+        "rho": -0.3493705173929174,
+        "p": 0.2656477316875742
+      },
+      "L1": {
+        "n": 24,
+        "rho": -0.010364337454324992,
+        "p": 0.9616642478100078
+      }
+    },
+    "EleutherAI_pythia-1.4b-deduped": {
+      "model": "EleutherAI/pythia-1.4b-deduped",
+      "n_layers": 24,
+      "n_ok_records": 53,
+      "L0": {
+        "n": 17,
+        "rho": -0.7477038288725237,
+        "p": 0.0005589380295389796
+      },
+      "L0N": {
+        "n": 12,
+        "rho": -0.12429074050572272,
+        "p": 0.7003415229633347
+      },
+      "L1": {
+        "n": 24,
+        "rho": 0.11261711719974613,
+        "p": 0.6003283146760527
+      }
+    },
+    "EleutherAI_pythia-410m (non-deduped reference)": {
+      "model": "EleutherAI/pythia-410m",
+      "n_layers": 24,
+      "n_ok_records": 53,
+      "L0": {
+        "n": 17,
+        "rho": -0.5302100881316397,
+        "p": 0.0285707197154149
+      },
+      "L0N": {
+        "n": 12,
+        "rho": -0.054705032192895194,
+        "p": 0.8659100716983982
+      },
+      "L1": {
+        "n": 24,
+        "rho": -0.1417799899339959,
+        "p": 0.5087090451985901
+      }
+    },
+    "EleutherAI_pythia-1.4b (non-deduped reference)": {
+      "model": "EleutherAI/pythia-1.4b",
+      "n_layers": 24,
+      "n_ok_records": 53,
+      "L0": {
+        "n": 17,
+        "rho": -0.6932324254769833,
+        "p": 0.0020310799002126994
+      },
+      "L0N": {
+        "n": 12,
+        "rho": -0.16020759427919307,
+        "p": 0.6189236237292225
+      },
+      "L1": {
+        "n": 24,
+        "rho": 0.007946181217176131,
+        "p": 0.9706042194473634
+      }
+    }
+  },
+  "task_b_pooled_anchor": {
+    "design": {
+      "x": "per-item median corpus window count (median of ok probes, battery/l0_verification.json probes[corpus]) — model-external",
+      "y": "depth.depth_tau_0.1 (frozen absolute-threshold metric)",
+      "scope": "within L0 only",
+      "n_iterations": 20000,
+      "seed": 20260821,
+      "permutation_unit": "item",
+      "sharing_handled": "one permutation of the 17 shared Pile items is applied to all four Pythia runs per iteration; OLMo's 20 olmo_mix items are permuted independently",
+      "combined_statistic": "mean Fisher z (arctanh rho) over the five runs",
+      "pythia_shared_items": [
+        "L0-01",
+        "L0-02",
+        "L0-03",
+        "L0-04",
+        "L0-05",
+        "L0-06",
+        "L0-07",
+        "L0-08",
+        "L0-09",
+        "L0-10",
+        "L0-11",
+        "L0-12",
+        "L0-15",
+        "L0-16",
+        "L0-17",
+        "L0-19",
+        "L0-20"
+      ],
+      "olmo_items": [
+        "L0-01",
+        "L0-02",
+        "L0-03",
+        "L0-04",
+        "L0-05",
+        "L0-06",
+        "L0-07",
+        "L0-08",
+        "L0-09",
+        "L0-10",
+        "L0-11",
+        "L0-12",
+        "L0-13",
+        "L0-14",
+        "L0-15",
+        "L0-16",
+        "L0-17",
+        "L0-18",
+        "L0-19",
+        "L0-20"
+      ]
+    },
+    "per_run": [
+      {
+        "tag": "EleutherAI_pythia-410m",
+        "model": "EleutherAI/pythia-410m",
+        "corpus": "pile",
+        "n_layers": 24,
+        "n_items": 17,
+        "rho_count_vs_depth_tau_0.1": -0.296,
+        "p_asymptotic": 0.249,
+        "p_permutation_one_sided": 0.1208,
+        "fisher_z": -0.3049
+      },
+      {
+        "tag": "EleutherAI_pythia-1b",
+        "model": "EleutherAI/pythia-1b",
+        "corpus": "pile",
+        "n_layers": 16,
+        "n_items": 17,
+        "rho_count_vs_depth_tau_0.1": -0.276,
+        "p_asymptotic": 0.2836,
+        "p_permutation_one_sided": 0.1393,
+        "fisher_z": -0.2834
+      },
+      {
+        "tag": "EleutherAI_pythia-1.4b",
+        "model": "EleutherAI/pythia-1.4b",
+        "corpus": "pile",
+        "n_layers": 24,
+        "n_items": 17,
+        "rho_count_vs_depth_tau_0.1": -0.362,
+        "p_asymptotic": 0.1539,
+        "p_permutation_one_sided": 0.0786,
+        "fisher_z": -0.3786
+      },
+      {
+        "tag": "EleutherAI_pythia-2.8b",
+        "model": "EleutherAI/pythia-2.8b",
+        "corpus": "pile",
+        "n_layers": 32,
+        "n_items": 17,
+        "rho_count_vs_depth_tau_0.1": -0.159,
+        "p_asymptotic": 0.543,
+        "p_permutation_one_sided": 0.2679,
+        "fisher_z": -0.16
+      },
+      {
+        "tag": "allenai_OLMo-2-0425-1B",
+        "model": "allenai/OLMo-2-0425-1B",
+        "corpus": "olmo_mix",
+        "n_layers": 16,
+        "n_items": 20,
+        "rho_count_vs_depth_tau_0.1": -0.735,
+        "p_asymptotic": 0.0002,
+        "p_permutation_one_sided": 0.0003,
+        "fisher_z": -0.9387
+      }
+    ],
+    "pooled": {
+      "combined_mean_fisher_z_observed": -0.4131,
+      "permutation_null_mean": 0.0011,
+      "permutation_null_sd": 0.1788,
+      "p_one_sided_negative": 0.0097,
+      "p_two_sided": 0.0203,
+      "p_one_sided_mc_se": 0.00069,
+      "implied_pooled_rho": -0.391
+    },
+    "pooled_precision_weighted_sensitivity": {
+      "combined_mean_weighted_z_observed": -1.6174,
+      "permutation_null_sd": 0.6745,
+      "p_one_sided_negative": 0.00755,
+      "p_two_sided": 0.01595,
+      "p_one_sided_mc_se": 0.00061
+    },
+    "pythia_only_leave_out_olmo": {
+      "note": "The five-run pooled test is checked against the four Pythia runs alone, because OLMo is on its own significant and could carry the pool by itself. Same shared-item permutation, four runs, mean Fisher z. This is the honest question: does the shared-item Pile evidence stand without OLMo?",
+      "n_runs": 4,
+      "combined_mean_fisher_z_observed": -0.2817,
+      "permutation_null_sd": 0.2143,
+      "p_one_sided_negative": 0.09485,
+      "p_two_sided": 0.19059,
+      "p_one_sided_mc_se": 0.00207,
+      "olmo_alone_rho": -0.735,
+      "olmo_alone_p_permutation_one_sided": 0.00035,
+      "wrong_independent_null_sd": 0.1328,
+      "wrong_independent_null_p": 0.01685,
+      "inflation_note": "Pretending the four Pythia runs are independent shrinks the null sd and turns the same observed statistic into a much smaller p. That gap is the size of the error Stouffer makes."
+    },
+    "invalid_for_contrast_only": {
+      "note": "Stouffer over the five marginal p-values. INVALID here — the four Pythia runs share one 17-item set and one count vector, so this treats one shared coincidence as four independent ones.",
+      "stouffer_z": -3.554,
+      "stouffer_p_one_sided": 0.00019
+    }
+  }
+}

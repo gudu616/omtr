@@ -76,3 +76,28 @@ https://arxiv.org/html/2603.21658 (rendered directly, no `v1` suffix needed) on 
 All checks used WebFetch (primary) plus WebSearch as a cross-check where WebFetch was blocked
 (Squire et al. only). Every "OK" row reflects content actually retrieved and read on 2026-08-21 by
 this pass, not a copy of the 2026-08-20 panel result.
+
+---
+
+## Full-text verification pass (2026-08-21, third sweep)
+
+Owner rule: sources that the paper cites or characterizes must be read in FULL —
+title/author/URL matching is not verification. Nine readers fetched the complete
+text of all 18 remaining sources (the 19th, Chen 2026, was full-read earlier the
+same day). Access: 18/18 full text obtained (incl. PMC mirrors for PNAS/Nature-adjacent
+sources). Claim verdicts: 44 HOLDS · 9 QUALIFIED · 2 CONTRADICTED.
+
+**Corrections applied to the draft (both languages):**
+- **OLMo 2 paper (arXiv:2501.00656) — CONTRADICTED, fixed.** The draft said the paper
+  "covers 7B/13B/32B, not this checkpoint." The current revision (v3, 2025-10-08)
+  contains Appendix B "OLMo 2 1B" incl. "B.1 Difficulties with OLMo 2 1B", with the
+  1B training recipe and results tables. Two earlier title-level checks missed this;
+  only full-text reading caught it. Both mentions corrected.
+- QUALIFIED wording tightened for: infini-gram index-count provenance (live API docs,
+  not the arXiv text), Geva §5.1 (saturation is formally defined and quantified, not
+  "descriptive"; their operationalization is FFN-mechanistic), Haviv (same instrument
+  *family*), Hassabis 2007 ("new experiences" is the paper's own vocabulary), Sui 2024
+  (adjacent behavioral axis), Pythia-indexing attribution (indexing is infini-gram's
+  contribution), Biderman 2023 emergent (k-extraction vs graded log-probability).
+
+Per-source reports with quotes: workflow journal `wf_c76f554d-814` (internal record).

@@ -1,0 +1,6380 @@
+{
+ "spec": "Independent adversarial re-implementation of relative / entropy-normalized\nconvergence-depth criteria for the OMTR pilot.\n\nWritten from the written spec only. The other agent's script\n(harness/relative_depth_analysis.py) and its outputs were deliberately NOT read.\n\nSpec implemented here\n---------------------\ndepth(curve, threshold) = (last layer index i with kl_to_final[i] > threshold) + 1\n                          normalized by n_layers (= len(curve));\n                          0.0 if no layer ever exceeds the threshold.\n\nThis convention is validated against the stored per_position_depths[0]\ndepth_tau_{0.05,0.1,0.5} using the first_pos_profile curve (exact match test).\n\nCriteria:\n  abs   tau      : threshold = tau                      (the paper's frozen metric)\n  rel   alpha    : threshold = alpha * kl_to_final[0]   (relative to layer-0 KL)\n  ent   tau      : threshold = tau * H_final            (entropy-normalized)\n                   two readings of \"H_final\" are computed because the phrase is\n                   ambiguous:\n                     ent   -> H_final = record['final_entropy_mean']\n                     entc  -> H_final = curve[-1]['entropy']  (curve-internal)\n\nCurves:\n  mean  -> record['layer_profile']     (averaged over the 8 answer positions)\n  first -> record['first_pos_profile'] (answer position 0 exactly)\n\nCorrelations: Spearman rho of the depth against\n  (a) gold_logprob_per_token   -- the dose-response of interest\n  (b) final_entropy_mean       -- the sharpness confound\ncomputed WITHIN each level (L0, L0N, L1) separately, per model.",
+ "models": {
+  "EleutherAI/pythia-410m": {
+   "n_layers": 24,
+   "n_records_used": 53,
+   "validation_pos0_exactness": {
+    "checks": 159,
+    "exact": 159,
+    "max_abs_diff": 0.0
+   },
+   "last_layer_kl": {
+    "max_abs_last_layer_kl": 9.859795682132244e-06,
+    "n": 106
+   },
+   "depth_cap": 0.9583333333333334,
+   "all_items_recomputed_abs_t0.1_vs_stored": {
+    "mean_curve": {
+     "rho": 0.245681,
+     "p": 0.07619159988826242,
+     "k_distinct_depth": 2,
+     "n": 53
+    },
+    "first_curve": {
+     "rho": 0.328531,
+     "p": 0.01631507201065064,
+     "k_distinct_depth": 2,
+     "n": 53
+    }
+   },
+   "levels": {
+    "L0": {
+     "n": 17,
+     "baseline_stored_tau0.1_mean8": {
+      "gold_vs_depth": {
+       "rho": -0.53021,
+       "p": 0.0285707197154149,
+       "k_distinct_depth": 11,
+       "n": 17
+      },
+      "entropy_vs_depth": {
+       "rho": 0.802209,
+       "p": 0.0001069563409074298,
+       "k_distinct_depth": 11,
+       "n": 17
+      }
+     },
+     "gold_vs_final_entropy": {
+      "rho": -0.745098,
+      "p": 0.0005987151981012148,
+      "k_distinct_depth": 17,
+      "n": 17
+     },
+     "curves": {
+      "mean_curve": {
+       "abs_t0.1": {
+        "gold_vs_depth": {
+         "rho": -0.051031,
+         "p": 0.8457801257277214,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": 0.306186,
+         "p": 0.23198812442321468,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "depth_min": 0.9166666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.9411764705882353
+       },
+       "rel_a0.5": {
+        "gold_vs_depth": {
+         "rho": 0.590364,
+         "p": 0.01259674903904146,
+         "k_distinct_depth": 9,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.434677,
+         "p": 0.08122644002903319,
+         "k_distinct_depth": 9,
+         "n": 17
+        },
+        "depth_min": 0.3333333333333333,
+        "depth_max": 0.7083333333333334,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.25": {
+        "gold_vs_depth": {
+         "rho": 0.50682,
+         "p": 0.03786746696787452,
+         "k_distinct_depth": 6,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.334098,
+         "p": 0.18997916334045511,
+         "k_distinct_depth": 6,
+         "n": 17
+        },
+        "depth_min": 0.5,
+        "depth_max": 0.7916666666666666,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.1": {
+        "gold_vs_depth": {
+         "rho": 0.239421,
+         "p": 0.35469106017888274,
+         "k_distinct_depth": 5,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": 0.127067,
+         "p": 0.6269792520668005,
+         "k_distinct_depth": 5,
+         "n": 17
+        },
+        "depth_min": 0.625,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.058823529411764705
+       },
+       "rel_a0.05": {
+        "gold_vs_depth": {
+         "rho": -0.176284,
+         "p": 0.4985282780964189,
+         "k_distinct_depth": 5,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": 0.503305,
+         "p": 0.039442852061307404,
+         "k_distinct_depth": 5,
+         "n": 17
+        },
+        "depth_min": 0.7916666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.29411764705882354
+       },
+       "ent_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 17
+        },
+        "depth_min": 0.9583333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 1.0
+       },
+       "entc_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 17
+        },
+        "depth_min": 0.9583333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.1": {
+        "gold_vs_depth": {
+         "rho": 0.622752,
+         "p": 0.007581424892167487,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.594445,
+         "p": 0.01184951695350346,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "depth_min": 0.9166666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.7647058823529411
+       },
+       "entc_t0.1": {
+        "gold_vs_depth": {
+         "rho": 0.622752,
+         "p": 0.007581424892167487,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.594445,
+         "p": 0.01184951695350346,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "depth_min": 0.9166666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.7647058823529411
+       },
+       "ent_t0.25": {
+        "gold_vs_depth": {
+         "rho": 0.913754,
+         "p": 2.9722659476262754e-07,
+         "k_distinct_depth": 5,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.823166,
+         "p": 4.927463530702305e-05,
+         "k_distinct_depth": 5,
+         "n": 17
+        },
+        "depth_min": 0.7916666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.47058823529411764
+       },
+       "entc_t0.25": {
+        "gold_vs_depth": {
+         "rho": 0.913754,
+         "p": 2.9722659476262754e-07,
+         "k_distinct_depth": 5,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.823166,
+         "p": 4.927463530702305e-05,
+         "k_distinct_depth": 5,
+         "n": 17
+        },
+        "depth_min": 0.7916666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.47058823529411764
+       },
+       "_recomputed_abs_t0.1_vs_stored": {
+        "rho": 0.417563,
+        "p": 0.09537058644693619,
+        "k_distinct_depth": 2,
+        "n": 17
+       }
+      },
+      "first_curve": {
+       "abs_t0.1": {
+        "gold_vs_depth": {
+         "rho": -0.188982,
+         "p": 0.4675760636475933,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": 0.346467,
+         "p": 0.17308522647574548,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "depth_min": 0.9166666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.8235294117647058
+       },
+       "rel_a0.5": {
+        "gold_vs_depth": {
+         "rho": 0.373825,
+         "p": 0.13937300649690623,
+         "k_distinct_depth": 8,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.367574,
+         "p": 0.14664127066471525,
+         "k_distinct_depth": 8,
+         "n": 17
+        },
+        "depth_min": 0.375,
+        "depth_max": 0.7916666666666666,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.25": {
+        "gold_vs_depth": {
+         "rho": 0.328395,
+         "p": 0.19812188259543756,
+         "k_distinct_depth": 7,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.422933,
+         "p": 0.09075588575570617,
+         "k_distinct_depth": 7,
+         "n": 17
+        },
+        "depth_min": 0.625,
+        "depth_max": 0.875,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.1": {
+        "gold_vs_depth": {
+         "rho": -0.097707,
+         "p": 0.7091008057775477,
+         "k_distinct_depth": 7,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": 0.334457,
+         "p": 0.18947339240846323,
+         "k_distinct_depth": 7,
+         "n": 17
+        },
+        "depth_min": 0.6666666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.11764705882352941
+       },
+       "rel_a0.05": {
+        "gold_vs_depth": {
+         "rho": -0.425903,
+         "p": 0.08827364950833787,
+         "k_distinct_depth": 5,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": 0.497757,
+         "p": 0.04202974981107137,
+         "k_distinct_depth": 5,
+         "n": 17
+        },
+        "depth_min": 0.6666666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.23529411764705882
+       },
+       "ent_t0.05": {
+        "gold_vs_depth": {
+         "rho": -0.051031,
+         "p": 0.8457801257277214,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": 0.306186,
+         "p": 0.23198812442321468,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "depth_min": 0.9166666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.9411764705882353
+       },
+       "entc_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 17
+        },
+        "depth_min": 0.9583333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.1": {
+        "gold_vs_depth": {
+         "rho": 0.360844,
+         "p": 0.1547512674928845,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.408956,
+         "p": 0.10311443713688125,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "depth_min": 0.9166666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.5294117647058824
+       },
+       "entc_t0.1": {
+        "gold_vs_depth": {
+         "rho": 0.678401,
+         "p": 0.0027567922513016298,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.703526,
+         "p": 0.0016260180191330735,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "depth_min": 0.9166666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.6470588235294118
+       },
+       "ent_t0.25": {
+        "gold_vs_depth": {
+         "rho": 0.559998,
+         "p": 0.019397270125605284,
+         "k_distinct_depth": 5,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.751744,
+         "p": 0.0005016227349999415,
+         "k_distinct_depth": 5,
+         "n": 17
+        },
+        "depth_min": 0.7916666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.23529411764705882
+       },
+       "entc_t0.25": {
+        "gold_vs_depth": {
+         "rho": 0.725172,
+         "p": 0.000987690249929961,
+         "k_distinct_depth": 5,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.614508,
+         "p": 0.008670990930604824,
+         "k_distinct_depth": 5,
+         "n": 17
+        },
+        "depth_min": 0.7916666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.47058823529411764
+       },
+       "_recomputed_abs_t0.1_vs_stored": {
+        "rho": 0.354373,
+        "p": 0.16283259546526935,
+        "k_distinct_depth": 2,
+        "n": 17
+       }
+      }
+     }
+    },
+    "L0N": {
+     "n": 12,
+     "baseline_stored_tau0.1_mean8": {
+      "gold_vs_depth": {
+       "rho": -0.054705,
+       "p": 0.8659100716983982,
+       "k_distinct_depth": 5,
+       "n": 12
+      },
+      "entropy_vs_depth": {
+       "rho": 0.253988,
+       "p": 0.4256877947961281,
+       "k_distinct_depth": 5,
+       "n": 12
+      }
+     },
+     "gold_vs_final_entropy": {
+      "rho": -0.601399,
+      "p": 0.038588452922019456,
+      "k_distinct_depth": 12,
+      "n": 12
+     },
+     "curves": {
+      "mean_curve": {
+       "abs_t0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "depth_min": 0.9583333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 1.0
+       },
+       "rel_a0.5": {
+        "gold_vs_depth": {
+         "rho": 0.010582,
+         "p": 0.9739612089527365,
+         "k_distinct_depth": 9,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.063495,
+         "p": 0.844580822688862,
+         "k_distinct_depth": 9,
+         "n": 12
+        },
+        "depth_min": 0.25,
+        "depth_max": 0.75,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.25": {
+        "gold_vs_depth": {
+         "rho": -0.216334,
+         "p": 0.4994686015884522,
+         "k_distinct_depth": 6,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.141858,
+         "p": 0.6600947535200516,
+         "k_distinct_depth": 6,
+         "n": 12
+        },
+        "depth_min": 0.5833333333333334,
+        "depth_max": 0.9166666666666666,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.1": {
+        "gold_vs_depth": {
+         "rho": -0.311047,
+         "p": 0.3250684937681912,
+         "k_distinct_depth": 4,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.196256,
+         "p": 0.5409854994277212,
+         "k_distinct_depth": 4,
+         "n": 12
+        },
+        "depth_min": 0.7916666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.4166666666666667
+       },
+       "rel_a0.05": {
+        "gold_vs_depth": {
+         "rho": -0.220344,
+         "p": 0.4913514846060387,
+         "k_distinct_depth": 2,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.318275,
+         "p": 0.313347617389817,
+         "k_distinct_depth": 2,
+         "n": 12
+        },
+        "depth_min": 0.9166666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.5833333333333334
+       },
+       "ent_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "depth_min": 0.9583333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 1.0
+       },
+       "entc_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "depth_min": 0.9583333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.1": {
+        "gold_vs_depth": {
+         "rho": -0.220344,
+         "p": 0.4913514846060387,
+         "k_distinct_depth": 2,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.318275,
+         "p": 0.313347617389817,
+         "k_distinct_depth": 2,
+         "n": 12
+        },
+        "depth_min": 0.9166666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.5833333333333334
+       },
+       "entc_t0.1": {
+        "gold_vs_depth": {
+         "rho": -0.220344,
+         "p": 0.4913514846060387,
+         "k_distinct_depth": 2,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.318275,
+         "p": 0.313347617389817,
+         "k_distinct_depth": 2,
+         "n": 12
+        },
+        "depth_min": 0.9166666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.5833333333333334
+       },
+       "ent_t0.25": {
+        "gold_vs_depth": {
+         "rho": 0.026444,
+         "p": 0.9349828849595746,
+         "k_distinct_depth": 3,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.449553,
+         "p": 0.14258180777331553,
+         "k_distinct_depth": 3,
+         "n": 12
+        },
+        "depth_min": 0.8333333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.4166666666666667
+       },
+       "entc_t0.25": {
+        "gold_vs_depth": {
+         "rho": 0.026444,
+         "p": 0.9349828849595746,
+         "k_distinct_depth": 3,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.449553,
+         "p": 0.14258180777331553,
+         "k_distinct_depth": 3,
+         "n": 12
+        },
+        "depth_min": 0.8333333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.4166666666666667
+       },
+       "_recomputed_abs_t0.1_vs_stored": {
+        "rho": null,
+        "p": null,
+        "k_distinct_depth": 1,
+        "n": 12
+       }
+      },
+      "first_curve": {
+       "abs_t0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "depth_min": 0.9583333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 1.0
+       },
+       "rel_a0.5": {
+        "gold_vs_depth": {
+         "rho": 0.088187,
+         "p": 0.7852123341496263,
+         "k_distinct_depth": 9,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": 0.0,
+         "p": 1.0,
+         "k_distinct_depth": 9,
+         "n": 12
+        },
+        "depth_min": 0.2916666666666667,
+        "depth_max": 0.7916666666666666,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.25": {
+        "gold_vs_depth": {
+         "rho": -0.262699,
+         "p": 0.40942579654335753,
+         "k_distinct_depth": 5,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": 0.050381,
+         "p": 0.8764351849316755,
+         "k_distinct_depth": 5,
+         "n": 12
+        },
+        "depth_min": 0.5416666666666666,
+        "depth_max": 0.9166666666666666,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.1": {
+        "gold_vs_depth": {
+         "rho": -0.45618,
+         "p": 0.13607024096245832,
+         "k_distinct_depth": 6,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": 0.021552,
+         "p": 0.9469951951220406,
+         "k_distinct_depth": 6,
+         "n": 12
+        },
+        "depth_min": 0.6666666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.16666666666666666
+       },
+       "rel_a0.05": {
+        "gold_vs_depth": {
+         "rho": -0.213747,
+         "p": 0.5047369094972156,
+         "k_distinct_depth": 3,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": 0.007634,
+         "p": 0.981215129816673,
+         "k_distinct_depth": 3,
+         "n": 12
+        },
+        "depth_min": 0.8333333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.5
+       },
+       "ent_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "depth_min": 0.9583333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 1.0
+       },
+       "entc_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "depth_min": 0.9583333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.1": {
+        "gold_vs_depth": {
+         "rho": 0.134473,
+         "p": 0.6769210553364594,
+         "k_distinct_depth": 3,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.642948,
+         "p": 0.024122078694588638,
+         "k_distinct_depth": 3,
+         "n": 12
+        },
+        "depth_min": 0.8333333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.6666666666666666
+       },
+       "entc_t0.1": {
+        "gold_vs_depth": {
+         "rho": -0.007556,
+         "p": 0.9814077707639051,
+         "k_distinct_depth": 3,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.211554,
+         "p": 0.5092204296516069,
+         "k_distinct_depth": 3,
+         "n": 12
+        },
+        "depth_min": 0.875,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.4166666666666667
+       },
+       "ent_t0.25": {
+        "gold_vs_depth": {
+         "rho": -0.266297,
+         "p": 0.4027999317447129,
+         "k_distinct_depth": 5,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.197924,
+         "p": 0.5374827183010917,
+         "k_distinct_depth": 5,
+         "n": 12
+        },
+        "depth_min": 0.7916666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.16666666666666666
+       },
+       "entc_t0.25": {
+        "gold_vs_depth": {
+         "rho": -0.288302,
+         "p": 0.3634830473605587,
+         "k_distinct_depth": 6,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": 0.185083,
+         "p": 0.5646956176910539,
+         "k_distinct_depth": 6,
+         "n": 12
+        },
+        "depth_min": 0.6666666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.25
+       },
+       "_recomputed_abs_t0.1_vs_stored": {
+        "rho": null,
+        "p": null,
+        "k_distinct_depth": 1,
+        "n": 12
+       }
+      }
+     }
+    },
+    "L1": {
+     "n": 24,
+     "baseline_stored_tau0.1_mean8": {
+      "gold_vs_depth": {
+       "rho": -0.14178,
+       "p": 0.5087090451985901,
+       "k_distinct_depth": 7,
+       "n": 24
+      },
+      "entropy_vs_depth": {
+       "rho": 0.334293,
+       "p": 0.11035666541207723,
+       "k_distinct_depth": 7,
+       "n": 24
+      }
+     },
+     "gold_vs_final_entropy": {
+      "rho": -0.227826,
+      "p": 0.2843074270071832,
+      "k_distinct_depth": 24,
+      "n": 24
+     },
+     "curves": {
+      "mean_curve": {
+       "abs_t0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "depth_min": 0.9583333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 1.0
+       },
+       "rel_a0.5": {
+        "gold_vs_depth": {
+         "rho": 0.199641,
+         "p": 0.3496383893442981,
+         "k_distinct_depth": 8,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": 0.566538,
+         "p": 0.003897934747446277,
+         "k_distinct_depth": 8,
+         "n": 24
+        },
+        "depth_min": 0.375,
+        "depth_max": 0.6666666666666666,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.25": {
+        "gold_vs_depth": {
+         "rho": -0.029856,
+         "p": 0.889857141929416,
+         "k_distinct_depth": 4,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": 0.648016,
+         "p": 0.0006168903413298843,
+         "k_distinct_depth": 4,
+         "n": 24
+        },
+        "depth_min": 0.625,
+        "depth_max": 0.8333333333333334,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.1": {
+        "gold_vs_depth": {
+         "rho": -0.016288,
+         "p": 0.9397862997550691,
+         "k_distinct_depth": 5,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": 0.426649,
+         "p": 0.037604744000389954,
+         "k_distinct_depth": 5,
+         "n": 24
+        },
+        "depth_min": 0.7083333333333334,
+        "depth_max": 0.9166666666666666,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.05": {
+        "gold_vs_depth": {
+         "rho": 0.163163,
+         "p": 0.44618806752696216,
+         "k_distinct_depth": 5,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": 0.471764,
+         "p": 0.019944703533752307,
+         "k_distinct_depth": 5,
+         "n": 24
+        },
+        "depth_min": 0.7916666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.041666666666666664
+       },
+       "ent_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "depth_min": 0.9583333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 1.0
+       },
+       "entc_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "depth_min": 0.9583333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.1": {
+        "gold_vs_depth": {
+         "rho": 0.061047,
+         "p": 0.7768964689278254,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.476165,
+         "p": 0.01866584285799877,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "depth_min": 0.9166666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.5833333333333334
+       },
+       "entc_t0.1": {
+        "gold_vs_depth": {
+         "rho": 0.061047,
+         "p": 0.7768964689278254,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.476165,
+         "p": 0.01866584285799877,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "depth_min": 0.9166666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.5833333333333334
+       },
+       "ent_t0.25": {
+        "gold_vs_depth": {
+         "rho": 0.089498,
+         "p": 0.6774969290526719,
+         "k_distinct_depth": 4,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.423988,
+         "p": 0.03894350632737275,
+         "k_distinct_depth": 4,
+         "n": 24
+        },
+        "depth_min": 0.7916666666666666,
+        "depth_max": 0.9166666666666666,
+        "depth_at_cap_frac": 0.0
+       },
+       "entc_t0.25": {
+        "gold_vs_depth": {
+         "rho": 0.089498,
+         "p": 0.6774969290526719,
+         "k_distinct_depth": 4,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.423988,
+         "p": 0.03894350632737275,
+         "k_distinct_depth": 4,
+         "n": 24
+        },
+        "depth_min": 0.7916666666666666,
+        "depth_max": 0.9166666666666666,
+        "depth_at_cap_frac": 0.0
+       },
+       "_recomputed_abs_t0.1_vs_stored": {
+        "rho": null,
+        "p": null,
+        "k_distinct_depth": 1,
+        "n": 24
+       }
+      },
+      "first_curve": {
+       "abs_t0.1": {
+        "gold_vs_depth": {
+         "rho": -0.316288,
+         "p": 0.13213600466358602,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": 0.316288,
+         "p": 0.13213600466358602,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "depth_min": 0.9166666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.9583333333333334
+       },
+       "rel_a0.5": {
+        "gold_vs_depth": {
+         "rho": 0.192167,
+         "p": 0.36833685925944637,
+         "k_distinct_depth": 8,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": 0.414146,
+         "p": 0.044224153612367555,
+         "k_distinct_depth": 8,
+         "n": 24
+        },
+        "depth_min": 0.5,
+        "depth_max": 0.8333333333333334,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.25": {
+        "gold_vs_depth": {
+         "rho": -0.21049,
+         "p": 0.32351579775564343,
+         "k_distinct_depth": 6,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": 0.478854,
+         "p": 0.017917755758138317,
+         "k_distinct_depth": 6,
+         "n": 24
+        },
+        "depth_min": 0.625,
+        "depth_max": 0.8333333333333334,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.1": {
+        "gold_vs_depth": {
+         "rho": -0.295453,
+         "p": 0.1610137598426641,
+         "k_distinct_depth": 7,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": 0.37777,
+         "p": 0.06875748936295537,
+         "k_distinct_depth": 7,
+         "n": 24
+        },
+        "depth_min": 0.6666666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.041666666666666664
+       },
+       "rel_a0.05": {
+        "gold_vs_depth": {
+         "rho": -0.45707,
+         "p": 0.02473829408935199,
+         "k_distinct_depth": 5,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": 0.453384,
+         "p": 0.026075705420884387,
+         "k_distinct_depth": 5,
+         "n": 24
+        },
+        "depth_min": 0.75,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.3333333333333333
+       },
+       "ent_t0.05": {
+        "gold_vs_depth": {
+         "rho": -0.196008,
+         "p": 0.35865851850403885,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": 0.108893,
+         "p": 0.6125076193760566,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "depth_min": 0.9166666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.9166666666666666
+       },
+       "entc_t0.05": {
+        "gold_vs_depth": {
+         "rho": -0.196008,
+         "p": 0.35865851850403885,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": 0.108893,
+         "p": 0.6125076193760566,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "depth_min": 0.9166666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.9166666666666666
+       },
+       "ent_t0.1": {
+        "gold_vs_depth": {
+         "rho": -0.408816,
+         "p": 0.047309759820184816,
+         "k_distinct_depth": 4,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.113154,
+         "p": 0.5985794703110627,
+         "k_distinct_depth": 4,
+         "n": 24
+        },
+        "depth_min": 0.8333333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.6666666666666666
+       },
+       "entc_t0.1": {
+        "gold_vs_depth": {
+         "rho": 0.253191,
+         "p": 0.2325826669491046,
+         "k_distinct_depth": 3,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.138239,
+         "p": 0.5194574591977329,
+         "k_distinct_depth": 3,
+         "n": 24
+        },
+        "depth_min": 0.875,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.5416666666666666
+       },
+       "ent_t0.25": {
+        "gold_vs_depth": {
+         "rho": -0.344037,
+         "p": 0.09973254857498702,
+         "k_distinct_depth": 7,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.196403,
+         "p": 0.35767144282640195,
+         "k_distinct_depth": 7,
+         "n": 24
+        },
+        "depth_min": 0.7083333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.041666666666666664
+       },
+       "entc_t0.25": {
+        "gold_vs_depth": {
+         "rho": 0.454836,
+         "p": 0.02554208100068628,
+         "k_distinct_depth": 6,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.307394,
+         "p": 0.14396685464195977,
+         "k_distinct_depth": 6,
+         "n": 24
+        },
+        "depth_min": 0.7083333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.125
+       },
+       "_recomputed_abs_t0.1_vs_stored": {
+        "rho": 0.172605,
+        "p": 0.41993780853228774,
+        "k_distinct_depth": 2,
+        "n": 24
+       }
+      }
+     }
+    }
+   }
+  },
+  "EleutherAI/pythia-1b": {
+   "n_layers": 16,
+   "n_records_used": 53,
+   "validation_pos0_exactness": {
+    "checks": 159,
+    "exact": 159,
+    "max_abs_diff": 0.0
+   },
+   "last_layer_kl": {
+    "max_abs_last_layer_kl": 1.0477000614628196e-05,
+    "n": 106
+   },
+   "depth_cap": 0.9375,
+   "all_items_recomputed_abs_t0.1_vs_stored": {
+    "mean_curve": {
+     "rho": 0.24265,
+     "p": 0.08000431972537358,
+     "k_distinct_depth": 2,
+     "n": 53
+    },
+    "first_curve": {
+     "rho": 0.293712,
+     "p": 0.032793724394129566,
+     "k_distinct_depth": 3,
+     "n": 53
+    }
+   },
+   "levels": {
+    "L0": {
+     "n": 17,
+     "baseline_stored_tau0.1_mean8": {
+      "gold_vs_depth": {
+       "rho": -0.33665,
+       "p": 0.1864075111917477,
+       "k_distinct_depth": 10,
+       "n": 17
+      },
+      "entropy_vs_depth": {
+       "rho": 0.575523,
+       "p": 0.015633155871166884,
+       "k_distinct_depth": 10,
+       "n": 17
+      }
+     },
+     "gold_vs_final_entropy": {
+      "rho": -0.79902,
+      "p": 0.00011939706384386557,
+      "k_distinct_depth": 17,
+      "n": 17
+     },
+     "curves": {
+      "mean_curve": {
+       "abs_t0.1": {
+        "gold_vs_depth": {
+         "rho": -0.102062,
+         "p": 0.696699244080777,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": 0.357217,
+         "p": 0.15924590669837793,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "depth_min": 0.875,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.9411764705882353
+       },
+       "rel_a0.5": {
+        "gold_vs_depth": {
+         "rho": 0.623573,
+         "p": 0.007479243603416004,
+         "k_distinct_depth": 6,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.586892,
+         "p": 0.013261168326740562,
+         "k_distinct_depth": 6,
+         "n": 17
+        },
+        "depth_min": 0.4375,
+        "depth_max": 0.75,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.25": {
+        "gold_vs_depth": {
+         "rho": 0.103675,
+         "p": 0.6921260056152049,
+         "k_distinct_depth": 4,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": 0.055203,
+         "p": 0.8333306869865151,
+         "k_distinct_depth": 4,
+         "n": 17
+        },
+        "depth_min": 0.5625,
+        "depth_max": 0.8125,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.1": {
+        "gold_vs_depth": {
+         "rho": -0.31181,
+         "p": 0.22308625512174446,
+         "k_distinct_depth": 4,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": 0.52286,
+         "p": 0.031278211810048646,
+         "k_distinct_depth": 4,
+         "n": 17
+        },
+        "depth_min": 0.6875,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.35294117647058826
+       },
+       "rel_a0.05": {
+        "gold_vs_depth": {
+         "rho": -0.288808,
+         "p": 0.26090648676986217,
+         "k_distinct_depth": 3,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": 0.380701,
+         "p": 0.1316690602553391,
+         "k_distinct_depth": 3,
+         "n": 17
+        },
+        "depth_min": 0.8125,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.8823529411764706
+       },
+       "ent_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 17
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "entc_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 17
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 17
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "entc_t0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 17
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.25": {
+        "gold_vs_depth": {
+         "rho": 0.853468,
+         "p": 1.3205262729189158e-05,
+         "k_distinct_depth": 3,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.831861,
+         "p": 3.467614793787469e-05,
+         "k_distinct_depth": 3,
+         "n": 17
+        },
+        "depth_min": 0.8125,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.5294117647058824
+       },
+       "entc_t0.25": {
+        "gold_vs_depth": {
+         "rho": 0.853468,
+         "p": 1.3205262729189158e-05,
+         "k_distinct_depth": 3,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.831861,
+         "p": 3.467614793787469e-05,
+         "k_distinct_depth": 3,
+         "n": 17
+        },
+        "depth_min": 0.8125,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.5294117647058824
+       },
+       "_recomputed_abs_t0.1_vs_stored": {
+        "rho": 0.412311,
+        "p": 0.10004518054447908,
+        "k_distinct_depth": 2,
+        "n": 17
+       }
+      },
+      "first_curve": {
+       "abs_t0.1": {
+        "gold_vs_depth": {
+         "rho": -0.218794,
+         "p": 0.39884317321280116,
+         "k_distinct_depth": 3,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": 0.27568,
+         "p": 0.28416573837902054,
+         "k_distinct_depth": 3,
+         "n": 17
+        },
+        "depth_min": 0.6875,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.8823529411764706
+       },
+       "rel_a0.5": {
+        "gold_vs_depth": {
+         "rho": 0.21601,
+         "p": 0.40502027843194294,
+         "k_distinct_depth": 5,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": 0.008791,
+         "p": 0.9732870090960573,
+         "k_distinct_depth": 5,
+         "n": 17
+        },
+        "depth_min": 0.5625,
+        "depth_max": 0.8125,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.25": {
+        "gold_vs_depth": {
+         "rho": -0.129538,
+         "p": 0.6202371550523842,
+         "k_distinct_depth": 5,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": 0.292423,
+         "p": 0.25471481000606155,
+         "k_distinct_depth": 5,
+         "n": 17
+        },
+        "depth_min": 0.625,
+        "depth_max": 0.875,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.1": {
+        "gold_vs_depth": {
+         "rho": -0.413793,
+         "p": 0.09870941912456517,
+         "k_distinct_depth": 5,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": 0.696384,
+         "p": 0.0018991639177594012,
+         "k_distinct_depth": 5,
+         "n": 17
+        },
+        "depth_min": 0.6875,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.29411764705882354
+       },
+       "rel_a0.05": {
+        "gold_vs_depth": {
+         "rho": -0.469668,
+         "p": 0.05714551059131311,
+         "k_distinct_depth": 5,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": 0.536205,
+         "p": 0.026499363837147374,
+         "k_distinct_depth": 5,
+         "n": 17
+        },
+        "depth_min": 0.6875,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.47058823529411764
+       },
+       "ent_t0.05": {
+        "gold_vs_depth": {
+         "rho": -0.204124,
+         "p": 0.43195708095606894,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": 0.0,
+         "p": 1.0,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "depth_min": 0.875,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.9411764705882353
+       },
+       "entc_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 17
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.1": {
+        "gold_vs_depth": {
+         "rho": 0.062994,
+         "p": 0.8101865818296312,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.220479,
+         "p": 0.39512857071936147,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "depth_min": 0.875,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.8235294117647058
+       },
+       "entc_t0.1": {
+        "gold_vs_depth": {
+         "rho": 0.579751,
+         "p": 0.014715069565182247,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.632456,
+         "p": 0.006442512189175996,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "depth_min": 0.875,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.7058823529411765
+       },
+       "ent_t0.25": {
+        "gold_vs_depth": {
+         "rho": 0.653141,
+         "p": 0.004470957348796444,
+         "k_distinct_depth": 4,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.571498,
+         "p": 0.01654850893166506,
+         "k_distinct_depth": 4,
+         "n": 17
+        },
+        "depth_min": 0.75,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.5882352941176471
+       },
+       "entc_t0.25": {
+        "gold_vs_depth": {
+         "rho": 0.584453,
+         "p": 0.013744521029478514,
+         "k_distinct_depth": 4,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.378017,
+         "p": 0.1346397260694201,
+         "k_distinct_depth": 4,
+         "n": 17
+        },
+        "depth_min": 0.75,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.5294117647058824
+       },
+       "_recomputed_abs_t0.1_vs_stored": {
+        "rho": 0.459619,
+        "p": 0.06343138068429639,
+        "k_distinct_depth": 3,
+        "n": 17
+       }
+      }
+     }
+    },
+    "L0N": {
+     "n": 12,
+     "baseline_stored_tau0.1_mean8": {
+      "gold_vs_depth": {
+       "rho": -0.053756,
+       "p": 0.8682190234582331,
+       "k_distinct_depth": 3,
+       "n": 12
+      },
+      "entropy_vs_depth": {
+       "rho": 0.499928,
+       "p": 0.09791088067826371,
+       "k_distinct_depth": 3,
+       "n": 12
+      }
+     },
+     "gold_vs_final_entropy": {
+      "rho": -0.692308,
+      "p": 0.012593030496094112,
+      "k_distinct_depth": 12,
+      "n": 12
+     },
+     "curves": {
+      "mean_curve": {
+       "abs_t0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "rel_a0.5": {
+        "gold_vs_depth": {
+         "rho": -0.109178,
+         "p": 0.7355437085253405,
+         "k_distinct_depth": 6,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": 0.298421,
+         "p": 0.34610940792271194,
+         "k_distinct_depth": 6,
+         "n": 12
+        },
+        "depth_min": 0.5,
+        "depth_max": 0.8125,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.25": {
+        "gold_vs_depth": {
+         "rho": -0.075097,
+         "p": 0.8165742003802517,
+         "k_distinct_depth": 4,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.060077,
+         "p": 0.8528624637983288,
+         "k_distinct_depth": 4,
+         "n": 12
+        },
+        "depth_min": 0.75,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.16666666666666666
+       },
+       "rel_a0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "rel_a0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "entc_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "entc_t0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.25": {
+        "gold_vs_depth": {
+         "rho": 0.147332,
+         "p": 0.6477148871952221,
+         "k_distinct_depth": 3,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.305998,
+         "p": 0.33339626255643917,
+         "k_distinct_depth": 3,
+         "n": 12
+        },
+        "depth_min": 0.8125,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.4166666666666667
+       },
+       "entc_t0.25": {
+        "gold_vs_depth": {
+         "rho": 0.147332,
+         "p": 0.6477148871952221,
+         "k_distinct_depth": 3,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.305998,
+         "p": 0.33339626255643917,
+         "k_distinct_depth": 3,
+         "n": 12
+        },
+        "depth_min": 0.8125,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.4166666666666667
+       },
+       "_recomputed_abs_t0.1_vs_stored": {
+        "rho": null,
+        "p": null,
+        "k_distinct_depth": 1,
+        "n": 12
+       }
+      },
+      "first_curve": {
+       "abs_t0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "rel_a0.5": {
+        "gold_vs_depth": {
+         "rho": 0.053293,
+         "p": 0.8693451798929495,
+         "k_distinct_depth": 7,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": 0.188301,
+         "p": 0.557823026351154,
+         "k_distinct_depth": 7,
+         "n": 12
+        },
+        "depth_min": 0.375,
+        "depth_max": 0.8125,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.25": {
+        "gold_vs_depth": {
+         "rho": 0.079613,
+         "p": 0.8057236836292914,
+         "k_distinct_depth": 4,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": 0.231601,
+         "p": 0.4688878762965758,
+         "k_distinct_depth": 4,
+         "n": 12
+        },
+        "depth_min": 0.75,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.16666666666666666
+       },
+       "rel_a0.1": {
+        "gold_vs_depth": {
+         "rho": -0.393042,
+         "p": 0.2062557566199836,
+         "k_distinct_depth": 2,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": 0.393042,
+         "p": 0.2062557566199836,
+         "k_distinct_depth": 2,
+         "n": 12
+        },
+        "depth_min": 0.875,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.9166666666666666
+       },
+       "rel_a0.05": {
+        "gold_vs_depth": {
+         "rho": -0.393042,
+         "p": 0.2062557566199836,
+         "k_distinct_depth": 2,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": 0.393042,
+         "p": 0.2062557566199836,
+         "k_distinct_depth": 2,
+         "n": 12
+        },
+        "depth_min": 0.875,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.9166666666666666
+       },
+       "ent_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "entc_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.1": {
+        "gold_vs_depth": {
+         "rho": -0.393042,
+         "p": 0.2062557566199836,
+         "k_distinct_depth": 2,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": 0.393042,
+         "p": 0.2062557566199836,
+         "k_distinct_depth": 2,
+         "n": 12
+        },
+        "depth_min": 0.875,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.9166666666666666
+       },
+       "entc_t0.1": {
+        "gold_vs_depth": {
+         "rho": -0.393042,
+         "p": 0.2062557566199836,
+         "k_distinct_depth": 2,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": 0.393042,
+         "p": 0.2062557566199836,
+         "k_distinct_depth": 2,
+         "n": 12
+        },
+        "depth_min": 0.875,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.9166666666666666
+       },
+       "ent_t0.25": {
+        "gold_vs_depth": {
+         "rho": 0.175578,
+         "p": 0.5851890144574682,
+         "k_distinct_depth": 3,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.244282,
+         "p": 0.44417217325618985,
+         "k_distinct_depth": 3,
+         "n": 12
+        },
+        "depth_min": 0.8125,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.3333333333333333
+       },
+       "entc_t0.25": {
+        "gold_vs_depth": {
+         "rho": -0.067861,
+         "p": 0.834018861520472,
+         "k_distinct_depth": 4,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": 0.060321,
+         "p": 0.8522713247086255,
+         "k_distinct_depth": 4,
+         "n": 12
+        },
+        "depth_min": 0.75,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.25
+       },
+       "_recomputed_abs_t0.1_vs_stored": {
+        "rho": null,
+        "p": null,
+        "k_distinct_depth": 1,
+        "n": 12
+       }
+      }
+     }
+    },
+    "L1": {
+     "n": 24,
+     "baseline_stored_tau0.1_mean8": {
+      "gold_vs_depth": {
+       "rho": -0.043566,
+       "p": 0.8398132944757946,
+       "k_distinct_depth": 7,
+       "n": 24
+      },
+      "entropy_vs_depth": {
+       "rho": 0.619264,
+       "p": 0.001252275675505265,
+       "k_distinct_depth": 7,
+       "n": 24
+      }
+     },
+     "gold_vs_final_entropy": {
+      "rho": -0.033913,
+      "p": 0.8749966229566862,
+      "k_distinct_depth": 24,
+      "n": 24
+     },
+     "curves": {
+      "mean_curve": {
+       "abs_t0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "rel_a0.5": {
+        "gold_vs_depth": {
+         "rho": 0.154052,
+         "p": 0.4723145466110952,
+         "k_distinct_depth": 6,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": 0.151318,
+         "p": 0.48030689638549495,
+         "k_distinct_depth": 6,
+         "n": 24
+        },
+        "depth_min": 0.4375,
+        "depth_max": 0.75,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.25": {
+        "gold_vs_depth": {
+         "rho": -0.226205,
+         "p": 0.2878404962556693,
+         "k_distinct_depth": 4,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": 0.402569,
+         "p": 0.05113772022283684,
+         "k_distinct_depth": 4,
+         "n": 24
+        },
+        "depth_min": 0.6875,
+        "depth_max": 0.875,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.1": {
+        "gold_vs_depth": {
+         "rho": -0.118217,
+         "p": 0.582210210342314,
+         "k_distinct_depth": 3,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": 0.520153,
+         "p": 0.009173570207551933,
+         "k_distinct_depth": 3,
+         "n": 24
+        },
+        "depth_min": 0.8125,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.2916666666666667
+       },
+       "rel_a0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "entc_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "entc_t0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.25": {
+        "gold_vs_depth": {
+         "rho": -0.227813,
+         "p": 0.28433554928894217,
+         "k_distinct_depth": 4,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.316917,
+         "p": 0.13132543540988284,
+         "k_distinct_depth": 4,
+         "n": 24
+        },
+        "depth_min": 0.75,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.25
+       },
+       "entc_t0.25": {
+        "gold_vs_depth": {
+         "rho": -0.227813,
+         "p": 0.28433554928894217,
+         "k_distinct_depth": 4,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.316917,
+         "p": 0.13132543540988284,
+         "k_distinct_depth": 4,
+         "n": 24
+        },
+        "depth_min": 0.75,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.25
+       },
+       "_recomputed_abs_t0.1_vs_stored": {
+        "rho": null,
+        "p": null,
+        "k_distinct_depth": 1,
+        "n": 24
+       }
+      },
+      "first_curve": {
+       "abs_t0.1": {
+        "gold_vs_depth": {
+         "rho": -0.34641,
+         "p": 0.09726417772963662,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.256042,
+         "p": 0.2271848482660963,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "depth_min": 0.8125,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.9583333333333334
+       },
+       "rel_a0.5": {
+        "gold_vs_depth": {
+         "rho": -0.008104,
+         "p": 0.9700209541875376,
+         "k_distinct_depth": 5,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": 0.099048,
+         "p": 0.6451824551482335,
+         "k_distinct_depth": 5,
+         "n": 24
+        },
+        "depth_min": 0.5625,
+        "depth_max": 0.8125,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.25": {
+        "gold_vs_depth": {
+         "rho": -0.322806,
+         "p": 0.12392095312865976,
+         "k_distinct_depth": 5,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.053279,
+         "p": 0.8047127265338058,
+         "k_distinct_depth": 5,
+         "n": 24
+        },
+        "depth_min": 0.6875,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.041666666666666664
+       },
+       "rel_a0.1": {
+        "gold_vs_depth": {
+         "rho": -0.288748,
+         "p": 0.17118315057249228,
+         "k_distinct_depth": 4,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": 0.164535,
+         "p": 0.44231869537123036,
+         "k_distinct_depth": 4,
+         "n": 24
+        },
+        "depth_min": 0.6875,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.4583333333333333
+       },
+       "rel_a0.05": {
+        "gold_vs_depth": {
+         "rho": -0.554811,
+         "p": 0.004895423909221138,
+         "k_distinct_depth": 5,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": 0.204765,
+         "p": 0.33714953335825193,
+         "k_distinct_depth": 5,
+         "n": 24
+        },
+        "depth_min": 0.6875,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.75
+       },
+       "ent_t0.05": {
+        "gold_vs_depth": {
+         "rho": -0.574835,
+         "p": 0.0033008483020039504,
+         "k_distinct_depth": 4,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.180014,
+         "p": 0.39994785453043935,
+         "k_distinct_depth": 4,
+         "n": 24
+        },
+        "depth_min": 0.75,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.875
+       },
+       "entc_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.1": {
+        "gold_vs_depth": {
+         "rho": -0.64908,
+         "p": 0.0006001148624679043,
+         "k_distinct_depth": 4,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.023445,
+         "p": 0.913410561043035,
+         "k_distinct_depth": 4,
+         "n": 24
+        },
+        "depth_min": 0.6875,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.8333333333333334
+       },
+       "entc_t0.1": {
+        "gold_vs_depth": {
+         "rho": -0.065336,
+         "p": 0.7616489107638981,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.239565,
+         "p": 0.2595369126763046,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "depth_min": 0.875,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.9166666666666666
+       },
+       "ent_t0.25": {
+        "gold_vs_depth": {
+         "rho": -0.408527,
+         "p": 0.04748164619389016,
+         "k_distinct_depth": 5,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.176686,
+         "p": 0.4088614224152996,
+         "k_distinct_depth": 5,
+         "n": 24
+        },
+        "depth_min": 0.6875,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.5
+       },
+       "entc_t0.25": {
+        "gold_vs_depth": {
+         "rho": -0.104543,
+         "p": 0.6268608726828733,
+         "k_distinct_depth": 4,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.03118,
+         "p": 0.8850042678127342,
+         "k_distinct_depth": 4,
+         "n": 24
+        },
+        "depth_min": 0.75,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.2916666666666667
+       },
+       "_recomputed_abs_t0.1_vs_stored": {
+        "rho": 0.076999,
+        "p": 0.7206343322253056,
+        "k_distinct_depth": 2,
+        "n": 24
+       }
+      }
+     }
+    }
+   }
+  },
+  "EleutherAI/pythia-1.4b": {
+   "n_layers": 24,
+   "n_records_used": 53,
+   "validation_pos0_exactness": {
+    "checks": 159,
+    "exact": 159,
+    "max_abs_diff": 0.0
+   },
+   "last_layer_kl": {
+    "max_abs_last_layer_kl": 6.64230901747942e-06,
+    "n": 106
+   },
+   "depth_cap": 0.9583333333333334,
+   "all_items_recomputed_abs_t0.1_vs_stored": {
+    "mean_curve": {
+     "rho": null,
+     "p": null,
+     "k_distinct_depth": 1,
+     "n": 53
+    },
+    "first_curve": {
+     "rho": null,
+     "p": null,
+     "k_distinct_depth": 1,
+     "n": 53
+    }
+   },
+   "levels": {
+    "L0": {
+     "n": 17,
+     "baseline_stored_tau0.1_mean8": {
+      "gold_vs_depth": {
+       "rho": -0.693232,
+       "p": 0.0020310799002126994,
+       "k_distinct_depth": 9,
+       "n": 17
+      },
+      "entropy_vs_depth": {
+       "rho": 0.806286,
+       "p": 9.26555357478721e-05,
+       "k_distinct_depth": 9,
+       "n": 17
+      }
+     },
+     "gold_vs_final_entropy": {
+      "rho": -0.786765,
+      "p": 0.0001791165880921826,
+      "k_distinct_depth": 17,
+      "n": 17
+     },
+     "curves": {
+      "mean_curve": {
+       "abs_t0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 17
+        },
+        "depth_min": 0.9583333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 1.0
+       },
+       "rel_a0.5": {
+        "gold_vs_depth": {
+         "rho": 0.534211,
+         "p": 0.02717478167568425,
+         "k_distinct_depth": 8,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.496941,
+         "p": 0.042421094994777836,
+         "k_distinct_depth": 8,
+         "n": 17
+        },
+        "depth_min": 0.375,
+        "depth_max": 0.7083333333333334,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.25": {
+        "gold_vs_depth": {
+         "rho": -0.024692,
+         "p": 0.9250561212878089,
+         "k_distinct_depth": 9,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": 0.297539,
+         "p": 0.2461108694944795,
+         "k_distinct_depth": 9,
+         "n": 17
+        },
+        "depth_min": 0.4583333333333333,
+        "depth_max": 0.9166666666666666,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.1": {
+        "gold_vs_depth": {
+         "rho": -0.45111,
+         "p": 0.06914212435688763,
+         "k_distinct_depth": 4,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": 0.532753,
+         "p": 0.02767743197737476,
+         "k_distinct_depth": 4,
+         "n": 17
+        },
+        "depth_min": 0.5833333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.23529411764705882
+       },
+       "rel_a0.05": {
+        "gold_vs_depth": {
+         "rho": 0.062994,
+         "p": 0.8101865818296312,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": 0.157485,
+         "p": 0.5460727313086684,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "depth_min": 0.9166666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.8235294117647058
+       },
+       "ent_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 17
+        },
+        "depth_min": 0.9583333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 1.0
+       },
+       "entc_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 17
+        },
+        "depth_min": 0.9583333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.1": {
+        "gold_vs_depth": {
+         "rho": 0.408248,
+         "p": 0.10377091535383601,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.051031,
+         "p": 0.8457801257277214,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "depth_min": 0.9166666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.9411764705882353
+       },
+       "entc_t0.1": {
+        "gold_vs_depth": {
+         "rho": 0.408248,
+         "p": 0.10377091535383601,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.051031,
+         "p": 0.8457801257277214,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "depth_min": 0.9166666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.9411764705882353
+       },
+       "ent_t0.25": {
+        "gold_vs_depth": {
+         "rho": 0.768707,
+         "p": 0.00031132433571250714,
+         "k_distinct_depth": 3,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.826537,
+         "p": 4.309829957607138e-05,
+         "k_distinct_depth": 3,
+         "n": 17
+        },
+        "depth_min": 0.875,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.5882352941176471
+       },
+       "entc_t0.25": {
+        "gold_vs_depth": {
+         "rho": 0.768707,
+         "p": 0.00031132433571250714,
+         "k_distinct_depth": 3,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.826537,
+         "p": 4.309829957607138e-05,
+         "k_distinct_depth": 3,
+         "n": 17
+        },
+        "depth_min": 0.875,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.5882352941176471
+       },
+       "_recomputed_abs_t0.1_vs_stored": {
+        "rho": null,
+        "p": null,
+        "k_distinct_depth": 1,
+        "n": 17
+       }
+      },
+      "first_curve": {
+       "abs_t0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 17
+        },
+        "depth_min": 0.9583333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 1.0
+       },
+       "rel_a0.5": {
+        "gold_vs_depth": {
+         "rho": 0.236164,
+         "p": 0.3614720291822863,
+         "k_distinct_depth": 13,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.329646,
+         "p": 0.19631682573827908,
+         "k_distinct_depth": 13,
+         "n": 17
+        },
+        "depth_min": 0.2916666666666667,
+        "depth_max": 0.875,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.25": {
+        "gold_vs_depth": {
+         "rho": -0.158444,
+         "p": 0.5436012736002812,
+         "k_distinct_depth": 8,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": 0.101857,
+         "p": 0.6972827564304226,
+         "k_distinct_depth": 8,
+         "n": 17
+        },
+        "depth_min": 0.5,
+        "depth_max": 0.9166666666666666,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.1": {
+        "gold_vs_depth": {
+         "rho": -0.038454,
+         "p": 0.8835071991287864,
+         "k_distinct_depth": 5,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": 0.076907,
+         "p": 0.7692336710709523,
+         "k_distinct_depth": 5,
+         "n": 17
+        },
+        "depth_min": 0.5833333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.47058823529411764
+       },
+       "rel_a0.05": {
+        "gold_vs_depth": {
+         "rho": 0.151083,
+         "p": 0.5627097926046788,
+         "k_distinct_depth": 4,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": 0.248734,
+         "p": 0.3357050560924389,
+         "k_distinct_depth": 4,
+         "n": 17
+        },
+        "depth_min": 0.5833333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.8235294117647058
+       },
+       "ent_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 17
+        },
+        "depth_min": 0.9583333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 1.0
+       },
+       "entc_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 17
+        },
+        "depth_min": 0.9583333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.1": {
+        "gold_vs_depth": {
+         "rho": 0.186339,
+         "p": 0.4739393609142251,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.484481,
+         "p": 0.04874077415367003,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "depth_min": 0.9166666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.8823529411764706
+       },
+       "entc_t0.1": {
+        "gold_vs_depth": {
+         "rho": 0.409946,
+         "p": 0.10220222989735056,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.223607,
+         "p": 0.3882859011558922,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "depth_min": 0.9166666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.8823529411764706
+       },
+       "ent_t0.25": {
+        "gold_vs_depth": {
+         "rho": 0.661653,
+         "p": 0.003817166407429915,
+         "k_distinct_depth": 3,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.701567,
+         "p": 0.0016974950543739448,
+         "k_distinct_depth": 3,
+         "n": 17
+        },
+        "depth_min": 0.875,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.7058823529411765
+       },
+       "entc_t0.25": {
+        "gold_vs_depth": {
+         "rho": 0.673349,
+         "p": 0.0030475368531037543,
+         "k_distinct_depth": 5,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.75392,
+         "p": 0.00047282971327597124,
+         "k_distinct_depth": 5,
+         "n": 17
+        },
+        "depth_min": 0.6666666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.6470588235294118
+       },
+       "_recomputed_abs_t0.1_vs_stored": {
+        "rho": null,
+        "p": null,
+        "k_distinct_depth": 1,
+        "n": 17
+       }
+      }
+     }
+    },
+    "L0N": {
+     "n": 12,
+     "baseline_stored_tau0.1_mean8": {
+      "gold_vs_depth": {
+       "rho": -0.160208,
+       "p": 0.6189236237292225,
+       "k_distinct_depth": 5,
+       "n": 12
+      },
+      "entropy_vs_depth": {
+       "rho": -0.089873,
+       "p": 0.7811938997961609,
+       "k_distinct_depth": 5,
+       "n": 12
+      }
+     },
+     "gold_vs_final_entropy": {
+      "rho": -0.335664,
+      "p": 0.28612290291498743,
+      "k_distinct_depth": 12,
+      "n": 12
+     },
+     "curves": {
+      "mean_curve": {
+       "abs_t0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "depth_min": 0.9583333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 1.0
+       },
+       "rel_a0.5": {
+        "gold_vs_depth": {
+         "rho": 0.028321,
+         "p": 0.9303788654142672,
+         "k_distinct_depth": 7,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.304448,
+         "p": 0.33597605753104653,
+         "k_distinct_depth": 7,
+         "n": 12
+        },
+        "depth_min": 0.25,
+        "depth_max": 0.7083333333333334,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.25": {
+        "gold_vs_depth": {
+         "rho": 0.148684,
+         "p": 0.6446709756093906,
+         "k_distinct_depth": 7,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.417731,
+         "p": 0.17662441623839237,
+         "k_distinct_depth": 7,
+         "n": 12
+        },
+        "depth_min": 0.4583333333333333,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.25
+       },
+       "rel_a0.1": {
+        "gold_vs_depth": {
+         "rho": -0.073448,
+         "p": 0.8205429281806303,
+         "k_distinct_depth": 2,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.416205,
+         "p": 0.17837368409261067,
+         "k_distinct_depth": 2,
+         "n": 12
+        },
+        "depth_min": 0.9166666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.5833333333333334
+       },
+       "rel_a0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "depth_min": 0.9583333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "depth_min": 0.9583333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 1.0
+       },
+       "entc_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "depth_min": 0.9583333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.1": {
+        "gold_vs_depth": {
+         "rho": 0.12955,
+         "p": 0.6882128190799854,
+         "k_distinct_depth": 2,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.64775,
+         "p": 0.022751806072576652,
+         "k_distinct_depth": 2,
+         "n": 12
+        },
+        "depth_min": 0.9166666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.8333333333333334
+       },
+       "entc_t0.1": {
+        "gold_vs_depth": {
+         "rho": 0.12955,
+         "p": 0.6882128190799854,
+         "k_distinct_depth": 2,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.64775,
+         "p": 0.022751806072576652,
+         "k_distinct_depth": 2,
+         "n": 12
+        },
+        "depth_min": 0.9166666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.8333333333333334
+       },
+       "ent_t0.25": {
+        "gold_vs_depth": {
+         "rho": 0.054486,
+         "p": 0.8664425825131125,
+         "k_distinct_depth": 5,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.657465,
+         "p": 0.020154206659312876,
+         "k_distinct_depth": 5,
+         "n": 12
+        },
+        "depth_min": 0.75,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.3333333333333333
+       },
+       "entc_t0.25": {
+        "gold_vs_depth": {
+         "rho": 0.054486,
+         "p": 0.8664425825131125,
+         "k_distinct_depth": 5,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.657465,
+         "p": 0.020154206659312876,
+         "k_distinct_depth": 5,
+         "n": 12
+        },
+        "depth_min": 0.75,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.3333333333333333
+       },
+       "_recomputed_abs_t0.1_vs_stored": {
+        "rho": null,
+        "p": null,
+        "k_distinct_depth": 1,
+        "n": 12
+       }
+      },
+      "first_curve": {
+       "abs_t0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "depth_min": 0.9583333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 1.0
+       },
+       "rel_a0.5": {
+        "gold_vs_depth": {
+         "rho": -0.469154,
+         "p": 0.12388713354998176,
+         "k_distinct_depth": 9,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.285725,
+         "p": 0.3679786061127335,
+         "k_distinct_depth": 9,
+         "n": 12
+        },
+        "depth_min": 0.3333333333333333,
+        "depth_max": 0.9166666666666666,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.25": {
+        "gold_vs_depth": {
+         "rho": -0.350469,
+         "p": 0.26404396153198456,
+         "k_distinct_depth": 7,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.102663,
+         "p": 0.7508702928522981,
+         "k_distinct_depth": 7,
+         "n": 12
+        },
+        "depth_min": 0.5,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.08333333333333333
+       },
+       "rel_a0.1": {
+        "gold_vs_depth": {
+         "rho": -0.336045,
+         "p": 0.28554219526812685,
+         "k_distinct_depth": 5,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.058613,
+         "p": 0.8564168863132844,
+         "k_distinct_depth": 5,
+         "n": 12
+        },
+        "depth_min": 0.6666666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.5833333333333334
+       },
+       "rel_a0.05": {
+        "gold_vs_depth": {
+         "rho": -0.194325,
+         "p": 0.5450527029269673,
+         "k_distinct_depth": 2,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": 0.0,
+         "p": 1.0,
+         "k_distinct_depth": 2,
+         "n": 12
+        },
+        "depth_min": 0.9166666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.8333333333333334
+       },
+       "ent_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "depth_min": 0.9583333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 1.0
+       },
+       "entc_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "depth_min": 0.9583333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.1": {
+        "gold_vs_depth": {
+         "rho": 0.349855,
+         "p": 0.2649393333734927,
+         "k_distinct_depth": 3,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.593834,
+         "p": 0.041768220830703875,
+         "k_distinct_depth": 3,
+         "n": 12
+        },
+        "depth_min": 0.875,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.75
+       },
+       "entc_t0.1": {
+        "gold_vs_depth": {
+         "rho": 0.349855,
+         "p": 0.2649393333734927,
+         "k_distinct_depth": 3,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.593834,
+         "p": 0.041768220830703875,
+         "k_distinct_depth": 3,
+         "n": 12
+        },
+        "depth_min": 0.875,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.75
+       },
+       "ent_t0.25": {
+        "gold_vs_depth": {
+         "rho": -0.300069,
+         "p": 0.3433223047189944,
+         "k_distinct_depth": 6,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.464392,
+         "p": 0.12827208624744646,
+         "k_distinct_depth": 6,
+         "n": 12
+        },
+        "depth_min": 0.625,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.25
+       },
+       "entc_t0.25": {
+        "gold_vs_depth": {
+         "rho": -0.4648,
+         "p": 0.12789254146873866,
+         "k_distinct_depth": 8,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.415503,
+         "p": 0.17918196554757052,
+         "k_distinct_depth": 8,
+         "n": 12
+        },
+        "depth_min": 0.5416666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.16666666666666666
+       },
+       "_recomputed_abs_t0.1_vs_stored": {
+        "rho": null,
+        "p": null,
+        "k_distinct_depth": 1,
+        "n": 12
+       }
+      }
+     }
+    },
+    "L1": {
+     "n": 24,
+     "baseline_stored_tau0.1_mean8": {
+      "gold_vs_depth": {
+       "rho": 0.007946,
+       "p": 0.9706042194473634,
+       "k_distinct_depth": 7,
+       "n": 24
+      },
+      "entropy_vs_depth": {
+       "rho": 0.461346,
+       "p": 0.02325663300485895,
+       "k_distinct_depth": 7,
+       "n": 24
+      }
+     },
+     "gold_vs_final_entropy": {
+      "rho": -0.173043,
+      "p": 0.4187403495722348,
+      "k_distinct_depth": 24,
+      "n": 24
+     },
+     "curves": {
+      "mean_curve": {
+       "abs_t0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "depth_min": 0.9583333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 1.0
+       },
+       "rel_a0.5": {
+        "gold_vs_depth": {
+         "rho": 0.236904,
+         "p": 0.26502581342541576,
+         "k_distinct_depth": 7,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.263176,
+         "p": 0.21404700574390284,
+         "k_distinct_depth": 7,
+         "n": 24
+        },
+        "depth_min": 0.375,
+        "depth_max": 0.625,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.25": {
+        "gold_vs_depth": {
+         "rho": 0.155296,
+         "p": 0.4687027656376455,
+         "k_distinct_depth": 7,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": 0.124056,
+         "p": 0.5635743920821867,
+         "k_distinct_depth": 7,
+         "n": 24
+        },
+        "depth_min": 0.5833333333333334,
+        "depth_max": 0.9166666666666666,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.1": {
+        "gold_vs_depth": {
+         "rho": 0.097675,
+         "p": 0.6497921893885609,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.146512,
+         "p": 0.49451545362100896,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "depth_min": 0.9166666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.4166666666666667
+       },
+       "rel_a0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "depth_min": 0.9583333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "depth_min": 0.9583333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 1.0
+       },
+       "entc_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "depth_min": 0.9583333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "depth_min": 0.9583333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 1.0
+       },
+       "entc_t0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "depth_min": 0.9583333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.25": {
+        "gold_vs_depth": {
+         "rho": 0.424995,
+         "p": 0.03843253184979425,
+         "k_distinct_depth": 3,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.456953,
+         "p": 0.024780008952592462,
+         "k_distinct_depth": 3,
+         "n": 24
+        },
+        "depth_min": 0.875,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.4583333333333333
+       },
+       "entc_t0.25": {
+        "gold_vs_depth": {
+         "rho": 0.424995,
+         "p": 0.03843253184979425,
+         "k_distinct_depth": 3,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.456953,
+         "p": 0.024780008952592462,
+         "k_distinct_depth": 3,
+         "n": 24
+        },
+        "depth_min": 0.875,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.4583333333333333
+       },
+       "_recomputed_abs_t0.1_vs_stored": {
+        "rho": null,
+        "p": null,
+        "k_distinct_depth": 1,
+        "n": 24
+       }
+      },
+      "first_curve": {
+       "abs_t0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "depth_min": 0.9583333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 1.0
+       },
+       "rel_a0.5": {
+        "gold_vs_depth": {
+         "rho": 0.173804,
+         "p": 0.41666777717118053,
+         "k_distinct_depth": 8,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.268445,
+         "p": 0.20467825283862182,
+         "k_distinct_depth": 8,
+         "n": 24
+        },
+        "depth_min": 0.4166666666666667,
+        "depth_max": 0.7916666666666666,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.25": {
+        "gold_vs_depth": {
+         "rho": -0.053889,
+         "p": 0.8025179146018886,
+         "k_distinct_depth": 9,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": 0.148306,
+         "p": 0.48918605246800656,
+         "k_distinct_depth": 9,
+         "n": 24
+        },
+        "depth_min": 0.5833333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.041666666666666664
+       },
+       "rel_a0.1": {
+        "gold_vs_depth": {
+         "rho": 0.012472,
+         "p": 0.9538759777023553,
+         "k_distinct_depth": 6,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.172009,
+         "p": 0.4215698689983624,
+         "k_distinct_depth": 6,
+         "n": 24
+        },
+        "depth_min": 0.5833333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.6666666666666666
+       },
+       "rel_a0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "depth_min": 0.9583333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "depth_min": 0.9583333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 1.0
+       },
+       "entc_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "depth_min": 0.9583333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.1": {
+        "gold_vs_depth": {
+         "rho": 0.195797,
+         "p": 0.3591852465310754,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.34641,
+         "p": 0.09726417772963662,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "depth_min": 0.9166666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.9583333333333334
+       },
+       "entc_t0.1": {
+        "gold_vs_depth": {
+         "rho": 0.348458,
+         "p": 0.09517093601659947,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.392015,
+         "p": 0.05814699487832419,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "depth_min": 0.9166666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.9166666666666666
+       },
+       "ent_t0.25": {
+        "gold_vs_depth": {
+         "rho": 0.00735,
+         "p": 0.9728096157100856,
+         "k_distinct_depth": 5,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.523061,
+         "p": 0.008724089395939095,
+         "k_distinct_depth": 5,
+         "n": 24
+        },
+        "depth_min": 0.6666666666666666,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.7916666666666666
+       },
+       "entc_t0.25": {
+        "gold_vs_depth": {
+         "rho": 0.22284,
+         "p": 0.29526309919052357,
+         "k_distinct_depth": 5,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.380618,
+         "p": 0.06652633065247551,
+         "k_distinct_depth": 5,
+         "n": 24
+        },
+        "depth_min": 0.7083333333333334,
+        "depth_max": 0.9583333333333334,
+        "depth_at_cap_frac": 0.7083333333333334
+       },
+       "_recomputed_abs_t0.1_vs_stored": {
+        "rho": null,
+        "p": null,
+        "k_distinct_depth": 1,
+        "n": 24
+       }
+      }
+     }
+    }
+   }
+  },
+  "EleutherAI/pythia-2.8b": {
+   "n_layers": 32,
+   "n_records_used": 53,
+   "validation_pos0_exactness": {
+    "checks": 159,
+    "exact": 159,
+    "max_abs_diff": 0.0
+   },
+   "last_layer_kl": {
+    "max_abs_last_layer_kl": 5.763256922364235e-06,
+    "n": 106
+   },
+   "depth_cap": 0.96875,
+   "all_items_recomputed_abs_t0.1_vs_stored": {
+    "mean_curve": {
+     "rho": 0.304431,
+     "p": 0.026667968680772078,
+     "k_distinct_depth": 2,
+     "n": 53
+    },
+    "first_curve": {
+     "rho": 0.429317,
+     "p": 0.0013372862833732867,
+     "k_distinct_depth": 3,
+     "n": 53
+    }
+   },
+   "levels": {
+    "L0": {
+     "n": 17,
+     "baseline_stored_tau0.1_mean8": {
+      "gold_vs_depth": {
+       "rho": -0.419437,
+       "p": 0.09374141466670648,
+       "k_distinct_depth": 13,
+       "n": 17
+      },
+      "entropy_vs_depth": {
+       "rho": 0.397297,
+       "p": 0.114304949349217,
+       "k_distinct_depth": 13,
+       "n": 17
+      }
+     },
+     "gold_vs_final_entropy": {
+      "rho": -0.821078,
+      "p": 5.346351701144896e-05,
+      "k_distinct_depth": 17,
+      "n": 17
+     },
+     "curves": {
+      "mean_curve": {
+       "abs_t0.1": {
+        "gold_vs_depth": {
+         "rho": -0.372678,
+         "p": 0.14068736553470912,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": 0.559017,
+         "p": 0.019657034541711117,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 0.8823529411764706
+       },
+       "rel_a0.5": {
+        "gold_vs_depth": {
+         "rho": 0.276283,
+         "p": 0.2830715179623348,
+         "k_distinct_depth": 8,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.292683,
+         "p": 0.2542731524600393,
+         "k_distinct_depth": 8,
+         "n": 17
+        },
+        "depth_min": 0.28125,
+        "depth_max": 0.625,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.25": {
+        "gold_vs_depth": {
+         "rho": 0.27024,
+         "p": 0.2941604714208236,
+         "k_distinct_depth": 6,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.192286,
+         "p": 0.4596820230249829,
+         "k_distinct_depth": 6,
+         "n": 17
+        },
+        "depth_min": 0.40625,
+        "depth_max": 0.75,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.1": {
+        "gold_vs_depth": {
+         "rho": -0.121827,
+         "p": 0.6413675434388945,
+         "k_distinct_depth": 8,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": 0.290894,
+         "p": 0.257322932516866,
+         "k_distinct_depth": 8,
+         "n": 17
+        },
+        "depth_min": 0.53125,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.05": {
+        "gold_vs_depth": {
+         "rho": -0.404156,
+         "p": 0.10762295810072207,
+         "k_distinct_depth": 6,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": 0.564515,
+         "p": 0.018236134839370546,
+         "k_distinct_depth": 6,
+         "n": 17
+        },
+        "depth_min": 0.59375,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 0.11764705882352941
+       },
+       "ent_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 17
+        },
+        "depth_min": 0.96875,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 1.0
+       },
+       "entc_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 17
+        },
+        "depth_min": 0.96875,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.1": {
+        "gold_vs_depth": {
+         "rho": 0.306186,
+         "p": 0.23198812442321468,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.408248,
+         "p": 0.10377091535383601,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 0.9411764705882353
+       },
+       "entc_t0.1": {
+        "gold_vs_depth": {
+         "rho": 0.306186,
+         "p": 0.23198812442321468,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.408248,
+         "p": 0.10377091535383601,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 0.9411764705882353
+       },
+       "ent_t0.25": {
+        "gold_vs_depth": {
+         "rho": 0.489562,
+         "p": 0.046083806340824755,
+         "k_distinct_depth": 3,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.582182,
+         "p": 0.014206755102138589,
+         "k_distinct_depth": 3,
+         "n": 17
+        },
+        "depth_min": 0.90625,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 0.7647058823529411
+       },
+       "entc_t0.25": {
+        "gold_vs_depth": {
+         "rho": 0.489562,
+         "p": 0.046083806340824755,
+         "k_distinct_depth": 3,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.582182,
+         "p": 0.014206755102138589,
+         "k_distinct_depth": 3,
+         "n": 17
+        },
+        "depth_min": 0.90625,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 0.7647058823529411
+       },
+       "_recomputed_abs_t0.1_vs_stored": {
+        "rho": 0.411461,
+        "p": 0.10081605982678235,
+        "k_distinct_depth": 2,
+        "n": 17
+       }
+      },
+      "first_curve": {
+       "abs_t0.1": {
+        "gold_vs_depth": {
+         "rho": -0.653978,
+         "p": 0.004402946063847502,
+         "k_distinct_depth": 3,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": 0.650907,
+         "p": 0.004656726945920588,
+         "k_distinct_depth": 3,
+         "n": 17
+        },
+        "depth_min": 0.65625,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 0.7058823529411765
+       },
+       "rel_a0.5": {
+        "gold_vs_depth": {
+         "rho": 0.334193,
+         "p": 0.1898455627515403,
+         "k_distinct_depth": 9,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.370221,
+         "p": 0.14353219423815858,
+         "k_distinct_depth": 9,
+         "n": 17
+        },
+        "depth_min": 0.34375,
+        "depth_max": 0.65625,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.25": {
+        "gold_vs_depth": {
+         "rho": 0.066668,
+         "p": 0.7993211200692818,
+         "k_distinct_depth": 9,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": 0.001235,
+         "p": 0.9962478668196908,
+         "k_distinct_depth": 9,
+         "n": 17
+        },
+        "depth_min": 0.5,
+        "depth_max": 0.84375,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.1": {
+        "gold_vs_depth": {
+         "rho": 0.054802,
+         "p": 0.8345275490266315,
+         "k_distinct_depth": 9,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": 0.058538,
+         "p": 0.8234068546046951,
+         "k_distinct_depth": 9,
+         "n": 17
+        },
+        "depth_min": 0.5,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.05": {
+        "gold_vs_depth": {
+         "rho": -0.732977,
+         "p": 0.0008159853019771462,
+         "k_distinct_depth": 5,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": 0.678137,
+         "p": 0.002771363106093388,
+         "k_distinct_depth": 5,
+         "n": 17
+        },
+        "depth_min": 0.5,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 0.11764705882352941
+       },
+       "ent_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 17
+        },
+        "depth_min": 0.96875,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 1.0
+       },
+       "entc_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 17
+        },
+        "depth_min": 0.96875,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.1": {
+        "gold_vs_depth": {
+         "rho": 0.31497,
+         "p": 0.21818050495484356,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.440959,
+         "p": 0.076438987707978,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 0.8235294117647058
+       },
+       "entc_t0.1": {
+        "gold_vs_depth": {
+         "rho": 0.521749,
+         "p": 0.03170394002516824,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.521749,
+         "p": 0.03170394002516824,
+         "k_distinct_depth": 2,
+         "n": 17
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 0.8823529411764706
+       },
+       "ent_t0.25": {
+        "gold_vs_depth": {
+         "rho": 0.410173,
+         "p": 0.10199310168659781,
+         "k_distinct_depth": 3,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.502793,
+         "p": 0.039676222964341985,
+         "k_distinct_depth": 3,
+         "n": 17
+        },
+        "depth_min": 0.84375,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 0.7647058823529411
+       },
+       "entc_t0.25": {
+        "gold_vs_depth": {
+         "rho": 0.320844,
+         "p": 0.20924892650220833,
+         "k_distinct_depth": 3,
+         "n": 17
+        },
+        "entropy_vs_depth": {
+         "rho": -0.313205,
+         "p": 0.2209114927713225,
+         "k_distinct_depth": 3,
+         "n": 17
+        },
+        "depth_min": 0.90625,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 0.7058823529411765
+       },
+       "_recomputed_abs_t0.1_vs_stored": {
+        "rho": 0.456087,
+        "p": 0.06575814104301322,
+        "k_distinct_depth": 3,
+        "n": 17
+       }
+      }
+     }
+    },
+    "L0N": {
+     "n": 12,
+     "baseline_stored_tau0.1_mean8": {
+      "gold_vs_depth": {
+       "rho": 0.349906,
+       "p": 0.2648654226559913,
+       "k_distinct_depth": 5,
+       "n": 12
+      },
+      "entropy_vs_depth": {
+       "rho": -0.116635,
+       "p": 0.7181106684841829,
+       "k_distinct_depth": 5,
+       "n": 12
+      }
+     },
+     "gold_vs_final_entropy": {
+      "rho": -0.230769,
+      "p": 0.470531995381542,
+      "k_distinct_depth": 12,
+      "n": 12
+     },
+     "curves": {
+      "mean_curve": {
+       "abs_t0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "depth_min": 0.96875,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 1.0
+       },
+       "rel_a0.5": {
+        "gold_vs_depth": {
+         "rho": 0.067873,
+         "p": 0.8339911626717845,
+         "k_distinct_depth": 7,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.25363,
+         "p": 0.42636277143961915,
+         "k_distinct_depth": 7,
+         "n": 12
+        },
+        "depth_min": 0.25,
+        "depth_max": 0.53125,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.25": {
+        "gold_vs_depth": {
+         "rho": 0.232621,
+         "p": 0.4668773379991174,
+         "k_distinct_depth": 5,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.347142,
+         "p": 0.26891720137249003,
+         "k_distinct_depth": 5,
+         "n": 12
+        },
+        "depth_min": 0.53125,
+        "depth_max": 0.65625,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.1": {
+        "gold_vs_depth": {
+         "rho": 0.23707,
+         "p": 0.4581519328990843,
+         "k_distinct_depth": 6,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.901584,
+         "p": 6.151547543860213e-05,
+         "k_distinct_depth": 6,
+         "n": 12
+        },
+        "depth_min": 0.78125,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.05": {
+        "gold_vs_depth": {
+         "rho": 0.073448,
+         "p": 0.8205429281806303,
+         "k_distinct_depth": 2,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.661032,
+         "p": 0.019257209258328686,
+         "k_distinct_depth": 2,
+         "n": 12
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 0.4166666666666667
+       },
+       "ent_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "depth_min": 0.96875,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 1.0
+       },
+       "entc_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "depth_min": 0.96875,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.1": {
+        "gold_vs_depth": {
+         "rho": 0.416205,
+         "p": 0.17837368409261067,
+         "k_distinct_depth": 2,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.709997,
+         "p": 0.009682220630770627,
+         "k_distinct_depth": 2,
+         "n": 12
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 0.5833333333333334
+       },
+       "entc_t0.1": {
+        "gold_vs_depth": {
+         "rho": 0.416205,
+         "p": 0.17837368409261067,
+         "k_distinct_depth": 2,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.709997,
+         "p": 0.009682220630770627,
+         "k_distinct_depth": 2,
+         "n": 12
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 0.5833333333333334
+       },
+       "ent_t0.25": {
+        "gold_vs_depth": {
+         "rho": 0.316093,
+         "p": 0.3168603973170661,
+         "k_distinct_depth": 6,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.87644,
+         "p": 0.00018367146240891373,
+         "k_distinct_depth": 6,
+         "n": 12
+        },
+        "depth_min": 0.8125,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 0.25
+       },
+       "entc_t0.25": {
+        "gold_vs_depth": {
+         "rho": 0.316093,
+         "p": 0.3168603973170661,
+         "k_distinct_depth": 6,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.87644,
+         "p": 0.00018367146240891373,
+         "k_distinct_depth": 6,
+         "n": 12
+        },
+        "depth_min": 0.8125,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 0.25
+       },
+       "_recomputed_abs_t0.1_vs_stored": {
+        "rho": null,
+        "p": null,
+        "k_distinct_depth": 1,
+        "n": 12
+       }
+      },
+      "first_curve": {
+       "abs_t0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "depth_min": 0.96875,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 1.0
+       },
+       "rel_a0.5": {
+        "gold_vs_depth": {
+         "rho": 0.123462,
+         "p": 0.7022596146995632,
+         "k_distinct_depth": 9,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.27867,
+         "p": 0.3804360735162028,
+         "k_distinct_depth": 9,
+         "n": 12
+        },
+        "depth_min": 0.21875,
+        "depth_max": 0.78125,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.25": {
+        "gold_vs_depth": {
+         "rho": 0.053101,
+         "p": 0.8698107896538385,
+         "k_distinct_depth": 7,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.162844,
+         "p": 0.6130858815299165,
+         "k_distinct_depth": 7,
+         "n": 12
+        },
+        "depth_min": 0.46875,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.1": {
+        "gold_vs_depth": {
+         "rho": -0.107167,
+         "p": 0.7402646261347783,
+         "k_distinct_depth": 7,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.232196,
+         "p": 0.4677146842740219,
+         "k_distinct_depth": 7,
+         "n": 12
+        },
+        "depth_min": 0.625,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 0.08333333333333333
+       },
+       "rel_a0.05": {
+        "gold_vs_depth": {
+         "rho": -0.146735,
+         "p": 0.6490626584322615,
+         "k_distinct_depth": 5,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": 0.007525,
+         "p": 0.9814831845281177,
+         "k_distinct_depth": 5,
+         "n": 12
+        },
+        "depth_min": 0.78125,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 0.25
+       },
+       "ent_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 12
+        },
+        "depth_min": 0.96875,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 1.0
+       },
+       "entc_t0.05": {
+        "gold_vs_depth": {
+         "rho": 0.131014,
+         "p": 0.6848487144273757,
+         "k_distinct_depth": 2,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.305699,
+         "p": 0.3338931364506604,
+         "k_distinct_depth": 2,
+         "n": 12
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 0.9166666666666666
+       },
+       "ent_t0.1": {
+        "gold_vs_depth": {
+         "rho": -0.055813,
+         "p": 0.8632171121295907,
+         "k_distinct_depth": 3,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.394676,
+         "p": 0.2042065003825342,
+         "k_distinct_depth": 3,
+         "n": 12
+        },
+        "depth_min": 0.90625,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 0.5833333333333334
+       },
+       "entc_t0.1": {
+        "gold_vs_depth": {
+         "rho": -0.171379,
+         "p": 0.594333596405789,
+         "k_distinct_depth": 2,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.073448,
+         "p": 0.8205429281806303,
+         "k_distinct_depth": 2,
+         "n": 12
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 0.4166666666666667
+       },
+       "ent_t0.25": {
+        "gold_vs_depth": {
+         "rho": -0.032753,
+         "p": 0.9195109021520089,
+         "k_distinct_depth": 6,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.342092,
+         "p": 0.2764124347967166,
+         "k_distinct_depth": 6,
+         "n": 12
+        },
+        "depth_min": 0.65625,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 0.08333333333333333
+       },
+       "entc_t0.25": {
+        "gold_vs_depth": {
+         "rho": -0.003521,
+         "p": 0.9913346554904454,
+         "k_distinct_depth": 8,
+         "n": 12
+        },
+        "entropy_vs_depth": {
+         "rho": -0.323952,
+         "p": 0.30430743546914635,
+         "k_distinct_depth": 8,
+         "n": 12
+        },
+        "depth_min": 0.625,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 0.08333333333333333
+       },
+       "_recomputed_abs_t0.1_vs_stored": {
+        "rho": null,
+        "p": null,
+        "k_distinct_depth": 1,
+        "n": 12
+       }
+      }
+     }
+    },
+    "L1": {
+     "n": 24,
+     "baseline_stored_tau0.1_mean8": {
+      "gold_vs_depth": {
+       "rho": -0.171987,
+       "p": 0.42162956857078926,
+       "k_distinct_depth": 6,
+       "n": 24
+      },
+      "entropy_vs_depth": {
+       "rho": 0.381683,
+       "p": 0.06570628899170945,
+       "k_distinct_depth": 6,
+       "n": 24
+      }
+     },
+     "gold_vs_final_entropy": {
+      "rho": -0.190435,
+      "p": 0.3727527778427132,
+      "k_distinct_depth": 24,
+      "n": 24
+     },
+     "curves": {
+      "mean_curve": {
+       "abs_t0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "depth_min": 0.96875,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 1.0
+       },
+       "rel_a0.5": {
+        "gold_vs_depth": {
+         "rho": 0.320478,
+         "p": 0.1268117246817968,
+         "k_distinct_depth": 5,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": 0.334105,
+         "p": 0.11056934707291886,
+         "k_distinct_depth": 5,
+         "n": 24
+        },
+        "depth_min": 0.25,
+        "depth_max": 0.5,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.25": {
+        "gold_vs_depth": {
+         "rho": -0.20312,
+         "p": 0.3411299612555983,
+         "k_distinct_depth": 4,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": 0.102566,
+         "p": 0.6334300308978169,
+         "k_distinct_depth": 4,
+         "n": 24
+        },
+        "depth_min": 0.53125,
+        "depth_max": 0.625,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.1": {
+        "gold_vs_depth": {
+         "rho": -0.139517,
+         "p": 0.5155659979669543,
+         "k_distinct_depth": 10,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.266788,
+         "p": 0.20759417121960744,
+         "k_distinct_depth": 10,
+         "n": 24
+        },
+        "depth_min": 0.625,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.05": {
+        "gold_vs_depth": {
+         "rho": -0.176989,
+         "p": 0.4080458092066868,
+         "k_distinct_depth": 4,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": 0.101352,
+         "p": 0.6374738096480739,
+         "k_distinct_depth": 4,
+         "n": 24
+        },
+        "depth_min": 0.84375,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 0.041666666666666664
+       },
+       "ent_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "depth_min": 0.96875,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 1.0
+       },
+       "entc_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "depth_min": 0.96875,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.1": {
+        "gold_vs_depth": {
+         "rho": -0.045184,
+         "p": 0.8339447120691618,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": 0.195797,
+         "p": 0.3591852465310754,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 0.9583333333333334
+       },
+       "entc_t0.1": {
+        "gold_vs_depth": {
+         "rho": -0.045184,
+         "p": 0.8339447120691618,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": 0.195797,
+         "p": 0.3591852465310754,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 0.9583333333333334
+       },
+       "ent_t0.25": {
+        "gold_vs_depth": {
+         "rho": -0.019312,
+         "p": 0.9286326431520358,
+         "k_distinct_depth": 3,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.681652,
+         "p": 0.00024451953265958724,
+         "k_distinct_depth": 3,
+         "n": 24
+        },
+        "depth_min": 0.90625,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 0.125
+       },
+       "entc_t0.25": {
+        "gold_vs_depth": {
+         "rho": -0.019312,
+         "p": 0.9286326431520358,
+         "k_distinct_depth": 3,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.681652,
+         "p": 0.00024451953265958724,
+         "k_distinct_depth": 3,
+         "n": 24
+        },
+        "depth_min": 0.90625,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 0.125
+       },
+       "_recomputed_abs_t0.1_vs_stored": {
+        "rho": null,
+        "p": null,
+        "k_distinct_depth": 1,
+        "n": 24
+       }
+      },
+      "first_curve": {
+       "abs_t0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "depth_min": 0.96875,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 1.0
+       },
+       "rel_a0.5": {
+        "gold_vs_depth": {
+         "rho": 0.10574,
+         "p": 0.6228982231776606,
+         "k_distinct_depth": 6,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.164079,
+         "p": 0.4436019005196559,
+         "k_distinct_depth": 6,
+         "n": 24
+        },
+        "depth_min": 0.40625,
+        "depth_max": 0.65625,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.25": {
+        "gold_vs_depth": {
+         "rho": -0.068229,
+         "p": 0.7514114087191931,
+         "k_distinct_depth": 6,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.12804,
+         "p": 0.5510121163253052,
+         "k_distinct_depth": 6,
+         "n": 24
+        },
+        "depth_min": 0.53125,
+        "depth_max": 0.8125,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.1": {
+        "gold_vs_depth": {
+         "rho": 0.023345,
+         "p": 0.9137763069936425,
+         "k_distinct_depth": 11,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": 0.158381,
+         "p": 0.459804014807147,
+         "k_distinct_depth": 11,
+         "n": 24
+        },
+        "depth_min": 0.5625,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 0.08333333333333333
+       },
+       "rel_a0.05": {
+        "gold_vs_depth": {
+         "rho": 0.002357,
+         "p": 0.9912799180658058,
+         "k_distinct_depth": 6,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": 0.153188,
+         "p": 0.4748338908682363,
+         "k_distinct_depth": 6,
+         "n": 24
+        },
+        "depth_min": 0.75,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 0.5
+       },
+       "ent_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "depth_min": 0.96875,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 1.0
+       },
+       "entc_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "depth_min": 0.96875,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.1": {
+        "gold_vs_depth": {
+         "rho": 0.244556,
+         "p": 0.24943926237124056,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": 0.051876,
+         "p": 0.8097625650616794,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 0.7916666666666666
+       },
+       "entc_t0.1": {
+        "gold_vs_depth": {
+         "rho": 0.140805,
+         "p": 0.5116573906788854,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": 0.066697,
+         "p": 0.7568271502510412,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 0.7916666666666666
+       },
+       "ent_t0.25": {
+        "gold_vs_depth": {
+         "rho": -0.028123,
+         "p": 0.8962141038918193,
+         "k_distinct_depth": 8,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.011249,
+         "p": 0.9583936911241345,
+         "k_distinct_depth": 8,
+         "n": 24
+        },
+        "depth_min": 0.5625,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 0.5
+       },
+       "entc_t0.25": {
+        "gold_vs_depth": {
+         "rho": 0.653066,
+         "p": 0.0005406984093537071,
+         "k_distinct_depth": 6,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.032701,
+         "p": 0.8794304535590253,
+         "k_distinct_depth": 6,
+         "n": 24
+        },
+        "depth_min": 0.65625,
+        "depth_max": 0.96875,
+        "depth_at_cap_frac": 0.5416666666666666
+       },
+       "_recomputed_abs_t0.1_vs_stored": {
+        "rho": null,
+        "p": null,
+        "k_distinct_depth": 1,
+        "n": 24
+       }
+      }
+     }
+    }
+   }
+  },
+  "allenai/OLMo-2-0425-1B": {
+   "n_layers": 16,
+   "n_records_used": 55,
+   "validation_pos0_exactness": {
+    "checks": 165,
+    "exact": 165,
+    "max_abs_diff": 0.0
+   },
+   "last_layer_kl": {
+    "max_abs_last_layer_kl": 4.889618139714003e-06,
+    "n": 110
+   },
+   "depth_cap": 0.9375,
+   "all_items_recomputed_abs_t0.1_vs_stored": {
+    "mean_curve": {
+     "rho": null,
+     "p": null,
+     "k_distinct_depth": 1,
+     "n": 55
+    },
+    "first_curve": {
+     "rho": 0.503977,
+     "p": 8.755081256854191e-05,
+     "k_distinct_depth": 3,
+     "n": 55
+    }
+   },
+   "levels": {
+    "L0": {
+     "n": 20,
+     "baseline_stored_tau0.1_mean8": {
+      "gold_vs_depth": {
+       "rho": -0.859603,
+       "p": 1.1955797427345174e-06,
+       "k_distinct_depth": 10,
+       "n": 20
+      },
+      "entropy_vs_depth": {
+       "rho": 0.756055,
+       "p": 0.00011510763411742207,
+       "k_distinct_depth": 10,
+       "n": 20
+      }
+     },
+     "gold_vs_final_entropy": {
+      "rho": -0.699248,
+      "p": 0.0006016416290038309,
+      "k_distinct_depth": 20,
+      "n": 20
+     },
+     "curves": {
+      "mean_curve": {
+       "abs_t0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 20
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 20
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "rel_a0.5": {
+        "gold_vs_depth": {
+         "rho": 0.004093,
+         "p": 0.9863360617336131,
+         "k_distinct_depth": 3,
+         "n": 20
+        },
+        "entropy_vs_depth": {
+         "rho": -0.022921,
+         "p": 0.9235856161590654,
+         "k_distinct_depth": 3,
+         "n": 20
+        },
+        "depth_min": 0.6875,
+        "depth_max": 0.8125,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.25": {
+        "gold_vs_depth": {
+         "rho": -0.271369,
+         "p": 0.24713569502918506,
+         "k_distinct_depth": 3,
+         "n": 20
+        },
+        "entropy_vs_depth": {
+         "rho": 0.237127,
+         "p": 0.3141117468590479,
+         "k_distinct_depth": 3,
+         "n": 20
+        },
+        "depth_min": 0.75,
+        "depth_max": 0.875,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.1": {
+        "gold_vs_depth": {
+         "rho": -0.47691,
+         "p": 0.03349130812684278,
+         "k_distinct_depth": 2,
+         "n": 20
+        },
+        "entropy_vs_depth": {
+         "rho": 0.585299,
+         "p": 0.006705438227778606,
+         "k_distinct_depth": 2,
+         "n": 20
+        },
+        "depth_min": 0.875,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.2
+       },
+       "rel_a0.05": {
+        "gold_vs_depth": {
+         "rho": -0.566461,
+         "p": 0.009214999946511876,
+         "k_distinct_depth": 2,
+         "n": 20
+        },
+        "entropy_vs_depth": {
+         "rho": 0.740757,
+         "p": 0.0001871396389191755,
+         "k_distinct_depth": 2,
+         "n": 20
+        },
+        "depth_min": 0.875,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.55
+       },
+       "ent_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 20
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 20
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "entc_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 20
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 20
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 20
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 20
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "entc_t0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 20
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 20
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.25": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 20
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 20
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "entc_t0.25": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 20
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 20
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "_recomputed_abs_t0.1_vs_stored": {
+        "rho": null,
+        "p": null,
+        "k_distinct_depth": 1,
+        "n": 20
+       }
+      },
+      "first_curve": {
+       "abs_t0.1": {
+        "gold_vs_depth": {
+         "rho": -0.456541,
+         "p": 0.043027209634383314,
+         "k_distinct_depth": 3,
+         "n": 20
+        },
+        "entropy_vs_depth": {
+         "rho": 0.344147,
+         "p": 0.137333384561008,
+         "k_distinct_depth": 3,
+         "n": 20
+        },
+        "depth_min": 0.8125,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.75
+       },
+       "rel_a0.5": {
+        "gold_vs_depth": {
+         "rho": 0.235141,
+         "p": 0.3183001991126635,
+         "k_distinct_depth": 6,
+         "n": 20
+        },
+        "entropy_vs_depth": {
+         "rho": -0.188884,
+         "p": 0.42513621128435575,
+         "k_distinct_depth": 6,
+         "n": 20
+        },
+        "depth_min": 0.5625,
+        "depth_max": 0.875,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.25": {
+        "gold_vs_depth": {
+         "rho": -0.139169,
+         "p": 0.5584359892000258,
+         "k_distinct_depth": 4,
+         "n": 20
+        },
+        "entropy_vs_depth": {
+         "rho": 0.264264,
+         "p": 0.2602122622408041,
+         "k_distinct_depth": 4,
+         "n": 20
+        },
+        "depth_min": 0.75,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.15
+       },
+       "rel_a0.1": {
+        "gold_vs_depth": {
+         "rho": -0.178007,
+         "p": 0.45274753159655756,
+         "k_distinct_depth": 4,
+         "n": 20
+        },
+        "entropy_vs_depth": {
+         "rho": 0.197165,
+         "p": 0.40473247555392716,
+         "k_distinct_depth": 4,
+         "n": 20
+        },
+        "depth_min": 0.75,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.4
+       },
+       "rel_a0.05": {
+        "gold_vs_depth": {
+         "rho": -0.22057,
+         "p": 0.35005495379023704,
+         "k_distinct_depth": 4,
+         "n": 20
+        },
+        "entropy_vs_depth": {
+         "rho": 0.263707,
+         "p": 0.2612564317854012,
+         "k_distinct_depth": 4,
+         "n": 20
+        },
+        "depth_min": 0.75,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.5
+       },
+       "ent_t0.05": {
+        "gold_vs_depth": {
+         "rho": -0.202326,
+         "p": 0.39229375017294504,
+         "k_distinct_depth": 2,
+         "n": 20
+        },
+        "entropy_vs_depth": {
+         "rho": 0.346844,
+         "p": 0.13407612120334206,
+         "k_distinct_depth": 2,
+         "n": 20
+        },
+        "depth_min": 0.875,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.9
+       },
+       "entc_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 20
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 20
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.1": {
+        "gold_vs_depth": {
+         "rho": -0.325166,
+         "p": 0.16183899323186848,
+         "k_distinct_depth": 2,
+         "n": 20
+        },
+        "entropy_vs_depth": {
+         "rho": 0.368522,
+         "p": 0.10985976416122797,
+         "k_distinct_depth": 2,
+         "n": 20
+        },
+        "depth_min": 0.875,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.8
+       },
+       "entc_t0.1": {
+        "gold_vs_depth": {
+         "rho": -0.298393,
+         "p": 0.20129127736465824,
+         "k_distinct_depth": 2,
+         "n": 20
+        },
+        "entropy_vs_depth": {
+         "rho": 0.377964,
+         "p": 0.10036562194728642,
+         "k_distinct_depth": 2,
+         "n": 20
+        },
+        "depth_min": 0.875,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.95
+       },
+       "ent_t0.25": {
+        "gold_vs_depth": {
+         "rho": -0.162342,
+         "p": 0.49408636572538206,
+         "k_distinct_depth": 3,
+         "n": 20
+        },
+        "entropy_vs_depth": {
+         "rho": -0.036571,
+         "p": 0.8783415416274191,
+         "k_distinct_depth": 3,
+         "n": 20
+        },
+        "depth_min": 0.8125,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.65
+       },
+       "entc_t0.25": {
+        "gold_vs_depth": {
+         "rho": -0.281811,
+         "p": 0.2286929181299498,
+         "k_distinct_depth": 2,
+         "n": 20
+        },
+        "entropy_vs_depth": {
+         "rho": 0.065033,
+         "p": 0.7853154336408786,
+         "k_distinct_depth": 2,
+         "n": 20
+        },
+        "depth_min": 0.875,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.8
+       },
+       "_recomputed_abs_t0.1_vs_stored": {
+        "rho": 0.660231,
+        "p": 0.0015342870572618687,
+        "k_distinct_depth": 3,
+        "n": 20
+       }
+      }
+     }
+    },
+    "L0N": {
+     "n": 11,
+     "baseline_stored_tau0.1_mean8": {
+      "gold_vs_depth": {
+       "rho": 0.074536,
+       "p": 0.8275855965776869,
+       "k_distinct_depth": 2,
+       "n": 11
+      },
+      "entropy_vs_depth": {
+       "rho": 0.521749,
+       "p": 0.0997357600099656,
+       "k_distinct_depth": 2,
+       "n": 11
+      }
+     },
+     "gold_vs_final_entropy": {
+      "rho": -0.409091,
+      "p": 0.21154501034209602,
+      "k_distinct_depth": 11,
+      "n": 11
+     },
+     "curves": {
+      "mean_curve": {
+       "abs_t0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 11
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 11
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "rel_a0.5": {
+        "gold_vs_depth": {
+         "rho": -0.426655,
+         "p": 0.19065458369780205,
+         "k_distinct_depth": 3,
+         "n": 11
+        },
+        "entropy_vs_depth": {
+         "rho": 0.034329,
+         "p": 0.9201856705729045,
+         "k_distinct_depth": 3,
+         "n": 11
+        },
+        "depth_min": 0.6875,
+        "depth_max": 0.8125,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.25": {
+        "gold_vs_depth": {
+         "rho": -0.447214,
+         "p": 0.16785065605707478,
+         "k_distinct_depth": 2,
+         "n": 11
+        },
+        "entropy_vs_depth": {
+         "rho": 0.074536,
+         "p": 0.8275855965776869,
+         "k_distinct_depth": 2,
+         "n": 11
+        },
+        "depth_min": 0.8125,
+        "depth_max": 0.875,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.1": {
+        "gold_vs_depth": {
+         "rho": -0.372678,
+         "p": 0.25899384668754993,
+         "k_distinct_depth": 2,
+         "n": 11
+        },
+        "entropy_vs_depth": {
+         "rho": 0.596285,
+         "p": 0.05283944651707037,
+         "k_distinct_depth": 2,
+         "n": 11
+        },
+        "depth_min": 0.875,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.8181818181818182
+       },
+       "rel_a0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 11
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 11
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 11
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 11
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "entc_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 11
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 11
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 11
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 11
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "entc_t0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 11
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 11
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.25": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 11
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 11
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "entc_t0.25": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 11
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 11
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "_recomputed_abs_t0.1_vs_stored": {
+        "rho": null,
+        "p": null,
+        "k_distinct_depth": 1,
+        "n": 11
+       }
+      },
+      "first_curve": {
+       "abs_t0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 11
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 11
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "rel_a0.5": {
+        "gold_vs_depth": {
+         "rho": -0.235441,
+         "p": 0.48584953172809536,
+         "k_distinct_depth": 5,
+         "n": 11
+        },
+        "entropy_vs_depth": {
+         "rho": -0.353161,
+         "p": 0.28671062067298,
+         "k_distinct_depth": 5,
+         "n": 11
+        },
+        "depth_min": 0.625,
+        "depth_max": 0.875,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.25": {
+        "gold_vs_depth": {
+         "rho": 0.170561,
+         "p": 0.6160856147601732,
+         "k_distinct_depth": 3,
+         "n": 11
+        },
+        "entropy_vs_depth": {
+         "rho": -0.170561,
+         "p": 0.6160856147601732,
+         "k_distinct_depth": 3,
+         "n": 11
+        },
+        "depth_min": 0.8125,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.09090909090909091
+       },
+       "rel_a0.1": {
+        "gold_vs_depth": {
+         "rho": 0.2,
+         "p": 0.5554454421055853,
+         "k_distinct_depth": 2,
+         "n": 11
+        },
+        "entropy_vs_depth": {
+         "rho": 0.0,
+         "p": 1.0,
+         "k_distinct_depth": 2,
+         "n": 11
+        },
+        "depth_min": 0.875,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.9090909090909091
+       },
+       "rel_a0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 11
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 11
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 11
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 11
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "entc_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 11
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 11
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 11
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 11
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "entc_t0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 11
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 11
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.25": {
+        "gold_vs_depth": {
+         "rho": 0.2,
+         "p": 0.5554454421055853,
+         "k_distinct_depth": 2,
+         "n": 11
+        },
+        "entropy_vs_depth": {
+         "rho": 0.0,
+         "p": 1.0,
+         "k_distinct_depth": 2,
+         "n": 11
+        },
+        "depth_min": 0.875,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.9090909090909091
+       },
+       "entc_t0.25": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 11
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 11
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "_recomputed_abs_t0.1_vs_stored": {
+        "rho": null,
+        "p": null,
+        "k_distinct_depth": 1,
+        "n": 11
+       }
+      }
+     }
+    },
+    "L1": {
+     "n": 24,
+     "baseline_stored_tau0.1_mean8": {
+      "gold_vs_depth": {
+       "rho": 0.192478,
+       "p": 0.36754949173392054,
+       "k_distinct_depth": 5,
+       "n": 24
+      },
+      "entropy_vs_depth": {
+       "rho": 0.293325,
+       "p": 0.1641936393875177,
+       "k_distinct_depth": 5,
+       "n": 24
+      }
+     },
+     "gold_vs_final_entropy": {
+      "rho": -0.030435,
+      "p": 0.8877339355759605,
+      "k_distinct_depth": 24,
+      "n": 24
+     },
+     "curves": {
+      "mean_curve": {
+       "abs_t0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "rel_a0.5": {
+        "gold_vs_depth": {
+         "rho": -0.194613,
+         "p": 0.3621548403954475,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": 0.236316,
+         "p": 0.2662478894288818,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "depth_min": 0.6875,
+        "depth_max": 0.75,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.25": {
+        "gold_vs_depth": {
+         "rho": -0.149415,
+         "p": 0.4859069545777356,
+         "k_distinct_depth": 4,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": 0.495585,
+         "p": 0.013792783804286463,
+         "k_distinct_depth": 4,
+         "n": 24
+        },
+        "depth_min": 0.75,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.041666666666666664
+       },
+       "rel_a0.1": {
+        "gold_vs_depth": {
+         "rho": -0.118304,
+         "p": 0.581928868248791,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": 0.500517,
+         "p": 0.012737997046084325,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "depth_min": 0.875,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.875
+       },
+       "rel_a0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "entc_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "entc_t0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.25": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "entc_t0.25": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "_recomputed_abs_t0.1_vs_stored": {
+        "rho": null,
+        "p": null,
+        "k_distinct_depth": 1,
+        "n": 24
+       }
+      },
+      "first_curve": {
+       "abs_t0.1": {
+        "gold_vs_depth": {
+         "rho": -0.34641,
+         "p": 0.09726417772963662,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.286165,
+         "p": 0.17521761093952903,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "depth_min": 0.875,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.9583333333333334
+       },
+       "rel_a0.5": {
+        "gold_vs_depth": {
+         "rho": 0.282746,
+         "p": 0.1806585901845433,
+         "k_distinct_depth": 5,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.096955,
+         "p": 0.6522135632360995,
+         "k_distinct_depth": 5,
+         "n": 24
+        },
+        "depth_min": 0.625,
+        "depth_max": 0.875,
+        "depth_at_cap_frac": 0.0
+       },
+       "rel_a0.25": {
+        "gold_vs_depth": {
+         "rho": -0.765205,
+         "p": 1.3252419848075674e-05,
+         "k_distinct_depth": 4,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.203992,
+         "p": 0.33901717875730325,
+         "k_distinct_depth": 4,
+         "n": 24
+        },
+        "depth_min": 0.75,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.5
+       },
+       "rel_a0.1": {
+        "gold_vs_depth": {
+         "rho": -0.656561,
+         "p": 0.0004928541673892057,
+         "k_distinct_depth": 3,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.106749,
+         "p": 0.6195669791588779,
+         "k_distinct_depth": 3,
+         "n": 24
+        },
+        "depth_min": 0.8125,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.75
+       },
+       "rel_a0.05": {
+        "gold_vs_depth": {
+         "rho": -0.458732,
+         "p": 0.024153735024583567,
+         "k_distinct_depth": 3,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": 0.003626,
+         "p": 0.9865826381263796,
+         "k_distinct_depth": 3,
+         "n": 24
+        },
+        "depth_min": 0.8125,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.9166666666666666
+       },
+       "ent_t0.05": {
+        "gold_vs_depth": {
+         "rho": -0.34641,
+         "p": 0.09726417772963662,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.286165,
+         "p": 0.17521761093952903,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "depth_min": 0.8125,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.9583333333333334
+       },
+       "entc_t0.05": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.1": {
+        "gold_vs_depth": {
+         "rho": -0.34641,
+         "p": 0.09726417772963662,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.286165,
+         "p": 0.17521761093952903,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "depth_min": 0.8125,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.9583333333333334
+       },
+       "entc_t0.1": {
+        "gold_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": null,
+         "p": null,
+         "k_distinct_depth": 1,
+         "n": 24
+        },
+        "depth_min": 0.9375,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 1.0
+       },
+       "ent_t0.25": {
+        "gold_vs_depth": {
+         "rho": -0.539641,
+         "p": 0.006496338282916574,
+         "k_distinct_depth": 3,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.186944,
+         "p": 0.3817407430860545,
+         "k_distinct_depth": 3,
+         "n": 24
+        },
+        "depth_min": 0.8125,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.875
+       },
+       "entc_t0.25": {
+        "gold_vs_depth": {
+         "rho": -0.34641,
+         "p": 0.09726417772963662,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "entropy_vs_depth": {
+         "rho": -0.286165,
+         "p": 0.17521761093952903,
+         "k_distinct_depth": 2,
+         "n": 24
+        },
+        "depth_min": 0.875,
+        "depth_max": 0.9375,
+        "depth_at_cap_frac": 0.9583333333333334
+       },
+       "_recomputed_abs_t0.1_vs_stored": {
+        "rho": 0.206602,
+        "p": 0.33273806109806237,
+        "k_distinct_depth": 2,
+        "n": 24
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
