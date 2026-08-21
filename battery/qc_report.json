@@ -1,0 +1,337 @@
+{
+  "verdict": "The battery is well-organised (87 items = 15 L0 + 12 topics x 6 levels, all L0 prompts padded to exactly 44 words, no exact-duplicate prompts) but it is not yet runnable as designed against BASE models, and two problems threaten the core measurement rather than individual items. First, every one of the 24 L1 prompts is a chat-style question, and 8 of them additionally carry an inert 'Answer with the X.' instruction that only four topics received - Pythia and OLMo-2 will continue these as more questions, not answer them, and the topic-correlated suffix means the format difference is confounded with topic. Second, and more serious for a study that reads internal signals at the FINAL prompt position: prompt length is confounded with level (median Pythia prompt tokens: L0 54, L4 42, L5 29, L1 15, L2 15, L3 12 - a 4.5x spread), and once L2-L5 get the few-shot scaffolds they need, the final position will hold a delimiter token ('A:', 'Answer:', 'Proposal:') at those levels while L0/L1 end on a content word. Any 'memory vs ideation' difference you find is currently also a 'long prefix vs short prefix, content token vs colon token' difference, so both need explicit controls. I verified tokenisation against both subject tokenizers and found a third measurement-level defect: OLMo-2 splits every leading-space digit string (' 56' -> ' ' + '56', likewise 100/8/4/64), so on OLMo-2 the token immediately after a numeric cloze is a bare space carrying zero answer information, while Pythia keeps those whole; symmetrically Pythia shatters proper nouns that OLMo-2 keeps intact (' Poseidon' -> ' P'+'ose'+'id'+'on', ' Beethoven' -> ' Be'+'eth'+'oven', ' Tube' -> ' T'+'ube'), so first-token probability is not comparable across the two models for those five items. At L0 the extraction pipeline has stripped every em-dash (0 across all 15 items, verified corruptions in L0-02, L0-14, L0-17, L0-18) and every newline (Sonnet 18 and The Raven are flattened to prose), which means gold_continuation is not verbatim to the text the models actually memorised - this damages precisely the signal L0 exists to measure. L0-08's gold_continuation also literally contains L0-09's prompt, making those two items non-independent, and Pythia is eligible for only 8 of 15 L0 items against OLMo's 15, so the cross-model L0 comparison runs on different, non-randomly-selected items. At L4 the main risks are one near-duplicate blend (L4-railways-1 'Greek gods run a railway' vs L4-Greek_mythology-1 'Hermes runs a parcel network' are the same pairing), three prompt templates split by topic with only the newest four carrying the 'each X must correspond to a specific Y' binding clause, and three blends (anatomy x urban planning, classical music x architecture, cooking x geology) that are conventional attested analogies and therefore partly retrieval. None of this requires redesigning the study; the L1 clozes, four level scaffolds, and roughly a dozen targeted edits below are sufficient.",
+
+  "l1_reformats": [
+    {
+      "id": "L1-gardening-1",
+      "problem": null,
+      "cloze_prompt": "Bees move from flower to flower carrying a fine powder called",
+      "answer_token": " pollen"
+    },
+    {
+      "id": "L1-gardening-2",
+      "problem": "'The roots' has article and number variants (roots / root / the root system) that smear the final-token mass under the original question form.",
+      "cloze_prompt": "Water and minerals enter a plant from the soil through its",
+      "answer_token": " roots"
+    },
+    {
+      "id": "L1-railways-1",
+      "problem": "Bare 'a station' competes with 'platform', 'depot' and 'terminal'. The cloze pins it by supplying 'railway' as the modifier.",
+      "cloze_prompt": "Passengers get on and off trains at a railway",
+      "answer_token": " station"
+    },
+    {
+      "id": "L1-railways-2",
+      "problem": "HIGH. Genuinely two-answer: 'the Tube' and 'the Underground' are both the common nickname, so the mass splits between two single tokens on OLMo-2. Pythia additionally tokenises ' Tube' as ' T'+'ube', and ' T' carries no answer information. Recommend replacing the item (see issues).",
+      "cloze_prompt": "London's underground railway system is nicknamed the",
+      "answer_token": " Tube"
+    },
+    {
+      "id": "L1-human_anatomy-1",
+      "problem": null,
+      "cloze_prompt": "The organ that pumps blood around the human body is the",
+      "answer_token": " heart"
+    },
+    {
+      "id": "L1-human_anatomy-2",
+      "problem": "Minor dispute in the training distribution: some sources answer 'skin', others qualify it as 'largest internal organ = liver'. ' liver' is a competing single token on both models, so expect some mass there.",
+      "cloze_prompt": "The largest organ of the human body is the",
+      "answer_token": " skin"
+    },
+    {
+      "id": "L1-mathematics-1",
+      "problem": "HIGH. This is arithmetic, not factual retrieval - it engages a different process from every other L1 item and a 1-2B base model may compute rather than recall it. Digit form also tokenises badly on OLMo-2 (' 56' -> ' ' + '56'). The word-form cloze below gives a single informative token on both models (' fifty' is 1 token on each), but note ' 56' remains a strong competitor after 'is'. Consider replacing the item with a genuine recall fact.",
+      "cloze_prompt": "Seven times eight is",
+      "answer_token": " fifty"
+    },
+    {
+      "id": "L1-mathematics-2",
+      "problem": "Surface-form smear: 'pi' / 'Pi' / 'the Greek letter pi' / the symbol. ' pi' and ' Pi' are distinct single tokens on both models - score them as one answer set.",
+      "cloze_prompt": "The ratio of a circle's circumference to its diameter is called",
+      "answer_token": " pi"
+    },
+    {
+      "id": "L1-weather-1",
+      "problem": null,
+      "cloze_prompt": "The colored arc of light that appears in the sky after rain is called a",
+      "answer_token": " rainbow"
+    },
+    {
+      "id": "L1-weather-2",
+      "problem": "Pythia splits ' thermometer' into ' therm'+'ometer', so a first-token metric scores a prefix, not the answer. OLMo-2 keeps it whole. Score the full span, or accept ' therm' (reasonably specific) and record the token-count asymmetry.",
+      "cloze_prompt": "Air temperature is measured with an instrument called a",
+      "answer_token": " thermometer"
+    },
+    {
+      "id": "L1-architecture-1",
+      "problem": null,
+      "cloze_prompt": "A person whose job is to design buildings is called an",
+      "answer_token": " architect"
+    },
+    {
+      "id": "L1-architecture-2",
+      "problem": null,
+      "cloze_prompt": "The Eiffel Tower stands in the city of",
+      "answer_token": " Paris"
+    },
+    {
+      "id": "L1-Greek_mythology-1",
+      "problem": "Pythia splits ' Zeus' into ' Ze'+'us' while OLMo-2 keeps it whole, so first-token probabilities are not directly comparable across models. ' Ze' is at least specific, so this one is tolerable with span scoring.",
+      "cloze_prompt": "In Greek mythology, the king of the gods is",
+      "answer_token": " Zeus"
+    },
+    {
+      "id": "L1-Greek_mythology-2",
+      "problem": "HIGH. Pythia tokenises ' Poseidon' as ' P'+'ose'+'id'+'on'. The first token ' P' is shared with thousands of words, so a next-token metric measures essentially nothing for this item on Pythia. OLMo-2 gives ' Pose'+'idon'. Either score the full teacher-forced span or swap the fact to a god that is one token on both models (' Apollo' is single-token on both).",
+      "cloze_prompt": "In Greek mythology, the god of the sea is",
+      "answer_token": " Poseidon"
+    },
+    {
+      "id": "L1-cooking-1",
+      "problem": "HIGH (numeric). OLMo-2 tokenises ' 100' as ' ' + '100', so the token immediately after this cloze is a bare space with zero answer information; Pythia gives ' 100' whole. The original question form also invites the Fahrenheit value; the cloze pins the scale up front.",
+      "cloze_prompt": "On the Celsius scale, water at sea level boils at",
+      "answer_token": " 100"
+    },
+    {
+      "id": "L1-cooking-2",
+      "problem": "'eggs' and 'egg' are two distinct single tokens on both models and both are natural after 'is' - score them as one answer set.",
+      "cloze_prompt": "The main ingredient of an omelette is",
+      "answer_token": " eggs"
+    },
+    {
+      "id": "L1-astronomy-1",
+      "problem": "Trailing 'Answer with the planet's name.' is inert for a base model and puts the final measured position on a sentence-final period rather than on the retrieval site. Removed in the cloze.",
+      "cloze_prompt": "The planet closest to the Sun is",
+      "answer_token": " Mercury"
+    },
+    {
+      "id": "L1-astronomy-2",
+      "problem": "Same inert instruction suffix. Gold 'The Milky Way' begins with a determiner; the cloze absorbs 'the' so the scored token is the content word ' Milky' (single token on both models).",
+      "cloze_prompt": "Our Solar System lies in a spiral galaxy called the",
+      "answer_token": " Milky"
+    },
+    {
+      "id": "L1-ocean_life-1",
+      "problem": "Same inert instruction suffix. The cloze deliberately stops before 'blue' rather than before 'whale': ' sperm', ' African' and ' humpback' are live competitors there, so the token still measures retrieval rather than syntax.",
+      "cloze_prompt": "The largest animal on Earth is the",
+      "answer_token": " blue"
+    },
+    {
+      "id": "L1-ocean_life-2",
+      "problem": "Inert instruction suffix plus a numeral/word smear. Word form is safe: ' eight' is a single token on both models, whereas ' 8' splits to ' '+'8' on OLMo-2. Score {' eight', digit form} as one answer set.",
+      "cloze_prompt": "An octopus has",
+      "answer_token": " eight"
+    },
+    {
+      "id": "L1-classical_music-1",
+      "problem": "HIGH. Hardest L1 item - a 1.4B base model may simply not have it - and the gold itself admits two surface forms ('Ludwig van Beethoven' vs 'Beethoven'). Pythia splits ' Beethoven' into ' Be'+'eth'+'oven' where ' Be' is uninformative. The cloze below ends on 'Ludwig van' so the next token is forced and single on OLMo-2, but be aware this trades away most of the retrieval difficulty (it becomes name completion). If you want the harder probe, use 'The composer of the Ninth Symphony, whose choral finale sets the Ode to Joy, was' and score the full ' Beethoven' span.",
+      "cloze_prompt": "The 'Ode to Joy' melody comes from the Ninth Symphony, written by the composer Ludwig van",
+      "answer_token": " Beethoven"
+    },
+    {
+      "id": "L1-classical_music-2",
+      "problem": "Inert instruction suffix plus numeral/word smear. ' four' is a single token on both models; ' 4' splits to ' '+'4' on OLMo-2. Score {' four', digit form} as one answer set.",
+      "cloze_prompt": "A standard violin has",
+      "answer_token": " four"
+    },
+    {
+      "id": "L1-chess-1",
+      "problem": "Inert instruction suffix plus numeral/word smear, and here the digit form is probably the corpus-dominant continuation ('a chessboard has 64 squares'), which is exactly the form OLMo-2 splits into ' '+'64'. Score {' 64' (Pythia) / '64' after the space token (OLMo-2), ' sixty'} as one answer set, or switch the target to the word form.",
+      "cloze_prompt": "A standard chessboard has",
+      "answer_token": " 64"
+    },
+    {
+      "id": "L1-chess-2",
+      "problem": "Inert instruction suffix (removed). Pedantic quibble only: pawns also move diagonally when capturing, but 'can move only diagonally' still picks out the bishop uniquely.",
+      "cloze_prompt": "The chess piece that can move only diagonally is the",
+      "answer_token": " bishop"
+    }
+  ],
+
+  "level_scaffolds": {
+    "L2": "Short explanations, written in plain language.\n\nQ: Explain in your own words why a bicycle stays upright while it is moving.\nA: A moving bicycle keeps correcting itself. When it begins to lean to one side, the front wheel turns slightly into the lean, which steers the wheels back underneath the rider's weight. The faster it travels, the smaller and quicker those corrections are, so the bicycle feels steady.\n\nQ: Explain in your own words why a lighthouse can be seen from far out at sea.\nA: A lighthouse is built high up so that its beam clears the curve of the horizon. Lenses and mirrors gather the lamp's light and squeeze it into a narrow horizontal beam instead of letting it spread in every direction. Because the light is concentrated and starts from a height, a ship many miles away still receives enough of it to see the flash.\n\nQ: {ITEM_PROMPT}\nA:\n\n[usage] Identical two-shot prefix for all 12 L2 items. Stop on \"\\n\\nQ:\". Exemplar topics (bicycles, lighthouses) sit outside the battery's 12 topics and 12 blend partners so the scaffold supplies no domain content. Exemplar answers are held to three sentences to set the length prior; keep them fixed across items so prefix length is constant within the level. Note that L2-Greek_mythology-1 says 'Retell', not 'Explain' - either reword it to 'Explain in your own words what happened in the story of the Trojan Horse' or accept a template mismatch on that one item.",
+
+    "L3": "Short pieces written to order.\n\nInstruction: Write a haiku about a mountain lake.\nPiece:\nCold water holding\nthe whole grey weight of the sky\nuntil wind breaks it\n\nInstruction: Write a limerick about a stubborn mule.\nPiece:\nThere once was a mule from Kilkee\nWho refused to be moved for a fee.\nHe would stand in the road,\nIgnoring his load,\nAnd nap until quarter past three.\n\nInstruction: Write a one-sentence proverb about borrowed tools.\nPiece:\nA borrowed tool comes home either broken or not at all.\n\nInstruction: Write a two-line rhyming couplet about an old clock.\nPiece:\nThe old clock keeps its argument with time,\nAnd loses, minute after patient chime.\n\nInstruction: {ITEM_PROMPT}\nPiece:\n",
+
+    "L4": "Answers that combine two unrelated subjects, using one to explain the other.\n\nTask: Describe a barbershop organised as a court of law. Say which part of court procedure each step of the haircut copies and what it does for the customer.\nAnswer: The consultation is the arraignment: the customer states what he is charged with wanting and the barber reads it back to him, so there is no dispute later about what was agreed. The mirror on the far wall serves as the public gallery, since every cut is made in view and can be objected to while it is still reversible. Scissors and clippers act as opposing counsel, one arguing for length and the other for shape, and the barber alternates between them until neither has a further submission. Sweeping the floor is the sealing of the record: once the hair is gone the case cannot be reopened, and the customer settles costs on the way out.\n\nTask: Describe a village postal route as a knitting pattern. Say which knitting instruction each part of the route copies and what it does for the postman.\nAnswer: The main road is the cast-on row: it fixes how many houses the whole route will carry, and everything after it hangs from that count. Each side lane is a purl stitch worked in the opposite direction, so the postman doubles back and the fabric of the route lies flat instead of curling into wasted mileage. Houses that receive post only on certain days are slipped stitches, passed over without being worked but still counted, which keeps the rhythm of the walk even. The return to the sorting office is the cast-off, binding the loose end so that tomorrow's round can start from the same edge.\n\nTask: {ITEM_PROMPT}\nAnswer:\n\n[usage] Identical two-shot prefix for all 12 L4 items. Stop on \"\\n\\nTask:\". Both exemplar pairings (barbershop x law, postal route x knitting) are outside the battery's topic and blend-partner sets. Each exemplar runs four sentences and binds every element of one domain to a function in the other, which is what the L4 rubrics actually score - the scaffold therefore also demonstrates the binding requirement that four of the twelve L4 prompts fail to state (see issues).",
+
+    "L5": "Proposals for things that do not exist yet, each written by the person who thought of it.\n\nTask: Invent a new kind of doorbell that does not exist today, and explain what problem it solves and how it works.\nProposal: An ordinary doorbell tells you that somebody is at the door but nothing about how much the visit matters, so a household either answers everything or ignores everything. This doorbell replaces the button with a weighted pull-cord: the harder the visitor pulls, the longer the chime sustains, and the mechanism holds that pull on a small dial inside the hall. A courier leaving a parcel gives a light tug that produces one short note, while a neighbour with something urgent pulls hard and sets off a chime that runs for several seconds. Because the effort is physical and the visitor can feel how hard they are pulling, the signal stays honest, and the household can decide whether to get up from the sound alone.\n\nTask: Invent a new kind of suitcase that does not exist today, and explain what problem it solves and how it works.\nProposal: Travellers repack at the airport because they cannot tell which part of the case is over the weight limit until the whole thing is on the scale. This suitcase is built from four stacked drawers, each on its own spring-loaded floor that sinks as it fills and shows a coloured band through a slot in the shell. A drawer that dips past its band is holding more than a quarter of the allowance, so the owner can see which layer to lighten without opening anything. The springs also lock the drawers once the lid is closed, so the load stays balanced and the case does not tip when it is stood upright.\n\nTask: {ITEM_PROMPT}\nProposal:\n\n[usage] Identical two-shot prefix for all 12 L5 items. Stop on \"\\n\\nTask:\". Exemplar objects (doorbell, suitcase) are outside the battery's topic and blend-partner sets. Each exemplar names the problem, then the mechanism, then the consequence, which mirrors what the L5 novelty rubrics require. Important: the exemplars themselves are inventions, so add them to the n-gram novelty check's exclusion list - otherwise a model that copies the scaffold's framing will be scored as novel."
+  },
+
+  "issues": [
+    {
+      "id": "GLOBAL-prefix-length-confound",
+      "severity": "high",
+      "problem": "Prompt length is confounded with level, and the study reads internal signals at the final prompt position. Measured with the actual tokenizers, median prompt tokens are: L0 54, L4 42, L5 29, L1 15, L2 15, L3 12 on Pythia (L0 53, L4 43, L5 29, L1 14, L2 15, L3 11 on OLMo-2) - a 4.5x spread. Adding few-shot scaffolds to L2-L5 widens rather than closes the gap against L0/L1. Any level effect you find is currently also a sequence-position effect.",
+      "fix": "Pad every level to one matched token budget (the L0 length, ~55 tokens, is the natural target since L0 cannot be shortened) using a fixed, semantically inert preamble, and record per-item prompt token count as a covariate in every model. Add a preamble-only control condition per level to measure what the padding alone contributes."
+    },
+    {
+      "id": "GLOBAL-final-position-token-type",
+      "severity": "high",
+      "problem": "After scaffolding, the final prompt position holds a different kind of token at each level: a content word at L0 and at the L1 clozes, but a delimiter ('A:', 'Answer:', 'Proposal:', or a newline for L3) at L2-L5. The representation at the last position is strongly determined by the identity of the token sitting there, so a level contrast between L0/L1 and L2-L5 partly measures 'content word vs colon'.",
+      "fix": "Make L2-L5 end on the same delimiter token as each other (they already can - use ':' uniformly and drop the trailing newline from the L3 scaffold), and treat L0/L1-vs-L2-L5 comparisons as requiring a delimiter-only control: run the identical scaffold with a null instruction and subtract. Do not compare raw final-position statistics between a bare continuation and a scaffolded instruction without that control."
+    },
+    {
+      "id": "GLOBAL-L1-chat-format",
+      "severity": "high",
+      "problem": "All 24 L1 prompts are chat-style questions ending in '?'. Base models continue them with further questions or with a Q&A-shaped stream, not with the answer, so the final-token distribution does not contain the retrieval target at all.",
+      "fix": "Replace every L1 prompt with the cloze form given in l1_reformats. Keep them bare (no few-shot block) so L1 matches L0's bare-continuation format, and handle the resulting length gap via the padding fix above."
+    },
+    {
+      "id": "GLOBAL-L1-instruction-suffix",
+      "severity": "high",
+      "problem": "8 of the 24 L1 items - all of astronomy, ocean life, classical music and chess - append 'Answer with the X.' while the other 16 do not. The suffix is inert for a base model and moves the final measured position onto a sentence-final period, so prompt format is confounded with topic within L1.",
+      "fix": "The cloze reformats remove the suffix from all 24 items uniformly. Do not fix only the eight."
+    },
+    {
+      "id": "GLOBAL-numeric-answer-tokenization",
+      "severity": "high",
+      "problem": "Verified against both tokenizers: OLMo-2 splits every leading-space digit string into a bare space plus the digits (' 56' -> ' '+'56'; likewise ' 100', ' 8', ' 4', ' 64'), while Pythia keeps them as one token. On OLMo-2 the token immediately after a numeric cloze therefore carries zero answer information. Affects L1-mathematics-1, L1-cooking-1, L1-ocean_life-2, L1-classical_music-2, L1-chess-1.",
+      "fix": "Prefer word-form answers where they are natural - ' eight', ' four', ' fifty', ' sixty' are single tokens on BOTH models (verified). Where the digit is the corpus-dominant form (chessboard/64, boiling point/100), score the answer span with the leading-space token excluded on OLMo-2 rather than scoring the first token. Do not fix this with a trailing space in the prompt: that leaves Pythia's prompt ending on a stranded ' ' token, which is off-distribution for a tokenizer that normally merges the space forward."
+    },
+    {
+      "id": "GLOBAL-propernoun-tokenization-asymmetry",
+      "severity": "high",
+      "problem": "The mirror image of the numeric problem: Pythia shatters proper nouns that OLMo-2 keeps whole - ' Poseidon' -> ' P'+'ose'+'id'+'on', ' Beethoven' -> ' Be'+'eth'+'oven', ' Tube' -> ' T'+'ube', ' Zeus' -> ' Ze'+'us', ' thermometer' -> ' therm'+'ometer'. For ' P', ' Be' and ' T' the first token is essentially uninformative, so first-token probability is not a valid retrieval measure for those items on Pythia and is not comparable across the two models for any of the five.",
+      "fix": "Use mean teacher-forced log-probability over the full gold answer span as the primary L1 metric, and report the per-item, per-model answer token count as a covariate. Optionally swap L1-Greek_mythology-2 to a deity that is single-token on both models (' Apollo' is verified single-token on both)."
+    },
+    {
+      "id": "GLOBAL-L0-emdash-stripping",
+      "severity": "high",
+      "problem": "There are zero em-dashes across all 15 L0 items, though the source texts contain them. Confirmed corruptions: L0-02 'Some years ago never mind how long precisely having little' (two em-dashes deleted), L0-14 'Aunt Polly Tom's Aunt Polly, she is and Mary' (two deleted), L0-17 'in the year of grace 17 , and go back' (the '17—,' blank mangled into '17 ,'), L0-18 'forgotten lore While I nodded' and 'chamber door Only this'. gold_continuation is therefore not verbatim to the text the models memorised, which inflates teacher-forced loss and corrupts exactly the verbatim-retrieval signal L0 exists to measure.",
+      "fix": "Re-extract the L0 passages from Gutenberg preserving em-dashes (and whatever dash convention the source file uses), then re-run the corpus verification. Until then, exclude L0-02, L0-14, L0-17 and L0-18 from verbatim scoring."
+    },
+    {
+      "id": "GLOBAL-L0-newline-flattening",
+      "severity": "high",
+      "problem": "Zero newlines across all 15 L0 items. Verse has been flattened to prose: L0-12 (Sonnet 18) and L0-18 (The Raven) run their lines together with spaces, and L0-05/06/07 inline the KJV verse numbers. A model that memorised these texts memorised the line breaks, so it will place a newline where the gold has a space and be scored wrong at every line boundary.",
+      "fix": "Preserve line breaks for the verse items (L0-05, L0-06, L0-07, L0-12, L0-18), or drop the verse items from L0 and backfill with prose passages. Flattening is not a neutral normalisation for a verbatim-continuation task."
+    },
+    {
+      "id": "L0-08",
+      "severity": "high",
+      "problem": "L0-08's gold_continuation contains L0-09's prompt verbatim (verified by substring match) - the two items are adjacent windows on the same Declaration of Independence passage, so they are not independent observations and will produce correlated retrieval signals.",
+      "fix": "Drop one of the pair (L0-09 is the better probe: its boundary token ' Men' requires memory, whereas L0-08's boundary token is the function word 'and'), or resample L0-09 from a non-overlapping region of the document."
+    },
+    {
+      "id": "L0-eligibility-imbalance",
+      "severity": "high",
+      "problem": "Pythia is eligible for 8 of 15 L0 items, OLMo-2 for all 15, and the split is not random: it follows the provenance.pile flag, so the Pythia subset is systematically the Pile-flagged texts. Every other level has 12 or 24 items for both models. Any cross-model L0 comparison therefore runs on different items with different difficulty.",
+      "fix": "Either restrict all cross-model L0 analysis to the 8-item intersection, or grow the intersection by adding Pile-verified passages until both models have the same L0 set. State which you chose in the results."
+    },
+    {
+      "id": "L4-railways-1",
+      "severity": "high",
+      "problem": "Near-duplicate blend with L4-Greek_mythology-1: 'a railway network run by the Greek gods' and 'how Hermes would run a modern parcel-delivery network' are the same pairing (Greek deities operating a transport/logistics network), and L4-railways-1's rubric even names Hermes as an expected mapping. The two items will not be independent. Greek mythology is also one of the battery's own 12 topics, so using it as railways' blend partner makes the 'distant domain' pairing internal to the battery.",
+      "fix": "Repoint L4-railways-1 at a domain outside the battery's topic and partner sets - e.g. 'Describe a railway network organised on the rules of a medical triage system, specifying which triage category each class of train falls into and why' - and keep the Hermes item as the sole Greek-mythology blend."
+    },
+    {
+      "id": "L1-railways-2",
+      "severity": "high",
+      "problem": "Two equally correct answers ('the Tube', 'the Underground') plus a useless Pythia first token (' T'). This item cannot produce a clean final-token retrieval measure on either axis.",
+      "fix": "Replace with a single-answer railway fact whose answer is one token on both models, e.g. 'A locomotive that burns coal to boil water and drive its pistons is called a' -> ' steam' (verified single-token on both). Keeps the topic and the difficulty band."
+    },
+    {
+      "id": "L4-template-inconsistency",
+      "severity": "medium",
+      "problem": "Three different L4 templates are split by topic. Gardening, railways, human anatomy and mathematics end with 'Answer in 3 to 6 sentences.'; weather, architecture, Greek mythology and cooking open with 'In 3-6 sentences, ...'; astronomy, ocean life, classical music and chess use '..., in 3-6 sentences. Each X must correspond to a specific Y ...'. Only the third group states the both-domains-must-bind requirement that all twelve rubrics score against, so instruction strength is confounded with topic.",
+      "fix": "Rewrite all twelve on the third template. It is the only one whose wording matches what the expected-answer rubrics actually demand, and the L4 scaffold above already models that binding."
+    },
+    {
+      "id": "L4-collapsible-blends",
+      "severity": "medium",
+      "problem": "Four L4 items are answerable while effectively ignoring one domain, because one domain supplies a strong standalone genre template. L4-chess-1 (weather-forecast frame) can be produced as a pure forecast with a chess word sprinkled in; L4-mathematics-1 (fairy-tale frame) can run the whole plot on an unspecified 'riddle'; L4-railways-1 and L4-Greek_mythology-1 can be answered by describing gods with only decorative logistics. L4-gardening-1 can likewise be answered as a generic cipher description sited 'in a garden'.",
+      "fix": "Add the explicit binding clause to each ('Each weather phenomenon must correspond to a specific situation on the board'; 'The curse must break only when a stated, solvable problem is solved, and the answer must state that solution'), and make the grader score the two domains separately so a one-domain answer scores zero on the other."
+    },
+    {
+      "id": "L4-trope-blends",
+      "severity": "medium",
+      "problem": "Three L4 pairings are conventional, heavily attested analogies rather than forced novel blends: human anatomy x urban planning (arterial roads, the heart of the city), classical music x architecture (the architecture of a symphony, 'frozen music'), and cooking x geology (layer cake as strata). A model can produce these largely by retrieval, which is precisely the thing L4 is supposed to sit opposite on the memory-vs-generation axis.",
+      "fix": "Repoint at least the anatomy and classical-music blends at unattested pairings, or - if you keep them - run the n-gram novelty check on the L4 prompts themselves and carry 'analogy familiarity' as a per-item covariate so the L4 level mean is not silently dragged toward retrieval."
+    },
+    {
+      "id": "L4-mathematics-1",
+      "severity": "medium",
+      "problem": "Requires the model to state a well-posed mathematical problem AND its correct solution inside a story. A 1-2B base model will fail the correctness clause on nearly every sample, so the item sits at floor and discriminates nothing.",
+      "fix": "Relax to a stated arithmetic problem with a checkable answer of the '7 x 8' difficulty band, or score the fairy-tale binding and the mathematical correctness as separate sub-scores so the item still yields signal when the arithmetic is wrong."
+    },
+    {
+      "id": "L4-architecture-1",
+      "severity": "medium",
+      "problem": "Length and knowledge outlier: at 43 words / 53 Pythia tokens it is the longest L4 prompt (others run 32-41 words / 37-50 tokens), and it presupposes specific knowledge of army-ant living bridges that a 1-2B base model may not hold. Failure will be knowledge failure, not blend failure.",
+      "fix": "Trim to the ~33-word median and state the ant behaviour in the prompt rather than requiring recall of it, so the item measures blending rather than entomological coverage."
+    },
+    {
+      "id": "L2-level-purity",
+      "severity": "medium",
+      "problem": "Ten of the twelve L2 items ask for a mechanism paraphrase (photosynthesis, steam locomotive, lungs, Pythagoras, rain, arch, yeast, moon phases, gills, checkmate). Two do not: L2-Greek_mythology-1 asks the model to retell the Trojan Horse story, and L2-classical_music-1 asks it to explain the biographical fact that Beethoven composed while deaf. Both are narrative/biographical recall and sit far closer to L0/L1 on the memory axis than the rest of the level.",
+      "fix": "Replace both with mechanism paraphrases in the same topics (e.g. 'Explain in your own words how a bow and a string make a violin sound'), or exclude them from level-mean comparisons and report them separately as recall-flavoured L2."
+    },
+    {
+      "id": "L2-classical_music-1",
+      "severity": "medium",
+      "problem": "Content-overlaps L1-classical_music-1: both target Beethoven and the Ninth Symphony, and the L2 expected answer names the Ninth Symphony explicitly. The L1-vs-L2 contrast within this topic is contaminated by shared retrieval content.",
+      "fix": "Change one of the two. Simplest is to move the L1 item off Beethoven (e.g. 'The instrument family that includes the violin, viola and cello is the' -> ' string') and leave L2 alone."
+    },
+    {
+      "id": "L3-form-topic-confound",
+      "severity": "medium",
+      "problem": "Each topic receives exactly one L3 form, and the forms are unevenly distributed: haiku (gardening, weather, astronomy), limerick (railways, architecture, ocean life), couplet (human anatomy, Greek mythology, classical music), proverb (mathematics, cooking, chess). Topic and constraint-type are therefore perfectly confounded at L3 - you cannot tell a topic effect from a 'haiku is harder than a couplet' effect.",
+      "fix": "Analyse L3 by form rather than by topic (n=3 per form), or, if topic-level L3 comparison matters, expand to all four forms per topic. At minimum state the confound in the writeup rather than reporting per-topic L3 means."
+    },
+    {
+      "id": "L3-wording-inconsistency",
+      "severity": "low",
+      "problem": "The same constraint is named three ways: 'Write a two-line rhyming couplet about the human skeleton' (L3-human_anatomy-1), 'Write a two-line rhyming couplet about Zeus' (L3-Greek_mythology-1), but 'Write a two-line rhyme about a piano' (L3-classical_music-1).",
+      "fix": "Standardise on 'two-line rhyming couplet' for all three."
+    },
+    {
+      "id": "L0-syntax-forced-boundaries",
+      "severity": "low",
+      "problem": "Six L0 prompts end where the next token is largely forced by syntax rather than by memory: L0-02 ends '...of the world. It' -> 'is' (near-deterministic), L0-01 '...this truth' -> 'is', L0-08 '...the Laws of Nature' -> 'and', L0-10 '...whether that nation,' -> 'or', L0-15 '...the lifeless thing' -> 'that', L0-07 '...the world through' -> 'him'. By contrast L0-16 -> ' Adler', L0-09 -> ' Men', L0-17 -> ' treasure', L0-05 -> ' Let' and L0-12 -> ' his' genuinely require the memorised text. Boundary predictability is currently an uncontrolled per-item variable inside L0.",
+      "fix": "Shift the split point of the six weak items by a few tokens so the boundary lands on a content word, or compute a syntactic-predictability baseline for each boundary token (a small n-gram model or a same-size model given only the local clause) and use it as a per-item covariate instead of treating all L0 boundaries as equivalent."
+    },
+    {
+      "id": "L0-06",
+      "severity": "low",
+      "problem": "The prompt ends on the verse number '23:4', so the boundary token is a formatting artefact and the next-token distribution is dominated by verse-numbering conventions rather than by recall of Psalm 23.",
+      "fix": "Move the split one or two words into verse 4 (end at '23:4 Yea, though I walk through the') or drop the inline verse numbers from the L0 Bible items entirely."
+    },
+    {
+      "id": "L0-10",
+      "severity": "low",
+      "problem": "Uses a non-canonical edition of the Gettysburg Address ('a new nation: conceived in liberty', 'a great civil war. . .testing'). The punctuation is faithful to gutenberg:4 but not to the wording most training corpora carry, so a model that memorised the standard text will be scored as failing.",
+      "fix": "Swap to the widely-reproduced text, or keep the Gutenberg version and accept a canonical-variant match in scoring."
+    },
+    {
+      "id": "L0-provenance-flags",
+      "severity": "medium",
+      "problem": "The provenance.pile flags look unverified and they gate model eligibility. gutenberg:10 (KJV), 76 (Huckleberry Finn), 120 (Treasure Island), 1065 (The Raven), 100 (Shakespeare) and 4 (Gettysburg) are all marked pile:false, yet the Pile's Gutenberg/PG-19 and Books3 components cover pre-1919 public-domain texts of exactly this kind, while gutenberg:1342, 2701, 11, 1, 84 and 1661 are marked pile:true on no stated basis.",
+      "fix": "Document how the flag was derived and re-run it as an explicit membership or n-gram check against the Pile. If it is a heuristic guess, stop using it to gate eligible_models - it is currently the reason Pythia sees only 8 of 15 L0 items."
+    },
+    {
+      "id": "L0-id-gaps",
+      "severity": "low",
+      "problem": "IDs L0-03, L0-11 and L0-13 are absent with no record of why, so the L0 set cannot be reproduced or audited for selection bias.",
+      "fix": "Record the dropped candidates and the rejection reason in l0_verification.json (they appear to have been filtered during corpus verification), or renumber the surviving 15 contiguously."
+    },
+    {
+      "id": "L5-prompt-shape-variance",
+      "severity": "low",
+      "problem": "L5 prompts run 21-34 words and ask for different numbers of components: most ask for two (what it does, how it works), but L5-architecture-1 asks for three (appearance, benefit, why houses lack it) and L5-cooking-1 asks for three (tools, steps, resulting texture). Longer prompts with more required components will produce longer, differently-structured outputs, which will bias any length-sensitive novelty or ideation metric.",
+      "fix": "Normalise all twelve to the same two-component request and the same length band, and hold output length as a covariate in the novelty scoring."
+    },
+    {
+      "id": "L1-mathematics-1-task-type",
+      "severity": "medium",
+      "problem": "'What is 7 multiplied by 8?' is arithmetic computation, not fact retrieval. Within a level defined as 'factual recall with one unambiguous short answer' it is the only item that a model could in principle answer without any stored fact, which weakens L1 as a clean retrieval condition.",
+      "fix": "Replace with a genuine mathematics fact whose answer is one token on both models, e.g. 'The number of degrees in the angles of a triangle added together is' -> ' 180' (numeric, so apply the numeric-tokenisation rule above), or 'The branch of mathematics that studies triangles and their angles is called' -> ' trigonometry'."
+    },
+    {
+      "id": "blend-partners-inside-topic-set",
+      "severity": "medium",
+      "problem": "Three blend partners are themselves battery topics: Greek mythology (partner for railways), cooking (partner for astronomy), architecture (partner for classical music). Those three topics therefore appear in seven items each instead of six, and the L4 'distant domain' factor is not independent of the topic factor.",
+      "fix": "Draw all twelve blend partners from outside the battery's topic set. The current external partners (cryptography, urban planning, fairy tales, banking, insects, geology, supply chains, bureaucracy, meteorology) already give you a usable pool to rebalance from."
+    }
+  ]
+}

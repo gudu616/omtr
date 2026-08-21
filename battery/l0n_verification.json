@@ -1,0 +1,1648 @@
+[
+  {
+    "title": "control gutenberg:62012 @w1507",
+    "mode": "control",
+    "probes": {
+      "pile": [
+        {
+          "probe": "boast the gayest plumage among those who",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "among those who float on the wind",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "on the wind of fortune's fickle favors",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "fortune's fickle favors. The veritable history of",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "veritable history of Diedrich Knickerbocker was not",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "Knickerbocker was not a truer story than",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "truer story than is every whit of",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "every whit of this history of \"a",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "history of \"a week in Wall-street;\" but",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "in Wall-street;\" but alas for the mutations",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "world of fashion, and boast the gayest plumage",
+          "status": "ok",
+          "count": 0
+        }
+      ],
+      "olmo_mix": [
+        {
+          "probe": "boast the gayest plumage among those who",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "among those who float on the wind",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "on the wind of fortune's fickle favors",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "fortune's fickle favors. The veritable history of",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "veritable history of Diedrich Knickerbocker was not",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "Knickerbocker was not a truer story than",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "truer story than is every whit of",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "every whit of this history of \"a",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "history of \"a week in Wall-street;\" but",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "in Wall-street;\" but alas for the mutations",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "world of fashion, and boast the gayest plumage",
+          "status": "ok",
+          "count": 0
+        }
+      ]
+    },
+    "verified": {
+      "pile": true,
+      "olmo_mix": true
+    },
+    "stats": {
+      "pile": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 0,
+        "max_count": 0
+      },
+      "olmo_mix": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 0,
+        "max_count": 0
+      }
+    }
+  },
+  {
+    "title": "control gutenberg:62345 @w1503",
+    "mode": "control",
+    "probes": {
+      "pile": [
+        {
+          "probe": "Indispensable when there's not enough drippings to",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "enough drippings to make gravy or to",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "gravy or to serve with some leftover",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "with some leftover slices when the gravy's",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "when the gravy's all gone. Use it",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "gone. Use it as the basis of",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "the basis of countless other sauces—and the",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "other sauces—and the classics such as Sauce",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "such as Sauce Espagnole, Madeira Sauce, Ravigote",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "Madeira Sauce, Ravigote, or Piquant Sauce. 2",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "Excellent with roast beef. Indispensable when there's not",
+          "status": "ok",
+          "count": 0
+        }
+      ],
+      "olmo_mix": [
+        {
+          "probe": "Indispensable when there's not enough drippings to",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "enough drippings to make gravy or to",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "gravy or to serve with some leftover",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "with some leftover slices when the gravy's",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "when the gravy's all gone. Use it",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "gone. Use it as the basis of",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "the basis of countless other sauces—and the",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "other sauces—and the classics such as Sauce",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "such as Sauce Espagnole, Madeira Sauce, Ravigote",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "Madeira Sauce, Ravigote, or Piquant Sauce. 2",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "Excellent with roast beef. Indispensable when there's not",
+          "status": "ok",
+          "count": 0
+        }
+      ]
+    },
+    "verified": {
+      "pile": true,
+      "olmo_mix": true
+    },
+    "stats": {
+      "pile": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 0,
+        "max_count": 0
+      },
+      "olmo_mix": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 0,
+        "max_count": 0
+      }
+    }
+  },
+  {
+    "title": "control gutenberg:63111 @w1511",
+    "mode": "control",
+    "probes": {
+      "pile": [
+        {
+          "probe": "Posts, generally known as Alton Post, where",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "Alton Post, where there was a machine-gun",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "was a machine-gun protected by a bombing-post",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "by a bombing-post, under Lieutenant W. B",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "Lieutenant W. B. Ball. It happened that",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "It happened that a party of Royal",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "party of Royal Engineers, under an officer",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "under an officer, was working at the",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "working at the machine-gun dug-out that night",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "dug-out that night. The machine-gun itself was",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "Nos. 13 and 14 Posts, generally known as",
+          "status": "ok",
+          "count": 0
+        }
+      ],
+      "olmo_mix": [
+        {
+          "probe": "Posts, generally known as Alton Post, where",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "Alton Post, where there was a machine-gun",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "was a machine-gun protected by a bombing-post",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "by a bombing-post, under Lieutenant W. B",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "Lieutenant W. B. Ball. It happened that",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "It happened that a party of Royal",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "party of Royal Engineers, under an officer",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "under an officer, was working at the",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "working at the machine-gun dug-out that night",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "dug-out that night. The machine-gun itself was",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "Nos. 13 and 14 Posts, generally known as",
+          "status": "ok",
+          "count": 0
+        }
+      ]
+    },
+    "verified": {
+      "pile": true,
+      "olmo_mix": true
+    },
+    "stats": {
+      "pile": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 0,
+        "max_count": 0
+      },
+      "olmo_mix": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 0,
+        "max_count": 0
+      }
+    }
+  },
+  {
+    "title": "control gutenberg:63888 @w1503",
+    "mode": "control",
+    "probes": {
+      "pile": [
+        {
+          "probe": "hold the land from New York to",
+          "status": "ok",
+          "count": 2
+        },
+        {
+          "probe": "New York to Philadelphia. New! I'm new",
+          "status": "ok",
+          "count": 2
+        },
+        {
+          "probe": "New! I'm new, said the quartz crystal",
+          "status": "ok",
+          "count": 2
+        },
+        {
+          "probe": "the quartz crystal on the parlor table--like",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "the parlor table--like glass--Mr. Tiffany bought a",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "Tiffany bought a cart load of them",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "load of them. Like water or white",
+          "status": "ok",
+          "count": 2
+        },
+        {
+          "probe": "water or white rock candy--I'm new, said",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "candy--I'm new, said the mist rising from",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "mist rising from the duck pond, rising",
+          "status": "ok",
+          "count": 2
+        },
+        {
+          "probe": "crater big enough to hold the land from",
+          "status": "ok",
+          "count": 2
+        }
+      ],
+      "olmo_mix": [
+        {
+          "probe": "hold the land from New York to",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "New York to Philadelphia. New! I'm new",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "New! I'm new, said the quartz crystal",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "the quartz crystal on the parlor table--like",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "the parlor table--like glass--Mr. Tiffany bought a",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "Tiffany bought a cart load of them",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "load of them. Like water or white",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "water or white rock candy--I'm new, said",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "candy--I'm new, said the mist rising from",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "mist rising from the duck pond, rising",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "crater big enough to hold the land from",
+          "status": "ok",
+          "count": 0
+        }
+      ]
+    },
+    "verified": {
+      "pile": true,
+      "olmo_mix": true
+    },
+    "stats": {
+      "pile": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 0,
+        "max_count": 2
+      },
+      "olmo_mix": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 0,
+        "max_count": 0
+      }
+    }
+  },
+  {
+    "title": "control gutenberg:64502 @w1504",
+    "mode": "control",
+    "probes": {
+      "pile": [
+        {
+          "probe": "ni! mondá Gózon, s leugorván a lováról",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "leugorván a lováról, egy beteges fiú kezéből",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "beteges fiú kezéből kivette a puskát s",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "a puskát s beleugrott a vízbe, s",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "a vízbe, s a kikeresett gázlónak indult",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "kikeresett gázlónak indult: «itt a híd, fiúk",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "a híd, fiúk; utánam, a ki magyar",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "a ki magyar és szereti hazáját!» Percz",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "szereti hazáját!» Percz mulva a kis csapat",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "a kis csapat hónaljig érő vizen át",
+          "status": "ok",
+          "count": 0
+        }
+      ],
+      "olmo_mix": [
+        {
+          "probe": "ni! mondá Gózon, s leugorván a lováról",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "leugorván a lováról, egy beteges fiú kezéből",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "beteges fiú kezéből kivette a puskát s",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "a puskát s beleugrott a vízbe, s",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "a vízbe, s a kikeresett gázlónak indult",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "kikeresett gázlónak indult: «itt a híd, fiúk",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "a híd, fiúk; utánam, a ki magyar",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "a ki magyar és szereti hazáját!» Percz",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "szereti hazáját!» Percz mulva a kis csapat",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "a kis csapat hónaljig érő vizen át",
+          "status": "ok",
+          "count": 0
+        }
+      ]
+    },
+    "verified": {
+      "pile": true,
+      "olmo_mix": true
+    },
+    "stats": {
+      "pile": {
+        "n_probes": 10,
+        "n_unknown": 0,
+        "min_count": 0,
+        "max_count": 0
+      },
+      "olmo_mix": {
+        "n_probes": 10,
+        "n_unknown": 0,
+        "min_count": 0,
+        "max_count": 0
+      }
+    }
+  },
+  {
+    "title": "control gutenberg:65123 @w1516",
+    "mode": "control",
+    "probes": {
+      "pile": [
+        {
+          "probe": "potatoes. Of course tea or coffee with",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "or coffee with each meal. The cook",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "meal. The cook makes fine yeast bread",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "fine yeast bread, ten loaves a day",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "loaves a day. There are twenty-three men",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "are twenty-three men on board. Including the",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "board. Including the hired sailors who are",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "sailors who are not of the company",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "of the company, and even with five",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "even with five in the hospital we",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "boiled ham and baked potatoes. Of course tea",
+          "status": "ok",
+          "count": 0
+        }
+      ],
+      "olmo_mix": [
+        {
+          "probe": "potatoes. Of course tea or coffee with",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "or coffee with each meal. The cook",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "meal. The cook makes fine yeast bread",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "fine yeast bread, ten loaves a day",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "loaves a day. There are twenty-three men",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "are twenty-three men on board. Including the",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "board. Including the hired sailors who are",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "sailors who are not of the company",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "of the company, and even with five",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "even with five in the hospital we",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "boiled ham and baked potatoes. Of course tea",
+          "status": "ok",
+          "count": 0
+        }
+      ]
+    },
+    "verified": {
+      "pile": true,
+      "olmo_mix": true
+    },
+    "stats": {
+      "pile": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 0,
+        "max_count": 0
+      },
+      "olmo_mix": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 0,
+        "max_count": 0
+      }
+    }
+  },
+  {
+    "title": "control gutenberg:65789 @w1515",
+    "mode": "control",
+    "probes": {
+      "pile": [
+        {
+          "probe": "Work 4 more rows in ribbing and",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "in ribbing and garter st at border",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "st at border. START PATTERN: Change to",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "PATTERN: Change to No. 8 needles. 1st",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "8 needles. 1st ROW (right side): Work",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "right side): Work 8 border sts, P",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "border sts, P 2 (2)—2, 2, K",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "2)—2, 2, K 1, sl 2 as",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "sl 2 as if to P, K",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "to P, K 1, P 2, K",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "row) for front border. Work 4 more rows",
+          "status": "ok",
+          "count": 0
+        }
+      ],
+      "olmo_mix": [
+        {
+          "probe": "Work 4 more rows in ribbing and",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "in ribbing and garter st at border",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "st at border. START PATTERN: Change to",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "PATTERN: Change to No. 8 needles. 1st",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "8 needles. 1st ROW (right side): Work",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "right side): Work 8 border sts, P",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "border sts, P 2 (2)—2, 2, K",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "2)—2, 2, K 1, sl 2 as",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "sl 2 as if to P, K",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "to P, K 1, P 2, K",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "row) for front border. Work 4 more rows",
+          "status": "ok",
+          "count": 0
+        }
+      ]
+    },
+    "verified": {
+      "pile": true,
+      "olmo_mix": true
+    },
+    "stats": {
+      "pile": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 0,
+        "max_count": 0
+      },
+      "olmo_mix": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 0,
+        "max_count": 0
+      }
+    }
+  },
+  {
+    "title": "control gutenberg:66234 @w1527",
+    "mode": "control",
+    "probes": {
+      "pile": [
+        {
+          "probe": "back and join it to the centre",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "to the centre pearl. Work another Rosette",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "Work another Rosette the same, and join",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "same, and join it to the same",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "to the same pearl of the previous",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "of the previous Rosette as before; then",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "as before; then keep the Wool as",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "the Wool as the back and join",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "back and join to the centre pearl",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "the centre pearl of the last Rosette",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "the Wool at the back and join it",
+          "status": "ok",
+          "count": 0
+        }
+      ],
+      "olmo_mix": [
+        {
+          "probe": "back and join it to the centre",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "to the centre pearl. Work another Rosette",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "Work another Rosette the same, and join",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "same, and join it to the same",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "to the same pearl of the previous",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "of the previous Rosette as before; then",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "as before; then keep the Wool as",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "the Wool as the back and join",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "back and join to the centre pearl",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "the centre pearl of the last Rosette",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "the Wool at the back and join it",
+          "status": "ok",
+          "count": 0
+        }
+      ]
+    },
+    "verified": {
+      "pile": true,
+      "olmo_mix": true
+    },
+    "stats": {
+      "pile": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 0,
+        "max_count": 0
+      },
+      "olmo_mix": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 0,
+        "max_count": 0
+      }
+    }
+  },
+  {
+    "title": "control gutenberg:66890 @w1510",
+    "mode": "control",
+    "probes": {
+      "pile": [
+        {
+          "probe": "days of effort, the day when you",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "day when you had to do all",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "to do all that was in you",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "was in you for some worthy end",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "some worthy end, and the worthiest of",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "the worthiest of all worthy ends is",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "worthy ends is to make those that",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "make those that are closest and nearest",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "closest and nearest to you—your wife and",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "you—your wife and your children, and those",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "of ease, but with days of effort, the",
+          "status": "ok",
+          "count": 0
+        }
+      ],
+      "olmo_mix": [
+        {
+          "probe": "days of effort, the day when you",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "day when you had to do all",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "to do all that was in you",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "was in you for some worthy end",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "some worthy end, and the worthiest of",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "the worthiest of all worthy ends is",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "worthy ends is to make those that",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "make those that are closest and nearest",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "closest and nearest to you—your wife and",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "you—your wife and your children, and those",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "of ease, but with days of effort, the",
+          "status": "ok",
+          "count": 0
+        }
+      ]
+    },
+    "verified": {
+      "pile": true,
+      "olmo_mix": true
+    },
+    "stats": {
+      "pile": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 0,
+        "max_count": 0
+      },
+      "olmo_mix": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 0,
+        "max_count": 0
+      }
+    }
+  },
+  {
+    "title": "control gutenberg:67345 @w1517",
+    "mode": "control",
+    "probes": {
+      "pile": [
+        {
+          "probe": "very distance of the beginning, a citizen",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "beginning, a citizen of that ancient city",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "that ancient city whose dominion once stretched",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "dominion once stretched from the blue waters",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "the blue waters of the Ægean round",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "the Ægean round to and beyond the",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "and beyond the broad stream of the",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "stream of the Nile herself. Your antiquities",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "herself. Your antiquities were then my household",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "then my household gods, your myths were",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "I was, in the very distance of the",
+          "status": "ok",
+          "count": 0
+        }
+      ],
+      "olmo_mix": [
+        {
+          "probe": "very distance of the beginning, a citizen",
+          "status": "ok",
+          "count": 5
+        },
+        {
+          "probe": "beginning, a citizen of that ancient city",
+          "status": "ok",
+          "count": 5
+        },
+        {
+          "probe": "that ancient city whose dominion once stretched",
+          "status": "ok",
+          "count": 5
+        },
+        {
+          "probe": "dominion once stretched from the blue waters",
+          "status": "ok",
+          "count": 5
+        },
+        {
+          "probe": "the blue waters of the Ægean round",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "the Ægean round to and beyond the",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "and beyond the broad stream of the",
+          "status": "ok",
+          "count": 5
+        },
+        {
+          "probe": "stream of the Nile herself. Your antiquities",
+          "status": "ok",
+          "count": 5
+        },
+        {
+          "probe": "herself. Your antiquities were then my household",
+          "status": "ok",
+          "count": 5
+        },
+        {
+          "probe": "then my household gods, your myths were",
+          "status": "ok",
+          "count": 5
+        },
+        {
+          "probe": "I was, in the very distance of the",
+          "status": "ok",
+          "count": 5
+        }
+      ]
+    },
+    "verified": {
+      "pile": true,
+      "olmo_mix": false
+    },
+    "stats": {
+      "pile": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 0,
+        "max_count": 0
+      },
+      "olmo_mix": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 0,
+        "max_count": 5
+      }
+    }
+  },
+  {
+    "title": "control gutenberg:67901 @w1503",
+    "mode": "control",
+    "probes": {
+      "pile": [
+        {
+          "probe": "Arab. \"Yeou wait till we git on",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "we git on dry land, critter! I'll",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "land, critter! I'll fix ye!\" Then he",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "ye!\" Then he began to wade ashore",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "to wade ashore. \"I am surprised, Ephraim",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "am surprised, Ephraim,\" said Frank, soberly, \"that",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "Frank, soberly, \"that you should make such",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "should make such a racket over a",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "racket over a matter like this. The",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "like this. The tan-colored gentleman simply wished",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "fist at the bewildered Arab. \"Yeou wait till",
+          "status": "ok",
+          "count": 0
+        }
+      ],
+      "olmo_mix": [
+        {
+          "probe": "Arab. \"Yeou wait till we git on",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "we git on dry land, critter! I'll",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "land, critter! I'll fix ye!\" Then he",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "ye!\" Then he began to wade ashore",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "to wade ashore. \"I am surprised, Ephraim",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "am surprised, Ephraim,\" said Frank, soberly, \"that",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "Frank, soberly, \"that you should make such",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "should make such a racket over a",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "racket over a matter like this. The",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "like this. The tan-colored gentleman simply wished",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "fist at the bewildered Arab. \"Yeou wait till",
+          "status": "ok",
+          "count": 0
+        }
+      ]
+    },
+    "verified": {
+      "pile": true,
+      "olmo_mix": true
+    },
+    "stats": {
+      "pile": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 0,
+        "max_count": 0
+      },
+      "olmo_mix": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 0,
+        "max_count": 0
+      }
+    }
+  },
+  {
+    "title": "control gutenberg:69012 @w1510",
+    "mode": "control",
+    "probes": {
+      "pile": [
+        {
+          "probe": "grease spots are most difficult to overcome",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "difficult to overcome. The bread is used",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "bread is used for rubbing out charcoal",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "rubbing out charcoal or crayon, erasing mistakes",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "crayon, erasing mistakes, and for taking out",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "for taking out lights from a mass",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "from a mass of dark. The soft",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "dark. The soft crumb is rolled between",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "is rolled between the fingers until a",
+          "status": "ok",
+          "count": 2
+        },
+        {
+          "probe": "fingers until a point is formed, and",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "should be avoided, as grease spots are most",
+          "status": "ok",
+          "count": 0
+        }
+      ],
+      "olmo_mix": [
+        {
+          "probe": "grease spots are most difficult to overcome",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "difficult to overcome. The bread is used",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "bread is used for rubbing out charcoal",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "rubbing out charcoal or crayon, erasing mistakes",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "crayon, erasing mistakes, and for taking out",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "for taking out lights from a mass",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "from a mass of dark. The soft",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "dark. The soft crumb is rolled between",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "is rolled between the fingers until a",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "fingers until a point is formed, and",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "should be avoided, as grease spots are most",
+          "status": "ok",
+          "count": 0
+        }
+      ]
+    },
+    "verified": {
+      "pile": true,
+      "olmo_mix": true
+    },
+    "stats": {
+      "pile": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 0,
+        "max_count": 2
+      },
+      "olmo_mix": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 0,
+        "max_count": 0
+      }
+    }
+  }
+]

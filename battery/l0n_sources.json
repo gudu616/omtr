@@ -1,0 +1,271 @@
+{
+  "generated_by": "Gutendex API (https://gutendex.com/books/<id>/), fetched 2026-08-20/21 at ~1s spacing",
+  "note": "All 12 of the l0_control_candidates.json / battery.json L0N-01..L0N-12 controls, mapped to their real Project Gutenberg titles and authors. None of the 12 were dropped from the released battery; PG67345 (L0N-10) has reduced eligibility (Pythia-only) due to an OLMo-mix corpus match. See per-item 'note' fields.",
+  "sources": [
+    {
+      "gutenberg_id": "PG62012",
+      "title": "A Week in Wall Street: By One Who Knows",
+      "authors": [
+        "Frederick Jackson"
+      ],
+      "language": [
+        "en"
+      ],
+      "l0n_item_title": "control gutenberg:62012 @w1507",
+      "battery_id": "L0N-01",
+      "us_public_domain": true,
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "corpus_verified": {
+        "pile": true,
+        "olmo_mix": true
+      },
+      "dropped": false
+    },
+    {
+      "gutenberg_id": "PG62345",
+      "title": "Collectors' Items: Fifty Superb Recipes from Spice Islands",
+      "authors": [
+        "Spice Islands Company"
+      ],
+      "language": [
+        "en"
+      ],
+      "l0n_item_title": "control gutenberg:62345 @w1503",
+      "battery_id": "L0N-02",
+      "us_public_domain": true,
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "corpus_verified": {
+        "pile": true,
+        "olmo_mix": true
+      },
+      "dropped": false
+    },
+    {
+      "gutenberg_id": "PG63111",
+      "title": "The Grenadier Guards in the Great War of 1914-1918, Vol. 3 of 3",
+      "authors": [
+        "Frederick Ponsonby (1867–1935)"
+      ],
+      "language": [
+        "en"
+      ],
+      "l0n_item_title": "control gutenberg:63111 @w1511",
+      "battery_id": "L0N-03",
+      "us_public_domain": true,
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "corpus_verified": {
+        "pile": true,
+        "olmo_mix": true
+      },
+      "dropped": false
+    },
+    {
+      "gutenberg_id": "PG63888",
+      "title": "The Great American Novel",
+      "authors": [
+        "William Carlos Williams (1883–1963)"
+      ],
+      "language": [
+        "en"
+      ],
+      "l0n_item_title": "control gutenberg:63888 @w1503",
+      "battery_id": "L0N-04",
+      "us_public_domain": true,
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "corpus_verified": {
+        "pile": true,
+        "olmo_mix": true
+      },
+      "dropped": false
+    },
+    {
+      "gutenberg_id": "PG64502",
+      "title": "Életemből (II. rész): Igaz történetek. Örök emlékek. Humor. Utleirás.",
+      "authors": [
+        "Mór Jókai (1825–1904)"
+      ],
+      "language": [
+        "hu"
+      ],
+      "l0n_item_title": "control gutenberg:64502 @w1504",
+      "battery_id": "L0N-05",
+      "us_public_domain": true,
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "corpus_verified": {
+        "pile": true,
+        "olmo_mix": true
+      },
+      "dropped": false,
+      "note": "Source text is in Hungarian, unlike the other 11 L0N controls and all 14 L0 sources (English). Retained: corpus-verification (near-zero pile/olmo count) is unaffected by source language, and the L0N role only requires a genuinely non-memorized passage, not English prose."
+    },
+    {
+      "gutenberg_id": "PG65123",
+      "title": "Gold Hunting in Alaska",
+      "authors": [
+        "Joseph Grinnell (1877–1939)"
+      ],
+      "language": [
+        "en"
+      ],
+      "l0n_item_title": "control gutenberg:65123 @w1516",
+      "battery_id": "L0N-06",
+      "us_public_domain": true,
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "corpus_verified": {
+        "pile": true,
+        "olmo_mix": true
+      },
+      "dropped": false
+    },
+    {
+      "gutenberg_id": "PG65789",
+      "title": "Sweaters He and She",
+      "authors": [
+        "American Thread Company"
+      ],
+      "language": [
+        "en"
+      ],
+      "l0n_item_title": "control gutenberg:65789 @w1515",
+      "battery_id": "L0N-07",
+      "us_public_domain": true,
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "corpus_verified": {
+        "pile": true,
+        "olmo_mix": true
+      },
+      "dropped": false
+    },
+    {
+      "gutenberg_id": "PG66234",
+      "title": "The Abergeldie Winter Book",
+      "authors": [
+        "Eléonore Riego de la Branchardière"
+      ],
+      "language": [
+        "en"
+      ],
+      "l0n_item_title": "control gutenberg:66234 @w1527",
+      "battery_id": "L0N-08",
+      "us_public_domain": true,
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "corpus_verified": {
+        "pile": true,
+        "olmo_mix": true
+      },
+      "dropped": false
+    },
+    {
+      "gutenberg_id": "PG66890",
+      "title": "A Square Deal",
+      "authors": [
+        "Theodore Roosevelt (1858–1919)"
+      ],
+      "language": [
+        "en"
+      ],
+      "l0n_item_title": "control gutenberg:66890 @w1510",
+      "battery_id": "L0N-09",
+      "us_public_domain": true,
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "corpus_verified": {
+        "pile": true,
+        "olmo_mix": true
+      },
+      "dropped": false
+    },
+    {
+      "gutenberg_id": "PG67345",
+      "title": "The Wonderful Adventures of Phra the Phoenician",
+      "authors": [
+        "Edwin Lester Arnold (1857–1935)"
+      ],
+      "language": [
+        "en"
+      ],
+      "l0n_item_title": "control gutenberg:67345 @w1517",
+      "battery_id": "L0N-10",
+      "us_public_domain": true,
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b"
+      ],
+      "corpus_verified": {
+        "pile": true,
+        "olmo_mix": false
+      },
+      "dropped": false,
+      "note": "Corpus-verification found a non-zero match in the OLMo pretraining-mix probe (max_count=5), so this control is eligible for Pythia-1.4b only; it is not scored against OLMo-2-1B and is not dropped from the battery."
+    },
+    {
+      "gutenberg_id": "PG67901",
+      "title": "Frank Merriwell in Europe; or, Working His Way Upward",
+      "authors": [
+        "Burt L. Standish (1866–1945)"
+      ],
+      "language": [
+        "en"
+      ],
+      "l0n_item_title": "control gutenberg:67901 @w1503",
+      "battery_id": "L0N-11",
+      "us_public_domain": true,
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "corpus_verified": {
+        "pile": true,
+        "olmo_mix": true
+      },
+      "dropped": false
+    },
+    {
+      "gutenberg_id": "PG69012",
+      "title": "Drawing in charcoal and crayon for the use of students and schools",
+      "authors": [
+        "Frank Fowler (1852–1910)"
+      ],
+      "language": [
+        "en"
+      ],
+      "l0n_item_title": "control gutenberg:69012 @w1510",
+      "battery_id": "L0N-12",
+      "us_public_domain": true,
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "corpus_verified": {
+        "pile": true,
+        "olmo_mix": true
+      },
+      "dropped": false
+    }
+  ]
+}

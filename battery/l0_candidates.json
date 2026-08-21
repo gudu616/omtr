@@ -1,0 +1,214 @@
+{
+  "l0_candidates": [
+    {
+      "title": "Pride and Prejudice opening",
+      "source_work": "gutenberg:1342",
+      "year": 1813,
+      "prompt_text": "It is a truth universally acknowledged, that a single man in possession of a good fortune must be in want of a wife. However little known the feelings or views of such a man may be on his first entering a neighbourhood, this truth is so",
+      "continuation_text": "well fixed in the minds of the surrounding families, that he is considered as the rightful property of some one or other of their daughters. \"My dear Mr. Bennet,\" said his lady to him one day, \"have you heard that Netherfield Park is let",
+      "split_at": 46,
+      "boundary_word": "well",
+      "why_famous": "curated public-domain canon; wording taken verbatim from Project Gutenberg"
+    },
+    {
+      "title": "Moby-Dick opening",
+      "source_work": "gutenberg:2701",
+      "year": 1851,
+      "prompt_text": "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world. It is a",
+      "continuation_text": "way I have of driving off the spleen and regulating the circulation. Whenever I find myself growing grim about the mouth; whenever it is a damp, drizzly November in my soul; whenever I find myself involuntarily pausing before coffin warehouses, and bringing up the",
+      "split_at": 44,
+      "boundary_word": "way",
+      "why_famous": "curated public-domain canon; wording taken verbatim from Project Gutenberg"
+    },
+    {
+      "title": "A Tale of Two Cities opening",
+      "source_work": "gutenberg:98",
+      "year": 1859,
+      "prompt_text": "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the",
+      "continuation_text": "season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way--in short, the period was",
+      "split_at": 45,
+      "boundary_word": "season",
+      "why_famous": "curated public-domain canon; wording taken verbatim from Project Gutenberg"
+    },
+    {
+      "title": "Alice in Wonderland opening",
+      "source_work": "gutenberg:11",
+      "year": 1865,
+      "prompt_text": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, \"and",
+      "continuation_text": "what is the use of a book,\" thought Alice \"without pictures or conversations?\" So she was considering in her own mind (as well as she could, for the hot day made her feel very sleepy and stupid), whether the pleasure of making a daisy-chain",
+      "split_at": 44,
+      "boundary_word": "what",
+      "why_famous": "curated public-domain canon; wording taken verbatim from Project Gutenberg"
+    },
+    {
+      "title": "KJV Genesis 1",
+      "source_work": "gutenberg:10",
+      "year": 1611,
+      "prompt_text": "In the beginning God created the heaven and the earth. And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters. And God said, Let there be",
+      "continuation_text": "light: and there was light. And God saw the light, that it was good: and God divided the light from the darkness. And God called the light Day, and the darkness he called Night. And the evening and the morning were the first day.",
+      "split_at": 45,
+      "boundary_word": "light:",
+      "why_famous": "curated public-domain canon; wording taken verbatim from Project Gutenberg"
+    },
+    {
+      "title": "KJV Psalm 23",
+      "source_work": "gutenberg:10",
+      "year": 1611,
+      "prompt_text": "The LORD is my shepherd; I shall not want. He maketh me to lie down in green pastures: he leadeth me beside the still waters. He restoreth my soul: he leadeth me in the paths of righteousness for his name's sake. Yea, though I",
+      "continuation_text": "walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me. Thou preparest a table before me in the presence of mine enemies: thou anointest my head with",
+      "split_at": 44,
+      "boundary_word": "walk",
+      "why_famous": "curated public-domain canon; wording taken verbatim from Project Gutenberg"
+    },
+    {
+      "title": "KJV John 3:16",
+      "source_work": "gutenberg:10",
+      "year": 1611,
+      "prompt_text": "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life. For God sent not his Son into the world to condemn the world; but that the world through him might be",
+      "continuation_text": "saved. He that believeth on him is not condemned: but he that believeth not is condemned already, because he hath not believed in the name of the only begotten Son of God. And this is the condemnation, that light is come into the world,",
+      "split_at": 46,
+      "boundary_word": "saved.",
+      "why_famous": "curated public-domain canon; wording taken verbatim from Project Gutenberg"
+    },
+    {
+      "title": "KJV John 1:1",
+      "source_work": "gutenberg:10",
+      "year": 1611,
+      "prompt_text": "In the beginning was the Word, and the Word was with God, and the Word was God. The same was in the beginning with God. All things were made by him; and without him was not any thing made that was made. In him was",
+      "continuation_text": "life; and the life was the light of men. And the light shineth in darkness; and the darkness comprehended it not. There was a man sent from God, whose name was John. The same came for a witness, to bear witness of the Light,",
+      "split_at": 45,
+      "boundary_word": "life;",
+      "why_famous": "curated public-domain canon; wording taken verbatim from Project Gutenberg"
+    },
+    {
+      "title": "KJV 1 Corinthians 13",
+      "source_work": "gutenberg:10",
+      "year": 1611,
+      "prompt_text": "Though I speak with the tongues of men and of angels, and have not charity, I am become as sounding brass, or a tinkling cymbal. And though I have the gift of prophecy, and understand all mysteries, and all knowledge; and though I have",
+      "continuation_text": "all faith, so that I could remove mountains, and have not charity, I am nothing. And though I bestow all my goods to feed the poor, and though I give my body to be burned, and have not charity, it profiteth me nothing. Charity",
+      "split_at": 44,
+      "boundary_word": "all",
+      "why_famous": "curated public-domain canon; wording taken verbatim from Project Gutenberg"
+    },
+    {
+      "title": "KJV Beatitudes",
+      "source_work": "gutenberg:10",
+      "year": 1611,
+      "prompt_text": "Blessed are the poor in spirit: for theirs is the kingdom of heaven. Blessed are they that mourn: for they shall be comforted. Blessed are the meek: for they shall inherit the earth. Blessed are they which do hunger and thirst after righteousness: for they shall be",
+      "continuation_text": "filled. Blessed are the merciful: for they shall obtain mercy. Blessed are the pure in heart: for they shall see God. Blessed are the peacemakers: for they shall be called the children of God. Blessed are they which are persecuted for righteousness' sake: for",
+      "split_at": 47,
+      "boundary_word": "filled.",
+      "why_famous": "curated public-domain canon; wording taken verbatim from Project Gutenberg"
+    },
+    {
+      "title": "Declaration self-evident truths",
+      "source_work": "gutenberg:1",
+      "year": 1776,
+      "prompt_text": "We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty, and the pursuit of Happiness. That to secure these rights, Governments are instituted among",
+      "continuation_text": "Men, deriving their just powers from the consent of the governed, That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government, laying its foundation on",
+      "split_at": 44,
+      "boundary_word": "Men,",
+      "why_famous": "curated public-domain canon; wording taken verbatim from Project Gutenberg"
+    },
+    {
+      "title": "Gettysburg Address",
+      "source_work": "gutenberg:4",
+      "year": 1863,
+      "prompt_text": "Four score and seven years ago, our fathers brought forth upon this continent a new nation: conceived in liberty, and dedicated to the proposition that all men are created equal. Now we are engaged in a great civil war. . .testing whether that nation, or",
+      "continuation_text": "any nation so conceived and so dedicated. . . can long endure. We are met on a great battlefield of that war. We have come to dedicate a portion of that field as a final resting place for those who here gave their lives",
+      "split_at": 45,
+      "boundary_word": "any",
+      "why_famous": "curated public-domain canon; wording taken verbatim from Project Gutenberg"
+    },
+    {
+      "title": "Hamlet soliloquy",
+      "source_work": "gutenberg:100",
+      "year": 1603,
+      "prompt_text": "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take arms against a sea of troubles, And by opposing end them? To die—to sleep, No more; and by a",
+      "continuation_text": "sleep to say we end The heart-ache, and the thousand natural shocks That flesh is heir to: 'tis a consummation Devoutly to be wish'd. To die, to sleep. To sleep, perchance to dream—ay, there's the rub, For in that sleep of death what dreams",
+      "split_at": 47,
+      "boundary_word": "sleep",
+      "why_famous": "curated public-domain canon; wording taken verbatim from Project Gutenberg"
+    },
+    {
+      "title": "Julius Caesar funeral speech",
+      "source_work": "gutenberg:100",
+      "year": 1599,
+      "prompt_text": "Friends, Romans, countrymen, lend me your ears; I come to bury Caesar, not to praise him. The evil that men do lives after them, The good is oft interred with their bones; So let it be with Caesar. The noble Brutus Hath told you",
+      "continuation_text": "Caesar was ambitious. If it were so, it was a grievous fault, And grievously hath Caesar answer'd it. Here, under leave of Brutus and the rest, For Brutus is an honourable man, So are they all, all honourable men, Come I to speak in",
+      "split_at": 44,
+      "boundary_word": "Caesar",
+      "why_famous": "curated public-domain canon; wording taken verbatim from Project Gutenberg"
+    },
+    {
+      "title": "Huckleberry Finn opening",
+      "source_work": "gutenberg:76",
+      "year": 1884,
+      "prompt_text": "You don't know about me without you have read a book by the name of The Adventures of Tom Sawyer; but that ain't no matter. That book was made by Mr. Mark Twain, and he told the truth, mainly. There was things which he",
+      "continuation_text": "stretched, but mainly he told the truth. That is nothing. I never seen anybody but lied one time or another, without it was Aunt Polly, or the widow, or maybe Mary. Aunt Polly—Tom's Aunt Polly, she is—and Mary, and the Widow Douglas is all",
+      "split_at": 44,
+      "boundary_word": "stretched,",
+      "why_famous": "curated public-domain canon; wording taken verbatim from Project Gutenberg"
+    },
+    {
+      "title": "Frankenstein creation scene",
+      "source_work": "gutenberg:84",
+      "year": 1818,
+      "prompt_text": "It was on a dreary night of November that I beheld the accomplishment of my toils. With an anxiety that almost amounted to agony, I collected the instruments of life around me, that I might infuse a spark of being into the lifeless thing that",
+      "continuation_text": "lay at my feet. It was already one in the morning; the rain pattered dismally against the panes, and my candle was nearly burnt out, when, by the glimmer of the half-extinguished light, I saw the dull yellow eye of the creature open; it",
+      "split_at": 45,
+      "boundary_word": "lay",
+      "why_famous": "curated public-domain canon; wording taken verbatim from Project Gutenberg"
+    },
+    {
+      "title": "A Scandal in Bohemia opening",
+      "source_work": "gutenberg:1661",
+      "year": 1891,
+      "prompt_text": "To Sherlock Holmes she is always the woman. I have seldom heard him mention her under any other name. In his eyes she eclipses and predominates the whole of her sex. It was not that he felt any emotion akin to love for Irene",
+      "continuation_text": "Adler. All emotions, and that one particularly, were abhorrent to his cold, precise but admirably balanced mind. He was, I take it, the most perfect reasoning and observing machine that the world has seen, but as a lover he would have placed himself in",
+      "split_at": 44,
+      "boundary_word": "Adler.",
+      "why_famous": "curated public-domain canon; wording taken verbatim from Project Gutenberg"
+    },
+    {
+      "title": "Treasure Island opening",
+      "source_work": "gutenberg:120",
+      "year": 1883,
+      "prompt_text": "Squire Trelawney, Dr. Livesey, and the rest of these gentlemen having asked me to write down the whole particulars about Treasure Island, from the beginning to the end, keeping nothing back but the bearings of the island, and that only because there is still",
+      "continuation_text": "treasure not yet lifted, I take up my pen in the year of grace 17—, and go back to the time when my father kept the Admiral Benbow inn and the brown old seaman with the sabre cut first took up his lodging under",
+      "split_at": 44,
+      "boundary_word": "treasure",
+      "why_famous": "curated public-domain canon; wording taken verbatim from Project Gutenberg"
+    },
+    {
+      "title": "War of the Worlds opening",
+      "source_work": "gutenberg:36",
+      "year": 1898,
+      "prompt_text": "No one would have believed in the last years of the nineteenth century that this world was being watched keenly and closely by intelligences greater than man's and yet as mortal as his own; that as men busied themselves about their various concerns they were",
+      "continuation_text": "scrutinised and studied, perhaps almost as narrowly as a man with a microscope might scrutinise the transient creatures that swarm and multiply in a drop of water. With infinite complacency men went to and fro over this globe about their little affairs, serene in",
+      "split_at": 45,
+      "boundary_word": "scrutinised",
+      "why_famous": "curated public-domain canon; wording taken verbatim from Project Gutenberg"
+    },
+    {
+      "title": "Peter Pan opening",
+      "source_work": "gutenberg:16",
+      "year": 1911,
+      "prompt_text": "All children, except one, grow up. They soon know that they will grow up, and the way Wendy knew was this. One day when she was two years old she was playing in a garden, and she plucked another flower and ran with it to her",
+      "continuation_text": "mother. I suppose she must have looked rather delightful, for Mrs. Darling put her hand to her heart and cried, \"Oh, why can't you remain like this for ever!\" This was all that passed between them on the subject, but henceforth Wendy knew that",
+      "split_at": 46,
+      "boundary_word": "mother.",
+      "why_famous": "curated public-domain canon; wording taken verbatim from Project Gutenberg"
+    }
+  ],
+  "failures": [
+    {
+      "title": "US Constitution preamble",
+      "reason": "start phrase not found"
+    },
+    {
+      "title": "A Modest Proposal opening",
+      "reason": "start phrase not found"
+    }
+  ]
+}

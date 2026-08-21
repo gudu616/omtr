@@ -1,0 +1,1291 @@
+{
+  "meta": {
+    "model": "EleutherAI/pythia-1.4b",
+    "device": "cuda",
+    "dtype": "torch.float16",
+    "loader": "from_pretrained_no_processing + neox hf_model shim",
+    "transformer_lens": "3.7.3",
+    "transformers": "5.15.1",
+    "torch": "2.6.0+cu124",
+    "taus": [
+      0.05,
+      0.1,
+      0.5
+    ],
+    "k_answer_tokens": 8,
+    "gen_tokens": 30,
+    "battery_version": "v1",
+    "n_items": 3
+  },
+  "records": [
+    {
+      "id": "L0-01",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "It is a truth universally acknowledged, that a single man in possession of a good fortune must be in want of a wife. However little known the feelings or views of such a man may be on his first entering a neighbourhood, this truth",
+      "n_prompt_tokens": 47,
+      "layer_profile": [
+        {
+          "entropy": 7.520078331232071,
+          "kl_to_final": 6.3366000056266785,
+          "match_rate": 0.0,
+          "margin": 0.9295914173126221
+        },
+        {
+          "entropy": 7.363668620586395,
+          "kl_to_final": 5.906887054443359,
+          "match_rate": 0.0,
+          "margin": 0.7554123401641846
+        },
+        {
+          "entropy": 7.128516227006912,
+          "kl_to_final": 5.9248780608177185,
+          "match_rate": 0.0,
+          "margin": 0.8615452647209167
+        },
+        {
+          "entropy": 6.242095947265625,
+          "kl_to_final": 4.852203547954559,
+          "match_rate": 0.0,
+          "margin": 1.0349557995796204
+        },
+        {
+          "entropy": 6.819275140762329,
+          "kl_to_final": 4.674030005931854,
+          "match_rate": 0.0,
+          "margin": 0.7145966291427612
+        },
+        {
+          "entropy": 6.243655979633331,
+          "kl_to_final": 4.2455675303936005,
+          "match_rate": 0.125,
+          "margin": 0.687965989112854
+        },
+        {
+          "entropy": 6.800591439008713,
+          "kl_to_final": 4.489798426628113,
+          "match_rate": 0.125,
+          "margin": 0.530921459197998
+        },
+        {
+          "entropy": 6.971229314804077,
+          "kl_to_final": 4.16823336482048,
+          "match_rate": 0.125,
+          "margin": 1.0681570768356323
+        },
+        {
+          "entropy": 6.562114119529724,
+          "kl_to_final": 3.970783084630966,
+          "match_rate": 0.0,
+          "margin": 1.0011531114578247
+        },
+        {
+          "entropy": 6.105858087539673,
+          "kl_to_final": 3.549198240041733,
+          "match_rate": 0.0,
+          "margin": 0.6985925436019897
+        },
+        {
+          "entropy": 4.9973653964698315,
+          "kl_to_final": 3.4295189827680588,
+          "match_rate": 0.25,
+          "margin": 1.5648744106292725
+        },
+        {
+          "entropy": 4.366773318499327,
+          "kl_to_final": 2.6423150300979614,
+          "match_rate": 0.25,
+          "margin": 1.417068362236023
+        },
+        {
+          "entropy": 3.986299067735672,
+          "kl_to_final": 2.0439277663826942,
+          "match_rate": 0.25,
+          "margin": 0.4678921699523926
+        },
+        {
+          "entropy": 3.277645170688629,
+          "kl_to_final": 1.973484992980957,
+          "match_rate": 0.5,
+          "margin": 0.7967624664306641
+        },
+        {
+          "entropy": 2.6147118099033833,
+          "kl_to_final": 1.8134976886212826,
+          "match_rate": 0.375,
+          "margin": 1.062558650970459
+        },
+        {
+          "entropy": 2.7779006883502007,
+          "kl_to_final": 1.6540099661797285,
+          "match_rate": 0.375,
+          "margin": 0.9849263429641724
+        },
+        {
+          "entropy": 2.525728538632393,
+          "kl_to_final": 1.6727824360132217,
+          "match_rate": 0.375,
+          "margin": 1.0757272243499756
+        },
+        {
+          "entropy": 2.0408850237727165,
+          "kl_to_final": 1.449055016040802,
+          "match_rate": 0.5,
+          "margin": 2.043610692024231
+        },
+        {
+          "entropy": 2.578310549259186,
+          "kl_to_final": 1.2713112514466047,
+          "match_rate": 0.5,
+          "margin": 1.2806904315948486
+        },
+        {
+          "entropy": 2.935664102435112,
+          "kl_to_final": 1.1890768818557262,
+          "match_rate": 0.5,
+          "margin": 0.708800196647644
+        },
+        {
+          "entropy": 2.938676565885544,
+          "kl_to_final": 1.2094118110835552,
+          "match_rate": 0.5,
+          "margin": 0.9204837083816528
+        },
+        {
+          "entropy": 3.1317377388477325,
+          "kl_to_final": 0.9667273485101759,
+          "match_rate": 0.75,
+          "margin": 1.159042477607727
+        },
+        {
+          "entropy": 3.2223951928317547,
+          "kl_to_final": 0.4344573304988444,
+          "match_rate": 0.875,
+          "margin": 1.2286099195480347
+        },
+        {
+          "entropy": 2.7005623281002045,
+          "kl_to_final": 6.4380228650406934e-06,
+          "match_rate": 1.0,
+          "margin": 1.1007951498031616
+        }
+      ],
+      "per_position_depths": [
+        {
+          "kl_auc_norm": 2.9025730986765628,
+          "depth_tau_0.05": 0.9583333333333334,
+          "depth_tau_0.1": 0.9583333333333334,
+          "depth_tau_0.5": 0.9166666666666666,
+          "depth_argmax": 0.875
+        },
+        {
+          "kl_auc_norm": 3.018968783077466,
+          "depth_tau_0.05": 0.9583333333333334,
+          "depth_tau_0.1": 0.9583333333333334,
+          "depth_tau_0.5": 0.9583333333333334,
+          "depth_argmax": 0.9166666666666666
+        },
+        {
+          "kl_auc_norm": 4.161258379131576,
+          "depth_tau_0.05": 0.9583333333333334,
+          "depth_tau_0.1": 0.9583333333333334,
+          "depth_tau_0.5": 0.9583333333333334,
+          "depth_argmax": 0.9583333333333334
+        },
+        {
+          "kl_auc_norm": 3.115937823971288,
+          "depth_tau_0.05": 0.9583333333333334,
+          "depth_tau_0.1": 0.9583333333333334,
+          "depth_tau_0.5": 0.9583333333333334,
+          "depth_argmax": 0.75
+        },
+        {
+          "kl_auc_norm": 1.8526928300055696,
+          "depth_tau_0.05": 0.9583333333333334,
+          "depth_tau_0.1": 0.9583333333333334,
+          "depth_tau_0.5": 0.9166666666666666,
+          "depth_argmax": 0.8333333333333334
+        },
+        {
+          "kl_auc_norm": 3.2862839511963893,
+          "depth_tau_0.05": 0.9583333333333334,
+          "depth_tau_0.1": 0.875,
+          "depth_tau_0.5": 0.7083333333333334,
+          "depth_argmax": 0.7083333333333334
+        },
+        {
+          "kl_auc_norm": 2.3385325680093323,
+          "depth_tau_0.05": 0.9583333333333334,
+          "depth_tau_0.1": 0.9583333333333334,
+          "depth_tau_0.5": 0.9166666666666666,
+          "depth_argmax": 0.875
+        },
+        {
+          "kl_auc_norm": 2.5235644059202573,
+          "depth_tau_0.05": 0.9583333333333334,
+          "depth_tau_0.1": 0.9583333333333334,
+          "depth_tau_0.5": 0.9166666666666666,
+          "depth_argmax": 0.6666666666666666
+        }
+      ],
+      "depth": {
+        "kl_auc_norm": 2.8999764799985552,
+        "depth_tau_0.05": 0.9583333333333334,
+        "depth_tau_0.1": 0.9479166666666667,
+        "depth_tau_0.5": 0.90625,
+        "depth_argmax": 0.8229166666666666
+      },
+      "final_entropy_mean": 2.6997276097536087,
+      "final_margin_mean": 1.10546875,
+      "first_pos_profile": [
+        {
+          "entropy": 1.804189920425415,
+          "kl_to_final": 7.955992698669434,
+          "top1": 1020,
+          "top1_prob": 0.7495452165603638,
+          "margin": 1.9275598526000977,
+          "matches_final": false
+        },
+        {
+          "entropy": 2.587679862976074,
+          "kl_to_final": 6.538455009460449,
+          "top1": 1020,
+          "top1_prob": 0.7041090130805969,
+          "margin": 2.424345016479492,
+          "matches_final": false
+        },
+        {
+          "entropy": 3.154118776321411,
+          "kl_to_final": 7.737879276275635,
+          "top1": 1020,
+          "top1_prob": 0.5454068183898926,
+          "margin": 1.1004791259765625,
+          "matches_final": false
+        },
+        {
+          "entropy": 4.3831095695495605,
+          "kl_to_final": 5.63027811050415,
+          "top1": 1020,
+          "top1_prob": 0.4397006928920746,
+          "margin": 1.2146100997924805,
+          "matches_final": false
+        },
+        {
+          "entropy": 5.779274940490723,
+          "kl_to_final": 5.237332820892334,
+          "top1": 16858,
+          "top1_prob": 0.28186213970184326,
+          "margin": 0.7577972412109375,
+          "matches_final": false
+        },
+        {
+          "entropy": 5.429823875427246,
+          "kl_to_final": 4.800382614135742,
+          "top1": 16858,
+          "top1_prob": 0.2859286367893219,
+          "margin": 0.5180692672729492,
+          "matches_final": false
+        },
+        {
+          "entropy": 7.1432271003723145,
+          "kl_to_final": 3.8927526473999023,
+          "top1": 16858,
+          "top1_prob": 0.15856659412384033,
+          "margin": 0.9879179000854492,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.405017852783203,
+          "kl_to_final": 4.939974784851074,
+          "top1": 16858,
+          "top1_prob": 0.04633493348956108,
+          "margin": 1.421401023864746,
+          "matches_final": false
+        },
+        {
+          "entropy": 7.980191230773926,
+          "kl_to_final": 4.512323379516602,
+          "top1": 16858,
+          "top1_prob": 0.0936029702425003,
+          "margin": 1.4744634628295898,
+          "matches_final": false
+        },
+        {
+          "entropy": 7.978802680969238,
+          "kl_to_final": 3.718020439147949,
+          "top1": 16858,
+          "top1_prob": 0.05004573613405228,
+          "margin": 0.2073507308959961,
+          "matches_final": false
+        },
+        {
+          "entropy": 7.571661949157715,
+          "kl_to_final": 2.533677339553833,
+          "top1": 13,
+          "top1_prob": 0.05448359623551369,
+          "margin": 0.7803516387939453,
+          "matches_final": false
+        },
+        {
+          "entropy": 5.779674530029297,
+          "kl_to_final": 1.588481068611145,
+          "top1": 13,
+          "top1_prob": 0.10671394318342209,
+          "margin": 0.37725162506103516,
+          "matches_final": false
+        },
+        {
+          "entropy": 3.3268656730651855,
+          "kl_to_final": 1.24368417263031,
+          "top1": 13,
+          "top1_prob": 0.3091627359390259,
+          "margin": 0.36954689025878906,
+          "matches_final": false
+        },
+        {
+          "entropy": 2.986250877380371,
+          "kl_to_final": 1.1158192157745361,
+          "top1": 310,
+          "top1_prob": 0.35238784551620483,
+          "margin": 0.4565420150756836,
+          "matches_final": true
+        },
+        {
+          "entropy": 2.4743385314941406,
+          "kl_to_final": 1.1295377016067505,
+          "top1": 310,
+          "top1_prob": 0.4960174262523651,
+          "margin": 1.2341394424438477,
+          "matches_final": true
+        },
+        {
+          "entropy": 3.21242094039917,
+          "kl_to_final": 0.7813208699226379,
+          "top1": 310,
+          "top1_prob": 0.4330255687236786,
+          "margin": 1.5833845138549805,
+          "matches_final": true
+        },
+        {
+          "entropy": 2.444176197052002,
+          "kl_to_final": 1.032375693321228,
+          "top1": 310,
+          "top1_prob": 0.4942953288555145,
+          "margin": 1.0685291290283203,
+          "matches_final": true
+        },
+        {
+          "entropy": 1.9072389602661133,
+          "kl_to_final": 1.1239352226257324,
+          "top1": 310,
+          "top1_prob": 0.6292711496353149,
+          "margin": 1.5268049240112305,
+          "matches_final": true
+        },
+        {
+          "entropy": 2.6582889556884766,
+          "kl_to_final": 1.5312933921813965,
+          "top1": 13,
+          "top1_prob": 0.36141934990882874,
+          "margin": 0.3130807876586914,
+          "matches_final": false
+        },
+        {
+          "entropy": 2.6919193267822266,
+          "kl_to_final": 1.3872995376586914,
+          "top1": 13,
+          "top1_prob": 0.340175986289978,
+          "margin": 0.26288604736328125,
+          "matches_final": false
+        },
+        {
+          "entropy": 2.878861427307129,
+          "kl_to_final": 1.2175164222717285,
+          "top1": 13,
+          "top1_prob": 0.3141721785068512,
+          "margin": 0.1342935562133789,
+          "matches_final": false
+        },
+        {
+          "entropy": 3.634523391723633,
+          "kl_to_final": 0.8988174796104431,
+          "top1": 310,
+          "top1_prob": 0.27076148986816406,
+          "margin": 0.48583030700683594,
+          "matches_final": true
+        },
+        {
+          "entropy": 2.7225966453552246,
+          "kl_to_final": 0.19002026319503784,
+          "top1": 310,
+          "top1_prob": 0.4974105656147003,
+          "margin": 1.1990909576416016,
+          "matches_final": true
+        },
+        {
+          "entropy": 2.65374755859375,
+          "kl_to_final": 1.4918157830834389e-05,
+          "top1": 310,
+          "top1_prob": 0.46664488315582275,
+          "margin": 1.2686424255371094,
+          "matches_final": true
+        }
+      ],
+      "greedy_continuation": " is so generally known, that it is not necessary to enter into particulars.\n\nThe following is a list of the most prominent men in the",
+      "samples": [
+        " is generally immediately perceived by all the inhabitants of the country, and so long as he continues a bachelor he can have but little assistance from them; the",
+        ", so fast as it is admitted, is felt with great severity by his fellow men.\n\nWhile the hero of the tale was occupied in accumulating",
+        " is incontestably true.\n\nI am therefore obliged to add, that \"it is better to have loved and lost, than to never"
+      ],
+      "manipulation": {},
+      "gold_logprob_per_token": -1.6871261596679688
+    },
+    {
+      "id": "L1-gardening-1",
+      "level": "L1",
+      "topic": "gardening",
+      "prompt": "What do bees carry from flower to flower that allows plants to produce seeds?",
+      "n_prompt_tokens": 15,
+      "layer_profile": [
+        {
+          "entropy": 9.078462481498718,
+          "kl_to_final": 6.46393221616745,
+          "match_rate": 0.25,
+          "margin": 0.7189227342605591
+        },
+        {
+          "entropy": 9.10166072845459,
+          "kl_to_final": 6.324461936950684,
+          "match_rate": 0.125,
+          "margin": 0.4221806526184082
+        },
+        {
+          "entropy": 9.04597544670105,
+          "kl_to_final": 6.067969441413879,
+          "match_rate": 0.0,
+          "margin": 0.2524510622024536
+        },
+        {
+          "entropy": 8.71053397655487,
+          "kl_to_final": 5.885762989521027,
+          "match_rate": 0.0,
+          "margin": 0.2765779495239258
+        },
+        {
+          "entropy": 8.494100451469421,
+          "kl_to_final": 6.0487475991249084,
+          "match_rate": 0.0,
+          "margin": 0.6136422157287598
+        },
+        {
+          "entropy": 8.631360411643982,
+          "kl_to_final": 5.6952663362026215,
+          "match_rate": 0.125,
+          "margin": 0.5008795261383057
+        },
+        {
+          "entropy": 8.58402669429779,
+          "kl_to_final": 5.69729945063591,
+          "match_rate": 0.0,
+          "margin": 0.6079415082931519
+        },
+        {
+          "entropy": 8.609870553016663,
+          "kl_to_final": 4.818567752838135,
+          "match_rate": 0.0,
+          "margin": 0.5612844228744507
+        },
+        {
+          "entropy": 8.409153938293457,
+          "kl_to_final": 4.332009941339493,
+          "match_rate": 0.125,
+          "margin": 0.7424860000610352
+        },
+        {
+          "entropy": 8.40988677740097,
+          "kl_to_final": 4.2875014543533325,
+          "match_rate": 0.125,
+          "margin": 0.630576878786087
+        },
+        {
+          "entropy": 7.240983605384827,
+          "kl_to_final": 3.3780195116996765,
+          "match_rate": 0.75,
+          "margin": 1.096522033214569
+        },
+        {
+          "entropy": 7.784529387950897,
+          "kl_to_final": 3.0850598514080048,
+          "match_rate": 0.625,
+          "margin": 1.0445352494716644
+        },
+        {
+          "entropy": 6.513509094715118,
+          "kl_to_final": 3.169723093509674,
+          "match_rate": 0.5,
+          "margin": 1.1603137254714966
+        },
+        {
+          "entropy": 5.572230115532875,
+          "kl_to_final": 2.6961821541190147,
+          "match_rate": 0.5,
+          "margin": 1.1869365274906158
+        },
+        {
+          "entropy": 4.362718269228935,
+          "kl_to_final": 2.5522089153528214,
+          "match_rate": 0.75,
+          "margin": 2.0486573576927185
+        },
+        {
+          "entropy": 5.421910583972931,
+          "kl_to_final": 2.7299950644373894,
+          "match_rate": 0.625,
+          "margin": 1.8997429609298706
+        },
+        {
+          "entropy": 5.822095036506653,
+          "kl_to_final": 2.3972673155367374,
+          "match_rate": 0.625,
+          "margin": 1.606752097606659
+        },
+        {
+          "entropy": 5.805686056613922,
+          "kl_to_final": 2.3257049061357975,
+          "match_rate": 0.625,
+          "margin": 1.568054735660553
+        },
+        {
+          "entropy": 5.78195258975029,
+          "kl_to_final": 2.2756318412721157,
+          "match_rate": 0.75,
+          "margin": 1.5864815413951874
+        },
+        {
+          "entropy": 6.528022885322571,
+          "kl_to_final": 2.5323708578944206,
+          "match_rate": 0.75,
+          "margin": 1.461639016866684
+        },
+        {
+          "entropy": 6.10144017636776,
+          "kl_to_final": 2.4299198500812054,
+          "match_rate": 0.75,
+          "margin": 1.6755235493183136
+        },
+        {
+          "entropy": 6.503186210989952,
+          "kl_to_final": 2.146114643663168,
+          "match_rate": 0.75,
+          "margin": 1.5170276463031769
+        },
+        {
+          "entropy": 6.557213366031647,
+          "kl_to_final": 1.8815443143248558,
+          "match_rate": 0.75,
+          "margin": 1.5555936992168427
+        },
+        {
+          "entropy": 2.020901157287881,
+          "kl_to_final": 2.320080653817058e-06,
+          "match_rate": 1.0,
+          "margin": 3.212251901626587
+        }
+      ],
+      "per_position_depths": [
+        {
+          "kl_auc_norm": 1.8247654931059831,
+          "depth_tau_0.05": 0.9583333333333334,
+          "depth_tau_0.1": 0.9583333333333334,
+          "depth_tau_0.5": 0.9583333333333334,
+          "depth_argmax": 0.4166666666666667
+        },
+        {
+          "kl_auc_norm": 5.520410632870904,
+          "depth_tau_0.05": 0.9583333333333334,
+          "depth_tau_0.1": 0.9583333333333334,
+          "depth_tau_0.5": 0.9583333333333334,
+          "depth_argmax": 0.9583333333333334
+        },
+        {
+          "kl_auc_norm": 2.433723287024211,
+          "depth_tau_0.05": 0.9583333333333334,
+          "depth_tau_0.1": 0.9583333333333334,
+          "depth_tau_0.5": 0.9583333333333334,
+          "depth_argmax": 0.5833333333333334
+        },
+        {
+          "kl_auc_norm": 3.443393029006193,
+          "depth_tau_0.05": 0.9583333333333334,
+          "depth_tau_0.1": 0.9583333333333334,
+          "depth_tau_0.5": 0.5833333333333334,
+          "depth_argmax": 0.4166666666666667
+        },
+        {
+          "kl_auc_norm": 3.019561073007777,
+          "depth_tau_0.05": 0.9583333333333334,
+          "depth_tau_0.1": 0.9583333333333334,
+          "depth_tau_0.5": 0.9583333333333334,
+          "depth_argmax": 0.3333333333333333
+        },
+        {
+          "kl_auc_norm": 3.527488012409129,
+          "depth_tau_0.05": 0.9583333333333334,
+          "depth_tau_0.1": 0.9583333333333334,
+          "depth_tau_0.5": 0.9583333333333334,
+          "depth_argmax": 0.4166666666666667
+        },
+        {
+          "kl_auc_norm": 2.6957665307247383,
+          "depth_tau_0.05": 0.9583333333333334,
+          "depth_tau_0.1": 0.9583333333333334,
+          "depth_tau_0.5": 0.9583333333333334,
+          "depth_argmax": 0.75
+        },
+        {
+          "kl_auc_norm": 7.444212460090689,
+          "depth_tau_0.05": 0.9583333333333334,
+          "depth_tau_0.1": 0.9583333333333334,
+          "depth_tau_0.5": 0.9583333333333334,
+          "depth_argmax": 0.9583333333333334
+        }
+      ],
+      "depth": {
+        "kl_auc_norm": 3.738665064779953,
+        "depth_tau_0.05": 0.9583333333333334,
+        "depth_tau_0.1": 0.9583333333333334,
+        "depth_tau_0.5": 0.9114583333333334,
+        "depth_argmax": 0.6041666666666667
+      },
+      "final_entropy_mean": 2.0190135589800775,
+      "final_margin_mean": 3.212890625,
+      "first_pos_profile": [
+        {
+          "entropy": 8.891063690185547,
+          "kl_to_final": 3.1555399894714355,
+          "top1": 187,
+          "top1_prob": 0.027243033051490784,
+          "margin": 1.6183662414550781,
+          "matches_final": true
+        },
+        {
+          "entropy": 9.219955444335938,
+          "kl_to_final": 3.881680965423584,
+          "top1": 187,
+          "top1_prob": 0.007668581325560808,
+          "margin": 0.2178363800048828,
+          "matches_final": true
+        },
+        {
+          "entropy": 9.028067588806152,
+          "kl_to_final": 3.689857006072998,
+          "top1": 583,
+          "top1_prob": 0.012472272850573063,
+          "margin": 0.17884016036987305,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.666708946228027,
+          "kl_to_final": 3.0388245582580566,
+          "top1": 84,
+          "top1_prob": 0.03143274411559105,
+          "margin": 0.4629182815551758,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.050617218017578,
+          "kl_to_final": 3.7581262588500977,
+          "top1": 583,
+          "top1_prob": 0.0961032286286354,
+          "margin": 1.8648967742919922,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.425210952758789,
+          "kl_to_final": 2.3885412216186523,
+          "top1": 187,
+          "top1_prob": 0.03980575129389763,
+          "margin": 1.2056169509887695,
+          "matches_final": true
+        },
+        {
+          "entropy": 8.726491928100586,
+          "kl_to_final": 3.143636465072632,
+          "top1": 26453,
+          "top1_prob": 0.021830640733242035,
+          "margin": 0.5014991760253906,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.657562255859375,
+          "kl_to_final": 2.950664520263672,
+          "top1": 3166,
+          "top1_prob": 0.01698772981762886,
+          "margin": 0.5152788162231445,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.227027893066406,
+          "kl_to_final": 2.745389461517334,
+          "top1": 3166,
+          "top1_prob": 0.0715908631682396,
+          "margin": 1.8860549926757812,
+          "matches_final": false
+        },
+        {
+          "entropy": 7.598719596862793,
+          "kl_to_final": 2.10568904876709,
+          "top1": 50276,
+          "top1_prob": 0.05997874215245247,
+          "margin": 0.20285892486572266,
+          "matches_final": false
+        },
+        {
+          "entropy": 6.230067253112793,
+          "kl_to_final": 1.4634909629821777,
+          "top1": 187,
+          "top1_prob": 0.13420620560646057,
+          "margin": 0.6700162887573242,
+          "matches_final": true
+        },
+        {
+          "entropy": 6.653439521789551,
+          "kl_to_final": 1.2674624919891357,
+          "top1": 187,
+          "top1_prob": 0.1232207715511322,
+          "margin": 1.211787223815918,
+          "matches_final": true
+        },
+        {
+          "entropy": 3.509718656539917,
+          "kl_to_final": 1.13128662109375,
+          "top1": 187,
+          "top1_prob": 0.5151466727256775,
+          "margin": 2.743532180786133,
+          "matches_final": true
+        },
+        {
+          "entropy": 1.4788490533828735,
+          "kl_to_final": 1.4783655405044556,
+          "top1": 187,
+          "top1_prob": 0.7875710725784302,
+          "margin": 3.0856714248657227,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.892227292060852,
+          "kl_to_final": 1.573735237121582,
+          "top1": 187,
+          "top1_prob": 0.8663139939308167,
+          "margin": 3.6588001251220703,
+          "matches_final": true
+        },
+        {
+          "entropy": 1.1187081336975098,
+          "kl_to_final": 1.3038088083267212,
+          "top1": 187,
+          "top1_prob": 0.8441823720932007,
+          "margin": 3.7240734100341797,
+          "matches_final": true
+        },
+        {
+          "entropy": 2.009718894958496,
+          "kl_to_final": 0.7787107229232788,
+          "top1": 187,
+          "top1_prob": 0.679689884185791,
+          "margin": 2.5408382415771484,
+          "matches_final": true
+        },
+        {
+          "entropy": 3.240427017211914,
+          "kl_to_final": 0.5687254071235657,
+          "top1": 187,
+          "top1_prob": 0.4829981029033661,
+          "margin": 2.080028533935547,
+          "matches_final": true
+        },
+        {
+          "entropy": 3.4053635597229004,
+          "kl_to_final": 0.6426279544830322,
+          "top1": 187,
+          "top1_prob": 0.48905467987060547,
+          "margin": 2.3283166885375977,
+          "matches_final": true
+        },
+        {
+          "entropy": 3.948430061340332,
+          "kl_to_final": 0.6460204720497131,
+          "top1": 187,
+          "top1_prob": 0.44901415705680847,
+          "margin": 2.229738235473633,
+          "matches_final": true
+        },
+        {
+          "entropy": 3.6494646072387695,
+          "kl_to_final": 0.7036320567131042,
+          "top1": 187,
+          "top1_prob": 0.5055922865867615,
+          "margin": 2.704622268676758,
+          "matches_final": true
+        },
+        {
+          "entropy": 4.734916687011719,
+          "kl_to_final": 0.594933271408081,
+          "top1": 187,
+          "top1_prob": 0.34933313727378845,
+          "margin": 1.9875526428222656,
+          "matches_final": true
+        },
+        {
+          "entropy": 5.7826385498046875,
+          "kl_to_final": 0.5366265773773193,
+          "top1": 187,
+          "top1_prob": 0.15489499270915985,
+          "margin": 1.1702213287353516,
+          "matches_final": true
+        },
+        {
+          "entropy": 3.6618971824645996,
+          "kl_to_final": 1.433523721061647e-06,
+          "top1": 187,
+          "top1_prob": 0.42449823021888733,
+          "margin": 2.0399513244628906,
+          "matches_final": true
+        }
+      ],
+      "greedy_continuation": "\n\nA:\n\nBees are not the only pollinators. There are many other insects that are pollinators.\n\nA",
+      "samples": [
+        "\n\nA:\n\nBees carry pollen, which is a substance that moves pollen from flower to flower.  Pollen is a type of",
+        "\n\nA:\n\nThe bees bring pollen from the flower to a hive, and then bring nectar and honey to a new flower",
+        " Do they have a special mechanism to absorb nutrients from the air?\n\nA:\n\nThe relocation of pollen is probably because they suck nect"
+      ],
+      "manipulation": {
+        "l1_expected_in_output": false
+      }
+    },
+    {
+      "id": "L4-gardening-1",
+      "level": "L4",
+      "topic": "gardening",
+      "prompt": "Describe a garden that works as a cipher: explain how the choice and placement of plants encodes a secret message, and how a visitor holding the key would decode it. Answer in 3 to 6 sentences.",
+      "n_prompt_tokens": 41,
+      "layer_profile": [
+        {
+          "entropy": 7.973930716514587,
+          "kl_to_final": 5.031732201576233,
+          "match_rate": 0.25,
+          "margin": 0.9290613532066345
+        },
+        {
+          "entropy": 7.882846891880035,
+          "kl_to_final": 5.607142597436905,
+          "match_rate": 0.125,
+          "margin": 1.0880898833274841
+        },
+        {
+          "entropy": 7.860422596335411,
+          "kl_to_final": 5.2024229764938354,
+          "match_rate": 0.125,
+          "margin": 1.1826812028884888
+        },
+        {
+          "entropy": 7.549341797828674,
+          "kl_to_final": 4.6750640124082565,
+          "match_rate": 0.125,
+          "margin": 0.8885801434516907
+        },
+        {
+          "entropy": 7.786980241537094,
+          "kl_to_final": 4.818346917629242,
+          "match_rate": 0.125,
+          "margin": 0.9798500537872314
+        },
+        {
+          "entropy": 8.346779108047485,
+          "kl_to_final": 4.3086148500442505,
+          "match_rate": 0.125,
+          "margin": 0.8106928765773773
+        },
+        {
+          "entropy": 7.7023298144340515,
+          "kl_to_final": 3.9746942967176437,
+          "match_rate": 0.125,
+          "margin": 0.8764810562133789
+        },
+        {
+          "entropy": 8.00742107629776,
+          "kl_to_final": 4.0222605764865875,
+          "match_rate": 0.25,
+          "margin": 0.7710324227809906
+        },
+        {
+          "entropy": 7.622388303279877,
+          "kl_to_final": 3.78326815366745,
+          "match_rate": 0.25,
+          "margin": 1.0030101835727692
+        },
+        {
+          "entropy": 6.848998852074146,
+          "kl_to_final": 3.7813758850097656,
+          "match_rate": 0.25,
+          "margin": 1.328687846660614
+        },
+        {
+          "entropy": 5.290014535188675,
+          "kl_to_final": 3.8176155388355255,
+          "match_rate": 0.375,
+          "margin": 1.0145733952522278
+        },
+        {
+          "entropy": 5.799267873167992,
+          "kl_to_final": 3.5756350606679916,
+          "match_rate": 0.25,
+          "margin": 0.890874832868576
+        },
+        {
+          "entropy": 4.925836980342865,
+          "kl_to_final": 2.6844299137592316,
+          "match_rate": 0.375,
+          "margin": 1.4476416409015656
+        },
+        {
+          "entropy": 5.8088975846767426,
+          "kl_to_final": 2.3074252009391785,
+          "match_rate": 0.25,
+          "margin": 0.7556033730506897
+        },
+        {
+          "entropy": 4.57759490609169,
+          "kl_to_final": 2.426553800702095,
+          "match_rate": 0.5,
+          "margin": 1.5829645097255707
+        },
+        {
+          "entropy": 5.403316482901573,
+          "kl_to_final": 2.071811154484749,
+          "match_rate": 0.375,
+          "margin": 1.3159151077270508
+        },
+        {
+          "entropy": 4.895782366394997,
+          "kl_to_final": 2.159460000693798,
+          "match_rate": 0.25,
+          "margin": 1.0535804629325867
+        },
+        {
+          "entropy": 5.1275437623262405,
+          "kl_to_final": 1.9387501925230026,
+          "match_rate": 0.375,
+          "margin": 0.9821937382221222
+        },
+        {
+          "entropy": 4.999630160629749,
+          "kl_to_final": 2.05279853194952,
+          "match_rate": 0.375,
+          "margin": 1.4395632445812225
+        },
+        {
+          "entropy": 5.40892331302166,
+          "kl_to_final": 1.9372116103768349,
+          "match_rate": 0.5,
+          "margin": 1.4385474920272827
+        },
+        {
+          "entropy": 5.463461823761463,
+          "kl_to_final": 1.8670098185539246,
+          "match_rate": 0.5,
+          "margin": 1.2747202813625336
+        },
+        {
+          "entropy": 5.330470062792301,
+          "kl_to_final": 1.7868251129984856,
+          "match_rate": 0.375,
+          "margin": 1.1357189118862152
+        },
+        {
+          "entropy": 5.995421499013901,
+          "kl_to_final": 1.5972176790237427,
+          "match_rate": 0.5,
+          "margin": 1.1212692856788635
+        },
+        {
+          "entropy": 4.157026082277298,
+          "kl_to_final": 2.4141527319443412e-06,
+          "match_rate": 1.0,
+          "margin": 1.1123517751693726
+        }
+      ],
+      "per_position_depths": [
+        {
+          "kl_auc_norm": 1.449462662659125,
+          "depth_tau_0.05": 0.9583333333333334,
+          "depth_tau_0.1": 0.9583333333333334,
+          "depth_tau_0.5": 0.9166666666666666,
+          "depth_argmax": 0.0
+        },
+        {
+          "kl_auc_norm": 5.699936564625798,
+          "depth_tau_0.05": 0.9583333333333334,
+          "depth_tau_0.1": 0.9583333333333334,
+          "depth_tau_0.5": 0.9583333333333334,
+          "depth_argmax": 0.9583333333333334
+        },
+        {
+          "kl_auc_norm": 2.4042235301629105,
+          "depth_tau_0.05": 0.9583333333333334,
+          "depth_tau_0.1": 0.9583333333333334,
+          "depth_tau_0.5": 0.9583333333333334,
+          "depth_argmax": 0.9583333333333334
+        },
+        {
+          "kl_auc_norm": 2.874094858777465,
+          "depth_tau_0.05": 0.9583333333333334,
+          "depth_tau_0.1": 0.9583333333333334,
+          "depth_tau_0.5": 0.9583333333333334,
+          "depth_argmax": 0.9583333333333334
+        },
+        {
+          "kl_auc_norm": 4.353313627210572,
+          "depth_tau_0.05": 0.9583333333333334,
+          "depth_tau_0.1": 0.9583333333333334,
+          "depth_tau_0.5": 0.9583333333333334,
+          "depth_argmax": 0.9583333333333334
+        },
+        {
+          "kl_auc_norm": 2.9215697772565563,
+          "depth_tau_0.05": 0.9583333333333334,
+          "depth_tau_0.1": 0.9583333333333334,
+          "depth_tau_0.5": 0.9166666666666666,
+          "depth_argmax": 0.7916666666666666
+        },
+        {
+          "kl_auc_norm": 3.222280754959249,
+          "depth_tau_0.05": 0.9583333333333334,
+          "depth_tau_0.1": 0.9583333333333334,
+          "depth_tau_0.5": 0.9583333333333334,
+          "depth_argmax": 0.5
+        },
+        {
+          "kl_auc_norm": 2.4357447249627593,
+          "depth_tau_0.05": 0.9583333333333334,
+          "depth_tau_0.1": 0.9583333333333334,
+          "depth_tau_0.5": 0.9583333333333334,
+          "depth_argmax": 0.9166666666666666
+        }
+      ],
+      "depth": {
+        "kl_auc_norm": 3.1700783125768046,
+        "depth_tau_0.05": 0.9583333333333334,
+        "depth_tau_0.1": 0.9583333333333334,
+        "depth_tau_0.5": 0.9479166666666667,
+        "depth_argmax": 0.7552083333333333
+      },
+      "final_entropy_mean": 4.155468180775642,
+      "final_margin_mean": 1.115234375,
+      "first_pos_profile": [
+        {
+          "entropy": 9.309622764587402,
+          "kl_to_final": 3.391720771789551,
+          "top1": 187,
+          "top1_prob": 0.01592620275914669,
+          "margin": 1.2280564308166504,
+          "matches_final": true
+        },
+        {
+          "entropy": 9.237350463867188,
+          "kl_to_final": 3.147043228149414,
+          "top1": 187,
+          "top1_prob": 0.02256183885037899,
+          "margin": 1.559697151184082,
+          "matches_final": true
+        },
+        {
+          "entropy": 8.869329452514648,
+          "kl_to_final": 2.6960089206695557,
+          "top1": 187,
+          "top1_prob": 0.04015807807445526,
+          "margin": 1.053377628326416,
+          "matches_final": true
+        },
+        {
+          "entropy": 7.011455059051514,
+          "kl_to_final": 1.8239771127700806,
+          "top1": 187,
+          "top1_prob": 0.1334744542837143,
+          "margin": 0.6509895324707031,
+          "matches_final": true
+        },
+        {
+          "entropy": 8.345160484313965,
+          "kl_to_final": 3.106363534927368,
+          "top1": 187,
+          "top1_prob": 0.018475215882062912,
+          "margin": 0.10714864730834961,
+          "matches_final": true
+        },
+        {
+          "entropy": 7.827096939086914,
+          "kl_to_final": 2.379551410675049,
+          "top1": 187,
+          "top1_prob": 0.05242669954895973,
+          "margin": 0.29612064361572266,
+          "matches_final": true
+        },
+        {
+          "entropy": 5.6996965408325195,
+          "kl_to_final": 1.279809832572937,
+          "top1": 187,
+          "top1_prob": 0.34093981981277466,
+          "margin": 2.5870866775512695,
+          "matches_final": true
+        },
+        {
+          "entropy": 8.638855934143066,
+          "kl_to_final": 3.2566041946411133,
+          "top1": 187,
+          "top1_prob": 0.015624062158167362,
+          "margin": 0.1882162094116211,
+          "matches_final": true
+        },
+        {
+          "entropy": 7.702358245849609,
+          "kl_to_final": 1.7114126682281494,
+          "top1": 187,
+          "top1_prob": 0.15204691886901855,
+          "margin": 2.664773941040039,
+          "matches_final": true
+        },
+        {
+          "entropy": 7.393216133117676,
+          "kl_to_final": 1.4918413162231445,
+          "top1": 187,
+          "top1_prob": 0.16638749837875366,
+          "margin": 1.855804443359375,
+          "matches_final": true
+        },
+        {
+          "entropy": 6.441539287567139,
+          "kl_to_final": 1.1539032459259033,
+          "top1": 187,
+          "top1_prob": 0.24277548491954803,
+          "margin": 2.6915931701660156,
+          "matches_final": true
+        },
+        {
+          "entropy": 7.327058792114258,
+          "kl_to_final": 1.3248571157455444,
+          "top1": 187,
+          "top1_prob": 0.15000298619270325,
+          "margin": 1.9691658020019531,
+          "matches_final": true
+        },
+        {
+          "entropy": 2.265350818634033,
+          "kl_to_final": 0.6849026679992676,
+          "top1": 187,
+          "top1_prob": 0.7173864245414734,
+          "margin": 3.3333425521850586,
+          "matches_final": true
+        },
+        {
+          "entropy": 2.9865620136260986,
+          "kl_to_final": 0.8078742027282715,
+          "top1": 187,
+          "top1_prob": 0.5465224385261536,
+          "margin": 1.5640697479248047,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.5845950841903687,
+          "kl_to_final": 1.3230085372924805,
+          "top1": 187,
+          "top1_prob": 0.9057793617248535,
+          "margin": 3.062702178955078,
+          "matches_final": true
+        },
+        {
+          "entropy": 1.0814741849899292,
+          "kl_to_final": 0.9649717807769775,
+          "top1": 187,
+          "top1_prob": 0.8177337646484375,
+          "margin": 2.7287721633911133,
+          "matches_final": true
+        },
+        {
+          "entropy": 1.3009291887283325,
+          "kl_to_final": 0.731531023979187,
+          "top1": 187,
+          "top1_prob": 0.8088341355323792,
+          "margin": 2.947207450866699,
+          "matches_final": true
+        },
+        {
+          "entropy": 2.120778799057007,
+          "kl_to_final": 0.6914868354797363,
+          "top1": 187,
+          "top1_prob": 0.6603487133979797,
+          "margin": 1.717463493347168,
+          "matches_final": true
+        },
+        {
+          "entropy": 2.300097942352295,
+          "kl_to_final": 0.6887274384498596,
+          "top1": 187,
+          "top1_prob": 0.650942862033844,
+          "margin": 1.780965805053711,
+          "matches_final": true
+        },
+        {
+          "entropy": 2.1652777194976807,
+          "kl_to_final": 0.7192921042442322,
+          "top1": 187,
+          "top1_prob": 0.6863701939582825,
+          "margin": 1.9508752822875977,
+          "matches_final": true
+        },
+        {
+          "entropy": 2.4662418365478516,
+          "kl_to_final": 0.617892861366272,
+          "top1": 187,
+          "top1_prob": 0.6689054369926453,
+          "margin": 2.3219127655029297,
+          "matches_final": true
+        },
+        {
+          "entropy": 3.162348508834839,
+          "kl_to_final": 0.5693429112434387,
+          "top1": 187,
+          "top1_prob": 0.5635546445846558,
+          "margin": 2.059511184692383,
+          "matches_final": true
+        },
+        {
+          "entropy": 5.0653886795043945,
+          "kl_to_final": 0.4713766872882843,
+          "top1": 187,
+          "top1_prob": 0.34796902537345886,
+          "margin": 2.259592056274414,
+          "matches_final": true
+        },
+        {
+          "entropy": 2.7827954292297363,
+          "kl_to_final": 2.447777660563588e-06,
+          "top1": 187,
+          "top1_prob": 0.6291342973709106,
+          "margin": 2.8452415466308594,
+          "matches_final": true
+        }
+      ],
+      "greedy_continuation": "\n\n**3.1**\n\n**3.2**\n\n**3.3**\n\n**3.4**\n\n",
+      "samples": [
+        "Wiley<|endoftext|>",
+        "\n\nI looked at the garden in An examination of three gardens that work as ciphers\n\nI looked at a garden that used two types",
+        "\n\n3.\n\na.\n\nb.\n\nc.\n\nd.\n\ne.\n\n4.\n\n"
+      ],
+      "manipulation": {
+        "l4_both_domains": false,
+        "l4_n_sentences": 4
+      }
+    }
+  ]
+}

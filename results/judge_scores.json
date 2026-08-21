@@ -1,0 +1,558 @@
+{
+  "scores": [
+    {
+      "id": "L2-gardening-1",
+      "model": "EleutherAI_pythia-1.4b",
+      "pass": false,
+      "score_0_3": 0,
+      "justification": "Claims 'sun's rays are too weak to penetrate the soil, so plants have to grow in shade' — inverts the actual relationship (no photosynthesis, energy, sugar, or growth mentioned) and then drifts into an unrelated Q&A about why a person can't see the sun. Off-task/incoherent."
+    },
+    {
+      "id": "L2-railways-1",
+      "model": "EleutherAI_pythia-1.4b",
+      "pass": true,
+      "score_0_3": 2,
+      "justification": "Own-words paraphrase: burning wood makes steam, high-pressure steam pushes the wheels, train moves. Captures the fuel->steam->motion causal gist but skips the boiler/water-heating step and the pistons entirely (steam 'pushes the wheels' directly), so only partially preserves the required chain."
+    },
+    {
+      "id": "L2-human_anatomy-1",
+      "model": "EleutherAI_pythia-1.4b",
+      "pass": false,
+      "score_0_3": 1,
+      "justification": "On-task attempt about lungs and air movement, but invents an unrelated mechanism ('air is compressed and then heated to a high temperature') and cuts off before ever mentioning oxygen entering the blood or reaching tissues — the actual core requirement is absent."
+    },
+    {
+      "id": "L2-mathematics-1",
+      "model": "EleutherAI_pythia-1.4b",
+      "pass": false,
+      "score_0_3": 1,
+      "justification": "States the square-of-hypotenuse-equals-sum-of-squares relation almost verbatim from the standard textbook phrasing (not an own-words paraphrase) and omits that it applies to right-angled triangles; then drifts into an unrelated Q&A about trees."
+    },
+    {
+      "id": "L2-weather-1",
+      "model": "EleutherAI_pythia-1.4b",
+      "pass": false,
+      "score_0_3": 1,
+      "justification": "Describes rain as droplets that fall and form a layer on the ground, but never explains formation: no evaporation, rising, cooling, or condensation into clouds — misses the entire causal chain the rubric requires."
+    },
+    {
+      "id": "L2-architecture-1",
+      "model": "EleutherAI_pythia-1.4b",
+      "pass": false,
+      "score_0_3": 0,
+      "justification": "Degenerate repetition loop ('The arches are supported by the beams, which are supported by the arches...' repeated) with no mention of compression, curve, or supports. Circular and contentless."
+    },
+    {
+      "id": "L2-Greek_mythology-1",
+      "model": "EleutherAI_pythia-1.4b",
+      "pass": false,
+      "score_0_3": 1,
+      "justification": "Gets Hades/underworld right but the key mechanism is wrong (she 'escapes' by eating a fig, rather than being bound to return by pomegranate seeds) and cuts off before Demeter's grief causing the earth to stop growing — the seasonal causal chain is never completed or is factually inverted."
+    },
+    {
+      "id": "L2-cooking-1",
+      "model": "EleutherAI_pythia-1.4b",
+      "pass": true,
+      "score_0_3": 2,
+      "justification": "Correctly paraphrases yeast feeding on sugar and producing carbon dioxide that makes the dough rise, but describes the gas as 'rising to the surface' rather than being trapped by the stretchy dough — the trapping/expansion mechanism from the rubric is only weakly implied."
+    },
+    {
+      "id": "L2-astronomy-1",
+      "model": "EleutherAI_pythia-1.4b",
+      "pass": false,
+      "score_0_3": 1,
+      "justification": "Coherent but substantively wrong: attributes phase changes to the Moon's elliptical orbit and Earth's rotation, never mentions reflected sunlight or the sunlit fraction visible from Earth, which are the rubric's core content."
+    },
+    {
+      "id": "L2-ocean_life-1",
+      "model": "EleutherAI_pythia-1.4b",
+      "pass": false,
+      "score_0_3": 0,
+      "justification": "Repetitive near-loop ('use their gills to move air in and out of their bodies' restated three times) that also inverts the rubric's key distinguishing fact by claiming fish move 'air' rather than extracting dissolved oxygen from water."
+    },
+    {
+      "id": "L2-classical_music-1",
+      "model": "EleutherAI_pythia-1.4b",
+      "pass": false,
+      "score_0_3": 0,
+      "justification": "Gives a fabricated, unrelated mechanism ('made of a softer material... so it sounds lower' — no air column or wavelength) and then drifts entirely into an unrelated Q&A about a long-distance runner."
+    },
+    {
+      "id": "L2-chess-1",
+      "model": "EleutherAI_pythia-1.4b",
+      "pass": false,
+      "score_0_3": 0,
+      "justification": "Incoherent, circular description ('the player who has the piece on the board has a choice of moves...') that never states the king is in check, that no legal move removes the attack, or that the game ends — fails to convey the concept at all."
+    },
+    {
+      "id": "L2-gardening-1",
+      "model": "allenai_OLMo-2-0425-1B",
+      "pass": true,
+      "score_0_3": 2,
+      "justification": "Clean own-words chain: sunlight energy -> makes sugar -> used as food, which covers the photosynthesis-energy-to-food link reasonably well, but never mentions water/CO2 as inputs or explicitly ties the sugar to fueling growth."
+    },
+    {
+      "id": "L2-railways-1",
+      "model": "allenai_OLMo-2-0425-1B",
+      "pass": true,
+      "score_0_3": 3,
+      "justification": "Full causal chain in own words: boiler heats water into steam, steam forced to pistons connected to wheels, pistons push wheels which turn the train. Covers essentially all required elements except naming the fuel that heats the boiler."
+    },
+    {
+      "id": "L2-human_anatomy-1",
+      "model": "allenai_OLMo-2-0425-1B",
+      "pass": false,
+      "score_0_3": 1,
+      "justification": "Accurately describes the air pathway (nose, windpipe, into the lungs) but is cut off before ever reaching oxygen diffusing into blood or blood carrying it to tissues — the actual required content is entirely absent."
+    },
+    {
+      "id": "L2-mathematics-1",
+      "model": "allenai_OLMo-2-0425-1B",
+      "pass": true,
+      "score_0_3": 3,
+      "justification": "Explicitly states it applies to a right triangle and that the square of the hypotenuse equals the sum of the squares of the other two sides, then extends into algebraic form (legs a, b, hypotenuse c) — covers both required elements clearly."
+    },
+    {
+      "id": "L2-weather-1",
+      "model": "allenai_OLMo-2-0425-1B",
+      "pass": true,
+      "score_0_3": 3,
+      "justification": "Preserves the full chain in own words: water evaporates, rises, cools, condenses into tiny droplets, and falls as rain. Missing an explicit 'forms clouds' phrase but the causal sequence is otherwise intact and coherent."
+    },
+    {
+      "id": "L2-architecture-1",
+      "model": "allenai_OLMo-2-0425-1B",
+      "pass": false,
+      "score_0_3": 0,
+      "justification": "Circular, near-repetitive statement ('supported by the weight of the load above it... supported by the weight of the load below it') that misstates the mechanism as bending rather than compression, with no mention of the curve redirecting load into the supports."
+    },
+    {
+      "id": "L2-Greek_mythology-1",
+      "model": "allenai_OLMo-2-0425-1B",
+      "pass": false,
+      "score_0_3": 1,
+      "justification": "Gets the setup backwards (says Persephone originally lived in the Underworld with Demeter) and is cut off right as Hades 'saw Persephone' — never reaches the pomegranate-seed binding or Demeter's grief causing the earth to stop growing."
+    },
+    {
+      "id": "L2-cooking-1",
+      "model": "allenai_OLMo-2-0425-1B",
+      "pass": true,
+      "score_0_3": 3,
+      "justification": "Accurate own-words fermentation account: yeast eats sugar, produces carbon dioxide and alcohol, which makes the dough rise. Directly states the causal link to rising; only the explicit 'trapped by stretchy dough/gluten' detail is omitted."
+    },
+    {
+      "id": "L2-astronomy-1",
+      "model": "allenai_OLMo-2-0425-1B",
+      "pass": false,
+      "score_0_3": 1,
+      "justification": "Coherent but factually inverted: attributes phase changes to the Moon's physical shape (flattening/bulging), directly contradicting the rubric's requirement that the Moon's shape never actually changes; never mentions reflected sunlight."
+    },
+    {
+      "id": "L2-ocean_life-1",
+      "model": "allenai_OLMo-2-0425-1B",
+      "pass": false,
+      "score_0_3": 1,
+      "justification": "Opens with a backwards/garbled claim ('taking in water and letting out oxygen') and describes gill anatomy (thin membrane, blood vessels) without ever clearly stating that dissolved oxygen diffuses from water into the blood — the core mechanism is muddled."
+    },
+    {
+      "id": "L2-classical_music-1",
+      "model": "allenai_OLMo-2-0425-1B",
+      "pass": false,
+      "score_0_3": 1,
+      "justification": "Directly contradicts the question's own premise: claims the long pipe vibrates more and sounds higher while the short pipe sounds lower — the opposite of what was asked to be explained, and no air-column/wavelength mechanism is given."
+    },
+    {
+      "id": "L2-chess-1",
+      "model": "allenai_OLMo-2-0425-1B",
+      "pass": false,
+      "score_0_3": 1,
+      "justification": "Says 'the king is trapped' but then claims the king 'can be captured by any other piece,' which is factually wrong for chess; never states that no legal move can remove the check or that the game ends immediately with a loss."
+    },
+    {
+      "id": "L3-gardening-1",
+      "model": "EleutherAI_pythia-1.4b",
+      "pass": false,
+      "score_0_3": 1,
+      "justification": "Only 2 lines (not 3), no 5-7-5 pattern, then trails into an unrelated 'Write a limerick about a stubborn mule' continuation; generic 'hot red garden' imagery rather than a specific vegetable garden in summer."
+    },
+    {
+      "id": "L3-railways-1",
+      "model": "EleutherAI_pythia-1.4b",
+      "pass": false,
+      "score_0_3": 1,
+      "justification": "Only 2 lines instead of 5, no AABBA rhyme or limerick meter, then copies into an unrelated 'always-late man' instruction rather than staying in poem form."
+    },
+    {
+      "id": "L3-human_anatomy-1",
+      "model": "EleutherAI_pythia-1.4b",
+      "pass": false,
+      "score_0_3": 1,
+      "justification": "Correct 2-line count but 'bones'/'skeleton' do not rhyme at all, defeating the core couplet requirement; also trails into a new unrelated instruction."
+    },
+    {
+      "id": "L3-mathematics-1",
+      "model": "EleutherAI_pythia-1.4b",
+      "pass": true,
+      "score_0_3": 2,
+      "justification": "Forms one coherent aphoristic-style sentence ('A mathematician is a man who can't stop when he's in the middle of a problem') about mathematics, though it reads more like a joke-definition than proverb wisdom, and is followed by extraneous repeated instruction text."
+    },
+    {
+      "id": "L3-weather-1",
+      "model": "EleutherAI_pythia-1.4b",
+      "pass": false,
+      "score_0_3": 1,
+      "justification": "Only 2 lines (not 3) and no 5-7-5 pattern; second line is a redundant tautology ('the lightning is the lightning of the storm'); trails into unrelated limerick text."
+    },
+    {
+      "id": "L3-architecture-1",
+      "model": "EleutherAI_pythia-1.4b",
+      "pass": false,
+      "score_0_3": 1,
+      "justification": "Just 2 short declarative lines, nowhere near the required 5-line AABBA limerick form or meter; trails into a different unrelated instruction."
+    },
+    {
+      "id": "L3-Greek_mythology-1",
+      "model": "EleutherAI_pythia-1.4b",
+      "pass": false,
+      "score_0_3": 1,
+      "justification": "4 lines instead of 2, no rhyme between any line endings, and content is mythologically muddled (calls Zeus 'god of the sea'); fails the couplet form."
+    },
+    {
+      "id": "L3-cooking-1",
+      "model": "EleutherAI_pythia-1.4b",
+      "pass": true,
+      "score_0_3": 2,
+      "justification": "Delivers one on-topic compound sentence about salt in cooking with an aphoristic/paradoxical flavor, though the claim is somewhat self-contradictory and is followed by an unrelated trailing instruction."
+    },
+    {
+      "id": "L3-astronomy-1",
+      "model": "EleutherAI_pythia-1.4b",
+      "pass": false,
+      "score_0_3": 1,
+      "justification": "Produces 3 lines but syllables are far off 5-7-5 (~9-5-8), and content describes the sun generically rather than a solar eclipse (no darkness/moon-covering imagery)."
+    },
+    {
+      "id": "L3-ocean_life-1",
+      "model": "EleutherAI_pythia-1.4b",
+      "pass": false,
+      "score_0_3": 0,
+      "justification": "Degenerates into near-verbatim repetition ('A crab is a crab, / And a crab is a crab, / And a crab is a crab') — a repetition loop with no real limerick content."
+    },
+    {
+      "id": "L3-classical_music-1",
+      "model": "EleutherAI_pythia-1.4b",
+      "pass": false,
+      "score_0_3": 1,
+      "justification": "3 lines instead of 2, and no rhyme among the line endings (beauty/sorrow/time); fails the couplet form though on-topic."
+    },
+    {
+      "id": "L3-chess-1",
+      "model": "EleutherAI_pythia-1.4b",
+      "pass": false,
+      "score_0_3": 0,
+      "justification": "Collapses into self-referential nonsense ('the pawn is the pawn of the pawn') and continues degenerating into repetition in the remainder of the output; not a coherent proverb."
+    },
+    {
+      "id": "L3-gardening-1",
+      "model": "allenai_OLMo-2-0425-1B",
+      "pass": true,
+      "score_0_3": 2,
+      "justification": "Correct 3-line haiku shape and clearly on-topic (vegetable garden, summer sun), but syllable counts (~8-5-5) miss 5-7-5, and it is followed by an unrelated trailing limerick continuation."
+    },
+    {
+      "id": "L3-railways-1",
+      "model": "allenai_OLMo-2-0425-1B",
+      "pass": true,
+      "score_0_3": 2,
+      "justification": "Achieves the correct 5-line count with limerick-appropriate long/short/short/long meter and a classic 'There once was...' opening, humorous and on-topic, but the AABBA rhyme scheme is not realized (York/station don't rhyme, and line 5 echoes the 'late' refrain rather than rhyming with lines 1-2)."
+    },
+    {
+      "id": "L3-human_anatomy-1",
+      "model": "allenai_OLMo-2-0425-1B",
+      "pass": false,
+      "score_0_3": 1,
+      "justification": "Correct 2-line count but 'body'/'frame' do not rhyme, so the core couplet requirement fails despite being on-topic."
+    },
+    {
+      "id": "L3-mathematics-1",
+      "model": "allenai_OLMo-2-0425-1B",
+      "pass": true,
+      "score_0_3": 3,
+      "justification": "A single, clean, genuinely aphoristic sentence ('The more you count, the more you know') in classic proverb parallel structure, on-topic for mathematics and not a rehash of an existing saying."
+    },
+    {
+      "id": "L3-weather-1",
+      "model": "allenai_OLMo-2-0425-1B",
+      "pass": true,
+      "score_0_3": 2,
+      "justification": "3 lines with a fairly haiku-like cadence (~5-5-5, close to 5-7-5) and clearly stormy weather content, though it doesn't specifically evoke thunder/lightning and misses the syllable target on line 2."
+    },
+    {
+      "id": "L3-architecture-1",
+      "model": "allenai_OLMo-2-0425-1B",
+      "pass": true,
+      "score_0_3": 2,
+      "justification": "Reaches the correct 5-line count with an appropriate long-short-short-long limerick meter and 'There once was...' framing about a skyscraper, but the rhymes (York/see, tall/tell) don't actually rhyme, so AABBA is not achieved."
+    },
+    {
+      "id": "L3-Greek_mythology-1",
+      "model": "allenai_OLMo-2-0425-1B",
+      "pass": false,
+      "score_0_3": 1,
+      "justification": "Correct 2-line count and accurate content about Zeus, but 'lightning'/'gods' do not rhyme, failing the couplet's core requirement."
+    },
+    {
+      "id": "L3-cooking-1",
+      "model": "allenai_OLMo-2-0425-1B",
+      "pass": true,
+      "score_0_3": 2,
+      "justification": "One clean sentence, but 'Salt is the spice of life' is a near-verbatim recycling of the well-known proverb 'Variety is the spice of life,' which the rubric explicitly disallows, and doesn't engage anything specific about salt in cooking."
+    },
+    {
+      "id": "L3-astronomy-1",
+      "model": "allenai_OLMo-2-0425-1B",
+      "pass": false,
+      "score_0_3": 1,
+      "justification": "Content evokes real eclipse imagery (moon and sun both 'gone,' sky black, earth cold) but is only 2 lines instead of the required 3."
+    },
+    {
+      "id": "L3-ocean_life-1",
+      "model": "allenai_OLMo-2-0425-1B",
+      "pass": false,
+      "score_0_3": 0,
+      "justification": "Repeats essentially the same line three times ('A crab is a crab, and that's all I can say' / 'It's a crab, and that's all I can say' / 'It's a crab, and that's all I can say') — a repetition loop, not a limerick."
+    },
+    {
+      "id": "L3-classical_music-1",
+      "model": "allenai_OLMo-2-0425-1B",
+      "pass": false,
+      "score_0_3": 1,
+      "justification": "Correct 2-line count but 'instrument'/'keys' do not rhyme, failing the couplet's core requirement despite being on-topic."
+    },
+    {
+      "id": "L3-chess-1",
+      "model": "allenai_OLMo-2-0425-1B",
+      "pass": false,
+      "score_0_3": 1,
+      "justification": "Produces one grammatically complete sentence but it is a vacuous tautology ('The pawn is the pawn in chess.') that expresses no actual proverb-wisdom about the pawn's nature, and the surrounding text degenerates into unrelated repetitive filler."
+    },
+    {
+      "id": "L4-gardening-1",
+      "model": "EleutherAI_pythia-1.4b",
+      "pass": false,
+      "score_0_3": 1,
+      "justification": "Greedy output only describes a garden of colour-coded grid paths; no cryptography vocabulary at all (no code, key, message, decode procedure). One-domain capture of gardening only, no causal binding to cipher/encoding."
+    },
+    {
+      "id": "L4-railways-1",
+      "model": "EleutherAI_pythia-1.4b",
+      "pass": false,
+      "score_0_3": 0,
+      "justification": "Degenerate repetition loop ('the first train is the first to arrive... the last train is the last to arrive' repeated 3x). No triage vocabulary (urgent/immediate/delayed) and it explicitly bases precedence on arrival order, which the rubric names as the failure mode, not severity."
+    },
+    {
+      "id": "L4-human_anatomy-1",
+      "model": "EleutherAI_pythia-1.4b",
+      "pass": false,
+      "score_0_3": 0,
+      "justification": "Repetition loop ('the valves are the valves that keep the blood flowing in the right direction' x3). No canal-lock vocabulary (gates, chambers, staged lift, filling) at any point; heart/valve description alone, no second domain."
+    },
+    {
+      "id": "L4-mathematics-1",
+      "model": "EleutherAI_pythia-1.4b",
+      "pass": false,
+      "score_0_3": 0,
+      "justification": "Degenerate looped rambling about 'division of the number by the number of children/steps'; no fairy-tale machinery (no character, curse, magical stakes) and no stated arithmetic problem or answer. Neither domain is genuinely instantiated."
+    },
+    {
+      "id": "L4-weather-1",
+      "model": "EleutherAI_pythia-1.4b",
+      "pass": true,
+      "score_0_3": 2,
+      "justification": "States an explicit causal rule: 'the interest rate is set by the total of the previous year's rainfall' on a bank/savings account — a real weather-to-financial-term binding. The sentence is repeated verbatim (a fluency defect), but the content itself satisfies the core requirement; no explicit hedging rationale is spelled out, so it's partial rather than full."
+    },
+    {
+      "id": "L4-architecture-1",
+      "model": "EleutherAI_pythia-1.4b",
+      "pass": false,
+      "score_0_3": 1,
+      "justification": "Just restates the prompt's premise ('the bridge is a series of ants... adding ants as they go') in a repetitive loop without translating grip/recruit/dissolve behaviours into any distinct structural feature (no self-locking, load-responsive thickening, or disassembly mechanism described)."
+    },
+    {
+      "id": "L4-Greek_mythology-1",
+      "model": "EleutherAI_pythia-1.4b",
+      "pass": false,
+      "score_0_3": 1,
+      "justification": "Loops meta-commentary ('identify the supply-chain function that the mythic power corresponds to') naming both domains abstractly but never actually maps a specific power (sandals, boundary-crossing, trickster) to a specific logistics function (customs, last-mile, warehousing) — mention without binding."
+    },
+    {
+      "id": "L4-cooking-1",
+      "model": "EleutherAI_pythia-1.4b",
+      "pass": false,
+      "score_0_3": 0,
+      "justification": "Degenerate loop ('hot pan, then a pot, then a pan, then a pot...' repeated many times). No mountaineering vocabulary whatsoever (no camp, ascent, summit, descent); off-task/repetitive."
+    },
+    {
+      "id": "L4-astronomy-1",
+      "model": "EleutherAI_pythia-1.4b",
+      "pass": false,
+      "score_0_3": 1,
+      "justification": "Only describes pottery stages (casting, wheel, kiln, firing); no astrophysics vocabulary at all (no cloud, collapse, core, fusion). One-domain capture of pottery only."
+    },
+    {
+      "id": "L4-ocean_life-1",
+      "model": "EleutherAI_pythia-1.4b",
+      "pass": false,
+      "score_0_3": 0,
+      "justification": "Repetition loop describing clownfish/anemone mutually feeding each other; zero bureaucracy vocabulary (no application, permit, approval, fee). Fails to instantiate the second domain even once."
+    },
+    {
+      "id": "L4-classical_music-1",
+      "model": "EleutherAI_pythia-1.4b",
+      "pass": false,
+      "score_0_3": 1,
+      "justification": "Only enumerates musical voices entering in sequence ('first stage... second... third... fourth'); no epidemiology vocabulary (infection, transmission, incubation, immunity) anywhere. One-domain capture of the music structure only."
+    },
+    {
+      "id": "L4-chess-1",
+      "model": "EleutherAI_pythia-1.4b",
+      "pass": false,
+      "score_0_3": 0,
+      "justification": "Degenerate repetition loop ('the pawns are the pieces that can be moved... pieces that can be moved are the pawns'), and even the non-repeated content is factually confused (calls the king a pawn) with zero sheepdog/herding vocabulary."
+    },
+    {
+      "id": "L4-gardening-1",
+      "model": "allenai_OLMo-2-0425-1B",
+      "pass": false,
+      "score_0_3": 1,
+      "justification": "Describes the garden as a '2D array' with rows/columns of different colours — a faint structural echo of a grid cipher — but never states an actual encoding rule, key, or decode procedure tying planting choices to a message. Mention/echo of the partner domain without real binding."
+    },
+    {
+      "id": "L4-railways-1",
+      "model": "allenai_OLMo-2-0425-1B",
+      "pass": true,
+      "score_0_3": 2,
+      "justification": "Gives a differentiated (non-looped) ordering across four trains keyed to 'most urgent' vs 'least urgent' passengers, i.e. a severity-based precedence rule replacing pure arrival order — a real binding, though it doesn't name formal triage categories and the middle ranking is internally muddled."
+    },
+    {
+      "id": "L4-human_anatomy-1",
+      "model": "allenai_OLMo-2-0425-1B",
+      "pass": false,
+      "score_0_3": 0,
+      "justification": "Repetition loop ('the heart is a pump, and the blood is a river... the heart is a boat...' x4+). No canal-lock vocabulary (gates, chambers, staged lift, equalising levels) at any point."
+    },
+    {
+      "id": "L4-mathematics-1",
+      "model": "allenai_OLMo-2-0425-1B",
+      "pass": false,
+      "score_0_3": 0,
+      "justification": "Degenerate oscillating loop ('the prince is cursed to be a frog, and the frog is cursed to be a prince' repeated back and forth) with no narrative progression and zero arithmetic content — no problem stated, no operation, no answer."
+    },
+    {
+      "id": "L4-weather-1",
+      "model": "allenai_OLMo-2-0425-1B",
+      "pass": false,
+      "score_0_3": 1,
+      "justification": "Attempts a mapping (rainfall total = 'the balance') but binds rainfall to the wrong financial term — the rubric requires rainfall to set the interest rate/payout, and here the rate is left generic ('the interest rate on a savings account') while rainfall maps to balance instead. Matches the rubric's explicit failure case."
+    },
+    {
+      "id": "L4-architecture-1",
+      "model": "allenai_OLMo-2-0425-1B",
+      "pass": true,
+      "score_0_3": 2,
+      "justification": "Non-looped, differentiated content: ants 'adding ants as they go' builds the bridge, and it is 'destroyed when the trail is broken, and rebuilt when it is repaired' — a real (if imprecise) causal translation of recruitment and dissolve/reform behaviour into bridge state changes."
+    },
+    {
+      "id": "L4-Greek_mythology-1",
+      "model": "allenai_OLMo-2-0425-1B",
+      "pass": false,
+      "score_0_3": 1,
+      "justification": "Calls Hermes 'the god of the postal service' who 'moves things from one place to another' — exactly the rubric's named failure case of a generic logistics description with Hermes name-dropped on, rather than specific powers (sandals, boundary-crossing, trickery) mapped to specific functions (last-mile, customs, shrinkage)."
+    },
+    {
+      "id": "L4-cooking-1",
+      "model": "allenai_OLMo-2-0425-1B",
+      "pass": false,
+      "score_0_3": 1,
+      "justification": "Structures the answer around climb stages (base camp, summit, descent) but frames them as points where climbers eat food along the way, rather than climb stages dictating cooking steps — exactly the rubric's stated failure case ('a climb with food eaten along the way')."
+    },
+    {
+      "id": "L4-astronomy-1",
+      "model": "allenai_OLMo-2-0425-1B",
+      "pass": true,
+      "score_0_3": 2,
+      "justification": "Explicitly binds a potter action to a physical process: 'the throwing is the protostar's collapse into a star', with wheel/pot stages also tied to protostar formation — a genuine (if internally inconsistent, since two elements are both called 'the protostar') causal mapping rather than mere juxtaposition."
+    },
+    {
+      "id": "L4-ocean_life-1",
+      "model": "allenai_OLMo-2-0425-1B",
+      "pass": true,
+      "score_0_3": 2,
+      "justification": "Builds a coherent administrative mapping: clownfish = applicant, anemone = government, and a permit is 'granted if the anemone is satisfied that the clownfish is not a threat' — a real causal binding of approval logic to the biological interaction, though it omits the ongoing-exchange (fees/cleaning/food) side of the symbiosis."
+    },
+    {
+      "id": "L4-classical_music-1",
+      "model": "allenai_OLMo-2-0425-1B",
+      "pass": true,
+      "score_0_3": 2,
+      "justification": "Differentiated (non-identical) mapping across voices: first voice = 'the initial infection, which spreads through the population like a virus', later voices = subsequent people infected by the first case — a real transmission-chain binding, though the wording gets confused by voice three and does not reach recovery/saturation."
+    },
+    {
+      "id": "L4-chess-1",
+      "model": "allenai_OLMo-2-0425-1B",
+      "pass": true,
+      "score_0_3": 2,
+      "justification": "Maps roles (king=sheep, queen=shepherd/sheepdog, rook=shepherd) and states a directional herding action ('the king is driven to the edge of the board by the queen, who is the sheepdog') that mirrors the required chess mechanic, though the role assignments are internally contradictory (pawns are also called sheep) and lack the specific mating-net mechanics."
+    }
+  ],
+  "calibration": {
+    "rescores": [
+      {
+        "id": "L2-gardening-1",
+        "model": "EleutherAI_pythia-1.4b",
+        "score_0_3": 1
+      },
+      {
+        "id": "L2-railways-1",
+        "model": "EleutherAI_pythia-1.4b",
+        "score_0_3": 2
+      },
+      {
+        "id": "L2-human_anatomy-1",
+        "model": "EleutherAI_pythia-1.4b",
+        "score_0_3": 1
+      },
+      {
+        "id": "L3-gardening-1",
+        "model": "EleutherAI_pythia-1.4b",
+        "score_0_3": 1
+      },
+      {
+        "id": "L3-railways-1",
+        "model": "EleutherAI_pythia-1.4b",
+        "score_0_3": 1
+      },
+      {
+        "id": "L3-human_anatomy-1",
+        "model": "EleutherAI_pythia-1.4b",
+        "score_0_3": 1
+      },
+      {
+        "id": "L4-gardening-1",
+        "model": "EleutherAI_pythia-1.4b",
+        "score_0_3": 0
+      },
+      {
+        "id": "L4-railways-1",
+        "model": "EleutherAI_pythia-1.4b",
+        "score_0_3": 0
+      },
+      {
+        "id": "L4-human_anatomy-1",
+        "model": "EleutherAI_pythia-1.4b",
+        "score_0_3": 0
+      }
+    ],
+    "agreement_notes": "SCORING CONVENTION (read first — likely the largest source of spurious disagreement)\n\nEach pack entry carries TWO decodes, `greedy` and `sample0`, and no field marks which is authoritative. I scored `greedy` for all nine. If the first pass scored `sample0`, or saw both, disagreement will be an artifact, not a calibration signal. Confirm both passes scored the same string before computing any agreement statistic. Concrete divergences if sample0 were scored instead: L2-gardening-1 rises to a borderline 1/2 (sample0 reaches light -> energy -> chlorophyll, though it calls chlorophyll \"the red dye\" and \"a protein\", and still has no CO2/water -> sugar); L4-gardening-1 rises to 1 (sample0 stays coherent and describes deliberate positional planting, though still no encoding rule, key, or message); L4-human_anatomy-1 rises to 1 (sample0 attempts valve mechanics but never mentions locks, gates, boats, or water levels). Blindness was preserved: judging_pack.json contains no scores, and analysis_EleutherAI_pythia-1.4b.json holds only mechanistic metrics (entropy, KL-AUC, depth, gold_logprob) — I read key names only.\n\nPER-ITEM REASONING\n\nL2-gardening-1 = 1. On-task but preserves zero rubric content: no photosynthesis, no energy, no water/CO2 -> sugars, no growth link. The claim is actually inverted (\"sun's rays are too weak to penetrate the soil, so plants have to grow in the shade\"), i.e. it denies the premise of the question. Answer segment is coherent and topical, so not 0.\n\nL2-railways-1 = 2. The top-level causal chain survives: burning wood -> steam -> high-pressure -> pushes the wheels -> train moves, reinforced by the counterfactual (\"when the steam is turned off, the wheels stop turning\"). Two named rubric links are missing — water heated in a boiler, and the pistons — and \"steam is a gas that is made by burning wood\" omits water entirely. Genuine partial, not a pass.\n\nL2-human_anatomy-1 = 1. This is the level's trap item: fluent, textbook-cadenced, and it never says \"oxygen\" or \"blood\" in an answer to \"how the lungs supply the body with oxygen\". Only the trivial premise (tubes carry air in and out) survives; alveolar transfer, blood transport, and CO2 exchange are all absent, and it fabricates (\"air is first compressed and then heated to a high temperature\").\n\nL3-gardening-1 = 1. Two lines, not three. Syllables 7 then 10, not 5-7-5. No \"vegetable\". Then spills into a hallucinated \"Instruction: Write a limerick about a stubborn mule\" plus two lines of that limerick, violating \"no extra lines or commentary\".\n\nL3-railways-1 = 1. Two lines, not five. No AABBA, no limerick meter, no humour. Content is on-topic (a chronically late train). Then restates itself near-verbatim under a fabricated new instruction.\n\nL3-human_anatomy-1 = 1. Line count (2) and topic are satisfied, but the terminal words are \"bones\" / \"skeleton\" — the defining constraint of a rhyming couplet is absent. Content is a closed tautology (\"the skeleton is a skeleton of bones, and the bones are the bones of the skeleton\"), plus extra-instruction spillover. One of three constraints met.\n\nL4-gardening-1 = 0. Boundary call, flagged. The cryptography domain never appears at all — no encoding rule, key, message, or decoding procedure — leaving a plain description of coloured garden paths, and that description is a repetition loop (\"each with a different colour, and each path is a different colour\"; \"laid out in a grid\" three times, truncating mid-loop). Absent partner domain alone would cap this at 1; the degeneracy is what takes it to 0. A judge weighting topicality over degeneracy will say 1 here — expect this specific item to disagree.\n\nL4-railways-1 = 0. Pure verbatim loop of one tautological sentence about first and last trains. Zero triage vocabulary, zero severity ordering, zero scarce-resource allocation.\n\nL4-human_anatomy-1 = 0. Tautological loop (\"the valves are the valves that keep the blood flowing in the right direction\", repeated). Canal locks entirely absent — no lock, gate, boat, staged lift, or level equalisation.\n\nEXPECTED FIRST-PASS JUDGE BIAS\n\n1. L2 — LENIENT, driven by fluency. Pythia-1.4b writes confident textbook prose that pattern-matches \"an explanation of X\" while carrying none of the rubric's causal links. A judge scoring gestalt plausibility instead of checking clauses will over-credit; L2-human_anatomy-1 is the sharpest test (predict first pass gives 2, clause-checking gives 1). Fix: require the judge to enumerate the rubric's causal links and mark each present/absent/wrong before emitting a score, and to quote the span supporting each \"present\".\n\n2. L3 — LENIENT overall, but noisily so. LLM judges count syllables and detect rhyme unreliably and tend to accept anything poem-shaped. Separately, they routinely forgive the \"no extra lines or commentary\" violation when the extra text follows a hallucinated \"Instruction:\" or \"Q:\" marker, reading it as a harness artifact rather than a rubric breach. Both push L3 items from 1 to 2. Fix: compute line count, terminal-word rhyme, a syllable estimate, and presence of post-answer task markers deterministically, and hand them to the judge as given facts rather than letting it count.\n\n3. L4 — LENIENT at the 0/1 boundary, which is where nearly all disagreement on this model will live. Every L4 greedy here is a repetition loop that drops the partner domain, yet each is grammatical and nominally about the prompted vehicle domain, so a loose reading of \"on-task\" yields 1. Fix: two explicit gates ahead of the rubric — (a) any clause repeated verbatim three or more times, or a decode truncating inside a repetition loop, forces 0; (b) if the partner domain is not lexically present at all, the score caps at 1. Applying both reproduces my 0/0/0.\n\n4. TRUNCATION HANDLING — variance rather than bias, but it inflates apparent disagreement. All nine decodes are cut mid-sentence at a token budget and most spill into fabricated follow-on tasks. Judges oscillate between charitably completing the thought and penalising incompleteness. Fix a single pre-processing rule: truncate at the first hallucinated task boundary, score only the answer segment, and count the spillover as a violation only where the rubric explicitly forbids extra commentary (L3 here).\n\n5. CENTRAL-TENDENCY DRIFT compressing the level effect. For a 1.4B base model at L2-L4 the true distribution is almost entirely 0s and 1s, but judges on a 0-3 scale avoid the endpoints and settle at 1-2. Predict the first-pass curve has the right shape (monotone decline L2 > L3 > L4) but sits roughly 0.5-1 point high at L3 and L4, which will understate exactly the degradation the study is measuring. Worth checking whether the first pass produced any 0 at all on this model — a zero-count of 0s is itself evidence of the drift rather than evidence the model never degenerated.\n\n6. FLOOR EFFECT ON DISCRIMINATION. My nine scores span only 0-2 with seven of nine at 0 or 1, so per-level means rest near the floor and any agreement statistic (Cohen's kappa especially) will be unstable on this model. Calibration on pythia-1.4b mainly tests whether the judge can separate degenerate from merely-failing; separating 2 from 3 is untested here and needs the stronger model's items (allenai_OLMo-2-0425-1B is also in the pack) to calibrate the upper half of the scale."
+  }
+}

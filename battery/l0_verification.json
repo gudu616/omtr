@@ -1,0 +1,2762 @@
+[
+  {
+    "title": "Pride and Prejudice opening",
+    "mode": "memorized",
+    "probes": {
+      "pile": [
+        {
+          "probe": "well fixed in the minds of the",
+          "status": "ok",
+          "count": 171
+        },
+        {
+          "probe": "minds of the surrounding families, that he",
+          "status": "ok",
+          "count": 114
+        },
+        {
+          "probe": "families, that he is considered as the",
+          "status": "ok",
+          "count": 57
+        },
+        {
+          "probe": "considered as the rightful property of some",
+          "status": "ok",
+          "count": 84
+        },
+        {
+          "probe": "property of some one or other of",
+          "status": "ok",
+          "count": 148
+        },
+        {
+          "probe": "or other of their daughters. \"My dear",
+          "status": "ok",
+          "count": 6
+        },
+        {
+          "probe": "daughters. \"My dear Mr. Bennet,\" said his",
+          "status": "ok",
+          "count": 6
+        },
+        {
+          "probe": "Bennet,\" said his lady to him one",
+          "status": "ok",
+          "count": 58
+        },
+        {
+          "probe": "to him one day, \"have you heard",
+          "status": "ok",
+          "count": 65
+        },
+        {
+          "probe": "have you heard that Netherfield Park is",
+          "status": "ok",
+          "count": 17
+        },
+        {
+          "probe": "this truth is so well fixed in the",
+          "status": "ok",
+          "count": 153
+        }
+      ],
+      "olmo_mix": [
+        {
+          "probe": "well fixed in the minds of the",
+          "status": "ok",
+          "count": 1245
+        },
+        {
+          "probe": "minds of the surrounding families, that he",
+          "status": "ok",
+          "count": 786
+        },
+        {
+          "probe": "families, that he is considered as the",
+          "status": "ok",
+          "count": 484
+        },
+        {
+          "probe": "considered as the rightful property of some",
+          "status": "ok",
+          "count": 569
+        },
+        {
+          "probe": "property of some one or other of",
+          "status": "ok",
+          "count": 1298
+        },
+        {
+          "probe": "or other of their daughters. \"My dear",
+          "status": "ok",
+          "count": 32
+        },
+        {
+          "probe": "daughters. \"My dear Mr. Bennet,\" said his",
+          "status": "ok",
+          "count": 38
+        },
+        {
+          "probe": "Bennet,\" said his lady to him one",
+          "status": "ok",
+          "count": 223
+        },
+        {
+          "probe": "to him one day, \"have you heard",
+          "status": "ok",
+          "count": 348
+        },
+        {
+          "probe": "have you heard that Netherfield Park is",
+          "status": "ok",
+          "count": 59
+        },
+        {
+          "probe": "this truth is so well fixed in the",
+          "status": "ok",
+          "count": 1396
+        }
+      ]
+    },
+    "verified": {
+      "pile": true,
+      "olmo_mix": true
+    },
+    "stats": {
+      "pile": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 6,
+        "max_count": 171
+      },
+      "olmo_mix": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 32,
+        "max_count": 1396
+      }
+    }
+  },
+  {
+    "title": "Moby-Dick opening",
+    "mode": "memorized",
+    "probes": {
+      "pile": [
+        {
+          "probe": "way I have of driving off the",
+          "status": "ok",
+          "count": 190
+        },
+        {
+          "probe": "driving off the spleen and regulating the",
+          "status": "ok",
+          "count": 121
+        },
+        {
+          "probe": "and regulating the circulation. Whenever I find",
+          "status": "ok",
+          "count": 96
+        },
+        {
+          "probe": "Whenever I find myself growing grim about",
+          "status": "ok",
+          "count": 130
+        },
+        {
+          "probe": "growing grim about the mouth; whenever it",
+          "status": "ok",
+          "count": 201
+        },
+        {
+          "probe": "mouth; whenever it is a damp, drizzly",
+          "status": "ok",
+          "count": 177
+        },
+        {
+          "probe": "a damp, drizzly November in my soul",
+          "status": "ok",
+          "count": 266
+        },
+        {
+          "probe": "in my soul; whenever I find myself",
+          "status": "ok",
+          "count": 174
+        },
+        {
+          "probe": "I find myself involuntarily pausing before coffin",
+          "status": "ok",
+          "count": 175
+        },
+        {
+          "probe": "pausing before coffin warehouses, and bringing up",
+          "status": "ok",
+          "count": 192
+        },
+        {
+          "probe": "world. It is a way I have of",
+          "status": "ok",
+          "count": 147
+        }
+      ],
+      "olmo_mix": [
+        {
+          "probe": "way I have of driving off the",
+          "status": "ok",
+          "count": 1059
+        },
+        {
+          "probe": "driving off the spleen and regulating the",
+          "status": "ok",
+          "count": 655
+        },
+        {
+          "probe": "and regulating the circulation. Whenever I find",
+          "status": "ok",
+          "count": 425
+        },
+        {
+          "probe": "Whenever I find myself growing grim about",
+          "status": "ok",
+          "count": 796
+        },
+        {
+          "probe": "growing grim about the mouth; whenever it",
+          "status": "ok",
+          "count": 1689
+        },
+        {
+          "probe": "mouth; whenever it is a damp, drizzly",
+          "status": "ok",
+          "count": 1526
+        },
+        {
+          "probe": "a damp, drizzly November in my soul",
+          "status": "ok",
+          "count": 2407
+        },
+        {
+          "probe": "in my soul; whenever I find myself",
+          "status": "ok",
+          "count": 1238
+        },
+        {
+          "probe": "I find myself involuntarily pausing before coffin",
+          "status": "ok",
+          "count": 1280
+        },
+        {
+          "probe": "pausing before coffin warehouses, and bringing up",
+          "status": "ok",
+          "count": 1067
+        },
+        {
+          "probe": "world. It is a way I have of",
+          "status": "ok",
+          "count": 961
+        }
+      ]
+    },
+    "verified": {
+      "pile": true,
+      "olmo_mix": true
+    },
+    "stats": {
+      "pile": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 96,
+        "max_count": 266
+      },
+      "olmo_mix": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 425,
+        "max_count": 2407
+      }
+    }
+  },
+  {
+    "title": "A Tale of Two Cities opening",
+    "mode": "memorized",
+    "probes": {
+      "pile": [
+        {
+          "probe": "season of Darkness, it was the spring",
+          "status": "ok",
+          "count": 635
+        },
+        {
+          "probe": "was the spring of hope, it was",
+          "status": "ok",
+          "count": 829
+        },
+        {
+          "probe": "hope, it was the winter of despair",
+          "status": "ok",
+          "count": 812
+        },
+        {
+          "probe": "winter of despair, we had everything before",
+          "status": "ok",
+          "count": 475
+        },
+        {
+          "probe": "had everything before us, we had nothing",
+          "status": "ok",
+          "count": 597
+        },
+        {
+          "probe": "we had nothing before us, we were",
+          "status": "ok",
+          "count": 455
+        },
+        {
+          "probe": "us, we were all going direct to",
+          "status": "ok",
+          "count": 467
+        },
+        {
+          "probe": "going direct to Heaven, we were all",
+          "status": "ok",
+          "count": 392
+        },
+        {
+          "probe": "we were all going direct the other",
+          "status": "ok",
+          "count": 496
+        },
+        {
+          "probe": "direct the other way--in short, the period",
+          "status": "ok",
+          "count": 26
+        },
+        {
+          "probe": "Light, it was the season of Darkness, it",
+          "status": "ok",
+          "count": 638
+        }
+      ],
+      "olmo_mix": [
+        {
+          "probe": "season of Darkness, it was the spring",
+          "status": "ok",
+          "count": 4089
+        },
+        {
+          "probe": "was the spring of hope, it was",
+          "status": "ok",
+          "count": 7270
+        },
+        {
+          "probe": "hope, it was the winter of despair",
+          "status": "ok",
+          "count": 7328
+        },
+        {
+          "probe": "winter of despair, we had everything before",
+          "status": "ok",
+          "count": 3094
+        },
+        {
+          "probe": "had everything before us, we had nothing",
+          "status": "ok",
+          "count": 4876
+        },
+        {
+          "probe": "we had nothing before us, we were",
+          "status": "ok",
+          "count": 2408
+        },
+        {
+          "probe": "us, we were all going direct to",
+          "status": "ok",
+          "count": 2310
+        },
+        {
+          "probe": "going direct to Heaven, we were all",
+          "status": "ok",
+          "count": 2272
+        },
+        {
+          "probe": "we were all going direct the other",
+          "status": "ok",
+          "count": 3108
+        },
+        {
+          "probe": "direct the other way--in short, the period",
+          "status": "ok",
+          "count": 64
+        },
+        {
+          "probe": "Light, it was the season of Darkness, it",
+          "status": "ok",
+          "count": 4079
+        }
+      ]
+    },
+    "verified": {
+      "pile": true,
+      "olmo_mix": true
+    },
+    "stats": {
+      "pile": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 26,
+        "max_count": 829
+      },
+      "olmo_mix": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 64,
+        "max_count": 7328
+      }
+    }
+  },
+  {
+    "title": "Alice in Wonderland opening",
+    "mode": "memorized",
+    "probes": {
+      "pile": [
+        {
+          "probe": "what is the use of a book",
+          "status": "ok",
+          "count": 330
+        },
+        {
+          "probe": "of a book,\" thought Alice \"without pictures",
+          "status": "ok",
+          "count": 9
+        },
+        {
+          "probe": "Alice \"without pictures or conversations?\" So she",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "conversations?\" So she was considering in her",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "considering in her own mind (as well",
+          "status": "ok",
+          "count": 203
+        },
+        {
+          "probe": "mind (as well as she could, for",
+          "status": "ok",
+          "count": 201
+        },
+        {
+          "probe": "she could, for the hot day made",
+          "status": "ok",
+          "count": 186
+        },
+        {
+          "probe": "hot day made her feel very sleepy",
+          "status": "ok",
+          "count": 219
+        },
+        {
+          "probe": "feel very sleepy and stupid), whether the",
+          "status": "ok",
+          "count": 182
+        },
+        {
+          "probe": "stupid), whether the pleasure of making a",
+          "status": "ok",
+          "count": 173
+        },
+        {
+          "probe": "conversations in it, \"and what is the use",
+          "status": "ok",
+          "count": 41
+        }
+      ],
+      "olmo_mix": [
+        {
+          "probe": "what is the use of a book",
+          "status": "ok",
+          "count": 3817
+        },
+        {
+          "probe": "of a book,\" thought Alice \"without pictures",
+          "status": "ok",
+          "count": 42
+        },
+        {
+          "probe": "Alice \"without pictures or conversations?\" So she",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "conversations?\" So she was considering in her",
+          "status": "ok",
+          "count": 39
+        },
+        {
+          "probe": "considering in her own mind (as well",
+          "status": "ok",
+          "count": 1090
+        },
+        {
+          "probe": "mind (as well as she could, for",
+          "status": "ok",
+          "count": 1262
+        },
+        {
+          "probe": "she could, for the hot day made",
+          "status": "ok",
+          "count": 1166
+        },
+        {
+          "probe": "hot day made her feel very sleepy",
+          "status": "ok",
+          "count": 1268
+        },
+        {
+          "probe": "feel very sleepy and stupid), whether the",
+          "status": "ok",
+          "count": 1363
+        },
+        {
+          "probe": "stupid), whether the pleasure of making a",
+          "status": "ok",
+          "count": 1159
+        },
+        {
+          "probe": "conversations in it, \"and what is the use",
+          "status": "ok",
+          "count": 289
+        }
+      ]
+    },
+    "verified": {
+      "pile": true,
+      "olmo_mix": true
+    },
+    "stats": {
+      "pile": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 0,
+        "max_count": 330
+      },
+      "olmo_mix": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 0,
+        "max_count": 3817
+      }
+    }
+  },
+  {
+    "title": "KJV Genesis 1",
+    "mode": "memorized",
+    "probes": {
+      "pile": [
+        {
+          "probe": "light: and there was light. And God",
+          "status": "ok",
+          "count": 136
+        },
+        {
+          "probe": "light. And God saw the light, that",
+          "status": "ok",
+          "count": 181
+        },
+        {
+          "probe": "the light, that it was good: and",
+          "status": "ok",
+          "count": 372
+        },
+        {
+          "probe": "was good: and God divided the light",
+          "status": "ok",
+          "count": 340
+        },
+        {
+          "probe": "divided the light from the darkness. And",
+          "status": "ok",
+          "count": 121
+        },
+        {
+          "probe": "the darkness. And God called the light",
+          "status": "ok",
+          "count": 113
+        },
+        {
+          "probe": "called the light Day, and the darkness",
+          "status": "ok",
+          "count": 791
+        },
+        {
+          "probe": "and the darkness he called Night. And",
+          "status": "ok",
+          "count": 487
+        },
+        {
+          "probe": "called Night. And the evening and the",
+          "status": "ok",
+          "count": 336
+        },
+        {
+          "probe": "evening and the morning were the first",
+          "status": "ok",
+          "count": 784
+        },
+        {
+          "probe": "said, Let there be light: and there was",
+          "status": "ok",
+          "count": 693
+        }
+      ],
+      "olmo_mix": [
+        {
+          "probe": "light: and there was light. And God",
+          "status": "ok",
+          "count": 1573
+        },
+        {
+          "probe": "light. And God saw the light, that",
+          "status": "ok",
+          "count": 3232
+        },
+        {
+          "probe": "the light, that it was good: and",
+          "status": "ok",
+          "count": 4637
+        },
+        {
+          "probe": "was good: and God divided the light",
+          "status": "ok",
+          "count": 4436
+        },
+        {
+          "probe": "divided the light from the darkness. And",
+          "status": "ok",
+          "count": 2349
+        },
+        {
+          "probe": "the darkness. And God called the light",
+          "status": "ok",
+          "count": 2443
+        },
+        {
+          "probe": "called the light Day, and the darkness",
+          "status": "ok",
+          "count": 14411
+        },
+        {
+          "probe": "and the darkness he called Night. And",
+          "status": "ok",
+          "count": 6900
+        },
+        {
+          "probe": "called Night. And the evening and the",
+          "status": "ok",
+          "count": 4944
+        },
+        {
+          "probe": "evening and the morning were the first",
+          "status": "ok",
+          "count": 22974
+        },
+        {
+          "probe": "said, Let there be light: and there was",
+          "status": "ok",
+          "count": 12405
+        }
+      ]
+    },
+    "verified": {
+      "pile": true,
+      "olmo_mix": true
+    },
+    "stats": {
+      "pile": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 113,
+        "max_count": 791
+      },
+      "olmo_mix": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 1573,
+        "max_count": 22974
+      }
+    }
+  },
+  {
+    "title": "KJV Psalm 23",
+    "mode": "memorized",
+    "probes": {
+      "pile": [
+        {
+          "probe": "walk through the valley of the shadow",
+          "status": "ok",
+          "count": 6042
+        },
+        {
+          "probe": "of the shadow of death, I will",
+          "status": "ok",
+          "count": 2403
+        },
+        {
+          "probe": "death, I will fear no evil: for",
+          "status": "ok",
+          "count": 718
+        },
+        {
+          "probe": "no evil: for thou art with me",
+          "status": "ok",
+          "count": 723
+        },
+        {
+          "probe": "art with me; thy rod and thy",
+          "status": "ok",
+          "count": 656
+        },
+        {
+          "probe": "rod and thy staff they comfort me",
+          "status": "ok",
+          "count": 835
+        },
+        {
+          "probe": "they comfort me. Thou preparest a table",
+          "status": "ok",
+          "count": 128
+        },
+        {
+          "probe": "preparest a table before me in the",
+          "status": "ok",
+          "count": 1084
+        },
+        {
+          "probe": "me in the presence of mine enemies",
+          "status": "ok",
+          "count": 1116
+        },
+        {
+          "probe": "of mine enemies: thou anointest my head",
+          "status": "ok",
+          "count": 331
+        },
+        {
+          "probe": "sake. Yea, though I walk through the valley",
+          "status": "ok",
+          "count": 188
+        }
+      ],
+      "olmo_mix": [
+        {
+          "probe": "walk through the valley of the shadow",
+          "status": "ok",
+          "count": 61535
+        },
+        {
+          "probe": "of the shadow of death, I will",
+          "status": "ok",
+          "count": 23890
+        },
+        {
+          "probe": "death, I will fear no evil: for",
+          "status": "ok",
+          "count": 5429
+        },
+        {
+          "probe": "no evil: for thou art with me",
+          "status": "ok",
+          "count": 5715
+        },
+        {
+          "probe": "art with me; thy rod and thy",
+          "status": "ok",
+          "count": 4667
+        },
+        {
+          "probe": "rod and thy staff they comfort me",
+          "status": "ok",
+          "count": 7225
+        },
+        {
+          "probe": "they comfort me. Thou preparest a table",
+          "status": "ok",
+          "count": 793
+        },
+        {
+          "probe": "preparest a table before me in the",
+          "status": "ok",
+          "count": 6293
+        },
+        {
+          "probe": "me in the presence of mine enemies",
+          "status": "ok",
+          "count": 7018
+        },
+        {
+          "probe": "of mine enemies: thou anointest my head",
+          "status": "ok",
+          "count": 1702
+        },
+        {
+          "probe": "sake. Yea, though I walk through the valley",
+          "status": "ok",
+          "count": 1041
+        }
+      ]
+    },
+    "verified": {
+      "pile": true,
+      "olmo_mix": true
+    },
+    "stats": {
+      "pile": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 128,
+        "max_count": 6042
+      },
+      "olmo_mix": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 793,
+        "max_count": 61535
+      }
+    }
+  },
+  {
+    "title": "KJV John 3:16",
+    "mode": "memorized",
+    "probes": {
+      "pile": [
+        {
+          "probe": "saved. He that believeth on him is",
+          "status": "ok",
+          "count": 76
+        },
+        {
+          "probe": "on him is not condemned: but he",
+          "status": "ok",
+          "count": 355
+        },
+        {
+          "probe": "condemned: but he that believeth not is",
+          "status": "ok",
+          "count": 350
+        },
+        {
+          "probe": "believeth not is condemned already, because he",
+          "status": "ok",
+          "count": 386
+        },
+        {
+          "probe": "already, because he hath not believed in",
+          "status": "ok",
+          "count": 422
+        },
+        {
+          "probe": "not believed in the name of the",
+          "status": "ok",
+          "count": 1234
+        },
+        {
+          "probe": "name of the only begotten Son of",
+          "status": "ok",
+          "count": 891
+        },
+        {
+          "probe": "begotten Son of God. And this is",
+          "status": "ok",
+          "count": 110
+        },
+        {
+          "probe": "And this is the condemnation, that light",
+          "status": "ok",
+          "count": 195
+        },
+        {
+          "probe": "condemnation, that light is come into the",
+          "status": "ok",
+          "count": 389
+        },
+        {
+          "probe": "through him might be saved. He that believeth",
+          "status": "ok",
+          "count": 78
+        }
+      ],
+      "olmo_mix": [
+        {
+          "probe": "saved. He that believeth on him is",
+          "status": "ok",
+          "count": 1104
+        },
+        {
+          "probe": "on him is not condemned: but he",
+          "status": "ok",
+          "count": 4322
+        },
+        {
+          "probe": "condemned: but he that believeth not is",
+          "status": "ok",
+          "count": 4641
+        },
+        {
+          "probe": "believeth not is condemned already, because he",
+          "status": "ok",
+          "count": 6080
+        },
+        {
+          "probe": "already, because he hath not believed in",
+          "status": "ok",
+          "count": 6111
+        },
+        {
+          "probe": "not believed in the name of the",
+          "status": "ok",
+          "count": 17574
+        },
+        {
+          "probe": "name of the only begotten Son of",
+          "status": "ok",
+          "count": 13527
+        },
+        {
+          "probe": "begotten Son of God. And this is",
+          "status": "ok",
+          "count": 1338
+        },
+        {
+          "probe": "And this is the condemnation, that light",
+          "status": "ok",
+          "count": 3003
+        },
+        {
+          "probe": "condemnation, that light is come into the",
+          "status": "ok",
+          "count": 8193
+        },
+        {
+          "probe": "through him might be saved. He that believeth",
+          "status": "ok",
+          "count": 1092
+        }
+      ]
+    },
+    "verified": {
+      "pile": true,
+      "olmo_mix": true
+    },
+    "stats": {
+      "pile": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 76,
+        "max_count": 1234
+      },
+      "olmo_mix": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 1092,
+        "max_count": 17574
+      }
+    }
+  },
+  {
+    "title": "KJV John 1:1",
+    "mode": "memorized",
+    "probes": {
+      "pile": [
+        {
+          "probe": "life; and the life was the light",
+          "status": "ok",
+          "count": 578
+        },
+        {
+          "probe": "was the light of men. And the",
+          "status": "ok",
+          "count": 324
+        },
+        {
+          "probe": "men. And the light shineth in darkness",
+          "status": "ok",
+          "count": 167
+        },
+        {
+          "probe": "shineth in darkness; and the darkness comprehended",
+          "status": "ok",
+          "count": 467
+        },
+        {
+          "probe": "the darkness comprehended it not. There was",
+          "status": "ok",
+          "count": 32
+        },
+        {
+          "probe": "not. There was a man sent from",
+          "status": "ok",
+          "count": 34
+        },
+        {
+          "probe": "man sent from God, whose name was",
+          "status": "ok",
+          "count": 443
+        },
+        {
+          "probe": "whose name was John. The same came",
+          "status": "ok",
+          "count": 62
+        },
+        {
+          "probe": "The same came for a witness, to",
+          "status": "ok",
+          "count": 125
+        },
+        {
+          "probe": "a witness, to bear witness of the",
+          "status": "ok",
+          "count": 219
+        },
+        {
+          "probe": "made. In him was life; and the life",
+          "status": "ok",
+          "count": 176
+        }
+      ],
+      "olmo_mix": [
+        {
+          "probe": "life; and the life was the light",
+          "status": "ok",
+          "count": 8186
+        },
+        {
+          "probe": "was the light of men. And the",
+          "status": "ok",
+          "count": 4307
+        },
+        {
+          "probe": "men. And the light shineth in darkness",
+          "status": "ok",
+          "count": 1893
+        },
+        {
+          "probe": "shineth in darkness; and the darkness comprehended",
+          "status": "ok",
+          "count": 6561
+        },
+        {
+          "probe": "the darkness comprehended it not. There was",
+          "status": "ok",
+          "count": 200
+        },
+        {
+          "probe": "not. There was a man sent from",
+          "status": "ok",
+          "count": 321
+        },
+        {
+          "probe": "man sent from God, whose name was",
+          "status": "ok",
+          "count": 4389
+        },
+        {
+          "probe": "whose name was John. The same came",
+          "status": "ok",
+          "count": 718
+        },
+        {
+          "probe": "The same came for a witness, to",
+          "status": "ok",
+          "count": 1206
+        },
+        {
+          "probe": "a witness, to bear witness of the",
+          "status": "ok",
+          "count": 3139
+        },
+        {
+          "probe": "made. In him was life; and the life",
+          "status": "ok",
+          "count": 1524
+        }
+      ]
+    },
+    "verified": {
+      "pile": true,
+      "olmo_mix": true
+    },
+    "stats": {
+      "pile": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 32,
+        "max_count": 578
+      },
+      "olmo_mix": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 200,
+        "max_count": 8186
+      }
+    }
+  },
+  {
+    "title": "KJV 1 Corinthians 13",
+    "mode": "memorized",
+    "probes": {
+      "pile": [
+        {
+          "probe": "all faith, so that I could remove",
+          "status": "ok",
+          "count": 657
+        },
+        {
+          "probe": "I could remove mountains, and have not",
+          "status": "ok",
+          "count": 443
+        },
+        {
+          "probe": "and have not charity, I am nothing",
+          "status": "ok",
+          "count": 451
+        },
+        {
+          "probe": "I am nothing. And though I bestow",
+          "status": "ok",
+          "count": 138
+        },
+        {
+          "probe": "though I bestow all my goods to",
+          "status": "ok",
+          "count": 483
+        },
+        {
+          "probe": "my goods to feed the poor, and",
+          "status": "ok",
+          "count": 497
+        },
+        {
+          "probe": "the poor, and though I give my",
+          "status": "ok",
+          "count": 369
+        },
+        {
+          "probe": "I give my body to be burned",
+          "status": "ok",
+          "count": 639
+        },
+        {
+          "probe": "to be burned, and have not charity",
+          "status": "ok",
+          "count": 309
+        },
+        {
+          "probe": "have not charity, it profiteth me nothing",
+          "status": "ok",
+          "count": 271
+        },
+        {
+          "probe": "and though I have all faith, so that",
+          "status": "ok",
+          "count": 564
+        }
+      ],
+      "olmo_mix": [
+        {
+          "probe": "all faith, so that I could remove",
+          "status": "ok",
+          "count": 5262
+        },
+        {
+          "probe": "I could remove mountains, and have not",
+          "status": "ok",
+          "count": 3860
+        },
+        {
+          "probe": "and have not charity, I am nothing",
+          "status": "ok",
+          "count": 3860
+        },
+        {
+          "probe": "I am nothing. And though I bestow",
+          "status": "ok",
+          "count": 1047
+        },
+        {
+          "probe": "though I bestow all my goods to",
+          "status": "ok",
+          "count": 3770
+        },
+        {
+          "probe": "my goods to feed the poor, and",
+          "status": "ok",
+          "count": 4391
+        },
+        {
+          "probe": "the poor, and though I give my",
+          "status": "ok",
+          "count": 3201
+        },
+        {
+          "probe": "I give my body to be burned",
+          "status": "ok",
+          "count": 7219
+        },
+        {
+          "probe": "to be burned, and have not charity",
+          "status": "ok",
+          "count": 3806
+        },
+        {
+          "probe": "have not charity, it profiteth me nothing",
+          "status": "ok",
+          "count": 3930
+        },
+        {
+          "probe": "and though I have all faith, so that",
+          "status": "ok",
+          "count": 2922
+        }
+      ]
+    },
+    "verified": {
+      "pile": true,
+      "olmo_mix": true
+    },
+    "stats": {
+      "pile": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 138,
+        "max_count": 657
+      },
+      "olmo_mix": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 1047,
+        "max_count": 7219
+      }
+    }
+  },
+  {
+    "title": "KJV Beatitudes",
+    "mode": "memorized",
+    "probes": {
+      "pile": [
+        {
+          "probe": "filled. Blessed are the merciful: for they",
+          "status": "ok",
+          "count": 40
+        },
+        {
+          "probe": "merciful: for they shall obtain mercy. Blessed",
+          "status": "ok",
+          "count": 54
+        },
+        {
+          "probe": "obtain mercy. Blessed are the pure in",
+          "status": "ok",
+          "count": 79
+        },
+        {
+          "probe": "the pure in heart: for they shall",
+          "status": "ok",
+          "count": 444
+        },
+        {
+          "probe": "for they shall see God. Blessed are",
+          "status": "ok",
+          "count": 126
+        },
+        {
+          "probe": "God. Blessed are the peacemakers: for they",
+          "status": "ok",
+          "count": 41
+        },
+        {
+          "probe": "peacemakers: for they shall be called the",
+          "status": "ok",
+          "count": 480
+        },
+        {
+          "probe": "be called the children of God. Blessed",
+          "status": "ok",
+          "count": 63
+        },
+        {
+          "probe": "of God. Blessed are they which are",
+          "status": "ok",
+          "count": 44
+        },
+        {
+          "probe": "they which are persecuted for righteousness' sake",
+          "status": "ok",
+          "count": 326
+        },
+        {
+          "probe": "for they shall be filled. Blessed are the",
+          "status": "ok",
+          "count": 56
+        }
+      ],
+      "olmo_mix": [
+        {
+          "probe": "filled. Blessed are the merciful: for they",
+          "status": "ok",
+          "count": 450
+        },
+        {
+          "probe": "merciful: for they shall obtain mercy. Blessed",
+          "status": "ok",
+          "count": 570
+        },
+        {
+          "probe": "obtain mercy. Blessed are the pure in",
+          "status": "ok",
+          "count": 1215
+        },
+        {
+          "probe": "the pure in heart: for they shall",
+          "status": "ok",
+          "count": 6279
+        },
+        {
+          "probe": "for they shall see God. Blessed are",
+          "status": "ok",
+          "count": 1564
+        },
+        {
+          "probe": "God. Blessed are the peacemakers: for they",
+          "status": "ok",
+          "count": 431
+        },
+        {
+          "probe": "peacemakers: for they shall be called the",
+          "status": "ok",
+          "count": 8174
+        },
+        {
+          "probe": "be called the children of God. Blessed",
+          "status": "ok",
+          "count": 601
+        },
+        {
+          "probe": "of God. Blessed are they which are",
+          "status": "ok",
+          "count": 462
+        },
+        {
+          "probe": "they which are persecuted for righteousness' sake",
+          "status": "ok",
+          "count": 3708
+        },
+        {
+          "probe": "for they shall be filled. Blessed are the",
+          "status": "ok",
+          "count": 923
+        }
+      ]
+    },
+    "verified": {
+      "pile": true,
+      "olmo_mix": true
+    },
+    "stats": {
+      "pile": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 40,
+        "max_count": 480
+      },
+      "olmo_mix": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 431,
+        "max_count": 8174
+      }
+    }
+  },
+  {
+    "title": "Declaration self-evident truths",
+    "mode": "memorized",
+    "probes": {
+      "pile": [
+        {
+          "probe": "Men, deriving their just powers from the",
+          "status": "ok",
+          "count": 2664
+        },
+        {
+          "probe": "powers from the consent of the governed",
+          "status": "ok",
+          "count": 5719
+        },
+        {
+          "probe": "of the governed, That whenever any Form",
+          "status": "ok",
+          "count": 237
+        },
+        {
+          "probe": "whenever any Form of Government becomes destructive",
+          "status": "ok",
+          "count": 2229
+        },
+        {
+          "probe": "Government becomes destructive of these ends, it",
+          "status": "ok",
+          "count": 2237
+        },
+        {
+          "probe": "these ends, it is the Right of",
+          "status": "ok",
+          "count": 2331
+        },
+        {
+          "probe": "the Right of the People to alter",
+          "status": "ok",
+          "count": 2668
+        },
+        {
+          "probe": "People to alter or to abolish it",
+          "status": "ok",
+          "count": 2455
+        },
+        {
+          "probe": "to abolish it, and to institute new",
+          "status": "ok",
+          "count": 2531
+        },
+        {
+          "probe": "to institute new Government, laying its foundation",
+          "status": "ok",
+          "count": 1820
+        },
+        {
+          "probe": "Governments are instituted among Men, deriving their just",
+          "status": "ok",
+          "count": 2511
+        }
+      ],
+      "olmo_mix": [
+        {
+          "probe": "Men, deriving their just powers from the",
+          "status": "ok",
+          "count": 37360
+        },
+        {
+          "probe": "powers from the consent of the governed",
+          "status": "ok",
+          "count": 120128
+        },
+        {
+          "probe": "of the governed, That whenever any Form",
+          "status": "ok",
+          "count": 1456
+        },
+        {
+          "probe": "whenever any Form of Government becomes destructive",
+          "status": "ok",
+          "count": 23986
+        },
+        {
+          "probe": "Government becomes destructive of these ends, it",
+          "status": "ok",
+          "count": 25433
+        },
+        {
+          "probe": "these ends, it is the Right of",
+          "status": "ok",
+          "count": 27360
+        },
+        {
+          "probe": "the Right of the People to alter",
+          "status": "ok",
+          "count": 37610
+        },
+        {
+          "probe": "People to alter or to abolish it",
+          "status": "ok",
+          "count": 31279
+        },
+        {
+          "probe": "to abolish it, and to institute new",
+          "status": "ok",
+          "count": 29461
+        },
+        {
+          "probe": "to institute new Government, laying its foundation",
+          "status": "ok",
+          "count": 15057
+        },
+        {
+          "probe": "Governments are instituted among Men, deriving their just",
+          "status": "ok",
+          "count": 30588
+        }
+      ]
+    },
+    "verified": {
+      "pile": true,
+      "olmo_mix": true
+    },
+    "stats": {
+      "pile": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 237,
+        "max_count": 5719
+      },
+      "olmo_mix": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 1456,
+        "max_count": 120128
+      }
+    }
+  },
+  {
+    "title": "Gettysburg Address",
+    "mode": "memorized",
+    "probes": {
+      "pile": [
+        {
+          "probe": "any nation so conceived and so dedicated",
+          "status": "ok",
+          "count": 711
+        },
+        {
+          "probe": "and so dedicated. . . can long",
+          "status": "ok",
+          "count": 10
+        },
+        {
+          "probe": ". can long endure. We are met",
+          "status": "ok",
+          "count": 10
+        },
+        {
+          "probe": "We are met on a great battlefield",
+          "status": "ok",
+          "count": 248
+        },
+        {
+          "probe": "a great battlefield of that war. We",
+          "status": "ok",
+          "count": 252
+        },
+        {
+          "probe": "that war. We have come to dedicate",
+          "status": "ok",
+          "count": 626
+        },
+        {
+          "probe": "come to dedicate a portion of that",
+          "status": "ok",
+          "count": 696
+        },
+        {
+          "probe": "portion of that field as a final",
+          "status": "ok",
+          "count": 186
+        },
+        {
+          "probe": "as a final resting place for those",
+          "status": "ok",
+          "count": 591
+        },
+        {
+          "probe": "place for those who here gave their",
+          "status": "ok",
+          "count": 546
+        },
+        {
+          "probe": "whether that nation, or any nation so conceived",
+          "status": "ok",
+          "count": 548
+        }
+      ],
+      "olmo_mix": [
+        {
+          "probe": "any nation so conceived and so dedicated",
+          "status": "ok",
+          "count": 7565
+        },
+        {
+          "probe": "and so dedicated. . . can long",
+          "status": "ok",
+          "count": 49
+        },
+        {
+          "probe": ". can long endure. We are met",
+          "status": "ok",
+          "count": 34
+        },
+        {
+          "probe": "We are met on a great battlefield",
+          "status": "ok",
+          "count": 1631
+        },
+        {
+          "probe": "a great battlefield of that war. We",
+          "status": "ok",
+          "count": 1169
+        },
+        {
+          "probe": "that war. We have come to dedicate",
+          "status": "ok",
+          "count": 1826
+        },
+        {
+          "probe": "come to dedicate a portion of that",
+          "status": "ok",
+          "count": 3397
+        },
+        {
+          "probe": "portion of that field as a final",
+          "status": "ok",
+          "count": 831
+        },
+        {
+          "probe": "as a final resting place for those",
+          "status": "ok",
+          "count": 3212
+        },
+        {
+          "probe": "place for those who here gave their",
+          "status": "ok",
+          "count": 3062
+        },
+        {
+          "probe": "whether that nation, or any nation so conceived",
+          "status": "ok",
+          "count": 4516
+        }
+      ]
+    },
+    "verified": {
+      "pile": true,
+      "olmo_mix": true
+    },
+    "stats": {
+      "pile": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 10,
+        "max_count": 711
+      },
+      "olmo_mix": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 34,
+        "max_count": 7565
+      }
+    }
+  },
+  {
+    "title": "Hamlet soliloquy",
+    "mode": "memorized",
+    "probes": {
+      "pile": [
+        {
+          "probe": "sleep to say we end The heart-ache",
+          "status": "ok",
+          "count": 15
+        },
+        {
+          "probe": "end The heart-ache, and the thousand natural",
+          "status": "ok",
+          "count": 2
+        },
+        {
+          "probe": "the thousand natural shocks That flesh is",
+          "status": "ok",
+          "count": 28
+        },
+        {
+          "probe": "That flesh is heir to: 'tis a",
+          "status": "ok",
+          "count": 10
+        },
+        {
+          "probe": "to: 'tis a consummation Devoutly to be",
+          "status": "ok",
+          "count": 1
+        },
+        {
+          "probe": "Devoutly to be wish'd. To die, to",
+          "status": "ok",
+          "count": 19
+        },
+        {
+          "probe": "To die, to sleep. To sleep, perchance",
+          "status": "ok",
+          "count": 4
+        },
+        {
+          "probe": "To sleep, perchance to dream—ay, there's the",
+          "status": "ok",
+          "count": 5
+        },
+        {
+          "probe": "dream—ay, there's the rub, For in that",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "For in that sleep of death what",
+          "status": "ok",
+          "count": 136
+        },
+        {
+          "probe": "more; and by a sleep to say we",
+          "status": "ok",
+          "count": 231
+        }
+      ],
+      "olmo_mix": [
+        {
+          "probe": "sleep to say we end The heart-ache",
+          "status": "ok",
+          "count": 806
+        },
+        {
+          "probe": "end The heart-ache, and the thousand natural",
+          "status": "ok",
+          "count": 245
+        },
+        {
+          "probe": "the thousand natural shocks That flesh is",
+          "status": "ok",
+          "count": 1548
+        },
+        {
+          "probe": "That flesh is heir to: 'tis a",
+          "status": "ok",
+          "count": 173
+        },
+        {
+          "probe": "to: 'tis a consummation Devoutly to be",
+          "status": "ok",
+          "count": 128
+        },
+        {
+          "probe": "Devoutly to be wish'd. To die, to",
+          "status": "ok",
+          "count": 685
+        },
+        {
+          "probe": "To die, to sleep. To sleep, perchance",
+          "status": "ok",
+          "count": 113
+        },
+        {
+          "probe": "To sleep, perchance to dream—ay, there's the",
+          "status": "ok",
+          "count": 72
+        },
+        {
+          "probe": "dream—ay, there's the rub, For in that",
+          "status": "ok",
+          "count": 24
+        },
+        {
+          "probe": "For in that sleep of death what",
+          "status": "ok",
+          "count": 5119
+        },
+        {
+          "probe": "more; and by a sleep to say we",
+          "status": "ok",
+          "count": 12044
+        }
+      ]
+    },
+    "verified": {
+      "pile": false,
+      "olmo_mix": true
+    },
+    "stats": {
+      "pile": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 0,
+        "max_count": 231
+      },
+      "olmo_mix": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 24,
+        "max_count": 12044
+      }
+    }
+  },
+  {
+    "title": "Julius Caesar funeral speech",
+    "mode": "memorized",
+    "probes": {
+      "pile": [
+        {
+          "probe": "Caesar was ambitious. If it were so",
+          "status": "ok",
+          "count": 5
+        },
+        {
+          "probe": "it were so, it was a grievous",
+          "status": "ok",
+          "count": 195
+        },
+        {
+          "probe": "was a grievous fault, And grievously hath",
+          "status": "ok",
+          "count": 9
+        },
+        {
+          "probe": "And grievously hath Caesar answer'd it. Here",
+          "status": "ok",
+          "count": 5
+        },
+        {
+          "probe": "answer'd it. Here, under leave of Brutus",
+          "status": "ok",
+          "count": 7
+        },
+        {
+          "probe": "leave of Brutus and the rest, For",
+          "status": "ok",
+          "count": 1
+        },
+        {
+          "probe": "the rest, For Brutus is an honourable",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "is an honourable man, So are they",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "So are they all, all honourable men",
+          "status": "ok",
+          "count": 26
+        },
+        {
+          "probe": "all honourable men, Come I to speak",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "Brutus Hath told you Caesar was ambitious. If",
+          "status": "ok",
+          "count": 1
+        }
+      ],
+      "olmo_mix": [
+        {
+          "probe": "Caesar was ambitious. If it were so",
+          "status": "ok",
+          "count": 248
+        },
+        {
+          "probe": "it were so, it was a grievous",
+          "status": "ok",
+          "count": 6050
+        },
+        {
+          "probe": "was a grievous fault, And grievously hath",
+          "status": "ok",
+          "count": 262
+        },
+        {
+          "probe": "And grievously hath Caesar answer'd it. Here",
+          "status": "ok",
+          "count": 125
+        },
+        {
+          "probe": "answer'd it. Here, under leave of Brutus",
+          "status": "ok",
+          "count": 149
+        },
+        {
+          "probe": "leave of Brutus and the rest, For",
+          "status": "ok",
+          "count": 49
+        },
+        {
+          "probe": "the rest, For Brutus is an honourable",
+          "status": "ok",
+          "count": 13
+        },
+        {
+          "probe": "is an honourable man, So are they",
+          "status": "ok",
+          "count": 8
+        },
+        {
+          "probe": "So are they all, all honourable men",
+          "status": "ok",
+          "count": 844
+        },
+        {
+          "probe": "all honourable men, Come I to speak",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "Brutus Hath told you Caesar was ambitious. If",
+          "status": "ok",
+          "count": 23
+        }
+      ]
+    },
+    "verified": {
+      "pile": false,
+      "olmo_mix": true
+    },
+    "stats": {
+      "pile": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 0,
+        "max_count": 195
+      },
+      "olmo_mix": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 0,
+        "max_count": 6050
+      }
+    }
+  },
+  {
+    "title": "Huckleberry Finn opening",
+    "mode": "memorized",
+    "probes": {
+      "pile": [
+        {
+          "probe": "stretched, but mainly he told the truth",
+          "status": "ok",
+          "count": 90
+        },
+        {
+          "probe": "told the truth. That is nothing. I",
+          "status": "ok",
+          "count": 48
+        },
+        {
+          "probe": "is nothing. I never seen anybody but",
+          "status": "ok",
+          "count": 45
+        },
+        {
+          "probe": "seen anybody but lied one time or",
+          "status": "ok",
+          "count": 36
+        },
+        {
+          "probe": "one time or another, without it was",
+          "status": "ok",
+          "count": 55
+        },
+        {
+          "probe": "without it was Aunt Polly, or the",
+          "status": "ok",
+          "count": 46
+        },
+        {
+          "probe": "Polly, or the widow, or maybe Mary",
+          "status": "ok",
+          "count": 40
+        },
+        {
+          "probe": "or maybe Mary. Aunt Polly—Tom's Aunt Polly",
+          "status": "ok",
+          "count": 19
+        },
+        {
+          "probe": "Polly—Tom's Aunt Polly, she is—and Mary, and",
+          "status": "ok",
+          "count": 19
+        },
+        {
+          "probe": "is—and Mary, and the Widow Douglas is",
+          "status": "ok",
+          "count": 13
+        },
+        {
+          "probe": "was things which he stretched, but mainly he",
+          "status": "ok",
+          "count": 67
+        }
+      ],
+      "olmo_mix": [
+        {
+          "probe": "stretched, but mainly he told the truth",
+          "status": "ok",
+          "count": 1707
+        },
+        {
+          "probe": "told the truth. That is nothing. I",
+          "status": "ok",
+          "count": 484
+        },
+        {
+          "probe": "is nothing. I never seen anybody but",
+          "status": "ok",
+          "count": 462
+        },
+        {
+          "probe": "seen anybody but lied one time or",
+          "status": "ok",
+          "count": 590
+        },
+        {
+          "probe": "one time or another, without it was",
+          "status": "ok",
+          "count": 801
+        },
+        {
+          "probe": "without it was Aunt Polly, or the",
+          "status": "ok",
+          "count": 568
+        },
+        {
+          "probe": "Polly, or the widow, or maybe Mary",
+          "status": "ok",
+          "count": 430
+        },
+        {
+          "probe": "or maybe Mary. Aunt Polly—Tom's Aunt Polly",
+          "status": "ok",
+          "count": 38
+        },
+        {
+          "probe": "Polly—Tom's Aunt Polly, she is—and Mary, and",
+          "status": "ok",
+          "count": 39
+        },
+        {
+          "probe": "is—and Mary, and the Widow Douglas is",
+          "status": "ok",
+          "count": 38
+        },
+        {
+          "probe": "was things which he stretched, but mainly he",
+          "status": "ok",
+          "count": 1404
+        }
+      ]
+    },
+    "verified": {
+      "pile": true,
+      "olmo_mix": true
+    },
+    "stats": {
+      "pile": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 13,
+        "max_count": 90
+      },
+      "olmo_mix": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 38,
+        "max_count": 1707
+      }
+    }
+  },
+  {
+    "title": "Frankenstein creation scene",
+    "mode": "memorized",
+    "probes": {
+      "pile": [
+        {
+          "probe": "lay at my feet. It was already",
+          "status": "ok",
+          "count": 90
+        },
+        {
+          "probe": "It was already one in the morning",
+          "status": "ok",
+          "count": 107
+        },
+        {
+          "probe": "in the morning; the rain pattered dismally",
+          "status": "ok",
+          "count": 114
+        },
+        {
+          "probe": "rain pattered dismally against the panes, and",
+          "status": "ok",
+          "count": 122
+        },
+        {
+          "probe": "the panes, and my candle was nearly",
+          "status": "ok",
+          "count": 122
+        },
+        {
+          "probe": "candle was nearly burnt out, when, by",
+          "status": "ok",
+          "count": 115
+        },
+        {
+          "probe": "out, when, by the glimmer of the",
+          "status": "ok",
+          "count": 123
+        },
+        {
+          "probe": "glimmer of the half-extinguished light, I saw",
+          "status": "ok",
+          "count": 125
+        },
+        {
+          "probe": "light, I saw the dull yellow eye",
+          "status": "ok",
+          "count": 131
+        },
+        {
+          "probe": "dull yellow eye of the creature open",
+          "status": "ok",
+          "count": 181
+        },
+        {
+          "probe": "the lifeless thing that lay at my feet",
+          "status": "ok",
+          "count": 140
+        }
+      ],
+      "olmo_mix": [
+        {
+          "probe": "lay at my feet. It was already",
+          "status": "ok",
+          "count": 598
+        },
+        {
+          "probe": "It was already one in the morning",
+          "status": "ok",
+          "count": 1045
+        },
+        {
+          "probe": "in the morning; the rain pattered dismally",
+          "status": "ok",
+          "count": 1125
+        },
+        {
+          "probe": "rain pattered dismally against the panes, and",
+          "status": "ok",
+          "count": 1072
+        },
+        {
+          "probe": "the panes, and my candle was nearly",
+          "status": "ok",
+          "count": 1056
+        },
+        {
+          "probe": "candle was nearly burnt out, when, by",
+          "status": "ok",
+          "count": 969
+        },
+        {
+          "probe": "out, when, by the glimmer of the",
+          "status": "ok",
+          "count": 1063
+        },
+        {
+          "probe": "glimmer of the half-extinguished light, I saw",
+          "status": "ok",
+          "count": 1617
+        },
+        {
+          "probe": "light, I saw the dull yellow eye",
+          "status": "ok",
+          "count": 1522
+        },
+        {
+          "probe": "dull yellow eye of the creature open",
+          "status": "ok",
+          "count": 2443
+        },
+        {
+          "probe": "the lifeless thing that lay at my feet",
+          "status": "ok",
+          "count": 1931
+        }
+      ]
+    },
+    "verified": {
+      "pile": true,
+      "olmo_mix": true
+    },
+    "stats": {
+      "pile": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 90,
+        "max_count": 181
+      },
+      "olmo_mix": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 598,
+        "max_count": 2443
+      }
+    }
+  },
+  {
+    "title": "A Scandal in Bohemia opening",
+    "mode": "memorized",
+    "probes": {
+      "pile": [
+        {
+          "probe": "Adler. All emotions, and that one particularly",
+          "status": "ok",
+          "count": 64
+        },
+        {
+          "probe": "that one particularly, were abhorrent to his",
+          "status": "ok",
+          "count": 79
+        },
+        {
+          "probe": "abhorrent to his cold, precise but admirably",
+          "status": "ok",
+          "count": 78
+        },
+        {
+          "probe": "precise but admirably balanced mind. He was",
+          "status": "ok",
+          "count": 44
+        },
+        {
+          "probe": "mind. He was, I take it, the",
+          "status": "ok",
+          "count": 69
+        },
+        {
+          "probe": "take it, the most perfect reasoning and",
+          "status": "ok",
+          "count": 87
+        },
+        {
+          "probe": "perfect reasoning and observing machine that the",
+          "status": "ok",
+          "count": 104
+        },
+        {
+          "probe": "machine that the world has seen, but",
+          "status": "ok",
+          "count": 65
+        },
+        {
+          "probe": "has seen, but as a lover he",
+          "status": "ok",
+          "count": 52
+        },
+        {
+          "probe": "a lover he would have placed himself",
+          "status": "ok",
+          "count": 62
+        },
+        {
+          "probe": "to love for Irene Adler. All emotions, and",
+          "status": "ok",
+          "count": 76
+        }
+      ],
+      "olmo_mix": [
+        {
+          "probe": "Adler. All emotions, and that one particularly",
+          "status": "ok",
+          "count": 270
+        },
+        {
+          "probe": "that one particularly, were abhorrent to his",
+          "status": "ok",
+          "count": 461
+        },
+        {
+          "probe": "abhorrent to his cold, precise but admirably",
+          "status": "ok",
+          "count": 570
+        },
+        {
+          "probe": "precise but admirably balanced mind. He was",
+          "status": "ok",
+          "count": 178
+        },
+        {
+          "probe": "mind. He was, I take it, the",
+          "status": "ok",
+          "count": 282
+        },
+        {
+          "probe": "take it, the most perfect reasoning and",
+          "status": "ok",
+          "count": 386
+        },
+        {
+          "probe": "perfect reasoning and observing machine that the",
+          "status": "ok",
+          "count": 807
+        },
+        {
+          "probe": "machine that the world has seen, but",
+          "status": "ok",
+          "count": 156
+        },
+        {
+          "probe": "has seen, but as a lover he",
+          "status": "ok",
+          "count": 137
+        },
+        {
+          "probe": "a lover he would have placed himself",
+          "status": "ok",
+          "count": 166
+        },
+        {
+          "probe": "to love for Irene Adler. All emotions, and",
+          "status": "ok",
+          "count": 266
+        }
+      ]
+    },
+    "verified": {
+      "pile": true,
+      "olmo_mix": true
+    },
+    "stats": {
+      "pile": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 44,
+        "max_count": 104
+      },
+      "olmo_mix": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 137,
+        "max_count": 807
+      }
+    }
+  },
+  {
+    "title": "Treasure Island opening",
+    "mode": "memorized",
+    "probes": {
+      "pile": [
+        {
+          "probe": "treasure not yet lifted, I take up",
+          "status": "ok",
+          "count": 21
+        },
+        {
+          "probe": "I take up my pen in the",
+          "status": "ok",
+          "count": 27
+        },
+        {
+          "probe": "pen in the year of grace 17",
+          "status": "ok",
+          "count": 75
+        },
+        {
+          "probe": "of grace 17—, and go back to",
+          "status": "ok",
+          "count": 7
+        },
+        {
+          "probe": "go back to the time when my",
+          "status": "ok",
+          "count": 77
+        },
+        {
+          "probe": "time when my father kept the Admiral",
+          "status": "ok",
+          "count": 25
+        },
+        {
+          "probe": "kept the Admiral Benbow inn and the",
+          "status": "ok",
+          "count": 17
+        },
+        {
+          "probe": "inn and the brown old seaman with",
+          "status": "ok",
+          "count": 17
+        },
+        {
+          "probe": "old seaman with the sabre cut first",
+          "status": "ok",
+          "count": 9
+        },
+        {
+          "probe": "sabre cut first took up his lodging",
+          "status": "ok",
+          "count": 12
+        },
+        {
+          "probe": "because there is still treasure not yet lifted",
+          "status": "ok",
+          "count": 73
+        }
+      ],
+      "olmo_mix": [
+        {
+          "probe": "treasure not yet lifted, I take up",
+          "status": "ok",
+          "count": 161
+        },
+        {
+          "probe": "I take up my pen in the",
+          "status": "ok",
+          "count": 167
+        },
+        {
+          "probe": "pen in the year of grace 17",
+          "status": "ok",
+          "count": 300
+        },
+        {
+          "probe": "of grace 17—, and go back to",
+          "status": "ok",
+          "count": 18
+        },
+        {
+          "probe": "go back to the time when my",
+          "status": "ok",
+          "count": 557
+        },
+        {
+          "probe": "time when my father kept the Admiral",
+          "status": "ok",
+          "count": 114
+        },
+        {
+          "probe": "kept the Admiral Benbow inn and the",
+          "status": "ok",
+          "count": 81
+        },
+        {
+          "probe": "inn and the brown old seaman with",
+          "status": "ok",
+          "count": 93
+        },
+        {
+          "probe": "old seaman with the sabre cut first",
+          "status": "ok",
+          "count": 95
+        },
+        {
+          "probe": "sabre cut first took up his lodging",
+          "status": "ok",
+          "count": 99
+        },
+        {
+          "probe": "because there is still treasure not yet lifted",
+          "status": "ok",
+          "count": 175
+        }
+      ]
+    },
+    "verified": {
+      "pile": false,
+      "olmo_mix": true
+    },
+    "stats": {
+      "pile": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 7,
+        "max_count": 77
+      },
+      "olmo_mix": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 18,
+        "max_count": 557
+      }
+    }
+  },
+  {
+    "title": "War of the Worlds opening",
+    "mode": "memorized",
+    "probes": {
+      "pile": [
+        {
+          "probe": "scrutinised and studied, perhaps almost as narrowly",
+          "status": "ok",
+          "count": 61
+        },
+        {
+          "probe": "almost as narrowly as a man with",
+          "status": "ok",
+          "count": 129
+        },
+        {
+          "probe": "a man with a microscope might scrutinise",
+          "status": "ok",
+          "count": 80
+        },
+        {
+          "probe": "microscope might scrutinise the transient creatures that",
+          "status": "ok",
+          "count": 68
+        },
+        {
+          "probe": "transient creatures that swarm and multiply in",
+          "status": "ok",
+          "count": 127
+        },
+        {
+          "probe": "and multiply in a drop of water",
+          "status": "ok",
+          "count": 220
+        },
+        {
+          "probe": "drop of water. With infinite complacency men",
+          "status": "ok",
+          "count": 53
+        },
+        {
+          "probe": "infinite complacency men went to and fro",
+          "status": "ok",
+          "count": 53
+        },
+        {
+          "probe": "to and fro over this globe about",
+          "status": "ok",
+          "count": 57
+        },
+        {
+          "probe": "this globe about their little affairs, serene",
+          "status": "ok",
+          "count": 56
+        },
+        {
+          "probe": "various concerns they were scrutinised and studied, perhaps",
+          "status": "ok",
+          "count": 59
+        }
+      ],
+      "olmo_mix": [
+        {
+          "probe": "scrutinised and studied, perhaps almost as narrowly",
+          "status": "ok",
+          "count": 812
+        },
+        {
+          "probe": "almost as narrowly as a man with",
+          "status": "ok",
+          "count": 1625
+        },
+        {
+          "probe": "a man with a microscope might scrutinise",
+          "status": "ok",
+          "count": 1013
+        },
+        {
+          "probe": "microscope might scrutinise the transient creatures that",
+          "status": "ok",
+          "count": 855
+        },
+        {
+          "probe": "transient creatures that swarm and multiply in",
+          "status": "ok",
+          "count": 1844
+        },
+        {
+          "probe": "and multiply in a drop of water",
+          "status": "ok",
+          "count": 3483
+        },
+        {
+          "probe": "drop of water. With infinite complacency men",
+          "status": "ok",
+          "count": 332
+        },
+        {
+          "probe": "infinite complacency men went to and fro",
+          "status": "ok",
+          "count": 752
+        },
+        {
+          "probe": "to and fro over this globe about",
+          "status": "ok",
+          "count": 742
+        },
+        {
+          "probe": "this globe about their little affairs, serene",
+          "status": "ok",
+          "count": 605
+        },
+        {
+          "probe": "various concerns they were scrutinised and studied, perhaps",
+          "status": "ok",
+          "count": 606
+        }
+      ]
+    },
+    "verified": {
+      "pile": true,
+      "olmo_mix": true
+    },
+    "stats": {
+      "pile": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 53,
+        "max_count": 220
+      },
+      "olmo_mix": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 332,
+        "max_count": 3483
+      }
+    }
+  },
+  {
+    "title": "Peter Pan opening",
+    "mode": "memorized",
+    "probes": {
+      "pile": [
+        {
+          "probe": "mother. I suppose she must have looked",
+          "status": "ok",
+          "count": 46
+        },
+        {
+          "probe": "must have looked rather delightful, for Mrs",
+          "status": "ok",
+          "count": 42
+        },
+        {
+          "probe": "delightful, for Mrs. Darling put her hand",
+          "status": "ok",
+          "count": 37
+        },
+        {
+          "probe": "put her hand to her heart and",
+          "status": "ok",
+          "count": 178
+        },
+        {
+          "probe": "her heart and cried, \"Oh, why can't",
+          "status": "ok",
+          "count": 21
+        },
+        {
+          "probe": "Oh, why can't you remain like this",
+          "status": "ok",
+          "count": 0
+        },
+        {
+          "probe": "remain like this for ever!\" This was",
+          "status": "ok",
+          "count": 16
+        },
+        {
+          "probe": "ever!\" This was all that passed between",
+          "status": "ok",
+          "count": 14
+        },
+        {
+          "probe": "that passed between them on the subject",
+          "status": "ok",
+          "count": 76
+        },
+        {
+          "probe": "on the subject, but henceforth Wendy knew",
+          "status": "ok",
+          "count": 42
+        },
+        {
+          "probe": "with it to her mother. I suppose she",
+          "status": "ok",
+          "count": 45
+        }
+      ],
+      "olmo_mix": [
+        {
+          "probe": "mother. I suppose she must have looked",
+          "status": "ok",
+          "count": 399
+        },
+        {
+          "probe": "must have looked rather delightful, for Mrs",
+          "status": "ok",
+          "count": 380
+        },
+        {
+          "probe": "delightful, for Mrs. Darling put her hand",
+          "status": "ok",
+          "count": 314
+        },
+        {
+          "probe": "put her hand to her heart and",
+          "status": "ok",
+          "count": 1246
+        },
+        {
+          "probe": "her heart and cried, \"Oh, why can't",
+          "status": "ok",
+          "count": 229
+        },
+        {
+          "probe": "Oh, why can't you remain like this",
+          "status": "ok",
+          "count": 1
+        },
+        {
+          "probe": "remain like this for ever!\" This was",
+          "status": "ok",
+          "count": 130
+        },
+        {
+          "probe": "ever!\" This was all that passed between",
+          "status": "ok",
+          "count": 137
+        },
+        {
+          "probe": "that passed between them on the subject",
+          "status": "ok",
+          "count": 459
+        },
+        {
+          "probe": "on the subject, but henceforth Wendy knew",
+          "status": "ok",
+          "count": 369
+        },
+        {
+          "probe": "with it to her mother. I suppose she",
+          "status": "ok",
+          "count": 370
+        }
+      ]
+    },
+    "verified": {
+      "pile": true,
+      "olmo_mix": true
+    },
+    "stats": {
+      "pile": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 0,
+        "max_count": 178
+      },
+      "olmo_mix": {
+        "n_probes": 11,
+        "n_unknown": 0,
+        "min_count": 1,
+        "max_count": 1246
+      }
+    }
+  }
+]

@@ -1,0 +1,23 @@
+# OMTR pilot harness — pinned versions.
+#
+# These are the exact versions recorded live in every results/raw/pilot_*.json
+# "meta" block, cross-checked against the training venv on 2026-08-20
+# (torch/transformer_lens/transformers via each file's own meta; scipy/numpy/
+# pandas via direct `import` version check, since this venv has no pip module).
+#
+# torch's CUDA 12.4 build is not on the default PyPI index — install it first
+# from the PyTorch wheel index, then install the rest of this file:
+#
+#   pip install torch==2.6.0+cu124 --extra-index-url https://download.pytorch.org/whl/cu124
+#   pip install -r requirements.txt
+#
+# CPU-only machines cannot reproduce these runs bit-for-bit: dtype falls back
+# to fp32 (see harness/run_pilot.py), which changes every recorded number.
+
+--extra-index-url https://download.pytorch.org/whl/cu124
+torch==2.6.0+cu124
+transformer-lens==3.7.3
+transformers==5.15.1
+scipy==1.17.1
+numpy==2.4.6
+pandas==3.0.5

@@ -1,0 +1,482 @@
+[
+  {
+    "model": "EleutherAI_pythia-1.4b",
+    "id": "L5-gardening-1",
+    "kind": "greedy",
+    "corpus": "pile",
+    "n_probes": 12,
+    "n_unknown": 0,
+    "frac_present": 0.25,
+    "max_count": 692
+  },
+  {
+    "model": "EleutherAI_pythia-1.4b",
+    "id": "L5-gardening-1",
+    "kind": "sample0",
+    "corpus": "pile",
+    "n_probes": 12,
+    "n_unknown": 0,
+    "frac_present": 0.16666666666666666,
+    "max_count": 1709
+  },
+  {
+    "model": "EleutherAI_pythia-1.4b",
+    "id": "L5-railways-1",
+    "kind": "greedy",
+    "corpus": "pile",
+    "n_probes": 13,
+    "n_unknown": 0,
+    "frac_present": 0.3076923076923077,
+    "max_count": 8
+  },
+  {
+    "model": "EleutherAI_pythia-1.4b",
+    "id": "L5-railways-1",
+    "kind": "sample0",
+    "corpus": "pile",
+    "n_probes": 13,
+    "n_unknown": 0,
+    "frac_present": 0.15384615384615385,
+    "max_count": 27301
+  },
+  {
+    "model": "EleutherAI_pythia-1.4b",
+    "id": "L5-human_anatomy-1",
+    "kind": "greedy",
+    "corpus": "pile",
+    "n_probes": 12,
+    "n_unknown": 0,
+    "frac_present": 0.4166666666666667,
+    "max_count": 13962
+  },
+  {
+    "model": "EleutherAI_pythia-1.4b",
+    "id": "L5-human_anatomy-1",
+    "kind": "sample0",
+    "corpus": "pile",
+    "n_probes": 14,
+    "n_unknown": 0,
+    "frac_present": 0.14285714285714285,
+    "max_count": 33
+  },
+  {
+    "model": "EleutherAI_pythia-1.4b",
+    "id": "L5-mathematics-1",
+    "kind": "greedy",
+    "corpus": "pile",
+    "n_probes": 13,
+    "n_unknown": 0,
+    "frac_present": 0.6153846153846154,
+    "max_count": 16668
+  },
+  {
+    "model": "EleutherAI_pythia-1.4b",
+    "id": "L5-mathematics-1",
+    "kind": "sample0",
+    "corpus": "pile",
+    "n_probes": 13,
+    "n_unknown": 0,
+    "frac_present": 0.0,
+    "max_count": 0
+  },
+  {
+    "model": "EleutherAI_pythia-1.4b",
+    "id": "L5-weather-1",
+    "kind": "greedy",
+    "corpus": "pile",
+    "n_probes": 11,
+    "n_unknown": 0,
+    "frac_present": 0.45454545454545453,
+    "max_count": 530
+  },
+  {
+    "model": "EleutherAI_pythia-1.4b",
+    "id": "L5-weather-1",
+    "kind": "sample0",
+    "corpus": "pile",
+    "n_probes": 11,
+    "n_unknown": 0,
+    "frac_present": 0.18181818181818182,
+    "max_count": 150
+  },
+  {
+    "model": "EleutherAI_pythia-1.4b",
+    "id": "L5-architecture-1",
+    "kind": "greedy",
+    "corpus": "pile",
+    "n_probes": 12,
+    "n_unknown": 0,
+    "frac_present": 0.08333333333333333,
+    "max_count": 1
+  },
+  {
+    "model": "EleutherAI_pythia-1.4b",
+    "id": "L5-architecture-1",
+    "kind": "sample0",
+    "corpus": "pile",
+    "n_probes": 12,
+    "n_unknown": 0,
+    "frac_present": 0.08333333333333333,
+    "max_count": 9
+  },
+  {
+    "model": "EleutherAI_pythia-1.4b",
+    "id": "L5-Greek_mythology-1",
+    "kind": "greedy",
+    "corpus": "pile",
+    "n_probes": 13,
+    "n_unknown": 0,
+    "frac_present": 0.3076923076923077,
+    "max_count": 432
+  },
+  {
+    "model": "EleutherAI_pythia-1.4b",
+    "id": "L5-Greek_mythology-1",
+    "kind": "sample0",
+    "corpus": "pile",
+    "n_probes": 13,
+    "n_unknown": 0,
+    "frac_present": 0.23076923076923078,
+    "max_count": 8
+  },
+  {
+    "model": "EleutherAI_pythia-1.4b",
+    "id": "L5-cooking-1",
+    "kind": "greedy",
+    "corpus": "pile",
+    "n_probes": 12,
+    "n_unknown": 0,
+    "frac_present": 0.16666666666666666,
+    "max_count": 5
+  },
+  {
+    "model": "EleutherAI_pythia-1.4b",
+    "id": "L5-cooking-1",
+    "kind": "sample0",
+    "corpus": "pile",
+    "n_probes": 12,
+    "n_unknown": 0,
+    "frac_present": 0.3333333333333333,
+    "max_count": 796
+  },
+  {
+    "model": "EleutherAI_pythia-1.4b",
+    "id": "L5-astronomy-1",
+    "kind": "greedy",
+    "corpus": "pile",
+    "n_probes": 13,
+    "n_unknown": 0,
+    "frac_present": 0.3076923076923077,
+    "max_count": 15
+  },
+  {
+    "model": "EleutherAI_pythia-1.4b",
+    "id": "L5-astronomy-1",
+    "kind": "sample0",
+    "corpus": "pile",
+    "n_probes": 12,
+    "n_unknown": 0,
+    "frac_present": 0.3333333333333333,
+    "max_count": 13069
+  },
+  {
+    "model": "EleutherAI_pythia-1.4b",
+    "id": "L5-ocean_life-1",
+    "kind": "greedy",
+    "corpus": "pile",
+    "n_probes": 13,
+    "n_unknown": 0,
+    "frac_present": 0.5384615384615384,
+    "max_count": 4453
+  },
+  {
+    "model": "EleutherAI_pythia-1.4b",
+    "id": "L5-ocean_life-1",
+    "kind": "sample0",
+    "corpus": "pile",
+    "n_probes": 12,
+    "n_unknown": 0,
+    "frac_present": 0.08333333333333333,
+    "max_count": 2
+  },
+  {
+    "model": "EleutherAI_pythia-1.4b",
+    "id": "L5-classical_music-1",
+    "kind": "greedy",
+    "corpus": "pile",
+    "n_probes": 11,
+    "n_unknown": 0,
+    "frac_present": 0.09090909090909091,
+    "max_count": 1
+  },
+  {
+    "model": "EleutherAI_pythia-1.4b",
+    "id": "L5-classical_music-1",
+    "kind": "sample0",
+    "corpus": "pile",
+    "n_probes": 12,
+    "n_unknown": 0,
+    "frac_present": 0.16666666666666666,
+    "max_count": 31
+  },
+  {
+    "model": "EleutherAI_pythia-1.4b",
+    "id": "L5-chess-1",
+    "kind": "greedy",
+    "corpus": "pile",
+    "n_probes": 12,
+    "n_unknown": 0,
+    "frac_present": 0.08333333333333333,
+    "max_count": 1
+  },
+  {
+    "model": "EleutherAI_pythia-1.4b",
+    "id": "L5-chess-1",
+    "kind": "sample0",
+    "corpus": "pile",
+    "n_probes": 13,
+    "n_unknown": 0,
+    "frac_present": 0.46153846153846156,
+    "max_count": 477
+  },
+  {
+    "model": "allenai_OLMo-2-0425-1B",
+    "id": "L5-gardening-1",
+    "kind": "greedy",
+    "corpus": "olmo_mix",
+    "n_probes": 13,
+    "n_unknown": 0,
+    "frac_present": 0.5384615384615384,
+    "max_count": 61692
+  },
+  {
+    "model": "allenai_OLMo-2-0425-1B",
+    "id": "L5-gardening-1",
+    "kind": "sample0",
+    "corpus": "olmo_mix",
+    "n_probes": 12,
+    "n_unknown": 0,
+    "frac_present": 0.08333333333333333,
+    "max_count": 1363
+  },
+  {
+    "model": "allenai_OLMo-2-0425-1B",
+    "id": "L5-railways-1",
+    "kind": "greedy",
+    "corpus": "olmo_mix",
+    "n_probes": 14,
+    "n_unknown": 0,
+    "frac_present": 0.5714285714285714,
+    "max_count": 48504
+  },
+  {
+    "model": "allenai_OLMo-2-0425-1B",
+    "id": "L5-railways-1",
+    "kind": "sample0",
+    "corpus": "olmo_mix",
+    "n_probes": 11,
+    "n_unknown": 0,
+    "frac_present": 0.18181818181818182,
+    "max_count": 10
+  },
+  {
+    "model": "allenai_OLMo-2-0425-1B",
+    "id": "L5-human_anatomy-1",
+    "kind": "greedy",
+    "corpus": "olmo_mix",
+    "n_probes": 13,
+    "n_unknown": 0,
+    "frac_present": 0.6923076923076923,
+    "max_count": 8024
+  },
+  {
+    "model": "allenai_OLMo-2-0425-1B",
+    "id": "L5-human_anatomy-1",
+    "kind": "sample0",
+    "corpus": "olmo_mix",
+    "n_probes": 11,
+    "n_unknown": 0,
+    "frac_present": 0.0,
+    "max_count": 0
+  },
+  {
+    "model": "allenai_OLMo-2-0425-1B",
+    "id": "L5-mathematics-1",
+    "kind": "greedy",
+    "corpus": "olmo_mix",
+    "n_probes": 13,
+    "n_unknown": 0,
+    "frac_present": 0.6923076923076923,
+    "max_count": 2574
+  },
+  {
+    "model": "allenai_OLMo-2-0425-1B",
+    "id": "L5-mathematics-1",
+    "kind": "sample0",
+    "corpus": "olmo_mix",
+    "n_probes": 13,
+    "n_unknown": 0,
+    "frac_present": 0.23076923076923078,
+    "max_count": 584
+  },
+  {
+    "model": "allenai_OLMo-2-0425-1B",
+    "id": "L5-weather-1",
+    "kind": "greedy",
+    "corpus": "olmo_mix",
+    "n_probes": 12,
+    "n_unknown": 0,
+    "frac_present": 0.16666666666666666,
+    "max_count": 63
+  },
+  {
+    "model": "allenai_OLMo-2-0425-1B",
+    "id": "L5-weather-1",
+    "kind": "sample0",
+    "corpus": "olmo_mix",
+    "n_probes": 13,
+    "n_unknown": 0,
+    "frac_present": 0.23076923076923078,
+    "max_count": 152
+  },
+  {
+    "model": "allenai_OLMo-2-0425-1B",
+    "id": "L5-architecture-1",
+    "kind": "greedy",
+    "corpus": "olmo_mix",
+    "n_probes": 12,
+    "n_unknown": 0,
+    "frac_present": 0.4166666666666667,
+    "max_count": 2254
+  },
+  {
+    "model": "allenai_OLMo-2-0425-1B",
+    "id": "L5-architecture-1",
+    "kind": "sample0",
+    "corpus": "olmo_mix",
+    "n_probes": 11,
+    "n_unknown": 0,
+    "frac_present": 0.09090909090909091,
+    "max_count": 1
+  },
+  {
+    "model": "allenai_OLMo-2-0425-1B",
+    "id": "L5-Greek_mythology-1",
+    "kind": "greedy",
+    "corpus": "olmo_mix",
+    "n_probes": 12,
+    "n_unknown": 0,
+    "frac_present": 0.8333333333333334,
+    "max_count": 45520
+  },
+  {
+    "model": "allenai_OLMo-2-0425-1B",
+    "id": "L5-Greek_mythology-1",
+    "kind": "sample0",
+    "corpus": "olmo_mix",
+    "n_probes": 12,
+    "n_unknown": 0,
+    "frac_present": 0.16666666666666666,
+    "max_count": 65
+  },
+  {
+    "model": "allenai_OLMo-2-0425-1B",
+    "id": "L5-cooking-1",
+    "kind": "greedy",
+    "corpus": "olmo_mix",
+    "n_probes": 12,
+    "n_unknown": 0,
+    "frac_present": 0.5,
+    "max_count": 591
+  },
+  {
+    "model": "allenai_OLMo-2-0425-1B",
+    "id": "L5-cooking-1",
+    "kind": "sample0",
+    "corpus": "olmo_mix",
+    "n_probes": 12,
+    "n_unknown": 0,
+    "frac_present": 0.3333333333333333,
+    "max_count": 770
+  },
+  {
+    "model": "allenai_OLMo-2-0425-1B",
+    "id": "L5-astronomy-1",
+    "kind": "greedy",
+    "corpus": "olmo_mix",
+    "n_probes": 13,
+    "n_unknown": 0,
+    "frac_present": 0.6923076923076923,
+    "max_count": 14889
+  },
+  {
+    "model": "allenai_OLMo-2-0425-1B",
+    "id": "L5-astronomy-1",
+    "kind": "sample0",
+    "corpus": "olmo_mix",
+    "n_probes": 13,
+    "n_unknown": 0,
+    "frac_present": 0.23076923076923078,
+    "max_count": 190
+  },
+  {
+    "model": "allenai_OLMo-2-0425-1B",
+    "id": "L5-ocean_life-1",
+    "kind": "greedy",
+    "corpus": "olmo_mix",
+    "n_probes": 13,
+    "n_unknown": 0,
+    "frac_present": 0.5384615384615384,
+    "max_count": 2631
+  },
+  {
+    "model": "allenai_OLMo-2-0425-1B",
+    "id": "L5-ocean_life-1",
+    "kind": "sample0",
+    "corpus": "olmo_mix",
+    "n_probes": 12,
+    "n_unknown": 0,
+    "frac_present": 0.16666666666666666,
+    "max_count": 701
+  },
+  {
+    "model": "allenai_OLMo-2-0425-1B",
+    "id": "L5-classical_music-1",
+    "kind": "greedy",
+    "corpus": "olmo_mix",
+    "n_probes": 12,
+    "n_unknown": 0,
+    "frac_present": 0.75,
+    "max_count": 1894
+  },
+  {
+    "model": "allenai_OLMo-2-0425-1B",
+    "id": "L5-classical_music-1",
+    "kind": "sample0",
+    "corpus": "olmo_mix",
+    "n_probes": 12,
+    "n_unknown": 0,
+    "frac_present": 0.16666666666666666,
+    "max_count": 389
+  },
+  {
+    "model": "allenai_OLMo-2-0425-1B",
+    "id": "L5-chess-1",
+    "kind": "greedy",
+    "corpus": "olmo_mix",
+    "n_probes": 13,
+    "n_unknown": 0,
+    "frac_present": 0.6153846153846154,
+    "max_count": 29769
+  },
+  {
+    "model": "allenai_OLMo-2-0425-1B",
+    "id": "L5-chess-1",
+    "kind": "sample0",
+    "corpus": "olmo_mix",
+    "n_probes": 12,
+    "n_unknown": 0,
+    "frac_present": 0.4166666666666667,
+    "max_count": 4258
+  }
+]

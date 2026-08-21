@@ -1,0 +1,227 @@
+{
+  "EleutherAI_pythia-410m": {
+    "T1_within": {
+      "L0": {
+        "n": 17,
+        "rho": -0.53,
+        "p": 0.0286
+      },
+      "L0N": {
+        "n": 12,
+        "rho": -0.055,
+        "p": 0.8659
+      },
+      "L1": {
+        "n": 24,
+        "rho": -0.142,
+        "p": 0.5087
+      }
+    },
+    "T2_dupcount": {
+      "n": 17,
+      "count_vs_depth": {
+        "rho": -0.296,
+        "p": 0.249
+      },
+      "count_vs_gold": {
+        "rho": 0.691,
+        "p": 0.0021
+      }
+    },
+    "T3_partial_gold_depth_ctrl_entropy": {
+      "n": 17,
+      "rho": 0.103,
+      "p": 0.6942
+    },
+    "T4_pos1plus_all": {
+      "n": 53,
+      "rho": -0.345,
+      "p": 0.0115
+    },
+    "T4_pos1plus_L0": {
+      "n": 17,
+      "rho": -0.53,
+      "p": 0.0286
+    }
+  },
+  "EleutherAI_pythia-1b": {
+    "T1_within": {
+      "L0": {
+        "n": 17,
+        "rho": -0.337,
+        "p": 0.1864
+      },
+      "L0N": {
+        "n": 12,
+        "rho": -0.054,
+        "p": 0.8682
+      },
+      "L1": {
+        "n": 24,
+        "rho": -0.044,
+        "p": 0.8398
+      }
+    },
+    "T2_dupcount": {
+      "n": 17,
+      "count_vs_depth": {
+        "rho": -0.276,
+        "p": 0.2836
+      },
+      "count_vs_gold": {
+        "rho": 0.73,
+        "p": 0.0009
+      }
+    },
+    "T3_partial_gold_depth_ctrl_entropy": {
+      "n": 17,
+      "rho": 0.191,
+      "p": 0.4623
+    },
+    "T4_pos1plus_all": {
+      "n": 53,
+      "rho": -0.347,
+      "p": 0.0109
+    },
+    "T4_pos1plus_L0": {
+      "n": 17,
+      "rho": -0.337,
+      "p": 0.1864
+    }
+  },
+  "EleutherAI_pythia-1.4b": {
+    "T1_within": {
+      "L0": {
+        "n": 17,
+        "rho": -0.693,
+        "p": 0.002
+      },
+      "L0N": {
+        "n": 12,
+        "rho": -0.16,
+        "p": 0.6189
+      },
+      "L1": {
+        "n": 24,
+        "rho": 0.008,
+        "p": 0.9706
+      }
+    },
+    "T2_dupcount": {
+      "n": 17,
+      "count_vs_depth": {
+        "rho": -0.362,
+        "p": 0.1539
+      },
+      "count_vs_gold": {
+        "rho": 0.679,
+        "p": 0.0027
+      }
+    },
+    "T3_partial_gold_depth_ctrl_entropy": {
+      "n": 17,
+      "rho": -0.132,
+      "p": 0.6126
+    },
+    "T4_pos1plus_all": {
+      "n": 53,
+      "rho": -0.307,
+      "p": 0.0253
+    },
+    "T4_pos1plus_L0": {
+      "n": 17,
+      "rho": -0.701,
+      "p": 0.0017
+    }
+  },
+  "EleutherAI_pythia-2.8b": {
+    "T1_within": {
+      "L0": {
+        "n": 17,
+        "rho": -0.419,
+        "p": 0.0937
+      },
+      "L0N": {
+        "n": 12,
+        "rho": 0.35,
+        "p": 0.2649
+      },
+      "L1": {
+        "n": 24,
+        "rho": -0.172,
+        "p": 0.4216
+      }
+    },
+    "T2_dupcount": {
+      "n": 17,
+      "count_vs_depth": {
+        "rho": -0.159,
+        "p": 0.543
+      },
+      "count_vs_gold": {
+        "rho": 0.645,
+        "p": 0.0052
+      }
+    },
+    "T3_partial_gold_depth_ctrl_entropy": {
+      "n": 17,
+      "rho": -0.181,
+      "p": 0.486
+    },
+    "T4_pos1plus_all": {
+      "n": 53,
+      "rho": -0.34,
+      "p": 0.0127
+    },
+    "T4_pos1plus_L0": {
+      "n": 17,
+      "rho": -0.395,
+      "p": 0.117
+    }
+  },
+  "allenai_OLMo-2-0425-1B": {
+    "T1_within": {
+      "L0": {
+        "n": 20,
+        "rho": -0.86,
+        "p": 0.0
+      },
+      "L0N": {
+        "n": 11,
+        "rho": 0.075,
+        "p": 0.8276
+      },
+      "L1": {
+        "n": 24,
+        "rho": 0.192,
+        "p": 0.3675
+      }
+    },
+    "T2_dupcount": {
+      "n": 20,
+      "count_vs_depth": {
+        "rho": -0.735,
+        "p": 0.0002
+      },
+      "count_vs_gold": {
+        "rho": 0.711,
+        "p": 0.0004
+      }
+    },
+    "T3_partial_gold_depth_ctrl_entropy": {
+      "n": 20,
+      "rho": -0.654,
+      "p": 0.0018
+    },
+    "T4_pos1plus_all": {
+      "n": 55,
+      "rho": -0.459,
+      "p": 0.0004
+    },
+    "T4_pos1plus_L0": {
+      "n": 20,
+      "rho": -0.862,
+      "p": 0.0
+    }
+  }
+}

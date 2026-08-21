@@ -1,0 +1,2217 @@
+{
+  "version": "v2.1",
+  "built": "2026-08-20",
+  "audit": {
+    "l0_dropped": [],
+    "l0n_dropped": [],
+    "sources": [
+      "items_draft(3 designers)",
+      "qc_report(Opus QC)",
+      "items_v2_patch(Opus surgery)",
+      "l0 v3 gutenberg",
+      "l0n obscure controls"
+    ]
+  },
+  "items": [
+    {
+      "id": "L0-01",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "It is a truth universally acknowledged, that a single man in possession of a good fortune must be in want of a wife. However little known the feelings or views of such a man may be on his first entering a neighbourhood, this truth is so",
+      "gold_continuation": "well fixed in the minds of the surrounding families, that he is considered as the rightful property of some one or other of their daughters. \"My dear Mr. Bennet,\" said his lady to him one day, \"have you heard that Netherfield Park is let",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:1342",
+      "title": "Pride and Prejudice opening",
+      "boundary_word": "well",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+        "pile",
+        "olmo_mix"
+      ],
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 49,
+        "allenai/OLMo-2-0425-1B": 49
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 54,
+        "allenai/OLMo-2-0425-1B": 54
+      }
+    },
+    {
+      "id": "L0-02",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world. It is a",
+      "gold_continuation": "way I have of driving off the spleen and regulating the circulation. Whenever I find myself growing grim about the mouth; whenever it is a damp, drizzly November in my soul; whenever I find myself involuntarily pausing before coffin warehouses, and bringing up the",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:2701",
+      "title": "Moby-Dick opening",
+      "boundary_word": "way",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+        "pile",
+        "olmo_mix"
+      ],
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 55,
+        "allenai/OLMo-2-0425-1B": 55
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 55,
+        "allenai/OLMo-2-0425-1B": 54
+      }
+    },
+    {
+      "id": "L0-03",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the",
+      "gold_continuation": "season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way--in short, the period was",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:98",
+      "title": "A Tale of Two Cities opening",
+      "boundary_word": "season",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+        "pile",
+        "olmo_mix"
+      ],
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 55,
+        "allenai/OLMo-2-0425-1B": 55
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 54,
+        "allenai/OLMo-2-0425-1B": 53
+      }
+    },
+    {
+      "id": "L0-04",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, \"and",
+      "gold_continuation": "what is the use of a book,\" thought Alice \"without pictures or conversations?\" So she was considering in her own mind (as well as she could, for the hot day made her feel very sleepy and stupid), whether the pleasure of making a daisy-chain",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:11",
+      "title": "Alice in Wonderland opening",
+      "boundary_word": "what",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+        "pile",
+        "olmo_mix"
+      ],
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 52,
+        "allenai/OLMo-2-0425-1B": 51
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 53,
+        "allenai/OLMo-2-0425-1B": 52
+      }
+    },
+    {
+      "id": "L0-05",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "In the beginning God created the heaven and the earth. And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters. And God said, Let there be",
+      "gold_continuation": "light: and there was light. And God saw the light, that it was good: and God divided the light from the darkness. And God called the light Day, and the darkness he called Night. And the evening and the morning were the first day.",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:10",
+      "title": "KJV Genesis 1",
+      "boundary_word": "light:",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+        "pile",
+        "olmo_mix"
+      ],
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 51,
+        "allenai/OLMo-2-0425-1B": 51
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 52,
+        "allenai/OLMo-2-0425-1B": 52
+      }
+    },
+    {
+      "id": "L0-06",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "The LORD is my shepherd; I shall not want. He maketh me to lie down in green pastures: he leadeth me beside the still waters. He restoreth my soul: he leadeth me in the paths of righteousness for his name's sake. Yea, though I",
+      "gold_continuation": "walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me. Thou preparest a table before me in the presence of mine enemies: thou anointest my head with",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:10",
+      "title": "KJV Psalm 23",
+      "boundary_word": "walk",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+        "pile",
+        "olmo_mix"
+      ],
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 59,
+        "allenai/OLMo-2-0425-1B": 58
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 53,
+        "allenai/OLMo-2-0425-1B": 52
+      }
+    },
+    {
+      "id": "L0-07",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life. For God sent not his Son into the world to condemn the world; but that the world through him might be",
+      "gold_continuation": "saved. He that believeth on him is not condemned: but he that believeth not is condemned already, because he hath not believed in the name of the only begotten Son of God. And this is the condemnation, that light is come into the world,",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:10",
+      "title": "KJV John 3:16",
+      "boundary_word": "saved.",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+        "pile",
+        "olmo_mix"
+      ],
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 58,
+        "allenai/OLMo-2-0425-1B": 56
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 55,
+        "allenai/OLMo-2-0425-1B": 55
+      }
+    },
+    {
+      "id": "L0-08",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "In the beginning was the Word, and the Word was with God, and the Word was God. The same was in the beginning with God. All things were made by him; and without him was not any thing made that was made. In him was",
+      "gold_continuation": "life; and the life was the light of men. And the light shineth in darkness; and the darkness comprehended it not. There was a man sent from God, whose name was John. The same came for a witness, to bear witness of the Light,",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:10",
+      "title": "KJV John 1:1",
+      "boundary_word": "life;",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+        "pile",
+        "olmo_mix"
+      ],
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 51,
+        "allenai/OLMo-2-0425-1B": 51
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 55,
+        "allenai/OLMo-2-0425-1B": 54
+      }
+    },
+    {
+      "id": "L0-09",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "Though I speak with the tongues of men and of angels, and have not charity, I am become as sounding brass, or a tinkling cymbal. And though I have the gift of prophecy, and understand all mysteries, and all knowledge; and though I have",
+      "gold_continuation": "all faith, so that I could remove mountains, and have not charity, I am nothing. And though I bestow all my goods to feed the poor, and though I give my body to be burned, and have not charity, it profiteth me nothing. Charity",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:10",
+      "title": "KJV 1 Corinthians 13",
+      "boundary_word": "all",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+        "pile",
+        "olmo_mix"
+      ],
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 54,
+        "allenai/OLMo-2-0425-1B": 54
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 55,
+        "allenai/OLMo-2-0425-1B": 54
+      }
+    },
+    {
+      "id": "L0-10",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "Blessed are the poor in spirit: for theirs is the kingdom of heaven. Blessed are they that mourn: for they shall be comforted. Blessed are the meek: for they shall inherit the earth. Blessed are they which do hunger and thirst after righteousness: for they shall be",
+      "gold_continuation": "filled. Blessed are the merciful: for they shall obtain mercy. Blessed are the pure in heart: for they shall see God. Blessed are the peacemakers: for they shall be called the children of God. Blessed are they which are persecuted for righteousness' sake: for",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:10",
+      "title": "KJV Beatitudes",
+      "boundary_word": "filled.",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+        "pile",
+        "olmo_mix"
+      ],
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 61,
+        "allenai/OLMo-2-0425-1B": 58
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 62,
+        "allenai/OLMo-2-0425-1B": 57
+      }
+    },
+    {
+      "id": "L0-11",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty, and the pursuit of Happiness. That to secure these rights, Governments are instituted among",
+      "gold_continuation": "Men, deriving their just powers from the consent of the governed, That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government, laying its foundation on",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:1",
+      "title": "Declaration self-evident truths",
+      "boundary_word": "Men,",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+        "pile",
+        "olmo_mix"
+      ],
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 59,
+        "allenai/OLMo-2-0425-1B": 56
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 50,
+        "allenai/OLMo-2-0425-1B": 49
+      }
+    },
+    {
+      "id": "L0-12",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "Four score and seven years ago, our fathers brought forth upon this continent a new nation: conceived in liberty, and dedicated to the proposition that all men are created equal. Now we are engaged in a great civil war. . .testing whether that nation, or",
+      "gold_continuation": "any nation so conceived and so dedicated. . . can long endure. We are met on a great battlefield of that war. We have come to dedicate a portion of that field as a final resting place for those who here gave their lives",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:4",
+      "title": "Gettysburg Address",
+      "boundary_word": "any",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+        "pile",
+        "olmo_mix"
+      ],
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 52,
+        "allenai/OLMo-2-0425-1B": 52
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 48,
+        "allenai/OLMo-2-0425-1B": 47
+      }
+    },
+    {
+      "id": "L0-13",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take arms against a sea of troubles, And by opposing end them? To die—to sleep, No more; and by a",
+      "gold_continuation": "sleep to say we end The heart-ache, and the thousand natural shocks That flesh is heir to: 'tis a consummation Devoutly to be wish'd. To die, to sleep. To sleep, perchance to dream—ay, there's the rub, For in that sleep of death what dreams",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:100",
+      "title": "Hamlet soliloquy",
+      "boundary_word": "sleep",
+      "eligible_models": [
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+        "olmo_mix"
+      ],
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 60,
+        "allenai/OLMo-2-0425-1B": 60
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 65,
+        "allenai/OLMo-2-0425-1B": 65
+      }
+    },
+    {
+      "id": "L0-14",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "Friends, Romans, countrymen, lend me your ears; I come to bury Caesar, not to praise him. The evil that men do lives after them, The good is oft interred with their bones; So let it be with Caesar. The noble Brutus Hath told you",
+      "gold_continuation": "Caesar was ambitious. If it were so, it was a grievous fault, And grievously hath Caesar answer'd it. Here, under leave of Brutus and the rest, For Brutus is an honourable man, So are they all, all honourable men, Come I to speak in",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:100",
+      "title": "Julius Caesar funeral speech",
+      "boundary_word": "Caesar",
+      "eligible_models": [
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+        "olmo_mix"
+      ],
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 59,
+        "allenai/OLMo-2-0425-1B": 56
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 62,
+        "allenai/OLMo-2-0425-1B": 60
+      }
+    },
+    {
+      "id": "L0-15",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "You don't know about me without you have read a book by the name of The Adventures of Tom Sawyer; but that ain't no matter. That book was made by Mr. Mark Twain, and he told the truth, mainly. There was things which he",
+      "gold_continuation": "stretched, but mainly he told the truth. That is nothing. I never seen anybody but lied one time or another, without it was Aunt Polly, or the widow, or maybe Mary. Aunt Polly—Tom's Aunt Polly, she is—and Mary, and the Widow Douglas is all",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:76",
+      "title": "Huckleberry Finn opening",
+      "boundary_word": "stretched,",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+        "pile",
+        "olmo_mix"
+      ],
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 54,
+        "allenai/OLMo-2-0425-1B": 53
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 62,
+        "allenai/OLMo-2-0425-1B": 57
+      }
+    },
+    {
+      "id": "L0-16",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "It was on a dreary night of November that I beheld the accomplishment of my toils. With an anxiety that almost amounted to agony, I collected the instruments of life around me, that I might infuse a spark of being into the lifeless thing that",
+      "gold_continuation": "lay at my feet. It was already one in the morning; the rain pattered dismally against the panes, and my candle was nearly burnt out, when, by the glimmer of the half-extinguished light, I saw the dull yellow eye of the creature open; it",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:84",
+      "title": "Frankenstein creation scene",
+      "boundary_word": "lay",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+        "pile",
+        "olmo_mix"
+      ],
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 52,
+        "allenai/OLMo-2-0425-1B": 53
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 59,
+        "allenai/OLMo-2-0425-1B": 59
+      }
+    },
+    {
+      "id": "L0-17",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "To Sherlock Holmes she is always the woman. I have seldom heard him mention her under any other name. In his eyes she eclipses and predominates the whole of her sex. It was not that he felt any emotion akin to love for Irene",
+      "gold_continuation": "Adler. All emotions, and that one particularly, were abhorrent to his cold, precise but admirably balanced mind. He was, I take it, the most perfect reasoning and observing machine that the world has seen, but as a lover he would have placed himself in",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:1661",
+      "title": "A Scandal in Bohemia opening",
+      "boundary_word": "Adler.",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+        "pile",
+        "olmo_mix"
+      ],
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 51,
+        "allenai/OLMo-2-0425-1B": 49
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 57,
+        "allenai/OLMo-2-0425-1B": 55
+      }
+    },
+    {
+      "id": "L0-18",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "Squire Trelawney, Dr. Livesey, and the rest of these gentlemen having asked me to write down the whole particulars about Treasure Island, from the beginning to the end, keeping nothing back but the bearings of the island, and that only because there is still",
+      "gold_continuation": "treasure not yet lifted, I take up my pen in the year of grace 17—, and go back to the time when my father kept the Admiral Benbow inn and the brown old seaman with the sabre cut first took up his lodging under",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:120",
+      "title": "Treasure Island opening",
+      "boundary_word": "treasure",
+      "eligible_models": [
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+        "olmo_mix"
+      ],
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 56,
+        "allenai/OLMo-2-0425-1B": 55
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 51,
+        "allenai/OLMo-2-0425-1B": 51
+      }
+    },
+    {
+      "id": "L0-19",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "No one would have believed in the last years of the nineteenth century that this world was being watched keenly and closely by intelligences greater than man's and yet as mortal as his own; that as men busied themselves about their various concerns they were",
+      "gold_continuation": "scrutinised and studied, perhaps almost as narrowly as a man with a microscope might scrutinise the transient creatures that swarm and multiply in a drop of water. With infinite complacency men went to and fro over this globe about their little affairs, serene in",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:36",
+      "title": "War of the Worlds opening",
+      "boundary_word": "scrutinised",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+        "pile",
+        "olmo_mix"
+      ],
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 50,
+        "allenai/OLMo-2-0425-1B": 50
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 51,
+        "allenai/OLMo-2-0425-1B": 50
+      }
+    },
+    {
+      "id": "L0-20",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "All children, except one, grow up. They soon know that they will grow up, and the way Wendy knew was this. One day when she was two years old she was playing in a garden, and she plucked another flower and ran with it to her",
+      "gold_continuation": "mother. I suppose she must have looked rather delightful, for Mrs. Darling put her hand to her heart and cried, \"Oh, why can't you remain like this for ever!\" This was all that passed between them on the subject, but henceforth Wendy knew that",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:16",
+      "title": "Peter Pan opening",
+      "boundary_word": "mother.",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+        "pile",
+        "olmo_mix"
+      ],
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 53,
+        "allenai/OLMo-2-0425-1B": 53
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 55,
+        "allenai/OLMo-2-0425-1B": 54
+      }
+    },
+    {
+      "id": "L0N-01",
+      "level": "L0N",
+      "topic": "obscure-control",
+      "prompt": "Some there are, it is true, who, from a crawling worm, pass into a chrysalis, and appear to be dead for a time, not only to revive again with new life and beauty, but to soar a lofty height into the world of fashion, and",
+      "gold_continuation": "boast the gayest plumage among those who float on the wind of fortune's fickle favors. The veritable history of Diedrich Knickerbocker was not a truer story than is every whit of this history of \"a week in Wall-street;\" but alas for the mutations in",
+      "expected": "any fluent continuation (non-memorized control)",
+      "source": "gutenberg:62012",
+      "title": "control gutenberg:62012 @w1507",
+      "boundary_word": "boast",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+        "pile",
+        "olmo_mix"
+      ],
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 57,
+        "allenai/OLMo-2-0425-1B": 56
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 62,
+        "allenai/OLMo-2-0425-1B": 59
+      }
+    },
+    {
+      "id": "L0N-02",
+      "level": "L0N",
+      "topic": "obscure-control",
+      "prompt": "Continue beating until thick and very smooth. Stir in Salad Herbs. When you need a tasty sauce or gravy, SPICE ISLANDS Beef Stock Base comes to your rescue. There are countless variations you can try. Brown Sauce (2 Cups Sauce) Excellent with roast beef.",
+      "gold_continuation": "Indispensable when there's not enough drippings to make gravy or to serve with some leftover slices when the gravy's all gone. Use it as the basis of countless other sauces—and the classics such as Sauce Espagnole, Madeira Sauce, Ravigote, or Piquant Sauce. 2 tablespoons",
+      "expected": "any fluent continuation (non-memorized control)",
+      "source": "gutenberg:62345",
+      "title": "control gutenberg:62345 @w1503",
+      "boundary_word": "Indispensable",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+        "pile",
+        "olmo_mix"
+      ],
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 59,
+        "allenai/OLMo-2-0425-1B": 56
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 67,
+        "allenai/OLMo-2-0425-1B": 64
+      }
+    },
+    {
+      "id": "L0N-03",
+      "level": "L0N",
+      "topic": "obscure-control",
+      "prompt": "Unfortunately, one of our bombs wounded Private Taylor, but he was finally rescued by Private Cunliffe, a stretcher-bearer who had already behaved with great gallantry, bringing in the wounded under heavy shell-fire. Meanwhile a totally distinct fight took place at Nos. 13 and 14",
+      "gold_continuation": "Posts, generally known as Alton Post, where there was a machine-gun protected by a bombing-post, under Lieutenant W. B. Ball. It happened that a party of Royal Engineers, under an officer, was working at the machine-gun dug-out that night. The machine-gun itself was knocked",
+      "expected": "any fluent continuation (non-memorized control)",
+      "source": "gutenberg:63111",
+      "title": "control gutenberg:63111 @w1511",
+      "boundary_word": "Posts,",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+        "pile",
+        "olmo_mix"
+      ],
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 60,
+        "allenai/OLMo-2-0425-1B": 60
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 64,
+        "allenai/OLMo-2-0425-1B": 59
+      }
+    },
+    {
+      "id": "L0N-04",
+      "level": "L0N",
+      "topic": "obscure-control",
+      "prompt": "Open your mouth. Breathe. Do you have headaches? No. Ah, yes, you are new. I'm new, said the oval moon at the bottom of the mist funnel, brightening and paling. I don't think you'll find my card there. Open your mouth--Breathe--A crater big enough to",
+      "gold_continuation": "hold the land from New York to Philadelphia. New! I'm new, said the quartz crystal on the parlor table--like glass--Mr. Tiffany bought a cart load of them. Like water or white rock candy--I'm new, said the mist rising from the duck pond, rising, curling,",
+      "expected": "any fluent continuation (non-memorized control)",
+      "source": "gutenberg:63888",
+      "title": "control gutenberg:63888 @w1503",
+      "boundary_word": "hold",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+        "pile",
+        "olmo_mix"
+      ],
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 69,
+        "allenai/OLMo-2-0425-1B": 69
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 64,
+        "allenai/OLMo-2-0425-1B": 63
+      }
+    },
+    {
+      "id": "L0N-05",
+      "level": "L0N",
+      "topic": "obscure-control",
+      "prompt": "Egy század két zászlóalj ellen, meg egy lovas kozák szotnya ellen, egy ágyúüteg megtámadására! Nevetnének a hadtudomány vénei, ha valaki ezt tanácsolná nekik. Nálunk volt, a ki megtette. A Sajóhoz érve a kis csapat, azt kérdezé: hogy megyünk itt át? – Hát csak így",
+      "gold_continuation": "ni! mondá Gózon, s leugorván a lováról, egy beteges fiú kezéből kivette a puskát s beleugrott a vízbe, s a kikeresett gázlónak indult: «itt a híd, fiúk; utánam, a ki magyar és szereti hazáját!» Percz mulva a kis csapat hónaljig érő vizen át gázolva,",
+      "expected": "any fluent continuation (non-memorized control)",
+      "source": "gutenberg:64502",
+      "title": "control gutenberg:64502 @w1504",
+      "boundary_word": "ni!",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+        "pile",
+        "olmo_mix"
+      ],
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 124,
+        "allenai/OLMo-2-0425-1B": 120
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 122,
+        "allenai/OLMo-2-0425-1B": 114
+      }
+    },
+    {
+      "id": "L0N-06",
+      "level": "L0N",
+      "topic": "obscure-control",
+      "prompt": "For breakfast, rolled oats mush, baking-powder biscuit, boiled eggs or potatoes, and ham. For dinner, light bread or milk toast, beans or canned corn, salt-horse, creamed potatoes, and often soup with crackers. For supper, canned fruit, muffins or corn bread, boiled ham and baked",
+      "gold_continuation": "potatoes. Of course tea or coffee with each meal. The cook makes fine yeast bread, ten loaves a day. There are twenty-three men on board. Including the hired sailors who are not of the company, and even with five in the hospital we make",
+      "expected": "any fluent continuation (non-memorized control)",
+      "source": "gutenberg:65123",
+      "title": "control gutenberg:65123 @w1516",
+      "boundary_word": "potatoes.",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+        "pile",
+        "olmo_mix"
+      ],
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 68,
+        "allenai/OLMo-2-0425-1B": 66
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 54,
+        "allenai/OLMo-2-0425-1B": 52
+      }
+    },
+    {
+      "id": "L0N-07",
+      "level": "L0N",
+      "topic": "obscure-control",
+      "prompt": "RIGHT FRONT: With No. 6 needles, cast on 59 (63)—67, 71 sts. K 1, P 1 in ribbing to within last 8 sts, attach another skein and work last 8 sts with double yarn throughout in garter st (K each row) for front border.",
+      "gold_continuation": "Work 4 more rows in ribbing and garter st at border. START PATTERN: Change to No. 8 needles. 1st ROW (right side): Work 8 border sts, P 2 (2)—2, 2, K 1, sl 2 as if to P, K 1, P 2, K 8,",
+      "expected": "any fluent continuation (non-memorized control)",
+      "source": "gutenberg:65789",
+      "title": "control gutenberg:65789 @w1515",
+      "boundary_word": "Work",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+        "pile",
+        "olmo_mix"
+      ],
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 64,
+        "allenai/OLMo-2-0425-1B": 67
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 67,
+        "allenai/OLMo-2-0425-1B": 76
+      }
+    },
+    {
+      "id": "L0N-08",
+      "level": "L0N",
+      "topic": "obscure-control",
+      "prompt": "THE TRIMMING IN TATTING. THE ROSETTE—Fill the Shuttle with the Wool and using the mesh for the pearl loops, commence a loop, work 1 double, (then make a pearl and work a double stitch alternately for 7 loops); draw close. Keep the Wool at the",
+      "gold_continuation": "back and join it to the centre pearl. Work another Rosette the same, and join it to the same pearl of the previous Rosette as before; then keep the Wool as the back and join to the centre pearl of the last Rosette. Repeat",
+      "expected": "any fluent continuation (non-memorized control)",
+      "source": "gutenberg:66234",
+      "title": "control gutenberg:66234 @w1527",
+      "boundary_word": "back",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+        "pile",
+        "olmo_mix"
+      ],
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 65,
+        "allenai/OLMo-2-0425-1B": 63
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 54,
+        "allenai/OLMo-2-0425-1B": 51
+      }
+    },
+    {
+      "id": "L0N-09",
+      "level": "L0N",
+      "topic": "obscure-control",
+      "prompt": "¶¶Look back in your own lives, see what the things are that you are proudest of as you look back, and you will in almost every case and on every occasion find that those memories of pride are associated, not with days of ease, but with",
+      "gold_continuation": "days of effort, the day when you had to do all that was in you for some worthy end, and the worthiest of all worthy ends is to make those that are closest and nearest to you—your wife and your children, and those near",
+      "expected": "any fluent continuation (non-memorized control)",
+      "source": "gutenberg:66890",
+      "title": "control gutenberg:66890 @w1510",
+      "boundary_word": "days",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+        "pile",
+        "olmo_mix"
+      ],
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 53,
+        "allenai/OLMo-2-0425-1B": 54
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 50,
+        "allenai/OLMo-2-0425-1B": 50
+      }
+    },
+    {
+      "id": "L0N-10",
+      "level": "L0N",
+      "topic": "obscure-control",
+      "prompt": "Let it pass! The accusation is familiar to my ears. I tired of resenting it before your fathers' fathers were born, and the scorn of your offended sense of veracity is less to me than the lisping of a child. I was, in the",
+      "gold_continuation": "very distance of the beginning, a citizen of that ancient city whose dominion once stretched from the blue waters of the Ægean round to and beyond the broad stream of the Nile herself. Your antiquities were then my household gods, your myths were my",
+      "expected": "any fluent continuation (non-memorized control)",
+      "source": "gutenberg:67345",
+      "title": "control gutenberg:67345 @w1517",
+      "boundary_word": "very",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b"
+      ],
+      "verified_in": [
+        "pile"
+      ],
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 54,
+        "allenai/OLMo-2-0425-1B": 53
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 52,
+        "allenai/OLMo-2-0425-1B": 52
+      }
+    },
+    {
+      "id": "L0N-11",
+      "level": "L0N",
+      "topic": "obscure-control",
+      "prompt": "Frank Merriwell's hearty laugh rang out. \"If this is a sample of what we'll strike in Morocco, we'll have fun,\" he cried. Ephraim came to the surface, spouting like a whale. \"Hang ye!\" he squealed, standing up and shaking his fist at the bewildered",
+      "gold_continuation": "Arab. \"Yeou wait till we git on dry land, critter! I'll fix ye!\" Then he began to wade ashore. \"I am surprised, Ephraim,\" said Frank, soberly, \"that you should make such a racket over a matter like this. The tan-colored gentleman simply wished to",
+      "expected": "any fluent continuation (non-memorized control)",
+      "source": "gutenberg:67901",
+      "title": "control gutenberg:67901 @w1503",
+      "boundary_word": "Arab.",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+        "pile",
+        "olmo_mix"
+      ],
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 65,
+        "allenai/OLMo-2-0425-1B": 64
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 67,
+        "allenai/OLMo-2-0425-1B": 66
+      }
+    },
+    {
+      "id": "L0N-12",
+      "level": "L0N",
+      "topic": "obscure-control",
+      "prompt": "BREAD. A supply of the soft part of home-made, if possible, or good ordinary baker's bread, one day old, is indispensable. This should not have any butter, or even milk, in its composition, otherwise it will grease the paper, which naturally should be avoided, as",
+      "gold_continuation": "grease spots are most difficult to overcome. The bread is used for rubbing out charcoal or crayon, erasing mistakes, and for taking out lights from a mass of dark. The soft crumb is rolled between the fingers until a point is formed, and then",
+      "expected": "any fluent continuation (non-memorized control)",
+      "source": "gutenberg:69012",
+      "title": "control gutenberg:69012 @w1510",
+      "boundary_word": "grease",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+        "pile",
+        "olmo_mix"
+      ],
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 61,
+        "allenai/OLMo-2-0425-1B": 59
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 53,
+        "allenai/OLMo-2-0425-1B": 52
+      }
+    },
+    {
+      "id": "L1-gardening-1",
+      "level": "L1",
+      "topic": "gardening",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "prompt": "Bees move from flower to flower carrying a fine powder called",
+      "run_prompt": "The following short statements were collected for a general-knowledge reader. They are unrelated to one another and appear in no particular order. Each was checked for accuracy before being included in the collection.\n\nBees move from flower to flower carrying a fine powder called",
+      "gold_continuation": "pollen",
+      "expected": "pollen",
+      "qc_problem": null,
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 52,
+        "allenai/OLMo-2-0425-1B": 50
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 1,
+        "allenai/OLMo-2-0425-1B": 1
+      }
+    },
+    {
+      "id": "L1-gardening-2",
+      "level": "L1",
+      "topic": "gardening",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "prompt": "Water and minerals enter a plant from the soil through its",
+      "run_prompt": "The following short statements were collected for a general-knowledge reader. They are unrelated to one another and appear in no particular order. Each was checked for accuracy before being included in the collection.\n\nWater and minerals enter a plant from the soil through its",
+      "gold_continuation": "roots",
+      "expected": "roots",
+      "qc_problem": "'The roots' has article and number variants (roots / root / the root system) that smear the final-token mass under the original question form.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 51,
+        "allenai/OLMo-2-0425-1B": 49
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 1,
+        "allenai/OLMo-2-0425-1B": 1
+      }
+    },
+    {
+      "id": "L2-gardening-1",
+      "level": "L2",
+      "topic": "gardening",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": null,
+      "prompt": "Explain in your own words why garden plants need sunlight in order to grow.",
+      "run_prompt": "Short explanations, written in plain language.\n\nQ: Explain in your own words why a bicycle stays upright while it is moving.\nA: A moving bicycle keeps correcting itself. When it begins to lean to one side, the front wheel turns slightly into the lean, which steers the wheels back underneath the rider's weight. The faster it travels, the smaller and quicker those corrections are, so the bicycle feels steady.\n\nQ: Explain in your own words why a lighthouse can be seen from far out at sea.\nA: A lighthouse is built high up so that its beam clears the curve of the horizon. Lenses and mirrors gather the lamp's light and squeeze it into a narrow horizontal beam instead of letting it spread in every direction. Because the light is concentrated and starts from a height, a ship many miles away still receives enough of it to see the flash.\n\nQ: Explain in your own words why garden plants need sunlight in order to grow.\nA:",
+      "expected": "Must preserve: sunlight provides the energy for photosynthesis; the plant uses that energy to turn water and carbon dioxide into sugars (food); those sugars fuel the plant's growth. Wording may vary freely.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 207,
+        "allenai/OLMo-2-0425-1B": 194
+      }
+    },
+    {
+      "id": "L3-gardening-1",
+      "level": "L3",
+      "topic": "gardening",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": null,
+      "prompt": "Write a haiku about a vegetable garden in summer.",
+      "run_prompt": "Short pieces written to order.\n\nInstruction: Write a haiku about a mountain lake.\nPiece:\nCold water holding\nthe whole grey weight of the sky\nuntil wind breaks it\n\nInstruction: Write a limerick about a stubborn mule.\nPiece:\nThere once was a mule from Kilkee\nWho refused to be moved for a fee.\nHe would stand in the road,\nIgnoring his load,\nAnd nap until quarter past three.\n\nInstruction: Write a one-sentence proverb about borrowed tools.\nPiece:\nA borrowed tool comes home either broken or not at all.\n\nInstruction: Write a two-line rhyming couplet about an old clock.\nPiece:\nThe old clock keeps its argument with time,\nAnd loses, minute after patient chime.\n\nInstruction: Write a haiku about a vegetable garden in summer.\nPiece:",
+      "expected": "Exactly three lines with a 5-7-5 syllable pattern; content must concern a summer vegetable garden; no extra lines or commentary.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 200,
+        "allenai/OLMo-2-0425-1B": 165
+      }
+    },
+    {
+      "id": "L4-gardening-1",
+      "level": "L4",
+      "topic": "gardening",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": "cryptography",
+      "prompt": "Describe a garden that works as a cipher, in 3-6 sentences. Each planting decision must correspond to a specific step in an encoding rule, so that a visitor holding the key can decode the message.",
+      "run_prompt": "Answers that combine two unrelated subjects, using one to explain the other.\n\nTask: Describe a barbershop organised as a court of law. Say which part of court procedure each step of the haircut copies and what it does for the customer.\nAnswer: The consultation is the arraignment: the customer states what he is charged with wanting and the barber reads it back to him, so there is no dispute later about what was agreed. The mirror on the far wall serves as the public gallery, since every cut is made in view and can be objected to while it is still reversible. Scissors and clippers act as opposing counsel, one arguing for length and the other for shape, and the barber alternates between them until neither has a further submission. Sweeping the floor is the sealing of the record: once the hair is gone the case cannot be reopened, and the customer settles costs on the way out.\n\nTask: Describe a village postal route as a knitting pattern. Say which knitting instruction each part of the route copies and what it does for the postman.\nAnswer: The main road is the cast-on row: it fixes how many houses the whole route will carry, and everything after it hangs from that count. Each side lane is a purl stitch worked in the opposite direction, so the postman doubles back and the fabric of the route lies flat instead of curling into wasted mileage. Houses that receive post only on certain days are slipped stitches, passed over without being worked but still counted, which keeps the rhythm of the walk even. The return to the sorting office is the cast-off, binding the loose end so that tomorrow's round can start from the same edge.\n\nTask: Describe a garden that works as a cipher, in 3-6 sentences. Each planting decision must correspond to a specific step in an encoding rule, so that a visitor holding the key can decode the message.\nAnswer:",
+      "expected": "A successful blend must make the planting itself the ciphertext: species, colour, or position carries the message under an explicitly stated encoding rule, with a key and a decoding procedure a reader could actually follow. The planting decisions must be determined by the encryption scheme. Codes mentioned beside flowers, or a garden that merely 'hides a secret', fails.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 406,
+        "allenai/OLMo-2-0425-1B": 384
+      }
+    },
+    {
+      "id": "L5-gardening-1",
+      "level": "L5",
+      "topic": "gardening",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": null,
+      "prompt": "Invent a gardening tool or garden practice that does not exist today, and explain what problem it solves and how it works.",
+      "run_prompt": "Proposals for things that do not exist yet, each written by the person who thought of it.\n\nTask: Invent a new kind of doorbell that does not exist today, and explain what problem it solves and how it works.\nProposal: An ordinary doorbell tells you that somebody is at the door but nothing about how much the visit matters, so a household either answers everything or ignores everything. This doorbell replaces the button with a weighted pull-cord: the harder the visitor pulls, the longer the chime sustains, and the mechanism holds that pull on a small dial inside the hall. A courier leaving a parcel gives a light tug that produces one short note, while a neighbour with something urgent pulls hard and sets off a chime that runs for several seconds. Because the effort is physical and the visitor can feel how hard they are pulling, the signal stays honest, and the household can decide whether to get up from the sound alone.\n\nTask: Invent a new kind of suitcase that does not exist today, and explain what problem it solves and how it works.\nProposal: Travellers repack at the airport because they cannot tell which part of the case is over the weight limit until the whole thing is on the scale. This suitcase is built from four stacked drawers, each on its own spring-loaded floor that sinks as it fills and shows a coloured band through a slot in the shell. A drawer that dips past its band is holding more than a quarter of the allowance, so the owner can see which layer to lighten without opening anything. The springs also lock the drawers once the lid is closed, so the load stays balanced and the case does not tip when it is stood upright.\n\nTask: Invent a gardening tool or garden practice that does not exist today, and explain what problem it solves and how it works.\nProposal:",
+      "expected": "Novelty criterion: must not match any existing product or established technique; must be gardening-specific, state a mechanism, and name the problem it addresses. Post-hoc n-gram check against the training corpora should not find the core mechanism. Treat the two scaffold exemplars (the pull-cord doorbell, the drawer suitcase) as attested and exclude any answer that merely re-skins one of them.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 389,
+        "allenai/OLMo-2-0425-1B": 367
+      }
+    },
+    {
+      "id": "L1-railways-1",
+      "level": "L1",
+      "topic": "railways",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "prompt": "Passengers get on and off trains at a railway",
+      "run_prompt": "The following short statements were collected for a general-knowledge reader. They are unrelated to one another and appear in no particular order. Each was checked for accuracy before being included in the collection.\n\nPassengers get on and off trains at a railway",
+      "gold_continuation": "station",
+      "expected": "station",
+      "qc_problem": "Bare 'a station' competes with 'platform', 'depot' and 'terminal'. The cloze pins it by supplying 'railway' as the modifier.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 50,
+        "allenai/OLMo-2-0425-1B": 48
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 1,
+        "allenai/OLMo-2-0425-1B": 1
+      }
+    },
+    {
+      "id": "L1-railways-2",
+      "level": "L1",
+      "topic": "railways",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "prompt": "A railway engine that burns coal to boil water and drive its pistons is called a",
+      "run_prompt": "The following short statements were collected for a general-knowledge reader. They are unrelated to one another and appear in no particular order. Each was checked for accuracy before being included in the collection.\n\nA railway engine that burns coal to boil water and drive its pistons is called a",
+      "gold_continuation": "steam",
+      "expected": "steam",
+      "qc_problem": null,
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 57,
+        "allenai/OLMo-2-0425-1B": 55
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 1,
+        "allenai/OLMo-2-0425-1B": 1
+      }
+    },
+    {
+      "id": "L2-railways-1",
+      "level": "L2",
+      "topic": "railways",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": null,
+      "prompt": "Explain in your own words how a steam locomotive makes a train move.",
+      "run_prompt": "Short explanations, written in plain language.\n\nQ: Explain in your own words why a bicycle stays upright while it is moving.\nA: A moving bicycle keeps correcting itself. When it begins to lean to one side, the front wheel turns slightly into the lean, which steers the wheels back underneath the rider's weight. The faster it travels, the smaller and quicker those corrections are, so the bicycle feels steady.\n\nQ: Explain in your own words why a lighthouse can be seen from far out at sea.\nA: A lighthouse is built high up so that its beam clears the curve of the horizon. Lenses and mirrors gather the lamp's light and squeeze it into a narrow horizontal beam instead of letting it spread in every direction. Because the light is concentrated and starts from a height, a ship many miles away still receives enough of it to see the flash.\n\nQ: Explain in your own words how a steam locomotive makes a train move.\nA:",
+      "expected": "Must preserve: burning fuel (coal/wood) heats water in a boiler; the water becomes high-pressure steam; the steam pushes pistons; the pistons turn the driving wheels, moving the train. Wording may vary freely.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 207,
+        "allenai/OLMo-2-0425-1B": 194
+      }
+    },
+    {
+      "id": "L3-railways-1",
+      "level": "L3",
+      "topic": "railways",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": null,
+      "prompt": "Write a limerick about a train that is always late.",
+      "run_prompt": "Short pieces written to order.\n\nInstruction: Write a haiku about a mountain lake.\nPiece:\nCold water holding\nthe whole grey weight of the sky\nuntil wind breaks it\n\nInstruction: Write a limerick about a stubborn mule.\nPiece:\nThere once was a mule from Kilkee\nWho refused to be moved for a fee.\nHe would stand in the road,\nIgnoring his load,\nAnd nap until quarter past three.\n\nInstruction: Write a one-sentence proverb about borrowed tools.\nPiece:\nA borrowed tool comes home either broken or not at all.\n\nInstruction: Write a two-line rhyming couplet about an old clock.\nPiece:\nThe old clock keeps its argument with time,\nAnd loses, minute after patient chime.\n\nInstruction: Write a limerick about a train that is always late.\nPiece:",
+      "expected": "Exactly five lines with AABBA rhyme scheme; lines 1, 2, 5 longer, lines 3, 4 shorter; humorous tone; content must concern a chronically late train; no extra lines or commentary.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 202,
+        "allenai/OLMo-2-0425-1B": 167
+      }
+    },
+    {
+      "id": "L4-railways-1",
+      "level": "L4",
+      "topic": "railways",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": "medical triage",
+      "prompt": "Describe a railway network run on the rules of medical triage, in 3-6 sentences. Each triage category must correspond to a specific class of train, so that the sorting rule decides which train moves first.",
+      "run_prompt": "Answers that combine two unrelated subjects, using one to explain the other.\n\nTask: Describe a barbershop organised as a court of law. Say which part of court procedure each step of the haircut copies and what it does for the customer.\nAnswer: The consultation is the arraignment: the customer states what he is charged with wanting and the barber reads it back to him, so there is no dispute later about what was agreed. The mirror on the far wall serves as the public gallery, since every cut is made in view and can be objected to while it is still reversible. Scissors and clippers act as opposing counsel, one arguing for length and the other for shape, and the barber alternates between them until neither has a further submission. Sweeping the floor is the sealing of the record: once the hair is gone the case cannot be reopened, and the customer settles costs on the way out.\n\nTask: Describe a village postal route as a knitting pattern. Say which knitting instruction each part of the route copies and what it does for the postman.\nAnswer: The main road is the cast-on row: it fixes how many houses the whole route will carry, and everything after it hangs from that count. Each side lane is a purl stitch worked in the opposite direction, so the postman doubles back and the fabric of the route lies flat instead of curling into wasted mileage. Houses that receive post only on certain days are slipped stitches, passed over without being worked but still counted, which keeps the rhythm of the walk even. The return to the sorting office is the cast-off, binding the loose end so that tomorrow's round can start from the same edge.\n\nTask: Describe a railway network run on the rules of medical triage, in 3-6 sentences. Each triage category must correspond to a specific class of train, so that the sorting rule decides which train moves first.\nAnswer:",
+      "expected": "A successful blend must name triage categories (immediate, urgent, delayed, expectant, or the equivalent colour scheme) and bind each to a specific class of train or movement, with the triage rule allocating a scarce resource - track, platform, or crew - by severity rather than by arrival order. Trains described as 'urgent' without a sorting rule that actually decides precedence fails.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 408,
+        "allenai/OLMo-2-0425-1B": 386
+      }
+    },
+    {
+      "id": "L5-railways-1",
+      "level": "L5",
+      "topic": "railways",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": null,
+      "prompt": "Invent a railway service or railway technology that does not exist today, and explain what problem it solves and how it works.",
+      "run_prompt": "Proposals for things that do not exist yet, each written by the person who thought of it.\n\nTask: Invent a new kind of doorbell that does not exist today, and explain what problem it solves and how it works.\nProposal: An ordinary doorbell tells you that somebody is at the door but nothing about how much the visit matters, so a household either answers everything or ignores everything. This doorbell replaces the button with a weighted pull-cord: the harder the visitor pulls, the longer the chime sustains, and the mechanism holds that pull on a small dial inside the hall. A courier leaving a parcel gives a light tug that produces one short note, while a neighbour with something urgent pulls hard and sets off a chime that runs for several seconds. Because the effort is physical and the visitor can feel how hard they are pulling, the signal stays honest, and the household can decide whether to get up from the sound alone.\n\nTask: Invent a new kind of suitcase that does not exist today, and explain what problem it solves and how it works.\nProposal: Travellers repack at the airport because they cannot tell which part of the case is over the weight limit until the whole thing is on the scale. This suitcase is built from four stacked drawers, each on its own spring-loaded floor that sinks as it fills and shows a coloured band through a slot in the shell. A drawer that dips past its band is holding more than a quarter of the allowance, so the owner can see which layer to lighten without opening anything. The springs also lock the drawers once the lid is closed, so the load stays balanced and the case does not tip when it is stood upright.\n\nTask: Invent a railway service or railway technology that does not exist today, and explain what problem it solves and how it works.\nProposal:",
+      "expected": "Novelty criterion: must not match existing or well-publicised rail concepts (maglev, hyperloop, sleeper trains, driverless metros, freight-by-night schemes); must include a mechanism and a stated purpose inside the railway domain. Treat the two scaffold exemplars as attested and exclude re-skins of them.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 389,
+        "allenai/OLMo-2-0425-1B": 367
+      }
+    },
+    {
+      "id": "L1-human_anatomy-1",
+      "level": "L1",
+      "topic": "human anatomy",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "prompt": "The organ that pumps blood around the human body is the",
+      "run_prompt": "The following short statements were collected for a general-knowledge reader. They are unrelated to one another and appear in no particular order. Each was checked for accuracy before being included in the collection.\n\nThe organ that pumps blood around the human body is the",
+      "gold_continuation": "heart",
+      "expected": "heart",
+      "qc_problem": null,
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 51,
+        "allenai/OLMo-2-0425-1B": 49
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 1,
+        "allenai/OLMo-2-0425-1B": 1
+      }
+    },
+    {
+      "id": "L1-human_anatomy-2",
+      "level": "L1",
+      "topic": "human anatomy",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "prompt": "The largest organ of the human body is the",
+      "run_prompt": "The following short statements were collected for a general-knowledge reader. They are unrelated to one another and appear in no particular order. Each was checked for accuracy before being included in the collection.\n\nThe largest organ of the human body is the",
+      "gold_continuation": "skin",
+      "expected": "skin",
+      "qc_problem": "Minor dispute in the training distribution: some sources answer 'skin', others qualify it as 'largest internal organ = liver'. ' liver' is a competing single token on both models, so expect some mass there.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 49,
+        "allenai/OLMo-2-0425-1B": 47
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 1,
+        "allenai/OLMo-2-0425-1B": 1
+      }
+    },
+    {
+      "id": "L2-human_anatomy-1",
+      "level": "L2",
+      "topic": "human anatomy",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": null,
+      "prompt": "Explain in your own words how the lungs supply the body with oxygen.",
+      "run_prompt": "Short explanations, written in plain language.\n\nQ: Explain in your own words why a bicycle stays upright while it is moving.\nA: A moving bicycle keeps correcting itself. When it begins to lean to one side, the front wheel turns slightly into the lean, which steers the wheels back underneath the rider's weight. The faster it travels, the smaller and quicker those corrections are, so the bicycle feels steady.\n\nQ: Explain in your own words why a lighthouse can be seen from far out at sea.\nA: A lighthouse is built high up so that its beam clears the curve of the horizon. Lenses and mirrors gather the lamp's light and squeeze it into a narrow horizontal beam instead of letting it spread in every direction. Because the light is concentrated and starts from a height, a ship many miles away still receives enough of it to see the flash.\n\nQ: Explain in your own words how the lungs supply the body with oxygen.\nA:",
+      "expected": "Must preserve: air is breathed into the lungs; oxygen passes from the air sacs (alveoli) into the blood; the blood carries oxygen to the body's tissues; carbon dioxide moves the opposite way and is breathed out. Wording may vary freely.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 206,
+        "allenai/OLMo-2-0425-1B": 193
+      }
+    },
+    {
+      "id": "L3-human_anatomy-1",
+      "level": "L3",
+      "topic": "human anatomy",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": null,
+      "prompt": "Write a two-line rhyming couplet about the human skeleton.",
+      "run_prompt": "Short pieces written to order.\n\nInstruction: Write a haiku about a mountain lake.\nPiece:\nCold water holding\nthe whole grey weight of the sky\nuntil wind breaks it\n\nInstruction: Write a limerick about a stubborn mule.\nPiece:\nThere once was a mule from Kilkee\nWho refused to be moved for a fee.\nHe would stand in the road,\nIgnoring his load,\nAnd nap until quarter past three.\n\nInstruction: Write a one-sentence proverb about borrowed tools.\nPiece:\nA borrowed tool comes home either broken or not at all.\n\nInstruction: Write a two-line rhyming couplet about an old clock.\nPiece:\nThe old clock keeps its argument with time,\nAnd loses, minute after patient chime.\n\nInstruction: Write a two-line rhyming couplet about the human skeleton.\nPiece:",
+      "expected": "Exactly two lines whose final words rhyme; content must concern the skeleton or bones; no extra lines or commentary.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 204,
+        "allenai/OLMo-2-0425-1B": 168
+      }
+    },
+    {
+      "id": "L4-human_anatomy-1",
+      "level": "L4",
+      "topic": "human anatomy",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": "canal locks",
+      "prompt": "Describe how blood is pushed through the heart as a boat climbing a flight of canal locks, in 3-6 sentences. Each lock gate must correspond to a heart valve, so that the order of openings explains the heartbeat.",
+      "run_prompt": "Answers that combine two unrelated subjects, using one to explain the other.\n\nTask: Describe a barbershop organised as a court of law. Say which part of court procedure each step of the haircut copies and what it does for the customer.\nAnswer: The consultation is the arraignment: the customer states what he is charged with wanting and the barber reads it back to him, so there is no dispute later about what was agreed. The mirror on the far wall serves as the public gallery, since every cut is made in view and can be objected to while it is still reversible. Scissors and clippers act as opposing counsel, one arguing for length and the other for shape, and the barber alternates between them until neither has a further submission. Sweeping the floor is the sealing of the record: once the hair is gone the case cannot be reopened, and the customer settles costs on the way out.\n\nTask: Describe a village postal route as a knitting pattern. Say which knitting instruction each part of the route copies and what it does for the postman.\nAnswer: The main road is the cast-on row: it fixes how many houses the whole route will carry, and everything after it hangs from that count. Each side lane is a purl stitch worked in the opposite direction, so the postman doubles back and the fabric of the route lies flat instead of curling into wasted mileage. Houses that receive post only on certain days are slipped stitches, passed over without being worked but still counted, which keeps the rhythm of the walk even. The return to the sorting office is the cast-off, binding the loose end so that tomorrow's round can start from the same edge.\n\nTask: Describe how blood is pushed through the heart as a boat climbing a flight of canal locks, in 3-6 sentences. Each lock gate must correspond to a heart valve, so that the order of openings explains the heartbeat.\nAnswer:",
+      "expected": "A successful blend must map lock mechanics onto cardiac mechanics with the physics doing the work: gates that open only under pressure from one side = one-way valves, each lock chamber = an atrium or ventricle, the staged lift of the boat = blood raised to a higher pressure at each stage, waiting for levels to equalise = the filling phase. The sequence in which the gates open must explain the sequence of the heartbeat. A heart merely called 'a system of gates' fails.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 409,
+        "allenai/OLMo-2-0425-1B": 387
+      }
+    },
+    {
+      "id": "L5-human_anatomy-1",
+      "level": "L5",
+      "topic": "human anatomy",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": null,
+      "prompt": "Invent a way of teaching human anatomy that does not exist today, and explain what problem it solves and how it works.",
+      "run_prompt": "Proposals for things that do not exist yet, each written by the person who thought of it.\n\nTask: Invent a new kind of doorbell that does not exist today, and explain what problem it solves and how it works.\nProposal: An ordinary doorbell tells you that somebody is at the door but nothing about how much the visit matters, so a household either answers everything or ignores everything. This doorbell replaces the button with a weighted pull-cord: the harder the visitor pulls, the longer the chime sustains, and the mechanism holds that pull on a small dial inside the hall. A courier leaving a parcel gives a light tug that produces one short note, while a neighbour with something urgent pulls hard and sets off a chime that runs for several seconds. Because the effort is physical and the visitor can feel how hard they are pulling, the signal stays honest, and the household can decide whether to get up from the sound alone.\n\nTask: Invent a new kind of suitcase that does not exist today, and explain what problem it solves and how it works.\nProposal: Travellers repack at the airport because they cannot tell which part of the case is over the weight limit until the whole thing is on the scale. This suitcase is built from four stacked drawers, each on its own spring-loaded floor that sinks as it fills and shows a coloured band through a slot in the shell. A drawer that dips past its band is holding more than a quarter of the allowance, so the owner can see which layer to lighten without opening anything. The springs also lock the drawers once the lid is closed, so the load stays balanced and the case does not tip when it is stood upright.\n\nTask: Invent a way of teaching human anatomy that does not exist today, and explain what problem it solves and how it works.\nProposal:",
+      "expected": "Novelty criterion: must not match existing methods (dissection, plastination, VR/AR atlases, 3D printing, body painting, cadaver-free simulators already on sale); must include a concrete mechanism and stay inside the anatomy domain. Treat the two scaffold exemplars as attested and exclude re-skins of them.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 389,
+        "allenai/OLMo-2-0425-1B": 367
+      }
+    },
+    {
+      "id": "L1-mathematics-1",
+      "level": "L1",
+      "topic": "mathematics",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "prompt": "A whole number that can be divided only by itself and one is called a",
+      "run_prompt": "The following short statements were collected for a general-knowledge reader. They are unrelated to one another and appear in no particular order. Each was checked for accuracy before being included in the collection.\n\nA whole number that can be divided only by itself and one is called a",
+      "gold_continuation": "prime",
+      "expected": "prime",
+      "qc_problem": null,
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 55,
+        "allenai/OLMo-2-0425-1B": 53
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 1,
+        "allenai/OLMo-2-0425-1B": 1
+      }
+    },
+    {
+      "id": "L1-mathematics-2",
+      "level": "L1",
+      "topic": "mathematics",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "prompt": "The ratio of a circle's circumference to its diameter is called",
+      "run_prompt": "The following short statements were collected for a general-knowledge reader. They are unrelated to one another and appear in no particular order. Each was checked for accuracy before being included in the collection.\n\nThe ratio of a circle's circumference to its diameter is called",
+      "gold_continuation": "pi",
+      "expected": "pi",
+      "qc_problem": "Surface-form smear: 'pi' / 'Pi' / 'the Greek letter pi' / the symbol. ' pi' and ' Pi' are distinct single tokens on both models - score them as one answer set.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 52,
+        "allenai/OLMo-2-0425-1B": 50
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 1,
+        "allenai/OLMo-2-0425-1B": 1
+      }
+    },
+    {
+      "id": "L2-mathematics-1",
+      "level": "L2",
+      "topic": "mathematics",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": null,
+      "prompt": "Explain in your own words what the Pythagorean theorem says.",
+      "run_prompt": "Short explanations, written in plain language.\n\nQ: Explain in your own words why a bicycle stays upright while it is moving.\nA: A moving bicycle keeps correcting itself. When it begins to lean to one side, the front wheel turns slightly into the lean, which steers the wheels back underneath the rider's weight. The faster it travels, the smaller and quicker those corrections are, so the bicycle feels steady.\n\nQ: Explain in your own words why a lighthouse can be seen from far out at sea.\nA: A lighthouse is built high up so that its beam clears the curve of the horizon. Lenses and mirrors gather the lamp's light and squeeze it into a narrow horizontal beam instead of letting it spread in every direction. Because the light is concentrated and starts from a height, a ship many miles away still receives enough of it to see the flash.\n\nQ: Explain in your own words what the Pythagorean theorem says.\nA:",
+      "expected": "Must preserve: it applies to right-angled triangles; the square of the hypotenuse (longest side, opposite the right angle) equals the sum of the squares of the other two sides (a² + b² = c² in some form). Wording may vary freely.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 206,
+        "allenai/OLMo-2-0425-1B": 192
+      }
+    },
+    {
+      "id": "L3-mathematics-1",
+      "level": "L3",
+      "topic": "mathematics",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": null,
+      "prompt": "Write a one-sentence proverb about mathematics.",
+      "run_prompt": "Short pieces written to order.\n\nInstruction: Write a haiku about a mountain lake.\nPiece:\nCold water holding\nthe whole grey weight of the sky\nuntil wind breaks it\n\nInstruction: Write a limerick about a stubborn mule.\nPiece:\nThere once was a mule from Kilkee\nWho refused to be moved for a fee.\nHe would stand in the road,\nIgnoring his load,\nAnd nap until quarter past three.\n\nInstruction: Write a one-sentence proverb about borrowed tools.\nPiece:\nA borrowed tool comes home either broken or not at all.\n\nInstruction: Write a two-line rhyming couplet about an old clock.\nPiece:\nThe old clock keeps its argument with time,\nAnd loses, minute after patient chime.\n\nInstruction: Write a one-sentence proverb about mathematics.\nPiece:",
+      "expected": "Exactly one sentence in aphoristic proverb form (general truth, figurative or advisory tone); content must concern mathematics; must not be an existing well-known proverb; no extra sentences or commentary.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 199,
+        "allenai/OLMo-2-0425-1B": 163
+      }
+    },
+    {
+      "id": "L4-mathematics-1",
+      "level": "L4",
+      "topic": "mathematics",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": "fairy tales",
+      "prompt": "Write a fairy tale where a curse breaks only when a child solves a simple arithmetic problem, in 3-6 sentences. Each stage of the curse must correspond to a step of the sum, whose answer the story states.",
+      "run_prompt": "Answers that combine two unrelated subjects, using one to explain the other.\n\nTask: Describe a barbershop organised as a court of law. Say which part of court procedure each step of the haircut copies and what it does for the customer.\nAnswer: The consultation is the arraignment: the customer states what he is charged with wanting and the barber reads it back to him, so there is no dispute later about what was agreed. The mirror on the far wall serves as the public gallery, since every cut is made in view and can be objected to while it is still reversible. Scissors and clippers act as opposing counsel, one arguing for length and the other for shape, and the barber alternates between them until neither has a further submission. Sweeping the floor is the sealing of the record: once the hair is gone the case cannot be reopened, and the customer settles costs on the way out.\n\nTask: Describe a village postal route as a knitting pattern. Say which knitting instruction each part of the route copies and what it does for the postman.\nAnswer: The main road is the cast-on row: it fixes how many houses the whole route will carry, and everything after it hangs from that count. Each side lane is a purl stitch worked in the opposite direction, so the postman doubles back and the fabric of the route lies flat instead of curling into wasted mileage. Houses that receive post only on certain days are slipped stitches, passed over without being worked but still counted, which keeps the rhythm of the walk even. The return to the sorting office is the cast-off, binding the loose end so that tomorrow's round can start from the same edge.\n\nTask: Write a fairy tale where a curse breaks only when a child solves a simple arithmetic problem, in 3-6 sentences. Each stage of the curse must correspond to a step of the sum, whose answer the story states.\nAnswer:",
+      "expected": "A successful blend must contain fairy-tale machinery (character, curse, magical stakes) whose resolution depends on a concrete, well-posed arithmetic problem stated inside the story together with its correct answer, with each stage of the curse lining up against a step of the calculation. The arithmetic must sit in the single-operation band - an addition, subtraction, or multiplication of two small whole numbers - so correctness is checkable at this model scale. Score the blend and the arithmetic correctness separately, so a well-built story with a wrong answer still yields signal. 'Magic numbers' with no solvable problem fails.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 408,
+        "allenai/OLMo-2-0425-1B": 387
+      }
+    },
+    {
+      "id": "L5-mathematics-1",
+      "level": "L5",
+      "topic": "mathematics",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": null,
+      "prompt": "Invent a mathematical notation or teaching device that does not exist today, and explain what problem it solves and how it works.",
+      "run_prompt": "Proposals for things that do not exist yet, each written by the person who thought of it.\n\nTask: Invent a new kind of doorbell that does not exist today, and explain what problem it solves and how it works.\nProposal: An ordinary doorbell tells you that somebody is at the door but nothing about how much the visit matters, so a household either answers everything or ignores everything. This doorbell replaces the button with a weighted pull-cord: the harder the visitor pulls, the longer the chime sustains, and the mechanism holds that pull on a small dial inside the hall. A courier leaving a parcel gives a light tug that produces one short note, while a neighbour with something urgent pulls hard and sets off a chime that runs for several seconds. Because the effort is physical and the visitor can feel how hard they are pulling, the signal stays honest, and the household can decide whether to get up from the sound alone.\n\nTask: Invent a new kind of suitcase that does not exist today, and explain what problem it solves and how it works.\nProposal: Travellers repack at the airport because they cannot tell which part of the case is over the weight limit until the whole thing is on the scale. This suitcase is built from four stacked drawers, each on its own spring-loaded floor that sinks as it fills and shows a coloured band through a slot in the shell. A drawer that dips past its band is holding more than a quarter of the allowance, so the owner can see which layer to lighten without opening anything. The springs also lock the drawers once the lid is closed, so the load stays balanced and the case does not tip when it is stood upright.\n\nTask: Invent a mathematical notation or teaching device that does not exist today, and explain what problem it solves and how it works.\nProposal:",
+      "expected": "Novelty criterion: must not match existing notation systems or established pedagogical tools (Cuisenaire rods, number lines, Venn diagrams, algebra tiles); must specify the mechanism and the concrete difficulty in mathematics it reduces. Treat the two scaffold exemplars as attested and exclude re-skins of them.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 389,
+        "allenai/OLMo-2-0425-1B": 367
+      }
+    },
+    {
+      "id": "L1-weather-1",
+      "level": "L1",
+      "topic": "weather",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "prompt": "The colored arc of light that appears in the sky after rain is called a",
+      "run_prompt": "The following short statements were collected for a general-knowledge reader. They are unrelated to one another and appear in no particular order. Each was checked for accuracy before being included in the collection.\n\nThe colored arc of light that appears in the sky after rain is called a",
+      "gold_continuation": "rainbow",
+      "expected": "rainbow",
+      "qc_problem": null,
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 55,
+        "allenai/OLMo-2-0425-1B": 53
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 1,
+        "allenai/OLMo-2-0425-1B": 1
+      }
+    },
+    {
+      "id": "L1-weather-2",
+      "level": "L1",
+      "topic": "weather",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "prompt": "Air temperature is measured with an instrument called a",
+      "run_prompt": "The following short statements were collected for a general-knowledge reader. They are unrelated to one another and appear in no particular order. Each was checked for accuracy before being included in the collection.\n\nAir temperature is measured with an instrument called a",
+      "gold_continuation": "thermometer",
+      "expected": "thermometer",
+      "qc_problem": "Pythia splits ' thermometer' into ' therm'+'ometer', so a first-token metric scores a prefix, not the answer. OLMo-2 keeps it whole. Score the full span, or accept ' therm' (reasonably specific) and record the token-count asymmetry.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 49,
+        "allenai/OLMo-2-0425-1B": 47
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 2,
+        "allenai/OLMo-2-0425-1B": 1
+      }
+    },
+    {
+      "id": "L2-weather-1",
+      "level": "L2",
+      "topic": "weather",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": null,
+      "prompt": "Explain in your own words how rain forms in the sky.",
+      "run_prompt": "Short explanations, written in plain language.\n\nQ: Explain in your own words why a bicycle stays upright while it is moving.\nA: A moving bicycle keeps correcting itself. When it begins to lean to one side, the front wheel turns slightly into the lean, which steers the wheels back underneath the rider's weight. The faster it travels, the smaller and quicker those corrections are, so the bicycle feels steady.\n\nQ: Explain in your own words why a lighthouse can be seen from far out at sea.\nA: A lighthouse is built high up so that its beam clears the curve of the horizon. Lenses and mirrors gather the lamp's light and squeeze it into a narrow horizontal beam instead of letting it spread in every direction. Because the light is concentrated and starts from a height, a ship many miles away still receives enough of it to see the flash.\n\nQ: Explain in your own words how rain forms in the sky.\nA:",
+      "expected": "Must preserve: water evaporates from surfaces, the vapor rises and cools, it condenses into tiny droplets that form clouds, and when the droplets grow too heavy they fall as rain.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 204,
+        "allenai/OLMo-2-0425-1B": 191
+      }
+    },
+    {
+      "id": "L3-weather-1",
+      "level": "L3",
+      "topic": "weather",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": null,
+      "prompt": "Write a haiku about a thunderstorm.",
+      "run_prompt": "Short pieces written to order.\n\nInstruction: Write a haiku about a mountain lake.\nPiece:\nCold water holding\nthe whole grey weight of the sky\nuntil wind breaks it\n\nInstruction: Write a limerick about a stubborn mule.\nPiece:\nThere once was a mule from Kilkee\nWho refused to be moved for a fee.\nHe would stand in the road,\nIgnoring his load,\nAnd nap until quarter past three.\n\nInstruction: Write a one-sentence proverb about borrowed tools.\nPiece:\nA borrowed tool comes home either broken or not at all.\n\nInstruction: Write a two-line rhyming couplet about an old clock.\nPiece:\nThe old clock keeps its argument with time,\nAnd loses, minute after patient chime.\n\nInstruction: Write a haiku about a thunderstorm.\nPiece:",
+      "expected": "Exactly three lines with a 5-7-5 syllable pattern; content is about a thunderstorm; no title or extra lines.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 198,
+        "allenai/OLMo-2-0425-1B": 163
+      }
+    },
+    {
+      "id": "L4-weather-1",
+      "level": "L4",
+      "topic": "weather",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": "banking",
+      "prompt": "Describe a savings account whose interest rate is set by the local rainfall total, in 3-6 sentences. Each rainfall measurement must correspond to a specific term of the account, so a farmer can hedge drought.",
+      "run_prompt": "Answers that combine two unrelated subjects, using one to explain the other.\n\nTask: Describe a barbershop organised as a court of law. Say which part of court procedure each step of the haircut copies and what it does for the customer.\nAnswer: The consultation is the arraignment: the customer states what he is charged with wanting and the barber reads it back to him, so there is no dispute later about what was agreed. The mirror on the far wall serves as the public gallery, since every cut is made in view and can be objected to while it is still reversible. Scissors and clippers act as opposing counsel, one arguing for length and the other for shape, and the barber alternates between them until neither has a further submission. Sweeping the floor is the sealing of the record: once the hair is gone the case cannot be reopened, and the customer settles costs on the way out.\n\nTask: Describe a village postal route as a knitting pattern. Say which knitting instruction each part of the route copies and what it does for the postman.\nAnswer: The main road is the cast-on row: it fixes how many houses the whole route will carry, and everything after it hangs from that count. Each side lane is a purl stitch worked in the opposite direction, so the postman doubles back and the fabric of the route lies flat instead of curling into wasted mileage. Houses that receive post only on certain days are slipped stitches, passed over without being worked but still counted, which keeps the rhythm of the walk even. The return to the sorting office is the cast-off, binding the loose end so that tomorrow's round can start from the same edge.\n\nTask: Describe a savings account whose interest rate is set by the local rainfall total, in 3-6 sentences. Each rainfall measurement must correspond to a specific term of the account, so a farmer can hedge drought.\nAnswer:",
+      "expected": "A successful blend must have the measured weather variable causally setting a financial term: a stated rule or formula converting a rainfall total into the interest rate or payout, plus a coherent reason the coupling is worth having, such as hedging drought risk against crop income. Rain and banking mentioned side by side, with the rate set by anything other than the measurement, fails.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 406,
+        "allenai/OLMo-2-0425-1B": 384
+      }
+    },
+    {
+      "id": "L5-weather-1",
+      "level": "L5",
+      "topic": "weather",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": null,
+      "prompt": "Invent a town-scale device for using fog that does not exist today, and explain what problem it solves and how it works.",
+      "run_prompt": "Proposals for things that do not exist yet, each written by the person who thought of it.\n\nTask: Invent a new kind of doorbell that does not exist today, and explain what problem it solves and how it works.\nProposal: An ordinary doorbell tells you that somebody is at the door but nothing about how much the visit matters, so a household either answers everything or ignores everything. This doorbell replaces the button with a weighted pull-cord: the harder the visitor pulls, the longer the chime sustains, and the mechanism holds that pull on a small dial inside the hall. A courier leaving a parcel gives a light tug that produces one short note, while a neighbour with something urgent pulls hard and sets off a chime that runs for several seconds. Because the effort is physical and the visitor can feel how hard they are pulling, the signal stays honest, and the household can decide whether to get up from the sound alone.\n\nTask: Invent a new kind of suitcase that does not exist today, and explain what problem it solves and how it works.\nProposal: Travellers repack at the airport because they cannot tell which part of the case is over the weight limit until the whole thing is on the scale. This suitcase is built from four stacked drawers, each on its own spring-loaded floor that sinks as it fills and shows a coloured band through a slot in the shell. A drawer that dips past its band is holding more than a quarter of the allowance, so the owner can see which layer to lighten without opening anything. The springs also lock the drawers once the lid is closed, so the load stays balanced and the case does not tip when it is stood upright.\n\nTask: Invent a town-scale device for using fog that does not exist today, and explain what problem it solves and how it works.\nProposal:",
+      "expected": "Novelty criterion: must not be an existing fog technology under a new name (fog-harvesting nets, fog lamps, foghorns, humidifiers, cloud seeding); must propose a concrete mechanism specific to fog rather than to rain or humidity in general, and name the problem it solves. Treat the two scaffold exemplars as attested and exclude re-skins of them.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 391,
+        "allenai/OLMo-2-0425-1B": 368
+      }
+    },
+    {
+      "id": "L1-architecture-1",
+      "level": "L1",
+      "topic": "architecture",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "prompt": "A person whose job is to design buildings is called an",
+      "run_prompt": "The following short statements were collected for a general-knowledge reader. They are unrelated to one another and appear in no particular order. Each was checked for accuracy before being included in the collection.\n\nA person whose job is to design buildings is called an",
+      "gold_continuation": "architect",
+      "expected": "architect",
+      "qc_problem": null,
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 51,
+        "allenai/OLMo-2-0425-1B": 49
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 1,
+        "allenai/OLMo-2-0425-1B": 1
+      }
+    },
+    {
+      "id": "L1-architecture-2",
+      "level": "L1",
+      "topic": "architecture",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "prompt": "The Eiffel Tower stands in the city of",
+      "run_prompt": "The following short statements were collected for a general-knowledge reader. They are unrelated to one another and appear in no particular order. Each was checked for accuracy before being included in the collection.\n\nThe Eiffel Tower stands in the city of",
+      "gold_continuation": "Paris",
+      "expected": "Paris",
+      "qc_problem": null,
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 50,
+        "allenai/OLMo-2-0425-1B": 48
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 1,
+        "allenai/OLMo-2-0425-1B": 1
+      }
+    },
+    {
+      "id": "L2-architecture-1",
+      "level": "L2",
+      "topic": "architecture",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": null,
+      "prompt": "Explain in your own words why an arch can support heavy loads.",
+      "run_prompt": "Short explanations, written in plain language.\n\nQ: Explain in your own words why a bicycle stays upright while it is moving.\nA: A moving bicycle keeps correcting itself. When it begins to lean to one side, the front wheel turns slightly into the lean, which steers the wheels back underneath the rider's weight. The faster it travels, the smaller and quicker those corrections are, so the bicycle feels steady.\n\nQ: Explain in your own words why a lighthouse can be seen from far out at sea.\nA: A lighthouse is built high up so that its beam clears the curve of the horizon. Lenses and mirrors gather the lamp's light and squeeze it into a narrow horizontal beam instead of letting it spread in every direction. Because the light is concentrated and starts from a height, a ship many miles away still receives enough of it to see the flash.\n\nQ: Explain in your own words why an arch can support heavy loads.\nA:",
+      "expected": "Must preserve: an arch redirects the downward weight into compression that travels along its curve into the supports at either side, and stone or brick is strong under compression, so the shape carries loads that a flat beam of the same material could not.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 205,
+        "allenai/OLMo-2-0425-1B": 192
+      }
+    },
+    {
+      "id": "L3-architecture-1",
+      "level": "L3",
+      "topic": "architecture",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": null,
+      "prompt": "Write a limerick about a skyscraper.",
+      "run_prompt": "Short pieces written to order.\n\nInstruction: Write a haiku about a mountain lake.\nPiece:\nCold water holding\nthe whole grey weight of the sky\nuntil wind breaks it\n\nInstruction: Write a limerick about a stubborn mule.\nPiece:\nThere once was a mule from Kilkee\nWho refused to be moved for a fee.\nHe would stand in the road,\nIgnoring his load,\nAnd nap until quarter past three.\n\nInstruction: Write a one-sentence proverb about borrowed tools.\nPiece:\nA borrowed tool comes home either broken or not at all.\n\nInstruction: Write a two-line rhyming couplet about an old clock.\nPiece:\nThe old clock keeps its argument with time,\nAnd loses, minute after patient chime.\n\nInstruction: Write a limerick about a skyscraper.\nPiece:",
+      "expected": "Exactly five lines with an AABBA rhyme scheme and limerick rhythm (lines 1, 2, 5 longer; lines 3, 4 shorter); content is about a skyscraper.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 201,
+        "allenai/OLMo-2-0425-1B": 164
+      }
+    },
+    {
+      "id": "L4-architecture-1",
+      "level": "L4",
+      "topic": "architecture",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": "insects",
+      "prompt": "Army ants link their bodies into living bridges, adding ants where traffic is heavy and dissolving the bridge when it is not. Design a footbridge copying this in 3-6 sentences; each ant behaviour must become a structural feature.",
+      "run_prompt": "Answers that combine two unrelated subjects, using one to explain the other.\n\nTask: Describe a barbershop organised as a court of law. Say which part of court procedure each step of the haircut copies and what it does for the customer.\nAnswer: The consultation is the arraignment: the customer states what he is charged with wanting and the barber reads it back to him, so there is no dispute later about what was agreed. The mirror on the far wall serves as the public gallery, since every cut is made in view and can be objected to while it is still reversible. Scissors and clippers act as opposing counsel, one arguing for length and the other for shape, and the barber alternates between them until neither has a further submission. Sweeping the floor is the sealing of the record: once the hair is gone the case cannot be reopened, and the customer settles costs on the way out.\n\nTask: Describe a village postal route as a knitting pattern. Say which knitting instruction each part of the route copies and what it does for the postman.\nAnswer: The main road is the cast-on row: it fixes how many houses the whole route will carry, and everything after it hangs from that count. Each side lane is a purl stitch worked in the opposite direction, so the postman doubles back and the fabric of the route lies flat instead of curling into wasted mileage. Houses that receive post only on certain days are slipped stitches, passed over without being worked but still counted, which keeps the rhythm of the walk even. The return to the sorting office is the cast-off, binding the loose end so that tomorrow's round can start from the same edge.\n\nTask: Army ants link their bodies into living bridges, adding ants where traffic is heavy and dissolving the bridge when it is not. Design a footbridge copying this in 3-6 sentences; each ant behaviour must become a structural feature.\nAnswer:",
+      "expected": "A successful blend must translate each ant behaviour stated in the prompt into a working structural feature: bodies gripping each other = self-locking modular segments, adding ants where traffic is heavy = load-responsive thickening or recruitment of spare members, dissolving when unused = controlled disassembly or retraction. The ant behaviour must explain how the bridge carries and sheds load, not decorate the description. Because the behaviour is now supplied in the prompt, failure here is a blending failure rather than a knowledge gap.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 410,
+        "allenai/OLMo-2-0425-1B": 389
+      }
+    },
+    {
+      "id": "L5-architecture-1",
+      "level": "L5",
+      "topic": "architecture",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": null,
+      "prompt": "Invent an architectural feature for ordinary homes that does not exist today, and explain what problem it solves and how it works.",
+      "run_prompt": "Proposals for things that do not exist yet, each written by the person who thought of it.\n\nTask: Invent a new kind of doorbell that does not exist today, and explain what problem it solves and how it works.\nProposal: An ordinary doorbell tells you that somebody is at the door but nothing about how much the visit matters, so a household either answers everything or ignores everything. This doorbell replaces the button with a weighted pull-cord: the harder the visitor pulls, the longer the chime sustains, and the mechanism holds that pull on a small dial inside the hall. A courier leaving a parcel gives a light tug that produces one short note, while a neighbour with something urgent pulls hard and sets off a chime that runs for several seconds. Because the effort is physical and the visitor can feel how hard they are pulling, the signal stays honest, and the household can decide whether to get up from the sound alone.\n\nTask: Invent a new kind of suitcase that does not exist today, and explain what problem it solves and how it works.\nProposal: Travellers repack at the airport because they cannot tell which part of the case is over the weight limit until the whole thing is on the scale. This suitcase is built from four stacked drawers, each on its own spring-loaded floor that sinks as it fills and shows a coloured band through a slot in the shell. A drawer that dips past its band is holding more than a quarter of the allowance, so the owner can see which layer to lighten without opening anything. The springs also lock the drawers once the lid is closed, so the load stays balanced and the case does not tip when it is stood upright.\n\nTask: Invent an architectural feature for ordinary homes that does not exist today, and explain what problem it solves and how it works.\nProposal:",
+      "expected": "Novelty criterion: must not be a renamed existing element (skylight, atrium, green roof, murphy bed, smart thermostat, trombe wall); must have a described physical form and a distinct function, with the reason current houses lack it implied by the problem statement. Treat the two scaffold exemplars as attested and exclude re-skins of them.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 389,
+        "allenai/OLMo-2-0425-1B": 367
+      }
+    },
+    {
+      "id": "L1-Greek_mythology-1",
+      "level": "L1",
+      "topic": "Greek mythology",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "prompt": "In Greek mythology, the king of the gods is",
+      "run_prompt": "The following short statements were collected for a general-knowledge reader. They are unrelated to one another and appear in no particular order. Each was checked for accuracy before being included in the collection.\n\nIn Greek mythology, the king of the gods is",
+      "gold_continuation": "Zeus",
+      "expected": "Zeus",
+      "qc_problem": "Pythia splits ' Zeus' into ' Ze'+'us' while OLMo-2 keeps it whole, so first-token probabilities are not directly comparable across models. ' Ze' is at least specific, so this one is tolerable with span scoring.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 50,
+        "allenai/OLMo-2-0425-1B": 48
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 2,
+        "allenai/OLMo-2-0425-1B": 1
+      }
+    },
+    {
+      "id": "L1-Greek_mythology-2",
+      "level": "L1",
+      "topic": "Greek mythology",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "prompt": "In Greek mythology, the god of the sea is",
+      "run_prompt": "The following short statements were collected for a general-knowledge reader. They are unrelated to one another and appear in no particular order. Each was checked for accuracy before being included in the collection.\n\nIn Greek mythology, the god of the sea is",
+      "gold_continuation": "Poseidon",
+      "expected": "Poseidon",
+      "qc_problem": "HIGH. Pythia tokenises ' Poseidon' as ' P'+'ose'+'id'+'on'. The first token ' P' is shared with thousands of words, so a next-token metric measures essentially nothing for this item on Pythia. OLMo-2 gives ' Pose'+'idon'. Either score the full teacher-forced span or swap the fact to a god that is one token on both models (' Apollo' is single-token on both).",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 50,
+        "allenai/OLMo-2-0425-1B": 48
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 4,
+        "allenai/OLMo-2-0425-1B": 2
+      }
+    },
+    {
+      "id": "L2-Greek_mythology-1",
+      "level": "L2",
+      "topic": "Greek mythology",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": null,
+      "prompt": "Explain in your own words how the myth of Persephone accounts for the changing of the seasons.",
+      "run_prompt": "Short explanations, written in plain language.\n\nQ: Explain in your own words why a bicycle stays upright while it is moving.\nA: A moving bicycle keeps correcting itself. When it begins to lean to one side, the front wheel turns slightly into the lean, which steers the wheels back underneath the rider's weight. The faster it travels, the smaller and quicker those corrections are, so the bicycle feels steady.\n\nQ: Explain in your own words why a lighthouse can be seen from far out at sea.\nA: A lighthouse is built high up so that its beam clears the curve of the horizon. Lenses and mirrors gather the lamp's light and squeeze it into a narrow horizontal beam instead of letting it spread in every direction. Because the light is concentrated and starts from a height, a ship many miles away still receives enough of it to see the flash.\n\nQ: Explain in your own words how the myth of Persephone accounts for the changing of the seasons.\nA:",
+      "expected": "Must preserve the causal chain rather than the narrative order: Hades takes Persephone to the underworld; she eats pomegranate seeds, which bind her to return there for part of every year; her mother Demeter, goddess of the harvest, grieves while she is gone and the earth stops growing; when Persephone comes back, growth resumes. The alternation of her absence and presence is what produces winter and summer. Wording may vary freely; a retelling that omits the seeds-bind-her-return link or the Demeter-grief-to-barren-earth link is incomplete.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 212,
+        "allenai/OLMo-2-0425-1B": 199
+      }
+    },
+    {
+      "id": "L3-Greek_mythology-1",
+      "level": "L3",
+      "topic": "Greek mythology",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": null,
+      "prompt": "Write a two-line rhyming couplet about Zeus.",
+      "run_prompt": "Short pieces written to order.\n\nInstruction: Write a haiku about a mountain lake.\nPiece:\nCold water holding\nthe whole grey weight of the sky\nuntil wind breaks it\n\nInstruction: Write a limerick about a stubborn mule.\nPiece:\nThere once was a mule from Kilkee\nWho refused to be moved for a fee.\nHe would stand in the road,\nIgnoring his load,\nAnd nap until quarter past three.\n\nInstruction: Write a one-sentence proverb about borrowed tools.\nPiece:\nA borrowed tool comes home either broken or not at all.\n\nInstruction: Write a two-line rhyming couplet about an old clock.\nPiece:\nThe old clock keeps its argument with time,\nAnd loses, minute after patient chime.\n\nInstruction: Write a two-line rhyming couplet about Zeus.\nPiece:",
+      "expected": "Exactly two lines whose end words rhyme; content is about Zeus; no additional lines or commentary.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 203,
+        "allenai/OLMo-2-0425-1B": 166
+      }
+    },
+    {
+      "id": "L4-Greek_mythology-1",
+      "level": "L4",
+      "topic": "Greek mythology",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": "supply chains",
+      "prompt": "Explain how Hermes would run a modern parcel-delivery network, in 3-6 sentences. Each of his mythic powers must correspond to a specific supply-chain function, such as warehousing, route planning, customs, or last-mile delivery.",
+      "run_prompt": "Answers that combine two unrelated subjects, using one to explain the other.\n\nTask: Describe a barbershop organised as a court of law. Say which part of court procedure each step of the haircut copies and what it does for the customer.\nAnswer: The consultation is the arraignment: the customer states what he is charged with wanting and the barber reads it back to him, so there is no dispute later about what was agreed. The mirror on the far wall serves as the public gallery, since every cut is made in view and can be objected to while it is still reversible. Scissors and clippers act as opposing counsel, one arguing for length and the other for shape, and the barber alternates between them until neither has a further submission. Sweeping the floor is the sealing of the record: once the hair is gone the case cannot be reopened, and the customer settles costs on the way out.\n\nTask: Describe a village postal route as a knitting pattern. Say which knitting instruction each part of the route copies and what it does for the postman.\nAnswer: The main road is the cast-on row: it fixes how many houses the whole route will carry, and everything after it hangs from that count. Each side lane is a purl stitch worked in the opposite direction, so the postman doubles back and the fabric of the route lies flat instead of curling into wasted mileage. Houses that receive post only on certain days are slipped stitches, passed over without being worked but still counted, which keeps the rhythm of the walk even. The return to the sorting office is the cast-off, binding the loose end so that tomorrow's round can start from the same edge.\n\nTask: Explain how Hermes would run a modern parcel-delivery network, in 3-6 sentences. Each of his mythic powers must correspond to a specific supply-chain function, such as warehousing, route planning, customs, or last-mile delivery.\nAnswer:",
+      "expected": "A successful blend must pair concrete mythic attributes (winged sandals, role as divine messenger, guide across boundaries, patron of trade and of cunning) with concrete logistics functions they causally replace or transform: winged sandals collapsing last-mile transit time, the boundary-crossing role handling customs, the trickster aspect handling loss and shrinkage. Hermes name-dropped onto a generic logistics description fails; each named power must do identifiable supply-chain work.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 418,
+        "allenai/OLMo-2-0425-1B": 391
+      }
+    },
+    {
+      "id": "L5-Greek_mythology-1",
+      "level": "L5",
+      "topic": "Greek mythology",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": null,
+      "prompt": "Invent a brand-new Greek god whose domain no existing myth covers, and explain what problem it solves and how it works.",
+      "run_prompt": "Proposals for things that do not exist yet, each written by the person who thought of it.\n\nTask: Invent a new kind of doorbell that does not exist today, and explain what problem it solves and how it works.\nProposal: An ordinary doorbell tells you that somebody is at the door but nothing about how much the visit matters, so a household either answers everything or ignores everything. This doorbell replaces the button with a weighted pull-cord: the harder the visitor pulls, the longer the chime sustains, and the mechanism holds that pull on a small dial inside the hall. A courier leaving a parcel gives a light tug that produces one short note, while a neighbour with something urgent pulls hard and sets off a chime that runs for several seconds. Because the effort is physical and the visitor can feel how hard they are pulling, the signal stays honest, and the household can decide whether to get up from the sound alone.\n\nTask: Invent a new kind of suitcase that does not exist today, and explain what problem it solves and how it works.\nProposal: Travellers repack at the airport because they cannot tell which part of the case is over the weight limit until the whole thing is on the scale. This suitcase is built from four stacked drawers, each on its own spring-loaded floor that sinks as it fills and shows a coloured band through a slot in the shell. A drawer that dips past its band is holding more than a quarter of the allowance, so the owner can see which layer to lighten without opening anything. The springs also lock the drawers once the lid is closed, so the load stays balanced and the case does not tip when it is stood upright.\n\nTask: Invent a brand-new Greek god whose domain no existing myth covers, and explain what problem it solves and how it works.\nProposal:",
+      "expected": "Novelty criterion: the name must not belong to any attested deity; the domain must not duplicate an existing god's portfolio (sea, war, love, harvest, sleep, messages, the forge) or a worn modern joke domain (god of wifi, god of traffic); the answer must say what the god's power is for and how it operates, in a recognisably Greek idiom. Name and mechanism should not surface in an n-gram check of the training corpora. Treat the two scaffold exemplars as attested and exclude re-skins of them.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 390,
+        "allenai/OLMo-2-0425-1B": 367
+      }
+    },
+    {
+      "id": "L1-cooking-1",
+      "level": "L1",
+      "topic": "cooking",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "prompt": "On the Celsius scale, water at sea level boils at",
+      "run_prompt": "The following short statements were collected for a general-knowledge reader. They are unrelated to one another and appear in no particular order. Each was checked for accuracy before being included in the collection.\n\nOn the Celsius scale, water at sea level boils at",
+      "gold_continuation": "100",
+      "expected": "100",
+      "qc_problem": "HIGH (numeric). OLMo-2 tokenises ' 100' as ' ' + '100', so the token immediately after this cloze is a bare space with zero answer information; Pythia gives ' 100' whole. The original question form also invites the Fahrenheit value; the cloze pins the scale up front.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 54,
+        "allenai/OLMo-2-0425-1B": 49
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 1,
+        "allenai/OLMo-2-0425-1B": 2
+      }
+    },
+    {
+      "id": "L1-cooking-2",
+      "level": "L1",
+      "topic": "cooking",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "prompt": "The main ingredient of an omelette is",
+      "run_prompt": "The following short statements were collected for a general-knowledge reader. They are unrelated to one another and appear in no particular order. Each was checked for accuracy before being included in the collection.\n\nThe main ingredient of an omelette is",
+      "gold_continuation": "eggs",
+      "expected": "eggs",
+      "qc_problem": "'eggs' and 'egg' are two distinct single tokens on both models and both are natural after 'is' - score them as one answer set.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 49,
+        "allenai/OLMo-2-0425-1B": 47
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 1,
+        "allenai/OLMo-2-0425-1B": 1
+      }
+    },
+    {
+      "id": "L2-cooking-1",
+      "level": "L2",
+      "topic": "cooking",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": null,
+      "prompt": "Explain in your own words why bread dough rises when yeast is added.",
+      "run_prompt": "Short explanations, written in plain language.\n\nQ: Explain in your own words why a bicycle stays upright while it is moving.\nA: A moving bicycle keeps correcting itself. When it begins to lean to one side, the front wheel turns slightly into the lean, which steers the wheels back underneath the rider's weight. The faster it travels, the smaller and quicker those corrections are, so the bicycle feels steady.\n\nQ: Explain in your own words why a lighthouse can be seen from far out at sea.\nA: A lighthouse is built high up so that its beam clears the curve of the horizon. Lenses and mirrors gather the lamp's light and squeeze it into a narrow horizontal beam instead of letting it spread in every direction. Because the light is concentrated and starts from a height, a ship many miles away still receives enough of it to see the flash.\n\nQ: Explain in your own words why bread dough rises when yeast is added.\nA:",
+      "expected": "Must preserve: yeast is a living organism that feeds on sugars in the dough (fermentation) and gives off carbon dioxide gas; the gas bubbles are trapped by the stretchy dough (gluten), so the dough expands and rises.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 206,
+        "allenai/OLMo-2-0425-1B": 193
+      }
+    },
+    {
+      "id": "L3-cooking-1",
+      "level": "L3",
+      "topic": "cooking",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": null,
+      "prompt": "Write a one-sentence proverb about salt in cooking.",
+      "run_prompt": "Short pieces written to order.\n\nInstruction: Write a haiku about a mountain lake.\nPiece:\nCold water holding\nthe whole grey weight of the sky\nuntil wind breaks it\n\nInstruction: Write a limerick about a stubborn mule.\nPiece:\nThere once was a mule from Kilkee\nWho refused to be moved for a fee.\nHe would stand in the road,\nIgnoring his load,\nAnd nap until quarter past three.\n\nInstruction: Write a one-sentence proverb about borrowed tools.\nPiece:\nA borrowed tool comes home either broken or not at all.\n\nInstruction: Write a two-line rhyming couplet about an old clock.\nPiece:\nThe old clock keeps its argument with time,\nAnd loses, minute after patient chime.\n\nInstruction: Write a one-sentence proverb about salt in cooking.\nPiece:",
+      "expected": "Exactly one sentence; aphoristic, general-wisdom phrasing rather than a literal instruction; mentions salt or seasoning in a cooking context.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 201,
+        "allenai/OLMo-2-0425-1B": 165
+      }
+    },
+    {
+      "id": "L4-cooking-1",
+      "level": "L4",
+      "topic": "cooking",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": "mountaineering",
+      "prompt": "Describe a dish whose preparation copies the stages of a mountaineering expedition, in 3-6 sentences. Each stage of the climb must correspond to a specific cooking step, so the expedition's logic dictates the recipe's order.",
+      "run_prompt": "Answers that combine two unrelated subjects, using one to explain the other.\n\nTask: Describe a barbershop organised as a court of law. Say which part of court procedure each step of the haircut copies and what it does for the customer.\nAnswer: The consultation is the arraignment: the customer states what he is charged with wanting and the barber reads it back to him, so there is no dispute later about what was agreed. The mirror on the far wall serves as the public gallery, since every cut is made in view and can be objected to while it is still reversible. Scissors and clippers act as opposing counsel, one arguing for length and the other for shape, and the barber alternates between them until neither has a further submission. Sweeping the floor is the sealing of the record: once the hair is gone the case cannot be reopened, and the customer settles costs on the way out.\n\nTask: Describe a village postal route as a knitting pattern. Say which knitting instruction each part of the route copies and what it does for the postman.\nAnswer: The main road is the cast-on row: it fixes how many houses the whole route will carry, and everything after it hangs from that count. Each side lane is a purl stitch worked in the opposite direction, so the postman doubles back and the fabric of the route lies flat instead of curling into wasted mileage. Houses that receive post only on certain days are slipped stitches, passed over without being worked but still counted, which keeps the rhythm of the walk even. The return to the sorting office is the cast-off, binding the loose end so that tomorrow's round can start from the same edge.\n\nTask: Describe a dish whose preparation copies the stages of a mountaineering expedition, in 3-6 sentences. Each stage of the climb must correspond to a specific cooking step, so the expedition's logic dictates the recipe's order.\nAnswer:",
+      "expected": "A successful blend must let the expedition's structure dictate the recipe's order: staging and caching supplies = mise en place, acclimatisation halts = resting or proving stages, the summit push = the short irreversible high-heat step that cannot be undone, the descent = cooling, resting, and plating. Each climbing stage must determine a cooking step and its timing. A dish merely named after a mountain, or a climb with food eaten along the way, fails.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 410,
+        "allenai/OLMo-2-0425-1B": 388
+      }
+    },
+    {
+      "id": "L5-cooking-1",
+      "level": "L5",
+      "topic": "cooking",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": null,
+      "prompt": "Invent a cooking technique or preparation method that does not exist today, and explain what problem it solves and how it works.",
+      "run_prompt": "Proposals for things that do not exist yet, each written by the person who thought of it.\n\nTask: Invent a new kind of doorbell that does not exist today, and explain what problem it solves and how it works.\nProposal: An ordinary doorbell tells you that somebody is at the door but nothing about how much the visit matters, so a household either answers everything or ignores everything. This doorbell replaces the button with a weighted pull-cord: the harder the visitor pulls, the longer the chime sustains, and the mechanism holds that pull on a small dial inside the hall. A courier leaving a parcel gives a light tug that produces one short note, while a neighbour with something urgent pulls hard and sets off a chime that runs for several seconds. Because the effort is physical and the visitor can feel how hard they are pulling, the signal stays honest, and the household can decide whether to get up from the sound alone.\n\nTask: Invent a new kind of suitcase that does not exist today, and explain what problem it solves and how it works.\nProposal: Travellers repack at the airport because they cannot tell which part of the case is over the weight limit until the whole thing is on the scale. This suitcase is built from four stacked drawers, each on its own spring-loaded floor that sinks as it fills and shows a coloured band through a slot in the shell. A drawer that dips past its band is holding more than a quarter of the allowance, so the owner can see which layer to lighten without opening anything. The springs also lock the drawers once the lid is closed, so the load stays balanced and the case does not tip when it is stood upright.\n\nTask: Invent a cooking technique or preparation method that does not exist today, and explain what problem it solves and how it works.\nProposal:",
+      "expected": "Novelty criterion: must not be a renamed existing method (sous-vide, spherification, smoking, fermentation, flash-freezing, pressure-frying); must specify a mechanically plausible tool-and-step sequence and the texture or flavour it reaches that current methods cannot. Treat the two scaffold exemplars as attested and exclude re-skins of them.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 389,
+        "allenai/OLMo-2-0425-1B": 367
+      }
+    },
+    {
+      "id": "L1-astronomy-1",
+      "level": "L1",
+      "topic": "astronomy",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "prompt": "The planet closest to the Sun is",
+      "run_prompt": "The following short statements were collected for a general-knowledge reader. They are unrelated to one another and appear in no particular order. Each was checked for accuracy before being included in the collection.\n\nThe planet closest to the Sun is",
+      "gold_continuation": "Mercury",
+      "expected": "Mercury",
+      "qc_problem": "Trailing 'Answer with the planet's name.' is inert for a base model and puts the final measured position on a sentence-final period rather than on the retrieval site. Removed in the cloze.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 47,
+        "allenai/OLMo-2-0425-1B": 45
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 1,
+        "allenai/OLMo-2-0425-1B": 1
+      }
+    },
+    {
+      "id": "L1-astronomy-2",
+      "level": "L1",
+      "topic": "astronomy",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "prompt": "Our Solar System lies in a spiral galaxy called the",
+      "run_prompt": "The following short statements were collected for a general-knowledge reader. They are unrelated to one another and appear in no particular order. Each was checked for accuracy before being included in the collection.\n\nOur Solar System lies in a spiral galaxy called the",
+      "gold_continuation": "Milky",
+      "expected": "Milky",
+      "qc_problem": "Same inert instruction suffix. Gold 'The Milky Way' begins with a determiner; the cloze absorbs 'the' so the scored token is the content word ' Milky' (single token on both models).",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 50,
+        "allenai/OLMo-2-0425-1B": 48
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 1,
+        "allenai/OLMo-2-0425-1B": 1
+      }
+    },
+    {
+      "id": "L2-astronomy-1",
+      "level": "L2",
+      "topic": "astronomy",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": null,
+      "prompt": "Explain in your own words why the Moon appears to change shape over the course of a month.",
+      "run_prompt": "Short explanations, written in plain language.\n\nQ: Explain in your own words why a bicycle stays upright while it is moving.\nA: A moving bicycle keeps correcting itself. When it begins to lean to one side, the front wheel turns slightly into the lean, which steers the wheels back underneath the rider's weight. The faster it travels, the smaller and quicker those corrections are, so the bicycle feels steady.\n\nQ: Explain in your own words why a lighthouse can be seen from far out at sea.\nA: A lighthouse is built high up so that its beam clears the curve of the horizon. Lenses and mirrors gather the lamp's light and squeeze it into a narrow horizontal beam instead of letting it spread in every direction. Because the light is concentrated and starts from a height, a ship many miles away still receives enough of it to see the flash.\n\nQ: Explain in your own words why the Moon appears to change shape over the course of a month.\nA:",
+      "expected": "Key content that must be preserved: the Moon shines by reflected sunlight, not its own light; it orbits Earth roughly once a month; the fraction of its sunlit half visible from Earth changes with its position relative to the Sun and Earth; the Moon's physical shape never actually changes.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 211,
+        "allenai/OLMo-2-0425-1B": 198
+      }
+    },
+    {
+      "id": "L3-astronomy-1",
+      "level": "L3",
+      "topic": "astronomy",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": null,
+      "prompt": "Write a haiku about a solar eclipse.",
+      "run_prompt": "Short pieces written to order.\n\nInstruction: Write a haiku about a mountain lake.\nPiece:\nCold water holding\nthe whole grey weight of the sky\nuntil wind breaks it\n\nInstruction: Write a limerick about a stubborn mule.\nPiece:\nThere once was a mule from Kilkee\nWho refused to be moved for a fee.\nHe would stand in the road,\nIgnoring his load,\nAnd nap until quarter past three.\n\nInstruction: Write a one-sentence proverb about borrowed tools.\nPiece:\nA borrowed tool comes home either broken or not at all.\n\nInstruction: Write a two-line rhyming couplet about an old clock.\nPiece:\nThe old clock keeps its argument with time,\nAnd loses, minute after patient chime.\n\nInstruction: Write a haiku about a solar eclipse.\nPiece:",
+      "expected": "Formal constraints: exactly three lines with a 5-7-5 syllable pattern; content must concern a solar eclipse (Moon covering Sun, sudden darkness, corona).",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 198,
+        "allenai/OLMo-2-0425-1B": 163
+      }
+    },
+    {
+      "id": "L4-astronomy-1",
+      "level": "L4",
+      "topic": "astronomy",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": "pottery",
+      "prompt": "Describe the birth of a star as throwing and firing a clay pot, in 3-6 sentences. Each stage at the wheel or kiln must correspond to a specific astrophysical process, so the potter's order tracks the physics.",
+      "run_prompt": "Answers that combine two unrelated subjects, using one to explain the other.\n\nTask: Describe a barbershop organised as a court of law. Say which part of court procedure each step of the haircut copies and what it does for the customer.\nAnswer: The consultation is the arraignment: the customer states what he is charged with wanting and the barber reads it back to him, so there is no dispute later about what was agreed. The mirror on the far wall serves as the public gallery, since every cut is made in view and can be objected to while it is still reversible. Scissors and clippers act as opposing counsel, one arguing for length and the other for shape, and the barber alternates between them until neither has a further submission. Sweeping the floor is the sealing of the record: once the hair is gone the case cannot be reopened, and the customer settles costs on the way out.\n\nTask: Describe a village postal route as a knitting pattern. Say which knitting instruction each part of the route copies and what it does for the postman.\nAnswer: The main road is the cast-on row: it fixes how many houses the whole route will carry, and everything after it hangs from that count. Each side lane is a purl stitch worked in the opposite direction, so the postman doubles back and the fabric of the route lies flat instead of curling into wasted mileage. Houses that receive post only on certain days are slipped stitches, passed over without being worked but still counted, which keeps the rhythm of the walk even. The return to the sorting office is the cast-off, binding the loose end so that tomorrow's round can start from the same edge.\n\nTask: Describe the birth of a star as throwing and firing a clay pot, in 3-6 sentences. Each stage at the wheel or kiln must correspond to a specific astrophysical process, so the potter's order tracks the physics.\nAnswer:",
+      "expected": "A successful blend must map the potter's sequence onto stellar formation with the physics tracking the craft: centring clay on a spinning wheel = a rotating cloud collapsing and flattening into a disc, drawing the walls up = matter concentrating toward the centre, the kiln's rising temperature = the core heating under compression, the glaze setting at a threshold temperature = the onset of hydrogen fusion, cooling on the shelf = arrival at main-sequence equilibrium. The order of the potter's steps must be doing the explanatory work for the physics.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 412,
+        "allenai/OLMo-2-0425-1B": 391
+      }
+    },
+    {
+      "id": "L5-astronomy-1",
+      "level": "L5",
+      "topic": "astronomy",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": null,
+      "prompt": "Invent an astronomical instrument or observation method that does not exist today, and explain what problem it solves and how it works.",
+      "run_prompt": "Proposals for things that do not exist yet, each written by the person who thought of it.\n\nTask: Invent a new kind of doorbell that does not exist today, and explain what problem it solves and how it works.\nProposal: An ordinary doorbell tells you that somebody is at the door but nothing about how much the visit matters, so a household either answers everything or ignores everything. This doorbell replaces the button with a weighted pull-cord: the harder the visitor pulls, the longer the chime sustains, and the mechanism holds that pull on a small dial inside the hall. A courier leaving a parcel gives a light tug that produces one short note, while a neighbour with something urgent pulls hard and sets off a chime that runs for several seconds. Because the effort is physical and the visitor can feel how hard they are pulling, the signal stays honest, and the household can decide whether to get up from the sound alone.\n\nTask: Invent a new kind of suitcase that does not exist today, and explain what problem it solves and how it works.\nProposal: Travellers repack at the airport because they cannot tell which part of the case is over the weight limit until the whole thing is on the scale. This suitcase is built from four stacked drawers, each on its own spring-loaded floor that sinks as it fills and shows a coloured band through a slot in the shell. A drawer that dips past its band is holding more than a quarter of the allowance, so the owner can see which layer to lighten without opening anything. The springs also lock the drawers once the lid is closed, so the load stays balanced and the case does not tip when it is stood upright.\n\nTask: Invent an astronomical instrument or observation method that does not exist today, and explain what problem it solves and how it works.\nProposal:",
+      "expected": "Novelty criterion: must not be an existing or already-planned instrument (larger optical or radio telescopes, interferometers, gravitational-wave detectors, neutrino observatories, space-probe variants); must specify a concrete new sensing mechanism and the target phenomenon it would reveal. Treat the two scaffold exemplars as attested and exclude re-skins of them.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 390,
+        "allenai/OLMo-2-0425-1B": 367
+      }
+    },
+    {
+      "id": "L1-ocean_life-1",
+      "level": "L1",
+      "topic": "ocean life",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "prompt": "The largest animal on Earth is the",
+      "run_prompt": "The following short statements were collected for a general-knowledge reader. They are unrelated to one another and appear in no particular order. Each was checked for accuracy before being included in the collection.\n\nThe largest animal on Earth is the",
+      "gold_continuation": "blue",
+      "expected": "blue",
+      "qc_problem": "Same inert instruction suffix. The cloze deliberately stops before 'blue' rather than before 'whale': ' sperm', ' African' and ' humpback' are live competitors there, so the token still measures retrieval rather than syntax.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 47,
+        "allenai/OLMo-2-0425-1B": 45
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 1,
+        "allenai/OLMo-2-0425-1B": 1
+      }
+    },
+    {
+      "id": "L1-ocean_life-2",
+      "level": "L1",
+      "topic": "ocean life",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "prompt": "An octopus has",
+      "run_prompt": "The following short statements were collected for a general-knowledge reader. They are unrelated to one another and appear in no particular order. Each was checked for accuracy before being included in the collection.\n\nAn octopus has",
+      "gold_continuation": "eight",
+      "expected": "eight",
+      "qc_problem": "Inert instruction suffix plus a numeral/word smear. Word form is safe: ' eight' is a single token on both models, whereas ' 8' splits to ' '+'8' on OLMo-2. Score {' eight', digit form} as one answer set.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 44,
+        "allenai/OLMo-2-0425-1B": 42
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 1,
+        "allenai/OLMo-2-0425-1B": 1
+      }
+    },
+    {
+      "id": "L2-ocean_life-1",
+      "level": "L2",
+      "topic": "ocean life",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": null,
+      "prompt": "Explain in your own words how fish use their gills to breathe underwater.",
+      "run_prompt": "Short explanations, written in plain language.\n\nQ: Explain in your own words why a bicycle stays upright while it is moving.\nA: A moving bicycle keeps correcting itself. When it begins to lean to one side, the front wheel turns slightly into the lean, which steers the wheels back underneath the rider's weight. The faster it travels, the smaller and quicker those corrections are, so the bicycle feels steady.\n\nQ: Explain in your own words why a lighthouse can be seen from far out at sea.\nA: A lighthouse is built high up so that its beam clears the curve of the horizon. Lenses and mirrors gather the lamp's light and squeeze it into a narrow horizontal beam instead of letting it spread in every direction. Because the light is concentrated and starts from a height, a ship many miles away still receives enough of it to see the flash.\n\nQ: Explain in your own words how fish use their gills to breathe underwater.\nA:",
+      "expected": "Key content that must be preserved: water flows over the gills; dissolved oxygen in the water diffuses across thin gill membranes into the fish's blood; carbon dioxide passes out of the blood into the water; fish extract oxygen already dissolved in water rather than breathing air.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 207,
+        "allenai/OLMo-2-0425-1B": 194
+      }
+    },
+    {
+      "id": "L3-ocean_life-1",
+      "level": "L3",
+      "topic": "ocean life",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": null,
+      "prompt": "Write a limerick about a crab.",
+      "run_prompt": "Short pieces written to order.\n\nInstruction: Write a haiku about a mountain lake.\nPiece:\nCold water holding\nthe whole grey weight of the sky\nuntil wind breaks it\n\nInstruction: Write a limerick about a stubborn mule.\nPiece:\nThere once was a mule from Kilkee\nWho refused to be moved for a fee.\nHe would stand in the road,\nIgnoring his load,\nAnd nap until quarter past three.\n\nInstruction: Write a one-sentence proverb about borrowed tools.\nPiece:\nA borrowed tool comes home either broken or not at all.\n\nInstruction: Write a two-line rhyming couplet about an old clock.\nPiece:\nThe old clock keeps its argument with time,\nAnd loses, minute after patient chime.\n\nInstruction: Write a limerick about a crab.\nPiece:",
+      "expected": "Formal constraints: exactly five lines with an AABBA rhyme scheme; lines 1, 2, 5 longer and lines 3, 4 shorter (limerick rhythm); light or comic tone; content must concern a crab or its seashore life.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 198,
+        "allenai/OLMo-2-0425-1B": 163
+      }
+    },
+    {
+      "id": "L4-ocean_life-1",
+      "level": "L4",
+      "topic": "ocean life",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": "bureaucracy",
+      "prompt": "Describe the partnership between a clownfish and a sea anemone as a bureaucratic approval process, in 3-6 sentences. Each administrative step must correspond to a specific biological interaction between the two organisms.",
+      "run_prompt": "Answers that combine two unrelated subjects, using one to explain the other.\n\nTask: Describe a barbershop organised as a court of law. Say which part of court procedure each step of the haircut copies and what it does for the customer.\nAnswer: The consultation is the arraignment: the customer states what he is charged with wanting and the barber reads it back to him, so there is no dispute later about what was agreed. The mirror on the far wall serves as the public gallery, since every cut is made in view and can be objected to while it is still reversible. Scissors and clippers act as opposing counsel, one arguing for length and the other for shape, and the barber alternates between them until neither has a further submission. Sweeping the floor is the sealing of the record: once the hair is gone the case cannot be reopened, and the customer settles costs on the way out.\n\nTask: Describe a village postal route as a knitting pattern. Say which knitting instruction each part of the route copies and what it does for the postman.\nAnswer: The main road is the cast-on row: it fixes how many houses the whole route will carry, and everything after it hangs from that count. Each side lane is a purl stitch worked in the opposite direction, so the postman doubles back and the fabric of the route lies flat instead of curling into wasted mileage. Houses that receive post only on certain days are slipped stitches, passed over without being worked but still counted, which keeps the rhythm of the walk even. The return to the sorting office is the cast-off, binding the loose end so that tomorrow's round can start from the same edge.\n\nTask: Describe the partnership between a clownfish and a sea anemone as a bureaucratic approval process, in 3-6 sentences. Each administrative step must correspond to a specific biological interaction between the two organisms.\nAnswer:",
+      "expected": "A successful blend must map administrative procedure onto the symbiosis: application and probation = the clownfish's gradual mucus acclimation that stops the anemone stinging it, permit issuance = established immunity and residency among the tentacles, ongoing fees or filings = food scraps, cleaning, and defence supplied in exchange for protection. The administrative logic must track the biological exchange rather than sit beside it.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 406,
+        "allenai/OLMo-2-0425-1B": 383
+      }
+    },
+    {
+      "id": "L5-ocean_life-1",
+      "level": "L5",
+      "topic": "ocean life",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": null,
+      "prompt": "Invent a way of studying deep-sea creatures that does not exist today, and explain what problem it solves and how it works.",
+      "run_prompt": "Proposals for things that do not exist yet, each written by the person who thought of it.\n\nTask: Invent a new kind of doorbell that does not exist today, and explain what problem it solves and how it works.\nProposal: An ordinary doorbell tells you that somebody is at the door but nothing about how much the visit matters, so a household either answers everything or ignores everything. This doorbell replaces the button with a weighted pull-cord: the harder the visitor pulls, the longer the chime sustains, and the mechanism holds that pull on a small dial inside the hall. A courier leaving a parcel gives a light tug that produces one short note, while a neighbour with something urgent pulls hard and sets off a chime that runs for several seconds. Because the effort is physical and the visitor can feel how hard they are pulling, the signal stays honest, and the household can decide whether to get up from the sound alone.\n\nTask: Invent a new kind of suitcase that does not exist today, and explain what problem it solves and how it works.\nProposal: Travellers repack at the airport because they cannot tell which part of the case is over the weight limit until the whole thing is on the scale. This suitcase is built from four stacked drawers, each on its own spring-loaded floor that sinks as it fills and shows a coloured band through a slot in the shell. A drawer that dips past its band is holding more than a quarter of the allowance, so the owner can see which layer to lighten without opening anything. The springs also lock the drawers once the lid is closed, so the load stays balanced and the case does not tip when it is stood upright.\n\nTask: Invent a way of studying deep-sea creatures that does not exist today, and explain what problem it solves and how it works.\nProposal:",
+      "expected": "Novelty criterion: must not be an existing or well-documented method (ROVs and submersibles, acoustic or satellite tagging, baited cameras, eDNA sampling, trawl surveys); must specify a concrete new mechanism for observing or tracking deep-sea life. Treat the two scaffold exemplars as attested and exclude re-skins of them.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 391,
+        "allenai/OLMo-2-0425-1B": 369
+      }
+    },
+    {
+      "id": "L1-classical_music-1",
+      "level": "L1",
+      "topic": "classical music",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "prompt": "The violin, viola and cello all belong to the orchestral family called the",
+      "run_prompt": "The following short statements were collected for a general-knowledge reader. They are unrelated to one another and appear in no particular order. Each was checked for accuracy before being included in the collection.\n\nThe violin, viola and cello all belong to the orchestral family called the",
+      "gold_continuation": "string",
+      "expected": "string",
+      "qc_problem": null,
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 57,
+        "allenai/OLMo-2-0425-1B": 55
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 1,
+        "allenai/OLMo-2-0425-1B": 1
+      }
+    },
+    {
+      "id": "L1-classical_music-2",
+      "level": "L1",
+      "topic": "classical music",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "prompt": "A standard violin has",
+      "run_prompt": "The following short statements were collected for a general-knowledge reader. They are unrelated to one another and appear in no particular order. Each was checked for accuracy before being included in the collection.\n\nA standard violin has",
+      "gold_continuation": "four",
+      "expected": "four",
+      "qc_problem": "Inert instruction suffix plus numeral/word smear. ' four' is a single token on both models; ' 4' splits to ' '+'4' on OLMo-2. Score {' four', digit form} as one answer set.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 44,
+        "allenai/OLMo-2-0425-1B": 42
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 1,
+        "allenai/OLMo-2-0425-1B": 1
+      }
+    },
+    {
+      "id": "L2-classical_music-1",
+      "level": "L2",
+      "topic": "classical music",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": null,
+      "prompt": "Explain in your own words why a long organ pipe sounds a lower note than a short one.",
+      "run_prompt": "Short explanations, written in plain language.\n\nQ: Explain in your own words why a bicycle stays upright while it is moving.\nA: A moving bicycle keeps correcting itself. When it begins to lean to one side, the front wheel turns slightly into the lean, which steers the wheels back underneath the rider's weight. The faster it travels, the smaller and quicker those corrections are, so the bicycle feels steady.\n\nQ: Explain in your own words why a lighthouse can be seen from far out at sea.\nA: A lighthouse is built high up so that its beam clears the curve of the horizon. Lenses and mirrors gather the lamp's light and squeeze it into a narrow horizontal beam instead of letting it spread in every direction. Because the light is concentrated and starts from a height, a ship many miles away still receives enough of it to see the flash.\n\nQ: Explain in your own words why a long organ pipe sounds a lower note than a short one.\nA:",
+      "expected": "Must preserve: the note comes from air vibrating as a column inside the pipe; the length of that column sets the wavelength of the standing wave it can support; a longer pipe allows a longer wavelength, which means a lower frequency of vibration; lower frequency is heard as lower pitch. Wording may vary freely, and an answer that reaches 'longer column, slower vibration, lower note' without the word wavelength still counts.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 211,
+        "allenai/OLMo-2-0425-1B": 198
+      }
+    },
+    {
+      "id": "L3-classical_music-1",
+      "level": "L3",
+      "topic": "classical music",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": null,
+      "prompt": "Write a two-line rhyming couplet about a piano.",
+      "run_prompt": "Short pieces written to order.\n\nInstruction: Write a haiku about a mountain lake.\nPiece:\nCold water holding\nthe whole grey weight of the sky\nuntil wind breaks it\n\nInstruction: Write a limerick about a stubborn mule.\nPiece:\nThere once was a mule from Kilkee\nWho refused to be moved for a fee.\nHe would stand in the road,\nIgnoring his load,\nAnd nap until quarter past three.\n\nInstruction: Write a one-sentence proverb about borrowed tools.\nPiece:\nA borrowed tool comes home either broken or not at all.\n\nInstruction: Write a two-line rhyming couplet about an old clock.\nPiece:\nThe old clock keeps its argument with time,\nAnd loses, minute after patient chime.\n\nInstruction: Write a two-line rhyming couplet about a piano.\nPiece:",
+      "expected": "Formal constraints: exactly two lines; the two line endings must rhyme; content must concern a piano (keys, hammers, playing, sound).",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 203,
+        "allenai/OLMo-2-0425-1B": 167
+      }
+    },
+    {
+      "id": "L4-classical_music-1",
+      "level": "L4",
+      "topic": "classical music",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": "epidemiology",
+      "prompt": "Describe how a musical round spreads through its voices as an outbreak spreads through a population, in 3-6 sentences. Each stage of the outbreak must correspond to a specific event in the music.",
+      "run_prompt": "Answers that combine two unrelated subjects, using one to explain the other.\n\nTask: Describe a barbershop organised as a court of law. Say which part of court procedure each step of the haircut copies and what it does for the customer.\nAnswer: The consultation is the arraignment: the customer states what he is charged with wanting and the barber reads it back to him, so there is no dispute later about what was agreed. The mirror on the far wall serves as the public gallery, since every cut is made in view and can be objected to while it is still reversible. Scissors and clippers act as opposing counsel, one arguing for length and the other for shape, and the barber alternates between them until neither has a further submission. Sweeping the floor is the sealing of the record: once the hair is gone the case cannot be reopened, and the customer settles costs on the way out.\n\nTask: Describe a village postal route as a knitting pattern. Say which knitting instruction each part of the route copies and what it does for the postman.\nAnswer: The main road is the cast-on row: it fixes how many houses the whole route will carry, and everything after it hangs from that count. Each side lane is a purl stitch worked in the opposite direction, so the postman doubles back and the fabric of the route lies flat instead of curling into wasted mileage. Houses that receive post only on certain days are slipped stitches, passed over without being worked but still counted, which keeps the rhythm of the walk even. The return to the sorting office is the cast-off, binding the loose end so that tomorrow's round can start from the same edge.\n\nTask: Describe how a musical round spreads through its voices as an outbreak spreads through a population, in 3-6 sentences. Each stage of the outbreak must correspond to a specific event in the music.\nAnswer:",
+      "expected": "A successful blend must map transmission dynamics onto the structure of a round or canon: the first voice = the index case, each later entry = a transmission event at a fixed interval, the delay between entries = the incubation period, voices dropping out = recovery or immunity, saturation or the final cadence = the outbreak burning out once no susceptible voices remain. Each musical event must be explained by an epidemiological one. A tune merely called 'catchy' or 'viral' fails.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 403,
+        "allenai/OLMo-2-0425-1B": 381
+      }
+    },
+    {
+      "id": "L5-classical_music-1",
+      "level": "L5",
+      "topic": "classical music",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": null,
+      "prompt": "Invent a concert format or performance practice that does not exist today, and explain what problem it solves and how it works.",
+      "run_prompt": "Proposals for things that do not exist yet, each written by the person who thought of it.\n\nTask: Invent a new kind of doorbell that does not exist today, and explain what problem it solves and how it works.\nProposal: An ordinary doorbell tells you that somebody is at the door but nothing about how much the visit matters, so a household either answers everything or ignores everything. This doorbell replaces the button with a weighted pull-cord: the harder the visitor pulls, the longer the chime sustains, and the mechanism holds that pull on a small dial inside the hall. A courier leaving a parcel gives a light tug that produces one short note, while a neighbour with something urgent pulls hard and sets off a chime that runs for several seconds. Because the effort is physical and the visitor can feel how hard they are pulling, the signal stays honest, and the household can decide whether to get up from the sound alone.\n\nTask: Invent a new kind of suitcase that does not exist today, and explain what problem it solves and how it works.\nProposal: Travellers repack at the airport because they cannot tell which part of the case is over the weight limit until the whole thing is on the scale. This suitcase is built from four stacked drawers, each on its own spring-loaded floor that sinks as it fills and shows a coloured band through a slot in the shell. A drawer that dips past its band is holding more than a quarter of the allowance, so the owner can see which layer to lighten without opening anything. The springs also lock the drawers once the lid is closed, so the load stays balanced and the case does not tip when it is stood upright.\n\nTask: Invent a concert format or performance practice that does not exist today, and explain what problem it solves and how it works.\nProposal:",
+      "expected": "Novelty criterion: must not be an existing format (candlelight concerts, open rehearsals, lecture-recitals, flash mobs, headphone or silent concerts, livestreams, relaxed performances); must specify concrete new mechanics for how performers and audience interact. Treat the two scaffold exemplars as attested and exclude re-skins of them.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 389,
+        "allenai/OLMo-2-0425-1B": 367
+      }
+    },
+    {
+      "id": "L1-chess-1",
+      "level": "L1",
+      "topic": "chess",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "prompt": "A standard chessboard has",
+      "run_prompt": "The following short statements were collected for a general-knowledge reader. They are unrelated to one another and appear in no particular order. Each was checked for accuracy before being included in the collection.\n\nA standard chessboard has",
+      "gold_continuation": "64",
+      "expected": "64",
+      "qc_problem": "Inert instruction suffix plus numeral/word smear, and here the digit form is probably the corpus-dominant continuation ('a chessboard has 64 squares'), which is exactly the form OLMo-2 splits into ' '+'64'. Score {' 64' (Pythia) / '64' after the space token (OLMo-2), ' sixty'} as one answer set, or switch the target to the word form.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 45,
+        "allenai/OLMo-2-0425-1B": 43
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 1,
+        "allenai/OLMo-2-0425-1B": 2
+      }
+    },
+    {
+      "id": "L1-chess-2",
+      "level": "L1",
+      "topic": "chess",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "prompt": "The chess piece that can move only diagonally is the",
+      "run_prompt": "The following short statements were collected for a general-knowledge reader. They are unrelated to one another and appear in no particular order. Each was checked for accuracy before being included in the collection.\n\nThe chess piece that can move only diagonally is the",
+      "gold_continuation": "bishop",
+      "expected": "bishop",
+      "qc_problem": "Inert instruction suffix (removed). Pedantic quibble only: pawns also move diagonally when capturing, but 'can move only diagonally' still picks out the bishop uniquely.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 52,
+        "allenai/OLMo-2-0425-1B": 49
+      },
+      "gold_tokens": {
+        "EleutherAI/pythia-1.4b": 1,
+        "allenai/OLMo-2-0425-1B": 1
+      }
+    },
+    {
+      "id": "L2-chess-1",
+      "level": "L2",
+      "topic": "chess",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": null,
+      "prompt": "Explain in your own words what 'checkmate' means in chess.",
+      "run_prompt": "Short explanations, written in plain language.\n\nQ: Explain in your own words why a bicycle stays upright while it is moving.\nA: A moving bicycle keeps correcting itself. When it begins to lean to one side, the front wheel turns slightly into the lean, which steers the wheels back underneath the rider's weight. The faster it travels, the smaller and quicker those corrections are, so the bicycle feels steady.\n\nQ: Explain in your own words why a lighthouse can be seen from far out at sea.\nA: A lighthouse is built high up so that its beam clears the curve of the horizon. Lenses and mirrors gather the lamp's light and squeeze it into a narrow horizontal beam instead of letting it spread in every direction. Because the light is concentrated and starts from a height, a ship many miles away still receives enough of it to see the flash.\n\nQ: Explain in your own words what 'checkmate' means in chess.\nA:",
+      "expected": "Key content that must be preserved: the king is under attack (in check); there is no legal move that removes the attack (the king cannot escape, the attacker cannot be captured, and the check cannot be blocked); the game ends immediately and the checkmated player loses.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 206,
+        "allenai/OLMo-2-0425-1B": 193
+      }
+    },
+    {
+      "id": "L3-chess-1",
+      "level": "L3",
+      "topic": "chess",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": null,
+      "prompt": "Write a one-sentence proverb about the pawn in chess.",
+      "run_prompt": "Short pieces written to order.\n\nInstruction: Write a haiku about a mountain lake.\nPiece:\nCold water holding\nthe whole grey weight of the sky\nuntil wind breaks it\n\nInstruction: Write a limerick about a stubborn mule.\nPiece:\nThere once was a mule from Kilkee\nWho refused to be moved for a fee.\nHe would stand in the road,\nIgnoring his load,\nAnd nap until quarter past three.\n\nInstruction: Write a one-sentence proverb about borrowed tools.\nPiece:\nA borrowed tool comes home either broken or not at all.\n\nInstruction: Write a two-line rhyming couplet about an old clock.\nPiece:\nThe old clock keeps its argument with time,\nAnd loses, minute after patient chime.\n\nInstruction: Write a one-sentence proverb about the pawn in chess.\nPiece:",
+      "expected": "Formal constraints: exactly one sentence; aphoristic, generalizing proverb form (a compact statement of wisdom, not a description or joke); content must turn on the pawn's nature (weakness, numbers, promotion, sacrifice).",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 202,
+        "allenai/OLMo-2-0425-1B": 166
+      }
+    },
+    {
+      "id": "L4-chess-1",
+      "level": "L4",
+      "topic": "chess",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": "sheepdog herding",
+      "prompt": "Describe how a lone king is driven to the edge of the board and mated as a sheepdog penning sheep, in 3-6 sentences. Each herding move must correspond to a specific chess move.",
+      "run_prompt": "Answers that combine two unrelated subjects, using one to explain the other.\n\nTask: Describe a barbershop organised as a court of law. Say which part of court procedure each step of the haircut copies and what it does for the customer.\nAnswer: The consultation is the arraignment: the customer states what he is charged with wanting and the barber reads it back to him, so there is no dispute later about what was agreed. The mirror on the far wall serves as the public gallery, since every cut is made in view and can be objected to while it is still reversible. Scissors and clippers act as opposing counsel, one arguing for length and the other for shape, and the barber alternates between them until neither has a further submission. Sweeping the floor is the sealing of the record: once the hair is gone the case cannot be reopened, and the customer settles costs on the way out.\n\nTask: Describe a village postal route as a knitting pattern. Say which knitting instruction each part of the route copies and what it does for the postman.\nAnswer: The main road is the cast-on row: it fixes how many houses the whole route will carry, and everything after it hangs from that count. Each side lane is a purl stitch worked in the opposite direction, so the postman doubles back and the fabric of the route lies flat instead of curling into wasted mileage. Houses that receive post only on certain days are slipped stitches, passed over without being worked but still counted, which keeps the rhythm of the walk even. The return to the sorting office is the cast-off, binding the loose end so that tomorrow's round can start from the same edge.\n\nTask: Describe how a lone king is driven to the edge of the board and mated as a sheepdog penning sheep, in 3-6 sentences. Each herding move must correspond to a specific chess move.\nAnswer:",
+      "expected": "A successful blend must map herding technique onto real mating technique: the dog's outrun and flanking = restricting the king's squares from a distance, the steady press = a rook or queen cutting off successive ranks and files, the handler's whistles = tempo and waiting moves that pass the turn, the pen = the mating net on the edge or in a corner. The herding sequence must describe a legal, recognisable way of driving a lone king to the edge; sheep imagery laid over generic 'attacking' fails.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 407,
+        "allenai/OLMo-2-0425-1B": 385
+      }
+    },
+    {
+      "id": "L5-chess-1",
+      "level": "L5",
+      "topic": "chess",
+      "eligible_models": [
+        "EleutherAI/pythia-1.4b",
+        "allenai/OLMo-2-0425-1B"
+      ],
+      "blend_partner": null,
+      "prompt": "Invent a new chess rule that exists in no known chess variant, and explain what problem it solves and how it works.",
+      "run_prompt": "Proposals for things that do not exist yet, each written by the person who thought of it.\n\nTask: Invent a new kind of doorbell that does not exist today, and explain what problem it solves and how it works.\nProposal: An ordinary doorbell tells you that somebody is at the door but nothing about how much the visit matters, so a household either answers everything or ignores everything. This doorbell replaces the button with a weighted pull-cord: the harder the visitor pulls, the longer the chime sustains, and the mechanism holds that pull on a small dial inside the hall. A courier leaving a parcel gives a light tug that produces one short note, while a neighbour with something urgent pulls hard and sets off a chime that runs for several seconds. Because the effort is physical and the visitor can feel how hard they are pulling, the signal stays honest, and the household can decide whether to get up from the sound alone.\n\nTask: Invent a new kind of suitcase that does not exist today, and explain what problem it solves and how it works.\nProposal: Travellers repack at the airport because they cannot tell which part of the case is over the weight limit until the whole thing is on the scale. This suitcase is built from four stacked drawers, each on its own spring-loaded floor that sinks as it fills and shows a coloured band through a slot in the shell. A drawer that dips past its band is holding more than a quarter of the allowance, so the owner can see which layer to lighten without opening anything. The springs also lock the drawers once the lid is closed, so the load stays balanced and the case does not tip when it is stood upright.\n\nTask: Invent a new chess rule that exists in no known chess variant, and explain what problem it solves and how it works.\nProposal:",
+      "expected": "Novelty criterion: the rule must not appear in known variants (Chess960, atomic, bughouse, crazyhouse, king of the hill, three-check, horde, fog of war, standard fairy-piece variants); it must be a coherent, playable modification, and the answer must state the concrete strategic consequence - what about the current game it changes. Treat the two scaffold exemplars as attested and exclude re-skins of them.",
+      "prompt_tokens": {
+        "EleutherAI/pythia-1.4b": 389,
+        "allenai/OLMo-2-0425-1B": 367
+      }
+    }
+  ]
+}

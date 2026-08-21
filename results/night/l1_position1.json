@@ -1,0 +1,56 @@
+{
+  "single_token_both_ids": [
+    "L1-architecture-1",
+    "L1-architecture-2",
+    "L1-astronomy-1",
+    "L1-astronomy-2",
+    "L1-chess-2",
+    "L1-classical_music-1",
+    "L1-classical_music-2",
+    "L1-cooking-2",
+    "L1-gardening-1",
+    "L1-gardening-2",
+    "L1-human_anatomy-1",
+    "L1-human_anatomy-2",
+    "L1-mathematics-1",
+    "L1-mathematics-2",
+    "L1-ocean_life-1",
+    "L1-ocean_life-2",
+    "L1-railways-1",
+    "L1-railways-2",
+    "L1-weather-1"
+  ],
+  "models": {
+    "EleutherAI_pythia-410m": {
+      "n": 19,
+      "distinct_depth_values": 2,
+      "rho": -0.344,
+      "p": 0.1489,
+      "verdict": "measurable but see distinct-value count"
+    },
+    "EleutherAI_pythia-1b": {
+      "n": 19,
+      "distinct_depth_values": 2,
+      "rho": -0.387,
+      "p": 0.1014,
+      "verdict": "measurable but see distinct-value count"
+    },
+    "EleutherAI_pythia-1.4b": {
+      "n": 19,
+      "distinct_depth_values": 1,
+      "verdict": "instrument has no resolution (constant depth at answer position)"
+    },
+    "EleutherAI_pythia-2.8b": {
+      "n": 19,
+      "distinct_depth_values": 1,
+      "verdict": "instrument has no resolution (constant depth at answer position)"
+    },
+    "allenai_OLMo-2-0425-1B": {
+      "n": 19,
+      "distinct_depth_values": 2,
+      "rho": -0.387,
+      "p": 0.1014,
+      "verdict": "measurable but see distinct-value count"
+    }
+  }
+}
