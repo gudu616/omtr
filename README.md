@@ -24,13 +24,14 @@ fired**: the paper claims neither memorization-specificity nor generic predictab
 publishes the no-verdict outcome, plus a design error in the registration itself, as
 results. Read the v0.7 top section first.
 
-## Version history (one paper, three timestamped corrections in one day)
+## Version history (one paper, four timestamped corrections in one day)
 
 | Version | What happened |
 |---|---|
 | v0.5 (Zenodo v1) | The adversarially reviewed pilot: memorization strength vs KL-threshold "convergence depth" |
 | v0.6 (Zenodo v2) | The paper's own instrument self-test reversed the depth headline the same afternoon; withdrawal on top, v0.5 preserved unrewritten |
 | v0.7 | The preregistered L0P crossed control ran; none of its registered decision rules fired; published as-is, including the registration's own design error |
+| v0.7.1 | Correction: the "corpus duplication counts" anchor is operationally a median probe-window frequency, dominated by short-phrase repetition, not a passage copy count ([`docs/CORRECTION_20260821_ANCHOR.md`](docs/CORRECTION_20260821_ANCHOR.md)); no registered verdict changes |
 
 ## Read the paper
 

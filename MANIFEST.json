@@ -101,6 +101,16 @@
       "sha256": "b3a57c1d4b336ddaa136725d4e39603abe2cfe459477cd732ac2a9e462e9d258"
     },
     {
+      "path": "docs/CORRECTION_20260821_ANCHOR.md",
+      "bytes": 10063,
+      "sha256": "555c3e29b0789ce2cb196f3d7c655b7e1d55b82263e7494f2bd41e4b3a06c42c"
+    },
+    {
+      "path": "results/gate/gate_decay.json",
+      "bytes": 6289,
+      "sha256": "fb8f31da9ad5058b12db1152a5c86a9bdda57dbcdfddce1df3af9f9cfeb3ad11"
+    },
+    {
       "path": "harness/analyze_pilot.py",
       "bytes": 8874,
       "sha256": "36308ae0f126a0cbfb6487fa7e5ff7c3805436dfa02884c0a42fabb546c48cfe"
@@ -134,6 +144,11 @@
       "path": "harness/followup_analysis.py",
       "bytes": 5279,
       "sha256": "4f66e1a4d72c60be59734277567dc904b9e7d706fef4fb2decdae929cbafdf78"
+    },
+    {
+      "path": "harness/gate_decay_probe.py",
+      "bytes": 2698,
+      "sha256": "85a1a709e53f913b2b11e2495514971ac99a617c6ef3a6f559d67d661e2901a9"
     },
     {
       "path": "harness/l0p_analysis.py",
@@ -207,13 +222,13 @@
     },
     {
       "path": "docs/WRITEUP_v0.7_EN.md",
-      "bytes": 62402,
-      "sha256": "ce5009fc84c9fb3875ee0f8a79f536dab69c3f837727517b4de04ce4e68e5f38"
+      "bytes": 63433,
+      "sha256": "13acc5e95f87830c337db2dff8aa88df0832e3ffad2a9e3fc2d7564c46f01315"
     },
     {
       "path": "docs/WRITEUP_v0.7_ZH.md",
-      "bytes": 66315,
-      "sha256": "5307443df4efca954dc043effbc02144593a7586daa88c8669d87e0fa92e47c4"
+      "bytes": 67207,
+      "sha256": "145c7976356b771f88804a54007d2acaf1a645f1434a75d8043d2cabb8cb21f5"
     },
     {
       "path": "docs/WRITEUP_v0.6_EN.md",
@@ -632,15 +647,15 @@
     },
     {
       "path": "PROCESS_LOG.md",
-      "bytes": 38958,
-      "sha256": "db79b40c5e141aa465055ce7be72044db2cee0de0ce24f3aa773d6fba2f18c09"
+      "bytes": 40691,
+      "sha256": "fb8e36cacddd524db4e0aa412ce4154fd87b1a06f7a645bbcceb0e5149205c0e"
     },
     {
       "path": "README.md",
-      "bytes": 5759,
-      "sha256": "99bde64d71f3b076c284484c4792d0fbd5cba2c2c6dcbe1e6e7124c2a26e794a"
+      "bytes": 6043,
+      "sha256": "eaf52cc8ec8c1816a1a1fa4d51a52d78dd056ad8e446b7e2bb89325c3e210101"
     }
   ],
-  "count": 128,
-  "total_bytes": 15437121
+  "count": 131,
+  "total_bytes": 15460111
 }
