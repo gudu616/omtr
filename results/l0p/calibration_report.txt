@@ -1,0 +1,21 @@
+# L0P calibration report — regenerated from shipped scripts
+# generated: 2026-08-21 (evening), harness/l0p_calibration_schemes.py + harness/l0p_calibration_shared_null.py
+
+== l0p_calibration_schemes.py (scheme comparison: naive-beta / naive-t / FL-beta) ==
+null-imbal   naive-beta: 0.080  naive-t: 0.047  FL-beta: 0.073
+null-bal     naive-beta: 0.067  naive-t: 0.053  FL-beta: 0.067
+null-weak    naive-beta: 0.060  naive-t: 0.053  FL-beta: 0.053
+effect       naive-beta: 1.000  naive-t: 1.000  FL-beta: 1.000
+
+(reps=150, perms=300; null target .05, binomial se 0.018)
+
+== l0p_calibration_shared_null.py (studentized, shared-item-effects null, 200 reps) ==
+  50/200 done
+  100/200 done
+  150/200 done
+  200/200 done
+
+fraction p < .05 : 0.085  (binomial se 0.015, target .05)
+fraction p < .10 : 0.160  (target .10)
+p deciles: [0.064 0.137 0.251 0.404 0.507 0.6   0.663 0.77  0.869]
+mean |beta| under null: 0.0168

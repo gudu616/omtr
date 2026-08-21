@@ -1,0 +1,5602 @@
+{
+  "meta": {
+    "model": "EleutherAI/pythia-1b",
+    "device": "cuda",
+    "dtype": "torch.float16",
+    "loader": "from_pretrained_no_processing + neox hf_model shim",
+    "transformer_lens": "3.7.3",
+    "transformers": "5.15.1",
+    "torch": "2.6.0+cu124",
+    "taus": [
+      0.05,
+      0.1,
+      0.5
+    ],
+    "k_answer_tokens": 8,
+    "gen_tokens": 60,
+    "battery_version": "l0p-v1",
+    "n_items": 18
+  },
+  "records": [
+    {
+      "id": "L0P-01",
+      "level": "L0P",
+      "topic": null,
+      "prompt": "The first vethra, kept beside the throlm, was a slenna. The second vethra, kept beside the throlm, was a borvith. The third vethra, kept beside the throlm, was a cassuk. The fourth vethra, kept beside the throlm, was a drenool. The fifth vethra, kept",
+      "n_prompt_tokens": 81,
+      "layer_profile": [
+        {
+          "entropy": 8.215600550174713,
+          "kl_to_final": 9.131427943706512,
+          "match_rate": 0.0,
+          "margin": 0.9881251454353333
+        },
+        {
+          "entropy": 8.467582643032074,
+          "kl_to_final": 8.902352452278137,
+          "match_rate": 0.0,
+          "margin": 0.9040462374687195
+        },
+        {
+          "entropy": 8.84750759601593,
+          "kl_to_final": 8.59835660457611,
+          "match_rate": 0.0,
+          "margin": 1.0692000985145569
+        },
+        {
+          "entropy": 8.105457663536072,
+          "kl_to_final": 8.740037262439728,
+          "match_rate": 0.0,
+          "margin": 1.275991678237915
+        },
+        {
+          "entropy": 8.448400974273682,
+          "kl_to_final": 6.481403887271881,
+          "match_rate": 0.125,
+          "margin": 0.7697421312332153
+        },
+        {
+          "entropy": 8.739980936050415,
+          "kl_to_final": 6.06448170542717,
+          "match_rate": 0.125,
+          "margin": 0.8912445306777954
+        },
+        {
+          "entropy": 8.59802931547165,
+          "kl_to_final": 6.291288077831268,
+          "match_rate": 0.125,
+          "margin": 0.6174920201301575
+        },
+        {
+          "entropy": 5.9931661784648895,
+          "kl_to_final": 2.4323123190551996,
+          "match_rate": 0.5,
+          "margin": 1.202687680721283
+        },
+        {
+          "entropy": 5.263009652495384,
+          "kl_to_final": 2.4602682180702686,
+          "match_rate": 0.5,
+          "margin": 1.3387552499771118
+        },
+        {
+          "entropy": 3.635625947266817,
+          "kl_to_final": 1.813033940619789,
+          "match_rate": 0.625,
+          "margin": 2.0622522234916687
+        },
+        {
+          "entropy": 1.2426878857659176,
+          "kl_to_final": 0.24012238439172506,
+          "match_rate": 1.0,
+          "margin": 4.545089364051819
+        },
+        {
+          "entropy": 0.6141663716698531,
+          "kl_to_final": 0.12666432175319642,
+          "match_rate": 1.0,
+          "margin": 5.137858092784882
+        },
+        {
+          "entropy": 0.5279352309880778,
+          "kl_to_final": 0.08970850484911352,
+          "match_rate": 1.0,
+          "margin": 5.46147882938385
+        },
+        {
+          "entropy": 0.17886715003987774,
+          "kl_to_final": 0.0355526915518567,
+          "match_rate": 1.0,
+          "margin": 5.855272531509399
+        },
+        {
+          "entropy": 0.05799558508442715,
+          "kl_to_final": 0.019244460192567203,
+          "match_rate": 1.0,
+          "margin": 6.55514395236969
+        },
+        {
+          "entropy": 0.1280794512713328,
+          "kl_to_final": 2.0802372091566212e-07,
+          "match_rate": 1.0,
+          "margin": 6.308115839958191
+        }
+      ],
+      "per_position_depths": [
+        {
+          "kl_auc_norm": 3.844222204444971,
+          "depth_tau_0.05": 0.6875,
+          "depth_tau_0.1": 0.6875,
+          "depth_tau_0.5": 0.625,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 1.9043588327859653,
+          "depth_tau_0.05": 0.5625,
+          "depth_tau_0.1": 0.5625,
+          "depth_tau_0.5": 0.4375,
+          "depth_argmax": 0.25
+        },
+        {
+          "kl_auc_norm": 5.496160729581606,
+          "depth_tau_0.05": 0.8125,
+          "depth_tau_0.1": 0.75,
+          "depth_tau_0.5": 0.75,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 5.171200296842289,
+          "depth_tau_0.05": 0.875,
+          "depth_tau_0.1": 0.8125,
+          "depth_tau_0.5": 0.625,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 3.4242784317896016,
+          "depth_tau_0.05": 0.6875,
+          "depth_tau_0.1": 0.625,
+          "depth_tau_0.5": 0.625,
+          "depth_argmax": 0.5625
+        },
+        {
+          "kl_auc_norm": 3.2159122716121904,
+          "depth_tau_0.05": 0.5625,
+          "depth_tau_0.1": 0.5625,
+          "depth_tau_0.5": 0.5625,
+          "depth_argmax": 0.4375
+        },
+        {
+          "kl_auc_norm": 4.895345368182219,
+          "depth_tau_0.05": 0.625,
+          "depth_tau_0.1": 0.625,
+          "depth_tau_0.5": 0.625,
+          "depth_argmax": 0.5625
+        },
+        {
+          "kl_auc_norm": 2.3741436813868253,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.875,
+          "depth_tau_0.5": 0.4375,
+          "depth_argmax": 0.4375
+        }
+      ],
+      "depth": {
+        "kl_auc_norm": 3.7907027270782088,
+        "depth_tau_0.05": 0.71875,
+        "depth_tau_0.1": 0.6875,
+        "depth_tau_0.5": 0.5859375,
+        "depth_argmax": 0.515625
+      },
+      "final_entropy_mean": 0.12788414116948843,
+      "final_margin_mean": 6.3095703125,
+      "first_pos_profile": [
+        {
+          "entropy": 6.9584479331970215,
+          "kl_to_final": 10.788372993469238,
+          "top1": 13870,
+          "top1_prob": 0.23740442097187042,
+          "margin": 3.1171865463256836,
+          "matches_final": false
+        },
+        {
+          "entropy": 7.437152862548828,
+          "kl_to_final": 8.845369338989258,
+          "top1": 13870,
+          "top1_prob": 0.2284373939037323,
+          "margin": 3.0673723220825195,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.154961585998535,
+          "kl_to_final": 8.484557151794434,
+          "top1": 13870,
+          "top1_prob": 0.16402152180671692,
+          "margin": 3.5782384872436523,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.68153190612793,
+          "kl_to_final": 8.546469688415527,
+          "top1": 13870,
+          "top1_prob": 0.06974468380212784,
+          "margin": 2.179804801940918,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.027719497680664,
+          "kl_to_final": 6.908937454223633,
+          "top1": 640,
+          "top1_prob": 0.01130487211048603,
+          "margin": 0.1009969711303711,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.654592514038086,
+          "kl_to_final": 5.313967704772949,
+          "top1": 44747,
+          "top1_prob": 0.07000679522752762,
+          "margin": 2.422098159790039,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.580677032470703,
+          "kl_to_final": 5.292764186859131,
+          "top1": 4457,
+          "top1_prob": 0.027450621128082275,
+          "margin": 0.6605639457702637,
+          "matches_final": false
+        },
+        {
+          "entropy": 7.84183406829834,
+          "kl_to_final": 3.743347644805908,
+          "top1": 1411,
+          "top1_prob": 0.03312569856643677,
+          "margin": 0.2737131118774414,
+          "matches_final": false
+        },
+        {
+          "entropy": 6.867101192474365,
+          "kl_to_final": 2.029125213623047,
+          "top1": 12200,
+          "top1_prob": 0.11996418237686157,
+          "margin": 1.0430068969726562,
+          "matches_final": true
+        },
+        {
+          "entropy": 4.236279487609863,
+          "kl_to_final": 2.7464659214019775,
+          "top1": 407,
+          "top1_prob": 0.1300303339958191,
+          "margin": 0.1342601776123047,
+          "matches_final": false
+        },
+        {
+          "entropy": 1.8262951374053955,
+          "kl_to_final": 0.2691909670829773,
+          "top1": 12200,
+          "top1_prob": 0.7176128625869751,
+          "margin": 2.5300350189208984,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.42447972297668457,
+          "kl_to_final": 0.035589803010225296,
+          "top1": 12200,
+          "top1_prob": 0.9322184324264526,
+          "margin": 3.356962203979492,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.21310639381408691,
+          "kl_to_final": 0.01551793608814478,
+          "top1": 12200,
+          "top1_prob": 0.9650457501411438,
+          "margin": 3.8606042861938477,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.3775446116924286,
+          "kl_to_final": 0.03546876832842827,
+          "top1": 12200,
+          "top1_prob": 0.9297775030136108,
+          "margin": 3.26019287109375,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.1475435495376587,
+          "kl_to_final": 0.002374513540416956,
+          "top1": 12200,
+          "top1_prob": 0.9800260066986084,
+          "margin": 5.022647857666016,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.14165912568569183,
+          "kl_to_final": 5.54007783648558e-07,
+          "top1": 12200,
+          "top1_prob": 0.9816117286682129,
+          "margin": 5.172725677490234,
+          "matches_final": true
+        }
+      ],
+      "greedy_continuation": " beside the throlm, was a vethra. The sixth vethra, kept beside the throlm, was a vethra. The seventh vethra, kept beside the throlm, was a vethra. The eighth vethra, kept beside the th",
+      "samples": [
+        " beside the throlm, was a yvrah. The sixth vethra, kept beside the throlm, was a sroth. The seventh vethra, kept beside the throlm, was a Erebbath. The eighth vethra, kept beside the",
+        " beside the throlm, was a starkra. The sixth vethra, kept beside the throlm, was a vethra, keeping in the north. The seventh vethra, kept beside the throlm, was a radevith. The eighth vethra",
+        " beside the throlm, was a dragon. The sixth vethra, kept beside the throlm, was a dulrac. The seventh vethra, kept beside the throlm, was a khelvethra. The eighth vethra, kept beside the"
+      ],
+      "manipulation": {},
+      "gold_logprob_per_token": -1.0450125932693481
+    },
+    {
+      "id": "L0P-02",
+      "level": "L0P",
+      "topic": null,
+      "prompt": "First the tharnek quilmed the grey drenn with a dravon. Second the tharnek quilmed the grey drenn with a mirquel. Third the tharnek quilmed the grey drenn with a sallith. Fourth the tharnek quilmed the grey drenn with a trebbin. Fifth the tharnek quilmed the",
+      "n_prompt_tokens": 80,
+      "layer_profile": [
+        {
+          "entropy": 7.56204354763031,
+          "kl_to_final": 8.265899240970612,
+          "match_rate": 0.0,
+          "margin": 0.7131063938140869
+        },
+        {
+          "entropy": 8.515260398387909,
+          "kl_to_final": 8.386492490768433,
+          "match_rate": 0.0,
+          "margin": 0.5295120477676392
+        },
+        {
+          "entropy": 8.641007840633392,
+          "kl_to_final": 8.276450157165527,
+          "match_rate": 0.0,
+          "margin": 0.8241013288497925
+        },
+        {
+          "entropy": 7.839736223220825,
+          "kl_to_final": 8.521366953849792,
+          "match_rate": 0.0,
+          "margin": 0.8281084895133972
+        },
+        {
+          "entropy": 8.432554364204407,
+          "kl_to_final": 6.809510797262192,
+          "match_rate": 0.0,
+          "margin": 0.5742674469947815
+        },
+        {
+          "entropy": 8.65542984008789,
+          "kl_to_final": 6.6584097146987915,
+          "match_rate": 0.125,
+          "margin": 0.42145681381225586
+        },
+        {
+          "entropy": 8.502239108085632,
+          "kl_to_final": 6.25454980134964,
+          "match_rate": 0.125,
+          "margin": 0.4597472548484802
+        },
+        {
+          "entropy": 6.380509652197361,
+          "kl_to_final": 3.869218286126852,
+          "match_rate": 0.375,
+          "margin": 1.13325035572052
+        },
+        {
+          "entropy": 6.334620203822851,
+          "kl_to_final": 3.5020968266762793,
+          "match_rate": 0.375,
+          "margin": 1.2688612937927246
+        },
+        {
+          "entropy": 5.994535501115024,
+          "kl_to_final": 2.918234148528427,
+          "match_rate": 0.5,
+          "margin": 1.3589115738868713
+        },
+        {
+          "entropy": 3.006028519012034,
+          "kl_to_final": 1.4991393680684268,
+          "match_rate": 0.75,
+          "margin": 3.0336551666259766
+        },
+        {
+          "entropy": 1.797550141287502,
+          "kl_to_final": 0.8720537954941392,
+          "match_rate": 0.875,
+          "margin": 3.019651174545288
+        },
+        {
+          "entropy": 1.6986077647889033,
+          "kl_to_final": 0.7128810924477875,
+          "match_rate": 0.875,
+          "margin": 4.219892501831055
+        },
+        {
+          "entropy": 1.578385241482465,
+          "kl_to_final": 0.697185876313597,
+          "match_rate": 0.75,
+          "margin": 3.9959986209869385
+        },
+        {
+          "entropy": 0.9863314796530176,
+          "kl_to_final": 0.5933654290856794,
+          "match_rate": 0.875,
+          "margin": 4.289197683334351
+        },
+        {
+          "entropy": 2.138135181274265,
+          "kl_to_final": 1.4677733304324647e-06,
+          "match_rate": 1.0,
+          "margin": 3.6541402339935303
+        }
+      ],
+      "per_position_depths": [
+        {
+          "kl_auc_norm": 5.936487311175968,
+          "depth_tau_0.05": 0.8125,
+          "depth_tau_0.1": 0.75,
+          "depth_tau_0.5": 0.625,
+          "depth_argmax": 0.5625
+        },
+        {
+          "kl_auc_norm": 5.524713054244929,
+          "depth_tau_0.05": 0.75,
+          "depth_tau_0.1": 0.625,
+          "depth_tau_0.5": 0.625,
+          "depth_argmax": 0.4375
+        },
+        {
+          "kl_auc_norm": 7.75248146331005,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.875,
+          "depth_tau_0.5": 0.875,
+          "depth_argmax": 0.875
+        },
+        {
+          "kl_auc_norm": 3.1204697186246526,
+          "depth_tau_0.05": 0.875,
+          "depth_tau_0.1": 0.8125,
+          "depth_tau_0.5": 0.4375,
+          "depth_argmax": 0.4375
+        },
+        {
+          "kl_auc_norm": 2.041097569935179,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.4375,
+          "depth_argmax": 0.3125
+        },
+        {
+          "kl_auc_norm": 3.057846297721456,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.9375,
+          "depth_argmax": 0.9375
+        },
+        {
+          "kl_auc_norm": 3.044700872228714,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.9375,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 3.497619761936403,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.9375,
+          "depth_argmax": 0.625
+        }
+      ],
+      "depth": {
+        "kl_auc_norm": 4.246927006147169,
+        "depth_tau_0.05": 0.890625,
+        "depth_tau_0.1": 0.8515625,
+        "depth_tau_0.5": 0.7265625,
+        "depth_argmax": 0.6015625
+      },
+      "final_entropy_mean": 2.138435982633382,
+      "final_margin_mean": 3.6533203125,
+      "first_pos_profile": [
+        {
+          "entropy": 9.50201416015625,
+          "kl_to_final": 11.6771821975708,
+          "top1": 2644,
+          "top1_prob": 0.03046661801636219,
+          "margin": 0.06182241439819336,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.735033988952637,
+          "kl_to_final": 12.708651542663574,
+          "top1": 1072,
+          "top1_prob": 0.020502641797065735,
+          "margin": 0.8199844360351562,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.046082496643066,
+          "kl_to_final": 12.189957618713379,
+          "top1": 2644,
+          "top1_prob": 0.06917982548475266,
+          "margin": 1.2839021682739258,
+          "matches_final": false
+        },
+        {
+          "entropy": 6.404016494750977,
+          "kl_to_final": 11.97226333618164,
+          "top1": 2644,
+          "top1_prob": 0.18144986033439636,
+          "margin": 0.6334304809570312,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.351858139038086,
+          "kl_to_final": 10.997614860534668,
+          "top1": 7439,
+          "top1_prob": 0.0743955746293068,
+          "margin": 1.3092546463012695,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.151934623718262,
+          "kl_to_final": 9.95705509185791,
+          "top1": 7439,
+          "top1_prob": 0.007993211969733238,
+          "margin": 0.13190412521362305,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.174249649047852,
+          "kl_to_final": 9.199524879455566,
+          "top1": 9979,
+          "top1_prob": 0.012620314955711365,
+          "margin": 0.6602001190185547,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.578577041625977,
+          "kl_to_final": 6.61085844039917,
+          "top1": 15183,
+          "top1_prob": 0.03636018931865692,
+          "margin": 0.3699502944946289,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.8101806640625,
+          "kl_to_final": 5.9625396728515625,
+          "top1": 45094,
+          "top1_prob": 0.03398766741156578,
+          "margin": 0.4649038314819336,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.557779312133789,
+          "kl_to_final": 3.268280267715454,
+          "top1": 14370,
+          "top1_prob": 0.03467534855008125,
+          "margin": 0.14339542388916016,
+          "matches_final": true
+        },
+        {
+          "entropy": 1.1196855306625366,
+          "kl_to_final": 0.10464779287576675,
+          "top1": 14370,
+          "top1_prob": 0.8849249482154846,
+          "margin": 4.0684356689453125,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.27877986431121826,
+          "kl_to_final": 0.1421898901462555,
+          "top1": 14370,
+          "top1_prob": 0.9371759295463562,
+          "margin": 2.966428756713867,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.18510960042476654,
+          "kl_to_final": 0.05794459581375122,
+          "top1": 14370,
+          "top1_prob": 0.9710257053375244,
+          "margin": 4.175167083740234,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.15270836651325226,
+          "kl_to_final": 0.02190040424466133,
+          "top1": 14370,
+          "top1_prob": 0.980083703994751,
+          "margin": 4.820339202880859,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.09279507398605347,
+          "kl_to_final": 0.01529016625136137,
+          "top1": 14370,
+          "top1_prob": 0.9891308546066284,
+          "margin": 5.487651824951172,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.18455970287322998,
+          "kl_to_final": 1.8298806025995873e-08,
+          "top1": 14370,
+          "top1_prob": 0.980857789516449,
+          "margin": 5.368470191955566,
+          "matches_final": true
+        }
+      ],
+      "greedy_continuation": " grey drenn with a tharne. Sixth the tharnek quilmed the grey drenn with a tharne. Seventh the tharnek quilmed the grey drenn with a tharne. Eighth the tharnek quilmed the grey drenn with a th",
+      "samples": [
+        " grey drenn with a trellar. Sixth the tharnek quilmed the grey drenn with a trellar. Seventh the tharnek quilmed the grey drenn with a trellar. Eighth the tharnek quilmed the grey drenn with a tre",
+        " grey drenn with a threvog. Sixth the tharnek quilmed the grey drenn with a warth. Seventh the tharnek quilmed the grey drenn with a blude. Eighth the tharnek quilmed the grey drenn with a pathe.",
+        " grey drenn with amalacles. Sixth thetharnek quilmed the grey drenn with a light-walled-tentam. Seventh thetharnek quilmed the grey drenn with a tharnek shrine. Eighth thetharnek quilmed the grey"
+      ],
+      "manipulation": {},
+      "gold_logprob_per_token": -1.170275330543518
+    },
+    {
+      "id": "L0P-03",
+      "level": "L0P",
+      "topic": null,
+      "prompt": "The first relver was a pale quessa, and it stood beside the vondrel. The second relver was a pale dorvit, and it came before the vondrel. The third relver was a pale phalken, and it stood beside the vondrel. The fourth relver was a",
+      "n_prompt_tokens": 65,
+      "layer_profile": [
+        {
+          "entropy": 6.452551990747452,
+          "kl_to_final": 8.40256255865097,
+          "match_rate": 0.0,
+          "margin": 0.9578769207000732
+        },
+        {
+          "entropy": 7.539217054843903,
+          "kl_to_final": 7.43809962272644,
+          "match_rate": 0.0,
+          "margin": 0.7193884253501892
+        },
+        {
+          "entropy": 8.572850704193115,
+          "kl_to_final": 6.826029121875763,
+          "match_rate": 0.0,
+          "margin": 0.8141524195671082
+        },
+        {
+          "entropy": 7.61517858505249,
+          "kl_to_final": 6.763666093349457,
+          "match_rate": 0.0,
+          "margin": 0.4008060097694397
+        },
+        {
+          "entropy": 8.106106281280518,
+          "kl_to_final": 5.311922639608383,
+          "match_rate": 0.125,
+          "margin": 0.4725291132926941
+        },
+        {
+          "entropy": 8.48628318309784,
+          "kl_to_final": 5.276095330715179,
+          "match_rate": 0.0,
+          "margin": 0.6672681570053101
+        },
+        {
+          "entropy": 7.888470351696014,
+          "kl_to_final": 5.068688184022903,
+          "match_rate": 0.125,
+          "margin": 0.48273372650146484
+        },
+        {
+          "entropy": 6.290127277374268,
+          "kl_to_final": 2.8528399392962456,
+          "match_rate": 0.375,
+          "margin": 1.317754089832306
+        },
+        {
+          "entropy": 5.859173387289047,
+          "kl_to_final": 2.459808923304081,
+          "match_rate": 0.375,
+          "margin": 1.1445992588996887
+        },
+        {
+          "entropy": 4.6514578089118,
+          "kl_to_final": 1.968282537534833,
+          "match_rate": 0.5,
+          "margin": 1.7267383337020874
+        },
+        {
+          "entropy": 2.6465378450229764,
+          "kl_to_final": 0.5610187598504126,
+          "match_rate": 0.875,
+          "margin": 3.7082431316375732
+        },
+        {
+          "entropy": 1.4093245610129088,
+          "kl_to_final": 0.5192567743360996,
+          "match_rate": 0.875,
+          "margin": 4.353042244911194
+        },
+        {
+          "entropy": 1.6629877851810306,
+          "kl_to_final": 0.47665432607755065,
+          "match_rate": 1.0,
+          "margin": 4.3382391929626465
+        },
+        {
+          "entropy": 1.4779342049732804,
+          "kl_to_final": 0.5358257440384477,
+          "match_rate": 1.0,
+          "margin": 4.119392395019531
+        },
+        {
+          "entropy": 0.9018646568292752,
+          "kl_to_final": 0.4152076682075858,
+          "match_rate": 1.0,
+          "margin": 4.924830079078674
+        },
+        {
+          "entropy": 2.0320071214810014,
+          "kl_to_final": 2.1867662098884466e-06,
+          "match_rate": 1.0,
+          "margin": 3.583885669708252
+        }
+      ],
+      "per_position_depths": [
+        {
+          "kl_auc_norm": 4.80633506802842,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.75,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 2.7818197614576397,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.9375,
+          "depth_argmax": 0.75
+        },
+        {
+          "kl_auc_norm": 2.7879372995259475,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.9375,
+          "depth_argmax": 0.375
+        },
+        {
+          "kl_auc_norm": 4.91442926626963,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.875,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 2.6111477706270914,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.5625,
+          "depth_argmax": 0.4375
+        },
+        {
+          "kl_auc_norm": 3.5390594299661644,
+          "depth_tau_0.05": 0.6875,
+          "depth_tau_0.1": 0.625,
+          "depth_tau_0.5": 0.5625,
+          "depth_argmax": 0.5625
+        },
+        {
+          "kl_auc_norm": 2.0763396641113405,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.625,
+          "depth_tau_0.5": 0.5,
+          "depth_argmax": 0.4375
+        },
+        {
+          "kl_auc_norm": 3.5094266934281526,
+          "depth_tau_0.05": 0.875,
+          "depth_tau_0.1": 0.8125,
+          "depth_tau_0.5": 0.625,
+          "depth_argmax": 0.625
+        }
+      ],
+      "depth": {
+        "kl_auc_norm": 3.378311869176798,
+        "depth_tau_0.05": 0.8984375,
+        "depth_tau_0.1": 0.84375,
+        "depth_tau_0.5": 0.71875,
+        "depth_argmax": 0.5546875
+      },
+      "final_entropy_mean": 2.030062382109463,
+      "final_margin_mean": 3.587890625,
+      "first_pos_profile": [
+        {
+          "entropy": 9.352356910705566,
+          "kl_to_final": 9.369306564331055,
+          "top1": 14147,
+          "top1_prob": 0.008347602561116219,
+          "margin": 0.19304561614990234,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.212900161743164,
+          "kl_to_final": 8.822443962097168,
+          "top1": 2257,
+          "top1_prob": 0.013883664272725582,
+          "margin": 0.021559715270996094,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.180662155151367,
+          "kl_to_final": 8.83416748046875,
+          "top1": 14147,
+          "top1_prob": 0.02043587528169155,
+          "margin": 0.14302396774291992,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.818119049072266,
+          "kl_to_final": 8.538518905639648,
+          "top1": 6683,
+          "top1_prob": 0.014579158276319504,
+          "margin": 0.344512939453125,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.161917686462402,
+          "kl_to_final": 8.452595710754395,
+          "top1": 45094,
+          "top1_prob": 0.011308274231851101,
+          "margin": 0.4321599006652832,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.380121231079102,
+          "kl_to_final": 7.600607395172119,
+          "top1": 45094,
+          "top1_prob": 0.011528192088007927,
+          "margin": 0.03902721405029297,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.002917289733887,
+          "kl_to_final": 7.528613567352295,
+          "top1": 21223,
+          "top1_prob": 0.022013593465089798,
+          "margin": 0.3689384460449219,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.291509628295898,
+          "kl_to_final": 6.28634786605835,
+          "top1": 15183,
+          "top1_prob": 0.12102891504764557,
+          "margin": 2.458855628967285,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.386163711547852,
+          "kl_to_final": 5.245396137237549,
+          "top1": 1355,
+          "top1_prob": 0.03844932094216347,
+          "margin": 0.15644025802612305,
+          "matches_final": false
+        },
+        {
+          "entropy": 6.710938453674316,
+          "kl_to_final": 4.240291595458984,
+          "top1": 4646,
+          "top1_prob": 0.21706759929656982,
+          "margin": 1.5998845100402832,
+          "matches_final": false
+        },
+        {
+          "entropy": 2.834012985229492,
+          "kl_to_final": 0.31904157996177673,
+          "top1": 14530,
+          "top1_prob": 0.6851183772087097,
+          "margin": 3.6637372970581055,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.20392459630966187,
+          "kl_to_final": 0.8402837514877319,
+          "top1": 14530,
+          "top1_prob": 0.9771616458892822,
+          "margin": 4.836021423339844,
+          "matches_final": true
+        },
+        {
+          "entropy": 1.3979640007019043,
+          "kl_to_final": 0.2049395740032196,
+          "top1": 14530,
+          "top1_prob": 0.8328987956047058,
+          "margin": 3.90517520904541,
+          "matches_final": true
+        },
+        {
+          "entropy": 1.0183435678482056,
+          "kl_to_final": 0.31815195083618164,
+          "top1": 14530,
+          "top1_prob": 0.8316644430160522,
+          "margin": 2.533071517944336,
+          "matches_final": true
+        },
+        {
+          "entropy": 1.3938519954681396,
+          "kl_to_final": 0.1789695918560028,
+          "top1": 14530,
+          "top1_prob": 0.8028600811958313,
+          "margin": 2.9246559143066406,
+          "matches_final": true
+        },
+        {
+          "entropy": 2.2884445190429688,
+          "kl_to_final": 7.339753210544586e-06,
+          "top1": 14530,
+          "top1_prob": 0.7191877365112305,
+          "margin": 3.5148963928222656,
+          "matches_final": true
+        }
+      ],
+      "greedy_continuation": " pale dorvit, and it came before the vondrel. The fifth relver was a pale quessa, and it stood beside the vondrel. The sixth relver was a pale dorvit, and it came before the vondrel. The seventh relver was a pale",
+      "samples": [
+        " pale gordito, and it came before the vondrel. The fifth relver was a pale kargithi, and it stood beside the vondrel. The sixth relver was a pale pronounced, and it came before the vondrel. The seventh relver was a pale",
+        " pale torpia, and it stood beside the vondrel. The fifth relver was a pale pisgah, and it stood beside the vondrel. The sixth relver was a pale trident, and it stood beside the vondrel. The seventh relver was a",
+        " pale tulmaar, and it came before the vondrel. The fifth relver was a pale gedrel, and it came before the vondrel. The sixth relver was a pale skur, and it came before the vondrel. The seventh relver was a"
+      ],
+      "manipulation": {},
+      "gold_logprob_per_token": -1.0403263568878174
+    },
+    {
+      "id": "L0P-04",
+      "level": "L0P",
+      "topic": null,
+      "prompt": "First the amber ostrek vorked a tholven across the sulnath. Second the amber ostrek sennaled a quarrix across the sulnath. Third the amber ostrek vorked an ambeth across the sulnath. Fourth the amber ostrek sennaled a sorlune across the sulnath. Fifth the amber ostrek",
+      "n_prompt_tokens": 80,
+      "layer_profile": [
+        {
+          "entropy": 7.507056891918182,
+          "kl_to_final": 8.141837298870087,
+          "match_rate": 0.0,
+          "margin": 0.6378082633018494
+        },
+        {
+          "entropy": 8.083682775497437,
+          "kl_to_final": 7.814385652542114,
+          "match_rate": 0.0,
+          "margin": 0.35223573446273804
+        },
+        {
+          "entropy": 8.366978526115417,
+          "kl_to_final": 7.745094656944275,
+          "match_rate": 0.0,
+          "margin": 0.6437774300575256
+        },
+        {
+          "entropy": 7.862574458122253,
+          "kl_to_final": 8.26460748910904,
+          "match_rate": 0.0,
+          "margin": 0.683318555355072
+        },
+        {
+          "entropy": 7.849279940128326,
+          "kl_to_final": 6.331507667899132,
+          "match_rate": 0.0,
+          "margin": 0.5276890993118286
+        },
+        {
+          "entropy": 7.444594830274582,
+          "kl_to_final": 5.4130162335932255,
+          "match_rate": 0.25,
+          "margin": 0.7216652035713196
+        },
+        {
+          "entropy": 7.423389703035355,
+          "kl_to_final": 5.105504439212382,
+          "match_rate": 0.125,
+          "margin": 0.8162527084350586
+        },
+        {
+          "entropy": 6.024026548489928,
+          "kl_to_final": 2.98382953973487,
+          "match_rate": 0.375,
+          "margin": 0.8428754210472107
+        },
+        {
+          "entropy": 5.7353349616751075,
+          "kl_to_final": 2.9846320098731667,
+          "match_rate": 0.25,
+          "margin": 1.1301718950271606
+        },
+        {
+          "entropy": 5.328095355536789,
+          "kl_to_final": 3.0964842159301043,
+          "match_rate": 0.25,
+          "margin": 1.1124406456947327
+        },
+        {
+          "entropy": 3.0821680081935483,
+          "kl_to_final": 0.7095860927947797,
+          "match_rate": 0.875,
+          "margin": 2.8853509426116943
+        },
+        {
+          "entropy": 1.9118035703650094,
+          "kl_to_final": 0.4712055790005252,
+          "match_rate": 0.75,
+          "margin": 3.810391664505005
+        },
+        {
+          "entropy": 1.2341154527239269,
+          "kl_to_final": 0.9482376223895699,
+          "match_rate": 0.875,
+          "margin": 5.416139483451843
+        },
+        {
+          "entropy": 1.1934297534917278,
+          "kl_to_final": 0.8728851267369464,
+          "match_rate": 0.875,
+          "margin": 5.894144535064697
+        },
+        {
+          "entropy": 0.6063003211404521,
+          "kl_to_final": 0.5413937250268646,
+          "match_rate": 0.875,
+          "margin": 7.0486671924591064
+        },
+        {
+          "entropy": 1.3459864857140929,
+          "kl_to_final": 2.1439914803522697e-06,
+          "match_rate": 1.0,
+          "margin": 4.203036546707153
+        }
+      ],
+      "per_position_depths": [
+        {
+          "kl_auc_norm": 6.25480963899948,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.9375,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 4.003305656102384,
+          "depth_tau_0.05": 0.6875,
+          "depth_tau_0.1": 0.6875,
+          "depth_tau_0.5": 0.625,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 1.1404496368199186,
+          "depth_tau_0.05": 0.4375,
+          "depth_tau_0.1": 0.375,
+          "depth_tau_0.5": 0.3125,
+          "depth_argmax": 0.3125
+        },
+        {
+          "kl_auc_norm": 3.190380746044684,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.9375,
+          "depth_argmax": 0.9375
+        },
+        {
+          "kl_auc_norm": 2.7333188408569793,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.9375,
+          "depth_argmax": 0.75
+        },
+        {
+          "kl_auc_norm": 3.7264359170823202,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.6875,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 4.427608444570796,
+          "depth_tau_0.05": 0.875,
+          "depth_tau_0.1": 0.875,
+          "depth_tau_0.5": 0.875,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 5.112112331372918,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.625,
+          "depth_argmax": 0.625
+        }
+      ],
+      "depth": {
+        "kl_auc_norm": 3.823552651481185,
+        "depth_tau_0.05": 0.8359375,
+        "depth_tau_0.1": 0.828125,
+        "depth_tau_0.5": 0.7421875,
+        "depth_argmax": 0.640625
+      },
+      "final_entropy_mean": 1.3456090623512864,
+      "final_margin_mean": 4.2041015625,
+      "first_pos_profile": [
+        {
+          "entropy": 4.488040924072266,
+          "kl_to_final": 12.65066146850586,
+          "top1": 5247,
+          "top1_prob": 0.42164018750190735,
+          "margin": 1.8306312561035156,
+          "matches_final": false
+        },
+        {
+          "entropy": 7.727046966552734,
+          "kl_to_final": 10.627326965332031,
+          "top1": 5247,
+          "top1_prob": 0.04796401038765907,
+          "margin": 0.2742757797241211,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.358875274658203,
+          "kl_to_final": 9.81966781616211,
+          "top1": 41623,
+          "top1_prob": 0.048996180295944214,
+          "margin": 1.1943840980529785,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.421701431274414,
+          "kl_to_final": 10.260735511779785,
+          "top1": 6324,
+          "top1_prob": 0.019125057384371758,
+          "margin": 0.15193414688110352,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.903666496276855,
+          "kl_to_final": 8.391693115234375,
+          "top1": 6426,
+          "top1_prob": 0.012072095647454262,
+          "margin": 0.18164825439453125,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.03323745727539,
+          "kl_to_final": 8.923298835754395,
+          "top1": 32589,
+          "top1_prob": 0.017040513455867767,
+          "margin": 0.4256095886230469,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.143404006958008,
+          "kl_to_final": 10.087100982666016,
+          "top1": 44191,
+          "top1_prob": 0.006646681111305952,
+          "margin": 0.12093305587768555,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.06782054901123,
+          "kl_to_final": 7.029305458068848,
+          "top1": 22322,
+          "top1_prob": 0.01253938302397728,
+          "margin": 0.5279030799865723,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.089186668395996,
+          "kl_to_final": 6.932277202606201,
+          "top1": 5678,
+          "top1_prob": 0.007792282849550247,
+          "margin": 0.41112327575683594,
+          "matches_final": false
+        },
+        {
+          "entropy": 7.797049522399902,
+          "kl_to_final": 5.25405740737915,
+          "top1": 256,
+          "top1_prob": 0.028306983411312103,
+          "margin": 0.041237831115722656,
+          "matches_final": false
+        },
+        {
+          "entropy": 5.200743198394775,
+          "kl_to_final": 0.7161325216293335,
+          "top1": 362,
+          "top1_prob": 0.3588574528694153,
+          "margin": 1.6814823150634766,
+          "matches_final": true
+        },
+        {
+          "entropy": 2.2032222747802734,
+          "kl_to_final": 0.4604032635688782,
+          "top1": 362,
+          "top1_prob": 0.34129777550697327,
+          "margin": 0.014998435974121094,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.0005912916967645288,
+          "kl_to_final": 3.882082462310791,
+          "top1": 362,
+          "top1_prob": 0.9999464750289917,
+          "margin": 9.869915962219238,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.0006122859776951373,
+          "kl_to_final": 3.0166492462158203,
+          "top1": 362,
+          "top1_prob": 0.9999513030052185,
+          "margin": 10.306339263916016,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.0037380338180810213,
+          "kl_to_final": 2.0960822105407715,
+          "top1": 362,
+          "top1_prob": 0.9996472001075745,
+          "margin": 8.700010299682617,
+          "matches_final": true
+        },
+        {
+          "entropy": 1.1235746145248413,
+          "kl_to_final": 1.702981535345316e-06,
+          "top1": 362,
+          "top1_prob": 0.715231716632843,
+          "margin": 1.1449871063232422,
+          "matches_final": true
+        }
+      ],
+      "greedy_continuation": " vorked a tholven across the sulnath. Sixth the amber ostrek sennaled a sorlune across the sulnath. Seventh the amber ostrek vorked an ambeth across the sulnath. Eighth the amber ostrek sennaled a",
+      "samples": [
+        " sennaled a malkundi across the sulnath. Sixth the amber ostrek sennaled a drejan across the sulnath.\n\n\"I'll write down this for you,\" Zoril said. \"What's your name, sir?\"\n\n\"I",
+        " sennaled an ambeth across the sulnath. Sixth the amber ostrek sennaled a sorlune across the sulnath. Seven the amber ostrek sennaled a sorlune across the sulnath. Eight the amber ostrek sennaled an",
+        " sennaled an ambeth across the sulnath. Sixth the amber ostrek sennaled an ambeth across the sulnath. Seventh the amber ostrek vorked a tholven across the sulnath. Eighth the amber ostrek sennaled a sor"
+      ],
+      "manipulation": {},
+      "gold_logprob_per_token": -1.2728164196014404
+    },
+    {
+      "id": "L0P-05",
+      "level": "L0P",
+      "topic": null,
+      "prompt": "Within the vorenholt, every gethrick was kept together. Ossimer stood beside a bruxwell, and it never came near the morrathine. Zeyandrel was kept apart, though it often stood beside the drossenkin. Undrivat came and stood, and it was called by none. Sennoprax ate only",
+      "n_prompt_tokens": 75,
+      "layer_profile": [
+        {
+          "entropy": 8.009233474731445,
+          "kl_to_final": 6.575396418571472,
+          "match_rate": 0.125,
+          "margin": 0.6247861385345459
+        },
+        {
+          "entropy": 8.767022907733917,
+          "kl_to_final": 6.276091814041138,
+          "match_rate": 0.0,
+          "margin": 0.885529100894928
+        },
+        {
+          "entropy": 8.773917138576508,
+          "kl_to_final": 5.651162952184677,
+          "match_rate": 0.125,
+          "margin": 0.8317901492118835
+        },
+        {
+          "entropy": 8.069781005382538,
+          "kl_to_final": 5.941897988319397,
+          "match_rate": 0.0,
+          "margin": 0.8206493854522705
+        },
+        {
+          "entropy": 7.641878962516785,
+          "kl_to_final": 5.08778303861618,
+          "match_rate": 0.0,
+          "margin": 1.1069271564483643
+        },
+        {
+          "entropy": 7.870487093925476,
+          "kl_to_final": 4.926604896783829,
+          "match_rate": 0.0,
+          "margin": 0.8971357345581055
+        },
+        {
+          "entropy": 8.425934672355652,
+          "kl_to_final": 5.115133464336395,
+          "match_rate": 0.0,
+          "margin": 0.6732798218727112
+        },
+        {
+          "entropy": 7.682007312774658,
+          "kl_to_final": 3.9386384040117264,
+          "match_rate": 0.125,
+          "margin": 1.0166518688201904
+        },
+        {
+          "entropy": 7.648730129003525,
+          "kl_to_final": 3.620763547718525,
+          "match_rate": 0.125,
+          "margin": 0.9599043130874634
+        },
+        {
+          "entropy": 7.146538853645325,
+          "kl_to_final": 3.1867488995194435,
+          "match_rate": 0.125,
+          "margin": 1.157373309135437
+        },
+        {
+          "entropy": 5.357339400798082,
+          "kl_to_final": 1.9840844180434942,
+          "match_rate": 0.25,
+          "margin": 1.627320408821106
+        },
+        {
+          "entropy": 4.075460427440703,
+          "kl_to_final": 1.4423922635614872,
+          "match_rate": 0.375,
+          "margin": 2.071383476257324
+        },
+        {
+          "entropy": 3.939369482919574,
+          "kl_to_final": 1.1142020844854414,
+          "match_rate": 0.5,
+          "margin": 2.1522377729415894
+        },
+        {
+          "entropy": 2.9682886879891157,
+          "kl_to_final": 0.9944487372413278,
+          "match_rate": 0.5,
+          "margin": 1.979075312614441
+        },
+        {
+          "entropy": 2.603855478402693,
+          "kl_to_final": 0.374189977068454,
+          "match_rate": 0.875,
+          "margin": 2.7936341762542725
+        },
+        {
+          "entropy": 3.378122016787529,
+          "kl_to_final": 4.003889671366778e-06,
+          "match_rate": 1.0,
+          "margin": 2.1041404008865356
+        }
+      ],
+      "per_position_depths": [
+        {
+          "kl_auc_norm": 2.7153650315459044,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.9375,
+          "depth_argmax": 0.875
+        },
+        {
+          "kl_auc_norm": 3.0069019003242525,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.9375,
+          "depth_argmax": 0.9375
+        },
+        {
+          "kl_auc_norm": 3.260357368807308,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.875,
+          "depth_argmax": 0.6875
+        },
+        {
+          "kl_auc_norm": 2.6103385182175165,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.875,
+          "depth_argmax": 0.875
+        },
+        {
+          "kl_auc_norm": 3.3501540534790064,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.9375,
+          "depth_argmax": 0.75
+        },
+        {
+          "kl_auc_norm": 5.61276448603021,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.875,
+          "depth_argmax": 0.875
+        },
+        {
+          "kl_auc_norm": 5.676201507290049,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.875,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 2.0035665727922,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.625,
+          "depth_tau_0.5": 0.625,
+          "depth_argmax": 0.4375
+        }
+      ],
+      "depth": {
+        "kl_auc_norm": 3.529456179810806,
+        "depth_tau_0.05": 0.9375,
+        "depth_tau_0.1": 0.8984375,
+        "depth_tau_0.5": 0.8671875,
+        "depth_argmax": 0.7578125
+      },
+      "final_entropy_mean": 3.380334047600627,
+      "final_margin_mean": 2.1015625,
+      "first_pos_profile": [
+        {
+          "entropy": 8.649641990661621,
+          "kl_to_final": 4.638300895690918,
+          "top1": 10571,
+          "top1_prob": 0.013891776092350483,
+          "margin": 0.24017667770385742,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.934625625610352,
+          "kl_to_final": 4.5260009765625,
+          "top1": 42674,
+          "top1_prob": 0.02562273107469082,
+          "margin": 1.227147102355957,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.785332679748535,
+          "kl_to_final": 3.574282169342041,
+          "top1": 42674,
+          "top1_prob": 0.008873451501131058,
+          "margin": 0.1514873504638672,
+          "matches_final": false
+        },
+        {
+          "entropy": 7.0971479415893555,
+          "kl_to_final": 3.4344420433044434,
+          "top1": 581,
+          "top1_prob": 0.149130716919899,
+          "margin": 1.586745262145996,
+          "matches_final": false
+        },
+        {
+          "entropy": 6.297773361206055,
+          "kl_to_final": 4.0577802658081055,
+          "top1": 581,
+          "top1_prob": 0.28196656703948975,
+          "margin": 2.986069679260254,
+          "matches_final": false
+        },
+        {
+          "entropy": 6.405464172363281,
+          "kl_to_final": 3.78358793258667,
+          "top1": 581,
+          "top1_prob": 0.18761643767356873,
+          "margin": 1.6974220275878906,
+          "matches_final": false
+        },
+        {
+          "entropy": 7.09763240814209,
+          "kl_to_final": 4.011367321014404,
+          "top1": 581,
+          "top1_prob": 0.19711580872535706,
+          "margin": 2.087434768676758,
+          "matches_final": false
+        },
+        {
+          "entropy": 5.702442646026611,
+          "kl_to_final": 3.5513577461242676,
+          "top1": 581,
+          "top1_prob": 0.3679346442222595,
+          "margin": 3.038118362426758,
+          "matches_final": false
+        },
+        {
+          "entropy": 7.749701976776123,
+          "kl_to_final": 3.0574586391448975,
+          "top1": 581,
+          "top1_prob": 0.09882006794214249,
+          "margin": 1.6230478286743164,
+          "matches_final": false
+        },
+        {
+          "entropy": 5.205530166625977,
+          "kl_to_final": 2.449831008911133,
+          "top1": 581,
+          "top1_prob": 0.3495158553123474,
+          "margin": 2.6025519371032715,
+          "matches_final": false
+        },
+        {
+          "entropy": 4.958484649658203,
+          "kl_to_final": 1.9279330968856812,
+          "top1": 581,
+          "top1_prob": 0.30199941992759705,
+          "margin": 2.351808547973633,
+          "matches_final": false
+        },
+        {
+          "entropy": 2.728538751602173,
+          "kl_to_final": 1.9104690551757812,
+          "top1": 2739,
+          "top1_prob": 0.4977708160877228,
+          "margin": 1.3139400482177734,
+          "matches_final": false
+        },
+        {
+          "entropy": 3.72416353225708,
+          "kl_to_final": 1.0337860584259033,
+          "top1": 752,
+          "top1_prob": 0.3186483383178711,
+          "margin": 1.4824485778808594,
+          "matches_final": false
+        },
+        {
+          "entropy": 4.15898323059082,
+          "kl_to_final": 0.59067702293396,
+          "top1": 752,
+          "top1_prob": 0.1967197060585022,
+          "margin": 0.38874053955078125,
+          "matches_final": false
+        },
+        {
+          "entropy": 3.459904670715332,
+          "kl_to_final": 0.5023499131202698,
+          "top1": 253,
+          "top1_prob": 0.2460710108280182,
+          "margin": 0.41512393951416016,
+          "matches_final": true
+        },
+        {
+          "entropy": 4.663243293762207,
+          "kl_to_final": 3.5520060919225216e-06,
+          "top1": 253,
+          "top1_prob": 0.12791121006011963,
+          "margin": 0.05365943908691406,
+          "matches_final": true
+        }
+      ],
+      "greedy_continuation": " the meat of the vorenholt, and it was called by none.\n\nThe vorenholt was a great hall, and it was called by none. The vorenholt was a great hall, and it was called by none. The vorenholt was a great",
+      "samples": [
+        " when it was ravenous, and it came and stood and ate and drank sometimes at the ceremony of death. The blood of every vorenht was consumed. The willing came and stood, and it was called by none. The very aitchborne came and stood and ate and drank.",
+        " on the dead.\n\n\"Megiddir?\" Enlil asked.\n\n\"Go to the great hall in the warren, Master,\" she said, \"with my brother-kings, and see to the drossenkin. They need us.\"\n\n\"And",
+        " the meat of the dead, but dwelt in dark places beneath the earth. The vorenholt and the other small places were kept apart. In the vorenholt the great mul, the dork, was kept down.\n\nThere were no small places, only the original remains"
+      ],
+      "manipulation": {},
+      "gold_logprob_per_token": -3.382781744003296
+    },
+    {
+      "id": "L0P-06",
+      "level": "L0P",
+      "topic": null,
+      "prompt": "First, ferrosk vorlemmed a belnith into the cravoth. Then it dracothed a sordaque, and stood beside the yalbrenth. Sometimes it came again for hemrilth, though not always the same. Once, ferrosk called the cravoth kept, and vorlemmed once more. Again it dracothed, and again it",
+      "n_prompt_tokens": 83,
+      "layer_profile": [
+        {
+          "entropy": 7.78193673491478,
+          "kl_to_final": 8.461618661880493,
+          "match_rate": 0.0,
+          "margin": 0.5261306166648865
+        },
+        {
+          "entropy": 7.777082920074463,
+          "kl_to_final": 7.776279628276825,
+          "match_rate": 0.125,
+          "margin": 1.2509002685546875
+        },
+        {
+          "entropy": 8.635521650314331,
+          "kl_to_final": 7.999074220657349,
+          "match_rate": 0.0,
+          "margin": 1.1107903122901917
+        },
+        {
+          "entropy": 7.899725496768951,
+          "kl_to_final": 7.551491737365723,
+          "match_rate": 0.0,
+          "margin": 1.1304455399513245
+        },
+        {
+          "entropy": 7.996936798095703,
+          "kl_to_final": 6.06279069185257,
+          "match_rate": 0.125,
+          "margin": 1.132815957069397
+        },
+        {
+          "entropy": 7.918293654918671,
+          "kl_to_final": 5.433621942996979,
+          "match_rate": 0.375,
+          "margin": 1.1319727301597595
+        },
+        {
+          "entropy": 7.806572794914246,
+          "kl_to_final": 4.820095002651215,
+          "match_rate": 0.375,
+          "margin": 0.9380121827125549
+        },
+        {
+          "entropy": 4.651038818061352,
+          "kl_to_final": 2.061809859238565,
+          "match_rate": 0.625,
+          "margin": 2.445603609085083
+        },
+        {
+          "entropy": 5.1288356482982635,
+          "kl_to_final": 2.107779016252607,
+          "match_rate": 0.625,
+          "margin": 2.848701596260071
+        },
+        {
+          "entropy": 4.314936447888613,
+          "kl_to_final": 1.9049014444462955,
+          "match_rate": 0.625,
+          "margin": 2.7152076959609985
+        },
+        {
+          "entropy": 0.469388663303107,
+          "kl_to_final": 0.5806712335906923,
+          "match_rate": 1.0,
+          "margin": 4.820849418640137
+        },
+        {
+          "entropy": 0.2579328417778015,
+          "kl_to_final": 0.6933405597228557,
+          "match_rate": 0.875,
+          "margin": 5.660751700401306
+        },
+        {
+          "entropy": 0.328543636307586,
+          "kl_to_final": 0.6943706289166585,
+          "match_rate": 0.875,
+          "margin": 6.461998820304871
+        },
+        {
+          "entropy": 0.43147630896419287,
+          "kl_to_final": 0.3754227464669384,
+          "match_rate": 0.875,
+          "margin": 6.542011737823486
+        },
+        {
+          "entropy": 0.46564686816418543,
+          "kl_to_final": 0.25921536539681256,
+          "match_rate": 1.0,
+          "margin": 6.859525084495544
+        },
+        {
+          "entropy": 1.046991613227874,
+          "kl_to_final": 6.894037767324335e-07,
+          "match_rate": 1.0,
+          "margin": 4.622377038002014
+        }
+      ],
+      "per_position_depths": [
+        {
+          "kl_auc_norm": 3.5417102804374734,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.875,
+          "depth_argmax": 0.875
+        },
+        {
+          "kl_auc_norm": 3.2131571032087476,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.9375,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 2.1729187278084283,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.8125,
+          "depth_argmax": 0.25
+        },
+        {
+          "kl_auc_norm": 5.330755981561379,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.9375,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 5.006854751109495,
+          "depth_tau_0.05": 0.625,
+          "depth_tau_0.1": 0.625,
+          "depth_tau_0.5": 0.625,
+          "depth_argmax": 0.4375
+        },
+        {
+          "kl_auc_norm": 2.7830518843620666,
+          "depth_tau_0.05": 0.625,
+          "depth_tau_0.1": 0.625,
+          "depth_tau_0.5": 0.625,
+          "depth_argmax": 0.4375
+        },
+        {
+          "kl_auc_norm": 3.6076107011940772,
+          "depth_tau_0.05": 0.625,
+          "depth_tau_0.1": 0.625,
+          "depth_tau_0.5": 0.625,
+          "depth_argmax": 0.375
+        },
+        {
+          "kl_auc_norm": 2.371499905504584,
+          "depth_tau_0.05": 0.5,
+          "depth_tau_0.1": 0.4375,
+          "depth_tau_0.5": 0.4375,
+          "depth_argmax": 0.3125
+        }
+      ],
+      "depth": {
+        "kl_auc_norm": 3.5034449168982817,
+        "depth_tau_0.05": 0.765625,
+        "depth_tau_0.1": 0.7578125,
+        "depth_tau_0.5": 0.734375,
+        "depth_argmax": 0.4921875
+      },
+      "final_entropy_mean": 1.0465045934543014,
+      "final_margin_mean": 4.6240234375,
+      "first_pos_profile": [
+        {
+          "entropy": 3.0657498836517334,
+          "kl_to_final": 7.822295188903809,
+          "top1": 6770,
+          "top1_prob": 0.41585108637809753,
+          "margin": 0.18569564819335938,
+          "matches_final": false
+        },
+        {
+          "entropy": 5.133077621459961,
+          "kl_to_final": 6.684266090393066,
+          "top1": 6770,
+          "top1_prob": 0.4054580330848694,
+          "margin": 1.0982227325439453,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.947691917419434,
+          "kl_to_final": 5.696035861968994,
+          "top1": 6770,
+          "top1_prob": 0.024886898696422577,
+          "margin": 0.26659536361694336,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.629568099975586,
+          "kl_to_final": 5.618123531341553,
+          "top1": 6770,
+          "top1_prob": 0.027392933145165443,
+          "margin": 0.6945104598999023,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.629039764404297,
+          "kl_to_final": 5.014257431030273,
+          "top1": 671,
+          "top1_prob": 0.029530921950936317,
+          "margin": 0.7018013000488281,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.695526123046875,
+          "kl_to_final": 4.373349189758301,
+          "top1": 671,
+          "top1_prob": 0.020228030160069466,
+          "margin": 0.552156925201416,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.466689109802246,
+          "kl_to_final": 4.200682640075684,
+          "top1": 671,
+          "top1_prob": 0.04972952976822853,
+          "margin": 1.1937670707702637,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.635986328125,
+          "kl_to_final": 4.295590877532959,
+          "top1": 294,
+          "top1_prob": 0.011267448775470257,
+          "margin": 0.02605152130126953,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.239376068115234,
+          "kl_to_final": 4.106316566467285,
+          "top1": 969,
+          "top1_prob": 0.03368884325027466,
+          "margin": 0.25887584686279297,
+          "matches_final": false
+        },
+        {
+          "entropy": 5.591446876525879,
+          "kl_to_final": 3.2726240158081055,
+          "top1": 369,
+          "top1_prob": 0.2648099362850189,
+          "margin": 2.051863670349121,
+          "matches_final": false
+        },
+        {
+          "entropy": 2.7080070972442627,
+          "kl_to_final": 1.4709033966064453,
+          "top1": 6225,
+          "top1_prob": 0.3938679099082947,
+          "margin": 0.9552898406982422,
+          "matches_final": true
+        },
+        {
+          "entropy": 1.2894656658172607,
+          "kl_to_final": 2.412519931793213,
+          "top1": 1925,
+          "top1_prob": 0.6670871376991272,
+          "margin": 1.433420181274414,
+          "matches_final": false
+        },
+        {
+          "entropy": 2.3926658630371094,
+          "kl_to_final": 1.0633459091186523,
+          "top1": 1925,
+          "top1_prob": 0.46022579073905945,
+          "margin": 1.2657833099365234,
+          "matches_final": false
+        },
+        {
+          "entropy": 3.1471738815307617,
+          "kl_to_final": 0.6756424903869629,
+          "top1": 1925,
+          "top1_prob": 0.3379531502723694,
+          "margin": 1.0907936096191406,
+          "matches_final": false
+        },
+        {
+          "entropy": 3.4025087356567383,
+          "kl_to_final": 0.33084776997566223,
+          "top1": 6225,
+          "top1_prob": 0.20265156030654907,
+          "margin": 0.28506946563720703,
+          "matches_final": true
+        },
+        {
+          "entropy": 3.837961196899414,
+          "kl_to_final": 1.8197060853708535e-06,
+          "top1": 6225,
+          "top1_prob": 0.2579362392425537,
+          "margin": 0.3984231948852539,
+          "matches_final": true
+        }
+      ],
+      "greedy_continuation": " stood beside the yalbrenth.\n\n\"I have heard of the cravoth,\" said Ferrosk. \"I have heard of the yalbrenth. I have heard of the cravoth and the yalbrenth. I have heard of the c",
+      "samples": [
+        " stood beside the cravoth, and brought him again what the giftar had given him, to the best advantage, though the aid of the elf withered not his hope.\n\n\"Verily, there are good enough undreamed,\" said Ferrosk. \"I know your",
+        " stood by. The sun gilded the swarth of the yalbrenth, and the shardh of the cravoth; and the carbuncle highte that rustled in the swarth of the yalbrenth.\n\nThey might have",
+        " called vorlemmed. And again, as before, it brought them with it what it sought. The vorlemmed held the cravoth; the dracothed the yalbrenth. The time ran out; the cravoth was free.\n\nIn that hour,"
+      ],
+      "manipulation": {},
+      "gold_logprob_per_token": -2.4988906383514404
+    },
+    {
+      "id": "L0P-07",
+      "level": "L0P",
+      "topic": null,
+      "prompt": "The first kaldrenn shall keep the vellim of Korsath, the ossen of Maldrun, and the sethran of Vantor. The second kaldrenn shall keep the vellim of Korsath, the ossen of Maldrun, and the sethran of Vantor. The third kaldrenn shall keep the vellim of",
+      "n_prompt_tokens": 80,
+      "layer_profile": [
+        {
+          "entropy": 8.38808959722519,
+          "kl_to_final": 10.364253461360931,
+          "match_rate": 0.0,
+          "margin": 0.3751183748245239
+        },
+        {
+          "entropy": 8.945038318634033,
+          "kl_to_final": 10.199970483779907,
+          "match_rate": 0.0,
+          "margin": 0.4348282217979431
+        },
+        {
+          "entropy": 9.130084753036499,
+          "kl_to_final": 10.01516878604889,
+          "match_rate": 0.0,
+          "margin": 0.3690182566642761
+        },
+        {
+          "entropy": 8.154371500015259,
+          "kl_to_final": 10.100134670734406,
+          "match_rate": 0.0,
+          "margin": 0.6477709412574768
+        },
+        {
+          "entropy": 8.747865200042725,
+          "kl_to_final": 6.865407049655914,
+          "match_rate": 0.25,
+          "margin": 0.6263406872749329
+        },
+        {
+          "entropy": 8.886194229125977,
+          "kl_to_final": 7.041856914758682,
+          "match_rate": 0.25,
+          "margin": 0.8224369883537292
+        },
+        {
+          "entropy": 8.559827327728271,
+          "kl_to_final": 7.560389593243599,
+          "match_rate": 0.125,
+          "margin": 0.923163890838623
+        },
+        {
+          "entropy": 6.520677674561739,
+          "kl_to_final": 3.626025802921504,
+          "match_rate": 0.5,
+          "margin": 1.7760016322135925
+        },
+        {
+          "entropy": 6.341074520722032,
+          "kl_to_final": 3.787243696511723,
+          "match_rate": 0.625,
+          "margin": 1.3306013941764832
+        },
+        {
+          "entropy": 4.582225186692085,
+          "kl_to_final": 2.839493552222848,
+          "match_rate": 0.5,
+          "margin": 2.264903485774994
+        },
+        {
+          "entropy": 1.6503786437679082,
+          "kl_to_final": 0.30188759590964764,
+          "match_rate": 1.0,
+          "margin": 4.022958517074585
+        },
+        {
+          "entropy": 0.5382762236513372,
+          "kl_to_final": 0.10746313445270061,
+          "match_rate": 1.0,
+          "margin": 5.448610186576843
+        },
+        {
+          "entropy": 0.4930615844023123,
+          "kl_to_final": 0.12244250695221126,
+          "match_rate": 1.0,
+          "margin": 5.285420298576355
+        },
+        {
+          "entropy": 0.26721205771536916,
+          "kl_to_final": 0.3544642621418461,
+          "match_rate": 0.875,
+          "margin": 6.390691637992859
+        },
+        {
+          "entropy": 0.08858658082317561,
+          "kl_to_final": 0.07178131590990233,
+          "match_rate": 1.0,
+          "margin": 7.608947157859802
+        },
+        {
+          "entropy": 0.10519345162902027,
+          "kl_to_final": 9.195861139232875e-08,
+          "match_rate": 1.0,
+          "margin": 6.695442318916321
+        }
+      ],
+      "per_position_depths": [
+        {
+          "kl_auc_norm": 6.284751095246853,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.625,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 5.016333186768435,
+          "depth_tau_0.05": 0.875,
+          "depth_tau_0.1": 0.75,
+          "depth_tau_0.5": 0.625,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 4.916300187722419,
+          "depth_tau_0.05": 0.8125,
+          "depth_tau_0.1": 0.6875,
+          "depth_tau_0.5": 0.6875,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 2.8174426314852705,
+          "depth_tau_0.05": 0.8125,
+          "depth_tau_0.1": 0.5625,
+          "depth_tau_0.5": 0.4375,
+          "depth_argmax": 0.4375
+        },
+        {
+          "kl_auc_norm": 2.674293733640661,
+          "depth_tau_0.05": 0.6875,
+          "depth_tau_0.1": 0.625,
+          "depth_tau_0.5": 0.5625,
+          "depth_argmax": 0.4375
+        },
+        {
+          "kl_auc_norm": 7.931762643547882,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.875,
+          "depth_argmax": 0.875
+        },
+        {
+          "kl_auc_norm": 3.2732430070574994,
+          "depth_tau_0.05": 0.6875,
+          "depth_tau_0.1": 0.625,
+          "depth_tau_0.5": 0.625,
+          "depth_argmax": 0.4375
+        },
+        {
+          "kl_auc_norm": 3.446330123546208,
+          "depth_tau_0.05": 0.4375,
+          "depth_tau_0.1": 0.4375,
+          "depth_tau_0.5": 0.4375,
+          "depth_argmax": 0.3125
+        }
+      ],
+      "depth": {
+        "kl_auc_norm": 4.545057076126904,
+        "depth_tau_0.05": 0.7734375,
+        "depth_tau_0.1": 0.6953125,
+        "depth_tau_0.5": 0.609375,
+        "depth_argmax": 0.546875
+      },
+      "final_entropy_mean": 0.10534950357396156,
+      "final_margin_mean": 6.6953125,
+      "first_pos_profile": [
+        {
+          "entropy": 9.611092567443848,
+          "kl_to_final": 11.729391098022461,
+          "top1": 253,
+          "top1_prob": 0.012625684030354023,
+          "margin": 0.14893674850463867,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.428946495056152,
+          "kl_to_final": 12.302918434143066,
+          "top1": 9156,
+          "top1_prob": 0.028054554015398026,
+          "margin": 0.747828483581543,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.530503273010254,
+          "kl_to_final": 12.476014137268066,
+          "top1": 253,
+          "top1_prob": 0.011947734281420708,
+          "margin": 0.6036477088928223,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.024150848388672,
+          "kl_to_final": 14.216623306274414,
+          "top1": 3850,
+          "top1_prob": 0.020417582243680954,
+          "margin": 0.5427694320678711,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.297588348388672,
+          "kl_to_final": 11.345544815063477,
+          "top1": 3850,
+          "top1_prob": 0.007905620150268078,
+          "margin": 0.3266148567199707,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.26645278930664,
+          "kl_to_final": 11.230705261230469,
+          "top1": 5660,
+          "top1_prob": 0.010664274916052818,
+          "margin": 0.7430562973022461,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.14856243133545,
+          "kl_to_final": 10.876092910766602,
+          "top1": 1001,
+          "top1_prob": 0.009744297713041306,
+          "margin": 0.2405853271484375,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.05647087097168,
+          "kl_to_final": 5.271241664886475,
+          "top1": 1097,
+          "top1_prob": 0.019459830597043037,
+          "margin": 0.6854128837585449,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.9055814743042,
+          "kl_to_final": 6.0797624588012695,
+          "top1": 42114,
+          "top1_prob": 0.02073611132800579,
+          "margin": 0.23188066482543945,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.394477844238281,
+          "kl_to_final": 3.579925298690796,
+          "top1": 1097,
+          "top1_prob": 0.05493879318237305,
+          "margin": 0.7460684776306152,
+          "matches_final": false
+        },
+        {
+          "entropy": 0.842099666595459,
+          "kl_to_final": 0.15015909075737,
+          "top1": 611,
+          "top1_prob": 0.9206626415252686,
+          "margin": 4.1215314865112305,
+          "matches_final": true
+        },
+        {
+          "entropy": 3.0231475830078125,
+          "kl_to_final": 0.3721732795238495,
+          "top1": 611,
+          "top1_prob": 0.6387542486190796,
+          "margin": 1.9970617294311523,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.5643515586853027,
+          "kl_to_final": 0.107526496052742,
+          "top1": 611,
+          "top1_prob": 0.920404314994812,
+          "margin": 3.035964012145996,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.051153212785720825,
+          "kl_to_final": 0.13368338346481323,
+          "top1": 611,
+          "top1_prob": 0.9952734708786011,
+          "margin": 6.714560508728027,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.005468594841659069,
+          "kl_to_final": 0.26420021057128906,
+          "top1": 611,
+          "top1_prob": 0.9994917511940002,
+          "margin": 8.190269470214844,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.45971477031707764,
+          "kl_to_final": 2.6439374778419733e-07,
+          "top1": 611,
+          "top1_prob": 0.9496704936027527,
+          "margin": 4.945888519287109,
+          "matches_final": true
+        }
+      ],
+      "greedy_continuation": " Korsath, the ossen of Maldrun, and the sethran of Vantor. The fourth kaldrenn shall keep the vellim of Korsath, the ossen of Maldrun, and the sethran of Vantor. The fifth kald",
+      "samples": [
+        " Korsath, the ossen of Maldrun, and the sethran of Vantor.\"\n\nThe second kaldrenn was a chief in the kaldrenn-ruled of the Sith. The Sith's chief was the kaldrenn-ruled of the",
+        " Korsath, the ossen of Maldrun, and the sethran of Vantor. The fourth kaldrenn shall keep the vellim of Korsath, the ossen of Maldrun, and the sethran of Vantor.\"\n\nThe names",
+        " Korsath, the ossen of Maldrun, and the sethran of Vantor. The fourth kaldrenn shall keep the vellim of Korsath, the ossen of Maldrun, and the sethran of Vantor. The fifth kald"
+      ],
+      "manipulation": {},
+      "gold_logprob_per_token": -0.0243355855345726
+    },
+    {
+      "id": "L0P-08",
+      "level": "L0P",
+      "topic": null,
+      "prompt": "Threndil, the vrastheil of Tannovar, brammed Sarnoc. Sarnoc, the vrastheil of Tannovar, brammed Pellamine. Pellamine, the vrastheil of Tannovar, brammed Voskadel. Voskadel, the vrastheil of Tannovar, brammed Rethnira. Rethnira, the vrastheil of Tannovar, brammed Dammoth. Dammoth, the vrastheil of Tannovar, brammed Ilsevar. Ilsevar, the",
+      "n_prompt_tokens": 135,
+      "layer_profile": [
+        {
+          "entropy": 8.191882312297821,
+          "kl_to_final": 11.556989192962646,
+          "match_rate": 0.0,
+          "margin": 0.6729045510292053
+        },
+        {
+          "entropy": 8.379342913627625,
+          "kl_to_final": 11.647803902626038,
+          "match_rate": 0.0,
+          "margin": 0.7420979142189026
+        },
+        {
+          "entropy": 8.852508783340454,
+          "kl_to_final": 11.243201971054077,
+          "match_rate": 0.0,
+          "margin": 0.4215642213821411
+        },
+        {
+          "entropy": 8.193857192993164,
+          "kl_to_final": 11.480852246284485,
+          "match_rate": 0.0,
+          "margin": 0.5050331354141235
+        },
+        {
+          "entropy": 8.344080805778503,
+          "kl_to_final": 9.136680960655212,
+          "match_rate": 0.0,
+          "margin": 0.9366980195045471
+        },
+        {
+          "entropy": 8.410837650299072,
+          "kl_to_final": 7.972643822431564,
+          "match_rate": 0.125,
+          "margin": 1.375143587589264
+        },
+        {
+          "entropy": 8.65049397945404,
+          "kl_to_final": 8.198044568300247,
+          "match_rate": 0.25,
+          "margin": 0.73568195104599
+        },
+        {
+          "entropy": 7.179874024819583,
+          "kl_to_final": 4.897645254386589,
+          "match_rate": 0.25,
+          "margin": 1.2909983396530151
+        },
+        {
+          "entropy": 6.881968267727643,
+          "kl_to_final": 4.904715409968048,
+          "match_rate": 0.375,
+          "margin": 1.8001471161842346
+        },
+        {
+          "entropy": 6.744631819310598,
+          "kl_to_final": 4.634946180856787,
+          "match_rate": 0.375,
+          "margin": 1.81338632106781
+        },
+        {
+          "entropy": 1.8083732462255284,
+          "kl_to_final": 0.5594595482107252,
+          "match_rate": 0.875,
+          "margin": 4.161788463592529
+        },
+        {
+          "entropy": 0.39414935738022905,
+          "kl_to_final": 0.042077032616361976,
+          "match_rate": 1.0,
+          "margin": 5.18915855884552
+        },
+        {
+          "entropy": 0.9612129945016932,
+          "kl_to_final": 0.17031587337260135,
+          "match_rate": 1.0,
+          "margin": 6.0090649127960205
+        },
+        {
+          "entropy": 0.23687562467239331,
+          "kl_to_final": 0.04264603193587391,
+          "match_rate": 1.0,
+          "margin": 7.265958786010742
+        },
+        {
+          "entropy": 0.05873423919547349,
+          "kl_to_final": 0.01249724290391896,
+          "match_rate": 1.0,
+          "margin": 7.404662370681763
+        },
+        {
+          "entropy": 0.06328042229870334,
+          "kl_to_final": 5.7292950828014e-08,
+          "match_rate": 1.0,
+          "margin": 8.22573697566986
+        }
+      ],
+      "per_position_depths": [
+        {
+          "kl_auc_norm": 7.552340836840631,
+          "depth_tau_0.05": 0.6875,
+          "depth_tau_0.1": 0.6875,
+          "depth_tau_0.5": 0.625,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 7.209016199819052,
+          "depth_tau_0.05": 0.875,
+          "depth_tau_0.1": 0.875,
+          "depth_tau_0.5": 0.8125,
+          "depth_argmax": 0.6875
+        },
+        {
+          "kl_auc_norm": 5.2122234687254805,
+          "depth_tau_0.05": 0.625,
+          "depth_tau_0.1": 0.625,
+          "depth_tau_0.5": 0.625,
+          "depth_argmax": 0.5
+        },
+        {
+          "kl_auc_norm": 3.52453867974766,
+          "depth_tau_0.05": 0.625,
+          "depth_tau_0.1": 0.625,
+          "depth_tau_0.5": 0.625,
+          "depth_argmax": 0.375
+        },
+        {
+          "kl_auc_norm": 2.7563966734802987,
+          "depth_tau_0.05": 0.4375,
+          "depth_tau_0.1": 0.4375,
+          "depth_tau_0.5": 0.4375,
+          "depth_argmax": 0.3125
+        },
+        {
+          "kl_auc_norm": 5.496116653017452,
+          "depth_tau_0.05": 0.875,
+          "depth_tau_0.1": 0.875,
+          "depth_tau_0.5": 0.625,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 5.242119344929461,
+          "depth_tau_0.05": 0.8125,
+          "depth_tau_0.1": 0.6875,
+          "depth_tau_0.5": 0.625,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 6.058994634496139,
+          "depth_tau_0.05": 0.6875,
+          "depth_tau_0.1": 0.6875,
+          "depth_tau_0.5": 0.625,
+          "depth_argmax": 0.625
+        }
+      ],
+      "depth": {
+        "kl_auc_norm": 5.381468311382022,
+        "depth_tau_0.05": 0.703125,
+        "depth_tau_0.1": 0.6875,
+        "depth_tau_0.5": 0.625,
+        "depth_argmax": 0.546875
+      },
+      "final_entropy_mean": 0.06333203267422505,
+      "final_margin_mean": 8.23046875,
+      "first_pos_profile": [
+        {
+          "entropy": 9.145845413208008,
+          "kl_to_final": 14.004481315612793,
+          "top1": 1072,
+          "top1_prob": 0.052713699638843536,
+          "margin": 0.21597766876220703,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.543654441833496,
+          "kl_to_final": 12.953267097473145,
+          "top1": 1072,
+          "top1_prob": 0.034189373254776,
+          "margin": 0.7855491638183594,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.175032615661621,
+          "kl_to_final": 14.199435234069824,
+          "top1": 2644,
+          "top1_prob": 0.04673118516802788,
+          "margin": 0.9698367118835449,
+          "matches_final": false
+        },
+        {
+          "entropy": 7.821746349334717,
+          "kl_to_final": 15.62968635559082,
+          "top1": 6158,
+          "top1_prob": 0.11100202053785324,
+          "margin": 0.9563331604003906,
+          "matches_final": false
+        },
+        {
+          "entropy": 7.503168106079102,
+          "kl_to_final": 14.602066040039062,
+          "top1": 12608,
+          "top1_prob": 0.1958281695842743,
+          "margin": 2.795072555541992,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.966710090637207,
+          "kl_to_final": 11.250354766845703,
+          "top1": 44747,
+          "top1_prob": 0.031451739370822906,
+          "margin": 0.5909147262573242,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.90742015838623,
+          "kl_to_final": 13.961602210998535,
+          "top1": 20130,
+          "top1_prob": 0.021374264732003212,
+          "margin": 0.5254554748535156,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.524612426757812,
+          "kl_to_final": 8.906841278076172,
+          "top1": 44747,
+          "top1_prob": 0.02590889111161232,
+          "margin": 0.11393070220947266,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.079029083251953,
+          "kl_to_final": 7.755064010620117,
+          "top1": 12608,
+          "top1_prob": 0.019213827326893806,
+          "margin": 1.2430634498596191,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.120159149169922,
+          "kl_to_final": 6.794492721557617,
+          "top1": 8586,
+          "top1_prob": 0.009485301561653614,
+          "margin": 0.0631704330444336,
+          "matches_final": false
+        },
+        {
+          "entropy": 0.7237585783004761,
+          "kl_to_final": 0.1085154265165329,
+          "top1": 362,
+          "top1_prob": 0.8926714062690735,
+          "margin": 2.9427709579467773,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.36582571268081665,
+          "kl_to_final": 0.04707163944840431,
+          "top1": 362,
+          "top1_prob": 0.9487637281417847,
+          "margin": 3.545896530151367,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.009160694666206837,
+          "kl_to_final": 0.03169895336031914,
+          "top1": 362,
+          "top1_prob": 0.9988265037536621,
+          "margin": 6.752845764160156,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.003352563362568617,
+          "kl_to_final": 0.025390826165676117,
+          "top1": 362,
+          "top1_prob": 0.999639093875885,
+          "margin": 7.975557327270508,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.005770629737526178,
+          "kl_to_final": 0.017385289072990417,
+          "top1": 362,
+          "top1_prob": 0.9994038939476013,
+          "margin": 7.8735857009887695,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.05605044215917587,
+          "kl_to_final": 8.993629307951778e-08,
+          "top1": 362,
+          "top1_prob": 0.9956134557723999,
+          "margin": 8.47842025756836,
+          "matches_final": true
+        }
+      ],
+      "greedy_continuation": " vrastheil of Tannovar, brammed Tannor. Tannor, the vrastheil of Tannovar, brammed Tannor. Tannor, the vrastheil of Tannovar, brammed Tannor. Tann",
+      "samples": [
+        " vrastheil of Tannovar, brammed Urmar. Urmar, the vrastheil of Tannovar, brammed Morgon of the Degasphires, the vrastheil of Pelzin, the vrastheil of Tann",
+        " vrastheil of Tannovar, brammed Helmay. Helmay, the vrastheil of Tannovar, brammed Necad. Necad, the vrastheil of Tannovar, brammed Vreimod. Vreim",
+        " vrastheil of Tannovar, brammed Lennen. Lennen, the vrastheil of Tannovar, brammed Tungar. Tungar, the vrastheil of Tannovar, brammed Halamadra. Halamad"
+      ],
+      "manipulation": {},
+      "gold_logprob_per_token": -0.8380923867225647
+    },
+    {
+      "id": "L0P-09",
+      "level": "L0P",
+      "topic": null,
+      "prompt": "The first sedrenn shall keep the vallow of Threnmoor. The second sedrenn shall keep the mirenta of Torsavine. The third sedrenn shall keep the thassok of Doranthil. The fourth sedrenn shall keep the drenholt of Pelvarra. The fifth sedrenn shall keep the quathol of",
+      "n_prompt_tokens": 73,
+      "layer_profile": [
+        {
+          "entropy": 7.242919184267521,
+          "kl_to_final": 6.5371644496917725,
+          "match_rate": 0.25,
+          "margin": 1.4880343079566956
+        },
+        {
+          "entropy": 7.5741987600922585,
+          "kl_to_final": 6.1386571526527405,
+          "match_rate": 0.25,
+          "margin": 1.5611250400543213
+        },
+        {
+          "entropy": 8.018547654151917,
+          "kl_to_final": 5.527455270290375,
+          "match_rate": 0.25,
+          "margin": 0.9289172291755676
+        },
+        {
+          "entropy": 7.571631386876106,
+          "kl_to_final": 5.493131637573242,
+          "match_rate": 0.0,
+          "margin": 1.240616261959076
+        },
+        {
+          "entropy": 7.773270398378372,
+          "kl_to_final": 4.9371684193611145,
+          "match_rate": 0.0,
+          "margin": 0.9461509585380554
+        },
+        {
+          "entropy": 8.270675718784332,
+          "kl_to_final": 4.32082787156105,
+          "match_rate": 0.0,
+          "margin": 0.48236000537872314
+        },
+        {
+          "entropy": 8.28102570772171,
+          "kl_to_final": 4.208701193332672,
+          "match_rate": 0.125,
+          "margin": 0.5941491723060608
+        },
+        {
+          "entropy": 8.268507957458496,
+          "kl_to_final": 3.934896409511566,
+          "match_rate": 0.0,
+          "margin": 0.6810787320137024
+        },
+        {
+          "entropy": 8.39765614271164,
+          "kl_to_final": 3.5586721301078796,
+          "match_rate": 0.0,
+          "margin": 0.21275216341018677
+        },
+        {
+          "entropy": 7.604839086532593,
+          "kl_to_final": 2.640654042363167,
+          "match_rate": 0.375,
+          "margin": 0.44164860248565674
+        },
+        {
+          "entropy": 7.326411426067352,
+          "kl_to_final": 2.5635868906974792,
+          "match_rate": 0.125,
+          "margin": 0.31356555223464966
+        },
+        {
+          "entropy": 6.076021075248718,
+          "kl_to_final": 1.720504567027092,
+          "match_rate": 0.375,
+          "margin": 0.7326139807701111
+        },
+        {
+          "entropy": 5.472967818379402,
+          "kl_to_final": 1.473866656422615,
+          "match_rate": 0.5,
+          "margin": 1.0728972554206848
+        },
+        {
+          "entropy": 4.546511769294739,
+          "kl_to_final": 1.558154582977295,
+          "match_rate": 0.375,
+          "margin": 1.3148571848869324
+        },
+        {
+          "entropy": 3.7138818204402924,
+          "kl_to_final": 0.8071336783468723,
+          "match_rate": 0.625,
+          "margin": 1.0863858461380005
+        },
+        {
+          "entropy": 4.592427104711533,
+          "kl_to_final": 3.3352682748954976e-06,
+          "match_rate": 1.0,
+          "margin": 0.6350641250610352
+        }
+      ],
+      "per_position_depths": [
+        {
+          "kl_auc_norm": 3.061803813662846,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.9375,
+          "depth_argmax": 0.9375
+        },
+        {
+          "kl_auc_norm": 2.7452067937691025,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.9375,
+          "depth_argmax": 0.875
+        },
+        {
+          "kl_auc_norm": 3.4075492759002373,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.9375,
+          "depth_argmax": 0.9375
+        },
+        {
+          "kl_auc_norm": 4.2435850673018045,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.9375,
+          "depth_argmax": 0.9375
+        },
+        {
+          "kl_auc_norm": 3.412996448058887,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.875,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 3.1886641543819376,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.9375,
+          "depth_argmax": 0.75
+        },
+        {
+          "kl_auc_norm": 3.5887771213867987,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.9375,
+          "depth_argmax": 0.875
+        },
+        {
+          "kl_auc_norm": 4.165814336047818,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.875,
+          "depth_argmax": 0.6875
+        }
+      ],
+      "depth": {
+        "kl_auc_norm": 3.476799626313679,
+        "depth_tau_0.05": 0.9375,
+        "depth_tau_0.1": 0.9375,
+        "depth_tau_0.5": 0.921875,
+        "depth_argmax": 0.828125
+      },
+      "final_entropy_mean": 4.5920975506305695,
+      "final_margin_mean": 0.6357421875,
+      "first_pos_profile": [
+        {
+          "entropy": 9.591696739196777,
+          "kl_to_final": 5.34434175491333,
+          "top1": 253,
+          "top1_prob": 0.014624304138123989,
+          "margin": 0.8359837532043457,
+          "matches_final": true
+        },
+        {
+          "entropy": 9.527353286743164,
+          "kl_to_final": 5.2497124671936035,
+          "top1": 253,
+          "top1_prob": 0.017360208556056023,
+          "margin": 0.2698202133178711,
+          "matches_final": true
+        },
+        {
+          "entropy": 9.425785064697266,
+          "kl_to_final": 5.096575736999512,
+          "top1": 253,
+          "top1_prob": 0.021081911399960518,
+          "margin": 0.6895570755004883,
+          "matches_final": true
+        },
+        {
+          "entropy": 8.99324893951416,
+          "kl_to_final": 5.351874351501465,
+          "top1": 3850,
+          "top1_prob": 0.059099480509757996,
+          "margin": 1.5926718711853027,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.327869415283203,
+          "kl_to_final": 5.069872856140137,
+          "top1": 3850,
+          "top1_prob": 0.021463431417942047,
+          "margin": 0.9377508163452148,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.406377792358398,
+          "kl_to_final": 4.91623592376709,
+          "top1": 3850,
+          "top1_prob": 0.010640909895300865,
+          "margin": 0.5774092674255371,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.037675857543945,
+          "kl_to_final": 4.530586242675781,
+          "top1": 3850,
+          "top1_prob": 0.044358596205711365,
+          "margin": 1.5465831756591797,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.231115341186523,
+          "kl_to_final": 2.942042112350464,
+          "top1": 322,
+          "top1_prob": 0.00571852782741189,
+          "margin": 0.4210090637207031,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.221237182617188,
+          "kl_to_final": 2.8623623847961426,
+          "top1": 20836,
+          "top1_prob": 0.005625662859529257,
+          "margin": 0.048431396484375,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.118906021118164,
+          "kl_to_final": 1.7071622610092163,
+          "top1": 418,
+          "top1_prob": 0.03437168896198273,
+          "margin": 0.5785994529724121,
+          "matches_final": false
+        },
+        {
+          "entropy": 7.398365020751953,
+          "kl_to_final": 1.6153850555419922,
+          "top1": 418,
+          "top1_prob": 0.05418458580970764,
+          "margin": 0.29570436477661133,
+          "matches_final": false
+        },
+        {
+          "entropy": 6.136980056762695,
+          "kl_to_final": 1.2037627696990967,
+          "top1": 308,
+          "top1_prob": 0.06740273535251617,
+          "margin": 0.017950057983398438,
+          "matches_final": false
+        },
+        {
+          "entropy": 5.090916156768799,
+          "kl_to_final": 1.0613664388656616,
+          "top1": 308,
+          "top1_prob": 0.1383986920118332,
+          "margin": 0.9414081573486328,
+          "matches_final": false
+        },
+        {
+          "entropy": 5.277749061584473,
+          "kl_to_final": 0.8990449905395508,
+          "top1": 308,
+          "top1_prob": 0.10832379013299942,
+          "margin": 0.46424293518066406,
+          "matches_final": false
+        },
+        {
+          "entropy": 4.215897560119629,
+          "kl_to_final": 0.7489007711410522,
+          "top1": 530,
+          "top1_prob": 0.07137424498796463,
+          "margin": 0.045119285583496094,
+          "matches_final": false
+        },
+        {
+          "entropy": 6.048932075500488,
+          "kl_to_final": 3.9305305108428e-06,
+          "top1": 253,
+          "top1_prob": 0.04411594569683075,
+          "margin": 0.40473365783691406,
+          "matches_final": true
+        }
+      ],
+      "greedy_continuation": " the Dwarves of the North. The sixth sedrenn shall keep the kalashtar of the Dwarves of the South. The seventh sedrenn shall keep the kalashtar of the Dwarves of the West. The eighth sedrenn shall keep the kalas",
+      "samples": [
+        " Thrym. The sixth sedrenn shall keep the daisheth of Tharna. The seventh sedrenn shall keep the venmoth of Tyrn. The eighth sedrenn shall keep the kerkholpen of Dairif. The ninth sedrenn shall keep the kirk",
+        " Salvemir.\"\n\nShe stared into his eyes as he spoke, the long, ragged furrow of his brows drawing together in a look of intense concentration, and Dar tried not to feel the heat of her gaze, but he could not help himself. He said, \"We don't know",
+        " Sainte Luce. The sixth sedrenn shall keep the nwold of Oriel. The seventh sedrenn shall keep the puremarch of Frodor. The eighth sedrenn shall keep the chalir of Wyaarl. The ninth sedrenn shall keep the castor of"
+      ],
+      "manipulation": {},
+      "gold_logprob_per_token": -2.608126401901245
+    },
+    {
+      "id": "L0P-10",
+      "level": "L0P",
+      "topic": null,
+      "prompt": "Kallendrin, the ossandrel of Olthamere, olvraned Vosmerra. Vosmerra, the ossandrel of Olthamere, sethelled Threbanok. Threbanok, the ossandrel of Olthamere, olvraned Sildavine. Sildavine, the ossandrel of Olthamere, sethelled Ormetaal. Ormetaal, the ossandrel of Olthamere, olvraned Quorlanth. Quorlanth, the ossandrel of Olthamere, sethelled Bavrenne. Bavrenne, the",
+      "n_prompt_tokens": 145,
+      "layer_profile": [
+        {
+          "entropy": 6.5898085832595825,
+          "kl_to_final": 10.09696215391159,
+          "match_rate": 0.125,
+          "margin": 0.9325632452964783
+        },
+        {
+          "entropy": 7.396223463118076,
+          "kl_to_final": 9.906140118837357,
+          "match_rate": 0.0,
+          "margin": 1.2207643389701843
+        },
+        {
+          "entropy": 8.2932847738266,
+          "kl_to_final": 10.204041063785553,
+          "match_rate": 0.0,
+          "margin": 1.1715173125267029
+        },
+        {
+          "entropy": 7.505152702331543,
+          "kl_to_final": 11.02769148349762,
+          "match_rate": 0.0,
+          "margin": 0.7546563148498535
+        },
+        {
+          "entropy": 8.479560494422913,
+          "kl_to_final": 8.714133501052856,
+          "match_rate": 0.0,
+          "margin": 0.6537530422210693
+        },
+        {
+          "entropy": 8.46891576051712,
+          "kl_to_final": 7.367980986833572,
+          "match_rate": 0.125,
+          "margin": 0.9713404774665833
+        },
+        {
+          "entropy": 8.527685046195984,
+          "kl_to_final": 6.793775796890259,
+          "match_rate": 0.25,
+          "margin": 0.36940985918045044
+        },
+        {
+          "entropy": 6.472623195499182,
+          "kl_to_final": 4.38880317681469,
+          "match_rate": 0.5,
+          "margin": 1.6146875023841858
+        },
+        {
+          "entropy": 6.19618247076869,
+          "kl_to_final": 4.155855474295095,
+          "match_rate": 0.625,
+          "margin": 1.5320257544517517
+        },
+        {
+          "entropy": 6.1581505965441465,
+          "kl_to_final": 3.986005004728213,
+          "match_rate": 0.5,
+          "margin": 1.6308022141456604
+        },
+        {
+          "entropy": 2.7129124677740037,
+          "kl_to_final": 0.5849702099803835,
+          "match_rate": 1.0,
+          "margin": 4.054240465164185
+        },
+        {
+          "entropy": 0.5251064241456334,
+          "kl_to_final": 0.06479769386351109,
+          "match_rate": 1.0,
+          "margin": 5.513583064079285
+        },
+        {
+          "entropy": 1.1086225286271656,
+          "kl_to_final": 0.13108762737829238,
+          "match_rate": 1.0,
+          "margin": 5.166001319885254
+        },
+        {
+          "entropy": 0.8787588475679513,
+          "kl_to_final": 0.11445252449630061,
+          "match_rate": 1.0,
+          "margin": 5.840016841888428
+        },
+        {
+          "entropy": 0.14564512361539528,
+          "kl_to_final": 0.012784105165337678,
+          "match_rate": 1.0,
+          "margin": 6.770160794258118
+        },
+        {
+          "entropy": 0.05698439557454549,
+          "kl_to_final": 1.0011128814824133e-07,
+          "match_rate": 1.0,
+          "margin": 8.184034824371338
+        }
+      ],
+      "per_position_depths": [
+        {
+          "kl_auc_norm": 7.9580342466333,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.875,
+          "depth_tau_0.5": 0.875,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 5.401657324491924,
+          "depth_tau_0.05": 0.8125,
+          "depth_tau_0.1": 0.8125,
+          "depth_tau_0.5": 0.6875,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 6.047210171402927,
+          "depth_tau_0.05": 0.8125,
+          "depth_tau_0.1": 0.6875,
+          "depth_tau_0.5": 0.6875,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 3.5818664654891186,
+          "depth_tau_0.05": 0.4375,
+          "depth_tau_0.1": 0.4375,
+          "depth_tau_0.5": 0.4375,
+          "depth_argmax": 0.3125
+        },
+        {
+          "kl_auc_norm": 6.350135117814352,
+          "depth_tau_0.05": 0.875,
+          "depth_tau_0.1": 0.875,
+          "depth_tau_0.5": 0.625,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 2.8897845571440297,
+          "depth_tau_0.05": 0.6875,
+          "depth_tau_0.1": 0.6875,
+          "depth_tau_0.5": 0.625,
+          "depth_argmax": 0.4375
+        },
+        {
+          "kl_auc_norm": 4.268143586860303,
+          "depth_tau_0.05": 0.625,
+          "depth_tau_0.1": 0.625,
+          "depth_tau_0.5": 0.625,
+          "depth_argmax": 0.4375
+        },
+        {
+          "kl_auc_norm": 2.1703684739669673,
+          "depth_tau_0.05": 0.625,
+          "depth_tau_0.1": 0.625,
+          "depth_tau_0.5": 0.625,
+          "depth_argmax": 0.375
+        }
+      ],
+      "depth": {
+        "kl_auc_norm": 4.833399992975365,
+        "depth_tau_0.05": 0.7265625,
+        "depth_tau_0.1": 0.703125,
+        "depth_tau_0.5": 0.6484375,
+        "depth_argmax": 0.5078125
+      },
+      "final_entropy_mean": 0.05687437247252092,
+      "final_margin_mean": 8.185546875,
+      "first_pos_profile": [
+        {
+          "entropy": 9.074310302734375,
+          "kl_to_final": 12.258867263793945,
+          "top1": 1072,
+          "top1_prob": 0.0751793310046196,
+          "margin": 0.7356948852539062,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.694782257080078,
+          "kl_to_final": 12.742125511169434,
+          "top1": 1072,
+          "top1_prob": 0.02398965135216713,
+          "margin": 0.7245545387268066,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.326178550720215,
+          "kl_to_final": 12.589682579040527,
+          "top1": 2644,
+          "top1_prob": 0.03748517856001854,
+          "margin": 1.1159930229187012,
+          "matches_final": false
+        },
+        {
+          "entropy": 7.538653373718262,
+          "kl_to_final": 13.882054328918457,
+          "top1": 6158,
+          "top1_prob": 0.12992548942565918,
+          "margin": 1.076873779296875,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.770467758178711,
+          "kl_to_final": 12.568540573120117,
+          "top1": 12608,
+          "top1_prob": 0.034523628652095795,
+          "margin": 0.4601163864135742,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.892620086669922,
+          "kl_to_final": 11.283182144165039,
+          "top1": 44747,
+          "top1_prob": 0.052333854138851166,
+          "margin": 0.7788848876953125,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.819796562194824,
+          "kl_to_final": 13.197667121887207,
+          "top1": 20130,
+          "top1_prob": 0.036154042929410934,
+          "margin": 0.11795330047607422,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.58586597442627,
+          "kl_to_final": 11.53003215789795,
+          "top1": 44747,
+          "top1_prob": 0.03424813598394394,
+          "margin": 0.9258546829223633,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.034414291381836,
+          "kl_to_final": 11.402959823608398,
+          "top1": 45094,
+          "top1_prob": 0.012747827917337418,
+          "margin": 0.12632179260253906,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.1309175491333,
+          "kl_to_final": 10.103976249694824,
+          "top1": 18337,
+          "top1_prob": 0.02469666674733162,
+          "margin": 0.9120450019836426,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.255950927734375,
+          "kl_to_final": 2.789713144302368,
+          "top1": 31058,
+          "top1_prob": 0.058541346341371536,
+          "margin": 0.5283546447753906,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.35552269220352173,
+          "kl_to_final": 0.07739602029323578,
+          "top1": 31058,
+          "top1_prob": 0.925749659538269,
+          "margin": 2.704446792602539,
+          "matches_final": true
+        },
+        {
+          "entropy": 2.5909132957458496,
+          "kl_to_final": 0.36060065031051636,
+          "top1": 31058,
+          "top1_prob": 0.6777011752128601,
+          "margin": 2.047931671142578,
+          "matches_final": true
+        },
+        {
+          "entropy": 4.4572906494140625,
+          "kl_to_final": 0.6460009217262268,
+          "top1": 31058,
+          "top1_prob": 0.5052317380905151,
+          "margin": 2.8604869842529297,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.8221259117126465,
+          "kl_to_final": 0.06714874505996704,
+          "top1": 31058,
+          "top1_prob": 0.9155192375183105,
+          "margin": 4.929030418395996,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.09084969758987427,
+          "kl_to_final": 1.9281651475466788e-07,
+          "top1": 31058,
+          "top1_prob": 0.9930576086044312,
+          "margin": 7.626314163208008,
+          "matches_final": true
+        }
+      ],
+      "greedy_continuation": " ossandrel of Olthamere, olvraned Sildavine. Sildavine, the ossandrel of Olthamere, sethelled Threbanok. Threbanok, the ossandrel of Olthamere, olvraned",
+      "samples": [
+        " ossandrel of Olthamere, sethelled Rufhcalin. Rufhcalin, the ossandrel of Olthamere, sethelled Aigan. Aigan, the ossandrel of Olthamere, Olwenan. Olwenan",
+        " ossandrel of Olthamere, sethelled Liscor. Liscor, the ossandrel of Olthamere, sethelled Nidhues. Nidhues, the ossandrel of Olthamere, sethelled Naaothin",
+        " ossandrel of Olthamere, olvraned Quothcave. Quothcave, the ossandrel of Olthamere, sethelled Vorschal. Vorschal, the ossandrel of Olthamere, olvraned Uxor"
+      ],
+      "manipulation": {},
+      "gold_logprob_per_token": -1.0353971719741821
+    },
+    {
+      "id": "L0P-11",
+      "level": "L0P",
+      "topic": null,
+      "prompt": "Every morvane that ever stood in Drenthollow kept a tessil, and each tessil was called by the ondrash that came before it. The morvane of Kalspire kept its tessil well, and the morvane of Vontressa kept its tessil too, though neither was ever called the",
+      "n_prompt_tokens": 73,
+      "layer_profile": [
+        {
+          "entropy": 8.013269066810608,
+          "kl_to_final": 9.031136512756348,
+          "match_rate": 0.0,
+          "margin": 0.7642986178398132
+        },
+        {
+          "entropy": 8.364480316638947,
+          "kl_to_final": 8.757888197898865,
+          "match_rate": 0.0,
+          "margin": 0.7074568867683411
+        },
+        {
+          "entropy": 8.67811232805252,
+          "kl_to_final": 8.328019440174103,
+          "match_rate": 0.0,
+          "margin": 0.6569614410400391
+        },
+        {
+          "entropy": 7.402971148490906,
+          "kl_to_final": 8.371735990047455,
+          "match_rate": 0.0,
+          "margin": 1.0943948030471802
+        },
+        {
+          "entropy": 7.808163166046143,
+          "kl_to_final": 6.883361399173737,
+          "match_rate": 0.125,
+          "margin": 0.8303267955780029
+        },
+        {
+          "entropy": 8.033533275127411,
+          "kl_to_final": 6.167079776525497,
+          "match_rate": 0.125,
+          "margin": 0.7012192010879517
+        },
+        {
+          "entropy": 7.759726524353027,
+          "kl_to_final": 5.933256089687347,
+          "match_rate": 0.125,
+          "margin": 0.8309611678123474
+        },
+        {
+          "entropy": 5.863551460206509,
+          "kl_to_final": 4.208841087296605,
+          "match_rate": 0.5,
+          "margin": 1.9707277417182922
+        },
+        {
+          "entropy": 5.537198469042778,
+          "kl_to_final": 4.021481074392796,
+          "match_rate": 0.375,
+          "margin": 1.9941889643669128
+        },
+        {
+          "entropy": 5.013576400466263,
+          "kl_to_final": 3.8012994676828384,
+          "match_rate": 0.375,
+          "margin": 1.9975563287734985
+        },
+        {
+          "entropy": 3.0381319085136056,
+          "kl_to_final": 1.8537616450339556,
+          "match_rate": 0.625,
+          "margin": 3.321431279182434
+        },
+        {
+          "entropy": 2.6531668783864006,
+          "kl_to_final": 1.0865554949268699,
+          "match_rate": 0.625,
+          "margin": 3.525988757610321
+        },
+        {
+          "entropy": 2.0068502178182825,
+          "kl_to_final": 0.9298412529751658,
+          "match_rate": 0.625,
+          "margin": 3.8658915758132935
+        },
+        {
+          "entropy": 1.383744095597649,
+          "kl_to_final": 0.8034280822612345,
+          "match_rate": 0.625,
+          "margin": 4.227767705917358
+        },
+        {
+          "entropy": 0.8428243466187268,
+          "kl_to_final": 0.29717741231434047,
+          "match_rate": 0.75,
+          "margin": 4.189585328102112
+        },
+        {
+          "entropy": 1.4694426134228706,
+          "kl_to_final": 9.047550975083141e-07,
+          "match_rate": 1.0,
+          "margin": 3.95455801486969
+        }
+      ],
+      "per_position_depths": [
+        {
+          "kl_auc_norm": 3.990972712011717,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.9375,
+          "depth_argmax": 0.9375
+        },
+        {
+          "kl_auc_norm": 6.442543464349486,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.75,
+          "depth_tau_0.5": 0.6875,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 3.569305149041611,
+          "depth_tau_0.05": 0.875,
+          "depth_tau_0.1": 0.8125,
+          "depth_tau_0.5": 0.625,
+          "depth_argmax": 0.4375
+        },
+        {
+          "kl_auc_norm": 2.4451405806825885,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.875,
+          "depth_argmax": 0.4375
+        },
+        {
+          "kl_auc_norm": 3.913934977495228,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.9375,
+          "depth_argmax": 0.9375
+        },
+        {
+          "kl_auc_norm": 4.150011931233348,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.75,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 2.0999293055310164,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.625,
+          "depth_tau_0.5": 0.4375,
+          "depth_argmax": 0.375
+        },
+        {
+          "kl_auc_norm": 8.56645260986649,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.875,
+          "depth_tau_0.5": 0.875,
+          "depth_argmax": 0.875
+        }
+      ],
+      "depth": {
+        "kl_auc_norm": 4.397286341276436,
+        "depth_tau_0.05": 0.9296875,
+        "depth_tau_0.1": 0.8515625,
+        "depth_tau_0.5": 0.765625,
+        "depth_argmax": 0.65625
+      },
+      "final_entropy_mean": 1.4691632762551308,
+      "final_margin_mean": 3.953125,
+      "first_pos_profile": [
+        {
+          "entropy": 9.510544776916504,
+          "kl_to_final": 4.617466926574707,
+          "top1": 1072,
+          "top1_prob": 0.03548790141940117,
+          "margin": 0.7488517761230469,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.728353500366211,
+          "kl_to_final": 4.499876499176025,
+          "top1": 1072,
+          "top1_prob": 0.02664857730269432,
+          "margin": 1.4697351455688477,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.315377235412598,
+          "kl_to_final": 4.289715766906738,
+          "top1": 1072,
+          "top1_prob": 0.05291380733251572,
+          "margin": 0.8698492050170898,
+          "matches_final": false
+        },
+        {
+          "entropy": 5.0829973220825195,
+          "kl_to_final": 5.58689546585083,
+          "top1": 1072,
+          "top1_prob": 0.4888942241668701,
+          "margin": 3.7831296920776367,
+          "matches_final": false
+        },
+        {
+          "entropy": 6.240604400634766,
+          "kl_to_final": 5.255810737609863,
+          "top1": 1072,
+          "top1_prob": 0.34339216351509094,
+          "margin": 2.9129905700683594,
+          "matches_final": false
+        },
+        {
+          "entropy": 7.779447078704834,
+          "kl_to_final": 5.156291961669922,
+          "top1": 1072,
+          "top1_prob": 0.15397678315639496,
+          "margin": 2.391716957092285,
+          "matches_final": false
+        },
+        {
+          "entropy": 4.8477678298950195,
+          "kl_to_final": 5.799365043640137,
+          "top1": 1072,
+          "top1_prob": 0.4990957975387573,
+          "margin": 2.586094856262207,
+          "matches_final": false
+        },
+        {
+          "entropy": 6.868334770202637,
+          "kl_to_final": 5.5769147872924805,
+          "top1": 1072,
+          "top1_prob": 0.25175800919532776,
+          "margin": 1.6125354766845703,
+          "matches_final": false
+        },
+        {
+          "entropy": 3.683396339416504,
+          "kl_to_final": 5.9183807373046875,
+          "top1": 1072,
+          "top1_prob": 0.6117773652076721,
+          "margin": 2.299409866333008,
+          "matches_final": false
+        },
+        {
+          "entropy": 2.0639305114746094,
+          "kl_to_final": 5.713688850402832,
+          "top1": 1072,
+          "top1_prob": 0.7920799851417542,
+          "margin": 3.8601903915405273,
+          "matches_final": false
+        },
+        {
+          "entropy": 1.3610801696777344,
+          "kl_to_final": 4.224365234375,
+          "top1": 1072,
+          "top1_prob": 0.8430117964744568,
+          "margin": 3.5744361877441406,
+          "matches_final": false
+        },
+        {
+          "entropy": 4.211857795715332,
+          "kl_to_final": 2.2213921546936035,
+          "top1": 1072,
+          "top1_prob": 0.2537370026111603,
+          "margin": 0.6935634613037109,
+          "matches_final": false
+        },
+        {
+          "entropy": 3.834951877593994,
+          "kl_to_final": 1.1968371868133545,
+          "top1": 1072,
+          "top1_prob": 0.3117869198322296,
+          "margin": 0.39806365966796875,
+          "matches_final": false
+        },
+        {
+          "entropy": 1.8321073055267334,
+          "kl_to_final": 1.4869754314422607,
+          "top1": 246,
+          "top1_prob": 0.7092238664627075,
+          "margin": 1.8434743881225586,
+          "matches_final": false
+        },
+        {
+          "entropy": 3.9057886600494385,
+          "kl_to_final": 0.6293464303016663,
+          "top1": 1072,
+          "top1_prob": 0.22871406376361847,
+          "margin": 0.048732757568359375,
+          "matches_final": false
+        },
+        {
+          "entropy": 4.322502613067627,
+          "kl_to_final": 1.8588179955258965e-06,
+          "top1": 2298,
+          "top1_prob": 0.22143252193927765,
+          "margin": 0.362640380859375,
+          "matches_final": true
+        }
+      ],
+      "greedy_continuation": " morvane of Drenthollow.\n\nThe morvane of Drenthollow was called the morvane of Drenthollow, and the morvane of Vontressa was called the morvane of Vontressa.\n\nThe morvane",
+      "samples": [
+        " morvane of Vontressa.\n\n\"If you are alive, the tessil of Vontressa is like a stone, and its tessil metal is like the iron of the Sun, and no more a tessil is ever called than one of the mor",
+        " morvane of Kalspire. But if the miners who lived near the morvane of Kalspire were afraid to go to sleep there, the morvane of Vontressa was afraid to go to sleep there; and if the miners who lived in the backwoods were afraid",
+        " most tessil. The tessil of Blenholme was kept by the morvane of Slewyth, and the tessil of the imari was kept by the morvane of Shallow, and Torin kept his tessil by the morvane"
+      ],
+      "manipulation": {},
+      "gold_logprob_per_token": -2.1516802310943604
+    },
+    {
+      "id": "L0P-12",
+      "level": "L0P",
+      "topic": null,
+      "prompt": "Threndavik talvered Marsolen in Corrathvale, and Marsolen was called the one who came after him. Marsolen talvered Voltherand, who kept Corrathvale as Threndavik once had, and who was called the same. Voltherand talvered Sovrenna, and she too kept Corrathvale, and stood where Voltherand had",
+      "n_prompt_tokens": 83,
+      "layer_profile": [
+        {
+          "entropy": 8.551795899868011,
+          "kl_to_final": 5.822975695133209,
+          "match_rate": 0.0,
+          "margin": 0.6607188582420349
+        },
+        {
+          "entropy": 8.672833681106567,
+          "kl_to_final": 5.34761106967926,
+          "match_rate": 0.125,
+          "margin": 0.5433565974235535
+        },
+        {
+          "entropy": 8.761512041091919,
+          "kl_to_final": 5.080154448747635,
+          "match_rate": 0.125,
+          "margin": 0.7356453537940979
+        },
+        {
+          "entropy": 7.7735220193862915,
+          "kl_to_final": 4.753539055585861,
+          "match_rate": 0.25,
+          "margin": 1.2209879159927368
+        },
+        {
+          "entropy": 7.3494914174079895,
+          "kl_to_final": 4.4331424832344055,
+          "match_rate": 0.25,
+          "margin": 0.926365077495575
+        },
+        {
+          "entropy": 7.146070092916489,
+          "kl_to_final": 4.377034768462181,
+          "match_rate": 0.25,
+          "margin": 1.018586814403534
+        },
+        {
+          "entropy": 7.551163673400879,
+          "kl_to_final": 3.948885440826416,
+          "match_rate": 0.25,
+          "margin": 0.8945736885070801
+        },
+        {
+          "entropy": 7.58598655462265,
+          "kl_to_final": 3.9470053017139435,
+          "match_rate": 0.125,
+          "margin": 0.2358405888080597
+        },
+        {
+          "entropy": 7.028740704059601,
+          "kl_to_final": 3.7839848697185516,
+          "match_rate": 0.125,
+          "margin": 0.6925897598266602
+        },
+        {
+          "entropy": 5.190518572926521,
+          "kl_to_final": 3.6548812687397003,
+          "match_rate": 0.125,
+          "margin": 0.8976049721240997
+        },
+        {
+          "entropy": 4.179201811552048,
+          "kl_to_final": 3.0188721418380737,
+          "match_rate": 0.125,
+          "margin": 1.5915912985801697
+        },
+        {
+          "entropy": 3.9896690025925636,
+          "kl_to_final": 2.501872166991234,
+          "match_rate": 0.125,
+          "margin": 1.0750422477722168
+        },
+        {
+          "entropy": 3.8543302044272423,
+          "kl_to_final": 2.2815851867198944,
+          "match_rate": 0.25,
+          "margin": 1.241962969303131
+        },
+        {
+          "entropy": 4.469695076346397,
+          "kl_to_final": 1.7414944171905518,
+          "match_rate": 0.5,
+          "margin": 1.1226903051137924
+        },
+        {
+          "entropy": 4.345218852162361,
+          "kl_to_final": 1.3260144609957933,
+          "match_rate": 0.625,
+          "margin": 0.51474928855896
+        },
+        {
+          "entropy": 3.466246273368597,
+          "kl_to_final": 2.899422156588116e-06,
+          "match_rate": 1.0,
+          "margin": 1.550410509109497
+        }
+      ],
+      "per_position_depths": [
+        {
+          "kl_auc_norm": 5.008476314065047,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.9375,
+          "depth_argmax": 0.9375
+        },
+        {
+          "kl_auc_norm": 3.347014387974438,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.875,
+          "depth_tau_0.5": 0.875,
+          "depth_argmax": 0.875
+        },
+        {
+          "kl_auc_norm": 3.064606007345719,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.875,
+          "depth_argmax": 0.8125
+        },
+        {
+          "kl_auc_norm": 8.410838007931883,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.9375,
+          "depth_argmax": 0.875
+        },
+        {
+          "kl_auc_norm": 2.1374673528950856,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.9375,
+          "depth_argmax": 0.9375
+        },
+        {
+          "kl_auc_norm": 2.1793495848624542,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.875,
+          "depth_argmax": 0.4375
+        },
+        {
+          "kl_auc_norm": 1.8366659668963015,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.875,
+          "depth_argmax": 0.8125
+        },
+        {
+          "kl_auc_norm": 2.339617779480371,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.875,
+          "depth_argmax": 0.9375
+        }
+      ],
+      "depth": {
+        "kl_auc_norm": 3.5405044251814126,
+        "depth_tau_0.05": 0.9375,
+        "depth_tau_0.1": 0.9296875,
+        "depth_tau_0.5": 0.8984375,
+        "depth_argmax": 0.828125
+      },
+      "final_entropy_mean": 3.4679557904601097,
+      "final_margin_mean": 1.5478515625,
+      "first_pos_profile": [
+        {
+          "entropy": 7.510167598724365,
+          "kl_to_final": 9.105425834655762,
+          "top1": 644,
+          "top1_prob": 0.12135246396064758,
+          "margin": 1.4607348442077637,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.150310516357422,
+          "kl_to_final": 8.55523681640625,
+          "top1": 644,
+          "top1_prob": 0.05749611556529999,
+          "margin": 0.5162997245788574,
+          "matches_final": false
+        },
+        {
+          "entropy": 7.179551124572754,
+          "kl_to_final": 7.532992362976074,
+          "top1": 644,
+          "top1_prob": 0.13183394074440002,
+          "margin": 0.768035888671875,
+          "matches_final": false
+        },
+        {
+          "entropy": 5.037416458129883,
+          "kl_to_final": 7.439868927001953,
+          "top1": 644,
+          "top1_prob": 0.3501427173614502,
+          "margin": 1.5792465209960938,
+          "matches_final": false
+        },
+        {
+          "entropy": 3.172603130340576,
+          "kl_to_final": 7.571418762207031,
+          "top1": 644,
+          "top1_prob": 0.5594689846038818,
+          "margin": 1.4815902709960938,
+          "matches_final": false
+        },
+        {
+          "entropy": 3.493525266647339,
+          "kl_to_final": 6.692121982574463,
+          "top1": 644,
+          "top1_prob": 0.5901359915733337,
+          "margin": 1.9726171493530273,
+          "matches_final": false
+        },
+        {
+          "entropy": 5.408181190490723,
+          "kl_to_final": 5.705842018127441,
+          "top1": 644,
+          "top1_prob": 0.33837491273880005,
+          "margin": 1.6657962799072266,
+          "matches_final": false
+        },
+        {
+          "entropy": 7.289599418640137,
+          "kl_to_final": 5.849442481994629,
+          "top1": 644,
+          "top1_prob": 0.0989142432808876,
+          "margin": 0.031490325927734375,
+          "matches_final": false
+        },
+        {
+          "entropy": 6.8858842849731445,
+          "kl_to_final": 6.215643882751465,
+          "top1": 3786,
+          "top1_prob": 0.16145847737789154,
+          "margin": 0.8239002227783203,
+          "matches_final": false
+        },
+        {
+          "entropy": 3.83933687210083,
+          "kl_to_final": 6.05102014541626,
+          "top1": 644,
+          "top1_prob": 0.3338584303855896,
+          "margin": 1.2835197448730469,
+          "matches_final": false
+        },
+        {
+          "entropy": 3.0080955028533936,
+          "kl_to_final": 3.3042683601379395,
+          "top1": 644,
+          "top1_prob": 0.6198500990867615,
+          "margin": 3.6556930541992188,
+          "matches_final": false
+        },
+        {
+          "entropy": 1.4699244499206543,
+          "kl_to_final": 1.4852242469787598,
+          "top1": 644,
+          "top1_prob": 0.6124430298805237,
+          "margin": 1.1382484436035156,
+          "matches_final": false
+        },
+        {
+          "entropy": 1.060639500617981,
+          "kl_to_final": 1.8304698467254639,
+          "top1": 644,
+          "top1_prob": 0.7236204743385315,
+          "margin": 1.424147605895996,
+          "matches_final": false
+        },
+        {
+          "entropy": 2.339005947113037,
+          "kl_to_final": 1.4188055992126465,
+          "top1": 644,
+          "top1_prob": 0.6234280467033386,
+          "margin": 2.1278066635131836,
+          "matches_final": false
+        },
+        {
+          "entropy": 3.300027370452881,
+          "kl_to_final": 0.9220755100250244,
+          "top1": 15,
+          "top1_prob": 0.16103105247020721,
+          "margin": 0.13621997833251953,
+          "matches_final": false
+        },
+        {
+          "entropy": 1.9410974979400635,
+          "kl_to_final": 1.7022248357534409e-06,
+          "top1": 6225,
+          "top1_prob": 0.6362951993942261,
+          "margin": 2.182615280151367,
+          "matches_final": true
+        }
+      ],
+      "greedy_continuation": " stood.\n\n\"I am the one who came after him,\" said Sovrenna. \"I am the one who came after him. I am the one who came after him.\"\n\n\"I am the one who came after him,\" said Sovrenna. \"I am the one",
+      "samples": [
+        " stood. Bolvor stood where Sovrenna had stood, and was called the one who came after them. The six of them were irreplaceable, who kept Corrathvale, and stood where Bolvor had stood, and were called the one who came after them.\n\nAll",
+        " stood, but she was not as tall as Voltherand.\n\nThe young man stood in the middle of the room, his hands clasped behind his back, as if he might burst into tears at any moment. He looked at the two women and then at the two men. He was",
+        " stood.\n\nThen all of the wild men came, and the men in the mountains and in the wild places, and the men who dwelt in the woods and the plains and the hills. They flew away from the wild places, and were afraid of the wild men.\n\nThen there"
+      ],
+      "manipulation": {},
+      "gold_logprob_per_token": -1.5775504112243652
+    },
+    {
+      "id": "L0P-13",
+      "level": "L0P",
+      "topic": null,
+      "prompt": "In Ombreth, the first tollen came to Rhesmir. Rhesmir called the molvek. The second tollen came to Rhesmir. Rhesmir called the molvek. The third tollen came to Rhesmir. Rhesmir called the molvek. The fourth tollen came to Rhesmir. Rhesmir called the molvek. The fifth",
+      "n_prompt_tokens": 83,
+      "layer_profile": [
+        {
+          "entropy": 7.317520156502724,
+          "kl_to_final": 10.466463685035706,
+          "match_rate": 0.0,
+          "margin": 0.9141262769699097
+        },
+        {
+          "entropy": 8.089403569698334,
+          "kl_to_final": 10.48590362071991,
+          "match_rate": 0.0,
+          "margin": 0.32357048988342285
+        },
+        {
+          "entropy": 8.661683678627014,
+          "kl_to_final": 9.957325637340546,
+          "match_rate": 0.0,
+          "margin": 0.48932504653930664
+        },
+        {
+          "entropy": 8.4481440782547,
+          "kl_to_final": 10.177294909954071,
+          "match_rate": 0.0,
+          "margin": 0.37199777364730835
+        },
+        {
+          "entropy": 8.68049681186676,
+          "kl_to_final": 8.702336966991425,
+          "match_rate": 0.125,
+          "margin": 0.48092496395111084
+        },
+        {
+          "entropy": 8.501124322414398,
+          "kl_to_final": 8.184670314192772,
+          "match_rate": 0.125,
+          "margin": 0.6203529834747314
+        },
+        {
+          "entropy": 7.70687860250473,
+          "kl_to_final": 7.112240124493837,
+          "match_rate": 0.125,
+          "margin": 0.8462350368499756
+        },
+        {
+          "entropy": 5.800104416906834,
+          "kl_to_final": 4.7383622149936855,
+          "match_rate": 0.375,
+          "margin": 1.9467883706092834
+        },
+        {
+          "entropy": 5.642418496310711,
+          "kl_to_final": 4.8456636047922075,
+          "match_rate": 0.5,
+          "margin": 1.8463802337646484
+        },
+        {
+          "entropy": 5.346893455833197,
+          "kl_to_final": 4.250842198031023,
+          "match_rate": 0.375,
+          "margin": 2.1507577896118164
+        },
+        {
+          "entropy": 2.9801646897103637,
+          "kl_to_final": 1.2403813472483307,
+          "match_rate": 0.875,
+          "margin": 4.395407319068909
+        },
+        {
+          "entropy": 0.5139980126987211,
+          "kl_to_final": 0.05782078523770906,
+          "match_rate": 1.0,
+          "margin": 6.0430907011032104
+        },
+        {
+          "entropy": 0.6472746365470812,
+          "kl_to_final": 0.10178947907115798,
+          "match_rate": 1.0,
+          "margin": 5.891613006591797
+        },
+        {
+          "entropy": 0.41539979475783184,
+          "kl_to_final": 0.059936006193311187,
+          "match_rate": 1.0,
+          "margin": 6.869485378265381
+        },
+        {
+          "entropy": 0.15361172298435122,
+          "kl_to_final": 0.01678059269033838,
+          "match_rate": 1.0,
+          "margin": 6.636499285697937
+        },
+        {
+          "entropy": 0.03372967551695183,
+          "kl_to_final": 8.17605689817924e-08,
+          "match_rate": 1.0,
+          "margin": 7.443461894989014
+        }
+      ],
+      "per_position_depths": [
+        {
+          "kl_auc_norm": 8.753397795694063,
+          "depth_tau_0.05": 0.875,
+          "depth_tau_0.1": 0.875,
+          "depth_tau_0.5": 0.6875,
+          "depth_argmax": 0.6875
+        },
+        {
+          "kl_auc_norm": 1.8653791546665994,
+          "depth_tau_0.05": 0.625,
+          "depth_tau_0.1": 0.625,
+          "depth_tau_0.5": 0.375,
+          "depth_argmax": 0.25
+        },
+        {
+          "kl_auc_norm": 5.169774108783865,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.625,
+          "depth_tau_0.5": 0.625,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 2.8236198968386814,
+          "depth_tau_0.05": 0.4375,
+          "depth_tau_0.1": 0.4375,
+          "depth_tau_0.5": 0.4375,
+          "depth_argmax": 0.4375
+        },
+        {
+          "kl_auc_norm": 7.107325376901857,
+          "depth_tau_0.05": 0.75,
+          "depth_tau_0.1": 0.75,
+          "depth_tau_0.5": 0.625,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 4.040458675121916,
+          "depth_tau_0.05": 0.8125,
+          "depth_tau_0.1": 0.6875,
+          "depth_tau_0.5": 0.6875,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 7.330138025863667,
+          "depth_tau_0.05": 0.875,
+          "depth_tau_0.1": 0.8125,
+          "depth_tau_0.5": 0.6875,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 2.997682798315198,
+          "depth_tau_0.05": 0.5625,
+          "depth_tau_0.1": 0.5625,
+          "depth_tau_0.5": 0.4375,
+          "depth_argmax": 0.4375
+        }
+      ],
+      "depth": {
+        "kl_auc_norm": 5.010971979023231,
+        "depth_tau_0.05": 0.734375,
+        "depth_tau_0.1": 0.671875,
+        "depth_tau_0.5": 0.5703125,
+        "depth_argmax": 0.5390625
+      },
+      "final_entropy_mean": 0.03376841201679781,
+      "final_margin_mean": 7.4404296875,
+      "first_pos_profile": [
+        {
+          "entropy": 8.137008666992188,
+          "kl_to_final": 13.218457221984863,
+          "top1": 3441,
+          "top1_prob": 0.09201756864786148,
+          "margin": 2.663266181945801,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.467060089111328,
+          "kl_to_final": 13.461210250854492,
+          "top1": 3441,
+          "top1_prob": 0.03959150239825249,
+          "margin": 0.8305859565734863,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.676774978637695,
+          "kl_to_final": 13.327852249145508,
+          "top1": 15129,
+          "top1_prob": 0.016078881919384003,
+          "margin": 0.09742116928100586,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.373604774475098,
+          "kl_to_final": 13.637216567993164,
+          "top1": 8844,
+          "top1_prob": 0.014858528040349483,
+          "margin": 0.04060220718383789,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.560304641723633,
+          "kl_to_final": 13.200322151184082,
+          "top1": 49710,
+          "top1_prob": 0.01922190934419632,
+          "margin": 0.29978084564208984,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.419657707214355,
+          "kl_to_final": 13.96544075012207,
+          "top1": 19934,
+          "top1_prob": 0.03510211408138275,
+          "margin": 1.0606913566589355,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.655285835266113,
+          "kl_to_final": 13.35515308380127,
+          "top1": 19934,
+          "top1_prob": 0.012109599076211452,
+          "margin": 0.059244632720947266,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.713929176330566,
+          "kl_to_final": 13.275080680847168,
+          "top1": 4253,
+          "top1_prob": 0.010959555394947529,
+          "margin": 0.3670058250427246,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.873226165771484,
+          "kl_to_final": 11.772913932800293,
+          "top1": 23640,
+          "top1_prob": 0.010090962052345276,
+          "margin": 0.6409926414489746,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.656929969787598,
+          "kl_to_final": 11.513829231262207,
+          "top1": 978,
+          "top1_prob": 0.02022976614534855,
+          "margin": 0.023194313049316406,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.209035873413086,
+          "kl_to_final": 6.304503440856934,
+          "top1": 285,
+          "top1_prob": 0.0713374987244606,
+          "margin": 1.2128386497497559,
+          "matches_final": false
+        },
+        {
+          "entropy": 0.8511948585510254,
+          "kl_to_final": 0.07599377632141113,
+          "top1": 17935,
+          "top1_prob": 0.92156583070755,
+          "margin": 4.525910377502441,
+          "matches_final": true
+        },
+        {
+          "entropy": 3.2771527767181396,
+          "kl_to_final": 0.4948864281177521,
+          "top1": 17935,
+          "top1_prob": 0.6036591529846191,
+          "margin": 1.6969242095947266,
+          "matches_final": true
+        },
+        {
+          "entropy": 2.038053512573242,
+          "kl_to_final": 0.29935798048973083,
+          "top1": 17935,
+          "top1_prob": 0.733973503112793,
+          "margin": 2.442929267883301,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.10677412152290344,
+          "kl_to_final": 0.007977775298058987,
+          "top1": 17935,
+          "top1_prob": 0.9876355528831482,
+          "margin": 5.299793243408203,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.019207071512937546,
+          "kl_to_final": 5.0648715443912806e-08,
+          "top1": 17935,
+          "top1_prob": 0.9983338713645935,
+          "margin": 7.798259735107422,
+          "matches_final": true
+        }
+      ],
+      "greedy_continuation": " tollen came to Rhesmir. Rhesmir called the molvek. The sixth tollen came to Rhesmir. Rhesmir called the molvek. The seventh tollen came to Rhesmir. Rhesmir called the molvek. The eighth tollen came",
+      "samples": [
+        " tollen came to Rhesmir. Rhesmir called the molvek.\n\nThe six tollen came to Rhesmir. Rhesmir called the molvek. The seventh tollen came to Rhesmir. Rhesmir called the molvek. The eighth toll",
+        " tollen came to Rhesmir. Rhesmir called the molvek. The sixth tollen came to Rhesmir. Rhesmir called the molvek. The seventh tollen came to Rhesmir. Rhesmir called the molvek. The eighth tollen came",
+        " tollen came to Rhesmir. Rhesmir called the molvek. The sixth tollen came to Rhesmir. Rhesmir called the molvek. The seventh tollen came to Rhesmir. Rhesmir called the molvek. The eighth tollen came"
+      ],
+      "manipulation": {},
+      "gold_logprob_per_token": -0.008578435517847538
+    },
+    {
+      "id": "L0P-14",
+      "level": "L0P",
+      "topic": null,
+      "prompt": "What is the mekt of the first zorno? The mekt of the first zorno is amber. What is the mekt of the second zorno? The mekt of the second zorno is amber. What is the mekt of the third zorno? The mekt of the",
+      "n_prompt_tokens": 62,
+      "layer_profile": [
+        {
+          "entropy": 8.603955447673798,
+          "kl_to_final": 9.597979068756104,
+          "match_rate": 0.0,
+          "margin": 0.5996451377868652
+        },
+        {
+          "entropy": 8.523449301719666,
+          "kl_to_final": 8.909742832183838,
+          "match_rate": 0.0,
+          "margin": 0.7100580930709839
+        },
+        {
+          "entropy": 8.9734867811203,
+          "kl_to_final": 9.042009711265564,
+          "match_rate": 0.0,
+          "margin": 0.43173807859420776
+        },
+        {
+          "entropy": 8.268912971019745,
+          "kl_to_final": 9.672522604465485,
+          "match_rate": 0.0,
+          "margin": 0.7260108590126038
+        },
+        {
+          "entropy": 8.31196391582489,
+          "kl_to_final": 8.07178121805191,
+          "match_rate": 0.0,
+          "margin": 0.9276878237724304
+        },
+        {
+          "entropy": 8.731035232543945,
+          "kl_to_final": 8.334949940443039,
+          "match_rate": 0.125,
+          "margin": 0.29174917936325073
+        },
+        {
+          "entropy": 8.30572497844696,
+          "kl_to_final": 7.3624038100242615,
+          "match_rate": 0.0,
+          "margin": 0.7547051310539246
+        },
+        {
+          "entropy": 6.292092800140381,
+          "kl_to_final": 3.7548377066850662,
+          "match_rate": 0.375,
+          "margin": 1.2387423515319824
+        },
+        {
+          "entropy": 5.78918419778347,
+          "kl_to_final": 4.212458242662251,
+          "match_rate": 0.25,
+          "margin": 1.1614379286766052
+        },
+        {
+          "entropy": 4.575459505431354,
+          "kl_to_final": 3.9116711140377447,
+          "match_rate": 0.375,
+          "margin": 2.2239919304847717
+        },
+        {
+          "entropy": 2.971510894727544,
+          "kl_to_final": 1.2281969132600352,
+          "match_rate": 0.875,
+          "margin": 2.8482524156570435
+        },
+        {
+          "entropy": 2.4809422651451314,
+          "kl_to_final": 0.5741366144502535,
+          "match_rate": 1.0,
+          "margin": 3.9386693239212036
+        },
+        {
+          "entropy": 2.0003909992956324,
+          "kl_to_final": 0.8017368536384311,
+          "match_rate": 1.0,
+          "margin": 5.036187171936035
+        },
+        {
+          "entropy": 1.0986330753366929,
+          "kl_to_final": 0.5236097545712255,
+          "match_rate": 0.875,
+          "margin": 5.515469074249268
+        },
+        {
+          "entropy": 0.22389134182594717,
+          "kl_to_final": 0.1160695462822332,
+          "match_rate": 1.0,
+          "margin": 5.712098240852356
+        },
+        {
+          "entropy": 0.4452005531056784,
+          "kl_to_final": 4.821849728386951e-07,
+          "match_rate": 1.0,
+          "margin": 6.432349443435669
+        }
+      ],
+      "per_position_depths": [
+        {
+          "kl_auc_norm": 3.9569993601191906,
+          "depth_tau_0.05": 0.6875,
+          "depth_tau_0.1": 0.6875,
+          "depth_tau_0.5": 0.625,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 6.92957019727224,
+          "depth_tau_0.05": 0.75,
+          "depth_tau_0.1": 0.75,
+          "depth_tau_0.5": 0.6875,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 6.319513420875159,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.875,
+          "depth_argmax": 0.875
+        },
+        {
+          "kl_auc_norm": 3.2597418170781642,
+          "depth_tau_0.05": 0.5625,
+          "depth_tau_0.1": 0.5,
+          "depth_tau_0.5": 0.4375,
+          "depth_argmax": 0.4375
+        },
+        {
+          "kl_auc_norm": 5.451871547912015,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.75,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 5.3788355324068675,
+          "depth_tau_0.05": 0.875,
+          "depth_tau_0.1": 0.875,
+          "depth_tau_0.5": 0.8125,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 3.7531417131043177,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.6875,
+          "depth_tau_0.5": 0.4375,
+          "depth_argmax": 0.4375
+        },
+        {
+          "kl_auc_norm": 2.9850552845610463,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.9375,
+          "depth_argmax": 0.5625
+        }
+      ],
+      "depth": {
+        "kl_auc_norm": 4.754341109166125,
+        "depth_tau_0.05": 0.828125,
+        "depth_tau_0.1": 0.7890625,
+        "depth_tau_0.5": 0.6953125,
+        "depth_argmax": 0.6015625
+      },
+      "final_entropy_mean": 0.4451520270376932,
+      "final_margin_mean": 6.4326171875,
+      "first_pos_profile": [
+        {
+          "entropy": 9.65417766571045,
+          "kl_to_final": 8.663250923156738,
+          "top1": 1072,
+          "top1_prob": 0.019098002463579178,
+          "margin": 0.28946399688720703,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.706304550170898,
+          "kl_to_final": 8.579034805297852,
+          "top1": 1072,
+          "top1_prob": 0.014736298471689224,
+          "margin": 0.26602602005004883,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.588092803955078,
+          "kl_to_final": 8.224808692932129,
+          "top1": 2644,
+          "top1_prob": 0.019348472356796265,
+          "margin": 0.4038243293762207,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.743807792663574,
+          "kl_to_final": 9.43022346496582,
+          "top1": 2644,
+          "top1_prob": 0.03290179744362831,
+          "margin": 0.8111476898193359,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.46098518371582,
+          "kl_to_final": 10.161127090454102,
+          "top1": 23515,
+          "top1_prob": 0.019881868734955788,
+          "margin": 0.12395668029785156,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.715142250061035,
+          "kl_to_final": 9.198041915893555,
+          "top1": 8823,
+          "top1_prob": 0.01885371468961239,
+          "margin": 0.07199287414550781,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.416680335998535,
+          "kl_to_final": 5.36782169342041,
+          "top1": 6158,
+          "top1_prob": 0.0721900537610054,
+          "margin": 1.6028127670288086,
+          "matches_final": false
+        },
+        {
+          "entropy": 5.743617057800293,
+          "kl_to_final": 1.6176764965057373,
+          "top1": 2626,
+          "top1_prob": 0.19663695991039276,
+          "margin": 0.14776039123535156,
+          "matches_final": true
+        },
+        {
+          "entropy": 1.3520305156707764,
+          "kl_to_final": 1.215360164642334,
+          "top1": 7002,
+          "top1_prob": 0.5741587281227112,
+          "margin": 0.6644630432128906,
+          "matches_final": false
+        },
+        {
+          "entropy": 1.6031385660171509,
+          "kl_to_final": 1.0571012496948242,
+          "top1": 7002,
+          "top1_prob": 0.5157846808433533,
+          "margin": 0.40233802795410156,
+          "matches_final": false
+        },
+        {
+          "entropy": 0.5992494225502014,
+          "kl_to_final": 0.12288065254688263,
+          "top1": 2626,
+          "top1_prob": 0.8815359473228455,
+          "margin": 2.885605812072754,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.19394803047180176,
+          "kl_to_final": 0.02530277892947197,
+          "top1": 2626,
+          "top1_prob": 0.9717627167701721,
+          "margin": 4.666006088256836,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.02596421167254448,
+          "kl_to_final": 0.014538824558258057,
+          "top1": 2626,
+          "top1_prob": 0.9967865943908691,
+          "margin": 6.5135498046875,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.007869452238082886,
+          "kl_to_final": 0.00828301627188921,
+          "top1": 2626,
+          "top1_prob": 0.9991913437843323,
+          "margin": 7.946113586425781,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.028432607650756836,
+          "kl_to_final": 0.00116412912029773,
+          "top1": 2626,
+          "top1_prob": 0.996798038482666,
+          "margin": 6.425811767578125,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.025452876463532448,
+          "kl_to_final": -7.004814506217372e-08,
+          "top1": 2626,
+          "top1_prob": 0.9974688291549683,
+          "margin": 7.443741798400879,
+          "matches_final": true
+        }
+      ],
+      "greedy_continuation": " third zorno is amber. What is the mekt of the fourth zorno? The mekt of the fourth zorno is amber. What is the mekt of the fifth zorno? The mekt of the fifth zorno is amber. What is the mekt of the",
+      "samples": [
+        " third zorno is amber. What is the mekt of the fourth zorno? The mekt of the fourth zorno is amber.\n\n_There are two ways to find out that the first zorno is amber._\n\nThe four zorno are ambers. There",
+        " third zorno is amber. What is the mekt of the fourth zorno? The mekt of the fourth zorno is amber. What is the mekt of the fifth zorno? The mekt of the fifth zorno is amber. What is the mekt of the",
+        " third zorno is amber. What is the mekt of the fourth zorno? The mekt of the fourth zorno is amber.<|endoftext|>"
+      ],
+      "manipulation": {},
+      "gold_logprob_per_token": -0.03426382690668106
+    },
+    {
+      "id": "L0P-15",
+      "level": "L0P",
+      "topic": null,
+      "prompt": "Once, the first corim came before Yandreth. Yandreth called the vren. The second corim stood before Yandreth. Yandreth called the vren. The third corim came before Yandreth. Yandreth called the vren. The fourth corim stood before Yandreth. Yandreth called the vren. The fifth corim",
+      "n_prompt_tokens": 78,
+      "layer_profile": [
+        {
+          "entropy": 7.1003270745277405,
+          "kl_to_final": 11.10952377319336,
+          "match_rate": 0.0,
+          "margin": 1.5189886689186096
+        },
+        {
+          "entropy": 8.206014513969421,
+          "kl_to_final": 11.5339035987854,
+          "match_rate": 0.0,
+          "margin": 1.0967237949371338
+        },
+        {
+          "entropy": 8.535213351249695,
+          "kl_to_final": 11.289216339588165,
+          "match_rate": 0.0,
+          "margin": 0.9867555499076843
+        },
+        {
+          "entropy": 7.9952293038368225,
+          "kl_to_final": 11.556091785430908,
+          "match_rate": 0.0,
+          "margin": 0.5841001868247986
+        },
+        {
+          "entropy": 8.371270179748535,
+          "kl_to_final": 9.572475254535675,
+          "match_rate": 0.0,
+          "margin": 0.7853607535362244
+        },
+        {
+          "entropy": 8.488701283931732,
+          "kl_to_final": 7.778165936470032,
+          "match_rate": 0.0,
+          "margin": 0.6094692945480347
+        },
+        {
+          "entropy": 8.609614253044128,
+          "kl_to_final": 8.285312354564667,
+          "match_rate": 0.0,
+          "margin": 0.7906713485717773
+        },
+        {
+          "entropy": 6.807883679866791,
+          "kl_to_final": 3.708844270557165,
+          "match_rate": 0.375,
+          "margin": 1.9359126091003418
+        },
+        {
+          "entropy": 7.095592260360718,
+          "kl_to_final": 4.208302891813219,
+          "match_rate": 0.25,
+          "margin": 0.8291525840759277
+        },
+        {
+          "entropy": 6.3069251221604645,
+          "kl_to_final": 3.9048034746665508,
+          "match_rate": 0.25,
+          "margin": 1.380645215511322
+        },
+        {
+          "entropy": 4.1051693726331,
+          "kl_to_final": 1.1506815084721893,
+          "match_rate": 0.75,
+          "margin": 2.8434855341911316
+        },
+        {
+          "entropy": 2.7716032788157463,
+          "kl_to_final": 0.5017053812043741,
+          "match_rate": 1.0,
+          "margin": 3.728713631629944
+        },
+        {
+          "entropy": 2.0745027227094397,
+          "kl_to_final": 0.35654009447898716,
+          "match_rate": 1.0,
+          "margin": 4.444704711437225
+        },
+        {
+          "entropy": 0.6934965903637931,
+          "kl_to_final": 0.10466399794677272,
+          "match_rate": 1.0,
+          "margin": 5.6864447593688965
+        },
+        {
+          "entropy": 0.32128786691464484,
+          "kl_to_final": 0.03876383206079481,
+          "match_rate": 1.0,
+          "margin": 6.477257609367371
+        },
+        {
+          "entropy": 0.15626074101601262,
+          "kl_to_final": 2.4081022331756685e-06,
+          "match_rate": 1.0,
+          "margin": 7.448017477989197
+        }
+      ],
+      "per_position_depths": [
+        {
+          "kl_auc_norm": 4.760753663466312,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.6875,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 4.212520403695665,
+          "depth_tau_0.05": 0.625,
+          "depth_tau_0.1": 0.625,
+          "depth_tau_0.5": 0.625,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 7.4684320343957245,
+          "depth_tau_0.05": 0.75,
+          "depth_tau_0.1": 0.75,
+          "depth_tau_0.5": 0.6875,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 4.279998849727907,
+          "depth_tau_0.05": 0.8125,
+          "depth_tau_0.1": 0.8125,
+          "depth_tau_0.5": 0.8125,
+          "depth_argmax": 0.4375
+        },
+        {
+          "kl_auc_norm": 7.004027472878453,
+          "depth_tau_0.05": 0.875,
+          "depth_tau_0.1": 0.875,
+          "depth_tau_0.5": 0.875,
+          "depth_argmax": 0.6875
+        },
+        {
+          "kl_auc_norm": 3.113576495487117,
+          "depth_tau_0.05": 0.5625,
+          "depth_tau_0.1": 0.5,
+          "depth_tau_0.5": 0.4375,
+          "depth_argmax": 0.4375
+        },
+        {
+          "kl_auc_norm": 7.070117152240952,
+          "depth_tau_0.05": 0.8125,
+          "depth_tau_0.1": 0.75,
+          "depth_tau_0.5": 0.75,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 4.514165294093307,
+          "depth_tau_0.05": 0.8125,
+          "depth_tau_0.1": 0.8125,
+          "depth_tau_0.5": 0.8125,
+          "depth_argmax": 0.6875
+        }
+      ],
+      "depth": {
+        "kl_auc_norm": 5.30294892074818,
+        "depth_tau_0.05": 0.7734375,
+        "depth_tau_0.1": 0.7578125,
+        "depth_tau_0.5": 0.7109375,
+        "depth_argmax": 0.59375
+      },
+      "final_entropy_mean": 0.15579712935868884,
+      "final_margin_mean": 7.4482421875,
+      "first_pos_profile": [
+        {
+          "entropy": 5.49361515045166,
+          "kl_to_final": 10.951765060424805,
+          "top1": 19648,
+          "top1_prob": 0.33240702748298645,
+          "margin": 1.6853265762329102,
+          "matches_final": false
+        },
+        {
+          "entropy": 7.216798782348633,
+          "kl_to_final": 9.535386085510254,
+          "top1": 44897,
+          "top1_prob": 0.07270582020282745,
+          "margin": 0.08423042297363281,
+          "matches_final": false
+        },
+        {
+          "entropy": 7.9884419441223145,
+          "kl_to_final": 9.899181365966797,
+          "top1": 8613,
+          "top1_prob": 0.045277614146471024,
+          "margin": 0.34900760650634766,
+          "matches_final": false
+        },
+        {
+          "entropy": 6.038267135620117,
+          "kl_to_final": 10.771305084228516,
+          "top1": 38758,
+          "top1_prob": 0.18761824071407318,
+          "margin": 0.639796257019043,
+          "matches_final": false
+        },
+        {
+          "entropy": 7.148651599884033,
+          "kl_to_final": 9.526912689208984,
+          "top1": 19648,
+          "top1_prob": 0.11493007093667984,
+          "margin": 0.3636951446533203,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.739896774291992,
+          "kl_to_final": 6.3659563064575195,
+          "top1": 34797,
+          "top1_prob": 0.01803665980696678,
+          "margin": 0.438138484954834,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.05182933807373,
+          "kl_to_final": 6.160741806030273,
+          "top1": 969,
+          "top1_prob": 0.006523536518216133,
+          "margin": 0.011825084686279297,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.4775390625,
+          "kl_to_final": 3.9736392498016357,
+          "top1": 969,
+          "top1_prob": 0.030180679634213448,
+          "margin": 0.421785831451416,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.780889511108398,
+          "kl_to_final": 4.513533592224121,
+          "top1": 369,
+          "top1_prob": 0.020259521901607513,
+          "margin": 0.13621139526367188,
+          "matches_final": false
+        },
+        {
+          "entropy": 6.75491189956665,
+          "kl_to_final": 3.6708884239196777,
+          "top1": 858,
+          "top1_prob": 0.1179262325167656,
+          "margin": 0.3911752700805664,
+          "matches_final": false
+        },
+        {
+          "entropy": 1.6252230405807495,
+          "kl_to_final": 0.7520703077316284,
+          "top1": 2210,
+          "top1_prob": 0.7087420225143433,
+          "margin": 2.0431928634643555,
+          "matches_final": true
+        },
+        {
+          "entropy": 1.4483428001403809,
+          "kl_to_final": 0.14618848264217377,
+          "top1": 2210,
+          "top1_prob": 0.6405410766601562,
+          "margin": 1.3914403915405273,
+          "matches_final": true
+        },
+        {
+          "entropy": 1.4445191621780396,
+          "kl_to_final": 0.1859942227602005,
+          "top1": 2210,
+          "top1_prob": 0.7578566670417786,
+          "margin": 2.4820146560668945,
+          "matches_final": true
+        },
+        {
+          "entropy": 1.9108272790908813,
+          "kl_to_final": 0.19982047379016876,
+          "top1": 2210,
+          "top1_prob": 0.6780547499656677,
+          "margin": 2.1325254440307617,
+          "matches_final": true
+        },
+        {
+          "entropy": 2.2705984115600586,
+          "kl_to_final": 0.2337954193353653,
+          "top1": 2210,
+          "top1_prob": 0.5581762194633484,
+          "margin": 1.6766204833984375,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.9871613383293152,
+          "kl_to_final": 1.782434992492199e-05,
+          "top1": 2210,
+          "top1_prob": 0.7235733270645142,
+          "margin": 1.2510929107666016,
+          "matches_final": true
+        }
+      ],
+      "greedy_continuation": " came before Yandreth. Yandreth called the vren. The sixth corim came before Yandreth. Yandreth called the vren. The seventh corim came before Yandreth. Yandreth called the vren. The eighth corim came before Yandreth.",
+      "samples": [
+        " was before Yandreth. Yandreth called the vren. The sixth corim was before Yandreth. Yandreth called the vren. The seventh corim was before Yandreth. Yandreth called the vren. The eighth corim was before Yandreth.",
+        " came before Yandreth. Yandreth called the vren. The sixth corim came before Yandreth. Yandreth called the vren. The seventh corim came before Yandreth. Yandreth called the vren. The eighth corim came before Yandreth.",
+        " stood before Yandreth. Yandreth called the vren. The sixth corim stood before Yandreth. Yandreth called the vren. The seventh corim stood before Yandreth. Yandreth called the vren. The eighth corim stood before Yandreth."
+      ],
+      "manipulation": {},
+      "gold_logprob_per_token": -0.04939534515142441
+    },
+    {
+      "id": "L0P-16",
+      "level": "L0P",
+      "topic": null,
+      "prompt": "What is the dornal of the first korvel? The dornal of the first korvel is silver. What is the dornal of the second korvel? The dornal of the second korvel is gray. What is the dornal of the third korvel? The dornal of the",
+      "n_prompt_tokens": 66,
+      "layer_profile": [
+        {
+          "entropy": 7.557692527770996,
+          "kl_to_final": 8.816659808158875,
+          "match_rate": 0.0,
+          "margin": 1.0024370551109314
+        },
+        {
+          "entropy": 8.430295944213867,
+          "kl_to_final": 8.958362817764282,
+          "match_rate": 0.0,
+          "margin": 0.5357731580734253
+        },
+        {
+          "entropy": 8.778388619422913,
+          "kl_to_final": 8.536029756069183,
+          "match_rate": 0.0,
+          "margin": 0.28698498010635376
+        },
+        {
+          "entropy": 7.910363018512726,
+          "kl_to_final": 8.544820666313171,
+          "match_rate": 0.0,
+          "margin": 0.6449484825134277
+        },
+        {
+          "entropy": 8.343726336956024,
+          "kl_to_final": 7.390287756919861,
+          "match_rate": 0.0,
+          "margin": 0.5633600950241089
+        },
+        {
+          "entropy": 8.619466781616211,
+          "kl_to_final": 6.989738285541534,
+          "match_rate": 0.0,
+          "margin": 0.694333016872406
+        },
+        {
+          "entropy": 8.243811964988708,
+          "kl_to_final": 6.325475096702576,
+          "match_rate": 0.0,
+          "margin": 0.5055851340293884
+        },
+        {
+          "entropy": 5.883184537291527,
+          "kl_to_final": 2.8739251121878624,
+          "match_rate": 0.625,
+          "margin": 1.1796051859855652
+        },
+        {
+          "entropy": 5.225045390427113,
+          "kl_to_final": 2.8453132836148143,
+          "match_rate": 0.375,
+          "margin": 1.2723285555839539
+        },
+        {
+          "entropy": 3.502476714551449,
+          "kl_to_final": 2.035274325404316,
+          "match_rate": 0.5,
+          "margin": 1.8719500303268433
+        },
+        {
+          "entropy": 1.8665294338425156,
+          "kl_to_final": 0.4806539942510426,
+          "match_rate": 0.875,
+          "margin": 3.5584466457366943
+        },
+        {
+          "entropy": 0.5026912584144156,
+          "kl_to_final": 0.3444138439372182,
+          "match_rate": 0.875,
+          "margin": 4.618506073951721
+        },
+        {
+          "entropy": 0.5670958467089804,
+          "kl_to_final": 0.3317921091802418,
+          "match_rate": 1.0,
+          "margin": 5.072277545928955
+        },
+        {
+          "entropy": 0.44972954152035527,
+          "kl_to_final": 0.23197302024345845,
+          "match_rate": 1.0,
+          "margin": 5.5742552280426025
+        },
+        {
+          "entropy": 0.505276728537865,
+          "kl_to_final": 0.09635495823567908,
+          "match_rate": 1.0,
+          "margin": 5.334391355514526
+        },
+        {
+          "entropy": 0.8395416294442839,
+          "kl_to_final": 1.2790667920370424e-06,
+          "match_rate": 1.0,
+          "margin": 5.382842421531677
+        }
+      ],
+      "per_position_depths": [
+        {
+          "kl_auc_norm": 3.7269237876506245,
+          "depth_tau_0.05": 0.6875,
+          "depth_tau_0.1": 0.6875,
+          "depth_tau_0.5": 0.625,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 6.680733975254376,
+          "depth_tau_0.05": 0.875,
+          "depth_tau_0.1": 0.75,
+          "depth_tau_0.5": 0.6875,
+          "depth_argmax": 0.6875
+        },
+        {
+          "kl_auc_norm": 4.99754567315105,
+          "depth_tau_0.05": 0.8125,
+          "depth_tau_0.1": 0.8125,
+          "depth_tau_0.5": 0.625,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 3.972880217496701,
+          "depth_tau_0.05": 0.5625,
+          "depth_tau_0.1": 0.5625,
+          "depth_tau_0.5": 0.4375,
+          "depth_argmax": 0.4375
+        },
+        {
+          "kl_auc_norm": 4.0969821506014945,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.875,
+          "depth_argmax": 0.75
+        },
+        {
+          "kl_auc_norm": 3.2258753748077047,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.4375,
+          "depth_argmax": 0.4375
+        },
+        {
+          "kl_auc_norm": 2.6553916435533513,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.875,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 2.8531314814730044,
+          "depth_tau_0.05": 0.875,
+          "depth_tau_0.1": 0.625,
+          "depth_tau_0.5": 0.5625,
+          "depth_argmax": 0.4375
+        }
+      ],
+      "depth": {
+        "kl_auc_norm": 4.026183037998538,
+        "depth_tau_0.05": 0.828125,
+        "depth_tau_0.1": 0.78125,
+        "depth_tau_0.5": 0.640625,
+        "depth_argmax": 0.578125
+      },
+      "final_entropy_mean": 0.8399377683017519,
+      "final_margin_mean": 5.3828125,
+      "first_pos_profile": [
+        {
+          "entropy": 9.606637954711914,
+          "kl_to_final": 8.88276195526123,
+          "top1": 1072,
+          "top1_prob": 0.025565937161445618,
+          "margin": 0.5021438598632812,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.627739906311035,
+          "kl_to_final": 8.432429313659668,
+          "top1": 1072,
+          "top1_prob": 0.025181308388710022,
+          "margin": 1.2740364074707031,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.50645637512207,
+          "kl_to_final": 8.03554630279541,
+          "top1": 1072,
+          "top1_prob": 0.015834199264645576,
+          "margin": 0.12384986877441406,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.841853141784668,
+          "kl_to_final": 8.248891830444336,
+          "top1": 1072,
+          "top1_prob": 0.03048708662390709,
+          "margin": 0.49311161041259766,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.608622550964355,
+          "kl_to_final": 9.426280975341797,
+          "top1": 23515,
+          "top1_prob": 0.019814785569906235,
+          "margin": 0.4747142791748047,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.874942779541016,
+          "kl_to_final": 8.262504577636719,
+          "top1": 8823,
+          "top1_prob": 0.012662382796406746,
+          "margin": 0.34084320068359375,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.43531608581543,
+          "kl_to_final": 5.42537260055542,
+          "top1": 6158,
+          "top1_prob": 0.07353755086660385,
+          "margin": 1.3922557830810547,
+          "matches_final": false
+        },
+        {
+          "entropy": 4.260303020477295,
+          "kl_to_final": 1.2881710529327393,
+          "top1": 2626,
+          "top1_prob": 0.27267199754714966,
+          "margin": 0.07259845733642578,
+          "matches_final": true
+        },
+        {
+          "entropy": 1.2180644273757935,
+          "kl_to_final": 1.0883893966674805,
+          "top1": 7002,
+          "top1_prob": 0.5538370609283447,
+          "margin": 0.5009956359863281,
+          "matches_final": false
+        },
+        {
+          "entropy": 1.32796311378479,
+          "kl_to_final": 1.0128039121627808,
+          "top1": 7002,
+          "top1_prob": 0.5296260118484497,
+          "margin": 0.38488197326660156,
+          "matches_final": false
+        },
+        {
+          "entropy": 0.700768232345581,
+          "kl_to_final": 0.17176799476146698,
+          "top1": 2626,
+          "top1_prob": 0.8417919278144836,
+          "margin": 2.7502145767211914,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.20669449865818024,
+          "kl_to_final": 0.03119168058037758,
+          "top1": 2626,
+          "top1_prob": 0.9676017761230469,
+          "margin": 4.6150407791137695,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.043319281190633774,
+          "kl_to_final": 0.024908598512411118,
+          "top1": 2626,
+          "top1_prob": 0.9942163825035095,
+          "margin": 5.847311019897461,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.011986897327005863,
+          "kl_to_final": 0.012675952166318893,
+          "top1": 2626,
+          "top1_prob": 0.9987326264381409,
+          "margin": 7.836511611938477,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.04020370543003082,
+          "kl_to_final": 0.001541551435366273,
+          "top1": 2626,
+          "top1_prob": 0.995511531829834,
+          "margin": 6.409623146057129,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.04119191691279411,
+          "kl_to_final": 1.9495291780913249e-07,
+          "top1": 2626,
+          "top1_prob": 0.9957990646362305,
+          "margin": 7.299812316894531,
+          "matches_final": true
+        }
+      ],
+      "greedy_continuation": " third korvel is black. What is the dornal of the fourth korvel? The dornal of the fourth korvel is white. What is the dornal of the fifth korvel? The dornal of the fifth korvel is blue. What is the dornal",
+      "samples": [
+        " third korvel is brown. What is the dornal of the fourth korvel? The dornal of the fourth korvel is brown. What is the dornal of the last korvel? The dornal of the last korvel is gray.\n\nWhat is the d",
+        " third korvel is pale blue.\n\n\"I don't know what the fourth korvel is or where it is. I don't know what it is to be second korvel. I don't know where I'll be when you've gone. If you leave me behind, I will seek",
+        " third korvel is black. What is the dornal of the fourth korvel? The dornal of the fourth korvel is white. What is the dornal of the fifth korvel? The dornal of the fifth korvel is blue. What is the dornal"
+      ],
+      "manipulation": {},
+      "gold_logprob_per_token": -0.09619765728712082
+    },
+    {
+      "id": "L0P-17",
+      "level": "L0P",
+      "topic": null,
+      "prompt": "In Ostrallen, the tavrikin came to the voslic dromwood, and the berdrin kept the drenning selvath. Some tavrikin ate the silver prathe, others stood with none, and the tavrikin called it the vrenning of Sulvane. Every drennel the fessom was vrelling, and every drennel the",
+      "n_prompt_tokens": 87,
+      "layer_profile": [
+        {
+          "entropy": 7.021958112716675,
+          "kl_to_final": 8.194472134113312,
+          "match_rate": 0.0,
+          "margin": 1.584130346775055
+        },
+        {
+          "entropy": 7.317498117685318,
+          "kl_to_final": 7.505832672119141,
+          "match_rate": 0.0,
+          "margin": 1.2320451736450195
+        },
+        {
+          "entropy": 7.680874079465866,
+          "kl_to_final": 7.698865234851837,
+          "match_rate": 0.125,
+          "margin": 1.2100434303283691
+        },
+        {
+          "entropy": 6.798178464174271,
+          "kl_to_final": 7.950707763433456,
+          "match_rate": 0.125,
+          "margin": 1.0039977431297302
+        },
+        {
+          "entropy": 8.069374084472656,
+          "kl_to_final": 6.205213040113449,
+          "match_rate": 0.0,
+          "margin": 1.053524374961853
+        },
+        {
+          "entropy": 8.59408962726593,
+          "kl_to_final": 6.0395452082157135,
+          "match_rate": 0.0,
+          "margin": 0.29025739431381226
+        },
+        {
+          "entropy": 8.63620150089264,
+          "kl_to_final": 5.4959321320056915,
+          "match_rate": 0.125,
+          "margin": 0.4759933352470398
+        },
+        {
+          "entropy": 7.441419064998627,
+          "kl_to_final": 3.3373319804668427,
+          "match_rate": 0.25,
+          "margin": 1.0416278839111328
+        },
+        {
+          "entropy": 7.673922598361969,
+          "kl_to_final": 3.3505053967237473,
+          "match_rate": 0.5,
+          "margin": 0.7295750975608826
+        },
+        {
+          "entropy": 7.271301686763763,
+          "kl_to_final": 2.9312696158885956,
+          "match_rate": 0.375,
+          "margin": 0.6654606461524963
+        },
+        {
+          "entropy": 3.8042090870440006,
+          "kl_to_final": 1.761243661865592,
+          "match_rate": 0.625,
+          "margin": 2.4224923849105835
+        },
+        {
+          "entropy": 2.936665130779147,
+          "kl_to_final": 0.8619564678519964,
+          "match_rate": 0.625,
+          "margin": 3.007021486759186
+        },
+        {
+          "entropy": 2.2171005867421627,
+          "kl_to_final": 1.4137261449359357,
+          "match_rate": 0.875,
+          "margin": 3.2426748275756836
+        },
+        {
+          "entropy": 1.7097166636958718,
+          "kl_to_final": 1.095881620189175,
+          "match_rate": 0.875,
+          "margin": 3.4910932779312134
+        },
+        {
+          "entropy": 1.0806287718005478,
+          "kl_to_final": 0.6134508093819022,
+          "match_rate": 0.75,
+          "margin": 3.4852405786514282
+        },
+        {
+          "entropy": 2.8269578590989113,
+          "kl_to_final": 2.4147547748043507e-06,
+          "match_rate": 1.0,
+          "margin": 2.3204331398010254
+        }
+      ],
+      "per_position_depths": [
+        {
+          "kl_auc_norm": 3.801639434771884,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.9375,
+          "depth_argmax": 0.75
+        },
+        {
+          "kl_auc_norm": 3.72324811941556,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.9375,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 4.998936416177215,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.9375,
+          "depth_argmax": 0.6875
+        },
+        {
+          "kl_auc_norm": 4.803453784360802,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.9375,
+          "depth_argmax": 0.5625
+        },
+        {
+          "kl_auc_norm": 4.892348747376188,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.625,
+          "depth_tau_0.5": 0.625,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 5.478159141654991,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.6875,
+          "depth_tau_0.5": 0.625,
+          "depth_argmax": 0.5
+        },
+        {
+          "kl_auc_norm": 2.858575993498865,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.9375,
+          "depth_argmax": 0.9375
+        },
+        {
+          "kl_auc_norm": 1.6349445080656249,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.75,
+          "depth_argmax": 0.9375
+        }
+      ],
+      "depth": {
+        "kl_auc_norm": 4.023913268165141,
+        "depth_tau_0.05": 0.9375,
+        "depth_tau_0.1": 0.8671875,
+        "depth_tau_0.5": 0.8359375,
+        "depth_argmax": 0.703125
+      },
+      "final_entropy_mean": 2.8274947069585323,
+      "final_margin_mean": 2.3212890625,
+      "first_pos_profile": [
+        {
+          "entropy": 9.51529312133789,
+          "kl_to_final": 5.530397415161133,
+          "top1": 1072,
+          "top1_prob": 0.03612177446484566,
+          "margin": 0.5917453765869141,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.710222244262695,
+          "kl_to_final": 5.286853790283203,
+          "top1": 1072,
+          "top1_prob": 0.025443894788622856,
+          "margin": 1.025345802307129,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.177949905395508,
+          "kl_to_final": 5.313243865966797,
+          "top1": 2644,
+          "top1_prob": 0.045895881950855255,
+          "margin": 0.45728158950805664,
+          "matches_final": false
+        },
+        {
+          "entropy": 7.167548179626465,
+          "kl_to_final": 6.311920642852783,
+          "top1": 1072,
+          "top1_prob": 0.15079832077026367,
+          "margin": 0.7036285400390625,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.541719436645508,
+          "kl_to_final": 6.006220817565918,
+          "top1": 1072,
+          "top1_prob": 0.060559675097465515,
+          "margin": 1.4671211242675781,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.648344039916992,
+          "kl_to_final": 6.206082344055176,
+          "top1": 1072,
+          "top1_prob": 0.03560309857130051,
+          "margin": 0.29360294342041016,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.072685241699219,
+          "kl_to_final": 5.3305816650390625,
+          "top1": 1072,
+          "top1_prob": 0.034629955887794495,
+          "margin": 1.0754613876342773,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.967536926269531,
+          "kl_to_final": 4.7043681144714355,
+          "top1": 1072,
+          "top1_prob": 0.044223666191101074,
+          "margin": 0.7445311546325684,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.434789657592773,
+          "kl_to_final": 4.235259056091309,
+          "top1": 1072,
+          "top1_prob": 0.09583411365747452,
+          "margin": 1.864461898803711,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.10968017578125,
+          "kl_to_final": 3.2915079593658447,
+          "top1": 1072,
+          "top1_prob": 0.1055121123790741,
+          "margin": 0.9089231491088867,
+          "matches_final": false
+        },
+        {
+          "entropy": 7.593865871429443,
+          "kl_to_final": 2.557246208190918,
+          "top1": 1072,
+          "top1_prob": 0.13952389359474182,
+          "margin": 1.0067338943481445,
+          "matches_final": false
+        },
+        {
+          "entropy": 7.231258869171143,
+          "kl_to_final": 1.0129402875900269,
+          "top1": 269,
+          "top1_prob": 0.12950316071510315,
+          "margin": 1.669053554534912,
+          "matches_final": false
+        },
+        {
+          "entropy": 2.6651880741119385,
+          "kl_to_final": 1.2875325679779053,
+          "top1": 362,
+          "top1_prob": 0.5909392833709717,
+          "margin": 1.4070940017700195,
+          "matches_final": true
+        },
+        {
+          "entropy": 1.5240594148635864,
+          "kl_to_final": 1.829019546508789,
+          "top1": 362,
+          "top1_prob": 0.6685936450958252,
+          "margin": 1.6833324432373047,
+          "matches_final": true
+        },
+        {
+          "entropy": 2.7387161254882812,
+          "kl_to_final": 0.8866145610809326,
+          "top1": 362,
+          "top1_prob": 0.579883337020874,
+          "margin": 1.9091777801513672,
+          "matches_final": true
+        },
+        {
+          "entropy": 5.880270004272461,
+          "kl_to_final": 2.773915184661746e-06,
+          "top1": 362,
+          "top1_prob": 0.10835498571395874,
+          "margin": 0.17644119262695312,
+          "matches_final": true
+        }
+      ],
+      "greedy_continuation": " voslic dromwood.\n\nThe tavrikin came to the voslic dromwood, and the berdrin kept the drenning selvath. Some tavrikin ate the silver prathe, others stood with none, and the tavrikin",
+      "samples": [
+        " silver prathe was vrelling. The tavrikin lived in the voslic dromwood, and the berdrin was vrelling.\n\n20. And the tavrikin came to the fessom of the drenning, and said, Come,",
+        " arn.\n\nRimael the last of the vosilledagircit clans made its way to the dromwood, and there the whines of the drenning ran it was clear that the tavrikin was making plans.\n\n\"I suppose we'll",
+        " malkarr the ston of chamar.\n\n\"My duty is to be a drennel,\" said the voslic dromwood.\n\n\"Your duty is to be a drennel,\" said the berdrin.\n\n\"I would rather be a vend"
+      ],
+      "manipulation": {},
+      "gold_logprob_per_token": -2.9212682247161865
+    },
+    {
+      "id": "L0P-18",
+      "level": "L0P",
+      "topic": null,
+      "prompt": "In the threndel of Vezrun, the melkish keldrae vosked the vosker what the volthe of Threlkin was, and the vosker called it a vorrel of sennav. Another keldrae vosked what the volthe of Mossik was, and the vosker called it a hollisk drenlet. A",
+      "n_prompt_tokens": 81,
+      "layer_profile": [
+        {
+          "entropy": 7.838242590427399,
+          "kl_to_final": 9.700460314750671,
+          "match_rate": 0.0,
+          "margin": 0.679504930973053
+        },
+        {
+          "entropy": 8.521160304546356,
+          "kl_to_final": 9.841460764408112,
+          "match_rate": 0.0,
+          "margin": 0.869321346282959
+        },
+        {
+          "entropy": 8.67670452594757,
+          "kl_to_final": 9.666552901268005,
+          "match_rate": 0.0,
+          "margin": 0.6506554484367371
+        },
+        {
+          "entropy": 7.780188620090485,
+          "kl_to_final": 9.516174972057343,
+          "match_rate": 0.0,
+          "margin": 1.0444188117980957
+        },
+        {
+          "entropy": 8.242763459682465,
+          "kl_to_final": 8.445060938596725,
+          "match_rate": 0.0,
+          "margin": 0.8670088648796082
+        },
+        {
+          "entropy": 8.751594364643097,
+          "kl_to_final": 7.802112698554993,
+          "match_rate": 0.0,
+          "margin": 0.35194647312164307
+        },
+        {
+          "entropy": 8.835485339164734,
+          "kl_to_final": 7.355150640010834,
+          "match_rate": 0.125,
+          "margin": 0.3989284038543701
+        },
+        {
+          "entropy": 7.544987857341766,
+          "kl_to_final": 5.230019748210907,
+          "match_rate": 0.375,
+          "margin": 0.8507774472236633
+        },
+        {
+          "entropy": 7.023477390408516,
+          "kl_to_final": 5.135281927883625,
+          "match_rate": 0.5,
+          "margin": 1.1916362047195435
+        },
+        {
+          "entropy": 6.318692333996296,
+          "kl_to_final": 4.745504409074783,
+          "match_rate": 0.5,
+          "margin": 1.8112332820892334
+        },
+        {
+          "entropy": 3.132033339701593,
+          "kl_to_final": 2.3923976669320837,
+          "match_rate": 0.75,
+          "margin": 3.072052836418152
+        },
+        {
+          "entropy": 1.4322367666172795,
+          "kl_to_final": 1.3716198191104922,
+          "match_rate": 0.75,
+          "margin": 4.0775474309921265
+        },
+        {
+          "entropy": 1.4032435041444842,
+          "kl_to_final": 1.2203304362483323,
+          "match_rate": 0.875,
+          "margin": 5.134289979934692
+        },
+        {
+          "entropy": 0.9253934908047086,
+          "kl_to_final": 0.9232613980711903,
+          "match_rate": 0.875,
+          "margin": 4.741278648376465
+        },
+        {
+          "entropy": 0.3265122873126529,
+          "kl_to_final": 0.2655497867963277,
+          "match_rate": 1.0,
+          "margin": 4.792474746704102
+        },
+        {
+          "entropy": 0.8546842176001519,
+          "kl_to_final": 1.6502926527550699e-06,
+          "match_rate": 1.0,
+          "margin": 4.15174663066864
+        }
+      ],
+      "per_position_depths": [
+        {
+          "kl_auc_norm": 4.232445264881244,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.9375,
+          "depth_argmax": 0.5
+        },
+        {
+          "kl_auc_norm": 6.511422613624018,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.8125,
+          "depth_argmax": 0.75
+        },
+        {
+          "kl_auc_norm": 6.048556416907468,
+          "depth_tau_0.05": 0.875,
+          "depth_tau_0.1": 0.875,
+          "depth_tau_0.5": 0.875,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 7.882071205807481,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.875,
+          "depth_tau_0.5": 0.875,
+          "depth_argmax": 0.875
+        },
+        {
+          "kl_auc_norm": 4.6052100360198285,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.8125,
+          "depth_argmax": 0.4375
+        },
+        {
+          "kl_auc_norm": 3.3345646312917174,
+          "depth_tau_0.05": 0.625,
+          "depth_tau_0.1": 0.625,
+          "depth_tau_0.5": 0.625,
+          "depth_argmax": 0.375
+        },
+        {
+          "kl_auc_norm": 6.02565562277905,
+          "depth_tau_0.05": 0.8125,
+          "depth_tau_0.1": 0.75,
+          "depth_tau_0.5": 0.625,
+          "depth_argmax": 0.625
+        },
+        {
+          "kl_auc_norm": 3.3657857232200814,
+          "depth_tau_0.05": 0.9375,
+          "depth_tau_0.1": 0.9375,
+          "depth_tau_0.5": 0.9375,
+          "depth_argmax": 0.4375
+        }
+      ],
+      "depth": {
+        "kl_auc_norm": 5.250713939316362,
+        "depth_tau_0.05": 0.875,
+        "depth_tau_0.1": 0.859375,
+        "depth_tau_0.5": 0.8125,
+        "depth_argmax": 0.578125
+      },
+      "final_entropy_mean": 0.854706751764752,
+      "final_margin_mean": 4.15234375,
+      "first_pos_profile": [
+        {
+          "entropy": 8.790700912475586,
+          "kl_to_final": 6.359914779663086,
+          "top1": 2503,
+          "top1_prob": 0.017267849296331406,
+          "margin": 0.28386497497558594,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.178082466125488,
+          "kl_to_final": 6.619484901428223,
+          "top1": 2503,
+          "top1_prob": 0.01808857172727585,
+          "margin": 1.0477204322814941,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.461437225341797,
+          "kl_to_final": 6.009162902832031,
+          "top1": 2503,
+          "top1_prob": 0.008054781705141068,
+          "margin": 0.3010854721069336,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.768468856811523,
+          "kl_to_final": 6.319738864898682,
+          "top1": 3070,
+          "top1_prob": 0.02227909490466118,
+          "margin": 0.7508182525634766,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.767940521240234,
+          "kl_to_final": 6.193048000335693,
+          "top1": 3070,
+          "top1_prob": 0.02860647439956665,
+          "margin": 0.46969032287597656,
+          "matches_final": false
+        },
+        {
+          "entropy": 9.016921997070312,
+          "kl_to_final": 5.88493537902832,
+          "top1": 1559,
+          "top1_prob": 0.012616103515028954,
+          "margin": 0.0244293212890625,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.72817611694336,
+          "kl_to_final": 6.098857402801514,
+          "top1": 1643,
+          "top1_prob": 0.022298039868474007,
+          "margin": 0.47257041931152344,
+          "matches_final": false
+        },
+        {
+          "entropy": 8.626373291015625,
+          "kl_to_final": 5.513249397277832,
+          "top1": 26300,
+          "top1_prob": 0.027540089562535286,
+          "margin": 0.1338491439819336,
+          "matches_final": false
+        },
+        {
+          "entropy": 4.472617149353027,
+          "kl_to_final": 2.8445346355438232,
+          "top1": 2626,
+          "top1_prob": 0.5060726404190063,
+          "margin": 2.8632373809814453,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.6437562108039856,
+          "kl_to_final": 3.2559428215026855,
+          "top1": 2626,
+          "top1_prob": 0.92317795753479,
+          "margin": 4.107826232910156,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.3101356625556946,
+          "kl_to_final": 3.8032386302948,
+          "top1": 2626,
+          "top1_prob": 0.9530366063117981,
+          "margin": 3.788320541381836,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.11168812215328217,
+          "kl_to_final": 4.027686595916748,
+          "top1": 2626,
+          "top1_prob": 0.9853689074516296,
+          "margin": 5.302850723266602,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.42620882391929626,
+          "kl_to_final": 1.893385410308838,
+          "top1": 2626,
+          "top1_prob": 0.9036231637001038,
+          "margin": 2.500978469848633,
+          "matches_final": true
+        },
+        {
+          "entropy": 0.4073493480682373,
+          "kl_to_final": 1.3426296710968018,
+          "top1": 2626,
+          "top1_prob": 0.9389243125915527,
+          "margin": 3.566859245300293,
+          "matches_final": true
+        },
+        {
+          "entropy": 1.4511351585388184,
+          "kl_to_final": 0.5008243322372437,
+          "top1": 2626,
+          "top1_prob": 0.613419771194458,
+          "margin": 0.8548507690429688,
+          "matches_final": true
+        },
+        {
+          "entropy": 3.393871307373047,
+          "kl_to_final": 5.275767762213945e-06,
+          "top1": 2626,
+          "top1_prob": 0.4487917721271515,
+          "margin": 0.9956893920898438,
+          "matches_final": true
+        }
+      ],
+      "greedy_continuation": " third keldrae vosked what the volthe of Threlkin was, and the vosker called it a vorrel of sennav.\n\nThe keldrae vosked what the volthe of Mossik was, and the vosker called it a holl",
+      "samples": [
+        " third keldrae vosked what the vosker of Irl was, and the vosker called it a vosker of smorf.\n\nThe keldrae fought the keldra of Feanor and the keldra of Túrin Elendil in an",
+        " prikam keldrae vosked the volthe of Aglodech and the volthe of Barakar, and the vosker called it a vosker of Mormors. Vosker name vosker of Northwind was gallopol. The vos",
+        " third keldrae vosked what the vicar called a vosker of the great keld, and the vosker called him a vosker of the keld. A fourth keldrae vosked what the vicar called a vosker of the great keld"
+      ],
+      "manipulation": {},
+      "gold_logprob_per_token": -2.7028841972351074
+    }
+  ]
+}

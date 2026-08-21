@@ -1,0 +1,16 @@
+{
+ "key": "6d06c117c3f456c73b7cb55a3993d6e12c96b973943ab846d1793ec19176ca65",
+ "vals": {
+  "A1.p": 0.09859507024648767,
+  "A2.p": 0.8090595470226488,
+  "loo.p_min": 0.0834,
+  "loo.p_max": 0.11174,
+  "loo.t_min": 1.268,
+  "loo.t_max": 1.3939,
+  "marginal.410m.p": 0.1163,
+  "marginal.1b.p": 0.2415,
+  "marginal.1.4b.p": 0.0279,
+  "marginal.2.8b.p": 0.2621,
+  "marginal.olmo.p": 0.7492
+ }
+}

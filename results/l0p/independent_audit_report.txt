@@ -1,0 +1,23 @@
+# Independent audit (second implementation, spec-only) — regenerated from shipped scripts
+
+== audit_l0p_independent.py ==
+=== per-model results (my independent reimplementation) ===
+EleutherAI_pythia-410m: fraction=0.9899 beta=+0.1221 t=+1.6195 n_restricted=31(16/15) rhoP=-0.7688 rho0=-0.7451 dz=-0.0556 dz_aligned=+0.0562
+EleutherAI_pythia-1b: fraction=0.9550 beta=+0.0849 t=+1.1848 n_restricted=30(17/13) rhoP=-0.7606 rho0=-0.7990 dz=+0.0983 dz_aligned=+0.4130
+EleutherAI_pythia-1.4b: fraction=0.8527 beta=+0.1693 t=+2.2964 n_restricted=30(17/13) rhoP=-0.7069 rho0=-0.7868 dz=+0.1819 dz_aligned=+0.4686
+EleutherAI_pythia-2.8b: fraction=0.7430 beta=+0.1006 t=+1.1476 n_restricted=29(17/12) rhoP=-0.7585 rho0=-0.8211 dz=+0.1674 dz_aligned=+0.3596
+allenai_OLMo-2-0425-1B: fraction=0.9659 beta=+0.0258 t=+0.3213 n_restricted=35(20/15) rhoP=-0.7647 rho0=-0.6992 dz=-0.1416 dz_aligned=+0.0967
+
+mean beta = +0.1005
+mean t    = +1.3139
+mean dz   = +0.0501
+mean dz_aligned = +0.2788
+
+== audit_l0p_permutation.py (seed 314159265, 5000 iters) ==
+observed mean t (A1)  = +1.3139
+observed mean dz (A2) = +0.0501
+seed = 314159265, n_perm = 5000
+A1 permutation p (two-tailed) = 0.0976   (claimed 0.0986)
+A2 permutation p (two-tailed) = 0.8120   (claimed 0.809)
+perm stat A1 mean=+0.0128 sd=0.7980
+perm stat A2 mean=-0.0014 sd=0.2049

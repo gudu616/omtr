@@ -136,6 +136,21 @@
       "sha256": "4f66e1a4d72c60be59734277567dc904b9e7d706fef4fb2decdae929cbafdf78"
     },
     {
+      "path": "harness/l0p_analysis.py",
+      "bytes": 31571,
+      "sha256": "ba0cf2794dad6cb2d257c42890b771b4018ec2d7116dbde3d1f4fad27f346cbc"
+    },
+    {
+      "path": "harness/l0p_calibration_schemes.py",
+      "bytes": 6317,
+      "sha256": "d5f5e9cc7c2d4f401f213a4baab8527f58850c4203f33b69cbf139f0ae017fc3"
+    },
+    {
+      "path": "harness/l0p_calibration_shared_null.py",
+      "bytes": 3607,
+      "sha256": "2d30e5907540a7d3d8be1f84f60e818889f6d2f378e0508adeb8d2b49b4d065b"
+    },
+    {
       "path": "harness/l0p_verify.py",
       "bytes": 2655,
       "sha256": "5cb23eb967632fb1a18c196e9646322a55599df8e14bbe9b41f2f42111835839"
@@ -162,8 +177,8 @@
     },
     {
       "path": "harness/reconcile.py",
-      "bytes": 78602,
-      "sha256": "f7891dcf0495fc09d12b2db412a0838ddef52d932a7d276c5e6e48e26d979f41"
+      "bytes": 88422,
+      "sha256": "b1f99170878aa3c747d698ec439f2c4ef05eac1366817036623fea35e88ec38c"
     },
     {
       "path": "harness/relative_depth_analysis.py",
@@ -189,6 +204,16 @@
       "path": "harness/verify_battery.py",
       "bytes": 8177,
       "sha256": "e6cfbfb9e23c07663aecc033bfcfcc57b7cd9ce92b9fd9fd59015f812946f64d"
+    },
+    {
+      "path": "docs/WRITEUP_v0.7_EN.md",
+      "bytes": 62402,
+      "sha256": "ce5009fc84c9fb3875ee0f8a79f536dab69c3f837727517b4de04ce4e68e5f38"
+    },
+    {
+      "path": "docs/WRITEUP_v0.7_ZH.md",
+      "bytes": 66315,
+      "sha256": "5307443df4efca954dc043effbc02144593a7586daa88c8669d87e0fa92e47c4"
     },
     {
       "path": "docs/WRITEUP_v0.6_EN.md",
@@ -321,9 +346,19 @@
       "sha256": "adc7b9d6445d51348dda95fa757129c9fc365e628c192649bbf2d1f95afa75c0"
     },
     {
+      "path": "docs/learn/23-permutation-calibration.md",
+      "bytes": 4751,
+      "sha256": "fa36c6499e72f98e032753e8df4f4235810fc189bbf1d5f725f12a97136a4735"
+    },
+    {
+      "path": "docs/learn/24-decision-rule-reachability.md",
+      "bytes": 4651,
+      "sha256": "c8961642403b2896faab62f324621b6de1ce5132fa77d3bf9b4d407dea741bc2"
+    },
+    {
       "path": "docs/learn/index.md",
-      "bytes": 2647,
-      "sha256": "0cfe01d88b07211a6189bddb24e6c95dea3c3f3d2282c1086013a45c71615d47"
+      "bytes": 2870,
+      "sha256": "a62b62154df3c76b3f7d1da73b51e627d37d722ccefe35d080371b04527abdd4"
     },
     {
       "path": "results/analysis_allenai_OLMo-2-0425-1B.json",
@@ -526,21 +561,81 @@
       "sha256": "14ab4b76d55b9f33292aed2721f78138d4155410de8305ebe3da02da4dadb9df"
     },
     {
+      "path": "results/l0p/l0p_analysis.json",
+      "bytes": 9375,
+      "sha256": "216648491c9bddfc8c2f46780d399a416a0f8c43e6e25634e35d899f1cf7d0f2"
+    },
+    {
+      "path": "results/l0p/perm_cache.json",
+      "bytes": 403,
+      "sha256": "a18812b9432712de190342bead749a1c7c1227a10d8d1e9de6e0fee2590d9f57"
+    },
+    {
+      "path": "results/l0p/pilot_allenai_OLMo-2-0425-1B.json",
+      "bytes": 188423,
+      "sha256": "bd4a3346a584e067982a818d64add886b9d9e110726f6bbea24528bc8f145b27"
+    },
+    {
+      "path": "results/l0p/pilot_EleutherAI_pythia-1.4b.json",
+      "bytes": 256520,
+      "sha256": "74e9a67b8081a049b6839dfef646cec94a0adfbd8af8f43a9ffa726edb8e09b2"
+    },
+    {
+      "path": "results/l0p/pilot_EleutherAI_pythia-1b.json",
+      "bytes": 187891,
+      "sha256": "b4a9028bbb7fb8ca8914ffa66dcc092a6e863e079c3b3e5ccd296267500ea3b3"
+    },
+    {
+      "path": "results/l0p/pilot_EleutherAI_pythia-2.8b.json",
+      "bytes": 313622,
+      "sha256": "b3adc956a511f9a4b6e1c077b96b74ac11ba370c4e95a9f247957e19df038927"
+    },
+    {
+      "path": "results/l0p/pilot_EleutherAI_pythia-410m.json",
+      "bytes": 257154,
+      "sha256": "269b436825132603feb3c0750481883829809a8afdf359fed441ce7a120df29c"
+    },
+    {
+      "path": "results/l0p/L0P_ANALYSIS.md",
+      "bytes": 3489,
+      "sha256": "4c58011ce48293709c53bd8f34a7268cf7f5d96c6c287fc649f8dfedb4b76612"
+    },
+    {
+      "path": "results/l0p/audit_l0p_independent.py",
+      "bytes": 4682,
+      "sha256": "cb0b5db259c45ad620f3295852174b4126f908c3dbc91b621c6dcd147d0b7750"
+    },
+    {
+      "path": "results/l0p/audit_l0p_permutation.py",
+      "bytes": 4940,
+      "sha256": "eaa8d286b6eb4cb35bf735f98df5ce7016d809bae165e8ab0efccd06e432534c"
+    },
+    {
+      "path": "results/l0p/calibration_report.txt",
+      "bytes": 928,
+      "sha256": "b7c6c3eca95a90abf3660f9fc7f9c58fbeb5ab0df453cbaff12658e890335cc9"
+    },
+    {
+      "path": "results/l0p/independent_audit_report.txt",
+      "bytes": 1341,
+      "sha256": "dfceab764a893b53c3583837ae62f8d3c56b437cc67044e8ee3dd0a54a5d26b4"
+    },
+    {
       "path": "DISCLOSURE.md",
       "bytes": 4158,
       "sha256": "e6b85ca175563e6d95ee9c290ce10e98432fbf2ac78a6e930fb3decf0637dfaf"
     },
     {
       "path": "PROCESS_LOG.md",
-      "bytes": 27926,
-      "sha256": "1d8f8b33990a006f89fa3d66da61532dbea667ad48318455e1f0b05e0330db7d"
+      "bytes": 37865,
+      "sha256": "9a1e5da306fda5d94f5a272c424905ba783d3986a6ffe21b633b523f6719cdbc"
     },
     {
       "path": "README.md",
-      "bytes": 3577,
-      "sha256": "474afd0756aaec2778a5f2af7d5a06ee05ce48fd6a654046642a58227f798a33"
+      "bytes": 5759,
+      "sha256": "99bde64d71f3b076c284484c4792d0fbd5cba2c2c6dcbe1e6e7124c2a26e794a"
     }
   ],
-  "count": 108,
-  "total_bytes": 13999174
+  "count": 127,
+  "total_bytes": 15429720
 }

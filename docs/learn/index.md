@@ -36,6 +36,8 @@
 - [20 下一步的工具預告：Patching 與 SAE](20-patching-sae.md)
 - [21 數字對帳與雙重捨入](21-double-rounding.md) — 308 個數字怎麼被機器看守
 - [22 同分天花板](22-tie-ceiling.md) — 相關係數的可達上限，與對自己開刀的誠實
+- [23 置換檢定與尺的校準](23-permutation-calibration.md) — 量真資料之前，先用假資料驗尺
+- [24 裁決規則的可點燃性](24-decision-rule-reachability.md) — 預註冊的門要先確認打得開
 
 ## 維護規則
 

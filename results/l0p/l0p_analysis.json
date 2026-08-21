@@ -1,0 +1,348 @@
+{
+  "generated_utc": "2026-08-21T08:37:02+00:00",
+  "script": "harness/l0p_analysis.py",
+  "prereg": "docs/PREREG_L0P.md (public commit 459710c)",
+  "runs": [
+    {
+      "tag": "EleutherAI_pythia-410m",
+      "n_l0": 17,
+      "n_l0p": 18
+    },
+    {
+      "tag": "EleutherAI_pythia-1b",
+      "n_l0": 17,
+      "n_l0p": 18
+    },
+    {
+      "tag": "EleutherAI_pythia-1.4b",
+      "n_l0": 17,
+      "n_l0p": 18
+    },
+    {
+      "tag": "EleutherAI_pythia-2.8b",
+      "n_l0": 17,
+      "n_l0p": 18
+    },
+    {
+      "tag": "allenai_OLMo-2-0425-1B",
+      "n_l0": 20,
+      "n_l0p": 18
+    }
+  ],
+  "A3": {
+    "per_model": [
+      {
+        "tag": "EleutherAI_pythia-410m",
+        "model": "EleutherAI/pythia-410m",
+        "l0_gold_range": [
+          -3.5861,
+          -0.056
+        ],
+        "l0p_gold_range": [
+          -3.5031,
+          -0.021
+        ],
+        "overlap_fraction_of_l0p_range": 0.9899,
+        "l0_width_over_l0p_width": 1.0138,
+        "passes_0.5": true
+      },
+      {
+        "tag": "EleutherAI_pythia-1b",
+        "model": "EleutherAI/pythia-1b",
+        "l0_gold_range": [
+          -3.2763,
+          -0.0539
+        ],
+        "l0p_gold_range": [
+          -3.3828,
+          -0.0086
+        ],
+        "overlap_fraction_of_l0p_range": 0.955,
+        "l0_width_over_l0p_width": 0.955,
+        "passes_0.5": true
+      },
+      {
+        "tag": "EleutherAI_pythia-1.4b",
+        "model": "EleutherAI/pythia-1.4b",
+        "l0_gold_range": [
+          -2.9658,
+          -0.0473
+        ],
+        "l0p_gold_range": [
+          -3.4445,
+          -0.0218
+        ],
+        "overlap_fraction_of_l0p_range": 0.8527,
+        "l0_width_over_l0p_width": 0.8527,
+        "passes_0.5": true
+      },
+      {
+        "tag": "EleutherAI_pythia-2.8b",
+        "model": "EleutherAI/pythia-2.8b",
+        "l0_gold_range": [
+          -2.5556,
+          -0.0196
+        ],
+        "l0p_gold_range": [
+          -3.4286,
+          -0.0155
+        ],
+        "overlap_fraction_of_l0p_range": 0.743,
+        "l0_width_over_l0p_width": 0.743,
+        "passes_0.5": true
+      },
+      {
+        "tag": "allenai_OLMo-2-0425-1B",
+        "model": "allenai/OLMo-2-0425-1B",
+        "l0_gold_range": [
+          -3.2805,
+          -0.0319
+        ],
+        "l0p_gold_range": [
+          -3.3853,
+          -0.0219
+        ],
+        "overlap_fraction_of_l0p_range": 0.9659,
+        "l0_width_over_l0p_width": 0.9659,
+        "passes_0.5": true
+      }
+    ],
+    "n_models_passing": 5,
+    "gate_passes": true
+  },
+  "A1": {
+    "estimand": "condition coefficient (L0=1) of rank ANCOVA, normalized ranks, within gold-overlap region; negative = memorized sharper at matched gold; permutation comparison uses the studentized coefficient",
+    "per_run": [
+      {
+        "tag": "EleutherAI_pythia-410m",
+        "model": "EleutherAI/pythia-410m",
+        "overlap_interval_gold": [
+          -3.5031,
+          -0.056
+        ],
+        "n_in_overlap": 31,
+        "n_l0_in": 16,
+        "n_l0p_in": 15,
+        "included": true,
+        "beta_condition": 0.1221,
+        "t_condition": 1.62,
+        "p_permutation_two_sided_marginal": 0.1163
+      },
+      {
+        "tag": "EleutherAI_pythia-1b",
+        "model": "EleutherAI/pythia-1b",
+        "overlap_interval_gold": [
+          -3.2763,
+          -0.0539
+        ],
+        "n_in_overlap": 30,
+        "n_l0_in": 17,
+        "n_l0p_in": 13,
+        "included": true,
+        "beta_condition": 0.0849,
+        "t_condition": 1.185,
+        "p_permutation_two_sided_marginal": 0.2415
+      },
+      {
+        "tag": "EleutherAI_pythia-1.4b",
+        "model": "EleutherAI/pythia-1.4b",
+        "overlap_interval_gold": [
+          -2.9658,
+          -0.0473
+        ],
+        "n_in_overlap": 30,
+        "n_l0_in": 17,
+        "n_l0p_in": 13,
+        "included": true,
+        "beta_condition": 0.1693,
+        "t_condition": 2.296,
+        "p_permutation_two_sided_marginal": 0.0279
+      },
+      {
+        "tag": "EleutherAI_pythia-2.8b",
+        "model": "EleutherAI/pythia-2.8b",
+        "overlap_interval_gold": [
+          -2.5556,
+          -0.0196
+        ],
+        "n_in_overlap": 29,
+        "n_l0_in": 17,
+        "n_l0p_in": 12,
+        "included": true,
+        "beta_condition": 0.1006,
+        "t_condition": 1.148,
+        "p_permutation_two_sided_marginal": 0.2621
+      },
+      {
+        "tag": "allenai_OLMo-2-0425-1B",
+        "model": "allenai/OLMo-2-0425-1B",
+        "overlap_interval_gold": [
+          -3.2805,
+          -0.0319
+        ],
+        "n_in_overlap": 35,
+        "n_l0_in": 20,
+        "n_l0p_in": 15,
+        "included": true,
+        "beta_condition": 0.0258,
+        "t_condition": 0.321,
+        "p_permutation_two_sided_marginal": 0.7492
+      }
+    ],
+    "n_models_included": 5,
+    "combined_mean_beta_observed": 0.1005,
+    "combined_mean_t_observed": 1.3139,
+    "permutation": {
+      "n_iterations": 20000,
+      "seed": 20260822,
+      "unit": "item (condition label permuted)",
+      "statistic": "mean over runs of studentized condition coefficient",
+      "sharing": "one permutation of the shared 35-item Pythia label vector per iteration; OLMo independent",
+      "null_mean": 0.0036,
+      "null_sd": 0.7965,
+      "degenerate_samples_stat_set_0": 0
+    },
+    "p_two_sided": 0.09859507024648767,
+    "p_mc_se": 0.00211,
+    "sign_pattern": {
+      "n_negative": 0,
+      "n_positive": 5,
+      "consistent_4_of_5": true
+    }
+  },
+  "A2": {
+    "statistic": "mean over runs of arctanh(rho_L0P) - arctanh(rho_L0), gold vs final_entropy_mean, full samples",
+    "exploratory_range_matched": {
+      "label": "EXPLORATORY (not registered): same contrast inside the A1 gold-overlap region, to separate range restriction from a real slope difference",
+      "per_run": [
+        {
+          "tag": "EleutherAI_pythia-410m",
+          "rho_l0p": -0.689,
+          "rho_l0": -0.718,
+          "dz": 0.0562,
+          "note": null
+        },
+        {
+          "tag": "EleutherAI_pythia-1b",
+          "rho_l0p": -0.593,
+          "rho_l0": -0.799,
+          "dz": 0.413,
+          "note": null
+        },
+        {
+          "tag": "EleutherAI_pythia-1.4b",
+          "rho_l0p": -0.533,
+          "rho_l0": -0.787,
+          "dz": 0.4686,
+          "note": null
+        },
+        {
+          "tag": "EleutherAI_pythia-2.8b",
+          "rho_l0p": -0.664,
+          "rho_l0": -0.821,
+          "dz": 0.3596,
+          "note": null
+        },
+        {
+          "tag": "allenai_OLMo-2-0425-1B",
+          "rho_l0p": -0.646,
+          "rho_l0": -0.699,
+          "dz": 0.0967,
+          "note": null
+        }
+      ],
+      "mean_dz_over_valid_runs": 0.2788,
+      "n_valid_runs": 5
+    },
+    "per_run": [
+      {
+        "tag": "EleutherAI_pythia-410m",
+        "model": "EleutherAI/pythia-410m",
+        "rho_l0p": -0.769,
+        "rho_l0": -0.745,
+        "dz": -0.0556
+      },
+      {
+        "tag": "EleutherAI_pythia-1b",
+        "model": "EleutherAI/pythia-1b",
+        "rho_l0p": -0.761,
+        "rho_l0": -0.799,
+        "dz": 0.0983
+      },
+      {
+        "tag": "EleutherAI_pythia-1.4b",
+        "model": "EleutherAI/pythia-1.4b",
+        "rho_l0p": -0.707,
+        "rho_l0": -0.787,
+        "dz": 0.1819
+      },
+      {
+        "tag": "EleutherAI_pythia-2.8b",
+        "model": "EleutherAI/pythia-2.8b",
+        "rho_l0p": -0.759,
+        "rho_l0": -0.821,
+        "dz": 0.1674
+      },
+      {
+        "tag": "allenai_OLMo-2-0425-1B",
+        "model": "allenai/OLMo-2-0425-1B",
+        "rho_l0p": -0.765,
+        "rho_l0": -0.699,
+        "dz": -0.1416
+      }
+    ],
+    "combined_mean_dz_observed": 0.0501,
+    "null_sd": 0.2074,
+    "p_two_sided": 0.8090595470226488,
+    "p_mc_se": 0.00278,
+    "skipped_degenerate": 0
+  },
+  "verdict": {
+    "rule": "none",
+    "statement": "No registered decision rule fired (pattern falls between R-generic and R-memo). Report the observed pattern as exploratory; draw no registered conclusion."
+  },
+  "exploratory_loo": {
+    "label": "EXPLORATORY leave-one-out over boundary-defining items; no verdict role",
+    "n_reruns": 6,
+    "per_rerun": [
+      {
+        "dropped_item": "L0-06",
+        "combined_mean_t": 1.3232,
+        "p_two_sided": 0.09634518274086296
+      },
+      {
+        "dropped_item": "L0-10",
+        "combined_mean_t": 1.3722,
+        "p_two_sided": 0.0864456777161142
+      },
+      {
+        "dropped_item": "L0-11",
+        "combined_mean_t": 1.3939,
+        "p_two_sided": 0.08339583020848958
+      },
+      {
+        "dropped_item": "L0-15",
+        "combined_mean_t": 1.3594,
+        "p_two_sided": 0.08969551522423878
+      },
+      {
+        "dropped_item": "L0-18",
+        "combined_mean_t": 1.268,
+        "p_two_sided": 0.11174441277936104
+      },
+      {
+        "dropped_item": "L0P-05",
+        "combined_mean_t": 1.3567,
+        "p_two_sided": 0.09609519524023799
+      }
+    ],
+    "combined_t_range": [
+      1.268,
+      1.3939
+    ],
+    "p_range": [
+      0.0834,
+      0.11174
+    ]
+  }
+}

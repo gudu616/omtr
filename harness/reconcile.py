@@ -562,9 +562,161 @@ def build_stats(raw: Raw) -> dict:
         S["tfcollapse.min"] = min(tfc)   # 最負（塌得最死）
         S["tfcollapse.max"] = max(tfc)
 
+    add_l0p_stats(S)
+
     add_v03_stats(raw, S)
 
     return S
+
+
+# ---------------------------------------------------------------- L0P 預註冊分析
+#
+# 來源是 results/l0p/pilot_*.json（一手量測輸出）＋ results/raw 的 L0 —— 都是 raw。
+# 邏輯**直接 import harness/l0p_analysis.py**（凍結的預註冊實作），不另行改寫：
+# 置換檢定的抽籤順序是規格的一部分，改寫版只要順序差一步就會產生假警報。
+# 獨立第二實作的複核由稽核代理一次性完成，不放在對帳器裡。
+#
+# 置換 p（20000 次，約 85 秒）與 LOO（6 次重跑，約 150 秒）太貴，不能每次呼叫都付：
+# 用「輸入雜湊」快取——key = SHA256(分析腳本位元組 ＋ 五模型 L0/L0P 每筆
+# (id, gold, entropy, cond) ＋ seed ＋ 迭代數)。輸入有任何一位元改變就重算。
+# 快取檔不是被信任的中間值：它帶著自己的失效證明。
+
+def _l0p_module():
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(
+        "l0p_analysis", PROJ / "harness" / "l0p_analysis.py")
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def add_l0p_stats(S: dict) -> None:
+    import hashlib
+    if not (PROJ / "results" / "l0p").is_dir():
+        return
+    try:
+        mod = _l0p_module()
+        runs = mod.load_all()
+    except (SystemExit, FileNotFoundError):
+        return
+
+    short_of = {tag: s for s, tag in TAGS.items()}
+
+    a3 = mod.a3_overlap(runs)
+    for m in a3["per_model"]:
+        t = short_of.get(m["tag"], m["tag"])
+        S[f"l0p.{t}.overlap_frac"] = float(m["overlap_fraction_of_l0p_range"])
+        S[f"l0p.{t}.width_ratio"] = (None if m["l0_width_over_l0p_width"] is None
+                                     else float(m["l0_width_over_l0p_width"]))
+    S["l0p.a3.n_pass"] = float(a3["n_models_passing"])
+    ovs = [S[f"l0p.{short_of[m['tag']]}.overlap_frac"] for m in a3["per_model"]]
+    S["l0p.a3.overlap_min"] = min(ovs)
+    S["l0p.a3.overlap_max"] = max(ovs)
+    S["l0p.a3.overlap_min_pct"] = min(ovs) * 100.0   # 稿件以百分比引用
+    S["l0p.a3.overlap_max_pct"] = max(ovs) * 100.0
+
+    betas, ts, dzs, rps = [], [], [], []
+    for r in runs:
+        t = short_of.get(r["tag"], r["tag"])
+        idx, _ = mod.restrict_overlap(r)
+        fit = mod.fit_ancova(r["gold"][idx], r["ent"][idx], r["cond"][idx])
+        if fit is not None:
+            S[f"l0p.{t}.beta"], S[f"l0p.{t}.t"] = fit
+            betas.append(fit[0]); ts.append(fit[1])
+        S[f"l0p.{t}.n_overlap"] = float(len(idx))
+        rp, r0, dz = mod.rho_diff(r["gold"], r["ent"], r["cond"])
+        if dz is not None:
+            S[f"l0p.{t}.rho_within"] = rp        # 自創詞組內劑量反應（gold vs 熵）
+            S[f"l0p.{t}.rho_l0_ent"] = r0
+            S[f"l0p.{t}.dz"] = dz
+            dzs.append(dz); rps.append(rp)
+    if betas:
+        S["l0p.combined.mean_beta"] = float(np.mean(betas))
+        S["l0p.combined.mean_t"] = float(np.mean(ts))
+        S["l0p.beta.min"] = min(betas)
+        S["l0p.beta.max"] = max(betas)
+    if dzs:
+        S["l0p.combined.mean_dz"] = float(np.mean(dzs))
+        S["l0p.rho_within.min"] = min(rps)       # 最負
+        S["l0p.rho_within.max"] = max(rps)
+
+    # 量程對齊的斜率對比（探索性伴隨量:同一個 dz,只算 A1 重疊區內)
+    mdzs = []
+    for r in runs:
+        idx, _ = mod.restrict_overlap(r)
+        _, _, dz = mod.rho_diff(r["gold"][idx], r["ent"][idx], r["cond"][idx])
+        if dz is not None:
+            t = short_of.get(r["tag"], r["tag"])
+            S[f"l0p.{t}.dz_matched"] = dz
+            mdzs.append(dz)
+    if mdzs:
+        S["l0p.combined.mean_dz_matched"] = float(np.mean(mdzs))
+
+    # 稿件引用的樣本數與寬度比極值
+    wrs = [S[f"l0p.{short_of[m['tag']]}.width_ratio"] for m in a3["per_model"]
+           if S.get(f"l0p.{short_of[m['tag']]}.width_ratio") is not None]
+    if wrs:
+        S["l0p.width_ratio.min"] = min(wrs)
+        S["l0p.width_ratio.max"] = max(wrs)
+    novs = [S[f"l0p.{short_of[m['tag']]}.n_overlap"] for m in a3["per_model"]]
+    S["l0p.n_overlap.min"] = min(novs)
+    S["l0p.n_overlap.max"] = max(novs)
+    cells = []
+    for r in runs:
+        idx, _ = mod.restrict_overlap(r)
+        c = r["cond"][idx]
+        cells += [float(c.sum()), float(len(c) - c.sum())]
+    S["l0p.n_cell.min"] = min(cells)
+
+    # 稿件引用的探測窗實測（battery/l0p_verification.json 是一手查證輸出）
+    vpath = PROJ / "battery" / "l0p_verification.json"
+    if vpath.is_file():
+        ver = json.load(open(vpath, encoding="utf-8"))
+        counts = [p["count"] for it in ver for ps in it["probes"].values()
+                  for p in ps if p["status"] == "ok"]
+        S["l0p.probes.n_windows"] = float(len(counts))
+        S["l0p.probes.n_zero"] = float(sum(1 for c in counts if c == 0))
+        S["l0p.probes.max"] = float(max(counts)) if counts else None
+
+    # ---- 置換 p 與 LOO：輸入雜湊快取
+    h = hashlib.sha256()
+    h.update((PROJ / "harness" / "l0p_analysis.py").read_bytes())
+    for r in runs:
+        for i, g, e, c in zip(r["ids"], r["gold"], r["ent"], r["cond"]):
+            h.update(f"{i}|{g!r}|{e!r}|{c}".encode())
+    h.update(f"{mod.SEED}|{mod.N_ITER}".encode())
+    key = h.hexdigest()
+
+    cache_path = PROJ / "results" / "l0p" / "perm_cache.json"
+    vals = None
+    if cache_path.is_file():
+        try:
+            c = json.load(open(cache_path, encoding="utf-8"))
+            if c.get("key") == key:
+                vals = c["vals"]
+        except (json.JSONDecodeError, KeyError):
+            vals = None
+    if vals is None:
+        print("[reconcile] L0P 置換快取失效，重算中（約 4 分鐘）…", file=sys.stderr)
+        ss = np.random.SeedSequence(mod.SEED)
+        rng_a1, rng_a2 = (np.random.default_rng(cc) for cc in ss.spawn(2))
+        a1 = mod.a1_primary(runs, rng_a1)
+        a2 = mod.a2_slopes(runs, rng_a2)
+        loo = mod.a1_loo_sensitivity(runs, np.random.SeedSequence(mod.SEED + 1))
+        vals = {
+            "A1.p": a1["p_two_sided"],
+            "A2.p": a2["p_two_sided"],
+            "loo.p_min": loo["p_range"][0], "loo.p_max": loo["p_range"][1],
+            "loo.t_min": loo["combined_t_range"][0],
+            "loo.t_max": loo["combined_t_range"][1],
+            **{f"marginal.{short_of.get(r['tag'], r['tag'])}.p":
+               r["p_permutation_two_sided_marginal"]
+               for r in a1["per_run"] if r.get("included")},
+        }
+        json.dump({"key": key, "vals": vals}, open(cache_path, "w", encoding="utf-8"),
+                  ensure_ascii=False, indent=1)
+    for k, v in vals.items():
+        S[f"l0p.{k}"] = float(v)
 
 
 # ---------------------------------------------------------------- 值域索引
@@ -981,6 +1133,49 @@ SITES: list = [
     Site("16-effect-size-dose.md", r"算出 gold_logprob 對 depth_tau_0\.1 的相關，得到",
          label="卡 16 五模型 L0 組內 rho（答辯）",
          slots=[(i, f"within.{t}.L0.rho", V) for i, t in enumerate(ORDER)]),
+
+    # ---- v0.7 L0P 交叉對照（新頂部章節；ZH 版由值域掃描覆蓋）
+    Site("WRITEUP_v0.7*.md", r"memorized items' gold range covers ",
+         label="v0.7 A3 重疊百分比極值",
+         slots=[(0, "l0p.a3.overlap_min_pct", V), (1, "l0p.a3.overlap_max_pct", V)]),
+    Site("WRITEUP_v0.7*.md",
+         r"Within L0P, gold log-probability tracks final-layer entropy at rho ",
+         label="v0.7 L0P 組內 rho 極值 + L0 對照極值",
+         slots=[(0, "l0p.rho_within.max", V), (1, "l0p.rho_within.min", V),
+                (2, "goldent.max", V), (3, "goldent.min", V)]),
+    Site("WRITEUP_v0.7*.md", r"The registered slope comparison \(A2\) finds",
+         label="v0.7 A2 合併 dz 與置換 p",
+         slots=[(0, "l0p.combined.mean_dz", V), (1, "l0p.A2.p", V)]),
+    Site("WRITEUP_v0.7*.md",
+         r"puts the condition coefficient \*\*positive in all five runs\*\*",
+         label="v0.7 A1 β 極值、合併 t、合併 p",
+         slots=[(0, "l0p.beta.min", V), (1, "l0p.beta.max", V),
+                (2, "l0p.combined.mean_t", V), (3, "l0p.A1.p", V)]),
+    Site("WRITEUP_v0.7*.md", r"keeps p within \[",
+         label="v0.7 LOO p 範圍",
+         slots=[(0, "l0p.loo.p_min", V), (1, "l0p.loo.p_max", V)]),
+    Site("WRITEUP_v0.7*.md",
+         r"only nominally significant single run is Pythia-1\.4B",
+         label="v0.7 1.4B 邊際格",
+         slots=[(0, "l0p.1.4b.beta", V), (1, "l0p.marginal.1.4b.p", V)]),
+    Site("WRITEUP_v0.7*.md", r"The same contrast restricted to the matched gold region",
+         label="v0.7 量程對齊 dz（平均+逐模型+寬度比極值）",
+         slots=[(0, "l0p.combined.mean_dz_matched", V),
+                (1, "l0p.410m.dz_matched", V), (2, "l0p.1b.dz_matched", V),
+                (3, "l0p.1.4b.dz_matched", V), (4, "l0p.2.8b.dz_matched", V),
+                (5, "l0p.olmo.dz_matched", V),
+                (6, "l0p.width_ratio.min", V), (7, "l0p.width_ratio.max", V)]),
+    Site("WRITEUP_v0.7*.md", r"per-model samples n = ",
+         label="v0.7 A1 樣本數極值與最小條件格",
+         slots=[(0, "l0p.n_overlap.min", V), (1, "l0p.n_overlap.max", V),
+                (2, "l0p.n_cell.min", V)]),
+    Site("WRITEUP_v0.7*.md", r"probe protocol as the original control — ",
+         label="v0.7 探測窗實測全零",
+         slots=[(0, "l0p.probes.n_windows", V)]),
+    Site("WRITEUP_v0.7*.md",
+         r"v0\.7 note: the preregistered L0P crossed control has now run",
+         label="v0.7 What-stands 註記 rho 範圍",
+         slots=[(0, "l0p.rho_within.max", V), (1, "l0p.rho_within.min", V)]),
 ]
 
 
@@ -1367,7 +1562,13 @@ def selftest() -> int:
                 ("tokperword.1.4b.p", 0.0005, 0.0002),
                 ("tokperword.olmo.p", 0.0002, 0.0002),
                 ("words.1.4b.p", 1.0, 0.0),
-                ("words.olmo.p", 1.0, 0.0)):
+                ("words.olmo.p", 1.0, 0.0),
+                # L0P 預註冊分析（2026-08-21 解盲值;raw 或腳本一變就該炸）
+                ("l0p.a3.n_pass", 5.0, 0.0),
+                ("l0p.combined.mean_t", 1.314, 0.002),
+                ("l0p.combined.mean_dz", 0.0501, 0.002),
+                ("l0p.A1.p", 0.09860, 0.0002),
+                ("l0p.A2.p", 0.80906, 0.0002)):
             got = stats.get(key)
             good = got is not None and abs(got - want) <= tol
             print(f"   {'OK  ' if good else 'FAIL'}  {key:28s} = {got}（應為 {want}±{tol}）")
