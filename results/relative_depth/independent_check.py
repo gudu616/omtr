@@ -39,8 +39,12 @@ from itertools import combinations
 
 from scipy.stats import spearmanr
 
-RAW = r"D:/ai/research/omtr/results/raw"
-OUT_DIR = r"D:/ai/research/omtr/results/relative_depth"
+# v1.0.2：原本寫死 D:/ai/research/omtr（該路徑在任何機器上都已不存在，含作者本人的）。
+# 改成相對於本檔位置推出倉庫根，換機、換碟、換作業系統都成立。
+from pathlib import Path as _P
+_ROOT = _P(__file__).resolve().parents[2]
+RAW = str(_ROOT / "results" / "raw")
+OUT_DIR = str(_ROOT / "results" / "relative_depth")
 OUT_JSON = os.path.join(OUT_DIR, "independent_check.json")
 
 MODELS = [

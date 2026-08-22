@@ -11,7 +11,10 @@ SEED = 314159265
 rng = np.random.default_rng(SEED)
 N_PERM = 5000
 
-with open(r"C:\Users\USER\AppData\Local\Temp\claude\D--ai----\791f0911-cf6e-4aee-aed2-337be19acbbc\scratchpad\audit_results.pkl", "rb") as f:
+import tempfile
+from pathlib import Path
+# v1.0.2：同 audit_l0p_independent.py，改讀系統暫存目錄。
+with open(str(Path(tempfile.gettempdir()) / "omtr_audit_results.pkl"), "rb") as f:
     R = pickle.load(f)
 
 TAGS = list(R.keys())

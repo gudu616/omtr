@@ -120,7 +120,10 @@ print(f"mean dz   = {mean_dz:+.4f}")
 print(f"mean dz_aligned = {mean_dz_aligned:+.4f}")
 
 # save results for reuse in permutation test
-import pickle
-with open(r"C:\Users\USER\AppData\Local\Temp\claude\D--ai----\791f0911-cf6e-4aee-aed2-337be19acbbc\scratchpad\audit_results.pkl", "wb") as f:
+import pickle, tempfile
+from pathlib import Path
+# v1.0.2：原為某次 agent 稽核留下的一次性暫存絕對路徑，換機即死。
+# 改用系統暫存目錄，跨平台且與 audit_l0p_permutation.py 對得上。數值計算未動。
+with open(str(Path(tempfile.gettempdir()) / "omtr_audit_results.pkl"), "wb") as f:
     pickle.dump(results, f)
 

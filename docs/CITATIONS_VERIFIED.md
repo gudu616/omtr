@@ -13,6 +13,25 @@ separate rows below because they are separate claims.
 
 18 distinct reference entries, 19 URLs checked (one entry carries two URLs).
 
+## Addendum, 2026-08-22 — four works verified after v1.0 shipped
+
+These four were raised by an external reviewer of the published package (see
+`docs/CORRECTION_20260822_REPRODUCIBILITY.md` §6). Full texts were downloaded to
+local files and quoted by grepping the raw source; nothing below rests on a
+search summary, an abstract, or a tool's paraphrase.
+
+| arXiv | title / authors (verbatim from source) | verified how | status |
+|---|---|---|---|
+| 2112.12938 | *Counterfactual Memorization in Neural Language Models* — Zhang, Ippolito, Lee, Jagielski, Tramèr, Carlini | local HTML snapshot, grepped | **should have been cited in v1.0 §3 and was not.** Canonical prior treatment of "common ≠ memorized". Not preempting: operationalises *near-duplicate count* (string "predictable" occurs zero times in full text); estimator is "we train 400 models for each dataset" |
+| 2602.18733 | *Prior Aware Memorization: An Efficient Metric for Distinguishing Memorization from Generalization in Large Language Models* — Tiwari, Trachtenberg, Suh | local HTML snapshot, grepped | corroborating, not preempting. Verbatim: "such methods may misclassify popular sequences as memorized". "activation patching" occurs zero times — it is a probability-ratio score, not a causal intervention |
+| 2510.19811 | *Hubble: a Model Suite to Advance the Study of LLM Memorization* | local HTML snapshot, grepped | future platform, not prior art for our analysis. Recorded as the natural next testbed |
+| 2412.18497 | *Think or Remember?* (neuron-level differentiation) | local HTML snapshot, grepped 2026-08-21 | full text read **before** publication; decision not to cite stands (different construct — replication of seen *incorrect* answers, synthetic tasks, no predictability-matched control, "predictab*" zero hits). The defect was that this decision never reached the reader |
+
+**Outstanding.** Hubble attributes the "hard to disentangle *easy* from *repeatedly
+trained on*" framing to Huang et al. 2024. We have not read it. Under this project's
+standing rule, knowing a paper exists licenses no statement about it in either
+direction. It is the one open item on this thread.
+
 ## Scope — what this log does and does not cover
 
 **Which documents it covers.** This log verifies the reference list carried by the

@@ -20,7 +20,13 @@ restore the clean activation at one of three layer bands, measure what the patch
 On the arm built to remove the predictability confound, recovering the memorized
 association and recovering a merely predictable continuation are **indistinguishable in
 all three bands**, with the registered equivalence test passing at 0.309 nats (Pythia,
-realized n=16) and 0.514 nats (OLMo, n=6). The secondary arm fired in the direction the
+realized n=16) and 0.514 nats (OLMo, n=6). Two qualifiers belong at this level rather
+than in a table footnote: OLMo's realized n=6 falls **below the smallest key (8) of the
+frozen power table**, so that boundary is extrapolated; and an equivalence result is
+only ever as strong as the width it rules out — these bounds are narrower than the
+−1.10 to −1.13 nats seen on the secondary arm, which is why the non-separation is
+informative rather than vacuous, but they do not exclude effects smaller than
+themselves. The secondary arm fired in the direction the
 memorization account does not predict — never-memorized predictable text recovered
 *better* — and permanently carries a registered, undetachable confound qualifier. A
 per-token position test and a 2×2 word-pool control, both preregistered, added a third
@@ -84,6 +90,17 @@ registration itself, as results.
 | [`docs/CORRECTION_20260821_ANCHOR.md`](docs/CORRECTION_20260821_ANCHOR.md) **(English + Chinese)** | The published v0.7.1 correction: what the "corpus duplication counts" anchor actually measures |
 
 ## Verify the numbers yourself
+
+> **Correction, 2026-08-22 (package v1.0.2).** In the v1.0 package, three of the
+> commands below did not run on a fresh clone, and one of them failed *silently*
+> in a way that produced a false negative verdict about this very design. All are
+> fixed; no reported number changed (1320/1320 values identical on recomputation).
+> What was broken, what it would have shown you, and the process defect underneath
+> it are in
+> [`docs/CORRECTION_20260822_REPRODUCIBILITY.md`](docs/CORRECTION_20260822_REPRODUCIBILITY.md).
+> To check the package yourself rather than take our word for it:
+> `python harness/verify_shipping.py --bundle .`
+
 
 Every statistic in the papers' results can be recomputed from the raw per-item outputs
 shipped here (the reconciliation gate does it mechanically); the calibration figures and

@@ -1,0 +1,279 @@
+{
+  "run_id": "winA2-20260822",
+  "spec_version": "CAUSAL_PREREG_v1 第一段凍結 + v2.6–v2.13（權威=裁決檔）",
+  "noise_floor": {
+    "floor_nats": 0.00014340877532958984,
+    "source": "cli"
+  },
+  "g1": {
+    "cells": {
+      "EleutherAI/pythia-1.4b|early|main": {
+        "pooled": {
+          "resid_mad_scale": 0.07582790655849798,
+          "dof": 6,
+          "valid": true,
+          "ratio_over_floor": 528.7536023107803,
+          "reading": "clearly_alive",
+          "S": 0.0,
+          "se_beta": null,
+          "outlier_dominated_flag": true
+        },
+        "item_fe": {
+          "resid_mad_scale": null,
+          "dof": -2,
+          "valid": false,
+          "ratio_over_floor": null,
+          "reading": null,
+          "S": 0.0,
+          "se_beta": null,
+          "outlier_dominated_flag": null
+        }
+      },
+      "EleutherAI/pythia-1.4b|early|cross_word": {
+        "pooled": {
+          "resid_mad_scale": 0.008851029097719766,
+          "dof": 6,
+          "valid": true,
+          "ratio_over_floor": 61.71888071268896,
+          "reading": "clearly_alive",
+          "S": 0.09510657300965164,
+          "se_beta": 0.035731307223027114,
+          "outlier_dominated_flag": false
+        },
+        "item_fe": {
+          "resid_mad_scale": 0.001964809799936397,
+          "dof": 2,
+          "valid": true,
+          "ratio_over_floor": 13.700764094950008,
+          "reading": "clearly_alive",
+          "S": 0.09510657300965164,
+          "se_beta": 0.02380733090031752,
+          "outlier_dominated_flag": true
+        }
+      },
+      "EleutherAI/pythia-1.4b|early|all": {
+        "pooled": {
+          "resid_mad_scale": 0.029843690213911932,
+          "dof": 15,
+          "valid": true,
+          "ratio_over_floor": 208.10225974891384,
+          "reading": "clearly_alive",
+          "S": 0.19546478039535486,
+          "se_beta": 0.22264068671685566,
+          "outlier_dominated_flag": true
+        },
+        "item_fe": {
+          "resid_mad_scale": 0.00752632557742858,
+          "dof": 7,
+          "valid": true,
+          "ratio_over_floor": 52.48162506186368,
+          "reading": "clearly_alive",
+          "S": 0.19546478039535486,
+          "se_beta": 0.022083009687920808,
+          "outlier_dominated_flag": false
+        }
+      },
+      "EleutherAI/pythia-1.4b|late|main": {
+        "pooled": {
+          "resid_mad_scale": 0.21008801876454564,
+          "dof": 6,
+          "valid": true,
+          "ratio_over_floor": 1464.9592975165567,
+          "reading": "clearly_alive",
+          "S": 0.0,
+          "se_beta": null,
+          "outlier_dominated_flag": false
+        },
+        "item_fe": {
+          "resid_mad_scale": null,
+          "dof": -2,
+          "valid": false,
+          "ratio_over_floor": null,
+          "reading": null,
+          "S": 0.0,
+          "se_beta": null,
+          "outlier_dominated_flag": null
+        }
+      },
+      "EleutherAI/pythia-1.4b|late|cross_word": {
+        "pooled": {
+          "resid_mad_scale": 0.05888292964268566,
+          "dof": 6,
+          "valid": true,
+          "ratio_over_floor": 410.5950246584124,
+          "reading": "clearly_alive",
+          "S": 0.09510657300965164,
+          "se_beta": 0.23608126592008616,
+          "outlier_dominated_flag": false
+        },
+        "item_fe": {
+          "resid_mad_scale": 0.026603500008500557,
+          "dof": 2,
+          "valid": true,
+          "ratio_over_floor": 185.50817373176045,
+          "reading": "clearly_alive",
+          "S": 0.09510657300965164,
+          "se_beta": 0.19822237874886073,
+          "outlier_dominated_flag": true
+        }
+      },
+      "EleutherAI/pythia-1.4b|late|all": {
+        "pooled": {
+          "resid_mad_scale": 0.20208454520597197,
+          "dof": 15,
+          "valid": true,
+          "ratio_over_floor": 1409.1504842819436,
+          "reading": "clearly_alive",
+          "S": 0.19546478039535486,
+          "se_beta": 0.4515002907008587,
+          "outlier_dominated_flag": false
+        },
+        "item_fe": {
+          "resid_mad_scale": 0.043858964830387294,
+          "dof": 7,
+          "valid": true,
+          "ratio_over_floor": 305.8318065236122,
+          "reading": "clearly_alive",
+          "S": 0.19546478039535486,
+          "se_beta": 0.19579296688625544,
+          "outlier_dominated_flag": true
+        }
+      },
+      "EleutherAI/pythia-1.4b|mid|main": {
+        "pooled": {
+          "resid_mad_scale": 0.1473017065874304,
+          "dof": 6,
+          "valid": true,
+          "ratio_over_floor": 1027.1456976666427,
+          "reading": "clearly_alive",
+          "S": 0.0,
+          "se_beta": null,
+          "outlier_dominated_flag": false
+        },
+        "item_fe": {
+          "resid_mad_scale": null,
+          "dof": -2,
+          "valid": false,
+          "ratio_over_floor": null,
+          "reading": null,
+          "S": 0.0,
+          "se_beta": null,
+          "outlier_dominated_flag": null
+        }
+      },
+      "EleutherAI/pythia-1.4b|mid|cross_word": {
+        "pooled": {
+          "resid_mad_scale": 0.028355811518705056,
+          "dof": 6,
+          "valid": true,
+          "ratio_over_floor": 197.72717153142258,
+          "reading": "clearly_alive",
+          "S": 0.09510657300965164,
+          "se_beta": 0.2934419991770573,
+          "outlier_dominated_flag": true
+        },
+        "item_fe": {
+          "resid_mad_scale": 0.006038991532118495,
+          "dof": 2,
+          "valid": true,
+          "ratio_over_floor": 42.11033472839689,
+          "reading": "clearly_alive",
+          "S": 0.09510657300965164,
+          "se_beta": 0.0456912624794823,
+          "outlier_dominated_flag": true
+        }
+      },
+      "EleutherAI/pythia-1.4b|mid|all": {
+        "pooled": {
+          "resid_mad_scale": 0.18186711653533053,
+          "dof": 15,
+          "valid": true,
+          "ratio_over_floor": 1268.1728584415678,
+          "reading": "clearly_alive",
+          "S": 0.19546478039535486,
+          "se_beta": 0.3666668724599367,
+          "outlier_dominated_flag": false
+        },
+        "item_fe": {
+          "resid_mad_scale": 0.008638887655457833,
+          "dof": 7,
+          "valid": true,
+          "ratio_over_floor": 60.23960274120933,
+          "reading": "clearly_alive",
+          "S": 0.19546478039535486,
+          "se_beta": 0.02857172068305303,
+          "outlier_dominated_flag": false
+        }
+      }
+    },
+    "n_valid_cells": 3,
+    "median_pooled_ratio": 528.7536023107803,
+    "verdict": "proceed：存在 Δs 以外結構（或混合型態，逐格見 cells）",
+    "notes": [
+      "G1-a 已降級為粗大失效偵測器（真退化偵測率 .206，v2.13）",
+      "G1 未點燃＝什麼都沒證明（不對稱閘門，附錄 C③）",
+      "不確定帶(3–10)視同未點燃（PF-2）"
+    ]
+  },
+  "redundancy_glink": {
+    "status": "MISSING"
+  },
+  "branch": {
+    "pooled_frac_bad": 0.0,
+    "branch_triggered": false,
+    "per_model_flagged_gt60": [],
+    "denominator_rule": "全部嘗試過的 (題 × 模型) 格，**扣除 rank_guard_zero_survivor 那些格**（v2.14）",
+    "rule": "併池壞題 >40% → 多 token 分支；單一模型 >60% 標記點名（v2.13D）"
+  },
+  "r_measurement_dof": {
+    "per_model": {
+      "EleutherAI/pythia-1.4b": {
+        "realized_dof": 7,
+        "n_bands_seen": 3,
+        "met": false
+      }
+    },
+    "target": 8,
+    "all_met": false,
+    "if_not_met": "對未達標之模型補題到達標，記錄補幾題，不得改門檻（附錄 C③；逐模型判＝v2.13 G 案）"
+  },
+  "k_rule": {
+    "var_ratio_dy_median": 0.010770318458215243,
+    "per_model": {
+      "EleutherAI/pythia-1.4b": {
+        "median_var_ratio": 0.010770318458215243,
+        "n_bands": 3
+      }
+    },
+    "k": 1,
+    "aggregation": "逐模型報＋全體中位數當 k 決策輸入（複核②建議）",
+    "rule": "r<0.5→1；0.5≤r<2→2；r≥2→3（PF-4，慣例；ΔY 尺度，v2.13F）"
+  },
+  "rho_gate": {
+    "per_model": {
+      "EleutherAI/pythia-1.4b": {
+        "n_pairs": 4,
+        "rho_hat": 0.9999784080186123,
+        "ci_threshold_equiv": 0.9281683082344766,
+        "ci90_lower": 0.9994205710478293,
+        "pass": true
+      }
+    },
+    "rho_variable": "起手窗 clean gold（PF-3；為效應層 ρ 之上界——窗口 A 有 patch 資料後必須在 ΔY 上重估，此值僅預篩）",
+    "rule": "ρ̂ > tanh(1.645/√(n−3)) 且 90% CI 下界 > 0（v2.3）",
+    "fail_wording_frozen": "在負擔得起的 n 下無法拆除混淆 (C)；主對比照 L0P 執行但其結論永久攜帶 (C) 未拆的限定語"
+  },
+  "l0m_pass_rule": {
+    "median_abs_dgold_whole": 0.01708507537841797,
+    "median_abs_dgold_onset": 0.05584454536437988,
+    "pass": true,
+    "rule": "中位|Δgold(整段)|≤0.5 且起手窗≤1.0（M2）"
+  },
+  "positive_control": {
+    "delta_y_pc": 1.240868091583252,
+    "delta_s_pc": 1.6651450768113136,
+    "threshold": 0.8325725384056568,
+    "pass": true,
+    "rule": "ΔY_pc ≥ max(10×底線, 0.5×Δs_pc)（PF-5；0.5 慣例）"
+  }
+}

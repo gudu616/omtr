@@ -30,7 +30,7 @@ Outputs
   results/relative_depth/relative_depth.json
   results/relative_depth/RELATIVE_DEPTH.md
 
-Run:  D:/ai/research/omtr/.venv/Scripts/python.exe harness/relative_depth_analysis.py
+Run:  python harness/relative_depth_analysis.py   (from the repository root)
 """
 
 from __future__ import annotations

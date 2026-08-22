@@ -1,0 +1,99 @@
+{
+ "arm": "L0M (registered primary per M3)",
+ "py_runs": [
+  7,
+  7,
+  7
+ ],
+ "union": 7,
+ "olmo_n": 7,
+ "permutation_floor_p": 0.015625,
+ "n_sim": 20000,
+ "B": 20000,
+ "eq_bound_sigma": 0.5,
+ "note": "2.8b excluded (v2.19 descriptive). Simulation only - no real data touched.",
+ "generator": "planning/office_reports/theory_v3_l0m_opchar.py",
+ "seed": 20260822,
+ "grid": [
+  {
+   "rho_fam": 0.0,
+   "delta": 0.0,
+   "R_specific": 0.022,
+   "R_entangled": 0.01405,
+   "wrong_direction": 0.01945,
+   "no_rule": 0.9445
+  },
+  {
+   "rho_fam": 0.0,
+   "delta": 0.15,
+   "R_specific": 0.0804,
+   "R_entangled": 0.00955,
+   "wrong_direction": 0.00335,
+   "no_rule": 0.9067000000000001
+  },
+  {
+   "rho_fam": 0.0,
+   "delta": 0.3,
+   "R_specific": 0.2314,
+   "R_entangled": 0.0051,
+   "wrong_direction": 0.00055,
+   "no_rule": 0.7629499999999999
+  },
+  {
+   "rho_fam": 0.0,
+   "delta": 0.5,
+   "R_specific": 0.54445,
+   "R_entangled": 0.00085,
+   "wrong_direction": 0.0,
+   "no_rule": 0.4547
+  },
+  {
+   "rho_fam": 0.0,
+   "delta": 0.8,
+   "R_specific": 0.89995,
+   "R_entangled": 0.0,
+   "wrong_direction": 0.0,
+   "no_rule": 0.10004999999999997
+  },
+  {
+   "rho_fam": 0.8,
+   "delta": 0.0,
+   "R_specific": 0.0199,
+   "R_entangled": 0.0104,
+   "wrong_direction": 0.01985,
+   "no_rule": 0.94985
+  },
+  {
+   "rho_fam": 0.8,
+   "delta": 0.15,
+   "R_specific": 0.06575,
+   "R_entangled": 0.0093,
+   "wrong_direction": 0.00425,
+   "no_rule": 0.9207000000000001
+  },
+  {
+   "rho_fam": 0.8,
+   "delta": 0.3,
+   "R_specific": 0.1572,
+   "R_entangled": 0.00555,
+   "wrong_direction": 0.001,
+   "no_rule": 0.8362499999999999
+  },
+  {
+   "rho_fam": 0.8,
+   "delta": 0.5,
+   "R_specific": 0.3877,
+   "R_entangled": 0.00205,
+   "wrong_direction": 0.0,
+   "no_rule": 0.6102500000000001
+  },
+  {
+   "rho_fam": 0.8,
+   "delta": 0.8,
+   "R_specific": 0.76815,
+   "R_entangled": 5e-05,
+   "wrong_direction": 0.0,
+   "no_rule": 0.2318
+  }
+ ]
+}

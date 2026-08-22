@@ -1,0 +1,2584 @@
+{
+ "reading": "B（§7-c 裁定①，77316c7）：欄因子＝替換池與該題文體合不合；verb×通用＝proper×通用＝24 詞、與文體無關；verb×修正＝proper×修正＝取自該題文體、逐題各自的尺寸（正常24；L0N-06/verb 因通用欄撞名截短為23，見 verbcue_genre_pools.md）",
+ "proper_L0_item_set_used": "L0_including_L0-14（8題版，ec35d1e 裁定：union+遮罩、L0-14 只入 OLMo）",
+ "cells": {
+  "verb_universal": {
+   "pool_class": "verb",
+   "column": "universal",
+   "pool_size": 24,
+   "pool_words": [
+    "carried",
+    "opened",
+    "walked",
+    "turned",
+    "answered",
+    "remembered",
+    "watched",
+    "followed",
+    "entered",
+    "offered",
+    "listened",
+    "returned",
+    "accepted",
+    "acted",
+    "baked",
+    "behaved",
+    "closed",
+    "compared",
+    "competed",
+    "died",
+    "disagreed",
+    "disturbed",
+    "dressed",
+    "dried"
+   ],
+   "pool_words_by_item": null,
+   "status": "ready",
+   "n_items": 8,
+   "item_ids": [
+    "L0-11",
+    "L0-19",
+    "L0-20",
+    "L0N-06",
+    "L0N-09",
+    "L0N-10",
+    "L0N-11",
+    "L0N-12"
+   ],
+   "items": {
+    "L0-11": {
+     "cue_word": "instituted",
+     "n_cues_this_class": 1,
+     "all_cues_this_class": [
+      "instituted"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0-11",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty, and the pursuit of Happiness. That to secure these rights, Governments are instituted among",
+      "gold_continuation": "Men, deriving their just powers from the consent of the governed, That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government, laying its foundation on",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:1",
+      "title": "Declaration self-evident truths",
+      "boundary_word": "Men,",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 59,
+       "allenai/OLMo-2-0425-1B": 56
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 50,
+       "allenai/OLMo-2-0425-1B": 49
+      }
+     }
+    },
+    "L0-19": {
+     "cue_word": "busied",
+     "n_cues_this_class": 1,
+     "all_cues_this_class": [
+      "busied"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0-19",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "No one would have believed in the last years of the nineteenth century that this world was being watched keenly and closely by intelligences greater than man's and yet as mortal as his own; that as men busied themselves about their various concerns they were",
+      "gold_continuation": "scrutinised and studied, perhaps almost as narrowly as a man with a microscope might scrutinise the transient creatures that swarm and multiply in a drop of water. With infinite complacency men went to and fro over this globe about their little affairs, serene in",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:36",
+      "title": "War of the Worlds opening",
+      "boundary_word": "scrutinised",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 50,
+       "allenai/OLMo-2-0425-1B": 50
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 51,
+       "allenai/OLMo-2-0425-1B": 50
+      }
+     }
+    },
+    "L0-20": {
+     "cue_word": "plucked",
+     "n_cues_this_class": 1,
+     "all_cues_this_class": [
+      "plucked"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0-20",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "All children, except one, grow up. They soon know that they will grow up, and the way Wendy knew was this. One day when she was two years old she was playing in a garden, and she plucked another flower and ran with it to her",
+      "gold_continuation": "mother. I suppose she must have looked rather delightful, for Mrs. Darling put her hand to her heart and cried, \"Oh, why can't you remain like this for ever!\" This was all that passed between them on the subject, but henceforth Wendy knew that",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:16",
+      "title": "Peter Pan opening",
+      "boundary_word": "mother.",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 53,
+       "allenai/OLMo-2-0425-1B": 53
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 55,
+       "allenai/OLMo-2-0425-1B": 54
+      }
+     }
+    },
+    "L0N-06": {
+     "cue_word": "baked",
+     "n_cues_this_class": 2,
+     "all_cues_this_class": [
+      "baked",
+      "boiled"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0N-06",
+      "level": "L0N",
+      "topic": "obscure-control",
+      "prompt": "For breakfast, rolled oats mush, baking-powder biscuit, boiled eggs or potatoes, and ham. For dinner, light bread or milk toast, beans or canned corn, salt-horse, creamed potatoes, and often soup with crackers. For supper, canned fruit, muffins or corn bread, boiled ham and baked",
+      "gold_continuation": "potatoes. Of course tea or coffee with each meal. The cook makes fine yeast bread, ten loaves a day. There are twenty-three men on board. Including the hired sailors who are not of the company, and even with five in the hospital we make",
+      "expected": "any fluent continuation (non-memorized control)",
+      "source": "gutenberg:65123",
+      "title": "control gutenberg:65123 @w1516",
+      "boundary_word": "potatoes.",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 68,
+       "allenai/OLMo-2-0425-1B": 66
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 54,
+       "allenai/OLMo-2-0425-1B": 52
+      }
+     }
+    },
+    "L0N-09": {
+     "cue_word": "associated",
+     "n_cues_this_class": 1,
+     "all_cues_this_class": [
+      "associated"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0N-09",
+      "level": "L0N",
+      "topic": "obscure-control",
+      "prompt": "¶¶Look back in your own lives, see what the things are that you are proudest of as you look back, and you will in almost every case and on every occasion find that those memories of pride are associated, not with days of ease, but with",
+      "gold_continuation": "days of effort, the day when you had to do all that was in you for some worthy end, and the worthiest of all worthy ends is to make those that are closest and nearest to you—your wife and your children, and those near",
+      "expected": "any fluent continuation (non-memorized control)",
+      "source": "gutenberg:66890",
+      "title": "control gutenberg:66890 @w1510",
+      "boundary_word": "days",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 53,
+       "allenai/OLMo-2-0425-1B": 54
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 50,
+       "allenai/OLMo-2-0425-1B": 50
+      }
+     }
+    },
+    "L0N-10": {
+     "cue_word": "offended",
+     "n_cues_this_class": 1,
+     "all_cues_this_class": [
+      "offended"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": false
+     },
+     "verified_in": [
+      "pile"
+     ],
+     "item": {
+      "id": "L0N-10",
+      "level": "L0N",
+      "topic": "obscure-control",
+      "prompt": "Let it pass! The accusation is familiar to my ears. I tired of resenting it before your fathers' fathers were born, and the scorn of your offended sense of veracity is less to me than the lisping of a child. I was, in the",
+      "gold_continuation": "very distance of the beginning, a citizen of that ancient city whose dominion once stretched from the blue waters of the Ægean round to and beyond the broad stream of the Nile herself. Your antiquities were then my household gods, your myths were my",
+      "expected": "any fluent continuation (non-memorized control)",
+      "source": "gutenberg:67345",
+      "title": "control gutenberg:67345 @w1517",
+      "boundary_word": "very",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b"
+      ],
+      "verified_in": [
+       "pile"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 54,
+       "allenai/OLMo-2-0425-1B": 53
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 52,
+       "allenai/OLMo-2-0425-1B": 52
+      }
+     }
+    },
+    "L0N-11": {
+     "cue_word": "bewildered",
+     "n_cues_this_class": 2,
+     "all_cues_this_class": [
+      "bewildered",
+      "squealed"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0N-11",
+      "level": "L0N",
+      "topic": "obscure-control",
+      "prompt": "Frank Merriwell's hearty laugh rang out. \"If this is a sample of what we'll strike in Morocco, we'll have fun,\" he cried. Ephraim came to the surface, spouting like a whale. \"Hang ye!\" he squealed, standing up and shaking his fist at the bewildered",
+      "gold_continuation": "Arab. \"Yeou wait till we git on dry land, critter! I'll fix ye!\" Then he began to wade ashore. \"I am surprised, Ephraim,\" said Frank, soberly, \"that you should make such a racket over a matter like this. The tan-colored gentleman simply wished to",
+      "expected": "any fluent continuation (non-memorized control)",
+      "source": "gutenberg:67901",
+      "title": "control gutenberg:67901 @w1503",
+      "boundary_word": "Arab.",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 65,
+       "allenai/OLMo-2-0425-1B": 64
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 67,
+       "allenai/OLMo-2-0425-1B": 66
+      }
+     }
+    },
+    "L0N-12": {
+     "cue_word": "avoided",
+     "n_cues_this_class": 1,
+     "all_cues_this_class": [
+      "avoided"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0N-12",
+      "level": "L0N",
+      "topic": "obscure-control",
+      "prompt": "BREAD. A supply of the soft part of home-made, if possible, or good ordinary baker's bread, one day old, is indispensable. This should not have any butter, or even milk, in its composition, otherwise it will grease the paper, which naturally should be avoided, as",
+      "gold_continuation": "grease spots are most difficult to overcome. The bread is used for rubbing out charcoal or crayon, erasing mistakes, and for taking out lights from a mass of dark. The soft crumb is rolled between the fingers until a point is formed, and then",
+      "expected": "any fluent continuation (non-memorized control)",
+      "source": "gutenberg:69012",
+      "title": "control gutenberg:69012 @w1510",
+      "boundary_word": "grease",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 61,
+       "allenai/OLMo-2-0425-1B": 59
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 53,
+       "allenai/OLMo-2-0425-1B": 52
+      }
+     }
+    }
+   }
+  },
+  "proper_universal": {
+   "pool_class": "proper",
+   "column": "universal",
+   "pool_size": 24,
+   "pool_words": [
+    "Thomas",
+    "Margaret",
+    "Henry",
+    "Eleanor",
+    "William",
+    "Charlotte",
+    "Edward",
+    "Frances",
+    "Arthur",
+    "Beatrice",
+    "Anthony",
+    "Barbara",
+    "Betty",
+    "Brian",
+    "Carol",
+    "Charles",
+    "Christopher",
+    "Daniel",
+    "David",
+    "Deborah",
+    "Donald",
+    "Donna",
+    "Dorothy",
+    "Elizabeth"
+   ],
+   "pool_words_by_item": null,
+   "status": "ready",
+   "n_items": 13,
+   "item_ids": [
+    "L0-03",
+    "L0-05",
+    "L0-06",
+    "L0-10",
+    "L0-11",
+    "L0-14",
+    "L0-15",
+    "L0-17",
+    "L0N-02",
+    "L0N-03",
+    "L0N-04",
+    "L0N-08",
+    "L0N-11"
+   ],
+   "items": {
+    "L0-03": {
+     "cue_word": "Light",
+     "n_cues_this_class": 1,
+     "all_cues_this_class": [
+      "Light"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0-03",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the",
+      "gold_continuation": "season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way--in short, the period was",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:98",
+      "title": "A Tale of Two Cities opening",
+      "boundary_word": "season",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 55,
+       "allenai/OLMo-2-0425-1B": 55
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 54,
+       "allenai/OLMo-2-0425-1B": 53
+      }
+     }
+    },
+    "L0-05": {
+     "cue_word": "Let",
+     "n_cues_this_class": 2,
+     "all_cues_this_class": [
+      "Let",
+      "God"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0-05",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "In the beginning God created the heaven and the earth. And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters. And God said, Let there be",
+      "gold_continuation": "light: and there was light. And God saw the light, that it was good: and God divided the light from the darkness. And God called the light Day, and the darkness he called Night. And the evening and the morning were the first day.",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:10",
+      "title": "KJV Genesis 1",
+      "boundary_word": "light:",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 51,
+       "allenai/OLMo-2-0425-1B": 51
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 52,
+       "allenai/OLMo-2-0425-1B": 52
+      }
+     }
+    },
+    "L0-06": {
+     "cue_word": "Yea",
+     "n_cues_this_class": 1,
+     "all_cues_this_class": [
+      "Yea"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0-06",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "The LORD is my shepherd; I shall not want. He maketh me to lie down in green pastures: he leadeth me beside the still waters. He restoreth my soul: he leadeth me in the paths of righteousness for his name's sake. Yea, though I",
+      "gold_continuation": "walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me. Thou preparest a table before me in the presence of mine enemies: thou anointest my head with",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:10",
+      "title": "KJV Psalm 23",
+      "boundary_word": "walk",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 59,
+       "allenai/OLMo-2-0425-1B": 58
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 53,
+       "allenai/OLMo-2-0425-1B": 52
+      }
+     }
+    },
+    "L0-10": {
+     "cue_word": "Blessed",
+     "n_cues_this_class": 1,
+     "all_cues_this_class": [
+      "Blessed"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0-10",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "Blessed are the poor in spirit: for theirs is the kingdom of heaven. Blessed are they that mourn: for they shall be comforted. Blessed are the meek: for they shall inherit the earth. Blessed are they which do hunger and thirst after righteousness: for they shall be",
+      "gold_continuation": "filled. Blessed are the merciful: for they shall obtain mercy. Blessed are the pure in heart: for they shall see God. Blessed are the peacemakers: for they shall be called the children of God. Blessed are they which are persecuted for righteousness' sake: for",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:10",
+      "title": "KJV Beatitudes",
+      "boundary_word": "filled.",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 61,
+       "allenai/OLMo-2-0425-1B": 58
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 62,
+       "allenai/OLMo-2-0425-1B": 57
+      }
+     }
+    },
+    "L0-11": {
+     "cue_word": "Governments",
+     "n_cues_this_class": 2,
+     "all_cues_this_class": [
+      "Governments",
+      "Happiness"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0-11",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty, and the pursuit of Happiness. That to secure these rights, Governments are instituted among",
+      "gold_continuation": "Men, deriving their just powers from the consent of the governed, That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government, laying its foundation on",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:1",
+      "title": "Declaration self-evident truths",
+      "boundary_word": "Men,",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 59,
+       "allenai/OLMo-2-0425-1B": 56
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 50,
+       "allenai/OLMo-2-0425-1B": 49
+      }
+     }
+    },
+    "L0-14": {
+     "cue_word": "Hath",
+     "n_cues_this_class": 3,
+     "all_cues_this_class": [
+      "Hath",
+      "Brutus",
+      "Caesar"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": false,
+      "EleutherAI/pythia-1b": false,
+      "EleutherAI/pythia-1.4b": false,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0-14",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "Friends, Romans, countrymen, lend me your ears; I come to bury Caesar, not to praise him. The evil that men do lives after them, The good is oft interred with their bones; So let it be with Caesar. The noble Brutus Hath told you",
+      "gold_continuation": "Caesar was ambitious. If it were so, it was a grievous fault, And grievously hath Caesar answer'd it. Here, under leave of Brutus and the rest, For Brutus is an honourable man, So are they all, all honourable men, Come I to speak in",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:100",
+      "title": "Julius Caesar funeral speech",
+      "boundary_word": "Caesar",
+      "eligible_models": [
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 59,
+       "allenai/OLMo-2-0425-1B": 56
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 62,
+       "allenai/OLMo-2-0425-1B": 60
+      }
+     }
+    },
+    "L0-15": {
+     "cue_word": "Twain",
+     "n_cues_this_class": 2,
+     "all_cues_this_class": [
+      "Twain",
+      "Mark"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0-15",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "You don't know about me without you have read a book by the name of The Adventures of Tom Sawyer; but that ain't no matter. That book was made by Mr. Mark Twain, and he told the truth, mainly. There was things which he",
+      "gold_continuation": "stretched, but mainly he told the truth. That is nothing. I never seen anybody but lied one time or another, without it was Aunt Polly, or the widow, or maybe Mary. Aunt Polly—Tom's Aunt Polly, she is—and Mary, and the Widow Douglas is all",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:76",
+      "title": "Huckleberry Finn opening",
+      "boundary_word": "stretched,",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 54,
+       "allenai/OLMo-2-0425-1B": 53
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 62,
+       "allenai/OLMo-2-0425-1B": 57
+      }
+     }
+    },
+    "L0-17": {
+     "cue_word": "Irene",
+     "n_cues_this_class": 1,
+     "all_cues_this_class": [
+      "Irene"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0-17",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "To Sherlock Holmes she is always the woman. I have seldom heard him mention her under any other name. In his eyes she eclipses and predominates the whole of her sex. It was not that he felt any emotion akin to love for Irene",
+      "gold_continuation": "Adler. All emotions, and that one particularly, were abhorrent to his cold, precise but admirably balanced mind. He was, I take it, the most perfect reasoning and observing machine that the world has seen, but as a lover he would have placed himself in",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:1661",
+      "title": "A Scandal in Bohemia opening",
+      "boundary_word": "Adler.",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 51,
+       "allenai/OLMo-2-0425-1B": 49
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 57,
+       "allenai/OLMo-2-0425-1B": 55
+      }
+     }
+    },
+    "L0N-02": {
+     "cue_word": "Excellent",
+     "n_cues_this_class": 4,
+     "all_cues_this_class": [
+      "Excellent",
+      "Sauce",
+      "Cups",
+      "Sauce"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0N-02",
+      "level": "L0N",
+      "topic": "obscure-control",
+      "prompt": "Continue beating until thick and very smooth. Stir in Salad Herbs. When you need a tasty sauce or gravy, SPICE ISLANDS Beef Stock Base comes to your rescue. There are countless variations you can try. Brown Sauce (2 Cups Sauce) Excellent with roast beef.",
+      "gold_continuation": "Indispensable when there's not enough drippings to make gravy or to serve with some leftover slices when the gravy's all gone. Use it as the basis of countless other sauces—and the classics such as Sauce Espagnole, Madeira Sauce, Ravigote, or Piquant Sauce. 2 tablespoons",
+      "expected": "any fluent continuation (non-memorized control)",
+      "source": "gutenberg:62345",
+      "title": "control gutenberg:62345 @w1503",
+      "boundary_word": "Indispensable",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 59,
+       "allenai/OLMo-2-0425-1B": 56
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 67,
+       "allenai/OLMo-2-0425-1B": 64
+      }
+     }
+    },
+    "L0N-03": {
+     "cue_word": "Nos",
+     "n_cues_this_class": 1,
+     "all_cues_this_class": [
+      "Nos"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0N-03",
+      "level": "L0N",
+      "topic": "obscure-control",
+      "prompt": "Unfortunately, one of our bombs wounded Private Taylor, but he was finally rescued by Private Cunliffe, a stretcher-bearer who had already behaved with great gallantry, bringing in the wounded under heavy shell-fire. Meanwhile a totally distinct fight took place at Nos. 13 and 14",
+      "gold_continuation": "Posts, generally known as Alton Post, where there was a machine-gun protected by a bombing-post, under Lieutenant W. B. Ball. It happened that a party of Royal Engineers, under an officer, was working at the machine-gun dug-out that night. The machine-gun itself was knocked",
+      "expected": "any fluent continuation (non-memorized control)",
+      "source": "gutenberg:63111",
+      "title": "control gutenberg:63111 @w1511",
+      "boundary_word": "Posts,",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 60,
+       "allenai/OLMo-2-0425-1B": 60
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 64,
+       "allenai/OLMo-2-0425-1B": 59
+      }
+     }
+    },
+    "L0N-04": {
+     "cue_word": "Open",
+     "n_cues_this_class": 1,
+     "all_cues_this_class": [
+      "Open"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0N-04",
+      "level": "L0N",
+      "topic": "obscure-control",
+      "prompt": "Open your mouth. Breathe. Do you have headaches? No. Ah, yes, you are new. I'm new, said the oval moon at the bottom of the mist funnel, brightening and paling. I don't think you'll find my card there. Open your mouth--Breathe--A crater big enough to",
+      "gold_continuation": "hold the land from New York to Philadelphia. New! I'm new, said the quartz crystal on the parlor table--like glass--Mr. Tiffany bought a cart load of them. Like water or white rock candy--I'm new, said the mist rising from the duck pond, rising, curling,",
+      "expected": "any fluent continuation (non-memorized control)",
+      "source": "gutenberg:63888",
+      "title": "control gutenberg:63888 @w1503",
+      "boundary_word": "hold",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 69,
+       "allenai/OLMo-2-0425-1B": 69
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 64,
+       "allenai/OLMo-2-0425-1B": 63
+      }
+     }
+    },
+    "L0N-08": {
+     "cue_word": "Wool",
+     "n_cues_this_class": 2,
+     "all_cues_this_class": [
+      "Wool",
+      "Keep"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0N-08",
+      "level": "L0N",
+      "topic": "obscure-control",
+      "prompt": "THE TRIMMING IN TATTING. THE ROSETTE—Fill the Shuttle with the Wool and using the mesh for the pearl loops, commence a loop, work 1 double, (then make a pearl and work a double stitch alternately for 7 loops); draw close. Keep the Wool at the",
+      "gold_continuation": "back and join it to the centre pearl. Work another Rosette the same, and join it to the same pearl of the previous Rosette as before; then keep the Wool as the back and join to the centre pearl of the last Rosette. Repeat",
+      "expected": "any fluent continuation (non-memorized control)",
+      "source": "gutenberg:66234",
+      "title": "control gutenberg:66234 @w1527",
+      "boundary_word": "back",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 65,
+       "allenai/OLMo-2-0425-1B": 63
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 54,
+       "allenai/OLMo-2-0425-1B": 51
+      }
+     }
+    },
+    "L0N-11": {
+     "cue_word": "Hang",
+     "n_cues_this_class": 1,
+     "all_cues_this_class": [
+      "Hang"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0N-11",
+      "level": "L0N",
+      "topic": "obscure-control",
+      "prompt": "Frank Merriwell's hearty laugh rang out. \"If this is a sample of what we'll strike in Morocco, we'll have fun,\" he cried. Ephraim came to the surface, spouting like a whale. \"Hang ye!\" he squealed, standing up and shaking his fist at the bewildered",
+      "gold_continuation": "Arab. \"Yeou wait till we git on dry land, critter! I'll fix ye!\" Then he began to wade ashore. \"I am surprised, Ephraim,\" said Frank, soberly, \"that you should make such a racket over a matter like this. The tan-colored gentleman simply wished to",
+      "expected": "any fluent continuation (non-memorized control)",
+      "source": "gutenberg:67901",
+      "title": "control gutenberg:67901 @w1503",
+      "boundary_word": "Arab.",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 65,
+       "allenai/OLMo-2-0425-1B": 64
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 67,
+       "allenai/OLMo-2-0425-1B": 66
+      }
+     }
+    }
+   }
+  },
+  "verb_corrected": {
+   "pool_class": "verb",
+   "column": "corrected",
+   "pool_size": "mixed",
+   "pool_size_by_item": {
+    "L0-11": 24,
+    "L0-19": 24,
+    "L0-20": 24,
+    "L0N-06": 23,
+    "L0N-09": 24,
+    "L0N-10": 24,
+    "L0N-11": 24,
+    "L0N-12": 24
+   },
+   "pool_words": null,
+   "pool_words_by_item": {
+    "L0-11": [
+     "united",
+     "associated",
+     "located",
+     "limited",
+     "protected",
+     "provided",
+     "received",
+     "used",
+     "distributed",
+     "included",
+     "posted",
+     "contained",
+     "marked",
+     "produced",
+     "refused",
+     "removed",
+     "repeated",
+     "accepted",
+     "accessed",
+     "based",
+     "copied",
+     "dissolved",
+     "endeavoured",
+     "implied"
+    ],
+    "L0-19": [
+     "seemed",
+     "red",
+     "turned",
+     "looked",
+     "passed",
+     "weed",
+     "stopped",
+     "hundred",
+     "smashed",
+     "happened",
+     "indeed",
+     "appeared",
+     "blackened",
+     "remained",
+     "cried",
+     "deserted",
+     "ceased",
+     "hurried",
+     "reached",
+     "shouted",
+     "fired",
+     "learned",
+     "perceived",
+     "vanished"
+    ],
+    "L0-20": [
+     "bed",
+     "asked",
+     "called",
+     "replied",
+     "tried",
+     "seemed",
+     "answered",
+     "indeed",
+     "whispered",
+     "used",
+     "wanted",
+     "followed",
+     "need",
+     "liked",
+     "returned",
+     "explained",
+     "carried",
+     "happened",
+     "loved",
+     "showed",
+     "dropped",
+     "turned",
+     "continued",
+     "exclaimed"
+    ],
+    "L0N-06": [
+     "hundred",
+     "started",
+     "sled",
+     "bed",
+     "died",
+     "returned",
+     "received",
+     "covered",
+     "tried",
+     "followed",
+     "passed",
+     "served",
+     "tired",
+     "expected",
+     "need",
+     "reached",
+     "turned",
+     "worked",
+     "located",
+     "obtained",
+     "looked",
+     "wanted",
+     "arrived"
+    ],
+    "L0N-09": [
+     "need",
+     "colored",
+     "changed",
+     "entitled",
+     "protected",
+     "organized",
+     "provided",
+     "received",
+     "developed",
+     "creed",
+     "limited",
+     "based",
+     "civilized",
+     "obtained",
+     "treated",
+     "distributed",
+     "failed",
+     "located",
+     "marked",
+     "accepted",
+     "accomplished",
+     "called",
+     "concerned",
+     "indeed"
+    ],
+    "L0N-10": [
+     "turned",
+     "red",
+     "seemed",
+     "looked",
+     "hundred",
+     "indeed",
+     "laughed",
+     "led",
+     "answered",
+     "stared",
+     "passed",
+     "asked",
+     "cried",
+     "entered",
+     "moved",
+     "followed",
+     "dropped",
+     "pulled",
+     "need",
+     "called",
+     "lifted",
+     "lived",
+     "crossed",
+     "died"
+    ],
+    "L0N-11": [
+     "seemed",
+     "turned",
+     "looked",
+     "declared",
+     "asked",
+     "reached",
+     "killed",
+     "passed",
+     "red",
+     "muttered",
+     "returned",
+     "laughed",
+     "tried",
+     "exclaimed",
+     "followed",
+     "called",
+     "leaped",
+     "received",
+     "forced",
+     "happened",
+     "placed",
+     "smiled",
+     "indeed",
+     "lifted"
+    ],
+    "L0N-12": [
+     "pointed",
+     "carried",
+     "finished",
+     "rubbed",
+     "covered",
+     "described",
+     "obtained",
+     "arranged",
+     "placed",
+     "preferred",
+     "proceed",
+     "associated",
+     "blocked",
+     "curved",
+     "located",
+     "provided",
+     "sketched",
+     "considered",
+     "copied",
+     "employed",
+     "sharpened",
+     "studied",
+     "allowed",
+     "determined"
+    ]
+   },
+   "status": "ready",
+   "missing_items": [],
+   "n_items": 8,
+   "item_ids": [
+    "L0-11",
+    "L0-19",
+    "L0-20",
+    "L0N-06",
+    "L0N-09",
+    "L0N-10",
+    "L0N-11",
+    "L0N-12"
+   ],
+   "items": {
+    "L0-11": {
+     "cue_word": "instituted",
+     "n_cues_this_class": 1,
+     "all_cues_this_class": [
+      "instituted"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0-11",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty, and the pursuit of Happiness. That to secure these rights, Governments are instituted among",
+      "gold_continuation": "Men, deriving their just powers from the consent of the governed, That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government, laying its foundation on",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:1",
+      "title": "Declaration self-evident truths",
+      "boundary_word": "Men,",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 59,
+       "allenai/OLMo-2-0425-1B": 56
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 50,
+       "allenai/OLMo-2-0425-1B": 49
+      }
+     }
+    },
+    "L0-19": {
+     "cue_word": "busied",
+     "n_cues_this_class": 1,
+     "all_cues_this_class": [
+      "busied"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0-19",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "No one would have believed in the last years of the nineteenth century that this world was being watched keenly and closely by intelligences greater than man's and yet as mortal as his own; that as men busied themselves about their various concerns they were",
+      "gold_continuation": "scrutinised and studied, perhaps almost as narrowly as a man with a microscope might scrutinise the transient creatures that swarm and multiply in a drop of water. With infinite complacency men went to and fro over this globe about their little affairs, serene in",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:36",
+      "title": "War of the Worlds opening",
+      "boundary_word": "scrutinised",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 50,
+       "allenai/OLMo-2-0425-1B": 50
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 51,
+       "allenai/OLMo-2-0425-1B": 50
+      }
+     }
+    },
+    "L0-20": {
+     "cue_word": "plucked",
+     "n_cues_this_class": 1,
+     "all_cues_this_class": [
+      "plucked"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0-20",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "All children, except one, grow up. They soon know that they will grow up, and the way Wendy knew was this. One day when she was two years old she was playing in a garden, and she plucked another flower and ran with it to her",
+      "gold_continuation": "mother. I suppose she must have looked rather delightful, for Mrs. Darling put her hand to her heart and cried, \"Oh, why can't you remain like this for ever!\" This was all that passed between them on the subject, but henceforth Wendy knew that",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:16",
+      "title": "Peter Pan opening",
+      "boundary_word": "mother.",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 53,
+       "allenai/OLMo-2-0425-1B": 53
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 55,
+       "allenai/OLMo-2-0425-1B": 54
+      }
+     }
+    },
+    "L0N-06": {
+     "cue_word": "baked",
+     "n_cues_this_class": 2,
+     "all_cues_this_class": [
+      "baked",
+      "boiled"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0N-06",
+      "level": "L0N",
+      "topic": "obscure-control",
+      "prompt": "For breakfast, rolled oats mush, baking-powder biscuit, boiled eggs or potatoes, and ham. For dinner, light bread or milk toast, beans or canned corn, salt-horse, creamed potatoes, and often soup with crackers. For supper, canned fruit, muffins or corn bread, boiled ham and baked",
+      "gold_continuation": "potatoes. Of course tea or coffee with each meal. The cook makes fine yeast bread, ten loaves a day. There are twenty-three men on board. Including the hired sailors who are not of the company, and even with five in the hospital we make",
+      "expected": "any fluent continuation (non-memorized control)",
+      "source": "gutenberg:65123",
+      "title": "control gutenberg:65123 @w1516",
+      "boundary_word": "potatoes.",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 68,
+       "allenai/OLMo-2-0425-1B": 66
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 54,
+       "allenai/OLMo-2-0425-1B": 52
+      }
+     }
+    },
+    "L0N-09": {
+     "cue_word": "associated",
+     "n_cues_this_class": 1,
+     "all_cues_this_class": [
+      "associated"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0N-09",
+      "level": "L0N",
+      "topic": "obscure-control",
+      "prompt": "¶¶Look back in your own lives, see what the things are that you are proudest of as you look back, and you will in almost every case and on every occasion find that those memories of pride are associated, not with days of ease, but with",
+      "gold_continuation": "days of effort, the day when you had to do all that was in you for some worthy end, and the worthiest of all worthy ends is to make those that are closest and nearest to you—your wife and your children, and those near",
+      "expected": "any fluent continuation (non-memorized control)",
+      "source": "gutenberg:66890",
+      "title": "control gutenberg:66890 @w1510",
+      "boundary_word": "days",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 53,
+       "allenai/OLMo-2-0425-1B": 54
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 50,
+       "allenai/OLMo-2-0425-1B": 50
+      }
+     }
+    },
+    "L0N-10": {
+     "cue_word": "offended",
+     "n_cues_this_class": 1,
+     "all_cues_this_class": [
+      "offended"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": false
+     },
+     "verified_in": [
+      "pile"
+     ],
+     "item": {
+      "id": "L0N-10",
+      "level": "L0N",
+      "topic": "obscure-control",
+      "prompt": "Let it pass! The accusation is familiar to my ears. I tired of resenting it before your fathers' fathers were born, and the scorn of your offended sense of veracity is less to me than the lisping of a child. I was, in the",
+      "gold_continuation": "very distance of the beginning, a citizen of that ancient city whose dominion once stretched from the blue waters of the Ægean round to and beyond the broad stream of the Nile herself. Your antiquities were then my household gods, your myths were my",
+      "expected": "any fluent continuation (non-memorized control)",
+      "source": "gutenberg:67345",
+      "title": "control gutenberg:67345 @w1517",
+      "boundary_word": "very",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b"
+      ],
+      "verified_in": [
+       "pile"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 54,
+       "allenai/OLMo-2-0425-1B": 53
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 52,
+       "allenai/OLMo-2-0425-1B": 52
+      }
+     }
+    },
+    "L0N-11": {
+     "cue_word": "bewildered",
+     "n_cues_this_class": 2,
+     "all_cues_this_class": [
+      "bewildered",
+      "squealed"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0N-11",
+      "level": "L0N",
+      "topic": "obscure-control",
+      "prompt": "Frank Merriwell's hearty laugh rang out. \"If this is a sample of what we'll strike in Morocco, we'll have fun,\" he cried. Ephraim came to the surface, spouting like a whale. \"Hang ye!\" he squealed, standing up and shaking his fist at the bewildered",
+      "gold_continuation": "Arab. \"Yeou wait till we git on dry land, critter! I'll fix ye!\" Then he began to wade ashore. \"I am surprised, Ephraim,\" said Frank, soberly, \"that you should make such a racket over a matter like this. The tan-colored gentleman simply wished to",
+      "expected": "any fluent continuation (non-memorized control)",
+      "source": "gutenberg:67901",
+      "title": "control gutenberg:67901 @w1503",
+      "boundary_word": "Arab.",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 65,
+       "allenai/OLMo-2-0425-1B": 64
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 67,
+       "allenai/OLMo-2-0425-1B": 66
+      }
+     }
+    },
+    "L0N-12": {
+     "cue_word": "avoided",
+     "n_cues_this_class": 1,
+     "all_cues_this_class": [
+      "avoided"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0N-12",
+      "level": "L0N",
+      "topic": "obscure-control",
+      "prompt": "BREAD. A supply of the soft part of home-made, if possible, or good ordinary baker's bread, one day old, is indispensable. This should not have any butter, or even milk, in its composition, otherwise it will grease the paper, which naturally should be avoided, as",
+      "gold_continuation": "grease spots are most difficult to overcome. The bread is used for rubbing out charcoal or crayon, erasing mistakes, and for taking out lights from a mass of dark. The soft crumb is rolled between the fingers until a point is formed, and then",
+      "expected": "any fluent continuation (non-memorized control)",
+      "source": "gutenberg:69012",
+      "title": "control gutenberg:69012 @w1510",
+      "boundary_word": "grease",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 61,
+       "allenai/OLMo-2-0425-1B": 59
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 53,
+       "allenai/OLMo-2-0425-1B": 52
+      }
+     }
+    }
+   }
+  },
+  "proper_corrected": {
+   "pool_class": "proper",
+   "column": "corrected",
+   "pool_size": 24,
+   "pool_size_by_item": {
+    "L0-03": 24,
+    "L0-05": 24,
+    "L0-06": 24,
+    "L0-10": 24,
+    "L0-11": 24,
+    "L0-14": 24,
+    "L0-15": 24,
+    "L0-17": 24,
+    "L0N-02": 24,
+    "L0N-03": 24,
+    "L0N-04": 24,
+    "L0N-08": 24,
+    "L0N-11": 24
+   },
+   "pool_words": null,
+   "pool_words_by_item": {
+    "L0-03": [
+     "Out",
+     "One",
+     "Would",
+     "Lorry",
+     "Into",
+     "Upon",
+     "Could",
+     "Defarge",
+     "Man",
+     "Little",
+     "Time",
+     "Now",
+     "Hand",
+     "Down",
+     "Miss",
+     "Know",
+     "Again",
+     "Two",
+     "Good",
+     "Like",
+     "See",
+     "Looked",
+     "Doctor",
+     "Long"
+    ],
+    "L0-05": [
+     "Shall",
+     "Unto",
+     "LORD",
+     "Thou",
+     "Thy",
+     "Out",
+     "Man",
+     "Israel",
+     "Son",
+     "Hath",
+     "King",
+     "Came",
+     "House",
+     "Into",
+     "Come",
+     "One",
+     "Children",
+     "Before",
+     "Also",
+     "Against",
+     "Men",
+     "Shalt",
+     "Saying",
+     "Went"
+    ],
+    "L0-06": [
+     "Unto",
+     "God",
+     "Said",
+     "Out",
+     "Upon",
+     "Man",
+     "Israel",
+     "Son",
+     "Hath",
+     "King",
+     "Came",
+     "House",
+     "Into",
+     "Come",
+     "One",
+     "Children",
+     "Also",
+     "Day",
+     "Against",
+     "Men",
+     "Shalt",
+     "Let",
+     "Saying",
+     "Went"
+    ],
+    "L0-10": [
+     "Unto",
+     "LORD",
+     "Thou",
+     "Thy",
+     "Said",
+     "Out",
+     "Upon",
+     "Man",
+     "Israel",
+     "Son",
+     "Hath",
+     "King",
+     "Came",
+     "House",
+     "Into",
+     "Come",
+     "One",
+     "Before",
+     "Also",
+     "Day",
+     "Against",
+     "Men",
+     "Shalt",
+     "Let"
+    ],
+    "L0-11": [
+     "Gutenberg",
+     "Project",
+     "WORK",
+     "States",
+     "United",
+     "Terms",
+     "Copyright",
+     "Laws",
+     "AGREEMENT",
+     "License",
+     "Donations",
+     "EBOOK",
+     "FULL",
+     "TRADEMARK",
+     "Archive",
+     "Literary",
+     "Use",
+     "Declaration",
+     "PARAGRAPH",
+     "Free",
+     "INCLUDING",
+     "Refund",
+     "About",
+     "AGREE"
+    ],
+    "L0-14": [
+     "Thou",
+     "Thy",
+     "Shall",
+     "Thee",
+     "Lord",
+     "Now",
+     "KING",
+     "Sir",
+     "Would",
+     "Enter",
+     "How",
+     "WELL",
+     "Love",
+     "One",
+     "LIKE",
+     "I'll",
+     "Upon",
+     "May",
+     "Make",
+     "Know",
+     "Yet",
+     "Say",
+     "Should",
+     "Must"
+    ],
+    "L0-15": [
+     "Out",
+     "Says",
+     "Got",
+     "Said",
+     "See",
+     "Down",
+     "Well",
+     "Would",
+     "Come",
+     "Jim",
+     "Didn't",
+     "Get",
+     "Right",
+     "Could",
+     "Went",
+     "Over",
+     "Good",
+     "Way",
+     "Like",
+     "Old",
+     "Around",
+     "Now",
+     "Along",
+     "Because"
+    ],
+    "L0-17": [
+     "Upon",
+     "Out",
+     "Man",
+     "Could",
+     "Now",
+     "See",
+     "Down",
+     "May",
+     "Should",
+     "Well",
+     "Over",
+     "About",
+     "Think",
+     "Must",
+     "Shall",
+     "Before",
+     "Come",
+     "How",
+     "Two",
+     "Might",
+     "Yes",
+     "House",
+     "Case",
+     "Found"
+    ],
+    "L0N-02": [
+     "Gutenberg",
+     "CUP",
+     "Project",
+     "Add",
+     "WATER",
+     "Onions",
+     "Salt",
+     "Butter",
+     "Powder",
+     "WINE",
+     "WORK",
+     "Seasoning",
+     "Meat",
+     "Pepper",
+     "Chicken",
+     "Cream",
+     "Vinegar",
+     "BEAU",
+     "Instant",
+     "MONDE",
+     "Servings",
+     "Minced",
+     "Cook",
+     "Garlic"
+    ],
+    "L0N-03": [
+     "LIEUT",
+     "III",
+     "BATTALION",
+     "Capt",
+     "Guards",
+     "Guardsman",
+     "COMPANY",
+     "MEN",
+     "Sergeant",
+     "Col",
+     "DIVISION",
+     "Major",
+     "Cpl",
+     "HON",
+     "KILLED",
+     "Second",
+     "Sergt",
+     "Brigade",
+     "Captain",
+     "OFFICERS",
+     "OUT",
+     "Temp",
+     "Lord",
+     "Attack"
+    ],
+    "L0N-04": [
+     "One",
+     "Gutenberg",
+     "Project",
+     "Into",
+     "Out",
+     "Words",
+     "Must",
+     "Would",
+     "Great",
+     "WORK",
+     "Over",
+     "Word",
+     "See",
+     "About",
+     "CHAPTER",
+     "Man",
+     "Never",
+     "Now",
+     "Down",
+     "Under",
+     "Could",
+     "Men",
+     "World",
+     "Say"
+    ],
+    "L0N-08": [
+     "Row",
+     "Knit",
+     "Plain",
+     "Gutenberg",
+     "Project",
+     "Needle",
+     "CHAIN",
+     "Raise",
+     "ROUND",
+     "END",
+     "Miss",
+     "TWO",
+     "SIDE",
+     "Increase",
+     "White",
+     "Foundation",
+     "Next",
+     "CROCHET",
+     "KNITTING",
+     "One",
+     "Tricot",
+     "LEFT",
+     "Book",
+     "Slip"
+    ],
+    "L0N-11": [
+     "Would",
+     "One",
+     "BOY",
+     "Professor",
+     "Man",
+     "Into",
+     "Could",
+     "See",
+     "About",
+     "Hand",
+     "Now",
+     "BULL",
+     "May",
+     "Away",
+     "Before",
+     "Saw",
+     "Way",
+     "Well",
+     "Back",
+     "Down",
+     "Come",
+     "Much",
+     "Get",
+     "Girl"
+    ]
+   },
+   "status": "ready",
+   "missing_items": [],
+   "n_items": 13,
+   "item_ids": [
+    "L0-03",
+    "L0-05",
+    "L0-06",
+    "L0-10",
+    "L0-11",
+    "L0-14",
+    "L0-15",
+    "L0-17",
+    "L0N-02",
+    "L0N-03",
+    "L0N-04",
+    "L0N-08",
+    "L0N-11"
+   ],
+   "items": {
+    "L0-03": {
+     "cue_word": "Light",
+     "n_cues_this_class": 1,
+     "all_cues_this_class": [
+      "Light"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0-03",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the",
+      "gold_continuation": "season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way--in short, the period was",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:98",
+      "title": "A Tale of Two Cities opening",
+      "boundary_word": "season",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 55,
+       "allenai/OLMo-2-0425-1B": 55
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 54,
+       "allenai/OLMo-2-0425-1B": 53
+      }
+     }
+    },
+    "L0-05": {
+     "cue_word": "Let",
+     "n_cues_this_class": 2,
+     "all_cues_this_class": [
+      "Let",
+      "God"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0-05",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "In the beginning God created the heaven and the earth. And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters. And God said, Let there be",
+      "gold_continuation": "light: and there was light. And God saw the light, that it was good: and God divided the light from the darkness. And God called the light Day, and the darkness he called Night. And the evening and the morning were the first day.",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:10",
+      "title": "KJV Genesis 1",
+      "boundary_word": "light:",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 51,
+       "allenai/OLMo-2-0425-1B": 51
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 52,
+       "allenai/OLMo-2-0425-1B": 52
+      }
+     }
+    },
+    "L0-06": {
+     "cue_word": "Yea",
+     "n_cues_this_class": 1,
+     "all_cues_this_class": [
+      "Yea"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0-06",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "The LORD is my shepherd; I shall not want. He maketh me to lie down in green pastures: he leadeth me beside the still waters. He restoreth my soul: he leadeth me in the paths of righteousness for his name's sake. Yea, though I",
+      "gold_continuation": "walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me. Thou preparest a table before me in the presence of mine enemies: thou anointest my head with",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:10",
+      "title": "KJV Psalm 23",
+      "boundary_word": "walk",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 59,
+       "allenai/OLMo-2-0425-1B": 58
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 53,
+       "allenai/OLMo-2-0425-1B": 52
+      }
+     }
+    },
+    "L0-10": {
+     "cue_word": "Blessed",
+     "n_cues_this_class": 1,
+     "all_cues_this_class": [
+      "Blessed"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0-10",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "Blessed are the poor in spirit: for theirs is the kingdom of heaven. Blessed are they that mourn: for they shall be comforted. Blessed are the meek: for they shall inherit the earth. Blessed are they which do hunger and thirst after righteousness: for they shall be",
+      "gold_continuation": "filled. Blessed are the merciful: for they shall obtain mercy. Blessed are the pure in heart: for they shall see God. Blessed are the peacemakers: for they shall be called the children of God. Blessed are they which are persecuted for righteousness' sake: for",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:10",
+      "title": "KJV Beatitudes",
+      "boundary_word": "filled.",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 61,
+       "allenai/OLMo-2-0425-1B": 58
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 62,
+       "allenai/OLMo-2-0425-1B": 57
+      }
+     }
+    },
+    "L0-11": {
+     "cue_word": "Governments",
+     "n_cues_this_class": 2,
+     "all_cues_this_class": [
+      "Governments",
+      "Happiness"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0-11",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty, and the pursuit of Happiness. That to secure these rights, Governments are instituted among",
+      "gold_continuation": "Men, deriving their just powers from the consent of the governed, That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government, laying its foundation on",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:1",
+      "title": "Declaration self-evident truths",
+      "boundary_word": "Men,",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 59,
+       "allenai/OLMo-2-0425-1B": 56
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 50,
+       "allenai/OLMo-2-0425-1B": 49
+      }
+     }
+    },
+    "L0-14": {
+     "cue_word": "Hath",
+     "n_cues_this_class": 3,
+     "all_cues_this_class": [
+      "Hath",
+      "Brutus",
+      "Caesar"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": false,
+      "EleutherAI/pythia-1b": false,
+      "EleutherAI/pythia-1.4b": false,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0-14",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "Friends, Romans, countrymen, lend me your ears; I come to bury Caesar, not to praise him. The evil that men do lives after them, The good is oft interred with their bones; So let it be with Caesar. The noble Brutus Hath told you",
+      "gold_continuation": "Caesar was ambitious. If it were so, it was a grievous fault, And grievously hath Caesar answer'd it. Here, under leave of Brutus and the rest, For Brutus is an honourable man, So are they all, all honourable men, Come I to speak in",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:100",
+      "title": "Julius Caesar funeral speech",
+      "boundary_word": "Caesar",
+      "eligible_models": [
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 59,
+       "allenai/OLMo-2-0425-1B": 56
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 62,
+       "allenai/OLMo-2-0425-1B": 60
+      }
+     }
+    },
+    "L0-15": {
+     "cue_word": "Twain",
+     "n_cues_this_class": 2,
+     "all_cues_this_class": [
+      "Twain",
+      "Mark"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0-15",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "You don't know about me without you have read a book by the name of The Adventures of Tom Sawyer; but that ain't no matter. That book was made by Mr. Mark Twain, and he told the truth, mainly. There was things which he",
+      "gold_continuation": "stretched, but mainly he told the truth. That is nothing. I never seen anybody but lied one time or another, without it was Aunt Polly, or the widow, or maybe Mary. Aunt Polly—Tom's Aunt Polly, she is—and Mary, and the Widow Douglas is all",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:76",
+      "title": "Huckleberry Finn opening",
+      "boundary_word": "stretched,",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 54,
+       "allenai/OLMo-2-0425-1B": 53
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 62,
+       "allenai/OLMo-2-0425-1B": 57
+      }
+     }
+    },
+    "L0-17": {
+     "cue_word": "Irene",
+     "n_cues_this_class": 1,
+     "all_cues_this_class": [
+      "Irene"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0-17",
+      "level": "L0",
+      "topic": "canon",
+      "prompt": "To Sherlock Holmes she is always the woman. I have seldom heard him mention her under any other name. In his eyes she eclipses and predominates the whole of her sex. It was not that he felt any emotion akin to love for Irene",
+      "gold_continuation": "Adler. All emotions, and that one particularly, were abhorrent to his cold, precise but admirably balanced mind. He was, I take it, the most perfect reasoning and observing machine that the world has seen, but as a lover he would have placed himself in",
+      "expected": "verbatim continuation",
+      "source": "gutenberg:1661",
+      "title": "A Scandal in Bohemia opening",
+      "boundary_word": "Adler.",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 51,
+       "allenai/OLMo-2-0425-1B": 49
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 57,
+       "allenai/OLMo-2-0425-1B": 55
+      }
+     }
+    },
+    "L0N-02": {
+     "cue_word": "Excellent",
+     "n_cues_this_class": 4,
+     "all_cues_this_class": [
+      "Excellent",
+      "Sauce",
+      "Cups",
+      "Sauce"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0N-02",
+      "level": "L0N",
+      "topic": "obscure-control",
+      "prompt": "Continue beating until thick and very smooth. Stir in Salad Herbs. When you need a tasty sauce or gravy, SPICE ISLANDS Beef Stock Base comes to your rescue. There are countless variations you can try. Brown Sauce (2 Cups Sauce) Excellent with roast beef.",
+      "gold_continuation": "Indispensable when there's not enough drippings to make gravy or to serve with some leftover slices when the gravy's all gone. Use it as the basis of countless other sauces—and the classics such as Sauce Espagnole, Madeira Sauce, Ravigote, or Piquant Sauce. 2 tablespoons",
+      "expected": "any fluent continuation (non-memorized control)",
+      "source": "gutenberg:62345",
+      "title": "control gutenberg:62345 @w1503",
+      "boundary_word": "Indispensable",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 59,
+       "allenai/OLMo-2-0425-1B": 56
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 67,
+       "allenai/OLMo-2-0425-1B": 64
+      }
+     }
+    },
+    "L0N-03": {
+     "cue_word": "Nos",
+     "n_cues_this_class": 1,
+     "all_cues_this_class": [
+      "Nos"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0N-03",
+      "level": "L0N",
+      "topic": "obscure-control",
+      "prompt": "Unfortunately, one of our bombs wounded Private Taylor, but he was finally rescued by Private Cunliffe, a stretcher-bearer who had already behaved with great gallantry, bringing in the wounded under heavy shell-fire. Meanwhile a totally distinct fight took place at Nos. 13 and 14",
+      "gold_continuation": "Posts, generally known as Alton Post, where there was a machine-gun protected by a bombing-post, under Lieutenant W. B. Ball. It happened that a party of Royal Engineers, under an officer, was working at the machine-gun dug-out that night. The machine-gun itself was knocked",
+      "expected": "any fluent continuation (non-memorized control)",
+      "source": "gutenberg:63111",
+      "title": "control gutenberg:63111 @w1511",
+      "boundary_word": "Posts,",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 60,
+       "allenai/OLMo-2-0425-1B": 60
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 64,
+       "allenai/OLMo-2-0425-1B": 59
+      }
+     }
+    },
+    "L0N-04": {
+     "cue_word": "Open",
+     "n_cues_this_class": 1,
+     "all_cues_this_class": [
+      "Open"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0N-04",
+      "level": "L0N",
+      "topic": "obscure-control",
+      "prompt": "Open your mouth. Breathe. Do you have headaches? No. Ah, yes, you are new. I'm new, said the oval moon at the bottom of the mist funnel, brightening and paling. I don't think you'll find my card there. Open your mouth--Breathe--A crater big enough to",
+      "gold_continuation": "hold the land from New York to Philadelphia. New! I'm new, said the quartz crystal on the parlor table--like glass--Mr. Tiffany bought a cart load of them. Like water or white rock candy--I'm new, said the mist rising from the duck pond, rising, curling,",
+      "expected": "any fluent continuation (non-memorized control)",
+      "source": "gutenberg:63888",
+      "title": "control gutenberg:63888 @w1503",
+      "boundary_word": "hold",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 69,
+       "allenai/OLMo-2-0425-1B": 69
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 64,
+       "allenai/OLMo-2-0425-1B": 63
+      }
+     }
+    },
+    "L0N-08": {
+     "cue_word": "Wool",
+     "n_cues_this_class": 2,
+     "all_cues_this_class": [
+      "Wool",
+      "Keep"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0N-08",
+      "level": "L0N",
+      "topic": "obscure-control",
+      "prompt": "THE TRIMMING IN TATTING. THE ROSETTE—Fill the Shuttle with the Wool and using the mesh for the pearl loops, commence a loop, work 1 double, (then make a pearl and work a double stitch alternately for 7 loops); draw close. Keep the Wool at the",
+      "gold_continuation": "back and join it to the centre pearl. Work another Rosette the same, and join it to the same pearl of the previous Rosette as before; then keep the Wool as the back and join to the centre pearl of the last Rosette. Repeat",
+      "expected": "any fluent continuation (non-memorized control)",
+      "source": "gutenberg:66234",
+      "title": "control gutenberg:66234 @w1527",
+      "boundary_word": "back",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 65,
+       "allenai/OLMo-2-0425-1B": 63
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 54,
+       "allenai/OLMo-2-0425-1B": 51
+      }
+     }
+    },
+    "L0N-11": {
+     "cue_word": "Hang",
+     "n_cues_this_class": 1,
+     "all_cues_this_class": [
+      "Hang"
+     ],
+     "corpus_mask": {
+      "EleutherAI/pythia-410m": true,
+      "EleutherAI/pythia-1b": true,
+      "EleutherAI/pythia-1.4b": true,
+      "allenai/OLMo-2-0425-1B": true
+     },
+     "verified_in": [
+      "pile",
+      "olmo_mix"
+     ],
+     "item": {
+      "id": "L0N-11",
+      "level": "L0N",
+      "topic": "obscure-control",
+      "prompt": "Frank Merriwell's hearty laugh rang out. \"If this is a sample of what we'll strike in Morocco, we'll have fun,\" he cried. Ephraim came to the surface, spouting like a whale. \"Hang ye!\" he squealed, standing up and shaking his fist at the bewildered",
+      "gold_continuation": "Arab. \"Yeou wait till we git on dry land, critter! I'll fix ye!\" Then he began to wade ashore. \"I am surprised, Ephraim,\" said Frank, soberly, \"that you should make such a racket over a matter like this. The tan-colored gentleman simply wished to",
+      "expected": "any fluent continuation (non-memorized control)",
+      "source": "gutenberg:67901",
+      "title": "control gutenberg:67901 @w1503",
+      "boundary_word": "Arab.",
+      "eligible_models": [
+       "EleutherAI/pythia-1.4b",
+       "allenai/OLMo-2-0425-1B"
+      ],
+      "verified_in": [
+       "pile",
+       "olmo_mix"
+      ],
+      "prompt_tokens": {
+       "EleutherAI/pythia-1.4b": 65,
+       "allenai/OLMo-2-0425-1B": 64
+      },
+      "gold_tokens": {
+       "EleutherAI/pythia-1.4b": 67,
+       "allenai/OLMo-2-0425-1B": 66
+      }
+     }
+    }
+   }
+  }
+ },
+ "poolgen_output_path": "D:\\ai架構測試\\Research_5_OMTR\\battery\\verbcue_pools_corrected.json",
+ "poolgen_available": true
+}

@@ -1,0 +1,3980 @@
+{
+  "stage": "provenance",
+  "run_id": "winB1",
+  "meta": {
+    "spec_version": "CAUSAL_PREREG_v1 第一段凍結（2026-08-21）＋v2.6–v2.13 增補裁決（權威＝DESIGN_PROPOSAL_v2.2_rulings.md）",
+    "utc": "2026-08-21T21:45:12Z",
+    "python": "3.11.15",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "torch": "2.6.0+cu124",
+    "transformer_lens": "3.7.3",
+    "transformers": "5.15.1",
+    "cuda_available": true,
+    "gpu": "NVIDIA GeForce RTX 4060"
+  },
+  "rerun": ".venv/Scripts/python.exe harness/causal_smoke.py --stage provenance --run-id winB1 --device cpu --gen-json results\\causal\\main_winB1_gen_runs.json --out-dir results\\causal",
+  "gen_json": "results\\causal\\main_winB1_gen_runs.json",
+  "gen_run_id": "winB1",
+  "probe_params": {
+    "n_words": 6,
+    "stride": 4,
+    "source": "prereg §2 規格補完（6 詞窗、stride 4）；顯式傳參，未改 verify_battery 預設"
+  },
+  "runs": {
+    "EleutherAI/pythia-410m": {
+      "index": "pile",
+      "rows": [
+        {
+          "id": "L0-03",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.25,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 836,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "corrupted": {
+              "frac_present": 0.25,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 836,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::early": {
+              "frac_present": 0.25,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 836,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::mid": {
+              "frac_present": 0.25,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 836,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::late": {
+              "frac_present": 0.25,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 836,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            }
+          }
+        },
+        {
+          "id": "L0-04",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.4444444444444444,
+              "n_probes": 9,
+              "n_unknown": 0,
+              "max_count": 9936,
+              "n_words": 41,
+              "too_few_probes": false,
+              "resolution": 0.1111111111111111
+            },
+            "corrupted": {
+              "frac_present": 0.75,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 322,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::early": {
+              "frac_present": 0.4444444444444444,
+              "n_probes": 9,
+              "n_unknown": 0,
+              "max_count": 9936,
+              "n_words": 41,
+              "too_few_probes": false,
+              "resolution": 0.1111111111111111
+            },
+            "patched::mid": {
+              "frac_present": 0.2222222222222222,
+              "n_probes": 9,
+              "n_unknown": 0,
+              "max_count": 658,
+              "n_words": 40,
+              "too_few_probes": false,
+              "resolution": 0.1111111111111111
+            },
+            "patched::late": {
+              "frac_present": 0.75,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 322,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            }
+          }
+        },
+        {
+          "id": "L0-05",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.5833333333333334,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 374,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "corrupted": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 1268,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::early": {
+              "frac_present": 0.8333333333333334,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 1268,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::mid": {
+              "frac_present": 0.18181818181818182,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 334,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::late": {
+              "frac_present": 0.2727272727272727,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 234,
+              "n_words": 48,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            }
+          }
+        },
+        {
+          "id": "L0-06",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 6267,
+              "n_words": 48,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "corrupted": {
+              "frac_present": 0.7272727272727273,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 173,
+              "n_words": 48,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::early": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 6267,
+              "n_words": 48,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::mid": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 6267,
+              "n_words": 48,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::late": {
+              "frac_present": 0.7272727272727273,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 6267,
+              "n_words": 48,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            }
+          }
+        },
+        {
+          "id": "L0-07",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.6666666666666666,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 986,
+              "n_words": 50,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "corrupted": {
+              "frac_present": 0.45454545454545453,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 638,
+              "n_words": 48,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::early": {
+              "frac_present": 0.6666666666666666,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 986,
+              "n_words": 50,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::mid": {
+              "frac_present": 0.6666666666666666,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 986,
+              "n_words": 50,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::late": {
+              "frac_present": 0.36363636363636365,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 767,
+              "n_words": 48,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            }
+          }
+        },
+        {
+          "id": "L0-08",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.9090909090909091,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 1434,
+              "n_words": 47,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "corrupted": {
+              "frac_present": 0.9090909090909091,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 1434,
+              "n_words": 47,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::early": {
+              "frac_present": 0.4166666666666667,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 1603,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::mid": {
+              "frac_present": 0.9090909090909091,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 1434,
+              "n_words": 47,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::late": {
+              "frac_present": 0.9090909090909091,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 1434,
+              "n_words": 47,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            }
+          }
+        },
+        {
+          "id": "L0-09",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.2222222222222222,
+              "n_probes": 9,
+              "n_unknown": 0,
+              "max_count": 797,
+              "n_words": 41,
+              "too_few_probes": false,
+              "resolution": 0.1111111111111111
+            },
+            "corrupted": {
+              "frac_present": 0.08333333333333333,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 15,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::early": {
+              "frac_present": 0.7272727272727273,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 3388,
+              "n_words": 47,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::mid": {
+              "frac_present": 0.7272727272727273,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 3388,
+              "n_words": 47,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::late": {
+              "frac_present": 0.5,
+              "n_probes": 10,
+              "n_unknown": 0,
+              "max_count": 844,
+              "n_words": 44,
+              "too_few_probes": false,
+              "resolution": 0.1
+            }
+          }
+        },
+        {
+          "id": "L0-10",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.9,
+              "n_probes": 10,
+              "n_unknown": 0,
+              "max_count": 1324,
+              "n_words": 42,
+              "too_few_probes": false,
+              "resolution": 0.1
+            },
+            "corrupted": {
+              "frac_present": 0.9,
+              "n_probes": 10,
+              "n_unknown": 0,
+              "max_count": 1324,
+              "n_words": 42,
+              "too_few_probes": false,
+              "resolution": 0.1
+            },
+            "patched::early": {
+              "frac_present": 0.9,
+              "n_probes": 10,
+              "n_unknown": 0,
+              "max_count": 1324,
+              "n_words": 42,
+              "too_few_probes": false,
+              "resolution": 0.1
+            },
+            "patched::mid": {
+              "frac_present": 0.9,
+              "n_probes": 10,
+              "n_unknown": 0,
+              "max_count": 1324,
+              "n_words": 42,
+              "too_few_probes": false,
+              "resolution": 0.1
+            },
+            "patched::late": {
+              "frac_present": 0.9,
+              "n_probes": 10,
+              "n_unknown": 0,
+              "max_count": 1324,
+              "n_words": 42,
+              "too_few_probes": false,
+              "resolution": 0.1
+            }
+          }
+        },
+        {
+          "id": "L0-11",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 5965,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "corrupted": {
+              "frac_present": 0.2727272727272727,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 1250,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::early": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 5965,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::mid": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 5965,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::late": {
+              "frac_present": 0.7272727272727273,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 8207,
+              "n_words": 47,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            }
+          }
+        },
+        {
+          "id": "L0-16",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.9166666666666666,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 7,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "corrupted": {
+              "frac_present": 0.6923076923076923,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 47,
+              "n_words": 54,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            },
+            "patched::early": {
+              "frac_present": 0.9166666666666666,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 7,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::mid": {
+              "frac_present": 0.4166666666666667,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 46,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::late": {
+              "frac_present": 0.6666666666666666,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 499,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            }
+          }
+        },
+        {
+          "id": "L0-17",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.7272727272727273,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 1647,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "corrupted": {
+              "frac_present": 0.45454545454545453,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 6,
+              "n_words": 48,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::early": {
+              "frac_present": 0.75,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 368,
+              "n_words": 50,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::mid": {
+              "frac_present": 0.5454545454545454,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 148,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::late": {
+              "frac_present": 0.45454545454545453,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 31,
+              "n_words": 48,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            }
+          }
+        },
+        {
+          "id": "L0N-04",
+          "level": "L0N",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.3333333333333333,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 307,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "corrupted": {
+              "frac_present": 0.08333333333333333,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 4,
+              "n_words": 50,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::early": {
+              "frac_present": 0.16666666666666666,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 2,
+              "n_words": 50,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::mid": {
+              "frac_present": 0.08333333333333333,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 2,
+              "n_words": 50,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::late": {
+              "frac_present": 0.16666666666666666,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 2,
+              "n_words": 50,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            }
+          }
+        },
+        {
+          "id": "L0N-06",
+          "level": "L0N",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.6,
+              "n_probes": 10,
+              "n_unknown": 0,
+              "max_count": 983,
+              "n_words": 44,
+              "too_few_probes": false,
+              "resolution": 0.1
+            },
+            "corrupted": {
+              "frac_present": 0.4444444444444444,
+              "n_probes": 9,
+              "n_unknown": 0,
+              "max_count": 6865,
+              "n_words": 40,
+              "too_few_probes": false,
+              "resolution": 0.1111111111111111
+            },
+            "patched::early": {
+              "frac_present": 0.6,
+              "n_probes": 10,
+              "n_unknown": 0,
+              "max_count": 983,
+              "n_words": 44,
+              "too_few_probes": false,
+              "resolution": 0.1
+            },
+            "patched::mid": {
+              "frac_present": 0.6,
+              "n_probes": 10,
+              "n_unknown": 0,
+              "max_count": 983,
+              "n_words": 44,
+              "too_few_probes": false,
+              "resolution": 0.1
+            },
+            "patched::late": {
+              "frac_present": 0.6,
+              "n_probes": 10,
+              "n_unknown": 0,
+              "max_count": 983,
+              "n_words": 44,
+              "too_few_probes": false,
+              "resolution": 0.1
+            }
+          }
+        },
+        {
+          "id": "L0N-07",
+          "level": "L0N",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.0,
+              "n_probes": 8,
+              "n_unknown": 0,
+              "max_count": 0,
+              "n_words": 36,
+              "too_few_probes": false,
+              "resolution": 0.125
+            },
+            "corrupted": {
+              "frac_present": 0.0,
+              "n_probes": 8,
+              "n_unknown": 0,
+              "max_count": 0,
+              "n_words": 36,
+              "too_few_probes": false,
+              "resolution": 0.125
+            },
+            "patched::early": {
+              "frac_present": 0.0,
+              "n_probes": 8,
+              "n_unknown": 0,
+              "max_count": 0,
+              "n_words": 36,
+              "too_few_probes": false,
+              "resolution": 0.125
+            },
+            "patched::mid": {
+              "frac_present": 0.0,
+              "n_probes": 8,
+              "n_unknown": 0,
+              "max_count": 0,
+              "n_words": 36,
+              "too_few_probes": false,
+              "resolution": 0.125
+            },
+            "patched::late": {
+              "frac_present": 0.0,
+              "n_probes": 8,
+              "n_unknown": 0,
+              "max_count": 0,
+              "n_words": 36,
+              "too_few_probes": false,
+              "resolution": 0.125
+            }
+          }
+        },
+        {
+          "id": "L0N-08",
+          "level": "L0N",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.1111111111111111,
+              "n_probes": 9,
+              "n_unknown": 0,
+              "max_count": 1,
+              "n_words": 41,
+              "too_few_probes": false,
+              "resolution": 0.1111111111111111
+            },
+            "corrupted": {
+              "frac_present": 0.0,
+              "n_probes": 9,
+              "n_unknown": 0,
+              "max_count": 0,
+              "n_words": 40,
+              "too_few_probes": false,
+              "resolution": 0.1111111111111111
+            },
+            "patched::early": {
+              "frac_present": 0.2,
+              "n_probes": 10,
+              "n_unknown": 0,
+              "max_count": 4,
+              "n_words": 43,
+              "too_few_probes": false,
+              "resolution": 0.1
+            },
+            "patched::mid": {
+              "frac_present": 0.2,
+              "n_probes": 10,
+              "n_unknown": 0,
+              "max_count": 4,
+              "n_words": 43,
+              "too_few_probes": false,
+              "resolution": 0.1
+            },
+            "patched::late": {
+              "frac_present": 0.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 0,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            }
+          }
+        },
+        {
+          "id": "L0N-09",
+          "level": "L0N",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.0,
+              "n_probes": 9,
+              "n_unknown": 0,
+              "max_count": 0,
+              "n_words": 41,
+              "too_few_probes": false,
+              "resolution": 0.1111111111111111
+            },
+            "corrupted": {
+              "frac_present": 0.6666666666666666,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 1148,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::early": {
+              "frac_present": 0.8461538461538461,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 9710,
+              "n_words": 54,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            },
+            "patched::mid": {
+              "frac_present": 0.8461538461538461,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 9710,
+              "n_words": 54,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            },
+            "patched::late": {
+              "frac_present": 0.8461538461538461,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 9710,
+              "n_words": 54,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            }
+          }
+        },
+        {
+          "id": "L0-20",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.3333333333333333,
+              "n_probes": 9,
+              "n_unknown": 0,
+              "max_count": 7,
+              "n_words": 40,
+              "too_few_probes": false,
+              "resolution": 0.1111111111111111
+            },
+            "corrupted": {
+              "frac_present": 0.8333333333333334,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 892,
+              "n_words": 50,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::early": {
+              "frac_present": 0.4,
+              "n_probes": 10,
+              "n_unknown": 0,
+              "max_count": 7,
+              "n_words": 42,
+              "too_few_probes": false,
+              "resolution": 0.1
+            },
+            "patched::mid": {
+              "frac_present": 0.6,
+              "n_probes": 10,
+              "n_unknown": 0,
+              "max_count": 122,
+              "n_words": 42,
+              "too_few_probes": false,
+              "resolution": 0.1
+            },
+            "patched::late": {
+              "frac_present": 0.5555555555555556,
+              "n_probes": 9,
+              "n_unknown": 0,
+              "max_count": 104,
+              "n_words": 39,
+              "too_few_probes": false,
+              "resolution": 0.1111111111111111
+            }
+          }
+        }
+      ],
+      "min_probes": 8,
+      "too_few_probes": []
+    },
+    "EleutherAI/pythia-1b": {
+      "index": "pile",
+      "rows": [
+        {
+          "id": "L0-01",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.4166666666666667,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 88,
+              "n_words": 52,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "corrupted": {
+              "frac_present": 0.16666666666666666,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 2,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::early": {
+              "frac_present": 0.4166666666666667,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 88,
+              "n_words": 52,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::mid": {
+              "frac_present": 0.4166666666666667,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 282,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::late": {
+              "frac_present": 0.6666666666666666,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 1747,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            }
+          }
+        },
+        {
+          "id": "L0-03",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.8333333333333334,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 836,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "corrupted": {
+              "frac_present": 0.4166666666666667,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 70,
+              "n_words": 50,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::early": {
+              "frac_present": 0.8333333333333334,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 836,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::mid": {
+              "frac_present": 0.8333333333333334,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 836,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::late": {
+              "frac_present": 0.9166666666666666,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 833,
+              "n_words": 52,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            }
+          }
+        },
+        {
+          "id": "L0-04",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.5454545454545454,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 65720,
+              "n_words": 46,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "corrupted": {
+              "frac_present": 0.5555555555555556,
+              "n_probes": 9,
+              "n_unknown": 0,
+              "max_count": 65720,
+              "n_words": 41,
+              "too_few_probes": false,
+              "resolution": 0.1111111111111111
+            },
+            "patched::early": {
+              "frac_present": 0.7,
+              "n_probes": 10,
+              "n_unknown": 0,
+              "max_count": 65720,
+              "n_words": 42,
+              "too_few_probes": false,
+              "resolution": 0.1
+            },
+            "patched::mid": {
+              "frac_present": 0.5555555555555556,
+              "n_probes": 9,
+              "n_unknown": 0,
+              "max_count": 65720,
+              "n_words": 41,
+              "too_few_probes": false,
+              "resolution": 0.1111111111111111
+            },
+            "patched::late": {
+              "frac_present": 0.5454545454545454,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 65720,
+              "n_words": 48,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            }
+          }
+        },
+        {
+          "id": "L0-05",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 838,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "corrupted": {
+              "frac_present": 0.16666666666666666,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 84,
+              "n_words": 50,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::early": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 838,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::mid": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 2376,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::late": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 2376,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            }
+          }
+        },
+        {
+          "id": "L0-06",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 6267,
+              "n_words": 48,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "corrupted": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 6267,
+              "n_words": 48,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::early": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 6267,
+              "n_words": 48,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::mid": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 6267,
+              "n_words": 48,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::late": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 6267,
+              "n_words": 48,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            }
+          }
+        },
+        {
+          "id": "L0-07",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 1598,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "corrupted": {
+              "frac_present": 0.8,
+              "n_probes": 10,
+              "n_unknown": 0,
+              "max_count": 3193,
+              "n_words": 42,
+              "too_few_probes": false,
+              "resolution": 0.1
+            },
+            "patched::early": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 1598,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::mid": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 1598,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::late": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 1598,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            }
+          }
+        },
+        {
+          "id": "L0-09",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.9090909090909091,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 867,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "corrupted": {
+              "frac_present": 0.9090909090909091,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 867,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::early": {
+              "frac_present": 0.9090909090909091,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 867,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::mid": {
+              "frac_present": 0.9090909090909091,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 867,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::late": {
+              "frac_present": 0.9090909090909091,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 867,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            }
+          }
+        },
+        {
+          "id": "L0-17",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.5384615384615384,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 10,
+              "n_words": 54,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            },
+            "corrupted": {
+              "frac_present": 0.6923076923076923,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 58,
+              "n_words": 55,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            },
+            "patched::early": {
+              "frac_present": 0.8333333333333334,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 927,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::mid": {
+              "frac_present": 0.5384615384615384,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 10,
+              "n_words": 54,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            },
+            "patched::late": {
+              "frac_present": 0.5384615384615384,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 51,
+              "n_words": 55,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            }
+          }
+        },
+        {
+          "id": "L0N-06",
+          "level": "L0N",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.2,
+              "n_probes": 10,
+              "n_unknown": 0,
+              "max_count": 8,
+              "n_words": 45,
+              "too_few_probes": false,
+              "resolution": 0.1
+            },
+            "corrupted": {
+              "frac_present": 0.4,
+              "n_probes": 10,
+              "n_unknown": 0,
+              "max_count": 8,
+              "n_words": 43,
+              "too_few_probes": false,
+              "resolution": 0.1
+            },
+            "patched::early": {
+              "frac_present": 0.1,
+              "n_probes": 10,
+              "n_unknown": 0,
+              "max_count": 3,
+              "n_words": 44,
+              "too_few_probes": false,
+              "resolution": 0.1
+            },
+            "patched::mid": {
+              "frac_present": 0.1,
+              "n_probes": 10,
+              "n_unknown": 0,
+              "max_count": 3,
+              "n_words": 44,
+              "too_few_probes": false,
+              "resolution": 0.1
+            },
+            "patched::late": {
+              "frac_present": 0.4,
+              "n_probes": 10,
+              "n_unknown": 0,
+              "max_count": 8,
+              "n_words": 43,
+              "too_few_probes": false,
+              "resolution": 0.1
+            }
+          }
+        },
+        {
+          "id": "L0-20",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.2222222222222222,
+              "n_probes": 9,
+              "n_unknown": 0,
+              "max_count": 35,
+              "n_words": 38,
+              "too_few_probes": false,
+              "resolution": 0.1111111111111111
+            },
+            "corrupted": {
+              "frac_present": 0.38461538461538464,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 4,
+              "n_words": 56,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            },
+            "patched::early": {
+              "frac_present": 0.2222222222222222,
+              "n_probes": 9,
+              "n_unknown": 0,
+              "max_count": 35,
+              "n_words": 38,
+              "too_few_probes": false,
+              "resolution": 0.1111111111111111
+            },
+            "patched::mid": {
+              "frac_present": 0.2222222222222222,
+              "n_probes": 9,
+              "n_unknown": 0,
+              "max_count": 35,
+              "n_words": 39,
+              "too_few_probes": false,
+              "resolution": 0.1111111111111111
+            },
+            "patched::late": {
+              "frac_present": 0.38461538461538464,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 2,
+              "n_words": 54,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            }
+          }
+        },
+        {
+          "id": "L0N-07",
+          "level": "L0N",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.0,
+              "n_probes": 9,
+              "n_unknown": 0,
+              "max_count": 0,
+              "n_words": 39,
+              "too_few_probes": false,
+              "resolution": 0.1111111111111111
+            },
+            "corrupted": {
+              "frac_present": 0.1,
+              "n_probes": 10,
+              "n_unknown": 0,
+              "max_count": 17,
+              "n_words": 42,
+              "too_few_probes": false,
+              "resolution": 0.1
+            },
+            "patched::early": {
+              "frac_present": 0.0,
+              "n_probes": 9,
+              "n_unknown": 0,
+              "max_count": 0,
+              "n_words": 39,
+              "too_few_probes": false,
+              "resolution": 0.1111111111111111
+            },
+            "patched::mid": {
+              "frac_present": 0.14285714285714285,
+              "n_probes": 7,
+              "n_unknown": 0,
+              "max_count": 7,
+              "n_words": 33,
+              "too_few_probes": true,
+              "resolution": 0.14285714285714285
+            },
+            "patched::late": {
+              "frac_present": 0.0,
+              "n_probes": 9,
+              "n_unknown": 0,
+              "max_count": 0,
+              "n_words": 38,
+              "too_few_probes": false,
+              "resolution": 0.1111111111111111
+            }
+          }
+        },
+        {
+          "id": "L0N-08",
+          "level": "L0N",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.25,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 307,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "corrupted": {
+              "frac_present": 0.36363636363636365,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 694,
+              "n_words": 48,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::early": {
+              "frac_present": 0.25,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 307,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::mid": {
+              "frac_present": 0.25,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 307,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::late": {
+              "frac_present": 0.09090909090909091,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 229,
+              "n_words": 46,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            }
+          }
+        },
+        {
+          "id": "L0N-09",
+          "level": "L0N",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.7,
+              "n_probes": 10,
+              "n_unknown": 0,
+              "max_count": 790,
+              "n_words": 44,
+              "too_few_probes": false,
+              "resolution": 0.1
+            },
+            "corrupted": {
+              "frac_present": 0.5,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 218,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::early": {
+              "frac_present": 0.18181818181818182,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 15,
+              "n_words": 47,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::mid": {
+              "frac_present": 0.2727272727272727,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 9,
+              "n_words": 47,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::late": {
+              "frac_present": 0.5,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 218,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            }
+          }
+        },
+        {
+          "id": "L0-16",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.4166666666666667,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 15,
+              "n_words": 50,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "corrupted": {
+              "frac_present": 0.1,
+              "n_probes": 10,
+              "n_unknown": 0,
+              "max_count": 2,
+              "n_words": 43,
+              "too_few_probes": false,
+              "resolution": 0.1
+            },
+            "patched::early": {
+              "frac_present": 0.45454545454545453,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 572,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::mid": {
+              "frac_present": 0.3333333333333333,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 835,
+              "n_words": 52,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::late": {
+              "frac_present": 0.38461538461538464,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 835,
+              "n_words": 56,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            }
+          }
+        },
+        {
+          "id": "L0-11",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 1.0,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 5965,
+              "n_words": 54,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            },
+            "corrupted": {
+              "frac_present": 0.75,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 5154,
+              "n_words": 50,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::early": {
+              "frac_present": 0.9230769230769231,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 5965,
+              "n_words": 54,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            },
+            "patched::mid": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 5965,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::late": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 5965,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            }
+          }
+        }
+      ],
+      "min_probes": 8,
+      "too_few_probes": [
+        [
+          "L0N-07",
+          "patched::mid"
+        ]
+      ]
+    },
+    "EleutherAI/pythia-1.4b": {
+      "index": "pile",
+      "rows": [
+        {
+          "id": "L0-01",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.5833333333333334,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 282,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "corrupted": {
+              "frac_present": 0.5833333333333334,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 15952,
+              "n_words": 50,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::early": {
+              "frac_present": 0.5833333333333334,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 282,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::mid": {
+              "frac_present": 0.6666666666666666,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 15952,
+              "n_words": 50,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::late": {
+              "frac_present": 0.5454545454545454,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 11838,
+              "n_words": 47,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            }
+          }
+        },
+        {
+          "id": "L0-02",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.5,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 1773,
+              "n_words": 52,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "corrupted": {
+              "frac_present": 0.75,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 51,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::early": {
+              "frac_present": 0.5833333333333334,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 18,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::mid": {
+              "frac_present": 0.6923076923076923,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 1412,
+              "n_words": 54,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            },
+            "patched::late": {
+              "frac_present": 0.75,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 51,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            }
+          }
+        },
+        {
+          "id": "L0-03",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 836,
+              "n_words": 50,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "corrupted": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 836,
+              "n_words": 50,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::early": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 836,
+              "n_words": 50,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::mid": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 836,
+              "n_words": 50,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::late": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 836,
+              "n_words": 50,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            }
+          }
+        },
+        {
+          "id": "L0-04",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.2,
+              "n_probes": 10,
+              "n_unknown": 0,
+              "max_count": 151,
+              "n_words": 43,
+              "too_few_probes": false,
+              "resolution": 0.1
+            },
+            "corrupted": {
+              "frac_present": 0.2,
+              "n_probes": 10,
+              "n_unknown": 0,
+              "max_count": 151,
+              "n_words": 42,
+              "too_few_probes": false,
+              "resolution": 0.1
+            },
+            "patched::early": {
+              "frac_present": 0.1111111111111111,
+              "n_probes": 9,
+              "n_unknown": 0,
+              "max_count": 151,
+              "n_words": 40,
+              "too_few_probes": false,
+              "resolution": 0.1111111111111111
+            },
+            "patched::mid": {
+              "frac_present": 0.2,
+              "n_probes": 10,
+              "n_unknown": 0,
+              "max_count": 16,
+              "n_words": 42,
+              "too_few_probes": false,
+              "resolution": 0.1
+            },
+            "patched::late": {
+              "frac_present": 0.2,
+              "n_probes": 10,
+              "n_unknown": 0,
+              "max_count": 151,
+              "n_words": 42,
+              "too_few_probes": false,
+              "resolution": 0.1
+            }
+          }
+        },
+        {
+          "id": "L0-05",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 2376,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "corrupted": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 1760,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::early": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 2376,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::mid": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 819,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::late": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 819,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            }
+          }
+        },
+        {
+          "id": "L0-06",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 6267,
+              "n_words": 48,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "corrupted": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 6267,
+              "n_words": 48,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::early": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 6267,
+              "n_words": 48,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::mid": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 6267,
+              "n_words": 48,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::late": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 6267,
+              "n_words": 48,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            }
+          }
+        },
+        {
+          "id": "L0-07",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 1598,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "corrupted": {
+              "frac_present": 0.625,
+              "n_probes": 8,
+              "n_unknown": 0,
+              "max_count": 3272,
+              "n_words": 35,
+              "too_few_probes": false,
+              "resolution": 0.125
+            },
+            "patched::early": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 1598,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::mid": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 1598,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::late": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 1598,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            }
+          }
+        },
+        {
+          "id": "L0-08",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 596,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "corrupted": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 596,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::early": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 656,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::mid": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 596,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::late": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 596,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            }
+          }
+        },
+        {
+          "id": "L0-17",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.46153846153846156,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 1037,
+              "n_words": 54,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            },
+            "corrupted": {
+              "frac_present": 0.4166666666666667,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 14,
+              "n_words": 52,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::early": {
+              "frac_present": 0.46153846153846156,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 1037,
+              "n_words": 54,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            },
+            "patched::mid": {
+              "frac_present": 0.5454545454545454,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 6606,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::late": {
+              "frac_present": 0.5454545454545454,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 10,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            }
+          }
+        },
+        {
+          "id": "L0N-07",
+          "level": "L0N",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.0,
+              "n_probes": 9,
+              "n_unknown": 0,
+              "max_count": 0,
+              "n_words": 39,
+              "too_few_probes": false,
+              "resolution": 0.1111111111111111
+            },
+            "corrupted": {
+              "frac_present": 0.0,
+              "n_probes": 9,
+              "n_unknown": 0,
+              "max_count": 0,
+              "n_words": 39,
+              "too_few_probes": false,
+              "resolution": 0.1111111111111111
+            },
+            "patched::early": {
+              "frac_present": 0.0,
+              "n_probes": 9,
+              "n_unknown": 0,
+              "max_count": 0,
+              "n_words": 39,
+              "too_few_probes": false,
+              "resolution": 0.1111111111111111
+            },
+            "patched::mid": {
+              "frac_present": 0.0,
+              "n_probes": 9,
+              "n_unknown": 0,
+              "max_count": 0,
+              "n_words": 39,
+              "too_few_probes": false,
+              "resolution": 0.1111111111111111
+            },
+            "patched::late": {
+              "frac_present": 0.0,
+              "n_probes": 9,
+              "n_unknown": 0,
+              "max_count": 0,
+              "n_words": 39,
+              "too_few_probes": false,
+              "resolution": 0.1111111111111111
+            }
+          }
+        },
+        {
+          "id": "L0N-08",
+          "level": "L0N",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.0,
+              "n_probes": 6,
+              "n_unknown": 0,
+              "max_count": 0,
+              "n_words": 28,
+              "too_few_probes": true,
+              "resolution": 0.16666666666666666
+            },
+            "corrupted": {
+              "frac_present": 0.16666666666666666,
+              "n_probes": 6,
+              "n_unknown": 0,
+              "max_count": 34,
+              "n_words": 26,
+              "too_few_probes": true,
+              "resolution": 0.16666666666666666
+            },
+            "patched::early": {
+              "frac_present": 0.0,
+              "n_probes": 5,
+              "n_unknown": 0,
+              "max_count": 0,
+              "n_words": 24,
+              "too_few_probes": true,
+              "resolution": 0.2
+            },
+            "patched::mid": {
+              "frac_present": 0.9166666666666666,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 122,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::late": {
+              "frac_present": 0.16666666666666666,
+              "n_probes": 6,
+              "n_unknown": 0,
+              "max_count": 34,
+              "n_words": 26,
+              "too_few_probes": true,
+              "resolution": 0.16666666666666666
+            }
+          }
+        },
+        {
+          "id": "L0N-09",
+          "level": "L0N",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.25,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 7,
+              "n_words": 52,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "corrupted": {
+              "frac_present": 0.25,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 7,
+              "n_words": 52,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::early": {
+              "frac_present": 0.25,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 7,
+              "n_words": 52,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::mid": {
+              "frac_present": 0.25,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 7,
+              "n_words": 52,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::late": {
+              "frac_present": 0.25,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 7,
+              "n_words": 52,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            }
+          }
+        },
+        {
+          "id": "L0-20",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.3333333333333333,
+              "n_probes": 9,
+              "n_unknown": 0,
+              "max_count": 5,
+              "n_words": 40,
+              "too_few_probes": false,
+              "resolution": 0.1111111111111111
+            },
+            "corrupted": {
+              "frac_present": 0.5833333333333334,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 313,
+              "n_words": 52,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::early": {
+              "frac_present": 0.5384615384615384,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 36,
+              "n_words": 54,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            },
+            "patched::mid": {
+              "frac_present": 0.8333333333333334,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 193,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::late": {
+              "frac_present": 0.8333333333333334,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 193,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            }
+          }
+        },
+        {
+          "id": "L0-16",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 1.0,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 835,
+              "n_words": 54,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            },
+            "corrupted": {
+              "frac_present": 0.6153846153846154,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 835,
+              "n_words": 54,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            },
+            "patched::early": {
+              "frac_present": 0.45454545454545453,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 246,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::mid": {
+              "frac_present": 0.5833333333333334,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 3847,
+              "n_words": 50,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::late": {
+              "frac_present": 0.5833333333333334,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 3847,
+              "n_words": 50,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            }
+          }
+        },
+        {
+          "id": "L0-11",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 5965,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "corrupted": {
+              "frac_present": 0.9166666666666666,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 2962,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::early": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 5965,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::mid": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 5965,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::late": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 5965,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            }
+          }
+        }
+      ],
+      "min_probes": 8,
+      "too_few_probes": [
+        [
+          "L0N-08",
+          "clean"
+        ],
+        [
+          "L0N-08",
+          "corrupted"
+        ],
+        [
+          "L0N-08",
+          "patched::early"
+        ],
+        [
+          "L0N-08",
+          "patched::late"
+        ]
+      ]
+    },
+    "EleutherAI/pythia-2.8b": {
+      "index": "pile",
+      "rows": [
+        {
+          "id": "L0-01",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.8333333333333334,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 181,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "corrupted": {
+              "frac_present": 0.25,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 1686,
+              "n_words": 52,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::early": {
+              "frac_present": 0.75,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 248,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::mid": {
+              "frac_present": 0.5454545454545454,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 2946,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::late": {
+              "frac_present": 0.25,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 1686,
+              "n_words": 52,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            }
+          }
+        },
+        {
+          "id": "L0-02",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.3333333333333333,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 251,
+              "n_words": 52,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "corrupted": {
+              "frac_present": 0.6923076923076923,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 3823,
+              "n_words": 56,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            },
+            "patched::early": {
+              "frac_present": 0.5384615384615384,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 307,
+              "n_words": 54,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            },
+            "patched::mid": {
+              "frac_present": 0.4166666666666667,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 17,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::late": {
+              "frac_present": 0.25,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 1,
+              "n_words": 52,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            }
+          }
+        },
+        {
+          "id": "L0-03",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.8181818181818182,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 836,
+              "n_words": 48,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "corrupted": {
+              "frac_present": 0.09090909090909091,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 101,
+              "n_words": 46,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::early": {
+              "frac_present": 0.8333333333333334,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 932,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::mid": {
+              "frac_present": 0.9166666666666666,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 833,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::late": {
+              "frac_present": 0.16666666666666666,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 836,
+              "n_words": 50,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            }
+          }
+        },
+        {
+          "id": "L0-04",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.4166666666666667,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 846,
+              "n_words": 50,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "corrupted": {
+              "frac_present": 0.36363636363636365,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 846,
+              "n_words": 47,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::early": {
+              "frac_present": 0.36363636363636365,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 846,
+              "n_words": 48,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::mid": {
+              "frac_present": 0.08333333333333333,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 846,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::late": {
+              "frac_present": 0.4166666666666667,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 846,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            }
+          }
+        },
+        {
+          "id": "L0-05",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 2376,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "corrupted": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 2376,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::early": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 2376,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::mid": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 2376,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::late": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 2376,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            }
+          }
+        },
+        {
+          "id": "L0-06",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 6267,
+              "n_words": 48,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "corrupted": {
+              "frac_present": 0.3333333333333333,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 1168,
+              "n_words": 50,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::early": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 6267,
+              "n_words": 48,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::mid": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 6267,
+              "n_words": 48,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::late": {
+              "frac_present": 0.5555555555555556,
+              "n_probes": 9,
+              "n_unknown": 0,
+              "max_count": 2321,
+              "n_words": 40,
+              "too_few_probes": false,
+              "resolution": 0.1111111111111111
+            }
+          }
+        },
+        {
+          "id": "L0-16",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.3333333333333333,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 3847,
+              "n_words": 52,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "corrupted": {
+              "frac_present": 1.0,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 1234,
+              "n_words": 55,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            },
+            "patched::early": {
+              "frac_present": 0.6923076923076923,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 6690,
+              "n_words": 54,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            },
+            "patched::mid": {
+              "frac_present": 0.6923076923076923,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 6690,
+              "n_words": 54,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            },
+            "patched::late": {
+              "frac_present": 0.3333333333333333,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 3847,
+              "n_words": 52,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            }
+          }
+        },
+        {
+          "id": "L0-17",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.3076923076923077,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 1735,
+              "n_words": 54,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            },
+            "corrupted": {
+              "frac_present": 0.23076923076923078,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 90,
+              "n_words": 54,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            },
+            "patched::early": {
+              "frac_present": 0.25,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 14,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::mid": {
+              "frac_present": 0.23076923076923078,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 401,
+              "n_words": 54,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            },
+            "patched::late": {
+              "frac_present": 0.08333333333333333,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 566,
+              "n_words": 52,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            }
+          }
+        },
+        {
+          "id": "L0-20",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.14285714285714285,
+              "n_probes": 7,
+              "n_unknown": 0,
+              "max_count": 1735,
+              "n_words": 31,
+              "too_few_probes": true,
+              "resolution": 0.14285714285714285
+            },
+            "corrupted": {
+              "frac_present": 0.0,
+              "n_probes": 7,
+              "n_unknown": 0,
+              "max_count": 0,
+              "n_words": 30,
+              "too_few_probes": true,
+              "resolution": 0.14285714285714285
+            },
+            "patched::early": {
+              "frac_present": 0.2857142857142857,
+              "n_probes": 7,
+              "n_unknown": 0,
+              "max_count": 6391,
+              "n_words": 33,
+              "too_few_probes": true,
+              "resolution": 0.14285714285714285
+            },
+            "patched::mid": {
+              "frac_present": 0.0,
+              "n_probes": 6,
+              "n_unknown": 0,
+              "max_count": 0,
+              "n_words": 29,
+              "too_few_probes": true,
+              "resolution": 0.16666666666666666
+            },
+            "patched::late": {
+              "frac_present": 0.0,
+              "n_probes": 6,
+              "n_unknown": 0,
+              "max_count": 0,
+              "n_words": 27,
+              "too_few_probes": true,
+              "resolution": 0.16666666666666666
+            }
+          }
+        },
+        {
+          "id": "L0-07",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 1598,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "corrupted": {
+              "frac_present": 0.7272727272727273,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 2467,
+              "n_words": 47,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::early": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 1598,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::mid": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 1598,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::late": {
+              "frac_present": 0.6666666666666666,
+              "n_probes": 9,
+              "n_unknown": 0,
+              "max_count": 631,
+              "n_words": 40,
+              "too_few_probes": false,
+              "resolution": 0.1111111111111111
+            }
+          }
+        },
+        {
+          "id": "L0N-08",
+          "level": "L0N",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.0,
+              "n_probes": 5,
+              "n_unknown": 0,
+              "max_count": 0,
+              "n_words": 25,
+              "too_few_probes": true,
+              "resolution": 0.2
+            },
+            "corrupted": {
+              "frac_present": 0.0,
+              "n_probes": 5,
+              "n_unknown": 0,
+              "max_count": 0,
+              "n_words": 25,
+              "too_few_probes": true,
+              "resolution": 0.2
+            },
+            "patched::early": {
+              "frac_present": 0.0,
+              "n_probes": 5,
+              "n_unknown": 0,
+              "max_count": 0,
+              "n_words": 25,
+              "too_few_probes": true,
+              "resolution": 0.2
+            },
+            "patched::mid": {
+              "frac_present": 0.0,
+              "n_probes": 5,
+              "n_unknown": 0,
+              "max_count": 0,
+              "n_words": 25,
+              "too_few_probes": true,
+              "resolution": 0.2
+            },
+            "patched::late": {
+              "frac_present": 0.0,
+              "n_probes": 5,
+              "n_unknown": 0,
+              "max_count": 0,
+              "n_words": 25,
+              "too_few_probes": true,
+              "resolution": 0.2
+            }
+          }
+        },
+        {
+          "id": "L0-11",
+          "level": "L0",
+          "index": "pile",
+          "frac_present": {
+            "clean": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 5965,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "corrupted": {
+              "frac_present": 1.0,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 5965,
+              "n_words": 54,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            },
+            "patched::early": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 5965,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::mid": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 5965,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::late": {
+              "frac_present": 1.0,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 5965,
+              "n_words": 54,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            }
+          }
+        }
+      ],
+      "min_probes": 8,
+      "too_few_probes": [
+        [
+          "L0-20",
+          "clean"
+        ],
+        [
+          "L0-20",
+          "corrupted"
+        ],
+        [
+          "L0-20",
+          "patched::early"
+        ],
+        [
+          "L0-20",
+          "patched::mid"
+        ],
+        [
+          "L0-20",
+          "patched::late"
+        ],
+        [
+          "L0N-08",
+          "clean"
+        ],
+        [
+          "L0N-08",
+          "corrupted"
+        ],
+        [
+          "L0N-08",
+          "patched::early"
+        ],
+        [
+          "L0N-08",
+          "patched::mid"
+        ],
+        [
+          "L0N-08",
+          "patched::late"
+        ]
+      ]
+    },
+    "allenai/OLMo-2-0425-1B": {
+      "index": "olmo_mix",
+      "rows": [
+        {
+          "id": "L0-01",
+          "level": "L0",
+          "index": "olmo_mix",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.4166666666666667,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 23564,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "corrupted": {
+              "frac_present": 0.25,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 58,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::early": {
+              "frac_present": 0.25,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 29,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::mid": {
+              "frac_present": 0.25,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 29,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::late": {
+              "frac_present": 0.5,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 7331,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            }
+          }
+        },
+        {
+          "id": "L0-03",
+          "level": "L0",
+          "index": "olmo_mix",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.75,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 7460,
+              "n_words": 52,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "corrupted": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 5834,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::early": {
+              "frac_present": 0.8333333333333334,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 7460,
+              "n_words": 52,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::mid": {
+              "frac_present": 0.8333333333333334,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 7460,
+              "n_words": 52,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::late": {
+              "frac_present": 0.8333333333333334,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 7460,
+              "n_words": 52,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            }
+          }
+        },
+        {
+          "id": "L0-04",
+          "level": "L0",
+          "index": "olmo_mix",
+          "frac_present": {
+            "clean": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 20072,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "corrupted": {
+              "frac_present": 0.75,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 20072,
+              "n_words": 52,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::early": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 20072,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::mid": {
+              "frac_present": 0.5833333333333334,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 20072,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::late": {
+              "frac_present": 0.75,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 20072,
+              "n_words": 52,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            }
+          }
+        },
+        {
+          "id": "L0-05",
+          "level": "L0",
+          "index": "olmo_mix",
+          "frac_present": {
+            "clean": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 60329,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "corrupted": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 60329,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::early": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 60329,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::mid": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 60329,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::late": {
+              "frac_present": 1.0,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 60329,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            }
+          }
+        },
+        {
+          "id": "L0-06",
+          "level": "L0",
+          "index": "olmo_mix",
+          "frac_present": {
+            "clean": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 64700,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "corrupted": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 64700,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::early": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 64700,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::mid": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 64700,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::late": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 64700,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            }
+          }
+        },
+        {
+          "id": "L0-07",
+          "level": "L0",
+          "index": "olmo_mix",
+          "frac_present": {
+            "clean": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 21675,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "corrupted": {
+              "frac_present": 0.8181818181818182,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 28315,
+              "n_words": 48,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::early": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 21675,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::mid": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 21675,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::late": {
+              "frac_present": 0.7,
+              "n_probes": 10,
+              "n_unknown": 0,
+              "max_count": 8765,
+              "n_words": 43,
+              "too_few_probes": false,
+              "resolution": 0.1
+            }
+          }
+        },
+        {
+          "id": "L0-15",
+          "level": "L0",
+          "index": "olmo_mix",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.6363636363636364,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 3975,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "corrupted": {
+              "frac_present": 0.6,
+              "n_probes": 10,
+              "n_unknown": 0,
+              "max_count": 1043,
+              "n_words": 45,
+              "too_few_probes": false,
+              "resolution": 0.1
+            },
+            "patched::early": {
+              "frac_present": 0.36363636363636365,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 183,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::mid": {
+              "frac_present": 0.45454545454545453,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 3455,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::late": {
+              "frac_present": 0.45454545454545453,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 110745,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            }
+          }
+        },
+        {
+          "id": "L0-16",
+          "level": "L0",
+          "index": "olmo_mix",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.38461538461538464,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 20516,
+              "n_words": 54,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            },
+            "corrupted": {
+              "frac_present": 0.38461538461538464,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 858,
+              "n_words": 55,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            },
+            "patched::early": {
+              "frac_present": 0.5,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 167,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::mid": {
+              "frac_present": 0.5,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 167,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::late": {
+              "frac_present": 0.38461538461538464,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 53780,
+              "n_words": 54,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            }
+          }
+        },
+        {
+          "id": "L0-17",
+          "level": "L0",
+          "index": "olmo_mix",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.8461538461538461,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 70645,
+              "n_words": 55,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            },
+            "corrupted": {
+              "frac_present": 0.9230769230769231,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 11954,
+              "n_words": 54,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            },
+            "patched::early": {
+              "frac_present": 0.9230769230769231,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 7106,
+              "n_words": 55,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            },
+            "patched::mid": {
+              "frac_present": 0.8461538461538461,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 70645,
+              "n_words": 55,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            },
+            "patched::late": {
+              "frac_present": 0.8333333333333334,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 207421,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            }
+          }
+        },
+        {
+          "id": "L0-19",
+          "level": "L0",
+          "index": "olmo_mix",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.25,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 1627,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "corrupted": {
+              "frac_present": 0.25,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 1627,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::early": {
+              "frac_present": 0.25,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 1627,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::mid": {
+              "frac_present": 0.25,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 1627,
+              "n_words": 53,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::late": {
+              "frac_present": 0.4166666666666667,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 2199,
+              "n_words": 51,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            }
+          }
+        },
+        {
+          "id": "L0-08",
+          "level": "L0",
+          "index": "olmo_mix",
+          "frac_present": {
+            "clean": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 8402,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "corrupted": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 15906,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::early": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 8402,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::mid": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 8402,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "patched::late": {
+              "frac_present": 1.0,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 8402,
+              "n_words": 49,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            }
+          }
+        },
+        {
+          "id": "L0-20",
+          "level": "L0",
+          "index": "olmo_mix",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.2727272727272727,
+              "n_probes": 11,
+              "n_unknown": 0,
+              "max_count": 283,
+              "n_words": 46,
+              "too_few_probes": false,
+              "resolution": 0.09090909090909091
+            },
+            "corrupted": {
+              "frac_present": 0.1,
+              "n_probes": 10,
+              "n_unknown": 0,
+              "max_count": 1382,
+              "n_words": 42,
+              "too_few_probes": false,
+              "resolution": 0.1
+            },
+            "patched::early": {
+              "frac_present": 0.16666666666666666,
+              "n_probes": 12,
+              "n_unknown": 0,
+              "max_count": 248,
+              "n_words": 50,
+              "too_few_probes": false,
+              "resolution": 0.08333333333333333
+            },
+            "patched::mid": {
+              "frac_present": 0.4,
+              "n_probes": 10,
+              "n_unknown": 0,
+              "max_count": 1088,
+              "n_words": 45,
+              "too_few_probes": false,
+              "resolution": 0.1
+            },
+            "patched::late": {
+              "frac_present": 0.2222222222222222,
+              "n_probes": 9,
+              "n_unknown": 0,
+              "max_count": 84,
+              "n_words": 38,
+              "too_few_probes": false,
+              "resolution": 0.1111111111111111
+            }
+          }
+        },
+        {
+          "id": "L0N-07",
+          "level": "L0N",
+          "index": "olmo_mix",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.0,
+              "n_probes": 9,
+              "n_unknown": 0,
+              "max_count": 0,
+              "n_words": 40,
+              "too_few_probes": false,
+              "resolution": 0.1111111111111111
+            },
+            "corrupted": {
+              "frac_present": null,
+              "n_probes": 0,
+              "n_unknown": 0,
+              "max_count": null,
+              "n_words": 5,
+              "too_few_probes": true,
+              "resolution": null
+            },
+            "patched::early": {
+              "frac_present": 0.0,
+              "n_probes": 9,
+              "n_unknown": 0,
+              "max_count": 0,
+              "n_words": 40,
+              "too_few_probes": false,
+              "resolution": 0.1111111111111111
+            },
+            "patched::mid": {
+              "frac_present": 0.0,
+              "n_probes": 10,
+              "n_unknown": 0,
+              "max_count": 0,
+              "n_words": 42,
+              "too_few_probes": false,
+              "resolution": 0.1
+            },
+            "patched::late": {
+              "frac_present": null,
+              "n_probes": 0,
+              "n_unknown": 0,
+              "max_count": null,
+              "n_words": 5,
+              "too_few_probes": true,
+              "resolution": null
+            }
+          }
+        },
+        {
+          "id": "L0N-11",
+          "level": "L0N",
+          "index": "olmo_mix",
+          "frac_present": {
+            "clean": {
+              "frac_present": 0.25,
+              "n_probes": 8,
+              "n_unknown": 0,
+              "max_count": 3,
+              "n_words": 35,
+              "too_few_probes": false,
+              "resolution": 0.125
+            },
+            "corrupted": {
+              "frac_present": 0.0,
+              "n_probes": 8,
+              "n_unknown": 0,
+              "max_count": 0,
+              "n_words": 36,
+              "too_few_probes": false,
+              "resolution": 0.125
+            },
+            "patched::early": {
+              "frac_present": 0.4444444444444444,
+              "n_probes": 9,
+              "n_unknown": 0,
+              "max_count": 230987,
+              "n_words": 40,
+              "too_few_probes": false,
+              "resolution": 0.1111111111111111
+            },
+            "patched::mid": {
+              "frac_present": 0.25,
+              "n_probes": 8,
+              "n_unknown": 0,
+              "max_count": 3,
+              "n_words": 35,
+              "too_few_probes": false,
+              "resolution": 0.125
+            },
+            "patched::late": {
+              "frac_present": 0.0,
+              "n_probes": 9,
+              "n_unknown": 0,
+              "max_count": 0,
+              "n_words": 40,
+              "too_few_probes": false,
+              "resolution": 0.1111111111111111
+            }
+          }
+        },
+        {
+          "id": "L0-11",
+          "level": "L0",
+          "index": "olmo_mix",
+          "frac_present": {
+            "clean": {
+              "frac_present": 1.0,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 124912,
+              "n_words": 54,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            },
+            "corrupted": {
+              "frac_present": 1.0,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 124912,
+              "n_words": 54,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            },
+            "patched::early": {
+              "frac_present": 1.0,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 124912,
+              "n_words": 54,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            },
+            "patched::mid": {
+              "frac_present": 1.0,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 124912,
+              "n_words": 54,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            },
+            "patched::late": {
+              "frac_present": 1.0,
+              "n_probes": 13,
+              "n_unknown": 0,
+              "max_count": 124912,
+              "n_words": 54,
+              "too_few_probes": false,
+              "resolution": 0.07692307692307693
+            }
+          }
+        }
+      ],
+      "min_probes": 8,
+      "too_few_probes": [
+        [
+          "L0N-07",
+          "corrupted"
+        ],
+        [
+          "L0N-07",
+          "patched::late"
+        ]
+      ]
+    }
+  }
+}

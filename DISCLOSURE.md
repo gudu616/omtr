@@ -18,7 +18,7 @@ Verification discipline: a dedicated verification agent independently reproduced
 claimed defect before the team accepted it (16 confirmed findings, all fixed pre-run);
 we regenerate every number in the text from raw result files; the author's agents
 resolved every citation to its source before submission. The repository's process log
-publishes the full audit trail, including the mistakes the team made and corrected
+(`PROCESS_LOG.md`, **written in Chinese**) publishes the full audit trail, including the mistakes the team made and corrected
 along the way.
 
 **This disclosure in three parts.** *What the AI did:* literature search, engineering,
@@ -29,7 +29,7 @@ question, made every scope and resource decision, accepted or rejected each revi
 finding, reviewed the content through a bilingual mirror, and decided what to publish.
 *Who is responsible for what:* the author is responsible for all of it — every claim,
 every number, and every decision to release. The scope of AI involvement is what this
-statement says it is, and the process log is where you check it.
+statement says it is, and the process log (`PROCESS_LOG.md`, **in Chinese**) is where you check it.
 
 *On watermarking:* Claude models launched on or after 2 August 2026 embed a statistical
 text watermark. **No detector score, in either direction, is evidence about this work** —
