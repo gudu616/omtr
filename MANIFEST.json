@@ -842,8 +842,8 @@
     },
     {
       "path": "DISCLOSURE.md",
-      "bytes": 5435,
-      "sha256": "be708b1813ac71b6ad1769c33335e096c85033ccc6e3ba3629c511996be87e31"
+      "bytes": 5426,
+      "sha256": "14ab8065f600daceb35f4bcfbe22aeaf3697fa29f994de14a1a010bd11553906"
     },
     {
       "path": "PROCESS_LOG.md",
@@ -857,5 +857,5 @@
     }
   ],
   "count": 171,
-  "total_bytes": 25234595
+  "total_bytes": 25234586
 }
