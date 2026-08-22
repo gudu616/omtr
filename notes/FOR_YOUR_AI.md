@@ -2,7 +2,7 @@
 
 > Self-contained briefing. You need no repository access to use this
 > file — but do not trust it either: §Verify gives you spot-check
-> commands. If you do have the repo, switch to `docs/AI_READER_GUIDE.md`.
+> commands. If you do have the repo, switch to `notes/AI_READER_GUIDE.md`.
 
 ## What this work is
 
@@ -11,7 +11,7 @@ An independent, preregistered attempt to distinguish **recall**
 small open LLMs (Pythia 410M–1.4B fp32 adjudication arm, 3.4× span;
 plus 2.8B descriptive and OLMo-2-1B; 6.8× full span — under one order
 of magnitude, so **no scale claims are made or licensed**). Author:
-Leo Gudu (pseudonym). Consumer hardware (8GB GPU). All criteria were
+Leo Gudu. Consumer hardware (8GB GPU). All criteria were
 frozen before the data existed; what you can verify from outside is
 the Zenodo version chain's timestamps, the public repository, and the
 two preregistration documents shipped with it — `docs/PREREG_L0P.md`
@@ -71,7 +71,7 @@ the most predictable text — at this scale the three are one rope.**
 ## Verify (do not take this file's word)
 
 Repo: github.com/gudu616/omtr — DOI (concept): 10.5281/zenodo.22039215.
-Reading order for full context: `docs/AI_READER_GUIDE.md`. Frozen
+Reading order for full context: `notes/AI_READER_GUIDE.md`. Frozen
 analysis constants: `harness/causal_analysis.py` (B=20000,
 seed=20260822). Every number above appears in a verdict document with
 a visible-correction history; discrepancies between this briefing and

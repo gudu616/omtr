@@ -8,7 +8,7 @@
   §6.6（第392-429行）：材料可換、判準不可換——本檔常數全部 import 自
   causal_patch，不重抄任何門檻。
 
-【現況（2026-08-22）】②「verb×修正池」與 proper 修正池的精確構造仍待主線/
+【現況（2026-08-22）】②「verb×修正池」與 proper 修正池的精確構造仍待統籌代理/
 理論部裁定（已發訊詢問），本檔的四格定義因此設計成**外部傳入**（見
 `CellDef`），不寫死在邏輯裡——裁定一出爐，換設定檔即可，runner 骨架不用重寫。
 
@@ -18,15 +18,15 @@ adequacy_multiple/n_cue）全部用 causal_patch.PatchConfig 的預設值，不�
 
 【只備料，不判定】本檔輸出 p、三分母、drop 中位數、條件A、停機規則旗標、
 Δ_verb 的 cluster bootstrap CI——不寫「支持/反對詞池歸因」，§5 的格①②③④
-映射由主線按凍結文字執行。
+映射由統籌代理按凍結文字執行。
 
 【全程 CPU，不碰 GPU】本檔的 `main()`／`run_cell()` 需要載入真實模型才能真的
 跑；本次交付只到「自測全過、骨架就緒」，不執行任何模型載入或前向——
-點火令另外等董事會時段。
+點火令另外等作者時段。
 
 用法：
   自測：.venv/Scripts/python.exe harness/verbcue_main.py --self-test
-  （真跑需要 GPU 與董事會點火令，本檔尚未在本次交付中執行）
+  （真跑需要 GPU 與作者點火令，本檔尚未在本次交付中執行）
 """
 from __future__ import annotations
 
@@ -223,7 +223,7 @@ def cluster_bootstrap_delta(l0_per_item: dict, l0n_per_item: dict, B: int, rng,
             "n_items_L0": m0, "n_items_L0N": m0n,
             "midpoint_pp": 15.7, "anchor_verb_subset_pp": 0.8,
             "anchor_full_pool_pp": 30.6,
-            "note": "只備料：CI 端點與兩個既有錨並列，格①②③④映射由主線按 §2/§5 執行"}
+            "note": "只備料：CI 端點與兩個既有錨並列，格①②③④映射由統籌代理按 §2/§5 執行"}
 
 
 # ================================================================ 點火 ==

@@ -717,7 +717,7 @@ def stage_control(args, pairs, bat) -> dict:
             "did_abs_diff": {"max": max((d["abs_diff"] for d in did), default=None),
                              "median": med([d["abs_diff"] for d in did])},
             "verdict": None,
-            "note": ("門檻要不要從推的 0.236 改成量的，是理論部/董事會的裁決；"
+            "note": ("門檻要不要從推的 0.236 改成量的，是理論部/作者的裁決；"
                      "這裡只給實測分布。")}
 
 

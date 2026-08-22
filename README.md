@@ -34,9 +34,9 @@ under one order of magnitude, so **no scale claims are made or licensed**.
 **v1.0 (2026-08-22) — causal phase.** A corrupt-and-restore intervention, plus two
 zero-additional-cost supporting instruments run on the same stored data, now sit
 alongside the v0.7 record above: [`docs/WRITEUP_v1.0_EN.md`](docs/WRITEUP_v1.0_EN.md)
-is the current paper; [`docs/FOR_YOUR_AI.md`](docs/FOR_YOUR_AI.md) and
-[`docs/AI_READER_GUIDE.md`](docs/AI_READER_GUIDE.md) are self-contained AI-oriented
-briefings. The causal preregistration ships at
+is the current paper; two self-contained AI-oriented briefings sit in
+[`notes/`](notes/) for readers who want the findings and the reading order without
+the full text. The causal preregistration ships at
 [`planning/CAUSAL_PREREG_v1.md`](planning/CAUSAL_PREREG_v1.md) — **a note to readers:
 this preregistration contains internal cross-references to working records not
 shipped with this package; the content that carries the verdict is self-contained,
@@ -71,8 +71,6 @@ registration itself, as results.
 | File | What it is |
 |---|---|
 | [`docs/WRITEUP_v1.0_EN.md`](docs/WRITEUP_v1.0_EN.md) | **The paper** (English, canonical): three instrument generations, the causal phase, the position test, the word-pool 2×2, limitations, corrections history |
-| [`docs/FOR_YOUR_AI.md`](docs/FOR_YOUR_AI.md) | One-page briefing for an AI reading on a researcher's behalf — findings with their qualifiers welded on, no repo access needed |
-| [`docs/AI_READER_GUIDE.md`](docs/AI_READER_GUIDE.md) | Reading order and the five things this data must not be over-read to say |
 | [`docs/WRITEUP_v0.7_EN.md`](docs/WRITEUP_v0.7_EN.md) | v0.7: the preregistered L0P crossed control + the preserved v0.6/v1 record |
 | [`docs/WRITEUP_v0.7_ZH.md`](docs/WRITEUP_v0.7_ZH.md) | Chinese version of v0.7, content-equivalent |
 | [`docs/WRITEUP_v0.6_EN.md`](docs/WRITEUP_v0.6_EN.md) | v0.6: the instrument self-test that reversed the depth headline |
@@ -129,11 +127,10 @@ the v0.7.1 correction).
   table used at run time (`planning/battery_expansion/`)
 - `results/` — raw per-item outputs, analyses, figures; `results/causal/` holds the
   frozen verdict outputs the v1.0 paper quotes
-- `docs/` — papers, the two AI-oriented briefings
-  ([`docs/FOR_YOUR_AI.md`](docs/FOR_YOUR_AI.md),
-  [`docs/AI_READER_GUIDE.md`](docs/AI_READER_GUIDE.md)), item-level appendix, per-entry
-  citation verification log ([`docs/CITATIONS_VERIFIED.md`](docs/CITATIONS_VERIFIED.md)),
-  33 plain-language learning cards (`docs/learn/`, Chinese)
+- `docs/` — papers, item-level appendix, per-entry citation verification log
+  ([`docs/CITATIONS_VERIFIED.md`](docs/CITATIONS_VERIFIED.md)), 33 plain-language
+  learning cards (`docs/learn/`, Chinese)
+- `notes/` — the two AI-oriented briefings named above
 - [`PROCESS_LOG.md`](PROCESS_LOG.md) — the full process log the papers cite, including
   every mistake we made and fixed
 - `RUNS.md` — exact per-model run configurations

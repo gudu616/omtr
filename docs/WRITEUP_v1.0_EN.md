@@ -817,9 +817,8 @@ is listed with what the file actually says.
   the point being made. Ordered by size the values are 0.011 (1B), **0.240**
   (1.4B), 0.056 (2.8B).
 
-**Corrections made to v1.0 itself, in adversarial review before release
-(v1.0b).** This document was reviewed against its own sources before it went
-out, and four of its own claims did not survive:
+**Corrections made to this document before release.** It was reviewed against
+its own sources before it went out, and four of its own claims did not survive:
 
 - **A "verbatim" quotation that was not verbatim.** §4.3 introduced the
   analyzer's frozen narrative with the word "verbatim" and then gave an English
@@ -846,8 +845,9 @@ nats values are now labeled as family averages (a reader pooling all pairs gets
 −0.047 instead of −0.059), and the sensitivity arm's effect is quoted as −3.9σ
 rather than −3.93σ, which was the least extreme of its three bands.
 
-**One further correction, from the release review of v1.0b (v1.0c).** The
-account of the simulator disagreement was one-sided. v1.0b recorded that the
+**One further correction, from a later pass of the same review.** The
+account of the simulator disagreement was one-sided. An earlier draft of this
+section recorded that the
 side which produced the first false-positive-rate range withdrew it, and said
 nothing about the fact that **the other side's numbers were downgraded too, and
 by more** — the record shows the larger error belonged to the side reporting it,
@@ -867,7 +867,8 @@ what it cost precisely: the positive branch was already closed by the gold
 result, so what was lost is the contradiction check, not a route to a positive
 finding.
 
-**A shipping-scope calibration (v1.0d).** One document that had been expected
+**A shipping-scope calibration, part of the packaging cleanup before archival
+release.** One document that had been expected
 to ship was withdrawn from the package late — the causal phase's second-stage
 freeze record — so every sentence describing what a reader receives was checked
 against the package manifest rather than against the plan. Two preregistration

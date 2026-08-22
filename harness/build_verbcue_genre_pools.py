@@ -154,14 +154,14 @@ def apply_size_rule(results: dict):
 
 
 def apply_universal_collision_truncation(decisions, results, battery):
-    """§0-b 類推（2026-08-22 主線裁定，非理論部逐字條文，但主線已給明確推理，
+    """§0-b 類推（2026-08-22 統籌代理裁定，非理論部逐字條文，但統籌代理已給明確推理，
     見對應工作紀錄）：若某題的 cue 詞恰好落在「通用池」裡（causal_patch.py:268
     自我替換防護），通用欄的可用數會靜默少 1（例：verb×通用池的 L0N-06，
     cue=baked，可用=23/24）。poolgen §4-b 檢查②要求同一題同一cue兩欄可用數
     相等，而修正欄的候選生成已經把cue排除在外（§2-c第1條），天生不會撞——
     兩欄因此不等。**處置：套用§0-b「同一題在它出現的每一格都改用N」的邏輯，
     以兩欄可用數的較小值為準**，修正欄對應截短1個（丟最後一名，即頻次序+
-    字母序排最後的那個）。這不是理論部逐字凍結的規則，是主線指示的類推應用，
+    字母序排最後的那個）。這不是理論部逐字凍結的規則，是統籌代理指示的類推應用，
     範圍僅限於已知的通用池撞名案例（本批資料只有 L0N-06/verb 一例）。"""
     universal = json.load(open(PROJ / "battery" / "verbcue_pools.json", encoding="utf-8"))
     items_data = json.load(open(PROJ / "battery" / "verbcue_items.json", encoding="utf-8"))
@@ -235,7 +235,7 @@ def main():
             lines.append(f"| {i} | {w} | {f} |")
         lines.append("")
 
-    lines.append("## §0-b 類推：通用池撞名，修正欄同步截短（主線 2026-08-22 裁定，非理論部逐字條文）\n")
+    lines.append("## §0-b 類推：通用池撞名，修正欄同步截短（統籌代理 2026-08-22 裁定，非理論部逐字條文）\n")
     if collision_adjustments:
         for a in collision_adjustments:
             lines.append(f"- {a['item']}/{a['cls']}：cue={a['cue']!r} 撞通用池，"

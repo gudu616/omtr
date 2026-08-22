@@ -99,6 +99,6 @@ paths run on CPU). Frozen constants live in `harness/causal_analysis.py`
 
 Published: GitHub `gudu616/omtr`; Zenodo concept DOI
 10.5281/zenodo.22039215 (version chain v0.5→v0.7.1, including a public
-correction). Author: Leo Gudu (pseudonym, deliberate). The research
+correction). Author: Leo Gudu. The research
 process used AI agents extensively under preregistered protocols;
 every claim is checkable without trusting the process.

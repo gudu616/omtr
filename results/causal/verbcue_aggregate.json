@@ -2424,7 +2424,7 @@
    "midpoint_pp": 15.7,
    "anchor_verb_subset_pp": 0.8,
    "anchor_full_pool_pp": 30.6,
-   "note": "只備料：CI 端點與兩個既有錨並列，格①②③④映射由主線按 §2/§5 執行"
+   "note": "只備料：CI 端點與兩個既有錨並列，格①②③④映射由統籌代理按 §2/§5 執行"
   },
   "delta_verb_corrected": {
    "status": "OK",
@@ -2441,7 +2441,7 @@
    "midpoint_pp": 15.7,
    "anchor_verb_subset_pp": 0.8,
    "anchor_full_pool_pp": 30.6,
-   "note": "只備料：CI 端點與兩個既有錨並列，格①②③④映射由主線按 §2/§5 執行"
+   "note": "只備料：CI 端點與兩個既有錨並列，格①②③④映射由統籌代理按 §2/§5 執行"
   },
   "delta_proper_universal": {
    "status": "OK",
@@ -2458,7 +2458,7 @@
    "midpoint_pp": 15.7,
    "anchor_verb_subset_pp": 0.8,
    "anchor_full_pool_pp": 30.6,
-   "note": "只備料：CI 端點與兩個既有錨並列，格①②③④映射由主線按 §2/§5 執行"
+   "note": "只備料：CI 端點與兩個既有錨並列，格①②③④映射由統籌代理按 §2/§5 執行"
   },
   "delta_proper_corrected": {
    "status": "OK",
@@ -2475,7 +2475,7 @@
    "midpoint_pp": 15.7,
    "anchor_verb_subset_pp": 0.8,
    "anchor_full_pool_pp": 30.6,
-   "note": "只備料：CI 端點與兩個既有錨並列，格①②③④映射由主線按 §2/§5 執行"
+   "note": "只備料：CI 端點與兩個既有錨並列，格①②③④映射由統籌代理按 §2/§5 執行"
   }
  },
  "delta_pool_per_class": {
@@ -2494,7 +2494,7 @@
    "midpoint_pp": 15.7,
    "anchor_verb_subset_pp": 0.8,
    "anchor_full_pool_pp": 30.6,
-   "note": "Δ_pool = p_通用 - p_修正（同類，L0+L0N 題集池化）。只備料：CI 端點與兩個既有錨並列，格①②③④映射由主線按 §2/§5 執行"
+   "note": "Δ_pool = p_通用 - p_修正（同類，L0+L0N 題集池化）。只備料：CI 端點與兩個既有錨並列，格①②③④映射由統籌代理按 §2/§5 執行"
   },
   "delta_pool_proper": {
    "status": "OK",
@@ -2511,7 +2511,7 @@
    "midpoint_pp": 15.7,
    "anchor_verb_subset_pp": 0.8,
    "anchor_full_pool_pp": 30.6,
-   "note": "Δ_pool = p_通用 - p_修正（同類，L0+L0N 題集池化）。只備料：CI 端點與兩個既有錨並列，格①②③④映射由主線按 §2/§5 執行"
+   "note": "Δ_pool = p_通用 - p_修正（同類，L0+L0N 題集池化）。只備料：CI 端點與兩個既有錨並列，格①②③④映射由統籌代理按 §2/§5 執行"
   }
  }
 }

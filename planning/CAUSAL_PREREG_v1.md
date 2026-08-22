@@ -1,11 +1,25 @@
+# 因果階段預註冊 v1（公開演繹版）／Causal-phase preregistration v1 (public rendition)
+
+> **本檔為凍結原件之公開演繹。科學內容一字未動**；僅將內部工作流程語句、
+> 以及指向未隨包工作紀錄的檔名引用，**逐處**以可見標記
+> `[redacted: internal workflow note]` 遮蔽。凍結原件為 local record，不隨包出貨。
+> 遮蔽處一律留在原位、不刪行、不改寫上下文——讀者可據此判斷被遮的是什麼**位置**。
+>
+> **This file is a public rendition of a frozen original. The scientific content is
+> unchanged.** Internal workflow sentences, and references to working records that do
+> not ship with this package, are masked **in place** with the visible marker
+> `[redacted: internal workflow note]`. The frozen original is a local record and does
+> not ship. Masks stay where the text was — nothing is deleted or rewritten around
+> them — so a reader can see where a redaction sits.
+
+---
+
 # 因果階段預註冊 v1 —— ✅ 第一段凍結
 
-> 2026-08-21 深夜由主線彙整。來源：`DESIGN_PROPOSAL_v2.md`（含 v2.1/v2.2 裁決、
-> v2.3 更正、v2.4 放行紀錄）＋ `office_reports/theory_v3_final.md`（數字權威）。
-> **狀態：第一段凍結（2026-08-21 董事會批准 D1）。**
+> [redacted: internal workflow note]
+> **狀態：第一段凍結（2026-08-21）。** [redacted: internal workflow note]
 > 冒煙後僅允許 §12 白名單四項改動；第二段凍結後任何條款不得再動。
-> 董事會另兩項決定併記：**D2** GPU 窗口一律排在使用者就寢後、由使用者主動通知；
-> **D3** 設計骨架**暫不**上鏈（董事會裁定：等本階段更完善再上，基本佔位已存在）。
+> [redacted: internal workflow note]
 
 ---
 
@@ -34,7 +48,7 @@
 - 續航窗（第 3 token 起）**僅描述性**（R3）。
 - **規格補完（2026-08-21 深夜，先於任何因果量測；凍結時遺漏的量測參數，補定非更改）**：
   溯源軌的 frac_present 一律用 **6 詞窗、stride 4、60-token 貪婪續寫**
-  （v0.7 `check_l5_novelty.py` 與第五波 `theory_provenance_floor.py` 的既有慣例）；
+  （v0.7 `check_l5_novelty.py` 與 [redacted: internal workflow note] 的既有慣例）；
   基線與主實驗同參數，基線工件＝`results/causal/provenance_baseline.json`。
 
 ## 3. 條件與題庫
@@ -50,7 +64,7 @@
   通過規則（凍結）：五模型中位 |Δgold(整段)| ≤ 0.5 nats **且**起手窗 Δ ≤ 1.0 nats；
   否則降級為未配平描述性對照。造題前先驗 ≥6 個不含替換詞的續寫窗（防構造迴音）。
 - **L0N 不再擴建**：三個擴充方向已證偽（0/15 雙語料驗證），
-  結構原因記錄在 `battery_expansion/l0n_expansion_report.md`（閘門＝引用頻率濾網）。
+  結構原因記錄在 [redacted: internal workflow note]（閘門＝引用頻率濾網）。
   溯源軌的 n 天花板由此而來，照實寫（§10）。
 - L0/L0P 最終規模：冒煙量到 σ 後定（§8→§10），規劃佔位 40/條件。
 
@@ -73,7 +87,7 @@
   家族統計量＝各 run studentized 統計量之均值。
 - 家族合併＝E2 Stouffer。
 - **凍結參數：B = 20000、n_sim = 40000、seed 20260822**（SE ≤ .0025）。
-  模擬腳本與 JSON 隨倉出貨（`theory_v3_sim.py` / `theory_v3_sim.json`）。
+  [redacted: internal workflow note]
 
 ## 6. 裁決規則（聯合表，原樣凍結）
 
@@ -96,7 +110,7 @@
   差異出口 A .0508–.0510／B .0455–.0458；R-specific 單獨 A .0250–.0265；
   **R-specific 兩軌連言：介於 .0008（兩軌獨立端）與 .0254（完全相關端）之間，
   實際位置由冒煙 G-link 量到的兩軌相關 r 決定、於第二段凍結時寫死**
-  （theory_v3_final §2.3(b)；不得只寫 .0008，也不得寫 .05）——與名目 .05
+  （[redacted: internal workflow note] §2.3(b)；不得只寫 .0008，也不得寫 .05）——與名目 .05
   差 2–60 倍，係有意識的取捨：偽陽性極低，代價為檢定力封頂於溯源軌（§10）。
 - **第四格「無規則點燃」為正式結果**，不假裝三格窮盡（v0.7 學費）。
 
@@ -106,8 +120,8 @@
    記憶專屬成分；若兩條件共用同一條恢復曲線，對比在構造上恆為零（N-f.3）。
    **冒煙檢查（G1，v2.6 重述版）**：~~原版「噪音門檻由同題不同 seed 的重複
    量測估出」~~**〔v2.6 更正，先於任何因果量測：主終點管線為 teacher-forced
-   ＋貪婪，完全決定性，無 seed 可換；原條款不可執行，理論部同時作廢其 v1
-   §1.4 對應句〕**。重述為**存在性檢定（v2.8 定稿：
+   ＋貪婪，完全決定性，無 seed 可換；原條款不可執行，[redacted: internal workflow note]〕**。
+   重述為**存在性檢定（v2.8 定稿：
    全面在分子 ΔY（nats）尺度操作；R=ΔY/Δs 僅作描述量，不得進入任何門檻
    ——分母隨機且近 0 有密度 ⇒ R 無有限變異數）**：保留題上把所有 patch 的
    (Δs, ΔY) 混合擬合 ΔY ~ f(Δs)，**殘差尺度用 MAD 穩健版（凍結）**，對照
@@ -123,17 +137,16 @@
    （跨替換詞變異不是噪音——換詞＝換介入；其用途為冒煙後選 k 與 G1-b 的
    同題內變異，見 §8。）
 2. **兩軌非冗餘**：**若冒煙量到 |r(Δgold恢復, Δ溯源)| > 0.95，溯源軌連同 R9
-   一併砍除**（省 ~2h infini-gram）。**0.95 此刻凍結**（N-f.5；理論部預測 |r|<0.9）。
+   一併砍除**（省 ~2h infini-gram）。**0.95 此刻凍結**（N-f.5；[redacted: internal workflow note]）。
 
 ## 8. 冒煙協定（GPU 窗口 A，~30 分鐘，只碰保留題）
 
 量五個錨＋三個檢查：
 σ_DiD（起手窗尺度）、rho_fam、**腐蝕強度校準（v2.8 分位制，取代 v2.6 相對帶
-——理論部自首 Δs_max 單詞探針為其規格缺陷：單一抽樣不是最大值估計量。
+——[redacted: internal workflow note] Δs_max 單詞探針為其規格缺陷：單一抽樣不是最大值估計量。
 現制：在過 rank 護欄且落差為正的存活候選中，選 Δs 落 q=0.75 分位者
 （q=0.75 明標慣例）；存活 <12 → pool_too_small 照實報；適足下限＝選中
-Δs ≥ 10×數值底線，不滿足整題出局（獨立錯誤碼）。分支規則（主線機械翻譯
-待審查確認）：保留題 pool_too_small 或未達適足下限者 >40% → 走多 token
+Δs ≥ 10×數值底線，不滿足整題出局（獨立錯誤碼）。分支規則（[redacted: internal workflow note]）：保留題 pool_too_small 或未達適足下限者 >40% → 走多 token
 分支。護欄不變：腐蝕後 gold 仍在 top-50）**、起手窗效應錨、
 **G-link（一個數字三個用途：①§7.2 冗餘判定 ②聯合虛無率真值 ③聯合檢定力真值，
 量到後代回聯合表再最終凍結）**、G1 存在性檢定（§7.1 重述版，含數值底線量測
@@ -162,11 +175,11 @@ G1-b 同題內變異，不預設 k=3）**、L0M 12 對試做（~192 前向）。
 ## 10. 靈敏度界線制（交付物定義）
 
 - σ 到手前**不寫檢定力承諾**；凍結時把量到的 σ、rho_fam、r 代入
-  theory_v3_final §4.2 表，寫成「本設計可偵測 d ≥ X」的界線。
+  [redacted: internal workflow note] §4.2 表，寫成「本設計可偵測 d ≥ X」的界線。
 - **交付物＝效應量估計＋校準信賴區間＋靈敏度界線**；裁決拿得到是加碼。
 - 天花板照實寫進預註冊（不得摘要掉）：連言 R-specific 檢定力在 d=0.5 時
   介於 .19（兩軌獨立端）與 .70（完全相關端＝gold 軌單獨）之間、
-  d=0.3 時下界 .038——真值由 G-link 的 r 決定（theory_v3_final §2.3）；
+  d=0.3 時下界 .038——真值由 G-link 的 r 決定（[redacted: internal workflow note] §2.3）；
   糾纏為真時第四格 .877（A）／.946（B）；溯源軌瓶頸＝L0N 供給
   （已三度證偽擴建）；錨點對帳（S5）：0.44 nats 與 d=0.15 是兩個不同的舊量，
   僅作歷史脈絡。
@@ -183,18 +196,18 @@ G1-b 同題內變異，不預設 k=3）**、L0M 12 對試做（~192 前向）。
 
 ## 12. 兩段式凍結
 
-1. **第一段（董事會 D1 批准即凍結）**：本文件全部條款、0.95 門檻、
+1. **第一段（[redacted: internal workflow note] 即凍結）**：本文件全部條款、0.95 門檻、
    聯合表、seed/B、保留集構成、L0M 通過規則。
 2. **冒煙後允許改動的白名單（僅此五項，公式已寫死）**：
    ①r 代回聯合表更新虛無率/檢定力真值；②σ、rho_fam 代入 §4.2 表定 X 界線；
    ③G1 數值底線（浮點路徑差異上界）數值化〔v2.6 由「噪音門檻」改述〕；
    ④TOST 等價邊界由 MDE 推導數值化；⑤跨替換詞 r 決定 k 值（k∈{1,2,3}，
-   依 theory_v3_final 附錄 B 的 σ_eff 倍率表選）。
+   依 [redacted: internal workflow note] 附錄 B 的 σ_eff 倍率表選）。
 3. 第二段凍結後 git commit＋雜湊記錄，然後才排 GPU 窗口 B。
    看到主實驗資料後，任何條款不得再動（違者照 v0.7 更正紀律公開記錄）。
-4. **指標塊（2026-08-22 凌晨，總審查後）**：v2.11–v2.13 增補裁決與六項
+4. **指標塊（2026-08-22，[redacted: internal workflow note]）**：v2.11–v2.13 增補裁決與六項
    PENDING-FREEZE 凍結值（G-link min 一致決與分子尺度、S/SE(β)/集中度旗標、
    逐(模型,帶)擬合與 15 格一致決、G1-a 降級披露、PF-1 二次式與 dof 隨擬合式、
    PF-2 3/10 判準、PF-3 ρ 上界與重估、PF-4 k 規則、PF-5 陽性地板、分支
-   併池+逐模型點名）**已裁定於 `DESIGN_PROPOSAL_v2.2_rulings.md`（本檔之
+   併池+逐模型點名）**已裁定於 [redacted: internal workflow note]（本檔之
    延伸，同等凍結效力）**；全文謄入於第二段凍結時合併執行。

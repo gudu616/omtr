@@ -1772,7 +1772,7 @@ def stage_glink(args, *_ignored) -> dict:
         "threshold_note": ("0.95 **不是 50/50 點**：真 r=0.95 時 min-of-3 只點燃 12.5%，"
                            "規則天生保守，**不得讀成中位判準**（v2.11 ①伴隨凍結②）"),
         "verdict": None,
-        "note": "砍不砍是分析部/董事會的裁決；這裡只給逐帶 r、有效帶數與 min。",
+        "note": "砍不砍是分析部/作者的裁決；這裡只給逐帶 r、有效帶數與 min。",
     }
     return out
 

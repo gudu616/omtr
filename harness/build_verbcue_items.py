@@ -24,7 +24,7 @@
      ——§6.5-c 對 L0N-10（同類語料閘缺陷）採的是「不排除，union+遮罩」，
      若對 L0-14 一致適用同一政策，L0 proper 題數應為 8（僅排除 Pythia 三 run，
      保留 OLMo run），不是 7。**本檔兩案都算，見 include_l0_14 開關**，
-     何者為準待理論部/主線裁定。
+     何者為準待理論部/統籌代理裁定。
   2. **一題有多個目標類cue 時，選哪一個當 cue_word**：例如 L0N-06 同時有
      baked／boiled 兩個 verb cue、L0N-11 有 bewildered／squealed。
      本檔選**離 gold 邊界最近的那個**（`cue_word_candidates` 本身就是
@@ -155,7 +155,7 @@ def main():
             "三個 Pythia run 遮罩掉，比照 L0N-10 的處置）",
             "\n## L0-14 排除與否，本檔未擅自決定（見程式 docstring 推論1）\n",
             "兩案都已落檔於 verbcue_items.json 的 proper.L0_including_L0-14／"
-            "proper.L0_excluding_L0-14，待理論部/主線裁定用哪一案。\n"]
+            "proper.L0_excluding_L0-14，待理論部/統籌代理裁定用哪一案。\n"]
     report_path = PROJ / "planning" / "office_reports" / "verbcue_items_report.md"
     report_path.write_text("\n".join(lines), encoding="utf-8")
 

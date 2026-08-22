@@ -20,7 +20,7 @@ causal_analysis 模組 import，不另抄（v2.21 §5：「亦不得另抄模型
 
 【只備料，不判定】本檔輸出 Δ 聚合值、置換 p（主檢定＋§6b R2 整窗排除閘門）、
 等價 CI、SD(Δ_題)、逐題 run 數表複核、§2 逐模型 n 複核、全部斷言狀態、
-sign-flip 交叉檢查（只揭露）——不寫「通過/不通過」，判定由主線按凍結文字執行。
+sign-flip 交叉檢查（只揭露）——不寫「通過/不通過」，判定由統籌代理按凍結文字執行。
 
 用法：
   .venv/Scripts/python.exe harness/pos_test_v221.py --self-test
@@ -208,7 +208,7 @@ def compute_offsets_checked(model, item_id, full, prompt_text, n_prompt, n_gold,
     token))`，斷言 `b∈{0,1}`，原式為 b=1 特例），斷言1/2 與索引全部以 b
     參數化。本函式即該修正版的實作，四個斷言（含新斷言0）逐一對應。
 
-    ⚠ **v2.22 文本未涵蓋的第二個問題（已回報主線，理論部盲覆核已確認判定不用放寬，
+    ⚠ **v2.22 文本未涵蓋的第二個問題（已回報統籌代理，理論部盲覆核已確認判定不用放寬，
     尚待正式收斂進規格文本）**：
     v2.22 §4-B 斷言2字面仍寫 `offsets[n_prompt-b][0]==L`（嚴格相等）。
     實測：套用 b 修正後，Pythia 上這條**仍然不成立**——GPT-NeoX 的 fast
@@ -871,7 +871,7 @@ def write_report(path: Path, out: dict, run_id: str):
     lines = []
     a = lines.append
     a(f"# §7.7 位置檢定執行報告（v2.21+v2.22，run_id={run_id}）\n")
-    a("只備料，不判定——本檔不寫「通過/不通過」，最終判定由主線按凍結文字執行。\n")
+    a("只備料，不判定——本檔不寫「通過/不通過」，最終判定由統籌代理按凍結文字執行。\n")
     a(f"規格版本：{p.get('spec_version')}（`DESIGN_PROPOSAL_v2.2_rulings.md` v2.21第398-594行"
      f"＋v2.22第595-614行）＋`theory_pos_test_mapping_v1.md`（v1.1定稿＋§4-B v2.22"
      f"可見更正塊第326-390行）。\n")
@@ -943,7 +943,7 @@ def write_report(path: Path, out: dict, run_id: str):
          f"pooled_mean_nats={v.get('pooled_mean_nats')}, n_cells_pooled={v.get('n_cells_pooled')}")
     a("")
 
-    a("## 附註1：v2.22 之外仍待收斂的問題（已回報主線，理論部盲覆核已判定不用放寬，"
+    a("## 附註1：v2.22 之外仍待收斂的問題（已回報統籌代理，理論部盲覆核已判定不用放寬，"
      "但規格文本尚未正式收斂本條）\n")
     exm = sorted(astats.get("assert2_space_excluded_models") or [])
     a(f"v2.22 §4-B 斷言2字面仍寫 `offsets[n_prompt-b][0]==L`（嚴格相等）。套用 b 修正後，"
@@ -952,7 +952,7 @@ def write_report(path: Path, out: dict, run_id: str):
      f"checked=={astats.get('assert2_checked')}、pass=={astats.get('assert2_pass')}"
      f"（全過，無 abort）；命中「空格被排除」分支的模型＝{exm}（四個 Pythia，OLMo 不在內，"
      f"與斷言0的 b 家族分布一致）。這是跟 BOS 位移**獨立**的第二個根因，v2.22 文本尚未涵蓋，"
-     f"本檔已用放寬版斷言頂著，不等同於已收斂——留給理論部/主線決定要不要另立 v2.23。\n")
+     f"本檔已用放寬版斷言頂著，不等同於已收斂——留給理論部/統籌代理決定要不要另立 v2.23。\n")
     a(f"**理論部盲覆核附帶更正**：放寬版原本多附一個 `full[L]==' '` 條件，"
      f"理論部量出那條件恆真（§4-A 建構規則保證 gold 前必有空格），已從程式碼與措辭移除，"
      f"L+1 支現在只認 `s0==L+1` 本身。**新增斷言2b**（理論部建議的加固，與空格慣例無關）："
@@ -960,7 +960,7 @@ def write_report(path: Path, out: dict, run_id: str):
      f"checked=={astats.get('assert2b_checked')}、pass=={astats.get('assert2b_pass')}"
      f"（全過，不咬任何現有 cell，純加固）。\n")
 
-    a("## 附註2：build_battery_v2.py 特殊 token 設定不對稱查核（主線交辦的旁查）\n")
+    a("## 附註2：build_battery_v2.py 特殊 token 設定不對稱查核（統籌代理交辦的旁查）\n")
     a("**一行結論：不對稱不影響任何實際數字**——`AutoTokenizer.encode()` 在本專案用到的"
      "五個模型（pythia-410m/1b/1.4b/2.8b、OLMo-2-0425-1B）上，預設呼叫（不傳 "
      "`add_special_tokens`）與顯式 `add_special_tokens=False` 產出完全相同的 token id 序列"

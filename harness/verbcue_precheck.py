@@ -96,7 +96,7 @@ def main():
     if corrected:
         verb_items_all = dict(items["verb"]["L0"], **items["verb"]["L0N"])
         # ⚠ 修正：第一版漏了 proper 臂的 L0N 5 題，只查了 L0 的 8 題（8+8=16 對，
-        # 少查了本該有的 13 題 proper 全集）。跟主線訊息裡的「10對」（理論部逐
+        # 少查了本該有的 13 題 proper 全集）。跟統籌代理訊息裡的「10對」（理論部逐
         # cue 廣義查核，含 L0N-06 的 baked+boiled 兩個 verb cue）對不上時發現的。
         proper_items_all = dict(items["proper"]["L0_including_L0-14"],
                                 **items["proper"]["L0N"])
