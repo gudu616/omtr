@@ -1,0 +1,1479 @@
+{
+ "run_id": "winB1",
+ "meta": {
+  "spec_version": "CAUSAL_PREREG_v1 第一段凍結（2026-08-21）＋v2.6–v2.13 增補裁決（權威＝DESIGN_PROPOSAL_v2.2_rulings.md）",
+  "utc": "2026-08-21T20:39:46Z",
+  "python": "3.11.15",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "torch": "2.6.0+cu124",
+  "transformer_lens": "3.7.3",
+  "transformers": "5.15.1",
+  "gpu": "NVIDIA GeForce RTX 4060"
+ },
+ "built_by": "harness/causal_main.py --stage genmerge（gen）",
+ "purpose": "轉成 causal_smoke 吃的 runs 形（gen→provenance、patch→glink 的 --anchors-json）；只轉形狀不動數值",
+ "runs": {
+  "EleutherAI/pythia-410m": {
+   "records": [
+    {
+     "id": "L0-03",
+     "level": "L0",
+     "corruption_key": "121:epoch->river",
+     "generations": {
+      "clean": " season of Darkness, it was the spring of hope, it was the winter of despair, it was the spring of power, it was the winter of knowledge, it was the spring of error, it was the winter of truth, it was the spring of innocence, it was the winter of knowledge",
+      "corrupted": " season of Darkness, it was the spring of hope, it was the winter of despair, it was the spring of power, it was the winter of knowledge, it was the spring of error, it was the winter of truth, it was the spring of evil, it was the winter of life",
+      "patched::early": " season of Darkness, it was the spring of hope, it was the winter of despair, it was the spring of power, it was the winter of knowledge, it was the spring of error, it was the winter of truth, it was the spring of innocence, it was the winter of knowledge",
+      "patched::mid": " season of Darkness, it was the spring of hope, it was the winter of despair, it was the spring of power, it was the winter of knowledge, it was the spring of truth, it was the winter of freedom, it was the spring of vengeance, it was the winter of victory",
+      "patched::late": " season of Darkness, it was the spring of hope, it was the winter of despair, it was the spring of power, it was the winter of knowledge, it was the spring of error, it was the winter of truth, it was the spring of evil, it was the winter of life"
+     },
+     "n_words": {
+      "clean": 51,
+      "corrupted": 51,
+      "patched::early": 51,
+      "patched::mid": 51,
+      "patched::late": 51
+     }
+    },
+    {
+     "id": "L0-04",
+     "level": "L0",
+     "corruption_key": "134:into->house",
+     "generations": {
+      "clean": " she was so tired of reading that she didn't even bother to look at the book.\"\n\n\"I'm sorry,\" said Alice, \"but I don't know what to do.\"\n\n\"I don't know what to do either,\" said Alice, \"but I'm going to try",
+      "corrupted": " she was so tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped house the book her sister was reading, but it had no pictures or conversations in it, \"and she was so tired of sitting by her sister on the bank",
+      "patched::early": " she was so tired of reading that she didn't even bother to look at the book.\"\n\n\"I'm sorry,\" said Alice, \"but I don't know what to do.\"\n\n\"I don't know what to do either,\" said Alice, \"but I'm going to try",
+      "patched::mid": " she was so tired of reading that she didn't even bother to look at it.\"\n\n\"I'm sorry,\" said Alice, \"but I can't help it. I'm so tired of sitting by my sister.\"\n\n\"I know,\" said Alice, \"but I'm not going",
+      "patched::late": " she was so tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped house the book her sister was reading, but it had no pictures or conversations in it, \"and she was so tired of sitting by her sister on the bank"
+     },
+     "n_words": {
+      "clean": 41,
+      "corrupted": 53,
+      "patched::early": 41,
+      "patched::mid": 40,
+      "patched::late": 53
+     }
+    },
+    {
+     "id": "L0-05",
+     "level": "L0",
+     "corruption_key": "206:said->house",
+     "generations": {
+      "clean": " light; and there was light. And God saw that there was light, and that there was a great light, and that the light was good: and God divided the light from the darkness. And there was light out of darkness, and there was a great light, and the light was good.",
+      "corrupted": " light; and there was light. And God saw that it was good. And God divided the light from the darkness. And God called the light Day, and the darkness he called Night. And the evening and the morning were the first day. And God said, Let there be a firmament in",
+      "patched::early": " light; and there was light. And God saw that there was light, and that there was a great light, and that the Spirit of God was upon the face of the waters. And God called the light Day, and the darkness he called Night. And the evening and the morning were the first",
+      "patched::mid": " light; and there was light. And God saw that there was no man, that is, no human being, on the face of the waters. And God called the waters Gihon and the waters of the Jordan. And God called the waters Moab and the waters of the Jordan. And",
+      "patched::late": " light; and there was light: and there was a voice from the throne, saying, Behold, I make all things new. And there was a great earthquake, and the earth was shaken: and there was a great earthquake, and the earth was shaken. And there was a great earthquake,"
+     },
+     "n_words": {
+      "clean": 51,
+      "corrupted": 51,
+      "patched::early": 53,
+      "patched::mid": 49,
+      "patched::late": 48
+     }
+    },
+    {
+     "id": "L0-06",
+     "level": "L0",
+     "corruption_key": "213:Yea->Beatrice",
+     "generations": {
+      "clean": " walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me. Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth",
+      "corrupted": " walk with Satan, I know that you are my shepherd.\n\n\"I will not leave you alone; I will not leave you alone. I will not leave you alone. I will not leave you alone. I will not leave you alone. I will not leave you alone. I will",
+      "patched::early": " walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me. Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth",
+      "patched::mid": " walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me. Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth",
+      "patched::late": " walk through the valley of the shadow of death, I will fear no evil, for thou art with me; thy rod and thy staff they comfort me.\n\n\"I will not want; I will not be afraid. I will not be afraid; I will not be dismayed. I will"
+     },
+     "n_words": {
+      "clean": 48,
+      "corrupted": 48,
+      "patched::early": 48,
+      "patched::mid": 48,
+      "patched::late": 48
+     }
+    },
+    {
+     "id": "L0-07",
+     "level": "L0",
+     "corruption_key": "235:might->letter",
+     "generations": {
+      "clean": " saved.\n\nThe Son of God was conceived by the Holy Spirit, and born of the Virgin Mary. He was conceived by the Holy Spirit, and born of the Virgin Mary. He was conceived by the Holy Spirit, and born of the Virgin Mary. He was conceived by the Holy Spirit,",
+      "corrupted": " made perfect, that the world might be made right with him.\n\nThe Son of God was born of a woman, born under the law, born of a mother, born of a father, born of a mother, born of a father, born of a mother, born of a father,",
+      "patched::early": " saved.\n\nThe Son of God was conceived by the Holy Spirit, and born of the Virgin Mary. He was conceived by the Holy Spirit, and born of the Virgin Mary. He was conceived by the Holy Spirit, and born of the Virgin Mary. He was conceived by the Holy Spirit,",
+      "patched::mid": " saved.\n\nThe Son of God was conceived by the Holy Spirit, and born of the Virgin Mary. He was conceived by the Holy Spirit, and born of the Virgin Mary. He was conceived by the Holy Spirit, and born of the Virgin Mary. He was conceived by the Holy Spirit,",
+      "patched::late": " saved.\n\nThe Son of God was born of a woman, born under the law, and was conceived by the word of God. And the word of the Lord came unto him, saying, Son of man, behold, I send you unto the Gentiles to be a witness against the"
+     },
+     "n_words": {
+      "clean": 50,
+      "corrupted": 48,
+      "patched::early": 50,
+      "patched::mid": 50,
+      "patched::late": 48
+     }
+    },
+    {
+     "id": "L0-08",
+     "level": "L0",
+     "corruption_key": "136:made->morning",
+     "generations": {
+      "clean": " life, and the life was the light of men. And the light shines in the darkness, and the darkness has not overcome it.\n\nThe Word was made flesh, and dwelt among us, and we beheld His glory, the glory as of the only begotten of the Father",
+      "corrupted": " life, and the life was the light of men. And the light shines in the darkness, and the darkness has not overcome it.\n\nThe Word was made flesh, and dwelt among us, and we beheld His glory, the glory as of the only begotten of the Father",
+      "patched::early": " life, and the life was the light of men. The light shines in the darkness, and the darkness has not overcome it. The light has overcome the darkness. The darkness has overcome the light. The light has overcome the darkness. The darkness has overcome the light. The light has overcome the",
+      "patched::mid": " life, and the life was the light of men. And the light shines in the darkness, and the darkness has not overcome it.\n\nThe Word was made flesh, and dwelt among us, and we beheld His glory, the glory as of the only begotten of the Father",
+      "patched::late": " life, and the life was the light of men. And the light shines in the darkness, and the darkness has not overcome it.\n\nThe Word was made flesh, and dwelt among us, and we beheld His glory, the glory as of the only begotten of the Father"
+     },
+     "n_words": {
+      "clean": 47,
+      "corrupted": 47,
+      "patched::early": 51,
+      "patched::mid": 47,
+      "patched::late": 47
+     }
+    },
+    {
+     "id": "L0-09",
+     "level": "L0",
+     "corruption_key": "159:prophecy->garden",
+     "generations": {
+      "clean": " all faith, so that I can move mountains, yet I am nothing; and though I have all love, yet I am nothing.\n\n**2:13** _The Lord is my shepherd; I shall not want._ The Lord is my shepherd. _I shall not want._",
+      "corrupted": " all faith, so that I can move even with my finger, and can make all things to be done through Christ, yet I am nothing, after that I have done the works of my Father which are many.\n\nI have heard that the Jews have a saying, “The Lord is my",
+      "patched::early": " all faith, so that I can move even with my finger, I am nothing.\n\nBut I am the light of the world. He who follows me will never walk in darkness, but will have the light of life.\n\nI am the good shepherd. The good shepherd lays",
+      "patched::mid": " all faith, so that I can move even with my finger, I am nothing.\n\nBut I am the light of the world. He who follows me will never walk in darkness, but will have the light of life.\n\nI am the good shepherd. The good shepherd lays",
+      "patched::late": " all faith, so that I can move even with my finger, and can make all things to be seen and not seen; I am nothing.\n\n**—John 3:2-3**\n\nThe Bible is full of stories of people who have been given the gift of prophecy. The"
+     },
+     "n_words": {
+      "clean": 41,
+      "corrupted": 51,
+      "patched::early": 47,
+      "patched::mid": 47,
+      "patched::late": 44
+     }
+    },
+    {
+     "id": "L0-10",
+     "level": "L0",
+     "corruption_key": "220:thirst->house",
+     "generations": {
+      "clean": " filled. Blessed are the merciful: for they shall obtain mercy. Blessed are the pure in heart: for they shall see God. Blessed are the peacemakers: for they shall be called the children of God. Blessed are the peacemakers who are of the",
+      "corrupted": " filled. Blessed are the merciful: for they shall obtain mercy. Blessed are the pure in heart: for they shall see God. Blessed are the peacemakers: for they shall be called the children of God. Blessed are the peacemakers who are of the",
+      "patched::early": " filled. Blessed are the merciful: for they shall obtain mercy. Blessed are the pure in heart: for they shall see God. Blessed are the peacemakers: for they shall be called the children of God. Blessed are the peacemakers who are of the",
+      "patched::mid": " filled. Blessed are the merciful: for they shall obtain mercy. Blessed are the pure in heart: for they shall see God. Blessed are the peacemakers: for they shall be called the children of God. Blessed are the peacemakers who are of the",
+      "patched::late": " filled. Blessed are the merciful: for they shall obtain mercy. Blessed are the pure in heart: for they shall see God. Blessed are the peacemakers: for they shall be called the children of God. Blessed are the peacemakers who are of the"
+     },
+     "n_words": {
+      "clean": 42,
+      "corrupted": 42,
+      "patched::early": 42,
+      "patched::mid": 42,
+      "patched::late": 42
+     }
+    },
+    {
+     "id": "L0-11",
+     "level": "L0",
+     "corruption_key": "256:instituted->carried",
+     "generations": {
+      "clean": " Men, deriving their just powers from the consent of the governed, That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government, laying its foundation on such principles and organizing its powers in such form,",
+      "corrupted": " Men, and are not to be denied by the State. That to secure these rights, Governments are obliged to treat all Men with fairness and decency, and to treat them with respect. That to secure these rights, Governments are obliged to act with wisdom and prudence, and to use",
+      "patched::early": " Men, deriving their just powers from the consent of the governed, That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government, laying its foundation on such principles and organizing its powers in such form,",
+      "patched::mid": " Men, deriving their just powers from the consent of the governed. That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government, laying its foundation on such principles and organizing its powers in such form,",
+      "patched::late": " Men, deriving their just powers from the consent of the governed.”\n\nThe Constitution of the United States of America, Article 1, Section 8, Clause 8, provides:\n\n“The Congress shall have Power To dispose of and make all needful Rules and Regulations respecting the Territory or other Property"
+     },
+     "n_words": {
+      "clean": 53,
+      "corrupted": 49,
+      "patched::early": 53,
+      "patched::mid": 53,
+      "patched::late": 47
+     }
+    },
+    {
+     "id": "L0-16",
+     "level": "L0",
+     "corruption_key": "232:thing->walking",
+     "generations": {
+      "clean": " was my body. I had been a man, and I had been a man, and I had been a man, and I had been a man, and I had been a man, and I had been a man, and I had been a man, and I had been a man, and",
+      "corrupted": " I had been forced to endure. I had been a slave to the flesh, and I had been a slave to the spirit. I had been a slave to the world, and I had been a slave to the soul. I had been a slave to the world, and I had been a slave",
+      "patched::early": " was my body. I had been a man, and I had been a man, and I had been a man, and I had been a man, and I had been a man, and I had been a man, and I had been a man, and I had been a man, and",
+      "patched::mid": " was my body. I had been a man of action, and I had been a man of thought. I had been a man of action, and I had been a man of thought. I had been a man of action, and I had been a man of thought. I had been a man",
+      "patched::late": " was about to be cast into the abyss.\n\nI had been in the habit of taking a walk in the evening, and I had been in the habit of going to the theatre, and I had been in the habit of going to the theatre, and I had been in the habit of"
+     },
+     "n_words": {
+      "clean": 51,
+      "corrupted": 54,
+      "patched::early": 51,
+      "patched::mid": 53,
+      "patched::late": 53
+     }
+    },
+    {
+     "id": "L0-17",
+     "level": "L0",
+     "corruption_key": "161:sex->river",
+     "generations": {
+      "clean": ", but that he felt a deep and abiding respect for her.\n\nIrene was a woman of the world, and he was a man of the world. He was a man of the world, and she was a woman of the world.\n\nHe was a man of the world",
+      "corrupted": ", but that he felt a deep and abiding respect for her.\n\n\"I have never seen her,\" he said. \"I have never seen her face. I have never seen her eyes. I have never seen her hands. I have never seen her feet. I have never seen her",
+      "patched::early": ", but that he felt a deep and abiding respect for her.\n\nIrene was a woman of the world, and she was a woman of the world. She was a woman of the world, and she was a woman of the world. She was a woman of the world, and",
+      "patched::mid": ", but that he felt a deep and abiding respect for her.\n\n\"I have never seen her in the flesh,\" he said. \"I have never seen her in the flesh. I have never seen her in the flesh. I have never seen her in the flesh. I have never",
+      "patched::late": ", but that he felt a deep and abiding respect for her.\n\n\"I have never seen her face,\" he said. \"I have never seen her eyes. I have never seen her hands. I have never seen her feet. I have never seen her hair. I have never seen"
+     },
+     "n_words": {
+      "clean": 49,
+      "corrupted": 48,
+      "patched::early": 50,
+      "patched::mid": 49,
+      "patched::late": 48
+     }
+    },
+    {
+     "id": "L0N-04",
+     "level": "L0N",
+     "corruption_key": "237:big->river",
+     "generations": {
+      "clean": " swallow a man.\n\nThe moon was a little bigger than the one in the mist, and the mist was a little thicker. The moon was a little bigger than the one in the mist, and the mist was a little thicker. The moon was a little bigger than the one in the mist",
+      "corrupted": " swallow you.\n\nThe moon was a little brighter, and the mist was a little thicker. The mist was a little thicker, and the mist was a little darker. The mist was a little darker, and the mist was a little lighter. The mist was a little lighter, and the mist",
+      "patched::early": " swallow a man.\n\nThe moon was a little brighter, and the mist was a little thicker. The mist was a little thicker, and the mist was a little darker. The mist was a little darker, and the mist was a little lighter. The mist was a little lighter, and the",
+      "patched::mid": " swallow a whole city.\n\nThe moon was a little brighter, and the mist was a little thicker. The mist was a little thicker, and the mist was a little darker. The mist was a little darker, and the mist was a little lighter. The mist was a little lighter, and",
+      "patched::late": " swallow a man.\n\nThe moon was a little brighter, and the mist was a little thicker. The mist was a little thicker, and the mist was a little darker. The mist was a little darker, and the mist was a little lighter. The mist was a little lighter, and the"
+     },
+     "n_words": {
+      "clean": 53,
+      "corrupted": 50,
+      "patched::early": 50,
+      "patched::mid": 50,
+      "patched::late": 50
+     }
+    },
+    {
+     "id": "L0N-06",
+     "level": "L0N",
+     "corruption_key": "267:ham->letter",
+     "generations": {
+      "clean": " potatoes.\n\nThe _Practical Cookery_ of Mrs. Mary Wollstonecraft, published in 1817, is a useful guide to the kitchen. It is a good source of information on the various kinds of food, and it is a good source of information on the various kinds of",
+      "corrupted": " beans.\n\nThe _Pioneer_ was a weekly newspaper published in the city of New York. It was published from 1837 to 1849.\n\n**The _Pioneer_ was a weekly newspaper published in the city of New York. It was published from 1837 to",
+      "patched::early": " potatoes.\n\nThe _Practical Cookery_ of Mrs. Mary Wollstonecraft, published in 1817, is a useful guide to the kitchen. It is a good source of information on the various kinds of food, and it is a good source of information on the various kinds of",
+      "patched::mid": " potatoes.\n\nThe _Practical Cookery_ of Mrs. Mary Wollstonecraft, published in 1817, is a useful guide to the kitchen. It is a good source of information on the various kinds of food, and it is a good source of information on the various kinds of",
+      "patched::late": " potatoes.\n\nThe _Practical Cookery_ of Mrs. Mary Wollstonecraft, published in 1817, is a useful guide to the kitchen. It is a good source of information on the various kinds of food, and it is a good source of information on the various kinds of"
+     },
+     "n_words": {
+      "clean": 44,
+      "corrupted": 40,
+      "patched::early": 44,
+      "patched::mid": 44,
+      "patched::late": 44
+     }
+    },
+    {
+     "id": "L0N-07",
+     "level": "L0N",
+     "corruption_key": "208:border->letter",
+     "generations": {
+      "clean": "\n\n**ROWS 1–4:** K 1, P 1 in ribbing to within last 8 sts, attach another skein and work last 8 sts with double yarn throughout in garter st (K each row) for back border.\n\n**ROWS 5–8:**",
+      "corrupted": "\n\n**ROWS 1–4:** K 1, P 1 in ribbing to within last 8 sts, attach another skein and work last 8 sts with double yarn throughout in garter st (K each row) for back letter.\n\n**ROWS 5–8:**",
+      "patched::early": "\n\n**ROWS 1–4:** K 1, P 1 in ribbing to within last 8 sts, attach another skein and work last 8 sts with double yarn throughout in garter st (K each row) for back border.\n\n**ROWS 5–8:**",
+      "patched::mid": "\n\n**ROWS 1–4:** K 1, P 1 in ribbing to within last 8 sts, attach another skein and work last 8 sts with double yarn throughout in garter st (K each row) for back border.\n\n**ROWS 5–8:**",
+      "patched::late": "\n\n**ROWS 1–4:** K 1, P 1 in ribbing to within last 8 sts, attach another skein and work last 8 sts with double yarn throughout in garter st (K each row) for back.\n\n**ROWS 5–8:** K"
+     },
+     "n_words": {
+      "clean": 36,
+      "corrupted": 36,
+      "patched::early": 36,
+      "patched::mid": 36,
+      "patched::late": 36
+     }
+    },
+    {
+     "id": "L0N-08",
+     "level": "L0N",
+     "corruption_key": "215:close->river",
+     "generations": {
+      "clean": " top of the shuttle, and the mesh at the bottom.\n\n**TATTING**\n\n**1** Begin with the first loop of the first stitch, and work the first double stitch.\n\n**2** Begin with the second loop of the first stitch, and work the first",
+      "corrupted": " bottom of the Shuttle, and the mesh at the top.\n\n**1** Work 1 double, (then make a pearl and work a double stitch alternately for 7 loops); draw river.\n\n**2** Work 1 double, (then make a pearl and work a",
+      "patched::early": " top of the shuttle, and the mesh at the bottom.\n\n**TATTING**\n\n**1** Begin with the first loop of the first stitch, then work the first double stitch, then the first double stitch, then the first double stitch, then the first double stitch, then",
+      "patched::mid": " top of the shuttle, and the mesh at the bottom.\n\n**TATTING**\n\n**1** Begin with the first loop of the first stitch, then work the first double stitch, then the first double stitch, then the first double stitch, then the first double stitch, then",
+      "patched::late": " bottom of the shuttle, and the mesh at the top.\n\n**1** _Make a double stitch for the first loop, then make a double stitch for the second loop, then make a double stitch for the third loop, then make a double stitch for the fourth loop, then make a"
+     },
+     "n_words": {
+      "clean": 41,
+      "corrupted": 40,
+      "patched::early": 43,
+      "patched::mid": 43,
+      "patched::late": 49
+     }
+    },
+    {
+     "id": "L0N-09",
+     "level": "L0N",
+     "corruption_key": "192:associated->watched",
+     "generations": {
+      "clean": " days of struggle, of pain, of suffering, of loss, of disappointment, of failure, of failure, of failure, of failure, of failure, of failure, of failure, of failure, of failure, of failure, of failure, of failure, of failure, of failure, of failure",
+      "corrupted": " years of pain and sorrow.\n\nI have been a part of the world for many years now, and I have seen many things that I have not seen before. I have seen the world as it is, and I have seen the world as it should be. I have seen the world as",
+      "patched::early": " years of pain and sorrow.\n\nI have been a part of the life of the church for many years. I have been a part of the life of the church for many years. I have been a part of the life of the church for many years. I have been a part of the",
+      "patched::mid": " years of pain and sorrow.\n\nI have been a part of the life of the church for many years. I have been a part of the life of the church for many years. I have been a part of the life of the church for many years. I have been a part of the",
+      "patched::late": " years of pain and sorrow.\n\nI have been a part of the life of the church for many years. I have been a part of the life of the church for many years. I have been a part of the life of the church for many years. I have been a part of the"
+     },
+     "n_words": {
+      "clean": 41,
+      "corrupted": 53,
+      "patched::early": 54,
+      "patched::mid": 54,
+      "patched::late": 54
+     }
+    },
+    {
+     "id": "L0-20",
+     "level": "L0",
+     "corruption_key": "195:flower->house",
+     "generations": {
+      "clean": " mother. She was so happy that she ran to her mother and said, \"Mother, I have a flower that I want to grow.\"\n\n\"What is it?\"\n\n\"A flower that I want to grow.\"\n\n\"What is it?\"\n\n\"A flower that I",
+      "corrupted": " mother's house. She was a little girl, and she had a little sister, and she was a little girl, and she was a little girl, and she was a little girl, and she was a little girl, and she was a little girl, and she was a little girl, and",
+      "patched::early": " mother. She was so happy that she ran to her mother and said, \"Mother, I have a flower that I want to give to my mother.\"\n\n\"What is it?\"\n\n\"It is a flower that I have never seen before.\"\n\n\"What is it?\"\n",
+      "patched::mid": " mother. She was so happy that she ran to her mother and said, \"Mother, I have a flower that I want to give to my mother.\"\n\n\"What is it?\"\n\n\"A flower that I want to give to my mother.\"\n\n\"What is it?\"\n",
+      "patched::late": " mother's house. She was a little girl, and she was very happy. She was very happy.\n\n\"I was very happy,\" she said. \"I was very happy.\"\n\n\"And you were very happy,\" her mother said.\n\n\"And I was very happy,\""
+     },
+     "n_words": {
+      "clean": 40,
+      "corrupted": 50,
+      "patched::early": 42,
+      "patched::mid": 42,
+      "patched::late": 39
+     }
+    }
+   ],
+   "n_records": 17,
+   "n_error": 0,
+   "shard": "D:\\ai架構測試\\Research_5_OMTR\\results\\causal\\main_winB1_gen_EleutherAI_pythia-410m.json",
+   "glink_host_levels": [
+    "L0",
+    "L0N"
+   ]
+  },
+  "EleutherAI/pythia-1b": {
+   "records": [
+    {
+     "id": "L0-01",
+     "level": "L0",
+     "corruption_key": "225:truth->house",
+     "generations": {
+      "clean": " generally acknowledged, that it is not necessary to enlarge upon it.\n\nThe first step in the acquisition of a wife is to make a choice. The choice is made by the husband, and the wife is chosen by the husband. The husband is the one who makes the choice, and the wife",
+      "corrupted": " situated, that he is not likely to find a wife in it. The house is so situated, that it is not likely to find a wife in it. The house is so situated, that it is not likely to find a wife in it. The house is so situated, that it is not",
+      "patched::early": " generally acknowledged, that it is not necessary to enlarge upon it.\n\nThe first step in the acquisition of a wife is to make a choice. The choice is made by the husband, and the wife is chosen by the husband. The husband is the one who makes the choice, and the wife",
+      "patched::mid": " generally acknowledged, that it is not necessary to enter into the particulars of his case.\n\nThe first step in the acquisition of a wife is to make a choice. The choice is made by the husband, and the wife is chosen by the husband's family. The husband is the one who",
+      "patched::late": " generally known, that it is not necessary to give any particulars of his character.\n\nThe first thing to be done is to ascertain the name of the person who is to be your wife. If you are a man of fortune, you will probably be able to find out the name of the"
+     },
+     "n_words": {
+      "clean": 52,
+      "corrupted": 53,
+      "patched::early": 52,
+      "patched::mid": 51,
+      "patched::late": 53
+     }
+    },
+    {
+     "id": "L0-03",
+     "level": "L0",
+     "corruption_key": "192:Light->Henry",
+     "generations": {
+      "clean": " season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way, we were all going direct to the unknown, we were all",
+      "corrupted": " season of non-belief, it was the season of doubt, it was the season of despair, it was the season of love, it was the season of hate, it was the season of light, it was the season of darkness, it was the season of light, it was the season of",
+      "patched::early": " season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way, we were all going in different directions, we were all going",
+      "patched::mid": " season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way, we were all going direct to the unknown, we were all",
+      "patched::late": " season of darkness, it was the season of light, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way, we were all going in different"
+     },
+     "n_words": {
+      "clean": 51,
+      "corrupted": 50,
+      "patched::early": 51,
+      "patched::mid": 51,
+      "patched::late": 52
+     }
+    },
+    {
+     "id": "L0-04",
+     "level": "L0",
+     "corruption_key": "198:conversations->brother",
+     "generations": {
+      "clean": " I don't know what to do with myself,\" she said to herself. \"I don't know what to do with myself,\" she repeated to herself. \"I don't know what to do with myself,\" she repeated to herself. \"I don't know what to do with myself,\" she repeated",
+      "corrupted": " I don't know what to do with myself,\" she said to herself.\n\n\"I don't know what to do with myself,\" she repeated to herself.\n\n\"I don't know what to do with myself,\" she repeated to herself.\n\n\"I don't know what to",
+      "patched::early": " I don't know what to do with myself,\" she said to herself. \"I wish I could go to the library and look at the books, but I don't know how to get there.\"\n\n\"I'll go with you,\" said Alice.\n\n\"No, you won't",
+      "patched::mid": " I don't know what to do with myself,\" she said to herself.\n\n\"I don't know what to do with myself,\" she repeated to herself.\n\n\"I don't know what to do with myself,\" she repeated to herself.\n\n\"I don't know what to",
+      "patched::late": " I don't know what to do with myself,\" she said to herself. \"I wish I had a book to read,\" she thought, \"or a book to write in.\" She had a little money, and she thought she would go and buy a book. She went to the book-shop"
+     },
+     "n_words": {
+      "clean": 46,
+      "corrupted": 41,
+      "patched::early": 42,
+      "patched::mid": 41,
+      "patched::late": 48
+     }
+    },
+    {
+     "id": "L0-05",
+     "level": "L0",
+     "corruption_key": "212:Let->Charlotte",
+     "generations": {
+      "clean": " light: and there was light. And God saw the light, that it was good: and God divided the light from the darkness. God called the light Day, and the darkness he called Night. And the evening and the morning were the first day.\n\nAnd God said, Let there be",
+      "corrupted": ", and there was a great dry land. And God called the great dry land, Charlotte. And God said, Charlotte, I will make a great dry land, and I will give to each of you a little land. And God said, Charlotte, I will make a great dry land, and",
+      "patched::early": " light: and there was light. And God saw the light, that it was good: and God divided the light from the darkness. God called the light Day, and the darkness he called Night. And the evening and the morning were the first day. And God said, Let there be a firm",
+      "patched::mid": " light: and there was light. And God saw the light, that it was good: and God divided the light from the darkness. And God called the light Day, and the darkness he called Night. And the evening and the morning were the first day. And God said, Let there be a",
+      "patched::late": " light: and there was light. And God saw the light, that it was good: and God divided the light from the darkness. And God called the light Day, and the darkness he called Night. And the evening and the morning were the first day. And God said, Let there be a"
+     },
+     "n_words": {
+      "clean": 49,
+      "corrupted": 50,
+      "patched::early": 51,
+      "patched::mid": 51,
+      "patched::late": 51
+     }
+    },
+    {
+     "id": "L0-06",
+     "level": "L0",
+     "corruption_key": "213:Yea->Beatrice",
+     "generations": {
+      "clean": " walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me. Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth",
+      "corrupted": " walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me. Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth",
+      "patched::early": " walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me. Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth",
+      "patched::mid": " walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me. Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth",
+      "patched::late": " walk through the valley of the shadow of death, I will fear no evil: for Thou art with me; Thy rod and Thy staff they comfort me. Thou preparest a table before me in the presence of mine enemies: Thou anointest my head with oil; my cup run"
+     },
+     "n_words": {
+      "clean": 48,
+      "corrupted": 48,
+      "patched::early": 48,
+      "patched::mid": 48,
+      "patched::late": 48
+     }
+    },
+    {
+     "id": "L0-07",
+     "level": "L0",
+     "corruption_key": "223:through->letter",
+     "generations": {
+      "clean": " saved. He that believeth on him is not condemned: but he that believeth not is condemned already, because he hath not believed in the name of the only begotten Son of God. And this is the condemnation, that light is come into the world, and men loved darkness rather",
+      "corrupted": " condemned. He that believeth in him is not condemned: but he that believeth not is condemned already, because he hath not believed in the name of the only begotten Son of God.\n\nJohn 3:16-17\n\nFor God so loved the world, that he",
+      "patched::early": " saved. He that believeth in him is not condemned: but he that believeth not is condemned already, because he hath not believed in the name of the only begotten Son of God. And this is the condemnation, that light is come into the world, and men loved darkness rather",
+      "patched::mid": " saved. He that believeth in him is not condemned: but he that believeth not is condemned already, because he hath not believed in the name of the only begotten Son of God. And this is the condemnation, that light is come into the world, and men loved darkness rather",
+      "patched::late": " saved. He that believeth in him is not condemned: but he that believeth not is condemned already, because he hath not believed in the name of the only begotten Son of God. And this is the condemnation, that light is come into the world, and men loved darkness rather"
+     },
+     "n_words": {
+      "clean": 49,
+      "corrupted": 42,
+      "patched::early": 49,
+      "patched::mid": 49,
+      "patched::late": 49
+     }
+    },
+    {
+     "id": "L0-09",
+     "level": "L0",
+     "corruption_key": "159:prophecy->river",
+     "generations": {
+      "clean": " all faith, so that I could remove mountains, and have not charity, I am nothing. And though I bestow all my goods to feed the poor, and though I give my body to be burned, and have not charity, it profiteth me nothing. But if I bestow my goods",
+      "corrupted": " all faith, so that I could remove mountains, and have not charity, I am nothing. And though I bestow all my goods to feed the poor, and though I give my body to be burned, and have not charity, it profiteth me nothing. But if I bestow my goods",
+      "patched::early": " all faith, so that I could remove mountains, and have not charity, I am nothing. And though I bestow all my goods to feed the poor, and though I give my body to be burned, and have not charity, it profiteth me nothing. But if I bestow my goods",
+      "patched::mid": " all faith, so that I could remove mountains, and have not charity, I am nothing. And though I bestow all my goods to feed the poor, and though I give my body to be burned, and have not charity, it profiteth me nothing. But if I bestow my goods",
+      "patched::late": " all faith, so that I could remove mountains, and have not charity, I am nothing. And though I bestow all my goods to feed the poor, and though I give my body to be burned, and have not charity, it profiteth me nothing. But if I bestow my goods"
+     },
+     "n_words": {
+      "clean": 49,
+      "corrupted": 49,
+      "patched::early": 49,
+      "patched::mid": 49,
+      "patched::late": 49
+     }
+    },
+    {
+     "id": "L0-17",
+     "level": "L0",
+     "corruption_key": "185:felt->river",
+     "generations": {
+      "clean": ", but that he was not conscious of any other feeling. He was not conscious of any other feeling. He was not conscious of any other feeling. He was not conscious of any other feeling. He was not conscious of any other feeling. He was not conscious of any other feeling. He was not",
+      "corrupted": ", but that he was not able to express it. He was not able to express it in words. He was not able to express it in any way. He was not able to express it in any way. He was not able to express it in any way. He was not able to express",
+      "patched::early": ", but that he was not conscious of any other feeling. He was not conscious of any other feeling than that of a man who has been in love with a woman for a long time.\n\n\"I have never seen her,\" he said, \"but I have heard of her. I have",
+      "patched::mid": ", but that he was not conscious of any other feeling. He was not conscious of any other feeling. He was not conscious of any other feeling. He was not conscious of any other feeling. He was not conscious of any other feeling. He was not conscious of any other feeling. He was not",
+      "patched::late": ", but that he was not conscious of any emotion at all. He was not conscious of any emotion at all. He was not conscious of any emotion at all. He was not conscious of any emotion at all. He was not conscious of any emotion at all. He was not conscious of any emotion"
+     },
+     "n_words": {
+      "clean": 54,
+      "corrupted": 55,
+      "patched::early": 51,
+      "patched::mid": 54,
+      "patched::late": 55
+     }
+    },
+    {
+     "id": "L0N-06",
+     "level": "L0N",
+     "corruption_key": "267:ham->river",
+     "generations": {
+      "clean": " beans.\n\nThe food is prepared in a large, open, covered, or covered and ventilated kitchen. The kitchen is usually located in the basement or attic.\n\nThe kitchen is usually located in the basement or attic. The kitchen is usually located in the basement or attic.\n\n",
+      "corrupted": " beans, and sometimes a piece of meat.\n\nThe food is prepared in a large, open, covered, and heated oven. The food is served in a large, open, covered, and heated oven. The food is served in a large, open, covered, and heated oven.\n",
+      "patched::early": " beans.\n\nThe food is prepared in a large, open, covered, or covered and ventilated kitchen. The kitchen is usually located in the basement or attic. The kitchen is usually heated by a wood-burning stove.\n\nThe kitchen is usually equipped with a range, a refrigerator",
+      "patched::mid": " beans.\n\nThe food is prepared in a large, open, covered, or covered and ventilated kitchen. The kitchen is usually located in the basement or attic. The kitchen is usually heated by a wood-burning stove.\n\nThe kitchen is usually equipped with a range, a refrigerator",
+      "patched::late": " beans, and sometimes a piece of meat.\n\nThe food is prepared in a large, open, covered, and heated oven. The food is served in a large, open, covered, and heated oven. The food is served in a large, open, covered, and heated oven.\n"
+     },
+     "n_words": {
+      "clean": 45,
+      "corrupted": 43,
+      "patched::early": 44,
+      "patched::mid": 44,
+      "patched::late": 43
+     }
+    },
+    {
+     "id": "L0-20",
+     "level": "L0",
+     "corruption_key": "195:flower->table",
+     "generations": {
+      "clean": " mother. She was so happy that she forgot to pick the flower. She ran to her mother and said, \"Mother, I forgot to pick the flower.\"\n\n\"What flower?\"\n\n\"The flower that I plucked.\"\n\n\"What flower?\"\n\n\"The flower that",
+      "corrupted": " mother. She was so excited that she ran to the garden and climbed the fence. She was so happy that she ran to the garden and climbed the fence. She was so happy that she ran to the garden and climbed the fence. She was so happy that she ran to the garden and climbed the",
+      "patched::early": " mother. She was so excited that she forgot to pick the flower. She ran to her mother and said, \"Mother, I forgot to pick the flower.\"\n\n\"What flower?\"\n\n\"The flower that I plucked.\"\n\n\"What flower?\"\n\n\"The flower that",
+      "patched::mid": " mother. She was so excited that she forgot to pick the flower. She ran to her mother and said, \"Mother, I forgot to pick the flower.\"\n\n\"What flower?\"\n\n\"The flower that I picked.\"\n\n\"What flower?\"\n\n\"The flower that I",
+      "patched::late": " mother. She was so excited that she forgot to pick the flower. She picked it and ran back to her mother. She was so happy that she forgot to pick the flower. She picked it and ran back to her mother. She was so happy that she forgot to pick the flower. She picked"
+     },
+     "n_words": {
+      "clean": 38,
+      "corrupted": 56,
+      "patched::early": 38,
+      "patched::mid": 39,
+      "patched::late": 54
+     }
+    },
+    {
+     "id": "L0N-07",
+     "level": "L0N",
+     "corruption_key": "193:row->table",
+     "generations": {
+      "clean": "\n\n**RND 2:** With No. 6 needles, cast on 59 (63)—67, 71 sts. K 1, P 1 in ribbing to within last 8 sts, attach another skein and work last 8 sts with double yarn throughout in garter st (K",
+      "corrupted": "\n\n**Ribbing:** With right side facing, join yarn in first st, k 1, P 1 in ribbing to within last 8 sts, attach another skein and work last 8 sts with double yarn throughout in garter st (K each table) for back border.",
+      "patched::early": "\n\n**RND 2:** With No. 6 needles, cast on 59 (63)—67, 71 sts. K 1, P 1 in ribbing to within last 8 sts, attach another skein and work last 8 sts with double yarn throughout in garter st (K",
+      "patched::mid": "\n\n**RND 2:** With right side facing, join yarn in first st, k 1, P 1 in each st around—59 (63) sts.\n\n**RND 3:** K 1, P 1 in each st around—59 (63) sts.\n",
+      "patched::late": "\n\n**Ribbing:** With No. 6 needles, cast on 59 (63)—67, 71 sts. K 1, P 1 in ribbing to within last 8 sts, attach another skein and work last 8 sts with double yarn throughout in garter st (K"
+     },
+     "n_words": {
+      "clean": 39,
+      "corrupted": 42,
+      "patched::early": 39,
+      "patched::mid": 33,
+      "patched::late": 38
+     }
+    },
+    {
+     "id": "L0N-08",
+     "level": "L0N",
+     "corruption_key": "231:Wool->Henry",
+     "generations": {
+      "clean": " back of the shuttle, and the Pearl at the front.\n\nThe Pearl is worked in the same way as the Wool, but the Pearl is worked in the same way as the Wool.\n\nThe Pearl is worked in the same way as the Wool, but the Pearl is worked in the",
+      "corrupted": " same distance from the shuttle as before.\n\nThe next step is to make a small loop, and work a double stitch.\n\nThe next step is to make a small loop, and work a double stitch.\n\nThe next step is to make a small loop, and work a double",
+      "patched::early": " back of the shuttle, and the Pearl at the front.\n\nThe Pearl is worked in the same way as the Wool, but the Pearl is worked in the same way as the Wool.\n\nThe Pearl is worked in the same way as the Wool, but the Pearl is worked in the",
+      "patched::mid": " back of the shuttle, and the Pearl at the front.\n\nThe Pearl is worked in the same way as the Wool, but the Pearl is worked in the same way as the Wool.\n\nThe Pearl is worked in the same way as the Wool, but the Pearl is worked in the",
+      "patched::late": " back of the shuttle, and the shuttle at the front.\n\nThe shuttle is now ready for the next stitch.\n\nThe shuttle is now ready for the next stitch.\n\nThe shuttle is now ready for the next stitch.\n\nThe shuttle is now ready for the next stitch."
+     },
+     "n_words": {
+      "clean": 51,
+      "corrupted": 48,
+      "patched::early": 51,
+      "patched::mid": 51,
+      "patched::late": 46
+     }
+    },
+    {
+     "id": "L0N-09",
+     "level": "L0N",
+     "corruption_key": "192:associated->opened",
+     "generations": {
+      "clean": " days of pain and suffering.\n\nAnd so, I think that the way to deal with that is to be able to look back and say, “I’m proud of the things that I’ve done, and I’m proud of the things that I’ve been through, and",
+      "corrupted": " a great deal of pain.\n\nThe pain of pride is the pain of the loss of the things that you have been proud of.\n\nThe pain of pride is the pain of the loss of the things that you have been proud of.\n\nThe pain of pride is the pain of",
+      "patched::early": " days of pain.\n\nThe pain of pride is the pain of being a slave.\n\nThe pain of pride is the pain of being a slave.\n\nThe pain of pride is the pain of being a slave.\n\nThe pain of pride is the pain of being a slave.",
+      "patched::mid": " days of pain.\n\nThe pain of the past is the pain of the present.\n\nThe pain of the present is the pain of the future.\n\nThe pain of the future is the pain of the past.\n\nThe pain of the past is the pain of the present.",
+      "patched::late": " a great deal of pain.\n\nThe pain of pride is the pain of the loss of the things that you have been proud of.\n\nThe pain of pride is the pain of the loss of the things that you have been proud of.\n\nThe pain of pride is the pain of"
+     },
+     "n_words": {
+      "clean": 44,
+      "corrupted": 51,
+      "patched::early": 47,
+      "patched::mid": 47,
+      "patched::late": 51
+     }
+    },
+    {
+     "id": "L0-16",
+     "level": "L0",
+     "corruption_key": "223:lifeless->table",
+     "generations": {
+      "clean": " lay before me. I placed the lamp upon the table, and, with a firm hand, I raised the lid of the coffin. I then placed the lamp upon the table, and, with a firm hand, I raised the lid of the coffin. I then placed the lamp upon the table,",
+      "corrupted": " I had made. I had made a table, and I had made a table-cloth, and I had made a table-cover, and I had made a table-leg, and I had made a table-top, and I had made a table-cloth, and I had made a",
+      "patched::early": " lay before me. I placed the lamp upon the table, and, with a firm hand, I drew the curtain of the bed, and, with a look of stern determination, I fixed my eyes upon the face of the dead.\n\nI had not been long in the room, when I",
+      "patched::mid": " lay before me. I had been a long time in the habit of taking a little rest every night, and I had been accustomed to lie down in the dark, and to sleep soundly. I had been accustomed to sleep in the dark, and to sleep soundly. I had been accustomed to",
+      "patched::late": " lay before me. I had been a long time in the habit of taking a little medicine every morning, and I had been a long time in the habit of taking a little medicine every evening. I had been a long time in the habit of taking a little medicine every morning, and I had been"
+     },
+     "n_words": {
+      "clean": 50,
+      "corrupted": 43,
+      "patched::early": 49,
+      "patched::mid": 52,
+      "patched::late": 56
+     }
+    },
+    {
+     "id": "L0-11",
+     "level": "L0",
+     "corruption_key": "256:instituted->walked",
+     "generations": {
+      "clean": " Men, deriving their just powers from the consent of the governed, — That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government, laying its foundation on such principles and organizing its powers in such form",
+      "corrupted": " men, as it is written, \"That to secure these rights, Governments are instituted among Men, deriving their just powers from the consent of the governed.\" That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and",
+      "patched::early": " Men, deriving their just powers from the consent of the governed, — that whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government, laying its foundation on such principles and organizing its powers in such form",
+      "patched::mid": " Men, deriving their just powers from the consent of the governed, That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government, laying its foundation on such principles and organizing its powers in such form,",
+      "patched::late": " Men, deriving their just powers from the consent of the governed, That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government, laying its foundation on such principles and organizing its powers in such form,"
+     },
+     "n_words": {
+      "clean": 54,
+      "corrupted": 50,
+      "patched::early": 54,
+      "patched::mid": 53,
+      "patched::late": 53
+     }
+    }
+   ],
+   "n_records": 15,
+   "n_error": 0,
+   "shard": "D:\\ai架構測試\\Research_5_OMTR\\results\\causal\\main_winB1_gen_EleutherAI_pythia-1b.json",
+   "glink_host_levels": [
+    "L0",
+    "L0N"
+   ]
+  },
+  "EleutherAI/pythia-1.4b": {
+   "records": [
+    {
+     "id": "L0-01",
+     "level": "L0",
+     "corruption_key": "188:first->garden",
+     "generations": {
+      "clean": " generally known, that it is not necessary to enter into particulars.\n\nThe first step in the acquisition of a wife is to be a good husband. The first step in the acquisition of a wife is to be a good husband.\n\nThe first step in the acquisition of a wife is",
+      "corrupted": " generally known, that it is not necessary to enter into particulars.\n\nThe following is a list of the most prominent men in the United States, who have been married at least once.\n\nThe following is a list of the most prominent men in the United States, who have been married",
+      "patched::early": " generally known, that it is not necessary to enter into particulars.\n\nThe first step in the acquisition of a wife is to be a good husband. The first step in the acquisition of a wife is to be a good husband.\n\nThe first step in the acquisition of a wife is",
+      "patched::mid": " generally known, that it is not necessary to enter into particulars.\n\nThe following is a list of the most prominent men in the United States, who have been married at least once, and who have been married at least twice.\n\nThe following is a list of the most prominent men",
+      "patched::late": " universally known, that it is not necessary to enter into particulars.\n\nThe following is a list of the most prominent men in the United States, who have been married to the most beautiful women in the world.\n\n1. John Jacob Astor, the richest man in the world,"
+     },
+     "n_words": {
+      "clean": 51,
+      "corrupted": 50,
+      "patched::early": 51,
+      "patched::mid": 50,
+      "patched::late": 47
+     }
+    },
+    {
+     "id": "L0-02",
+     "level": "L0",
+     "corruption_key": "206:part->letter",
+     "generations": {
+      "clean": " very pleasant thing to do, and I have done it often enough. I have been to the Cape of Good Hope, and to the Cape of St. Vincent, and to the Cape of Good Hope again, and to the Cape of Good Hope again, and to the Cape of Good Hope again,",
+      "corrupted": " very pleasant thing to do, and I have done it often enough. I have seen the world, and I have seen the world, and I have seen the world. I have seen the world, and I have seen the world, and I have seen the world. I have seen the world,",
+      "patched::early": " very pleasant thing to do, and I have done it often enough. I have been to the sea, and I have been to the land. I have been to the sea and the land, and I have been to the sea and the land. I have been to the sea and the land,",
+      "patched::mid": " very pleasant thing to do, and I have done it often enough. I have been in the water, and I have been in the air, and I have been in the air and in the water, and I have been in the air and in the water and in the air, and I have",
+      "patched::late": " very pleasant thing to do, and I have done it often enough. I have seen the world, and I have seen the world, and I have seen the world. I have seen the world, and I have seen the world, and I have seen the world. I have seen the world,"
+     },
+     "n_words": {
+      "clean": 52,
+      "corrupted": 51,
+      "patched::early": 53,
+      "patched::mid": 54,
+      "patched::late": 51
+     }
+    },
+    {
+     "id": "L0-03",
+     "level": "L0",
+     "corruption_key": "121:epoch->river",
+     "generations": {
+      "clean": " season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way—in short, the period was so far like the present period",
+      "corrupted": " season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way—in short, the period was so far like the present period",
+      "patched::early": " season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way—in short, the period was so far like the present period",
+      "patched::mid": " season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way—in short, the period was so far like the present period",
+      "patched::late": " season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way—in short, the period was so far like the present period"
+     },
+     "n_words": {
+      "clean": 50,
+      "corrupted": 50,
+      "patched::early": 50,
+      "patched::mid": 50,
+      "patched::late": 50
+     }
+    },
+    {
+     "id": "L0-04",
+     "level": "L0",
+     "corruption_key": "163:reading->entering",
+     "generations": {
+      "clean": " she was afraid to look at it,\" she said, \"for fear of seeing something that would make her cry.\"\n\n\"I wish I could read,\" said Alice, \"but I can't. I can't even look at a book without crying.\"\n\n\"I wish I could read",
+      "corrupted": " she was afraid to look at it,\" she said, \"for fear of seeing something that would make her cry.\"\n\n\"I wish I could read,\" said Alice, \"but I can't, and I don't know how to write.\"\n\n\"You can write,\" said the other",
+      "patched::early": " she was afraid to look at it,\" she said, \"for fear of seeing something that would make her cry.\"\n\n\"I wish I could read,\" said Alice, \"but I can't. I can't even write.\"\n\n\"You can write,\" said her sister, \"if",
+      "patched::mid": " she was afraid to ask her sister to read it, because she knew that she would not like it.\"\n\n\"I am very tired,\" said Alice, \"and I am very sleepy.\"\n\n\"I am very tired too,\" said the other.\n\n\"I am very sleepy,\"",
+      "patched::late": " she was afraid to look at it,\" she said, \"for fear of seeing something that would make her cry.\"\n\n\"I wish I could read,\" said Alice, \"but I can't, and I don't know how to write.\"\n\n\"You can write,\" said the other"
+     },
+     "n_words": {
+      "clean": 43,
+      "corrupted": 42,
+      "patched::early": 40,
+      "patched::mid": 42,
+      "patched::late": 42
+     }
+    },
+    {
+     "id": "L0-05",
+     "level": "L0",
+     "corruption_key": "206:said->table",
+     "generations": {
+      "clean": " light: and there was light. And God saw the light, that it was good: and God divided the light from the darkness. And God called the light Day, and the darkness he called Night. And the evening and the morning were the first day. And God said, Let there be a",
+      "corrupted": " light. And there was light. And God saw the light, that it was good. And God divided the light from the darkness. And God called the light Day, and the darkness he called Night. And there was evening, and there was morning, the sixth day. And God said, Let",
+      "patched::early": " light: and there was light. And God saw the light, that it was good: and God divided the light from the darkness. And God called the light Day, and the darkness he called Night. And the evening and the morning were the first day. And God said, Let there be a",
+      "patched::mid": " light: and there was light. And God called the light Day, and the darkness he called Night. And the evening and the morning were the first day. And God said, Let there be a firmament in the midst of the waters, and let it divide the waters from the waters. And",
+      "patched::late": " light: and there was light. And God called the light Day, and the darkness he called Night. And the evening and the morning were the first day. And God said, Let there be a firmament in the midst of the waters, and let it divide the waters from the waters. And"
+     },
+     "n_words": {
+      "clean": 51,
+      "corrupted": 49,
+      "patched::early": 51,
+      "patched::mid": 51,
+      "patched::late": 51
+     }
+    },
+    {
+     "id": "L0-06",
+     "level": "L0",
+     "corruption_key": "169:paths->house",
+     "generations": {
+      "clean": " walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me. Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth",
+      "corrupted": " walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me. Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth",
+      "patched::early": " walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me. Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth",
+      "patched::mid": " walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me. Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth",
+      "patched::late": " walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me. Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth"
+     },
+     "n_words": {
+      "clean": 48,
+      "corrupted": 48,
+      "patched::early": 48,
+      "patched::mid": 48,
+      "patched::late": 48
+     }
+    },
+    {
+     "id": "L0-07",
+     "level": "L0",
+     "corruption_key": "223:through->house",
+     "generations": {
+      "clean": " saved. He that believeth on him is not condemned: but he that believeth not is condemned already, because he hath not believed in the name of the only begotten Son of God. And this is the condemnation, that light is come into the world, and men loved darkness rather",
+      "corrupted": " saved through him.\n\nJohn 3:16-17\n\nJesus said, \"I am the way, the truth, and the life. No one comes to the Father except through me.\n\nJohn 14:6\n\nJesus said, \"I am the way, the truth,",
+      "patched::early": " saved. He that believeth on him is not condemned: but he that believeth not is condemned already, because he hath not believed in the name of the only begotten Son of God. And this is the condemnation, that light is come into the world, and men loved darkness rather",
+      "patched::mid": " saved. He that believeth on him is not condemned: but he that believeth not is condemned already, because he hath not believed in the name of the only begotten Son of God. And this is the condemnation, that light is come into the world, and men loved darkness rather",
+      "patched::late": " saved. He that believeth in him is not condemned: but he that believeth not is condemned already, because he hath not believed in the name of the only begotten Son of God. And this is the condemnation, that light is come into the world, and men loved darkness rather"
+     },
+     "n_words": {
+      "clean": 49,
+      "corrupted": 35,
+      "patched::early": 49,
+      "patched::mid": 49,
+      "patched::late": 49
+     }
+    },
+    {
+     "id": "L0-08",
+     "level": "L0",
+     "corruption_key": "177:thing->watching",
+     "generations": {
+      "clean": " life; and the life was the light of men. And the light shineth in darkness; and the darkness comprehended it not. There was a man sent from God, whose name was John. He came as a witness, to bear witness of the light, that all men through him might",
+      "corrupted": " life; and the life was the light of men. And the light shineth in darkness; and the darkness comprehended it not. There was a man sent from God, whose name was John. He came as a witness, to bear witness of the light, that all might believe through him",
+      "patched::early": " life; and the life was the light of men. And the light shineth in the darkness; and the darkness comprehended it not. There was a man sent from God, whose name was John. He came as a witness, to bear witness of the light, that all might believe through",
+      "patched::mid": " life; and the life was the light of men. And the light shineth in darkness; and the darkness comprehended it not. There was a man sent from God, whose name was John. He came as a witness, to bear witness of the light, that all might believe through him",
+      "patched::late": " life; and the life was the light of men. And the light shineth in darkness; and the darkness comprehended it not. There was a man sent from God, whose name was John. He came as a witness, to bear witness of the light, that all might believe through him"
+     },
+     "n_words": {
+      "clean": 49,
+      "corrupted": 49,
+      "patched::early": 49,
+      "patched::mid": 49,
+      "patched::late": 49
+     }
+    },
+    {
+     "id": "L0-17",
+     "level": "L0",
+     "corruption_key": "210:love->letter",
+     "generations": {
+      "clean": " Adler, but that he was conscious of a certain fascination in her. He was not a man who could be easily moved by the mere sight of a woman. He was a man who could be moved by the mere sound of a woman's voice. He was a man who could be moved by",
+      "corrupted": " Adler. He was not a man who could be moved by the mere sight of a woman. He was a man who could not be moved by the mere sight of a woman. He was a man who could not be moved by the mere sight of a woman.\n\n\"I am not",
+      "patched::early": " Adler, but that he was conscious of a certain fascination in her. He was not a man who could be easily moved by the mere sight of a woman. He was a man who could be moved by the mere sound of a woman's voice. He was a man who could be moved by",
+      "patched::mid": " Adler, but that he felt a certain pride in her, a certain pride in her sex, a certain pride in her sex.\n\n\"I am not sure that I am quite right in saying that you are a woman,\" he said. \"I am not sure that I am quite right",
+      "patched::late": " Adler, but that he felt a certain pride in her. He was proud of her, and he was proud of her because she was the woman.\n\n\"I am not sure that I am quite right in my interpretation of the situation,\" he said. \"I am not sure that I"
+     },
+     "n_words": {
+      "clean": 54,
+      "corrupted": 52,
+      "patched::early": 54,
+      "patched::mid": 49,
+      "patched::late": 49
+     }
+    },
+    {
+     "id": "L0N-07",
+     "level": "L0N",
+     "corruption_key": "193:row->letter",
+     "generations": {
+      "clean": "\n\n**FRONT BORDER:** With No. 6 needles, cast on 59 (63)—67, 71 sts. K 1, P 1 in ribbing to within last 8 sts, attach another skein and work last 8 sts with double yarn throughout in garter st (",
+      "corrupted": "\n\n**FRONT BORDER:** With No. 6 needles, cast on 59 (63)—67, 71 sts. K 1, P 1 in ribbing to within last 8 sts, attach another skein and work last 8 sts with double yarn throughout in garter st (",
+      "patched::early": "\n\n**FRONT BORDER:** With No. 6 needles, cast on 59 (63)—67, 71 sts. K 1, P 1 in ribbing to within last 8 sts, attach another skein and work last 8 sts with double yarn throughout in garter st (",
+      "patched::mid": "\n\n**FRONT BORDER:** With No. 6 needles, cast on 59 (63)—67, 71 sts. K 1, P 1 in ribbing to within last 8 sts, attach another skein and work last 8 sts with double yarn throughout in garter st (",
+      "patched::late": "\n\n**FRONT BORDER:** With No. 6 needles, cast on 59 (63)—67, 71 sts. K 1, P 1 in ribbing to within last 8 sts, attach another skein and work last 8 sts with double yarn throughout in garter st ("
+     },
+     "n_words": {
+      "clean": 39,
+      "corrupted": 39,
+      "patched::early": 39,
+      "patched::mid": 39,
+      "patched::late": 39
+     }
+    },
+    {
+     "id": "L0N-08",
+     "level": "L0N",
+     "corruption_key": "222:Keep->Margaret",
+     "generations": {
+      "clean": " bottom of the shuttle and work the pearl loops in the same manner.\n\nThe Rosette.\n\nThe Rosette.\n\nThe Rosette.\n\nThe Rosette.\n\nThe Rosette.\n\nThe Rosette.\n\nThe Rosette.\n\nThe",
+      "corrupted": " end of the row, and the Rosette at the end of the row.\n\n_The Rosette_\n\n_The Wool_\n\n_The Pearls_\n\n_The Shuttle_\n\n_The Pearls_\n\n_The Rosette_\n\n_",
+      "patched::early": " top of the shuttle, and the pearl loops at the bottom.\n\n_The Rosette_\n\n_The Rosette_\n\n_The Rosette_\n\n_The Rosette_\n\n_The Rosette_\n\n_The Rosette_\n\n_The",
+      "patched::mid": " end of the row, and the last stitch of the row, and the last stitch of the row, and the last stitch of the row, and the last stitch of the row, and the last stitch of the row, and the last stitch of the row, and the last stitch of the row",
+      "patched::late": " end of the row, and the Rosette at the end of the row.\n\n_The Rosette_\n\n_The Shuttle_\n\n_The Pearls_\n\n_The Wool_\n\n_The Pearls_\n\n_The Shuttle_\n\n_"
+     },
+     "n_words": {
+      "clean": 28,
+      "corrupted": 26,
+      "patched::early": 24,
+      "patched::mid": 53,
+      "patched::late": 26
+     }
+    },
+    {
+     "id": "L0N-09",
+     "level": "L0N",
+     "corruption_key": "192:associated->turned",
+     "generations": {
+      "clean": " days of struggle.\n\nLook back in your own lives, see what the things are that you are proudest of as you look back, and you will in almost every case and on every occasion find that those memories of pride are associated, not with days of ease, but with days of struggle",
+      "corrupted": " days of pain.\n\nLook back in your own lives, see what the things are that you are proudest of as you look back, and you will in almost every case and on every occasion find that those memories of pride are turned, not with days of ease, but with days of pain",
+      "patched::early": " days of pain.\n\nLook back in your own lives, see what the things are that you are proudest of as you look back, and you will in almost every case and on every occasion find that those memories of pride are associated, not with days of ease, but with days of pain",
+      "patched::mid": " days of pain.\n\nLook back in your own lives, see what the things are that you are proudest of as you look back, and you will in almost every case and on every occasion find that those memories of pride are associated, not with days of ease, but with days of pain",
+      "patched::late": " days of pain.\n\nLook back in your own lives, see what the things are that you are proudest of as you look back, and you will in almost every case and on every occasion find that those memories of pride are turned, not with days of ease, but with days of pain"
+     },
+     "n_words": {
+      "clean": 52,
+      "corrupted": 52,
+      "patched::early": 52,
+      "patched::mid": 52,
+      "patched::late": 52
+     }
+    },
+    {
+     "id": "L0-20",
+     "level": "L0",
+     "corruption_key": "195:flower->house",
+     "generations": {
+      "clean": " mother. She was very happy, and she said to her mother, \"I want to be a flower.\"\n\n\"You can be a flower,\" said her mother. \"You can be a flower.\"\n\n\"I want to be a flower,\" said Wendy.\n\n\"You can",
+      "corrupted": " mother. She was very happy, and she was very proud of her house. She was very proud of her house, and she was very proud of her house. She was very proud of her house, and she was very proud of her house. She was very proud of her house, and she",
+      "patched::early": " mother. She was very happy, and she was very proud of her mother. She was very proud of her mother because she had been very happy. She was very happy because she had been very proud of her mother. She was very proud of her mother because she had been very happy. She was",
+      "patched::mid": " mother. She was very happy, and she was very proud of her mother. She was very proud of her mother because she had been very good to her. She had been very good to her. She had been very good to her. She had been very good to her. She had been very",
+      "patched::late": " mother. She was very happy, and she was very proud of her mother. She was very proud of her mother because she had been very good to her. She had been very good to her. She had been very good to her. She had been very good to her. She had been very"
+     },
+     "n_words": {
+      "clean": 40,
+      "corrupted": 52,
+      "patched::early": 54,
+      "patched::mid": 53,
+      "patched::late": 53
+     }
+    },
+    {
+     "id": "L0-16",
+     "level": "L0",
+     "corruption_key": "232:thing->walking",
+     "generations": {
+      "clean": " was my own. I had been a long time in the house, and I had not yet been able to get the door open. I had been obliged to use the key, and it was now in my pocket. I had been in the house a long time, and I had not yet been",
+      "corrupted": " I had so long been accustomed to. I had been a long time in the grave, and I had not yet been laid in it. I had been a long time in the grave, and I had not yet been laid in it. I had been a long time in the grave, and I",
+      "patched::early": " was before me. I had not long to wait. The first faint glimmer of life was visible in the eyes of the corpse. I was about to raise the lid of the coffin, when a sudden convulsion seized me, and I fell senseless on the floor.\n\nI was soon",
+      "patched::mid": " was before me. I had been a long time in the grave, and I was not yet prepared to meet the resurrection.\n\nI had been a long time in the grave, and I was not yet prepared to meet the resurrection.\n\nI had been a long time in the grave,",
+      "patched::late": " was before me. I had been a long time in the grave, and I was not yet prepared to meet the resurrection.\n\nI had been a long time in the grave, and I was not yet prepared to meet the resurrection.\n\nI had been a long time in the grave,"
+     },
+     "n_words": {
+      "clean": 54,
+      "corrupted": 54,
+      "patched::early": 49,
+      "patched::mid": 50,
+      "patched::late": 50
+     }
+    },
+    {
+     "id": "L0-11",
+     "level": "L0",
+     "corruption_key": "256:instituted->turned",
+     "generations": {
+      "clean": " Men, deriving their just powers from the consent of the governed, That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government, laying its foundation on such principles and organizing its powers in such form,",
+      "corrupted": " the people, and the people are to govern. That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government, laying its foundation on such principles and organizing its powers in such form, as to them",
+      "patched::early": " Men, deriving their just powers from the consent of the governed, That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government, laying its foundation on such principles and organizing its powers in such form,",
+      "patched::mid": " Men, deriving their just powers from the consent of the governed, that whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government, laying its foundation on such principles and organizing its powers in such form,",
+      "patched::late": " Men, deriving their just powers from the consent of the governed, that whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government, laying its foundation on such principles and organizing its powers in such form,"
+     },
+     "n_words": {
+      "clean": 53,
+      "corrupted": 53,
+      "patched::early": 53,
+      "patched::mid": 53,
+      "patched::late": 53
+     }
+    }
+   ],
+   "n_records": 15,
+   "n_error": 0,
+   "shard": "D:\\ai架構測試\\Research_5_OMTR\\results\\causal\\main_winB1_gen_EleutherAI_pythia-1.4b.json",
+   "glink_host_levels": [
+    "L0",
+    "L0N"
+   ]
+  },
+  "EleutherAI/pythia-2.8b": {
+   "records": [
+    {
+     "id": "L0-01",
+     "level": "L0",
+     "corruption_key": "188:first->garden",
+     "generations": {
+      "clean": " well fixed in the minds of the surrounding families, that he is considered as the rightful property of some one or other of them.\n\nThe first thing that strikes the stranger, on entering the house, is the number of children. The mother is sitting in a low chair, with her arms",
+      "corrupted": " well established as to be regarded as a matter of course.\n\nThe same truth is equally true of a single woman in possession of a good fortune. She must be in want of a husband.\n\nThe same truth is equally true of a married couple in possession of a good fortune. They",
+      "patched::early": " well fixed in the minds of the surrounding families, that he is considered as the rightful property of some one or other of them.\n\nThe first thing that strikes the stranger, on entering the house, is the number of children. The second is the number of dogs. The third is the",
+      "patched::mid": " well established as to require no proof.\n\nThe same remark applies to the case of a man who has a good fortune, and is in want of a wife.\n\nThe truth of this remark is so well established, that it is not necessary to prove it.\n\nThe same remark",
+      "patched::late": " well established as to be regarded as a matter of course.\n\nThe same truth is equally true of a single woman in possession of a good fortune. She must be in want of a husband.\n\nThe same truth is equally true of a married couple in possession of a good fortune. They"
+     },
+     "n_words": {
+      "clean": 51,
+      "corrupted": 52,
+      "patched::early": 51,
+      "patched::mid": 49,
+      "patched::late": 52
+     }
+    },
+    {
+     "id": "L0-02",
+     "level": "L0",
+     "corruption_key": "180:little->river",
+     "generations": {
+      "clean": " way I have, you know, and an excuse I have always had for not going to church. I find the water, as you may suppose, very beautiful, and I have made many of my friends among the sailors. I have been all over the world, and I have seen many strange sights",
+      "corrupted": " long time since I did any thing of that sort, and when I consider how little I have seen of the world, it is a long time since I have felt any thing like a desire to see it. I have been very well all over the world, and have seen a great deal of it",
+      "patched::early": " way I have of driving off the spleen and regulating the circulation. Whenever I find myself growing grim about the mouth, I remind myself that this is no way to live; and whenever I find myself glooming at the world, I explain to myself that it is no time to be born. And so",
+      "patched::mid": " way I have, you know, and an excuse I have always had for not working. I find it very pleasant to watch the ships come in, and to watch the sailors run up the rigging to get a sight of the land. I find it very pleasant to watch the ships come in,",
+      "patched::late": " way I have, you know, and one that does not cost much. I find it is cheaper than going to sea in a ship. I find it is cheaper than going to sea in a balloon. I find it is cheaper than going to sea in a steamboat. I find it is"
+     },
+     "n_words": {
+      "clean": 52,
+      "corrupted": 56,
+      "patched::early": 54,
+      "patched::mid": 53,
+      "patched::late": 52
+     }
+    },
+    {
+     "id": "L0-03",
+     "level": "L0",
+     "corruption_key": "192:Light->Margaret",
+     "generations": {
+      "clean": " season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way, so let us be thankful and rejoice!\"\n\n\"",
+      "corrupted": " season of Mary, it was the season of Christ's incarnation, it was the season of the apostles, it was the season of St. Stephen, it was the season of the evangelists, it was the season of the apostles, it was the season of Christ's passion, it",
+      "patched::early": " season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way, we were all going to be murdered, we were all going",
+      "patched::mid": " season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way, so I took my leave",
+      "patched::late": " season of Mirth, it was the spring of love, it was the winter of Discontent, it was the spring of hope, it was the autumn of despair, it was the spring of action, it was the winter of reflection, it was the spring of hope, it was the autumn of"
+     },
+     "n_words": {
+      "clean": 48,
+      "corrupted": 46,
+      "patched::early": 51,
+      "patched::mid": 51,
+      "patched::late": 50
+     }
+    },
+    {
+     "id": "L0-04",
+     "level": "L0",
+     "corruption_key": "143:book->morning",
+     "generations": {
+      "clean": " what is the use of a book,\" thought Alice, \"without pictures or conversations?\" So she was considering whether she had not better go and ask what she could do to amuse herself, when she saw a little white object moving rapidly down the stream, towards the middle of it.\n\nIt",
+      "corrupted": " what is the use of a book,\" thought Alice, \"without pictures or conversations?\" So she was considering whether she should go and ask whether there were any such things as 'pictures' and 'conversations' in the next village, when she was startled by a voice close behind her,",
+      "patched::early": " what is the use of a book,\" thought Alice, \"without pictures or conversations?\" So she was considering whether she had not better go and ask what the book was about, when she heard a little voice say behind her, \"I'm glad I've found you at last!\"\n\nShe turned",
+      "patched::mid": " what is the use of a book,\" thought Alice, \"when you know how much the words mean?\" So she was considering whether she had not better go and ask what the words meant, when she heard a little laugh, quite close by, and looking round she saw a little black spec sitting on",
+      "patched::late": " what is the use of a book,\" thought Alice, \"without pictures or conversations?\" So she was considering whether she had not better go and ask what she could do to amuse herself, when she saw a little white object, like a large letter A, sitting on the grass beside her sister."
+     },
+     "n_words": {
+      "clean": 50,
+      "corrupted": 47,
+      "patched::early": 48,
+      "patched::mid": 53,
+      "patched::late": 51
+     }
+    },
+    {
+     "id": "L0-05",
+     "level": "L0",
+     "corruption_key": "202:God->Frances",
+     "generations": {
+      "clean": " light: and there was light. And God saw the light, that it was good: and God divided the light from the darkness. And God called the light Day, and the darkness he called Night. And the evening and the morning were the first day. And God said, Let there be a",
+      "corrupted": " light: and there was light. And God saw the light, that it was good: and God divided the light from the darkness. And God called the light Day, and the darkness he called Night. And the evening and the morning were the first day. And God said, Let there be a",
+      "patched::early": " light: and there was light. And God saw the light, that it was good: and God divided the light from the darkness. And God called the light Day, and the darkness he called Night. And the evening and the morning were the first day. And God said, Let there be a",
+      "patched::mid": " light: and there was light. And God saw the light, that it was good: and God divided the light from the darkness. And God called the light Day, and the darkness he called Night. And the evening and the morning were the first day. And God said, Let there be a",
+      "patched::late": " light: and there was light. And God saw the light, that it was good: and God divided the light from the darkness. And God called the light Day, and the darkness he called Night. And the evening and the morning were the first day. And God said, Let there be a"
+     },
+     "n_words": {
+      "clean": 51,
+      "corrupted": 51,
+      "patched::early": 51,
+      "patched::mid": 51,
+      "patched::late": 51
+     }
+    },
+    {
+     "id": "L0-06",
+     "level": "L0",
+     "corruption_key": "218:though->river",
+     "generations": {
+      "clean": " walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me. Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth",
+      "corrupted": " shall see, when I wander through the desert; when I have passed through the sea, I shall be satisfied: I shall go to the hill of God: I shall make my bed in the hills: I shall lie down in green pastures. The LORD is my shepherd; I shall not",
+      "patched::early": " walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me. Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth",
+      "patched::mid": " walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me. Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth",
+      "patched::late": " walk through, as the deer; I run, not being weary: for thou givest me strength.\n\nPsalm 23\n\nThe Lord is my shepherd; I shall not want.\n\nHe maketh me to lie down in green pastures: he leadeth me beside the"
+     },
+     "n_words": {
+      "clean": 48,
+      "corrupted": 50,
+      "patched::early": 48,
+      "patched::mid": 48,
+      "patched::late": 40
+     }
+    },
+    {
+     "id": "L0-16",
+     "level": "L0",
+     "corruption_key": "223:lifeless->letter",
+     "generations": {
+      "clean": " lay before me. I had been a long time in the work, and I was weary. I had been a long time in the work, and I was weary. I had been a long time in the work, and I was weary. I had been a long time in the work, and",
+      "corrupted": " lay before me. I had no idea of the nature of the thing I was about to do, but I knew that I must do it, and that I must do it quickly. I had no idea of the nature of the thing I was about to do, but I knew that I must do",
+      "patched::early": " lay before me. I had been a long time in the room, and the night was cold. I had been in the habit of keeping a fire in the room, but I had not done so for some time. I had been in the habit of keeping a fire in the room, but I",
+      "patched::mid": " lay before me. I had been a long time in the room, and the night was cold and damp. I had been in the habit of keeping a fire in the room, but I had not done so for some time. I had been in the habit of keeping a fire in the room,",
+      "patched::late": " lay before me. I had been a long time in the work, and I was weary. I had been a long time in the work, and I was weary. I had been a long time in the work, and I was weary. I had been a long time in the work, and"
+     },
+     "n_words": {
+      "clean": 52,
+      "corrupted": 55,
+      "patched::early": 54,
+      "patched::mid": 54,
+      "patched::late": 52
+     }
+    },
+    {
+     "id": "L0-17",
+     "level": "L0",
+     "corruption_key": "210:love->house",
+     "generations": {
+      "clean": " Adler, but he was always conscious of a certain fascination in her presence. He was never able to analyse the reason of this, but he felt that it was a quality of her which was not common to women. He had never seen her in the company of a man, and he had never",
+      "corrupted": " Adler, but he was always conscious of a certain fascination in her presence. He was never able to look at her without a certain feeling of repulsion. He was never able to look at her without a certain feeling of attraction. He was never able to look at her without a certain feeling of",
+      "patched::early": " Adler, but he was always conscious of a certain fascination in her presence. He was never able to analyse this feeling, but it was certainly not that of mere physical desire. It was a sense of something deeper, something more than physical attraction. It was a sense of power, of superiority,",
+      "patched::mid": " Adler, but he was always conscious of a certain fascination in her presence. He was never able to analyse the reason of this, but he felt that it was a quality of her which was not common to women. He had never seen her in the company of men, but he had an impression",
+      "patched::late": " Adler, but he was always conscious of a certain fascination in her presence. He was never able to analyse the reason of this, but he was sure that it was not the mere fascination of a beautiful woman. It was something deeper, something more subtle, something more complex. He could not define"
+     },
+     "n_words": {
+      "clean": 54,
+      "corrupted": 54,
+      "patched::early": 51,
+      "patched::mid": 54,
+      "patched::late": 52
+     }
+    },
+    {
+     "id": "L0-20",
+     "level": "L0",
+     "corruption_key": "195:flower->house",
+     "generations": {
+      "clean": " mother.\n\n\"What are you doing?\" asked her mother.\n\n\"I'm going to give it to you,\" said Wendy.\n\n\"Why?\"\n\n\"Because you are my mother.\"\n\n\"But I'm not your mother.\"\n\n\"Yes, you are",
+      "corrupted": " mother.\n\n\"I'm going to be a house,\" she said.\n\n\"You're not,\" said her mother.\n\n\"Yes I am,\" said Wendy.\n\n\"No you're not,\" said her mother.\n\n\"Yes I am,\" said Wendy.\n",
+      "patched::early": " mother.\n\n\"I'm going to give you a present,\" she said.\n\n\"What is it?\" asked her mother.\n\n\"I'm going to give you a present,\" said Wendy.\n\n\"What is it?\" asked her mother.\n\n\"I'm going",
+      "patched::mid": " mother.\n\n\"I'm going to be a flower,\" she said.\n\n\"You're not a flower,\" said her mother.\n\n\"I am,\" said Wendy.\n\n\"You're not,\" said her mother.\n\n\"I am,\" said Wendy.\n\n",
+      "patched::late": " mother.\n\n\"I'm going to be a grown-up,\" she said.\n\n\"You're not,\" said her mother.\n\n\"I am,\" said Wendy.\n\n\"You're not,\" said her mother.\n\n\"I am,\" said Wendy.\n\n"
+     },
+     "n_words": {
+      "clean": 31,
+      "corrupted": 30,
+      "patched::early": 33,
+      "patched::mid": 29,
+      "patched::late": 27
+     }
+    },
+    {
+     "id": "L0-07",
+     "level": "L0",
+     "corruption_key": "217:world->house",
+     "generations": {
+      "clean": " saved. He that believeth on him is not condemned: but he that believeth not is condemned already, because he hath not believed in the name of the only begotten Son of God. And this is the condemnation, that light is come into the world, and men loved darkness rather",
+      "corrupted": " built, that is, that we might have peace.\n\nAnd he is the propitiation for our sins: and not for ours only, but also for the sins of the whole world.\n\nAnd hereby we have been sanctified through the offering of the body of Jesus Christ once for",
+      "patched::early": " saved. He that believeth on him is not condemned: but he that believeth not is condemned already, because he hath not believed in the name of the only begotten Son of God. And this is the condemnation, that light is come into the world, and men loved darkness rather",
+      "patched::mid": " saved. He that believeth on him is not condemned: but he that believeth not is condemned already, because he hath not believed in the name of the only begotten Son of God. And this is the condemnation, that light is come into the world, and men loved darkness rather",
+      "patched::late": " built, that is, that we might have peace through him.\n\nJohn 3:16-17\n\nThe Bible is clear that God loves us. He loves us so much that He gave His only begotten Son, that whosoever believeth in Him should not perish,"
+     },
+     "n_words": {
+      "clean": 49,
+      "corrupted": 47,
+      "patched::early": 49,
+      "patched::mid": 49,
+      "patched::late": 40
+     }
+    },
+    {
+     "id": "L0N-08",
+     "level": "L0N",
+     "corruption_key": "210:draw->table",
+     "generations": {
+      "clean": " same length as the Shuttle.\n\n_The Trimming in Tattling._\n\n_The Trimming in Tattling._\n\n_The Trimming in Tattling._\n\n_The Trimming in Tattling._\n\n_The Trimming in Tatt",
+      "corrupted": " same length as the Shuttle.\n\n_The Trimming in Tattling._\n\n_The Trimming in Tattling._\n\n_The Trimming in Tattling._\n\n_The Trimming in Tattling._\n\n_The Trimming in Tatt",
+      "patched::early": " same length as the Shuttle.\n\n_The Trimming in Tattling._\n\n_The Trimming in Tattling._\n\n_The Trimming in Tattling._\n\n_The Trimming in Tattling._\n\n_The Trimming in Tatt",
+      "patched::mid": " same length as the Shuttle.\n\n_The Trimming in Tattling._\n\n_The Trimming in Tattling._\n\n_The Trimming in Tattling._\n\n_The Trimming in Tattling._\n\n_The Trimming in Tatt",
+      "patched::late": " same length as the Shuttle.\n\n_The Trimming in Tattling._\n\n_The Trimming in Tattling._\n\n_The Trimming in Tattling._\n\n_The Trimming in Tattling._\n\n_The Trimming in Tatt"
+     },
+     "n_words": {
+      "clean": 25,
+      "corrupted": 25,
+      "patched::early": 25,
+      "patched::mid": 25,
+      "patched::late": 25
+     }
+    },
+    {
+     "id": "L0-11",
+     "level": "L0",
+     "corruption_key": "256:instituted->opened",
+     "generations": {
+      "clean": " Men, deriving their just powers from the consent of the governed, That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government, laying its foundation on such principles and organizing its powers in such form,",
+      "corrupted": " Men, deriving their just powers from the consent of the governed, — That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government, laying its foundation on such principles and organizing its powers in such form",
+      "patched::early": " Men, deriving their just powers from the consent of the governed, That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government, laying its foundation on such principles and organizing its powers in such form,",
+      "patched::mid": " Men, deriving their just powers from the consent of the governed. That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government, laying its foundation on such principles and organizing its powers in such form,",
+      "patched::late": " Men, deriving their just powers from the consent of the governed, — That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government, laying its foundation on such principles and organizing its powers in such form"
+     },
+     "n_words": {
+      "clean": 53,
+      "corrupted": 54,
+      "patched::early": 53,
+      "patched::mid": 53,
+      "patched::late": 54
+     }
+    }
+   ],
+   "n_records": 12,
+   "n_error": 0,
+   "shard": "D:\\ai架構測試\\Research_5_OMTR\\results\\causal\\main_winB1_gen_EleutherAI_pythia-2.8b.json",
+   "glink_host_levels": [
+    "L0",
+    "L0N"
+   ]
+  },
+  "allenai/OLMo-2-0425-1B": {
+   "records": [
+    {
+     "id": "L0-01",
+     "level": "L0",
+     "corruption_key": "174:may->garden",
+     "generations": {
+      "clean": " universally acknowledged, that he is sure to find a wife, if he is willing to pay the price. The price, however, is not always so easy to pay. The man may be rich, but he is not always rich enough. He may be a bachelor, but he is not always a",
+      "corrupted": " universally acknowledged, that he is sure to find a wife, if he is not already married. The question is, whether he should marry a woman of his own fortune, or a woman of another man's fortune. The first is the most eligible, and the most eligible is the best. The second",
+      "patched::early": " universally acknowledged, that he is sure to find a wife, if he is not already married. The question is, whether he should marry for money or for love. The answer is, that he should marry for love. The question is, whether he should marry for money or for love. The answer",
+      "patched::mid": " universally acknowledged, that he is sure to find a wife, if he is not already married. The question is, whether he should marry for money or for love. The answer is, that he should marry for love. The question is, whether he should marry for money or for love. The answer",
+      "patched::late": " universally acknowledged, that he is sure to find a wife, if he is not already married. The question is, whether he is likely to find a wife, who is worth the good fortune he is in possession of. The answer to this question is, that he is not likely to find a wife"
+     },
+     "n_words": {
+      "clean": 51,
+      "corrupted": 51,
+      "patched::early": 51,
+      "patched::mid": 51,
+      "patched::late": 53
+     }
+    },
+    {
+     "id": "L0-03",
+     "level": "L0",
+     "corruption_key": "192:Light->Margaret",
+     "generations": {
+      "clean": " season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way, it was a time for acting, it was a time for turning",
+      "corrupted": " winter of our discontent, it was the season of the full moon, it was the age of the full moon, it was the age of the full moon, it was the age of the full moon, it was the age of the full moon, it was the age of the full moon, it",
+      "patched::early": " season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way, it was a time of tumult and of the deepest sorrow, it",
+      "patched::mid": " season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way, it was a time of tumult and of the deepest darkness, it",
+      "patched::late": " season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way, it was a time of tumult and of the deepest darkness, it"
+     },
+     "n_words": {
+      "clean": 52,
+      "corrupted": 53,
+      "patched::early": 52,
+      "patched::mid": 52,
+      "patched::late": 52
+     }
+    },
+    {
+     "id": "L0-04",
+     "level": "L0",
+     "corruption_key": "143:book->house",
+     "generations": {
+      "clean": " what is the use of a book,\" thought Alice, \"without pictures or conversation?\" So she was considering in her own mind whether the pleasure of making a daisy-chain would be worth the trouble of getting up and picking the daisies, when suddenly a white rabbit with pink eyes ran close by",
+      "corrupted": " what is the use of a book,\" thought Alice, \"without pictures or conversations?\" So she was considering in her own mind (as well as she could, for the hot day made her feel very sleepy), how to begin an interesting conversation, when suddenly a White Rabbit with pink eyes ran close by",
+      "patched::early": " what is the use of a book,\" thought Alice, \"without pictures or conversation?\" So she was considering in her own mind whether the pleasure of making a daisy-chain would be worth the trouble of getting up and picking the daisies, when suddenly a white rabbit with pink eyes ran close by",
+      "patched::mid": " what is the use of a book,\" thought Alice, \"without pictures or conversation?\" So she was considering in her own mind, as she walked to and fro a little way in front of her sister, how much deeper the pool would be if she jumped in, when suddenly a White Rabbit with pink",
+      "patched::late": " what is the use of a book,\" thought Alice, \"without pictures or conversations?\" So she was considering in her own mind (as well as she could, for the hot day made her feel very sleepy), how to begin an interesting conversation, when suddenly a White Rabbit with pink eyes ran close by"
+     },
+     "n_words": {
+      "clean": 51,
+      "corrupted": 52,
+      "patched::early": 51,
+      "patched::mid": 53,
+      "patched::late": 52
+     }
+    },
+    {
+     "id": "L0-05",
+     "level": "L0",
+     "corruption_key": "190:waters->table",
+     "generations": {
+      "clean": " light: and there was light. And God saw the light, that it was good: and God divided the light from the darkness. And God called the light Day, and the darkness he called Night. And the evening and the morning were the first day. And God said, Let there be a",
+      "corrupted": " light: and there was light. And God saw the light, that it was good: and God divided the light from the darkness. And God called the light Day, and the darkness he called Night. And the evening and the morning were the first day. And God said, Let there be a",
+      "patched::early": " light: and there was light. And God saw the light, that it was good: and God divided the light from the darkness. And God called the light Day, and the darkness he called Night. And the evening and the morning were the first day. And God said, Let there be a",
+      "patched::mid": " light: and there was light. And God saw the light, that it was good: and God divided the light from the darkness. And God called the light Day, and the darkness he called Night. And the evening and the morning were the first day. And God said, Let there be a",
+      "patched::late": " light: and there was light. And God saw the light, that it was good: and God divided the light from the darkness. And God called the light Day, and the darkness he called Night. And the evening and the morning were the first day. And God said, Let there be a"
+     },
+     "n_words": {
+      "clean": 51,
+      "corrupted": 51,
+      "patched::early": 51,
+      "patched::mid": 51,
+      "patched::late": 51
+     }
+    },
+    {
+     "id": "L0-06",
+     "level": "L0",
+     "corruption_key": "178:righteousness->letter",
+     "generations": {
+      "clean": " walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me. Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth over",
+      "corrupted": " walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me. Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth over",
+      "patched::early": " walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me. Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth over",
+      "patched::mid": " walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me. Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth over",
+      "patched::late": " walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me. Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth over"
+     },
+     "n_words": {
+      "clean": 49,
+      "corrupted": 49,
+      "patched::early": 49,
+      "patched::mid": 49,
+      "patched::late": 49
+     }
+    },
+    {
+     "id": "L0-07",
+     "level": "L0",
+     "corruption_key": "185:condemn->house",
+     "generations": {
+      "clean": " saved. He that believeth on him is not condemned: but he that believeth not is condemned already, because he hath not believed in the name of the only begotten Son of God. And this is the condemnation, that light is come into the world, and men loved darkness rather",
+      "corrupted": " saved. He that believeth not the Son, shall not see life; but the wrath of God abideth on him. For God sent not his Son into the world to condemn the world; but that the world through him might be saved. He that believeth not is condemned already",
+      "patched::early": " saved. He that believeth on him is not condemned: but he that believeth not is condemned already, because he hath not believed in the name of the only begotten Son of God. And this is the condemnation, that light is come into the world, and men loved darkness rather",
+      "patched::mid": " saved. He that believeth on him is not condemned: but he that believeth not is condemned already, because he hath not believed in the name of the only begotten Son of God. And this is the condemnation, that light is come into the world, and men loved darkness rather",
+      "patched::late": " saved. He that believeth not the Son shall not see life; but the wrath of God abideth on him.  John 3:16-18\n\nThe Bible is the most widely read book in the world. It is the most widely read book in the world. It"
+     },
+     "n_words": {
+      "clean": 49,
+      "corrupted": 48,
+      "patched::early": 49,
+      "patched::mid": 49,
+      "patched::late": 43
+     }
+    },
+    {
+     "id": "L0-15",
+     "level": "L0",
+     "corruption_key": "185:mainly->table",
+     "generations": {
+      "clean": " made up, but the main was the truth. I'll tell you about some more of the truth, and some of the lies, and you'll see what I mean. I'll tell you about the time I was a boy of ten, and I was a thief. I was a thief,",
+      "corrupted": " didn't know, but he told the truth, table. I ain't going to tell you about them, because you don't know about them, table. I ain't going to tell you about the things which I done, because you don't know about them, table. I ain't going",
+      "patched::early": " made up, but the main was true. I'll tell you about some more of them, and then I'll tell you about some things which ain't true. I'll tell you about the time I shot a hoss with a silver dollar. I was a sight over a year old then,",
+      "patched::mid": " didn't know, but that don't make no difference, because he was a great deal of the time telling the truth. Tom Sawyer was a great boy, and he had a lot of friends. I don't know how many, because I never counted. Tom was a great fun, and he",
+      "patched::late": " didn't know, but he told the truth about them, as he did about everything else. I'll tell you about some more of the things which he didn't know, but which he told the truth about. He didn't know that there was such a thing as a soul. He didn't"
+     },
+     "n_words": {
+      "clean": 49,
+      "corrupted": 45,
+      "patched::early": 49,
+      "patched::mid": 49,
+      "patched::late": 49
+     }
+    },
+    {
+     "id": "L0-16",
+     "level": "L0",
+     "corruption_key": "232:thing->carrying",
+     "generations": {
+      "clean": " lay before me. I had been employed all day in the labors of the field, and my strength was almost spent. I had been obliged to leave my wife and children in the care of a hired man, that I might be able to work with the greater ease. I had been obliged to",
+      "corrupted": " had been my occupation for so many weary months. I had been employed in the manufacture of a new kind of candle, and had been engaged in the business for some time. The candle was a new invention, and I had been the first to introduce it into the country. I had been successful in",
+      "patched::early": " lay before me. I had been employed all day in the labors of the field, and my strength was almost spent. I had been obliged to leave my wife and child in the care of a neighbor, and I had not even the consolation of knowing where they were. I had no fire,",
+      "patched::mid": " lay before me. I had been employed all day in the labors of the field, and my strength was almost spent. I had been obliged to leave my wife and child in the care of a neighbor, and I had not even the consolation of knowing where they were. I had no fire,",
+      "patched::late": " lay before me. I had been employed in the construction of a coffin, and the work was nearly finished. I had only to pour the last drops of the precious fluid into the mould, and the work was done. I had been in the habit of working at this task for some time, and"
+     },
+     "n_words": {
+      "clean": 54,
+      "corrupted": 55,
+      "patched::early": 53,
+      "patched::mid": 53,
+      "patched::late": 54
+     }
+    },
+    {
+     "id": "L0-17",
+     "level": "L0",
+     "corruption_key": "202:akin->house",
+     "generations": {
+      "clean": " Adler. He was not in love with her. He was not in love with her because he was in love with her. He was in love with her because she was the only woman who had ever defeated him. He was in love with her because she was the only woman who had ever defied",
+      "corrupted": " Adler. He was not in love with her. He was not in love with her because she was a woman. He was in love with her because she was a woman. He was in love with her because she was a woman. He was in love with her because she was a woman. He",
+      "patched::early": " Adler. He was not in love with her. He was not in love with her because he was not in love with her. He was not in love with her because he was not in love with her. He was not in love with her because he was not in love with her. He was",
+      "patched::mid": " Adler. He was not in love with her. He was not in love with her because he was in love with her. He was in love with her because she was the only woman who had ever defeated him. He was in love with her because she was the only woman who had ever defied",
+      "patched::late": " Adler. He was not in love with her. He was not in love with her at all. He was in love with the idea of her. He was in love with the idea of a woman who could outwit him. He was in love with the idea of a woman who could outwit"
+     },
+     "n_words": {
+      "clean": 55,
+      "corrupted": 54,
+      "patched::early": 55,
+      "patched::mid": 55,
+      "patched::late": 53
+     }
+    },
+    {
+     "id": "L0-19",
+     "level": "L0",
+     "corruption_key": "240:concerns->letter",
+     "generations": {
+      "clean": " scrutinized and studied, perhaps almost as narrowly as a man with a microscope scrutinizes the transient life of a drop of water, or as a bird watcher studies the life of a feathered creature in its own element. But the fact is, that the life of the earth is being watched and studied",
+      "corrupted": " scrutinized and studied, perhaps almost as narrowly as a man with a microscope scrutinizes the transient life of a drop of water, or as a bird watcher studies the life of a feathered creature in its own element. But the fact is, that the life of the earth is being watched and studied",
+      "patched::early": " scrutinized and studied, perhaps almost as narrowly as a man with a microscope scrutinizes the transient life of a drop of water, or as a bird watcher studies the life of a feathered creature in its own element. But the fact is, that the life of the earth is being watched and studied",
+      "patched::mid": " scrutinized and studied, perhaps almost as narrowly as a man with a microscope scrutinizes the transient life of a drop of water, or as a bird watcher studies the life of a feathered creature in its own element. But the fact is, that the life of the earth is being watched and studied",
+      "patched::late": " scrutinized and studied, perhaps almost as narrowly as a man with a microscope might scrutinize the transient life of a drop of water under the microscope. But this is the state of things. The great question is, what are these intelligences? Are they good or are they bad? The question is"
+     },
+     "n_words": {
+      "clean": 53,
+      "corrupted": 53,
+      "patched::early": 53,
+      "patched::mid": 53,
+      "patched::late": 51
+     }
+    },
+    {
+     "id": "L0-08",
+     "level": "L0",
+     "corruption_key": "124:things->house",
+     "generations": {
+      "clean": " life; and the life was the light of men. The light shineth in darkness; and the darkness comprehended it not. There was a man sent from God, whose name was John. He came for a witness, to bear witness of the light, that all men might believe through him.",
+      "corrupted": " life, and the life was the light of men. The light shineth in darkness; and the darkness comprehended it not. There was a man sent from God, whose name was John. He came for a witness, to bear witness of the light, that all men might believe through him.",
+      "patched::early": " life; and the life was the light of men. The light shineth in darkness; and the darkness comprehended it not. There was a man sent from God, whose name was John. He came for a witness, to bear witness of the light, that all men might believe through him.",
+      "patched::mid": " life; and the life was the light of men. The light shineth in darkness; and the darkness comprehended it not. There was a man sent from God, whose name was John. He came for a witness, to bear witness of the light, that all men might believe through him.",
+      "patched::late": " life; and the life was the light of men. The light shineth in darkness; and the darkness comprehended it not. There was a man sent from God, whose name was John. He came for a witness, to bear witness of the light, that all men might believe through him."
+     },
+     "n_words": {
+      "clean": 49,
+      "corrupted": 49,
+      "patched::early": 49,
+      "patched::mid": 49,
+      "patched::late": 49
+     }
+    },
+    {
+     "id": "L0-20",
+     "level": "L0",
+     "corruption_key": "206:ran->river",
+     "generations": {
+      "clean": " mother and said, \"I want to be a flower.\" Her mother said, \"You're already the prettiest and the most wonderful girl in the world.\" But Wendy did not believe her mother, and she said, \"No, I want to be a flower.\" And so she was a",
+      "corrupted": " mouth. Her mother said to her, \"That is not a good way to play, Wendy. You mustn't do that.\" Wendy said, \"Why not, mother?\" \"Because that is not a flower, it is a baby. You are eating a baby.\" Wendy said, \"I",
+      "patched::early": " mother and said, \"I want to be a rose when I grow up.\" Her mother laughed, but in a few months' time the little girl was having to pull off her long hair to make herself a hat, and she said, \"I'm too fat for a rose.\" She was beginning",
+      "patched::mid": " mother. She said, \"I am going to grow up.\" Her mother said, \"No, darling, you will not.\" But Wendy was sure she would. She plucked another flower and ran with it to her mother. She said, \"I am going to grow up.\" But her mother",
+      "patched::late": " mouth. Her mother said, \"Don't do that, dear, that's bad.\" \"Why?\" the child asked. \"Because it's bad.\" \"Why is it bad?\" \"Because it's bad.\" The child didn't understand. But she understood that she would grow up, and she"
+     },
+     "n_words": {
+      "clean": 46,
+      "corrupted": 42,
+      "patched::early": 50,
+      "patched::mid": 45,
+      "patched::late": 38
+     }
+    },
+    {
+     "id": "L0N-07",
+     "level": "L0N",
+     "corruption_key": "202:front->table",
+     "generations": {
+      "clean": " Bind off. Weave in ends. Weave in all ends. Weave in all ends. Weave in all ends. Weave in all ends. Weave in all ends. Weave in all ends. Weave in all ends. Weave in all ends. Weave in all",
+      "corrupted": " Bind off. Weave in ends.<|endoftext|>",
+      "patched::early": " Bind off. Weave in ends. Weave in all ends. Weave in all ends. Weave in all ends. Weave in all ends. Weave in all ends. Weave in all ends. Weave in all ends. Weave in all ends. Weave in all",
+      "patched::mid": " Bind off. Weave in ends. RIGHT BACK: With No. 6 needles, cast on 59 sts. K 1, P 1 in ribbing to within last 8 sts, attach another skein and work last 8 sts with double yarn throughout in garter st (",
+      "patched::late": " Bind off. Weave in ends.<|endoftext|>"
+     },
+     "n_words": {
+      "clean": 40,
+      "corrupted": 5,
+      "patched::early": 40,
+      "patched::mid": 42,
+      "patched::late": 5
+     }
+    },
+    {
+     "id": "L0N-11",
+     "level": "L0N",
+     "corruption_key": "198:standing->walking",
+     "generations": {
+      "clean": " Frank. \"Hang ye! I'll have your hide for this!\" \"Well, I'll be darned!\" Frank exclaimed. \"You're not in Morocco yet, are you?\" \"No, I guess not,\" Ephraim replied. \"I guess not.\" He looked around. \"Where",
+      "corrupted": " Frank. \"Hang ye! I'll have ye for this!\" \"What for?\" asked Frank, laughing. \"For this!\" Ephraim cried, pointing to his head. \"For this!\" he repeated, and Frank laughed again. \"For this!\" Ephraim cried, and Frank laughed",
+      "patched::early": " Frank. \"Hang ye! I'll have your hide for this!\" \"Well, you won't find it in Morocco,\" Frank answered, laughing. \"I'm going to have a good time, and you're going to help me. That's all there is to it.\" \"I'll have",
+      "patched::mid": " Frank. \"Hang ye! I'll have your hide for this!\" \"Well, I'll be darned!\" Frank exclaimed. \"You're not in Morocco yet, are you?\" \"No, I guess not,\" Ephraim replied. \"I guess not.\" He looked around. \"Where",
+      "patched::late": " Frank. \"Hang ye! I'll have ye for this!\" \"What is it, Eph?\" Frank asked. \"I'm afraid of the water,\" Eph replied. \"I don't see what's to be afraid of. It's only a little dip, and I'm not going to swim"
+     },
+     "n_words": {
+      "clean": 35,
+      "corrupted": 36,
+      "patched::early": 40,
+      "patched::mid": 35,
+      "patched::late": 40
+     }
+    },
+    {
+     "id": "L0-11",
+     "level": "L0",
+     "corruption_key": "240:Governments->Thomas",
+     "generations": {
+      "clean": " Men, deriving their just powers from the consent of the governed, that whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government, laying its foundation on such principles and organizing its powers in such form, as",
+      "corrupted": " men, deriving their just powers from the consent of the governed. That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government, laying its foundation on such principles and organizing its powers in such form, as",
+      "patched::early": " Men, deriving their just powers from the consent of the governed. That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government, laying its foundation on such principles and organizing its powers in such form, as",
+      "patched::mid": " Men, deriving their just powers from the consent of the governed. That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government, laying its foundation on such principles and organizing its powers in such form, as",
+      "patched::late": " Men, deriving their just powers from the consent of the governed. That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government, laying its foundation on such principles and organizing its powers in such form, as"
+     },
+     "n_words": {
+      "clean": 54,
+      "corrupted": 54,
+      "patched::early": 54,
+      "patched::mid": 54,
+      "patched::late": 54
+     }
+    }
+   ],
+   "n_records": 15,
+   "n_error": 0,
+   "shard": "D:\\ai架構測試\\Research_5_OMTR\\results\\causal\\main_winB1_gen_allenai_OLMo-2-0425-1B.json",
+   "glink_host_levels": [
+    "L0",
+    "L0N"
+   ]
+  }
+ },
+ "missing": []
+}

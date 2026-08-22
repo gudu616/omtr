@@ -1,0 +1,1176 @@
+{
+  "run_id": "winA20260822",
+  "spec_version": "CAUSAL_PREREG_v1 第一段凍結 + v2.6–v2.13（權威=裁決檔）",
+  "noise_floor": {
+    "floor_nats": 0.22937893867492676,
+    "n_distinct_items": 3,
+    "both_paths_per_item": true,
+    "negligible": false,
+    "scale": "delta_y_nats（附錄 C②）"
+  },
+  "g1": {
+    "cells": {
+      "EleutherAI/pythia-1.4b|early|main": {
+        "pooled": {
+          "resid_mad_scale": 0.08030289617163679,
+          "dof": 6,
+          "valid": true,
+          "ratio_over_floor": 0.3500883587461408,
+          "reading": "near_floor",
+          "S": 0.0,
+          "se_beta": null,
+          "outlier_dominated_flag": true
+        },
+        "item_fe": {
+          "resid_mad_scale": null,
+          "dof": -2,
+          "valid": false,
+          "ratio_over_floor": null,
+          "reading": null,
+          "S": 0.0,
+          "se_beta": null,
+          "outlier_dominated_flag": null
+        }
+      },
+      "EleutherAI/pythia-1.4b|early|cross_word": {
+        "pooled": {
+          "resid_mad_scale": 0.027481288353548284,
+          "dof": 7,
+          "valid": true,
+          "ratio_over_floor": 0.11980737426156834,
+          "reading": "near_floor",
+          "S": 0.2311029126817914,
+          "se_beta": 0.06819551466364675,
+          "outlier_dominated_flag": false
+        },
+        "item_fe": {
+          "resid_mad_scale": 0.01158770310216636,
+          "dof": 3,
+          "valid": true,
+          "ratio_over_floor": 0.050517729173855504,
+          "reading": "near_floor",
+          "S": 0.2311029126817914,
+          "se_beta": 0.07136260792583239,
+          "outlier_dominated_flag": true
+        }
+      },
+      "EleutherAI/pythia-1.4b|early|all": {
+        "pooled": {
+          "resid_mad_scale": 0.06674840448686972,
+          "dof": 16,
+          "valid": true,
+          "ratio_over_floor": 0.2909962216778098,
+          "reading": "near_floor",
+          "S": 0.2732111629186894,
+          "se_beta": 0.19513104247986685,
+          "outlier_dominated_flag": true
+        },
+        "item_fe": {
+          "resid_mad_scale": 0.012217996489532036,
+          "dof": 8,
+          "valid": true,
+          "ratio_over_floor": 0.05326555506845048,
+          "reading": "near_floor",
+          "S": 0.2732111629186894,
+          "se_beta": 0.07443861445375712,
+          "outlier_dominated_flag": true
+        }
+      },
+      "EleutherAI/pythia-1.4b|late|main": {
+        "pooled": {
+          "resid_mad_scale": 0.22104103309017828,
+          "dof": 6,
+          "valid": true,
+          "ratio_over_floor": 0.963650082117762,
+          "reading": "near_floor",
+          "S": 0.0,
+          "se_beta": null,
+          "outlier_dominated_flag": false
+        },
+        "item_fe": {
+          "resid_mad_scale": null,
+          "dof": -2,
+          "valid": false,
+          "ratio_over_floor": null,
+          "reading": null,
+          "S": 0.0,
+          "se_beta": null,
+          "outlier_dominated_flag": null
+        }
+      },
+      "EleutherAI/pythia-1.4b|late|cross_word": {
+        "pooled": {
+          "resid_mad_scale": 0.05408255610688244,
+          "dof": 7,
+          "valid": true,
+          "ratio_over_floor": 0.23577821232980603,
+          "reading": "near_floor",
+          "S": 0.2311029126817914,
+          "se_beta": 0.20021906185945695,
+          "outlier_dominated_flag": true
+        },
+        "item_fe": {
+          "resid_mad_scale": 0.03147142549611326,
+          "dof": 3,
+          "valid": true,
+          "ratio_over_floor": 0.13720276882401225,
+          "reading": "near_floor",
+          "S": 0.2311029126817914,
+          "se_beta": 0.15565421684383915,
+          "outlier_dominated_flag": true
+        }
+      },
+      "EleutherAI/pythia-1.4b|late|all": {
+        "pooled": {
+          "resid_mad_scale": 0.09710704037755025,
+          "dof": 16,
+          "valid": true,
+          "ratio_over_floor": 0.4233476749806104,
+          "reading": "near_floor",
+          "S": 0.2732111629186894,
+          "se_beta": 0.3032736458326372,
+          "outlier_dominated_flag": true
+        },
+        "item_fe": {
+          "resid_mad_scale": 0.023369642607739532,
+          "dof": 8,
+          "valid": true,
+          "ratio_over_floor": 0.10188225101546365,
+          "reading": "near_floor",
+          "S": 0.2732111629186894,
+          "se_beta": 0.13464184069057297,
+          "outlier_dominated_flag": true
+        }
+      },
+      "EleutherAI/pythia-1.4b|mid|main": {
+        "pooled": {
+          "resid_mad_scale": 0.15799494192177863,
+          "dof": 6,
+          "valid": true,
+          "ratio_over_floor": 0.6887944587872005,
+          "reading": "near_floor",
+          "S": 0.0,
+          "se_beta": null,
+          "outlier_dominated_flag": false
+        },
+        "item_fe": {
+          "resid_mad_scale": null,
+          "dof": -2,
+          "valid": false,
+          "ratio_over_floor": null,
+          "reading": null,
+          "S": 0.0,
+          "se_beta": null,
+          "outlier_dominated_flag": null
+        }
+      },
+      "EleutherAI/pythia-1.4b|mid|cross_word": {
+        "pooled": {
+          "resid_mad_scale": 0.09451138660030448,
+          "dof": 7,
+          "valid": true,
+          "ratio_over_floor": 0.41203166753790305,
+          "reading": "near_floor",
+          "S": 0.2311029126817914,
+          "se_beta": 0.3449506255517805,
+          "outlier_dominated_flag": true
+        },
+        "item_fe": {
+          "resid_mad_scale": 0.02867345789079721,
+          "dof": 3,
+          "valid": true,
+          "ratio_over_floor": 0.12500475438781636,
+          "reading": "near_floor",
+          "S": 0.2311029126817914,
+          "se_beta": 0.1238372898905835,
+          "outlier_dominated_flag": true
+        }
+      },
+      "EleutherAI/pythia-1.4b|mid|all": {
+        "pooled": {
+          "resid_mad_scale": 0.1541026354694963,
+          "dof": 16,
+          "valid": true,
+          "ratio_over_floor": 0.6718255667225351,
+          "reading": "near_floor",
+          "S": 0.2732111629186894,
+          "se_beta": 0.35443757875691684,
+          "outlier_dominated_flag": false
+        },
+        "item_fe": {
+          "resid_mad_scale": 0.02319079456165121,
+          "dof": 8,
+          "valid": true,
+          "ratio_over_floor": 0.10110254540202987,
+          "reading": "near_floor",
+          "S": 0.2732111629186894,
+          "se_beta": 0.07811050642403883,
+          "outlier_dominated_flag": true
+        }
+      },
+      "EleutherAI/pythia-1b|early|main": {
+        "pooled": {
+          "resid_mad_scale": 0.023855111305419927,
+          "dof": 7,
+          "valid": true,
+          "ratio_over_floor": 0.10399869945874639,
+          "reading": "near_floor",
+          "S": 0.0,
+          "se_beta": null,
+          "outlier_dominated_flag": true
+        },
+        "item_fe": {
+          "resid_mad_scale": null,
+          "dof": -2,
+          "valid": false,
+          "ratio_over_floor": null,
+          "reading": null,
+          "S": 0.0,
+          "se_beta": null,
+          "outlier_dominated_flag": null
+        }
+      },
+      "EleutherAI/pythia-1b|early|cross_word": {
+        "pooled": {
+          "resid_mad_scale": 0.03419706678191853,
+          "dof": 5,
+          "valid": true,
+          "ratio_over_floor": 0.1490854695704309,
+          "reading": "near_floor",
+          "S": 0.11502319635147984,
+          "se_beta": 0.15466585716128511,
+          "outlier_dominated_flag": true
+        },
+        "item_fe": {
+          "resid_mad_scale": 0.000418136656532579,
+          "dof": 2,
+          "valid": true,
+          "ratio_over_floor": 0.0018229078002891868,
+          "reading": "near_floor",
+          "S": 0.11502319635147984,
+          "se_beta": 0.004485121288878469,
+          "outlier_dominated_flag": true
+        }
+      },
+      "EleutherAI/pythia-1b|early|all": {
+        "pooled": {
+          "resid_mad_scale": 0.05453411163070324,
+          "dof": 15,
+          "valid": true,
+          "ratio_over_floor": 0.2377468129625814,
+          "reading": "near_floor",
+          "S": 0.47204211214711717,
+          "se_beta": 0.06999621903851969,
+          "outlier_dominated_flag": false
+        },
+        "item_fe": {
+          "resid_mad_scale": 0.0029527785466441315,
+          "dof": 6,
+          "valid": true,
+          "ratio_over_floor": 0.012872927931839357,
+          "reading": "near_floor",
+          "S": 0.47204211214711717,
+          "se_beta": 0.020240435665579308,
+          "outlier_dominated_flag": true
+        }
+      },
+      "EleutherAI/pythia-1b|late|main": {
+        "pooled": {
+          "resid_mad_scale": 0.21567848924176297,
+          "dof": 7,
+          "valid": true,
+          "ratio_over_floor": 0.9402715457996782,
+          "reading": "near_floor",
+          "S": 0.0,
+          "se_beta": null,
+          "outlier_dominated_flag": false
+        },
+        "item_fe": {
+          "resid_mad_scale": null,
+          "dof": -2,
+          "valid": false,
+          "ratio_over_floor": null,
+          "reading": null,
+          "S": 0.0,
+          "se_beta": null,
+          "outlier_dominated_flag": null
+        }
+      },
+      "EleutherAI/pythia-1b|late|cross_word": {
+        "pooled": {
+          "resid_mad_scale": 0.04125914849621282,
+          "dof": 5,
+          "valid": true,
+          "ratio_over_floor": 0.17987330804893478,
+          "reading": "near_floor",
+          "S": 0.11502319635147984,
+          "se_beta": 0.14825907845357678,
+          "outlier_dominated_flag": false
+        },
+        "item_fe": {
+          "resid_mad_scale": 0.037102637963309135,
+          "dof": 2,
+          "valid": true,
+          "ratio_over_floor": 0.16175259235936468,
+          "reading": "near_floor",
+          "S": 0.11502319635147984,
+          "se_beta": 0.16707604220761232,
+          "outlier_dominated_flag": true
+        }
+      },
+      "EleutherAI/pythia-1b|late|all": {
+        "pooled": {
+          "resid_mad_scale": 0.08931903511680002,
+          "dof": 15,
+          "valid": true,
+          "ratio_over_floor": 0.38939510154148,
+          "reading": "near_floor",
+          "S": 0.47204211214711717,
+          "se_beta": 0.28358635098097096,
+          "outlier_dominated_flag": true
+        },
+        "item_fe": {
+          "resid_mad_scale": 0.012261192720316566,
+          "dof": 6,
+          "valid": true,
+          "ratio_over_floor": 0.05345387327688786,
+          "reading": "near_floor",
+          "S": 0.47204211214711717,
+          "se_beta": 0.05255347953328692,
+          "outlier_dominated_flag": true
+        }
+      },
+      "EleutherAI/pythia-1b|mid|main": {
+        "pooled": {
+          "resid_mad_scale": 0.055524995306063904,
+          "dof": 7,
+          "valid": true,
+          "ratio_over_floor": 0.24206666761482099,
+          "reading": "near_floor",
+          "S": 0.0,
+          "se_beta": null,
+          "outlier_dominated_flag": false
+        },
+        "item_fe": {
+          "resid_mad_scale": null,
+          "dof": -2,
+          "valid": false,
+          "ratio_over_floor": null,
+          "reading": null,
+          "S": 0.0,
+          "se_beta": null,
+          "outlier_dominated_flag": null
+        }
+      },
+      "EleutherAI/pythia-1b|mid|cross_word": {
+        "pooled": {
+          "resid_mad_scale": 0.0664471849055488,
+          "dof": 5,
+          "valid": true,
+          "ratio_over_floor": 0.2896830253440007,
+          "reading": "near_floor",
+          "S": 0.11502319635147984,
+          "se_beta": 0.3206846014037199,
+          "outlier_dominated_flag": true
+        },
+        "item_fe": {
+          "resid_mad_scale": 0.012789013549304925,
+          "dof": 2,
+          "valid": true,
+          "ratio_over_floor": 0.05575495999407936,
+          "reading": "near_floor",
+          "S": 0.11502319635147984,
+          "se_beta": 0.06931004211627967,
+          "outlier_dominated_flag": true
+        }
+      },
+      "EleutherAI/pythia-1b|mid|all": {
+        "pooled": {
+          "resid_mad_scale": 0.09694716341907395,
+          "dof": 15,
+          "valid": true,
+          "ratio_over_floor": 0.4226506756859067,
+          "reading": "near_floor",
+          "S": 0.47204211214711717,
+          "se_beta": 0.1376376318940664,
+          "outlier_dominated_flag": false
+        },
+        "item_fe": {
+          "resid_mad_scale": 0.0038127752136859388,
+          "dof": 6,
+          "valid": true,
+          "ratio_over_floor": 0.016622167822867823,
+          "reading": "near_floor",
+          "S": 0.47204211214711717,
+          "se_beta": 0.07632665811888602,
+          "outlier_dominated_flag": true
+        }
+      },
+      "EleutherAI/pythia-2.8b|early|main": {
+        "pooled": {
+          "resid_mad_scale": 0.03473688795119827,
+          "dof": 7,
+          "valid": true,
+          "ratio_over_floor": 0.15143887294912892,
+          "reading": "near_floor",
+          "S": 0.0,
+          "se_beta": null,
+          "outlier_dominated_flag": false
+        },
+        "item_fe": {
+          "resid_mad_scale": null,
+          "dof": -2,
+          "valid": false,
+          "ratio_over_floor": null,
+          "reading": null,
+          "S": 0.0,
+          "se_beta": null,
+          "outlier_dominated_flag": null
+        }
+      },
+      "EleutherAI/pythia-2.8b|early|cross_word": {
+        "pooled": {
+          "resid_mad_scale": 0.0476886392799698,
+          "dof": 9,
+          "valid": true,
+          "ratio_over_floor": 0.20790330426785,
+          "reading": "near_floor",
+          "S": 1.8436465611533563,
+          "se_beta": 0.08246956151396179,
+          "outlier_dominated_flag": true
+        },
+        "item_fe": {
+          "resid_mad_scale": 0.029376358752970406,
+          "dof": 4,
+          "valid": true,
+          "ratio_over_floor": 0.12806911969630416,
+          "reading": "near_floor",
+          "S": 1.8436465611533563,
+          "se_beta": 0.03511921938681626,
+          "outlier_dominated_flag": true
+        }
+      },
+      "EleutherAI/pythia-2.8b|early|all": {
+        "pooled": {
+          "resid_mad_scale": 0.05133035332806811,
+          "dof": 19,
+          "valid": true,
+          "ratio_over_floor": 0.22377971414722128,
+          "reading": "near_floor",
+          "S": 2.686169473919297,
+          "se_beta": 0.05139254936063781,
+          "outlier_dominated_flag": true
+        },
+        "item_fe": {
+          "resid_mad_scale": 0.029275418309958588,
+          "dof": 10,
+          "valid": true,
+          "ratio_over_floor": 0.12762905992623577,
+          "reading": "near_floor",
+          "S": 2.686169473919297,
+          "se_beta": 0.03507677538768958,
+          "outlier_dominated_flag": true
+        }
+      },
+      "EleutherAI/pythia-2.8b|late|main": {
+        "pooled": {
+          "resid_mad_scale": 0.18707137302201754,
+          "dof": 7,
+          "valid": true,
+          "ratio_over_floor": 0.8155560144392027,
+          "reading": "near_floor",
+          "S": 0.0,
+          "se_beta": null,
+          "outlier_dominated_flag": true
+        },
+        "item_fe": {
+          "resid_mad_scale": null,
+          "dof": -2,
+          "valid": false,
+          "ratio_over_floor": null,
+          "reading": null,
+          "S": 0.0,
+          "se_beta": null,
+          "outlier_dominated_flag": null
+        }
+      },
+      "EleutherAI/pythia-2.8b|late|cross_word": {
+        "pooled": {
+          "resid_mad_scale": 0.05079653750741326,
+          "dof": 9,
+          "valid": true,
+          "ratio_over_floor": 0.22145249167536493,
+          "reading": "near_floor",
+          "S": 1.8436465611533563,
+          "se_beta": 0.13395399558739474,
+          "outlier_dominated_flag": true
+        },
+        "item_fe": {
+          "resid_mad_scale": 0.06790819087046526,
+          "dof": 4,
+          "valid": true,
+          "ratio_over_floor": 0.2960524242668329,
+          "reading": "near_floor",
+          "S": 1.8436465611533563,
+          "se_beta": 0.11515834329503377,
+          "outlier_dominated_flag": true
+        }
+      },
+      "EleutherAI/pythia-2.8b|late|all": {
+        "pooled": {
+          "resid_mad_scale": 0.12477336806859565,
+          "dof": 19,
+          "valid": true,
+          "ratio_over_floor": 0.5439617463982735,
+          "reading": "near_floor",
+          "S": 2.686169473919297,
+          "se_beta": 0.19534879371413008,
+          "outlier_dominated_flag": true
+        },
+        "item_fe": {
+          "resid_mad_scale": 0.0393417316691295,
+          "dof": 10,
+          "valid": true,
+          "ratio_over_floor": 0.17151414116918623,
+          "reading": "near_floor",
+          "S": 2.686169473919297,
+          "se_beta": 0.08378973804526679,
+          "outlier_dominated_flag": true
+        }
+      },
+      "EleutherAI/pythia-2.8b|mid|main": {
+        "pooled": {
+          "resid_mad_scale": 0.21173995936412238,
+          "dof": 7,
+          "valid": true,
+          "ratio_over_floor": 0.9231011381746685,
+          "reading": "near_floor",
+          "S": 0.0,
+          "se_beta": null,
+          "outlier_dominated_flag": false
+        },
+        "item_fe": {
+          "resid_mad_scale": null,
+          "dof": -2,
+          "valid": false,
+          "ratio_over_floor": null,
+          "reading": null,
+          "S": 0.0,
+          "se_beta": null,
+          "outlier_dominated_flag": null
+        }
+      },
+      "EleutherAI/pythia-2.8b|mid|cross_word": {
+        "pooled": {
+          "resid_mad_scale": 0.09004649616704133,
+          "dof": 9,
+          "valid": true,
+          "ratio_over_floor": 0.39256653940078695,
+          "reading": "near_floor",
+          "S": 1.8436465611533563,
+          "se_beta": 0.10182212508722081,
+          "outlier_dominated_flag": true
+        },
+        "item_fe": {
+          "resid_mad_scale": 0.04723426752141363,
+          "dof": 4,
+          "valid": true,
+          "ratio_over_floor": 0.20592242598329177,
+          "reading": "near_floor",
+          "S": 1.8436465611533563,
+          "se_beta": 0.05592007941217122,
+          "outlier_dominated_flag": true
+        }
+      },
+      "EleutherAI/pythia-2.8b|mid|all": {
+        "pooled": {
+          "resid_mad_scale": 0.14269742529995855,
+          "dof": 19,
+          "valid": true,
+          "ratio_over_floor": 0.6221034334027838,
+          "reading": "near_floor",
+          "S": 2.686169473919297,
+          "se_beta": 0.09857655809708202,
+          "outlier_dominated_flag": false
+        },
+        "item_fe": {
+          "resid_mad_scale": 0.028118388995408587,
+          "dof": 10,
+          "valid": true,
+          "ratio_over_floor": 0.12258487705036272,
+          "reading": "near_floor",
+          "S": 2.686169473919297,
+          "se_beta": 0.06330766011331634,
+          "outlier_dominated_flag": true
+        }
+      },
+      "EleutherAI/pythia-410m|early|main": {
+        "pooled": {
+          "resid_mad_scale": 0.062429363013530116,
+          "dof": 5,
+          "valid": true,
+          "ratio_over_floor": 0.27216693639865647,
+          "reading": "near_floor",
+          "S": 0.0,
+          "se_beta": null,
+          "outlier_dominated_flag": false
+        },
+        "item_fe": {
+          "resid_mad_scale": null,
+          "dof": -2,
+          "valid": false,
+          "ratio_over_floor": null,
+          "reading": null,
+          "S": 0.0,
+          "se_beta": null,
+          "outlier_dominated_flag": null
+        }
+      },
+      "EleutherAI/pythia-410m|early|cross_word": {
+        "pooled": {
+          "resid_mad_scale": 0.06972320462727219,
+          "dof": 7,
+          "valid": true,
+          "ratio_over_floor": 0.3039651549093752,
+          "reading": "near_floor",
+          "S": 0.018154012925528207,
+          "se_beta": 0.7886665996099775,
+          "outlier_dominated_flag": true
+        },
+        "item_fe": {
+          "resid_mad_scale": 0.04400577546118192,
+          "dof": 3,
+          "valid": true,
+          "ratio_over_floor": 0.19184749792371483,
+          "reading": "near_floor",
+          "S": 0.018154012925528207,
+          "se_beta": 0.49210161441241745,
+          "outlier_dominated_flag": true
+        }
+      },
+      "EleutherAI/pythia-410m|early|all": {
+        "pooled": {
+          "resid_mad_scale": 0.07172660705842139,
+          "dof": 15,
+          "valid": true,
+          "ratio_over_floor": 0.3126991844707745,
+          "reading": "near_floor",
+          "S": 0.5747100994440283,
+          "se_beta": 0.11179478611217386,
+          "outlier_dominated_flag": false
+        },
+        "item_fe": {
+          "resid_mad_scale": 0.044464681335006716,
+          "dof": 8,
+          "valid": true,
+          "ratio_over_floor": 0.19384814312887533,
+          "reading": "near_floor",
+          "S": 0.5747100994440283,
+          "se_beta": 0.09210336812437335,
+          "outlier_dominated_flag": true
+        }
+      },
+      "EleutherAI/pythia-410m|late|main": {
+        "pooled": {
+          "resid_mad_scale": 0.11832793647277041,
+          "dof": 5,
+          "valid": true,
+          "ratio_over_floor": 0.5158622546443264,
+          "reading": "near_floor",
+          "S": 0.0,
+          "se_beta": null,
+          "outlier_dominated_flag": true
+        },
+        "item_fe": {
+          "resid_mad_scale": null,
+          "dof": -2,
+          "valid": false,
+          "ratio_over_floor": null,
+          "reading": null,
+          "S": 0.0,
+          "se_beta": null,
+          "outlier_dominated_flag": null
+        }
+      },
+      "EleutherAI/pythia-410m|late|cross_word": {
+        "pooled": {
+          "resid_mad_scale": 0.08586451359013705,
+          "dof": 7,
+          "valid": true,
+          "ratio_over_floor": 0.3743347758349483,
+          "reading": "near_floor",
+          "S": 0.018154012925528207,
+          "se_beta": 0.7340150510374169,
+          "outlier_dominated_flag": false
+        },
+        "item_fe": {
+          "resid_mad_scale": 0.07683445988790395,
+          "dof": 3,
+          "valid": true,
+          "ratio_over_floor": 0.33496737029022916,
+          "reading": "near_floor",
+          "S": 0.018154012925528207,
+          "se_beta": 0.7026526994345101,
+          "outlier_dominated_flag": false
+        }
+      },
+      "EleutherAI/pythia-410m|late|all": {
+        "pooled": {
+          "resid_mad_scale": 0.11584970751657965,
+          "dof": 15,
+          "valid": true,
+          "ratio_over_floor": 0.505058172235946,
+          "reading": "near_floor",
+          "S": 0.5747100994440283,
+          "se_beta": 0.2454485147794205,
+          "outlier_dominated_flag": true
+        },
+        "item_fe": {
+          "resid_mad_scale": 0.06346598941827172,
+          "dof": 8,
+          "valid": true,
+          "ratio_over_floor": 0.27668621096994006,
+          "reading": "near_floor",
+          "S": 0.5747100994440283,
+          "se_beta": 0.10803079698348783,
+          "outlier_dominated_flag": false
+        }
+      },
+      "EleutherAI/pythia-410m|mid|main": {
+        "pooled": {
+          "resid_mad_scale": 0.13125812428611666,
+          "dof": 5,
+          "valid": true,
+          "ratio_over_floor": 0.5722326777007813,
+          "reading": "near_floor",
+          "S": 0.0,
+          "se_beta": null,
+          "outlier_dominated_flag": false
+        },
+        "item_fe": {
+          "resid_mad_scale": null,
+          "dof": -2,
+          "valid": false,
+          "ratio_over_floor": null,
+          "reading": null,
+          "S": 0.0,
+          "se_beta": null,
+          "outlier_dominated_flag": null
+        }
+      },
+      "EleutherAI/pythia-410m|mid|cross_word": {
+        "pooled": {
+          "resid_mad_scale": 0.04654338165341847,
+          "dof": 7,
+          "valid": true,
+          "ratio_over_floor": 0.20291044122136784,
+          "reading": "near_floor",
+          "S": 0.018154012925528207,
+          "se_beta": 0.7330622093997042,
+          "outlier_dominated_flag": true
+        },
+        "item_fe": {
+          "resid_mad_scale": 0.06875163548453748,
+          "dof": 3,
+          "valid": true,
+          "ratio_over_floor": 0.2997295038581181,
+          "reading": "near_floor",
+          "S": 0.018154012925528207,
+          "se_beta": 0.6802406170453964,
+          "outlier_dominated_flag": false
+        }
+      },
+      "EleutherAI/pythia-410m|mid|all": {
+        "pooled": {
+          "resid_mad_scale": 0.11763393955287378,
+          "dof": 15,
+          "valid": true,
+          "ratio_over_floor": 0.5128367069462435,
+          "reading": "near_floor",
+          "S": 0.5747100994440283,
+          "se_beta": 0.1361538996366591,
+          "outlier_dominated_flag": false
+        },
+        "item_fe": {
+          "resid_mad_scale": 0.057465058692235775,
+          "dof": 8,
+          "valid": true,
+          "ratio_over_floor": 0.25052456439200205,
+          "reading": "near_floor",
+          "S": 0.5747100994440283,
+          "se_beta": 0.10282919132199163,
+          "outlier_dominated_flag": false
+        }
+      },
+      "allenai/OLMo-2-0425-1B|early|main": {
+        "pooled": {
+          "resid_mad_scale": 0.0716937256730206,
+          "dof": 8,
+          "valid": true,
+          "ratio_over_floor": 0.31255583484333815,
+          "reading": "near_floor",
+          "S": 0.0,
+          "se_beta": null,
+          "outlier_dominated_flag": false
+        },
+        "item_fe": {
+          "resid_mad_scale": null,
+          "dof": -2,
+          "valid": false,
+          "ratio_over_floor": null,
+          "reading": null,
+          "S": 0.0,
+          "se_beta": null,
+          "outlier_dominated_flag": null
+        }
+      },
+      "allenai/OLMo-2-0425-1B|early|cross_word": {
+        "pooled": {
+          "resid_mad_scale": 0.12318233049986325,
+          "dof": 11,
+          "valid": true,
+          "ratio_over_floor": 0.537025461934131,
+          "reading": "near_floor",
+          "S": 0.20485419705897812,
+          "se_beta": 0.22857499347453408,
+          "outlier_dominated_flag": false
+        },
+        "item_fe": {
+          "resid_mad_scale": 0.02262656702604894,
+          "dof": 5,
+          "valid": true,
+          "ratio_over_floor": 0.0986427400735124,
+          "reading": "near_floor",
+          "S": 0.20485419705897812,
+          "se_beta": 0.057521826803635615,
+          "outlier_dominated_flag": false
+        }
+      },
+      "allenai/OLMo-2-0425-1B|early|all": {
+        "pooled": {
+          "resid_mad_scale": 0.09546129847316243,
+          "dof": 22,
+          "valid": true,
+          "ratio_over_floor": 0.4161729015951595,
+          "reading": "near_floor",
+          "S": 0.5048753166109917,
+          "se_beta": 0.15351483466965818,
+          "outlier_dominated_flag": false
+        },
+        "item_fe": {
+          "resid_mad_scale": 0.016581301950871135,
+          "dof": 12,
+          "valid": true,
+          "ratio_over_floor": 0.07228781354843554,
+          "reading": "near_floor",
+          "S": 0.5048753166109917,
+          "se_beta": 0.05098018567706255,
+          "outlier_dominated_flag": true
+        }
+      },
+      "allenai/OLMo-2-0425-1B|late|main": {
+        "pooled": {
+          "resid_mad_scale": 0.19927150724908804,
+          "dof": 8,
+          "valid": true,
+          "ratio_over_floor": 0.8687436972210137,
+          "reading": "near_floor",
+          "S": 0.0,
+          "se_beta": null,
+          "outlier_dominated_flag": true
+        },
+        "item_fe": {
+          "resid_mad_scale": null,
+          "dof": -2,
+          "valid": false,
+          "ratio_over_floor": null,
+          "reading": null,
+          "S": 0.0,
+          "se_beta": null,
+          "outlier_dominated_flag": null
+        }
+      },
+      "allenai/OLMo-2-0425-1B|late|cross_word": {
+        "pooled": {
+          "resid_mad_scale": 0.07259773287599722,
+          "dof": 11,
+          "valid": true,
+          "ratio_over_floor": 0.3164969429860424,
+          "reading": "near_floor",
+          "S": 0.20485419705897812,
+          "se_beta": 0.17937305087055935,
+          "outlier_dominated_flag": false
+        },
+        "item_fe": {
+          "resid_mad_scale": 0.0473122327675725,
+          "dof": 5,
+          "valid": true,
+          "ratio_over_floor": 0.20626232312733325,
+          "reading": "near_floor",
+          "S": 0.20485419705897812,
+          "se_beta": 0.15987985480363506,
+          "outlier_dominated_flag": true
+        }
+      },
+      "allenai/OLMo-2-0425-1B|late|all": {
+        "pooled": {
+          "resid_mad_scale": 0.13063297109742647,
+          "dof": 22,
+          "valid": true,
+          "ratio_over_floor": 0.5695072610068967,
+          "reading": "near_floor",
+          "S": 0.5048753166109917,
+          "se_beta": 0.429876689723783,
+          "outlier_dominated_flag": true
+        },
+        "item_fe": {
+          "resid_mad_scale": 0.049663589676176956,
+          "dof": 12,
+          "valid": true,
+          "ratio_over_floor": 0.21651329438994238,
+          "reading": "near_floor",
+          "S": 0.5048753166109917,
+          "se_beta": 0.09490914014799084,
+          "outlier_dominated_flag": false
+        }
+      },
+      "allenai/OLMo-2-0425-1B|mid|main": {
+        "pooled": {
+          "resid_mad_scale": 0.13017833343851645,
+          "dof": 8,
+          "valid": true,
+          "ratio_over_floor": 0.567525223503644,
+          "reading": "near_floor",
+          "S": 0.0,
+          "se_beta": null,
+          "outlier_dominated_flag": true
+        },
+        "item_fe": {
+          "resid_mad_scale": null,
+          "dof": -2,
+          "valid": false,
+          "ratio_over_floor": null,
+          "reading": null,
+          "S": 0.0,
+          "se_beta": null,
+          "outlier_dominated_flag": null
+        }
+      },
+      "allenai/OLMo-2-0425-1B|mid|cross_word": {
+        "pooled": {
+          "resid_mad_scale": 0.12870575656167446,
+          "dof": 11,
+          "valid": true,
+          "ratio_over_floor": 0.5611053800544208,
+          "reading": "near_floor",
+          "S": 0.20485419705897812,
+          "se_beta": 0.30693542368726395,
+          "outlier_dominated_flag": false
+        },
+        "item_fe": {
+          "resid_mad_scale": 0.026726519054469787,
+          "dof": 5,
+          "valid": true,
+          "ratio_over_floor": 0.11651688341075772,
+          "reading": "near_floor",
+          "S": 0.20485419705897812,
+          "se_beta": 0.07679658674379883,
+          "outlier_dominated_flag": false
+        }
+      },
+      "allenai/OLMo-2-0425-1B|mid|all": {
+        "pooled": {
+          "resid_mad_scale": 0.07285056346235597,
+          "dof": 22,
+          "valid": true,
+          "ratio_over_floor": 0.31759918274623705,
+          "reading": "near_floor",
+          "S": 0.5048753166109917,
+          "se_beta": 0.3859584128712996,
+          "outlier_dominated_flag": true
+        },
+        "item_fe": {
+          "resid_mad_scale": 0.02389667391928635,
+          "dof": 12,
+          "valid": true,
+          "ratio_over_floor": 0.10417989575386624,
+          "reading": "near_floor",
+          "S": 0.5048753166109917,
+          "se_beta": 0.06117508358610813,
+          "outlier_dominated_flag": true
+        }
+      }
+    },
+    "n_valid_cells": 15,
+    "median_pooled_ratio": 0.38939510154148,
+    "verdict": "G1-a：全部有效格 pooled ≈ 底線（一致決）→ 設計死，主實驗不跑",
+    "notes": [
+      "G1-a 已降級為粗大失效偵測器（真退化偵測率 .206，v2.13）",
+      "G1 未點燃＝什麼都沒證明（不對稱閘門，附錄 C③）",
+      "不確定帶(3–10)視同未點燃（PF-2）"
+    ]
+  },
+  "redundancy_glink": {
+    "r_min_of_valid_bands": 0.06466005614714314,
+    "n_valid_bands": 3,
+    "per_band_r": {
+      "early": -0.9847225522784715,
+      "late": -0.06466005614714314,
+      "mid": -0.9884657649555497
+    },
+    "scale": "delta_y_nats（兩軌都取分子；v2.13 F 案）",
+    "rule": "全部有效帶 |r|>0.95 才砍（min 一致決，v2.11①；ΔY 尺度，v2.13F；0.95 非 50/50 點）",
+    "kill_provenance_track": false,
+    "verdict": "溯源軌保留"
+  },
+  "branch": {
+    "pooled_frac_bad": 0.7833333333333333,
+    "branch_triggered": true,
+    "per_model_flagged_gt60": [
+      {
+        "model": "EleutherAI/pythia-410m",
+        "fraction_bad": 0.8333333333333334,
+        "n_bad": 10,
+        "n_cells": 12
+      },
+      {
+        "model": "EleutherAI/pythia-1b",
+        "fraction_bad": 0.8333333333333334,
+        "n_bad": 10,
+        "n_cells": 12
+      },
+      {
+        "model": "EleutherAI/pythia-1.4b",
+        "fraction_bad": 0.75,
+        "n_bad": 9,
+        "n_cells": 12
+      },
+      {
+        "model": "EleutherAI/pythia-2.8b",
+        "fraction_bad": 0.75,
+        "n_bad": 9,
+        "n_cells": 12
+      },
+      {
+        "model": "allenai/OLMo-2-0425-1B",
+        "fraction_bad": 0.75,
+        "n_bad": 9,
+        "n_cells": 12
+      }
+    ],
+    "denominator_rule": "全部嘗試過的 (題 × 模型) 格，**含例外題**（零候選／護欄全擋／適足不過皆 bad 且入分母，v2.13 D①）",
+    "rule": "併池壞題 >40% → 多 token 分支；單一模型 >60% 標記點名（v2.13D）"
+  },
+  "r_measurement_dof": {
+    "per_model": {
+      "EleutherAI/pythia-1.4b": {
+        "realized_dof": 8,
+        "n_bands_seen": 3,
+        "met": true
+      },
+      "EleutherAI/pythia-1b": {
+        "realized_dof": 6,
+        "n_bands_seen": 3,
+        "met": false
+      },
+      "EleutherAI/pythia-2.8b": {
+        "realized_dof": 10,
+        "n_bands_seen": 3,
+        "met": true
+      },
+      "EleutherAI/pythia-410m": {
+        "realized_dof": 8,
+        "n_bands_seen": 3,
+        "met": true
+      },
+      "allenai/OLMo-2-0425-1B": {
+        "realized_dof": 12,
+        "n_bands_seen": 3,
+        "met": true
+      }
+    },
+    "target": 8,
+    "all_met": false,
+    "if_not_met": "對未達標之模型補題到達標，記錄補幾題，不得改門檻（附錄 C③；逐模型判＝v2.13 G 案）"
+  },
+  "k_rule": {
+    "var_ratio_dy_median": 0.15104841482461945,
+    "per_model": {
+      "EleutherAI/pythia-410m": {
+        "median_var_ratio": 0.15104841482461945,
+        "n_bands": 3
+      },
+      "EleutherAI/pythia-1b": {
+        "median_var_ratio": 0.2518974060023779,
+        "n_bands": 3
+      },
+      "EleutherAI/pythia-1.4b": {
+        "median_var_ratio": 0.048607395614149604,
+        "n_bands": 3
+      },
+      "EleutherAI/pythia-2.8b": {
+        "median_var_ratio": 0.2466142403801756,
+        "n_bands": 3
+      },
+      "allenai/OLMo-2-0425-1B": {
+        "median_var_ratio": 0.027702716947200355,
+        "n_bands": 3
+      }
+    },
+    "k": 1,
+    "aggregation": "逐模型報＋全體中位數當 k 決策輸入（複核②建議）",
+    "rule": "r<0.5→1；0.5≤r<2→2；r≥2→3（PF-4，慣例；ΔY 尺度，v2.13F）"
+  },
+  "rho_gate": {
+    "per_model": {
+      "EleutherAI/pythia-1.4b": {
+        "n_pairs": 4,
+        "rho_hat": 0.9996340277954536,
+        "ci_threshold_equiv": 0.9281683082344766,
+        "ci90_lower": 0.9902224947085669,
+        "pass": true
+      },
+      "EleutherAI/pythia-1b": {
+        "n_pairs": 4,
+        "rho_hat": 0.9998846749246071,
+        "ci_threshold_equiv": 0.9281683082344766,
+        "ci90_lower": 0.9969089508986143,
+        "pass": true
+      },
+      "EleutherAI/pythia-2.8b": {
+        "n_pairs": 4,
+        "rho_hat": 0.99913958459173,
+        "ci_threshold_equiv": 0.9281683082344766,
+        "ci90_lower": 0.9771579399417998,
+        "pass": true
+      },
+      "EleutherAI/pythia-410m": {
+        "n_pairs": 4,
+        "rho_hat": 0.9999387469680481,
+        "ci_threshold_equiv": 0.9281683082344766,
+        "ci90_lower": 0.9983570935372797,
+        "pass": true
+      },
+      "allenai/OLMo-2-0425-1B": {
+        "n_pairs": 4,
+        "rho_hat": 0.9966670606681453,
+        "ci_threshold_equiv": 0.9281683082344766,
+        "ci90_lower": 0.9142282404194657,
+        "pass": true
+      }
+    },
+    "rho_variable": "起手窗 clean gold（PF-3；為效應層 ρ 之上界——窗口 A 有 patch 資料後必須在 ΔY 上重估，此值僅預篩）",
+    "rule": "ρ̂ > tanh(1.645/√(n−3)) 且 90% CI 下界 > 0（v2.3）",
+    "fail_wording_frozen": "在負擔得起的 n 下無法拆除混淆 (C)；主對比照 L0P 執行但其結論永久攜帶 (C) 未拆的限定語"
+  },
+  "l0m_pass_rule": {
+    "median_abs_dgold_whole": 0.023921877145767212,
+    "median_abs_dgold_onset": 0.0830560028553009,
+    "pass": true,
+    "rule": "中位|Δgold(整段)|≤0.5 且起手窗≤1.0（M2）"
+  },
+  "positive_control": {
+    "status": "MISSING（陽性對照欄位未見）",
+    "rule": "ΔY_pc ≥ max(10×底線, 0.5×Δs_pc)，同帶同位置（PF-5）"
+  }
+}

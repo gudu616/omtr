@@ -1,0 +1,1712 @@
+{
+ "primary_q0.75": {
+  "run_id": "main_winB1",
+  "quantile": 0.75,
+  "light_mode": false,
+  "spec_version": "v2.21+v2.22",
+  "spec_sources": [
+   "planning/DESIGN_PROPOSAL_v2.2_rulings.md v2.21（第398-594行）＋v2.22（第595-614行，BOS全域化誤植之量出型修正）",
+   "planning/office_reports/theory_pos_test_mapping_v1.md（v1.1 定稿＋§4-B v2.22可見更正塊第326-390行，新斷言0）"
+  ],
+  "bos_shift_by_model": {
+   "EleutherAI/pythia-1.4b": 0,
+   "EleutherAI/pythia-1b": 0,
+   "EleutherAI/pythia-2.8b": 0,
+   "EleutherAI/pythia-410m": 0,
+   "allenai/OLMo-2-0425-1B": 1
+  },
+  "models_loaded": {
+   "EleutherAI/pythia-1.4b": "fp32",
+   "EleutherAI/pythia-1b": "fp32",
+   "EleutherAI/pythia-2.8b": "fp32",
+   "EleutherAI/pythia-410m": "fp32",
+   "allenai/OLMo-2-0425-1B": "fp32"
+  },
+  "main_models": [
+   "EleutherAI/pythia-1.4b",
+   "EleutherAI/pythia-1b",
+   "EleutherAI/pythia-410m",
+   "allenai/OLMo-2-0425-1B"
+  ],
+  "descriptive_models": [
+   "EleutherAI/pythia-2.8b"
+  ],
+  "corpus_gate_excluded_cells": 0,
+  "union_n17_check": {
+   "union_size": 17,
+   "expected": 17,
+   "match": true,
+   "intersection_4main_size": 13,
+   "expected_intersection_4main": 13,
+   "intersection_4main_match": true,
+   "intersection_all5_size": 12,
+   "expected_intersection_all5": 12,
+   "intersection_all5_match": true,
+   "note": "4main＝§7-a的4/4；all5＝§2『交集 n=12（五模型齊全）』，兩者不是同一個量"
+  },
+  "per_model_n": {
+   "EleutherAI/pythia-1.4b": 14,
+   "EleutherAI/pythia-1b": 14,
+   "EleutherAI/pythia-2.8b": 12,
+   "EleutherAI/pythia-410m": 16,
+   "allenai/OLMo-2-0425-1B": 15
+  },
+  "per_model_n_expected": {
+   "EleutherAI/pythia-410m": 16,
+   "EleutherAI/pythia-1b": 14,
+   "EleutherAI/pythia-1.4b": 14,
+   "allenai/OLMo-2-0425-1B": 15,
+   "EleutherAI/pythia-2.8b": 12
+  },
+  "per_model_n_match": {
+   "EleutherAI/pythia-410m": true,
+   "EleutherAI/pythia-1b": true,
+   "EleutherAI/pythia-1.4b": true,
+   "allenai/OLMo-2-0425-1B": true,
+   "EleutherAI/pythia-2.8b": true
+  },
+  "run_count_per_item_hist": {
+   "4": 13,
+   "3": 1,
+   "2": 1,
+   "1": 2
+  },
+  "expected_run_count_hist": {
+   "4": 13,
+   "3": 1,
+   "2": 1,
+   "1": 2
+  },
+  "run_count_hist_match": true,
+  "single_witness_items": [
+   "L0-10",
+   "L0-18"
+  ],
+  "fp32_main_total_cells": 59,
+  "expected_fp32_main_total_cells": 59,
+  "assertion_stats": {
+   "probe_locate_checked": 187,
+   "probe_locate_unique_pass": 187,
+   "boundary_audit": {
+    "gold": 170,
+    "prompt": 0,
+    "boundary": 17
+   },
+   "status_excluded_total": 0,
+   "k_checked": 71,
+   "k3_pass": 71,
+   "assert3_checked": 71,
+   "assert3_pass": 71,
+   "assert0_bos_checked": 71,
+   "assert0_bos_pass": 71,
+   "bos_shift_detail": {
+    "EleutherAI/pythia-1.4b": {
+     "b": 0,
+     "cells": [
+      {
+       "item_id": "L0-01",
+       "n_prompt_tokens": 49,
+       "hf_prompt_len_no_special": 49,
+       "b": 0
+      },
+      {
+       "item_id": "L0-02",
+       "n_prompt_tokens": 55,
+       "hf_prompt_len_no_special": 55,
+       "b": 0
+      },
+      {
+       "item_id": "L0-03",
+       "n_prompt_tokens": 55,
+       "hf_prompt_len_no_special": 55,
+       "b": 0
+      },
+      {
+       "item_id": "L0-04",
+       "n_prompt_tokens": 52,
+       "hf_prompt_len_no_special": 52,
+       "b": 0
+      },
+      {
+       "item_id": "L0-05",
+       "n_prompt_tokens": 51,
+       "hf_prompt_len_no_special": 51,
+       "b": 0
+      },
+      {
+       "item_id": "L0-06",
+       "n_prompt_tokens": 59,
+       "hf_prompt_len_no_special": 59,
+       "b": 0
+      },
+      {
+       "item_id": "L0-07",
+       "n_prompt_tokens": 58,
+       "hf_prompt_len_no_special": 58,
+       "b": 0
+      },
+      {
+       "item_id": "L0-08",
+       "n_prompt_tokens": 51,
+       "hf_prompt_len_no_special": 51,
+       "b": 0
+      },
+      {
+       "item_id": "L0-15",
+       "n_prompt_tokens": 54,
+       "hf_prompt_len_no_special": 54,
+       "b": 0
+      },
+      {
+       "item_id": "L0-17",
+       "n_prompt_tokens": 51,
+       "hf_prompt_len_no_special": 51,
+       "b": 0
+      },
+      {
+       "item_id": "L0-19",
+       "n_prompt_tokens": 50,
+       "hf_prompt_len_no_special": 50,
+       "b": 0
+      },
+      {
+       "item_id": "L0-20",
+       "n_prompt_tokens": 53,
+       "hf_prompt_len_no_special": 53,
+       "b": 0
+      },
+      {
+       "item_id": "L0-16",
+       "n_prompt_tokens": 52,
+       "hf_prompt_len_no_special": 52,
+       "b": 0
+      },
+      {
+       "item_id": "L0-11",
+       "n_prompt_tokens": 59,
+       "hf_prompt_len_no_special": 59,
+       "b": 0
+      }
+     ]
+    },
+    "EleutherAI/pythia-1b": {
+     "b": 0,
+     "cells": [
+      {
+       "item_id": "L0-01",
+       "n_prompt_tokens": 49,
+       "hf_prompt_len_no_special": 49,
+       "b": 0
+      },
+      {
+       "item_id": "L0-02",
+       "n_prompt_tokens": 55,
+       "hf_prompt_len_no_special": 55,
+       "b": 0
+      },
+      {
+       "item_id": "L0-03",
+       "n_prompt_tokens": 55,
+       "hf_prompt_len_no_special": 55,
+       "b": 0
+      },
+      {
+       "item_id": "L0-04",
+       "n_prompt_tokens": 52,
+       "hf_prompt_len_no_special": 52,
+       "b": 0
+      },
+      {
+       "item_id": "L0-05",
+       "n_prompt_tokens": 51,
+       "hf_prompt_len_no_special": 51,
+       "b": 0
+      },
+      {
+       "item_id": "L0-06",
+       "n_prompt_tokens": 59,
+       "hf_prompt_len_no_special": 59,
+       "b": 0
+      },
+      {
+       "item_id": "L0-07",
+       "n_prompt_tokens": 58,
+       "hf_prompt_len_no_special": 58,
+       "b": 0
+      },
+      {
+       "item_id": "L0-09",
+       "n_prompt_tokens": 54,
+       "hf_prompt_len_no_special": 54,
+       "b": 0
+      },
+      {
+       "item_id": "L0-15",
+       "n_prompt_tokens": 54,
+       "hf_prompt_len_no_special": 54,
+       "b": 0
+      },
+      {
+       "item_id": "L0-17",
+       "n_prompt_tokens": 51,
+       "hf_prompt_len_no_special": 51,
+       "b": 0
+      },
+      {
+       "item_id": "L0-19",
+       "n_prompt_tokens": 50,
+       "hf_prompt_len_no_special": 50,
+       "b": 0
+      },
+      {
+       "item_id": "L0-20",
+       "n_prompt_tokens": 53,
+       "hf_prompt_len_no_special": 53,
+       "b": 0
+      },
+      {
+       "item_id": "L0-16",
+       "n_prompt_tokens": 52,
+       "hf_prompt_len_no_special": 52,
+       "b": 0
+      },
+      {
+       "item_id": "L0-11",
+       "n_prompt_tokens": 59,
+       "hf_prompt_len_no_special": 59,
+       "b": 0
+      }
+     ]
+    },
+    "EleutherAI/pythia-2.8b": {
+     "b": 0,
+     "cells": [
+      {
+       "item_id": "L0-01",
+       "n_prompt_tokens": 49,
+       "hf_prompt_len_no_special": 49,
+       "b": 0
+      },
+      {
+       "item_id": "L0-02",
+       "n_prompt_tokens": 55,
+       "hf_prompt_len_no_special": 55,
+       "b": 0
+      },
+      {
+       "item_id": "L0-03",
+       "n_prompt_tokens": 55,
+       "hf_prompt_len_no_special": 55,
+       "b": 0
+      },
+      {
+       "item_id": "L0-04",
+       "n_prompt_tokens": 52,
+       "hf_prompt_len_no_special": 52,
+       "b": 0
+      },
+      {
+       "item_id": "L0-05",
+       "n_prompt_tokens": 51,
+       "hf_prompt_len_no_special": 51,
+       "b": 0
+      },
+      {
+       "item_id": "L0-06",
+       "n_prompt_tokens": 59,
+       "hf_prompt_len_no_special": 59,
+       "b": 0
+      },
+      {
+       "item_id": "L0-15",
+       "n_prompt_tokens": 54,
+       "hf_prompt_len_no_special": 54,
+       "b": 0
+      },
+      {
+       "item_id": "L0-16",
+       "n_prompt_tokens": 52,
+       "hf_prompt_len_no_special": 52,
+       "b": 0
+      },
+      {
+       "item_id": "L0-17",
+       "n_prompt_tokens": 51,
+       "hf_prompt_len_no_special": 51,
+       "b": 0
+      },
+      {
+       "item_id": "L0-20",
+       "n_prompt_tokens": 53,
+       "hf_prompt_len_no_special": 53,
+       "b": 0
+      },
+      {
+       "item_id": "L0-07",
+       "n_prompt_tokens": 58,
+       "hf_prompt_len_no_special": 58,
+       "b": 0
+      },
+      {
+       "item_id": "L0-11",
+       "n_prompt_tokens": 59,
+       "hf_prompt_len_no_special": 59,
+       "b": 0
+      }
+     ]
+    },
+    "EleutherAI/pythia-410m": {
+     "b": 0,
+     "cells": [
+      {
+       "item_id": "L0-01",
+       "n_prompt_tokens": 49,
+       "hf_prompt_len_no_special": 49,
+       "b": 0
+      },
+      {
+       "item_id": "L0-02",
+       "n_prompt_tokens": 55,
+       "hf_prompt_len_no_special": 55,
+       "b": 0
+      },
+      {
+       "item_id": "L0-03",
+       "n_prompt_tokens": 55,
+       "hf_prompt_len_no_special": 55,
+       "b": 0
+      },
+      {
+       "item_id": "L0-04",
+       "n_prompt_tokens": 52,
+       "hf_prompt_len_no_special": 52,
+       "b": 0
+      },
+      {
+       "item_id": "L0-05",
+       "n_prompt_tokens": 51,
+       "hf_prompt_len_no_special": 51,
+       "b": 0
+      },
+      {
+       "item_id": "L0-06",
+       "n_prompt_tokens": 59,
+       "hf_prompt_len_no_special": 59,
+       "b": 0
+      },
+      {
+       "item_id": "L0-07",
+       "n_prompt_tokens": 58,
+       "hf_prompt_len_no_special": 58,
+       "b": 0
+      },
+      {
+       "item_id": "L0-08",
+       "n_prompt_tokens": 51,
+       "hf_prompt_len_no_special": 51,
+       "b": 0
+      },
+      {
+       "item_id": "L0-09",
+       "n_prompt_tokens": 54,
+       "hf_prompt_len_no_special": 54,
+       "b": 0
+      },
+      {
+       "item_id": "L0-10",
+       "n_prompt_tokens": 61,
+       "hf_prompt_len_no_special": 61,
+       "b": 0
+      },
+      {
+       "item_id": "L0-11",
+       "n_prompt_tokens": 59,
+       "hf_prompt_len_no_special": 59,
+       "b": 0
+      },
+      {
+       "item_id": "L0-15",
+       "n_prompt_tokens": 54,
+       "hf_prompt_len_no_special": 54,
+       "b": 0
+      },
+      {
+       "item_id": "L0-16",
+       "n_prompt_tokens": 52,
+       "hf_prompt_len_no_special": 52,
+       "b": 0
+      },
+      {
+       "item_id": "L0-17",
+       "n_prompt_tokens": 51,
+       "hf_prompt_len_no_special": 51,
+       "b": 0
+      },
+      {
+       "item_id": "L0-19",
+       "n_prompt_tokens": 50,
+       "hf_prompt_len_no_special": 50,
+       "b": 0
+      },
+      {
+       "item_id": "L0-20",
+       "n_prompt_tokens": 53,
+       "hf_prompt_len_no_special": 53,
+       "b": 0
+      }
+     ]
+    },
+    "allenai/OLMo-2-0425-1B": {
+     "b": 1,
+     "cells": [
+      {
+       "item_id": "L0-01",
+       "n_prompt_tokens": 50,
+       "hf_prompt_len_no_special": 49,
+       "b": 1
+      },
+      {
+       "item_id": "L0-02",
+       "n_prompt_tokens": 56,
+       "hf_prompt_len_no_special": 55,
+       "b": 1
+      },
+      {
+       "item_id": "L0-03",
+       "n_prompt_tokens": 56,
+       "hf_prompt_len_no_special": 55,
+       "b": 1
+      },
+      {
+       "item_id": "L0-04",
+       "n_prompt_tokens": 52,
+       "hf_prompt_len_no_special": 51,
+       "b": 1
+      },
+      {
+       "item_id": "L0-05",
+       "n_prompt_tokens": 52,
+       "hf_prompt_len_no_special": 51,
+       "b": 1
+      },
+      {
+       "item_id": "L0-06",
+       "n_prompt_tokens": 59,
+       "hf_prompt_len_no_special": 58,
+       "b": 1
+      },
+      {
+       "item_id": "L0-07",
+       "n_prompt_tokens": 57,
+       "hf_prompt_len_no_special": 56,
+       "b": 1
+      },
+      {
+       "item_id": "L0-15",
+       "n_prompt_tokens": 54,
+       "hf_prompt_len_no_special": 53,
+       "b": 1
+      },
+      {
+       "item_id": "L0-16",
+       "n_prompt_tokens": 54,
+       "hf_prompt_len_no_special": 53,
+       "b": 1
+      },
+      {
+       "item_id": "L0-17",
+       "n_prompt_tokens": 50,
+       "hf_prompt_len_no_special": 49,
+       "b": 1
+      },
+      {
+       "item_id": "L0-18",
+       "n_prompt_tokens": 56,
+       "hf_prompt_len_no_special": 55,
+       "b": 1
+      },
+      {
+       "item_id": "L0-19",
+       "n_prompt_tokens": 51,
+       "hf_prompt_len_no_special": 50,
+       "b": 1
+      },
+      {
+       "item_id": "L0-08",
+       "n_prompt_tokens": 52,
+       "hf_prompt_len_no_special": 51,
+       "b": 1
+      },
+      {
+       "item_id": "L0-20",
+       "n_prompt_tokens": 54,
+       "hf_prompt_len_no_special": 53,
+       "b": 1
+      },
+      {
+       "item_id": "L0-11",
+       "n_prompt_tokens": 57,
+       "hf_prompt_len_no_special": 56,
+       "b": 1
+      }
+     ]
+    }
+   },
+   "assert1_checked": 71,
+   "assert1_pass": 71,
+   "assert2_checked": 71,
+   "assert2_pass": 71,
+   "assert2_space_excluded_models": [
+    "EleutherAI/pythia-1.4b",
+    "EleutherAI/pythia-1b",
+    "EleutherAI/pythia-2.8b",
+    "EleutherAI/pythia-410m"
+   ],
+   "assert2b_checked": 71,
+   "assert2b_pass": 71
+  },
+  "main_test": {
+   "status": "OK",
+   "T_obs": 1.4458426857097244,
+   "T_per_run_obs": [
+    1.3031360395348313,
+    -0.21586073749518514,
+    1.0615846359630647,
+    3.6345108048361863
+   ],
+   "n_per_run": [
+    14.0,
+    14.0,
+    16.0,
+    15.0
+   ],
+   "union_size": 17,
+   "p_two_sided": 0.10614469276536173,
+   "permutation_floor_p": 4.999750012499375e-05,
+   "B": 20000,
+   "mean_diff_nats_per_run": [
+    0.08721359296880038,
+    -0.020868312536096795,
+    0.14454873314353434,
+    0.3979991937952569
+   ],
+   "sign_per_run": [
+    true,
+    false,
+    true,
+    true
+   ],
+   "n_runs_positive": 3,
+   "n_runs_total": 4
+  },
+  "r2_gate_test": {
+   "status": "OK",
+   "T_obs": 0.9359233851672601,
+   "T_per_run_obs": [
+    0.5075946425067915,
+    -0.5126892240670144,
+    0.8455737473244179,
+    2.9032143749048456
+   ],
+   "n_per_run": [
+    14.0,
+    14.0,
+    16.0,
+    15.0
+   ],
+   "union_size": 17,
+   "p_two_sided": 0.29868506574671266,
+   "permutation_floor_p": 4.999750012499375e-05,
+   "B": 20000,
+   "mean_diff_nats_per_run": [
+    0.04976450861074533,
+    -0.0652745678535063,
+    0.12577356547245713,
+    0.3104108477905831
+   ],
+   "sign_per_run": [
+    true,
+    false,
+    true,
+    true
+   ],
+   "n_runs_positive": 3,
+   "n_runs_total": 4
+  },
+  "equivalence_bootstrap": {
+   "status": "OK",
+   "pooled_mean_nats": 0.15612884005564837,
+   "pooled_sd_nats": 0.43288974610316433,
+   "n_cells_pooled": 59,
+   "n_items": 17,
+   "cluster_sizes": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    3,
+    2,
+    1,
+    4,
+    4,
+    4,
+    4,
+    1,
+    4,
+    4
+   ],
+   "sd_item_nats": 0.3863542655183271,
+   "n_items_for_sd": 17,
+   "ci_90": [
+    0.0453735501408336,
+    0.2690336080196711
+   ],
+   "B": 20000,
+   "conf": 0.9,
+   "endpoints_within_pm0.2_nats_raw_fact": false
+  },
+  "descriptive_other_models": {
+   "EleutherAI/pythia-2.8b": {
+    "status": "descriptive_only",
+    "n_items": 12,
+    "items": [
+     "L0-01",
+     "L0-02",
+     "L0-03",
+     "L0-04",
+     "L0-05",
+     "L0-06",
+     "L0-07",
+     "L0-11",
+     "L0-15",
+     "L0-16",
+     "L0-17",
+     "L0-20"
+    ],
+    "mean_nats": 0.12267663099354854,
+    "sd_nats": 0.21113627148346353
+   }
+  },
+  "sign_flip_crosscheck_disclosure_only": {
+   "models": [
+    "EleutherAI/pythia-1.4b",
+    "EleutherAI/pythia-1b",
+    "EleutherAI/pythia-410m",
+    "allenai/OLMo-2-0425-1B"
+   ],
+   "union_size": 17,
+   "per_run_n": [
+    14,
+    14,
+    16,
+    15
+   ],
+   "permutation_floor_p": 1.52587890625e-05,
+   "p_two_sided": 0.05209739513024349,
+   "T_studentized_mean": 1.4458425045013428,
+   "mean_diff_nats": 0.15612884005564837,
+   "sd_diff_nats": 0.43288974610316433,
+   "n_pairs_pooled": 59
+  },
+  "spec_feasibility_bounds": {
+   "sd_threshold_n17_nats": 0.501,
+   "sd_threshold_n12_nats": 0.421,
+   "note": "§0-2/§7 預先登記界線，供 SD 對照，非本檔判定"
+  }
+ },
+ "sensitivity": {
+  "q0.6": {
+   "run_id": "main_winB1",
+   "quantile": 0.6,
+   "light_mode": true,
+   "union_n": 17,
+   "per_model_n": {
+    "EleutherAI/pythia-1.4b": 14,
+    "EleutherAI/pythia-1b": 14,
+    "EleutherAI/pythia-2.8b": 12,
+    "EleutherAI/pythia-410m": 16,
+    "allenai/OLMo-2-0425-1B": 15
+   },
+   "pooled_mean_nats": 0.10991369434515944,
+   "n_cells_pooled": 59,
+   "assertion_stats": {
+    "probe_locate_checked": 187,
+    "probe_locate_unique_pass": 187,
+    "boundary_audit": {
+     "gold": 170,
+     "prompt": 0,
+     "boundary": 17
+    },
+    "status_excluded_total": 0,
+    "k_checked": 71,
+    "assert3_checked": 71,
+    "assert3_pass": 71,
+    "assert0_bos_checked": 71,
+    "assert0_bos_pass": 71,
+    "bos_shift_detail": {
+     "EleutherAI/pythia-1.4b": {
+      "b": 0,
+      "cells": [
+       {
+        "item_id": "L0-01",
+        "n_prompt_tokens": 49,
+        "hf_prompt_len_no_special": 49,
+        "b": 0
+       },
+       {
+        "item_id": "L0-02",
+        "n_prompt_tokens": 55,
+        "hf_prompt_len_no_special": 55,
+        "b": 0
+       },
+       {
+        "item_id": "L0-03",
+        "n_prompt_tokens": 55,
+        "hf_prompt_len_no_special": 55,
+        "b": 0
+       },
+       {
+        "item_id": "L0-04",
+        "n_prompt_tokens": 52,
+        "hf_prompt_len_no_special": 52,
+        "b": 0
+       },
+       {
+        "item_id": "L0-05",
+        "n_prompt_tokens": 51,
+        "hf_prompt_len_no_special": 51,
+        "b": 0
+       },
+       {
+        "item_id": "L0-06",
+        "n_prompt_tokens": 59,
+        "hf_prompt_len_no_special": 59,
+        "b": 0
+       },
+       {
+        "item_id": "L0-07",
+        "n_prompt_tokens": 58,
+        "hf_prompt_len_no_special": 58,
+        "b": 0
+       },
+       {
+        "item_id": "L0-08",
+        "n_prompt_tokens": 51,
+        "hf_prompt_len_no_special": 51,
+        "b": 0
+       },
+       {
+        "item_id": "L0-15",
+        "n_prompt_tokens": 54,
+        "hf_prompt_len_no_special": 54,
+        "b": 0
+       },
+       {
+        "item_id": "L0-17",
+        "n_prompt_tokens": 51,
+        "hf_prompt_len_no_special": 51,
+        "b": 0
+       },
+       {
+        "item_id": "L0-19",
+        "n_prompt_tokens": 50,
+        "hf_prompt_len_no_special": 50,
+        "b": 0
+       },
+       {
+        "item_id": "L0-20",
+        "n_prompt_tokens": 53,
+        "hf_prompt_len_no_special": 53,
+        "b": 0
+       },
+       {
+        "item_id": "L0-16",
+        "n_prompt_tokens": 52,
+        "hf_prompt_len_no_special": 52,
+        "b": 0
+       },
+       {
+        "item_id": "L0-11",
+        "n_prompt_tokens": 59,
+        "hf_prompt_len_no_special": 59,
+        "b": 0
+       }
+      ]
+     },
+     "EleutherAI/pythia-1b": {
+      "b": 0,
+      "cells": [
+       {
+        "item_id": "L0-01",
+        "n_prompt_tokens": 49,
+        "hf_prompt_len_no_special": 49,
+        "b": 0
+       },
+       {
+        "item_id": "L0-02",
+        "n_prompt_tokens": 55,
+        "hf_prompt_len_no_special": 55,
+        "b": 0
+       },
+       {
+        "item_id": "L0-03",
+        "n_prompt_tokens": 55,
+        "hf_prompt_len_no_special": 55,
+        "b": 0
+       },
+       {
+        "item_id": "L0-04",
+        "n_prompt_tokens": 52,
+        "hf_prompt_len_no_special": 52,
+        "b": 0
+       },
+       {
+        "item_id": "L0-05",
+        "n_prompt_tokens": 51,
+        "hf_prompt_len_no_special": 51,
+        "b": 0
+       },
+       {
+        "item_id": "L0-06",
+        "n_prompt_tokens": 59,
+        "hf_prompt_len_no_special": 59,
+        "b": 0
+       },
+       {
+        "item_id": "L0-07",
+        "n_prompt_tokens": 58,
+        "hf_prompt_len_no_special": 58,
+        "b": 0
+       },
+       {
+        "item_id": "L0-09",
+        "n_prompt_tokens": 54,
+        "hf_prompt_len_no_special": 54,
+        "b": 0
+       },
+       {
+        "item_id": "L0-15",
+        "n_prompt_tokens": 54,
+        "hf_prompt_len_no_special": 54,
+        "b": 0
+       },
+       {
+        "item_id": "L0-17",
+        "n_prompt_tokens": 51,
+        "hf_prompt_len_no_special": 51,
+        "b": 0
+       },
+       {
+        "item_id": "L0-19",
+        "n_prompt_tokens": 50,
+        "hf_prompt_len_no_special": 50,
+        "b": 0
+       },
+       {
+        "item_id": "L0-20",
+        "n_prompt_tokens": 53,
+        "hf_prompt_len_no_special": 53,
+        "b": 0
+       },
+       {
+        "item_id": "L0-16",
+        "n_prompt_tokens": 52,
+        "hf_prompt_len_no_special": 52,
+        "b": 0
+       },
+       {
+        "item_id": "L0-11",
+        "n_prompt_tokens": 59,
+        "hf_prompt_len_no_special": 59,
+        "b": 0
+       }
+      ]
+     },
+     "EleutherAI/pythia-2.8b": {
+      "b": 0,
+      "cells": [
+       {
+        "item_id": "L0-01",
+        "n_prompt_tokens": 49,
+        "hf_prompt_len_no_special": 49,
+        "b": 0
+       },
+       {
+        "item_id": "L0-02",
+        "n_prompt_tokens": 55,
+        "hf_prompt_len_no_special": 55,
+        "b": 0
+       },
+       {
+        "item_id": "L0-03",
+        "n_prompt_tokens": 55,
+        "hf_prompt_len_no_special": 55,
+        "b": 0
+       },
+       {
+        "item_id": "L0-04",
+        "n_prompt_tokens": 52,
+        "hf_prompt_len_no_special": 52,
+        "b": 0
+       },
+       {
+        "item_id": "L0-05",
+        "n_prompt_tokens": 51,
+        "hf_prompt_len_no_special": 51,
+        "b": 0
+       },
+       {
+        "item_id": "L0-06",
+        "n_prompt_tokens": 59,
+        "hf_prompt_len_no_special": 59,
+        "b": 0
+       },
+       {
+        "item_id": "L0-15",
+        "n_prompt_tokens": 54,
+        "hf_prompt_len_no_special": 54,
+        "b": 0
+       },
+       {
+        "item_id": "L0-16",
+        "n_prompt_tokens": 52,
+        "hf_prompt_len_no_special": 52,
+        "b": 0
+       },
+       {
+        "item_id": "L0-17",
+        "n_prompt_tokens": 51,
+        "hf_prompt_len_no_special": 51,
+        "b": 0
+       },
+       {
+        "item_id": "L0-20",
+        "n_prompt_tokens": 53,
+        "hf_prompt_len_no_special": 53,
+        "b": 0
+       },
+       {
+        "item_id": "L0-07",
+        "n_prompt_tokens": 58,
+        "hf_prompt_len_no_special": 58,
+        "b": 0
+       },
+       {
+        "item_id": "L0-11",
+        "n_prompt_tokens": 59,
+        "hf_prompt_len_no_special": 59,
+        "b": 0
+       }
+      ]
+     },
+     "EleutherAI/pythia-410m": {
+      "b": 0,
+      "cells": [
+       {
+        "item_id": "L0-01",
+        "n_prompt_tokens": 49,
+        "hf_prompt_len_no_special": 49,
+        "b": 0
+       },
+       {
+        "item_id": "L0-02",
+        "n_prompt_tokens": 55,
+        "hf_prompt_len_no_special": 55,
+        "b": 0
+       },
+       {
+        "item_id": "L0-03",
+        "n_prompt_tokens": 55,
+        "hf_prompt_len_no_special": 55,
+        "b": 0
+       },
+       {
+        "item_id": "L0-04",
+        "n_prompt_tokens": 52,
+        "hf_prompt_len_no_special": 52,
+        "b": 0
+       },
+       {
+        "item_id": "L0-05",
+        "n_prompt_tokens": 51,
+        "hf_prompt_len_no_special": 51,
+        "b": 0
+       },
+       {
+        "item_id": "L0-06",
+        "n_prompt_tokens": 59,
+        "hf_prompt_len_no_special": 59,
+        "b": 0
+       },
+       {
+        "item_id": "L0-07",
+        "n_prompt_tokens": 58,
+        "hf_prompt_len_no_special": 58,
+        "b": 0
+       },
+       {
+        "item_id": "L0-08",
+        "n_prompt_tokens": 51,
+        "hf_prompt_len_no_special": 51,
+        "b": 0
+       },
+       {
+        "item_id": "L0-09",
+        "n_prompt_tokens": 54,
+        "hf_prompt_len_no_special": 54,
+        "b": 0
+       },
+       {
+        "item_id": "L0-10",
+        "n_prompt_tokens": 61,
+        "hf_prompt_len_no_special": 61,
+        "b": 0
+       },
+       {
+        "item_id": "L0-11",
+        "n_prompt_tokens": 59,
+        "hf_prompt_len_no_special": 59,
+        "b": 0
+       },
+       {
+        "item_id": "L0-15",
+        "n_prompt_tokens": 54,
+        "hf_prompt_len_no_special": 54,
+        "b": 0
+       },
+       {
+        "item_id": "L0-16",
+        "n_prompt_tokens": 52,
+        "hf_prompt_len_no_special": 52,
+        "b": 0
+       },
+       {
+        "item_id": "L0-17",
+        "n_prompt_tokens": 51,
+        "hf_prompt_len_no_special": 51,
+        "b": 0
+       },
+       {
+        "item_id": "L0-19",
+        "n_prompt_tokens": 50,
+        "hf_prompt_len_no_special": 50,
+        "b": 0
+       },
+       {
+        "item_id": "L0-20",
+        "n_prompt_tokens": 53,
+        "hf_prompt_len_no_special": 53,
+        "b": 0
+       }
+      ]
+     },
+     "allenai/OLMo-2-0425-1B": {
+      "b": 1,
+      "cells": [
+       {
+        "item_id": "L0-01",
+        "n_prompt_tokens": 50,
+        "hf_prompt_len_no_special": 49,
+        "b": 1
+       },
+       {
+        "item_id": "L0-02",
+        "n_prompt_tokens": 56,
+        "hf_prompt_len_no_special": 55,
+        "b": 1
+       },
+       {
+        "item_id": "L0-03",
+        "n_prompt_tokens": 56,
+        "hf_prompt_len_no_special": 55,
+        "b": 1
+       },
+       {
+        "item_id": "L0-04",
+        "n_prompt_tokens": 52,
+        "hf_prompt_len_no_special": 51,
+        "b": 1
+       },
+       {
+        "item_id": "L0-05",
+        "n_prompt_tokens": 52,
+        "hf_prompt_len_no_special": 51,
+        "b": 1
+       },
+       {
+        "item_id": "L0-06",
+        "n_prompt_tokens": 59,
+        "hf_prompt_len_no_special": 58,
+        "b": 1
+       },
+       {
+        "item_id": "L0-07",
+        "n_prompt_tokens": 57,
+        "hf_prompt_len_no_special": 56,
+        "b": 1
+       },
+       {
+        "item_id": "L0-15",
+        "n_prompt_tokens": 54,
+        "hf_prompt_len_no_special": 53,
+        "b": 1
+       },
+       {
+        "item_id": "L0-16",
+        "n_prompt_tokens": 54,
+        "hf_prompt_len_no_special": 53,
+        "b": 1
+       },
+       {
+        "item_id": "L0-17",
+        "n_prompt_tokens": 50,
+        "hf_prompt_len_no_special": 49,
+        "b": 1
+       },
+       {
+        "item_id": "L0-18",
+        "n_prompt_tokens": 56,
+        "hf_prompt_len_no_special": 55,
+        "b": 1
+       },
+       {
+        "item_id": "L0-19",
+        "n_prompt_tokens": 51,
+        "hf_prompt_len_no_special": 50,
+        "b": 1
+       },
+       {
+        "item_id": "L0-08",
+        "n_prompt_tokens": 52,
+        "hf_prompt_len_no_special": 51,
+        "b": 1
+       },
+       {
+        "item_id": "L0-20",
+        "n_prompt_tokens": 54,
+        "hf_prompt_len_no_special": 53,
+        "b": 1
+       },
+       {
+        "item_id": "L0-11",
+        "n_prompt_tokens": 57,
+        "hf_prompt_len_no_special": 56,
+        "b": 1
+       }
+      ]
+     }
+    },
+    "assert1_checked": 71,
+    "assert1_pass": 71,
+    "assert2_checked": 71,
+    "assert2_pass": 71,
+    "assert2_space_excluded_models": [
+     "EleutherAI/pythia-1.4b",
+     "EleutherAI/pythia-1b",
+     "EleutherAI/pythia-2.8b",
+     "EleutherAI/pythia-410m"
+    ],
+    "assert2b_checked": 71,
+    "assert2b_pass": 71
+   }
+  },
+  "q0.9": {
+   "run_id": "main_winB1",
+   "quantile": 0.9,
+   "light_mode": true,
+   "union_n": 17,
+   "per_model_n": {
+    "EleutherAI/pythia-1.4b": 14,
+    "EleutherAI/pythia-1b": 14,
+    "EleutherAI/pythia-2.8b": 12,
+    "EleutherAI/pythia-410m": 16,
+    "allenai/OLMo-2-0425-1B": 15
+   },
+   "pooled_mean_nats": 0.19678217797201586,
+   "n_cells_pooled": 59,
+   "assertion_stats": {
+    "probe_locate_checked": 187,
+    "probe_locate_unique_pass": 187,
+    "boundary_audit": {
+     "gold": 170,
+     "prompt": 0,
+     "boundary": 17
+    },
+    "status_excluded_total": 0,
+    "k_checked": 71,
+    "assert3_checked": 71,
+    "assert3_pass": 71,
+    "assert0_bos_checked": 71,
+    "assert0_bos_pass": 71,
+    "bos_shift_detail": {
+     "EleutherAI/pythia-1.4b": {
+      "b": 0,
+      "cells": [
+       {
+        "item_id": "L0-01",
+        "n_prompt_tokens": 49,
+        "hf_prompt_len_no_special": 49,
+        "b": 0
+       },
+       {
+        "item_id": "L0-02",
+        "n_prompt_tokens": 55,
+        "hf_prompt_len_no_special": 55,
+        "b": 0
+       },
+       {
+        "item_id": "L0-03",
+        "n_prompt_tokens": 55,
+        "hf_prompt_len_no_special": 55,
+        "b": 0
+       },
+       {
+        "item_id": "L0-04",
+        "n_prompt_tokens": 52,
+        "hf_prompt_len_no_special": 52,
+        "b": 0
+       },
+       {
+        "item_id": "L0-05",
+        "n_prompt_tokens": 51,
+        "hf_prompt_len_no_special": 51,
+        "b": 0
+       },
+       {
+        "item_id": "L0-06",
+        "n_prompt_tokens": 59,
+        "hf_prompt_len_no_special": 59,
+        "b": 0
+       },
+       {
+        "item_id": "L0-07",
+        "n_prompt_tokens": 58,
+        "hf_prompt_len_no_special": 58,
+        "b": 0
+       },
+       {
+        "item_id": "L0-08",
+        "n_prompt_tokens": 51,
+        "hf_prompt_len_no_special": 51,
+        "b": 0
+       },
+       {
+        "item_id": "L0-15",
+        "n_prompt_tokens": 54,
+        "hf_prompt_len_no_special": 54,
+        "b": 0
+       },
+       {
+        "item_id": "L0-17",
+        "n_prompt_tokens": 51,
+        "hf_prompt_len_no_special": 51,
+        "b": 0
+       },
+       {
+        "item_id": "L0-19",
+        "n_prompt_tokens": 50,
+        "hf_prompt_len_no_special": 50,
+        "b": 0
+       },
+       {
+        "item_id": "L0-20",
+        "n_prompt_tokens": 53,
+        "hf_prompt_len_no_special": 53,
+        "b": 0
+       },
+       {
+        "item_id": "L0-16",
+        "n_prompt_tokens": 52,
+        "hf_prompt_len_no_special": 52,
+        "b": 0
+       },
+       {
+        "item_id": "L0-11",
+        "n_prompt_tokens": 59,
+        "hf_prompt_len_no_special": 59,
+        "b": 0
+       }
+      ]
+     },
+     "EleutherAI/pythia-1b": {
+      "b": 0,
+      "cells": [
+       {
+        "item_id": "L0-01",
+        "n_prompt_tokens": 49,
+        "hf_prompt_len_no_special": 49,
+        "b": 0
+       },
+       {
+        "item_id": "L0-02",
+        "n_prompt_tokens": 55,
+        "hf_prompt_len_no_special": 55,
+        "b": 0
+       },
+       {
+        "item_id": "L0-03",
+        "n_prompt_tokens": 55,
+        "hf_prompt_len_no_special": 55,
+        "b": 0
+       },
+       {
+        "item_id": "L0-04",
+        "n_prompt_tokens": 52,
+        "hf_prompt_len_no_special": 52,
+        "b": 0
+       },
+       {
+        "item_id": "L0-05",
+        "n_prompt_tokens": 51,
+        "hf_prompt_len_no_special": 51,
+        "b": 0
+       },
+       {
+        "item_id": "L0-06",
+        "n_prompt_tokens": 59,
+        "hf_prompt_len_no_special": 59,
+        "b": 0
+       },
+       {
+        "item_id": "L0-07",
+        "n_prompt_tokens": 58,
+        "hf_prompt_len_no_special": 58,
+        "b": 0
+       },
+       {
+        "item_id": "L0-09",
+        "n_prompt_tokens": 54,
+        "hf_prompt_len_no_special": 54,
+        "b": 0
+       },
+       {
+        "item_id": "L0-15",
+        "n_prompt_tokens": 54,
+        "hf_prompt_len_no_special": 54,
+        "b": 0
+       },
+       {
+        "item_id": "L0-17",
+        "n_prompt_tokens": 51,
+        "hf_prompt_len_no_special": 51,
+        "b": 0
+       },
+       {
+        "item_id": "L0-19",
+        "n_prompt_tokens": 50,
+        "hf_prompt_len_no_special": 50,
+        "b": 0
+       },
+       {
+        "item_id": "L0-20",
+        "n_prompt_tokens": 53,
+        "hf_prompt_len_no_special": 53,
+        "b": 0
+       },
+       {
+        "item_id": "L0-16",
+        "n_prompt_tokens": 52,
+        "hf_prompt_len_no_special": 52,
+        "b": 0
+       },
+       {
+        "item_id": "L0-11",
+        "n_prompt_tokens": 59,
+        "hf_prompt_len_no_special": 59,
+        "b": 0
+       }
+      ]
+     },
+     "EleutherAI/pythia-2.8b": {
+      "b": 0,
+      "cells": [
+       {
+        "item_id": "L0-01",
+        "n_prompt_tokens": 49,
+        "hf_prompt_len_no_special": 49,
+        "b": 0
+       },
+       {
+        "item_id": "L0-02",
+        "n_prompt_tokens": 55,
+        "hf_prompt_len_no_special": 55,
+        "b": 0
+       },
+       {
+        "item_id": "L0-03",
+        "n_prompt_tokens": 55,
+        "hf_prompt_len_no_special": 55,
+        "b": 0
+       },
+       {
+        "item_id": "L0-04",
+        "n_prompt_tokens": 52,
+        "hf_prompt_len_no_special": 52,
+        "b": 0
+       },
+       {
+        "item_id": "L0-05",
+        "n_prompt_tokens": 51,
+        "hf_prompt_len_no_special": 51,
+        "b": 0
+       },
+       {
+        "item_id": "L0-06",
+        "n_prompt_tokens": 59,
+        "hf_prompt_len_no_special": 59,
+        "b": 0
+       },
+       {
+        "item_id": "L0-15",
+        "n_prompt_tokens": 54,
+        "hf_prompt_len_no_special": 54,
+        "b": 0
+       },
+       {
+        "item_id": "L0-16",
+        "n_prompt_tokens": 52,
+        "hf_prompt_len_no_special": 52,
+        "b": 0
+       },
+       {
+        "item_id": "L0-17",
+        "n_prompt_tokens": 51,
+        "hf_prompt_len_no_special": 51,
+        "b": 0
+       },
+       {
+        "item_id": "L0-20",
+        "n_prompt_tokens": 53,
+        "hf_prompt_len_no_special": 53,
+        "b": 0
+       },
+       {
+        "item_id": "L0-07",
+        "n_prompt_tokens": 58,
+        "hf_prompt_len_no_special": 58,
+        "b": 0
+       },
+       {
+        "item_id": "L0-11",
+        "n_prompt_tokens": 59,
+        "hf_prompt_len_no_special": 59,
+        "b": 0
+       }
+      ]
+     },
+     "EleutherAI/pythia-410m": {
+      "b": 0,
+      "cells": [
+       {
+        "item_id": "L0-01",
+        "n_prompt_tokens": 49,
+        "hf_prompt_len_no_special": 49,
+        "b": 0
+       },
+       {
+        "item_id": "L0-02",
+        "n_prompt_tokens": 55,
+        "hf_prompt_len_no_special": 55,
+        "b": 0
+       },
+       {
+        "item_id": "L0-03",
+        "n_prompt_tokens": 55,
+        "hf_prompt_len_no_special": 55,
+        "b": 0
+       },
+       {
+        "item_id": "L0-04",
+        "n_prompt_tokens": 52,
+        "hf_prompt_len_no_special": 52,
+        "b": 0
+       },
+       {
+        "item_id": "L0-05",
+        "n_prompt_tokens": 51,
+        "hf_prompt_len_no_special": 51,
+        "b": 0
+       },
+       {
+        "item_id": "L0-06",
+        "n_prompt_tokens": 59,
+        "hf_prompt_len_no_special": 59,
+        "b": 0
+       },
+       {
+        "item_id": "L0-07",
+        "n_prompt_tokens": 58,
+        "hf_prompt_len_no_special": 58,
+        "b": 0
+       },
+       {
+        "item_id": "L0-08",
+        "n_prompt_tokens": 51,
+        "hf_prompt_len_no_special": 51,
+        "b": 0
+       },
+       {
+        "item_id": "L0-09",
+        "n_prompt_tokens": 54,
+        "hf_prompt_len_no_special": 54,
+        "b": 0
+       },
+       {
+        "item_id": "L0-10",
+        "n_prompt_tokens": 61,
+        "hf_prompt_len_no_special": 61,
+        "b": 0
+       },
+       {
+        "item_id": "L0-11",
+        "n_prompt_tokens": 59,
+        "hf_prompt_len_no_special": 59,
+        "b": 0
+       },
+       {
+        "item_id": "L0-15",
+        "n_prompt_tokens": 54,
+        "hf_prompt_len_no_special": 54,
+        "b": 0
+       },
+       {
+        "item_id": "L0-16",
+        "n_prompt_tokens": 52,
+        "hf_prompt_len_no_special": 52,
+        "b": 0
+       },
+       {
+        "item_id": "L0-17",
+        "n_prompt_tokens": 51,
+        "hf_prompt_len_no_special": 51,
+        "b": 0
+       },
+       {
+        "item_id": "L0-19",
+        "n_prompt_tokens": 50,
+        "hf_prompt_len_no_special": 50,
+        "b": 0
+       },
+       {
+        "item_id": "L0-20",
+        "n_prompt_tokens": 53,
+        "hf_prompt_len_no_special": 53,
+        "b": 0
+       }
+      ]
+     },
+     "allenai/OLMo-2-0425-1B": {
+      "b": 1,
+      "cells": [
+       {
+        "item_id": "L0-01",
+        "n_prompt_tokens": 50,
+        "hf_prompt_len_no_special": 49,
+        "b": 1
+       },
+       {
+        "item_id": "L0-02",
+        "n_prompt_tokens": 56,
+        "hf_prompt_len_no_special": 55,
+        "b": 1
+       },
+       {
+        "item_id": "L0-03",
+        "n_prompt_tokens": 56,
+        "hf_prompt_len_no_special": 55,
+        "b": 1
+       },
+       {
+        "item_id": "L0-04",
+        "n_prompt_tokens": 52,
+        "hf_prompt_len_no_special": 51,
+        "b": 1
+       },
+       {
+        "item_id": "L0-05",
+        "n_prompt_tokens": 52,
+        "hf_prompt_len_no_special": 51,
+        "b": 1
+       },
+       {
+        "item_id": "L0-06",
+        "n_prompt_tokens": 59,
+        "hf_prompt_len_no_special": 58,
+        "b": 1
+       },
+       {
+        "item_id": "L0-07",
+        "n_prompt_tokens": 57,
+        "hf_prompt_len_no_special": 56,
+        "b": 1
+       },
+       {
+        "item_id": "L0-15",
+        "n_prompt_tokens": 54,
+        "hf_prompt_len_no_special": 53,
+        "b": 1
+       },
+       {
+        "item_id": "L0-16",
+        "n_prompt_tokens": 54,
+        "hf_prompt_len_no_special": 53,
+        "b": 1
+       },
+       {
+        "item_id": "L0-17",
+        "n_prompt_tokens": 50,
+        "hf_prompt_len_no_special": 49,
+        "b": 1
+       },
+       {
+        "item_id": "L0-18",
+        "n_prompt_tokens": 56,
+        "hf_prompt_len_no_special": 55,
+        "b": 1
+       },
+       {
+        "item_id": "L0-19",
+        "n_prompt_tokens": 51,
+        "hf_prompt_len_no_special": 50,
+        "b": 1
+       },
+       {
+        "item_id": "L0-08",
+        "n_prompt_tokens": 52,
+        "hf_prompt_len_no_special": 51,
+        "b": 1
+       },
+       {
+        "item_id": "L0-20",
+        "n_prompt_tokens": 54,
+        "hf_prompt_len_no_special": 53,
+        "b": 1
+       },
+       {
+        "item_id": "L0-11",
+        "n_prompt_tokens": 57,
+        "hf_prompt_len_no_special": 56,
+        "b": 1
+       }
+      ]
+     }
+    },
+    "assert1_checked": 71,
+    "assert1_pass": 71,
+    "assert2_checked": 71,
+    "assert2_pass": 71,
+    "assert2_space_excluded_models": [
+     "EleutherAI/pythia-1.4b",
+     "EleutherAI/pythia-1b",
+     "EleutherAI/pythia-2.8b",
+     "EleutherAI/pythia-410m"
+    ],
+    "assert2b_checked": 71,
+    "assert2b_pass": 71
+   }
+  }
+ }
+}

@@ -1,0 +1,2039 @@
+{
+ "run_id": "main_winB1",
+ "spec": {
+  "B": 20000,
+  "seed": 20260822,
+  "alpha": 0.05,
+  "sigma_did": 0.343,
+  "mde_nats": 0.302,
+  "endpoint_gold": "launch-window ΔY (nats); R descriptive only",
+  "endpoint_provenance": "frac_present patched-minus-corrupted (numerator; v2.13 F)",
+  "machinery_source": "planning\\office_reports\\theory_v3_sim.py",
+  "primary_arm": "L0M（M3 凍結原文：配平對內比較 L0 vs L0M 為主）",
+  "primary_arm_opchar": "planning/office_reports/theory_v3_l0m_opchar.json",
+  "secondary_arms": [
+   "A_gold30 (L0P, Regime A)",
+   "B_dual (L0P, Regime B)"
+  ],
+  "descriptive_models": [
+   "EleutherAI/pythia-2.8b"
+  ],
+  "foreseen_flags": [
+   "EleutherAI/pythia-410m|L0-01",
+   "EleutherAI/pythia-410m|L0P-09"
+  ]
+ },
+ "models_loaded": {
+  "allenai/OLMo-2-0425-1B": "fp32",
+  "EleutherAI/pythia-1.4b": "fp32",
+  "EleutherAI/pythia-1b": "fp32",
+  "EleutherAI/pythia-2.8b": "fp32",
+  "EleutherAI/pythia-410m": "fp32"
+ },
+ "smoke_quoted": {
+  "quoted_from": "smoke_eval_winA2-20260822.json",
+  "g1_verdict": "proceed：存在 Δs 以外結構（或混合型態，逐格見 cells）",
+  "g1_median_pooled_ratio": 528.7536023107803,
+  "branch_triggered": false,
+  "branch_per_model_flagged": [],
+  "redundancy_glink": {
+   "status": "MISSING"
+  },
+  "positive_control": {
+   "delta_y_pc": 1.240868091583252,
+   "delta_s_pc": 1.6651450768113136,
+   "threshold": 0.8325725384056568,
+   "pass": true,
+   "rule": "ΔY_pc ≥ max(10×底線, 0.5×Δs_pc)（PF-5；0.5 慣例）"
+  },
+  "positive_control_pass": true,
+  "k_rule": {
+   "var_ratio_dy_median": 0.010770318458215243,
+   "per_model": {
+    "EleutherAI/pythia-1.4b": {
+     "median_var_ratio": 0.010770318458215243,
+     "n_bands": 3
+    }
+   },
+   "k": 1,
+   "aggregation": "逐模型報＋全體中位數當 k 決策輸入（複核②建議）",
+   "rule": "r<0.5→1；0.5≤r<2→2；r≥2→3（PF-4，慣例；ΔY 尺度，v2.13F）"
+  },
+  "noise_floor": {
+   "floor_nats": 0.00014340877532958984,
+   "source": "cli"
+  },
+  "rho_gate_rule": "ρ̂ > tanh(1.645/√(n−3)) 且 90% CI 下界 > 0（v2.3）",
+  "l0m_pass_rule": {
+   "median_abs_dgold_whole": 0.01708507537841797,
+   "median_abs_dgold_onset": 0.05584454536437988,
+   "pass": true,
+   "rule": "中位|Δgold(整段)|≤0.5 且起手窗≤1.0（M2）"
+  },
+  "r_measurement_dof": {
+   "per_model": {
+    "EleutherAI/pythia-1.4b": {
+     "realized_dof": 7,
+     "n_bands_seen": 3,
+     "met": false
+    }
+   },
+   "target": 8,
+   "all_met": false,
+   "if_not_met": "對未達標之模型補題到達標，記錄補幾題，不得改門檻（附錄 C③；逐模型判＝v2.13 G 案）"
+  },
+  "note": "引用，未重算（v2.13）"
+ },
+ "bands": {
+  "early": {
+   "L0M_primary": {
+    "label": "gold|L0M(REGISTERED PRIMARY, M3)",
+    "regime": "L0M",
+    "band": "early",
+    "descriptive_models_excluded": [
+     "EleutherAI/pythia-2.8b"
+    ],
+    "n_skipped_pairs": 6,
+    "skipped": [
+     [
+      "allenai/OLMo-2-0425-1B",
+      "L0-02",
+      "L0M-02",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-1b",
+      "L0-01",
+      "L0M-01",
+      "pool_too_small_final"
+     ],
+     [
+      "EleutherAI/pythia-1b",
+      "L0-02",
+      "L0M-02",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-01",
+      "L0M-01",
+      "pool_too_small_final"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-02",
+      "L0M-02",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-17",
+      "L0M-07",
+      "pool_too_small_final"
+     ]
+    ],
+    "foreseen_flags_present": [],
+    "pythia": {
+     "models": [
+      "EleutherAI/pythia-1.4b",
+      "EleutherAI/pythia-1b",
+      "EleutherAI/pythia-410m"
+     ],
+     "union_size": 7,
+     "per_run_n": [
+      7,
+      5,
+      4
+     ],
+     "permutation_floor_p": 0.015625,
+     "p_two_sided": 0.12409379531023448,
+     "T_studentized_mean": -1.5590204000473022,
+     "mean_diff_nats": -0.03224373108241707,
+     "sd_diff_nats": 0.04712772570448966,
+     "n_pairs_pooled": 16
+    },
+    "olmo": {
+     "models": [
+      "allenai/OLMo-2-0425-1B"
+     ],
+     "union_size": 6,
+     "per_run_n": [
+      6
+     ],
+     "permutation_floor_p": 0.03125,
+     "p_two_sided": 0.4711764411779411,
+     "T_studentized_mean": -0.95833420753479,
+     "mean_diff_nats": -0.08532738188902537,
+     "sd_diff_nats": 0.2180956845919187,
+     "n_pairs_pooled": 6
+    },
+    "stouffer_z": -1.5969168502388815,
+    "p_combined_two_sided": 0.11028424320709916,
+    "fires": false,
+    "direction_positive": false,
+    "tost": {
+     "sigma_did": 0.343,
+     "pythia": {
+      "pass": true,
+      "n": 16,
+      "bound_nats": 0.30870000000000003,
+      "mean_nats": -0.03224373108241707,
+      "se_nats": 0.011781931426122416,
+      "p_lower": 1.5408406860985535e-13,
+      "p_upper": 7.077708536384528e-15,
+      "table_n": 16,
+      "below_table": false
+     },
+     "olmo": {
+      "pass": true,
+      "n": 6,
+      "bound_nats": 0.5145000000000001,
+      "mean_nats": -0.08532738188902537,
+      "se_nats": 0.08903719039219668,
+      "p_lower": 0.002398901941489745,
+      "p_upper": 0.0005464805369413238,
+      "table_n": 8,
+      "below_table": true
+     },
+     "interpolation_rule": "取 >= n 的最小表格鍵（保守＝較窄邊界）",
+     "equivalent_IU": true
+    },
+    "effect_size": {
+     "mean_paired_diff_nats": -0.05878555648572122,
+     "in_sigma_units": -0.17138646205749627,
+     "calibration_ci_90": [
+      -0.10743596663020358,
+      -0.010135146341238861
+     ]
+    },
+    "status": "OK"
+   },
+   "regime_A_secondary": {
+    "label": "gold|L0P RegimeA(secondary)",
+    "regime": "A_gold30",
+    "band": "early",
+    "descriptive_models_excluded": [
+     "EleutherAI/pythia-2.8b"
+    ],
+    "n_skipped_pairs": 16,
+    "skipped": [
+     [
+      "allenai/OLMo-2-0425-1B",
+      "L0-02",
+      "L0P-02",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "allenai/OLMo-2-0425-1B",
+      "L0P-03",
+      "L0P-03",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "allenai/OLMo-2-0425-1B",
+      "L0-18",
+      "L0P-05",
+      "pool_too_small_final"
+     ],
+     [
+      "EleutherAI/pythia-1.4b",
+      "L0-15",
+      "L0P-18",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-1.4b",
+      "L0-19",
+      "L0P-06",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-1b",
+      "L0-01",
+      "L0P-11",
+      "pool_too_small_final"
+     ],
+     [
+      "EleutherAI/pythia-1b",
+      "L0-02",
+      "L0P-18",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-1b",
+      "L0-15",
+      "L0P-05",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-1b",
+      "L0-19",
+      "L0P-17",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-2.8b",
+      "L0-15",
+      "L0P-06",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-01",
+      "L0P-09",
+      "pool_too_small_final"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-02",
+      "L0P-05",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0P-03",
+      "L0P-03",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-09",
+      "L0P-08",
+      "no_endpoint"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-15",
+      "L0P-17",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-17",
+      "L0P-18",
+      "pool_too_small_final"
+     ]
+    ],
+    "foreseen_flags_present": [],
+    "pythia": {
+     "models": [
+      "EleutherAI/pythia-1.4b",
+      "EleutherAI/pythia-1b",
+      "EleutherAI/pythia-410m"
+     ],
+     "union_size": 13,
+     "per_run_n": [
+      9,
+      7,
+      8
+     ],
+     "permutation_floor_p": 0.000244140625,
+     "p_two_sided": 0.03369831508424579,
+     "T_studentized_mean": -1.884820580482483,
+     "mean_diff_nats": -1.0566907555815608,
+     "sd_diff_nats": 1.5619176764391431,
+     "n_pairs_pooled": 24
+    },
+    "olmo": {
+     "models": [
+      "allenai/OLMo-2-0425-1B"
+     ],
+     "union_size": 9,
+     "per_run_n": [
+      9
+     ],
+     "permutation_floor_p": 0.00390625,
+     "p_two_sided": 0.07534623268836559,
+     "T_studentized_mean": -2.026531219482422,
+     "mean_diff_nats": -1.2072682192342148,
+     "sd_diff_nats": 1.7871942003674945,
+     "n_pairs_pooled": 9
+    },
+    "stouffer_z": -2.7591406815337587,
+    "p_combined_two_sided": 0.005795358037712027,
+    "fires": true,
+    "direction_positive": false,
+    "tost": {
+     "sigma_did": 0.343,
+     "pythia": {
+      "pass": false,
+      "n": 24,
+      "bound_nats": 0.2401,
+      "mean_nats": -1.0566907555815608,
+      "se_nats": 0.31882511062578467,
+      "p_lower": 0.9912717588873954,
+      "p_upper": 0.00023789239752132761,
+      "table_n": 24,
+      "below_table": false
+     },
+     "olmo": {
+      "pass": false,
+      "n": 9,
+      "bound_nats": 0.30870000000000003,
+      "mean_nats": -1.2072682192342148,
+      "se_nats": 0.5957314001224981,
+      "p_lower": 0.9150504066681147,
+      "p_upper": 0.01722840039028168,
+      "table_n": 16,
+      "below_table": false
+     },
+     "interpolation_rule": "取 >= n 的最小表格鍵（保守＝較窄邊界）",
+     "equivalent_IU": false
+    },
+    "effect_size": {
+     "mean_paired_diff_nats": -1.1319794874078877,
+     "in_sigma_units": -3.300231741713958,
+     "calibration_ci_90": [
+      -1.625752753908852,
+      -0.6382062209069234
+     ]
+    },
+    "status": "OK"
+   },
+   "regime_B_sensitivity": {
+    "label": "gold|L0P RegimeB(sensitivity)",
+    "regime": "B_dual",
+    "band": "early",
+    "descriptive_models_excluded": [
+     "EleutherAI/pythia-2.8b"
+    ],
+    "n_skipped_pairs": 4,
+    "skipped": [
+     [
+      "EleutherAI/pythia-1.4b",
+      "L0-15",
+      "L0P-17",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-2.8b",
+      "L0P-03",
+      "L0P-03",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-02",
+      "L0P-05",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-03",
+      "L0P-08",
+      "no_endpoint"
+     ]
+    ],
+    "foreseen_flags_present": [],
+    "pythia": {
+     "models": [
+      "EleutherAI/pythia-1.4b",
+      "EleutherAI/pythia-1b",
+      "EleutherAI/pythia-410m"
+     ],
+     "union_size": 9,
+     "per_run_n": [
+      5,
+      5,
+      4
+     ],
+     "permutation_floor_p": 0.00390625,
+     "p_two_sided": 0.05229738513074346,
+     "T_studentized_mean": -1.8507763147354126,
+     "mean_diff_nats": -1.2009564432082698,
+     "sd_diff_nats": 1.3725081375447834,
+     "n_pairs_pooled": 14
+    },
+    "olmo": {
+     "models": [
+      "allenai/OLMo-2-0425-1B"
+     ],
+     "union_size": 4,
+     "per_run_n": [
+      4
+     ],
+     "permutation_floor_p": 0.125,
+     "p_two_sided": 0.4984750762461877,
+     "T_studentized_mean": -1.5345096588134766,
+     "mean_diff_nats": -1.4975029450142756,
+     "sd_diff_nats": 1.9517674711719155,
+     "n_pairs_pooled": 4
+    },
+    "stouffer_z": -1.85090060793061,
+    "p_combined_two_sided": 0.06418385328918323,
+    "fires": false,
+    "direction_positive": false,
+    "tost": {
+     "sigma_did": 0.343,
+     "pythia": {
+      "pass": false,
+      "n": 14,
+      "bound_nats": 0.30870000000000003,
+      "mean_nats": -1.2009564432082698,
+      "se_nats": 0.3668182293751274,
+      "p_lower": 0.9849032943244753,
+      "p_upper": 0.0006085949701152527,
+      "table_n": 16,
+      "below_table": false
+     },
+     "olmo": {
+      "pass": false,
+      "n": 4,
+      "bound_nats": 0.5145000000000001,
+      "mean_nats": -1.4975029450142756,
+      "se_nats": 0.9758837355859578,
+      "p_lower": 0.806001654025515,
+      "p_upper": 0.06563937929759833,
+      "table_n": 8,
+      "below_table": true
+     },
+     "interpolation_rule": "取 >= n 的最小表格鍵（保守＝較窄邊界）",
+     "equivalent_IU": false
+    },
+    "effect_size": {
+     "mean_paired_diff_nats": -1.3492296941112727,
+     "in_sigma_units": -3.933614268545984,
+     "calibration_ci_90": [
+      -2.0307547907106542,
+      -0.6677045975118909
+     ]
+    },
+    "status": "OK"
+   },
+   "provenance": {
+    "label": "provenance",
+    "band": "early",
+    "endpoint": "frac_present patched-minus-corrupted (numerator; v2.13 F)",
+    "exclusions": {
+     "too_few_probes": 7,
+     "missing_arm": 0,
+     "not_a_dict": 0
+    },
+    "source_file": "smoke_provenance_main_winB1.json",
+    "descriptive_models_excluded": [],
+    "n_skipped_pairs": 21,
+    "skipped": [
+     [
+      "EleutherAI/pythia-410m",
+      "L0-01",
+      "L0N-07",
+      "pool_too_small_final"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-02",
+      "L0N-04",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-15",
+      "L0N-06",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-17",
+      "L0N-03",
+      "pool_too_small_final"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-19",
+      "L0N-02",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-1b",
+      "L0-01",
+      "L0N-08",
+      "pool_too_small_final"
+     ],
+     [
+      "EleutherAI/pythia-1b",
+      "L0-02",
+      "L0N-02",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-1b",
+      "L0-15",
+      "L0N-06",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-1b",
+      "L0-19",
+      "L0N-03",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-1.4b",
+      "L0N-08",
+      null,
+      "unusable_frac_present"
+     ],
+     [
+      "EleutherAI/pythia-1.4b",
+      "L0-04",
+      "L0N-08",
+      "no_provenance_row"
+     ],
+     [
+      "EleutherAI/pythia-1.4b",
+      "L0-15",
+      "L0N-03",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-1.4b",
+      "L0-19",
+      "L0N-02",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-2.8b",
+      "L0-20",
+      null,
+      "unusable_frac_present"
+     ],
+     [
+      "EleutherAI/pythia-2.8b",
+      "L0N-08",
+      null,
+      "unusable_frac_present"
+     ],
+     [
+      "EleutherAI/pythia-2.8b",
+      "L0-15",
+      "L0N-02",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-2.8b",
+      "L0-20",
+      "L0N-08",
+      "no_provenance_row"
+     ],
+     [
+      "allenai/OLMo-2-0425-1B",
+      "L0N-07",
+      null,
+      "unusable_frac_present"
+     ],
+     [
+      "allenai/OLMo-2-0425-1B",
+      "L0-17",
+      "L0N-07",
+      "no_provenance_row"
+     ],
+     [
+      "allenai/OLMo-2-0425-1B",
+      "L0-18",
+      "L0N-03",
+      "pool_too_small_final"
+     ],
+     [
+      "allenai/OLMo-2-0425-1B",
+      "L0-20",
+      "L0N-02",
+      "pool_too_small_final"
+     ]
+    ],
+    "pythia": {
+     "models": [
+      "EleutherAI/pythia-1.4b",
+      "EleutherAI/pythia-1b",
+      "EleutherAI/pythia-410m"
+     ],
+     "union_size": 5,
+     "per_run_n": [
+      2,
+      2,
+      2
+     ],
+     "permutation_floor_p": 0.0625,
+     "p_two_sided": 0.8115094245287736,
+     "T_studentized_mean": -0.23978574573993683,
+     "mean_diff_nats": -0.030944055944055943,
+     "sd_diff_nats": 0.30811369976615094,
+     "n_pairs_pooled": 6
+    },
+    "olmo": {
+     "error": "a run has fewer than 2 pairs; studentized statistic undefined",
+     "per_run_n": [
+      1.0
+     ],
+     "models": [
+      "allenai/OLMo-2-0425-1B"
+     ]
+    },
+    "status": "INCOMPLETE：家族統計量無法計算"
+   },
+   "descriptive_2p8b": {
+    "L0M": {
+     "status": "descriptive_only",
+     "reason": "v2.19：2.8b fp16 偏差不可量，退出主裁決但照實輸出",
+     "per_model": {
+      "EleutherAI/pythia-2.8b": {
+       "n_pairs": 7,
+       "mean_nats": -0.0181374547204801,
+       "sd_nats": 0.028086538103299908,
+       "items": [
+        "L0-01",
+        "L0-02",
+        "L0-04",
+        "L0-11",
+        "L0-16",
+        "L0-17",
+        "L0-20"
+       ]
+      }
+     }
+    },
+    "A_gold30": {
+     "status": "descriptive_only",
+     "reason": "v2.19：2.8b fp16 偏差不可量，退出主裁決但照實輸出",
+     "per_model": {
+      "EleutherAI/pythia-2.8b": {
+       "n_pairs": 9,
+       "mean_nats": -0.6063313739788201,
+       "sd_nats": 2.194059547867622,
+       "items": [
+        "L0-01",
+        "L0-02",
+        "L0-03",
+        "L0-04",
+        "L0-05",
+        "L0-06",
+        "L0-16",
+        "L0-17",
+        "L0-20"
+       ]
+      }
+     }
+    }
+   },
+   "joint_verdict_primary": {
+    "verdict": "R-entangled",
+    "why": "gold 軌等價；溯源軌【無資料】——依凍結規則溯源只約束 specific 的宣告，故不擋此裁決，但本判定是在沒有溯源證據的情況下作出的，須原樣披露",
+    "provenance_had_data": false,
+    "source": "v2.13 N-a（附錄 E2.1，含矛盾格）"
+   },
+   "joint_verdict_secondary_A": {
+    "verdict": "反方向點燃",
+    "why": "獨立一格，不併入 none（v0.7 教訓）",
+    "source": "v2.13 N-a（附錄 E2.1，含矛盾格）"
+   },
+   "joint_verdict_sensitivity_B": {
+    "verdict": "無規則點燃",
+    "why": "差異未點燃且等價未通過（第四格）",
+    "source": "v2.13 N-a（附錄 E2.1，含矛盾格）"
+   },
+   "sensitivity_bound_sentence": "本設計在最終題庫與量到的 σ_DiD=0.343 nats 下，每家族實際 n 對應的 80% 檢定力最小可偵測效應為 0.302 nats（純 fp32 臂，附錄 J7b）。低於 0.302 nats 的「無效應」不具資訊量。（本次觀察到的效應量小於該界線，因此本次的未點燃不得讀成「沒有效應」。）",
+   "frozen_narrative": "§11-B：在本設計的等價邊界內分不開記憶專屬與一般可預測性。等價邊界由 σ_DiD 與各家族實際 n 決定，非「沒有效應」。"
+  },
+  "mid": {
+   "L0M_primary": {
+    "label": "gold|L0M(REGISTERED PRIMARY, M3)",
+    "regime": "L0M",
+    "band": "mid",
+    "descriptive_models_excluded": [
+     "EleutherAI/pythia-2.8b"
+    ],
+    "n_skipped_pairs": 6,
+    "skipped": [
+     [
+      "allenai/OLMo-2-0425-1B",
+      "L0-02",
+      "L0M-02",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-1b",
+      "L0-01",
+      "L0M-01",
+      "pool_too_small_final"
+     ],
+     [
+      "EleutherAI/pythia-1b",
+      "L0-02",
+      "L0M-02",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-01",
+      "L0M-01",
+      "pool_too_small_final"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-02",
+      "L0M-02",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-17",
+      "L0M-07",
+      "pool_too_small_final"
+     ]
+    ],
+    "foreseen_flags_present": [],
+    "pythia": {
+     "models": [
+      "EleutherAI/pythia-1.4b",
+      "EleutherAI/pythia-1b",
+      "EleutherAI/pythia-410m"
+     ],
+     "union_size": 7,
+     "per_run_n": [
+      7,
+      5,
+      4
+     ],
+     "permutation_floor_p": 0.015625,
+     "p_two_sided": 0.1719914004299785,
+     "T_studentized_mean": -1.3701118230819702,
+     "mean_diff_nats": -0.03327258280478418,
+     "sd_diff_nats": 0.06408544206078827,
+     "n_pairs_pooled": 16
+    },
+    "olmo": {
+     "models": [
+      "allenai/OLMo-2-0425-1B"
+     ],
+     "union_size": 6,
+     "per_run_n": [
+      6
+     ],
+     "permutation_floor_p": 0.03125,
+     "p_two_sided": 0.5311234438278086,
+     "T_studentized_mean": 0.9598093032836914,
+     "mean_diff_nats": 0.09245493759711583,
+     "sd_diff_nats": 0.235950390111649,
+     "n_pairs_pooled": 6
+    },
+    "stouffer_z": -0.5229344356630345,
+    "p_combined_two_sided": 0.6010198799530229,
+    "fires": false,
+    "direction_positive": false,
+    "tost": {
+     "sigma_did": 0.343,
+     "pythia": {
+      "pass": true,
+      "n": 16,
+      "bound_nats": 0.30870000000000003,
+      "mean_nats": -0.03327258280478418,
+      "se_nats": 0.016021360515197067,
+      "p_lower": 1.3960528761909568e-11,
+      "p_upper": 6.132288040607845e-13,
+      "table_n": 16,
+      "below_table": false
+     },
+     "olmo": {
+      "pass": true,
+      "n": 6,
+      "bound_nats": 0.5145000000000001,
+      "mean_nats": 0.09245493759711583,
+      "se_nats": 0.09632634339736229,
+      "p_lower": 0.0007406648322461186,
+      "p_upper": 0.003572582021006463,
+      "table_n": 8,
+      "below_table": true
+     },
+     "interpolation_rule": "取 >= n 的最小表格鍵（保守＝較窄邊界）",
+     "equivalent_IU": true
+    },
+    "effect_size": {
+     "mean_paired_diff_nats": 0.029591177396165826,
+     "in_sigma_units": 0.08627165421622689,
+     "calibration_ci_90": [
+      -0.025444938295571137,
+      0.08462729308790279
+     ]
+    },
+    "status": "OK"
+   },
+   "regime_A_secondary": {
+    "label": "gold|L0P RegimeA(secondary)",
+    "regime": "A_gold30",
+    "band": "mid",
+    "descriptive_models_excluded": [
+     "EleutherAI/pythia-2.8b"
+    ],
+    "n_skipped_pairs": 16,
+    "skipped": [
+     [
+      "allenai/OLMo-2-0425-1B",
+      "L0-02",
+      "L0P-02",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "allenai/OLMo-2-0425-1B",
+      "L0P-03",
+      "L0P-03",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "allenai/OLMo-2-0425-1B",
+      "L0-18",
+      "L0P-05",
+      "pool_too_small_final"
+     ],
+     [
+      "EleutherAI/pythia-1.4b",
+      "L0-15",
+      "L0P-18",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-1.4b",
+      "L0-19",
+      "L0P-06",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-1b",
+      "L0-01",
+      "L0P-11",
+      "pool_too_small_final"
+     ],
+     [
+      "EleutherAI/pythia-1b",
+      "L0-02",
+      "L0P-18",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-1b",
+      "L0-15",
+      "L0P-05",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-1b",
+      "L0-19",
+      "L0P-17",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-2.8b",
+      "L0-15",
+      "L0P-06",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-01",
+      "L0P-09",
+      "pool_too_small_final"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-02",
+      "L0P-05",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0P-03",
+      "L0P-03",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-09",
+      "L0P-08",
+      "no_endpoint"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-15",
+      "L0P-17",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-17",
+      "L0P-18",
+      "pool_too_small_final"
+     ]
+    ],
+    "foreseen_flags_present": [],
+    "pythia": {
+     "models": [
+      "EleutherAI/pythia-1.4b",
+      "EleutherAI/pythia-1b",
+      "EleutherAI/pythia-410m"
+     ],
+     "union_size": 13,
+     "per_run_n": [
+      9,
+      7,
+      8
+     ],
+     "permutation_floor_p": 0.000244140625,
+     "p_two_sided": 0.029948502574871257,
+     "T_studentized_mean": -1.861080288887024,
+     "mean_diff_nats": -1.0564396711318598,
+     "sd_diff_nats": 1.567277049134548,
+     "n_pairs_pooled": 24
+    },
+    "olmo": {
+     "models": [
+      "allenai/OLMo-2-0425-1B"
+     ],
+     "union_size": 9,
+     "per_run_n": [
+      9
+     ],
+     "permutation_floor_p": 0.00390625,
+     "p_two_sided": 0.13174341282935853,
+     "T_studentized_mean": -1.8431087732315063,
+     "mean_diff_nats": -1.1629993847260873,
+     "sd_diff_nats": 1.8929960807054498,
+     "n_pairs_pooled": 9
+    },
+    "stouffer_z": -2.6007622098490732,
+    "p_combined_two_sided": 0.009301690407190543,
+    "fires": true,
+    "direction_positive": false,
+    "tost": {
+     "sigma_did": 0.343,
+     "pythia": {
+      "pass": false,
+      "n": 24,
+      "bound_nats": 0.2401,
+      "mean_nats": -1.0564396711318598,
+      "se_nats": 0.31991908799621355,
+      "p_lower": 0.9910844852737928,
+      "p_upper": 0.0002467437737600722,
+      "table_n": 24,
+      "below_table": false
+     },
+     "olmo": {
+      "pass": false,
+      "n": 9,
+      "bound_nats": 0.30870000000000003,
+      "mean_nats": -1.1629993847260873,
+      "se_nats": 0.6309986935684833,
+      "p_lower": 0.893611733027602,
+      "p_upper": 0.023993283303698508,
+      "table_n": 16,
+      "below_table": false
+     },
+     "interpolation_rule": "取 >= n 的最小表格鍵（保守＝較窄邊界）",
+     "equivalent_IU": false
+    },
+    "effect_size": {
+     "mean_paired_diff_nats": -1.1097195279289735,
+     "in_sigma_units": -3.235333900667561,
+     "calibration_ci_90": [
+      -1.6198817527680387,
+      -0.5995573030899084
+     ]
+    },
+    "status": "OK"
+   },
+   "regime_B_sensitivity": {
+    "label": "gold|L0P RegimeB(sensitivity)",
+    "regime": "B_dual",
+    "band": "mid",
+    "descriptive_models_excluded": [
+     "EleutherAI/pythia-2.8b"
+    ],
+    "n_skipped_pairs": 4,
+    "skipped": [
+     [
+      "EleutherAI/pythia-1.4b",
+      "L0-15",
+      "L0P-17",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-2.8b",
+      "L0P-03",
+      "L0P-03",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-02",
+      "L0P-05",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-03",
+      "L0P-08",
+      "no_endpoint"
+     ]
+    ],
+    "foreseen_flags_present": [],
+    "pythia": {
+     "models": [
+      "EleutherAI/pythia-1.4b",
+      "EleutherAI/pythia-1b",
+      "EleutherAI/pythia-410m"
+     ],
+     "union_size": 9,
+     "per_run_n": [
+      5,
+      5,
+      4
+     ],
+     "permutation_floor_p": 0.00390625,
+     "p_two_sided": 0.04939753012349383,
+     "T_studentized_mean": -1.837132453918457,
+     "mean_diff_nats": -1.2189295185630076,
+     "sd_diff_nats": 1.399698526822066,
+     "n_pairs_pooled": 14
+    },
+    "olmo": {
+     "models": [
+      "allenai/OLMo-2-0425-1B"
+     ],
+     "union_size": 4,
+     "per_run_n": [
+      4
+     ],
+     "permutation_floor_p": 0.125,
+     "p_two_sided": 0.4927753612319384,
+     "T_studentized_mean": -1.515379786491394,
+     "mean_diff_nats": -1.4869705167366192,
+     "sd_diff_nats": 1.9625055946730423,
+     "n_pairs_pooled": 4
+    },
+    "stouffer_z": -1.8745723602797821,
+    "p_combined_two_sided": 0.0608515786087958,
+    "fires": false,
+    "direction_positive": false,
+    "tost": {
+     "sigma_did": 0.343,
+     "pythia": {
+      "pass": false,
+      "n": 14,
+      "bound_nats": 0.30870000000000003,
+      "mean_nats": -1.2189295185630076,
+      "se_nats": 0.37408516658145624,
+      "p_lower": 0.9849257576319164,
+      "p_upper": 0.0006460813613356905,
+      "table_n": 16,
+      "below_table": false
+     },
+     "olmo": {
+      "pass": false,
+      "n": 4,
+      "bound_nats": 0.5145000000000001,
+      "mean_nats": -1.4869705167366192,
+      "se_nats": 0.9812527973365212,
+      "p_lower": 0.802640185649735,
+      "p_upper": 0.06704208119752152,
+      "table_n": 8,
+      "below_table": true
+     },
+     "interpolation_rule": "取 >= n 的最小表格鍵（保守＝較窄邊界）",
+     "equivalent_IU": false
+    },
+    "effect_size": {
+     "mean_paired_diff_nats": -1.3529500176498135,
+     "in_sigma_units": -3.9444606928565986,
+     "calibration_ci_90": [
+      -2.0422510138368817,
+      -0.6636490214627452
+     ]
+    },
+    "status": "OK"
+   },
+   "provenance": {
+    "label": "provenance",
+    "band": "mid",
+    "endpoint": "frac_present patched-minus-corrupted (numerator; v2.13 F)",
+    "exclusions": {
+     "too_few_probes": 7,
+     "missing_arm": 0,
+     "not_a_dict": 0
+    },
+    "source_file": "smoke_provenance_main_winB1.json",
+    "descriptive_models_excluded": [],
+    "n_skipped_pairs": 23,
+    "skipped": [
+     [
+      "EleutherAI/pythia-410m",
+      "L0-01",
+      "L0N-07",
+      "pool_too_small_final"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-02",
+      "L0N-04",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-15",
+      "L0N-06",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-17",
+      "L0N-03",
+      "pool_too_small_final"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-19",
+      "L0N-02",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-1b",
+      "L0N-07",
+      null,
+      "unusable_frac_present"
+     ],
+     [
+      "EleutherAI/pythia-1b",
+      "L0-01",
+      "L0N-08",
+      "pool_too_small_final"
+     ],
+     [
+      "EleutherAI/pythia-1b",
+      "L0-02",
+      "L0N-02",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-1b",
+      "L0-15",
+      "L0N-06",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-1b",
+      "L0-19",
+      "L0N-03",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-1b",
+      "L0-20",
+      "L0N-07",
+      "no_provenance_row"
+     ],
+     [
+      "EleutherAI/pythia-1.4b",
+      "L0N-08",
+      null,
+      "unusable_frac_present"
+     ],
+     [
+      "EleutherAI/pythia-1.4b",
+      "L0-04",
+      "L0N-08",
+      "no_provenance_row"
+     ],
+     [
+      "EleutherAI/pythia-1.4b",
+      "L0-15",
+      "L0N-03",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-1.4b",
+      "L0-19",
+      "L0N-02",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-2.8b",
+      "L0-20",
+      null,
+      "unusable_frac_present"
+     ],
+     [
+      "EleutherAI/pythia-2.8b",
+      "L0N-08",
+      null,
+      "unusable_frac_present"
+     ],
+     [
+      "EleutherAI/pythia-2.8b",
+      "L0-15",
+      "L0N-02",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-2.8b",
+      "L0-20",
+      "L0N-08",
+      "no_provenance_row"
+     ],
+     [
+      "allenai/OLMo-2-0425-1B",
+      "L0N-07",
+      null,
+      "unusable_frac_present"
+     ],
+     [
+      "allenai/OLMo-2-0425-1B",
+      "L0-17",
+      "L0N-07",
+      "no_provenance_row"
+     ],
+     [
+      "allenai/OLMo-2-0425-1B",
+      "L0-18",
+      "L0N-03",
+      "pool_too_small_final"
+     ],
+     [
+      "allenai/OLMo-2-0425-1B",
+      "L0-20",
+      "L0N-02",
+      "pool_too_small_final"
+     ]
+    ],
+    "pythia": {
+     "error": "a run has fewer than 2 pairs; studentized statistic undefined",
+     "per_run_n": [
+      2.0,
+      1.0,
+      2.0
+     ],
+     "models": [
+      "EleutherAI/pythia-1.4b",
+      "EleutherAI/pythia-1b",
+      "EleutherAI/pythia-410m"
+     ]
+    },
+    "olmo": {
+     "error": "a run has fewer than 2 pairs; studentized statistic undefined",
+     "per_run_n": [
+      1.0
+     ],
+     "models": [
+      "allenai/OLMo-2-0425-1B"
+     ]
+    },
+    "status": "INCOMPLETE：家族統計量無法計算"
+   },
+   "descriptive_2p8b": {
+    "L0M": {
+     "status": "descriptive_only",
+     "reason": "v2.19：2.8b fp16 偏差不可量，退出主裁決但照實輸出",
+     "per_model": {
+      "EleutherAI/pythia-2.8b": {
+       "n_pairs": 7,
+       "mean_nats": -0.03667621820100716,
+       "sd_nats": 0.08052851617155889,
+       "items": [
+        "L0-01",
+        "L0-02",
+        "L0-04",
+        "L0-11",
+        "L0-16",
+        "L0-17",
+        "L0-20"
+       ]
+      }
+     }
+    },
+    "A_gold30": {
+     "status": "descriptive_only",
+     "reason": "v2.19：2.8b fp16 偏差不可量，退出主裁決但照實輸出",
+     "per_model": {
+      "EleutherAI/pythia-2.8b": {
+       "n_pairs": 9,
+       "mean_nats": -0.5081545954777135,
+       "sd_nats": 2.237979449039803,
+       "items": [
+        "L0-01",
+        "L0-02",
+        "L0-03",
+        "L0-04",
+        "L0-05",
+        "L0-06",
+        "L0-16",
+        "L0-17",
+        "L0-20"
+       ]
+      }
+     }
+    }
+   },
+   "joint_verdict_primary": {
+    "verdict": "R-entangled",
+    "why": "gold 軌等價；溯源軌【無資料】——依凍結規則溯源只約束 specific 的宣告，故不擋此裁決，但本判定是在沒有溯源證據的情況下作出的，須原樣披露",
+    "provenance_had_data": false,
+    "source": "v2.13 N-a（附錄 E2.1，含矛盾格）"
+   },
+   "joint_verdict_secondary_A": {
+    "verdict": "反方向點燃",
+    "why": "獨立一格，不併入 none（v0.7 教訓）",
+    "source": "v2.13 N-a（附錄 E2.1，含矛盾格）"
+   },
+   "joint_verdict_sensitivity_B": {
+    "verdict": "無規則點燃",
+    "why": "差異未點燃且等價未通過（第四格）",
+    "source": "v2.13 N-a（附錄 E2.1，含矛盾格）"
+   },
+   "sensitivity_bound_sentence": "本設計在最終題庫與量到的 σ_DiD=0.343 nats 下，每家族實際 n 對應的 80% 檢定力最小可偵測效應為 0.302 nats（純 fp32 臂，附錄 J7b）。低於 0.302 nats 的「無效應」不具資訊量。（本次觀察到的效應量小於該界線，因此本次的未點燃不得讀成「沒有效應」。）",
+   "frozen_narrative": "§11-B：在本設計的等價邊界內分不開記憶專屬與一般可預測性。等價邊界由 σ_DiD 與各家族實際 n 決定，非「沒有效應」。"
+  },
+  "late": {
+   "L0M_primary": {
+    "label": "gold|L0M(REGISTERED PRIMARY, M3)",
+    "regime": "L0M",
+    "band": "late",
+    "descriptive_models_excluded": [
+     "EleutherAI/pythia-2.8b"
+    ],
+    "n_skipped_pairs": 6,
+    "skipped": [
+     [
+      "allenai/OLMo-2-0425-1B",
+      "L0-02",
+      "L0M-02",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-1b",
+      "L0-01",
+      "L0M-01",
+      "pool_too_small_final"
+     ],
+     [
+      "EleutherAI/pythia-1b",
+      "L0-02",
+      "L0M-02",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-01",
+      "L0M-01",
+      "pool_too_small_final"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-02",
+      "L0M-02",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-17",
+      "L0M-07",
+      "pool_too_small_final"
+     ]
+    ],
+    "foreseen_flags_present": [],
+    "pythia": {
+     "models": [
+      "EleutherAI/pythia-1.4b",
+      "EleutherAI/pythia-1b",
+      "EleutherAI/pythia-410m"
+     ],
+     "union_size": 7,
+     "per_run_n": [
+      7,
+      5,
+      4
+     ],
+     "permutation_floor_p": 0.015625,
+     "p_two_sided": 0.4063796810159492,
+     "T_studentized_mean": -0.40749266743659973,
+     "mean_diff_nats": 0.0007450387347489595,
+     "sd_diff_nats": 0.1365240596517414,
+     "n_pairs_pooled": 16
+    },
+    "olmo": {
+     "models": [
+      "allenai/OLMo-2-0425-1B"
+     ],
+     "union_size": 6,
+     "per_run_n": [
+      6
+     ],
+     "permutation_floor_p": 0.03125,
+     "p_two_sided": 0.4984250787460627,
+     "T_studentized_mean": -0.49731266498565674,
+     "mean_diff_nats": -0.019694546858469646,
+     "sd_diff_nats": 0.09700455312920288,
+     "n_pairs_pooled": 6
+    },
+    "stouffer_z": -1.0657876116735454,
+    "p_combined_two_sided": 0.2865196622587649,
+    "fires": false,
+    "direction_positive": false,
+    "tost": {
+     "sigma_did": 0.343,
+     "pythia": {
+      "pass": true,
+      "n": 16,
+      "bound_nats": 0.30870000000000003,
+      "mean_nats": 0.0007450387347489595,
+      "se_nats": 0.03413101491293535,
+      "p_lower": 8.926469124625648e-08,
+      "p_upper": 9.495845362579617e-08,
+      "table_n": 16,
+      "below_table": false
+     },
+     "olmo": {
+      "pass": true,
+      "n": 6,
+      "bound_nats": 0.5145000000000001,
+      "mean_nats": -0.019694546858469646,
+      "se_nats": 0.03960194298220805,
+      "p_lower": 2.9129301594647543e-05,
+      "p_upper": 2.005027205271714e-05,
+      "table_n": 8,
+      "below_table": true
+     },
+     "interpolation_rule": "取 >= n 的最小表格鍵（保守＝較窄邊界）",
+     "equivalent_IU": true
+    },
+    "effect_size": {
+     "mean_paired_diff_nats": -0.009474754061860343,
+     "in_sigma_units": -0.02762318968472403,
+     "calibration_ci_90": [
+      -0.05231133013773474,
+      0.03336182201401405
+     ]
+    },
+    "status": "OK"
+   },
+   "regime_A_secondary": {
+    "label": "gold|L0P RegimeA(secondary)",
+    "regime": "A_gold30",
+    "band": "late",
+    "descriptive_models_excluded": [
+     "EleutherAI/pythia-2.8b"
+    ],
+    "n_skipped_pairs": 16,
+    "skipped": [
+     [
+      "allenai/OLMo-2-0425-1B",
+      "L0-02",
+      "L0P-02",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "allenai/OLMo-2-0425-1B",
+      "L0P-03",
+      "L0P-03",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "allenai/OLMo-2-0425-1B",
+      "L0-18",
+      "L0P-05",
+      "pool_too_small_final"
+     ],
+     [
+      "EleutherAI/pythia-1.4b",
+      "L0-15",
+      "L0P-18",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-1.4b",
+      "L0-19",
+      "L0P-06",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-1b",
+      "L0-01",
+      "L0P-11",
+      "pool_too_small_final"
+     ],
+     [
+      "EleutherAI/pythia-1b",
+      "L0-02",
+      "L0P-18",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-1b",
+      "L0-15",
+      "L0P-05",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-1b",
+      "L0-19",
+      "L0P-17",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-2.8b",
+      "L0-15",
+      "L0P-06",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-01",
+      "L0P-09",
+      "pool_too_small_final"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-02",
+      "L0P-05",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0P-03",
+      "L0P-03",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-09",
+      "L0P-08",
+      "no_endpoint"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-15",
+      "L0P-17",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-17",
+      "L0P-18",
+      "pool_too_small_final"
+     ]
+    ],
+    "foreseen_flags_present": [],
+    "pythia": {
+     "models": [
+      "EleutherAI/pythia-1.4b",
+      "EleutherAI/pythia-1b",
+      "EleutherAI/pythia-410m"
+     ],
+     "union_size": 13,
+     "per_run_n": [
+      9,
+      7,
+      8
+     ],
+     "permutation_floor_p": 0.000244140625,
+     "p_two_sided": 0.06294685265736713,
+     "T_studentized_mean": -1.7662895917892456,
+     "mean_diff_nats": -0.9024672650266439,
+     "sd_diff_nats": 1.442781945807099,
+     "n_pairs_pooled": 24
+    },
+    "olmo": {
+     "models": [
+      "allenai/OLMo-2-0425-1B"
+     ],
+     "union_size": 9,
+     "per_run_n": [
+      9
+     ],
+     "permutation_floor_p": 0.00390625,
+     "p_two_sided": 0.03559822008899555,
+     "T_studentized_mean": -2.1685123443603516,
+     "mean_diff_nats": -1.290419276777862,
+     "sd_diff_nats": 1.7852135089426278,
+     "n_pairs_pooled": 9
+    },
+    "stouffer_z": -2.8008880843755133,
+    "p_combined_two_sided": 0.005096218950499236,
+    "fires": true,
+    "direction_positive": false,
+    "tost": {
+     "sigma_did": 0.343,
+     "pythia": {
+      "pass": false,
+      "n": 24,
+      "bound_nats": 0.2401,
+      "mean_nats": -0.9024672650266439,
+      "se_nats": 0.294506631443937,
+      "p_lower": 0.982808492602241,
+      "p_upper": 0.0003791295715248981,
+      "table_n": 24,
+      "below_table": false
+     },
+     "olmo": {
+      "pass": false,
+      "n": 9,
+      "bound_nats": 0.30870000000000003,
+      "mean_nats": -1.290419276777862,
+      "se_nats": 0.5950711696475426,
+      "p_lower": 0.9311986737819061,
+      "p_upper": 0.013806503064323253,
+      "table_n": 16,
+      "below_table": false
+     },
+     "interpolation_rule": "取 >= n 的最小表格鍵（保守＝較窄邊界）",
+     "equivalent_IU": false
+    },
+    "effect_size": {
+     "mean_paired_diff_nats": -1.096443270902253,
+     "in_sigma_units": -3.196627611959921,
+     "calibration_ci_90": [
+      -1.5723598477655534,
+      -0.6205266940389526
+     ]
+    },
+    "status": "OK"
+   },
+   "regime_B_sensitivity": {
+    "label": "gold|L0P RegimeB(sensitivity)",
+    "regime": "B_dual",
+    "band": "late",
+    "descriptive_models_excluded": [
+     "EleutherAI/pythia-2.8b"
+    ],
+    "n_skipped_pairs": 4,
+    "skipped": [
+     [
+      "EleutherAI/pythia-1.4b",
+      "L0-15",
+      "L0P-17",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-2.8b",
+      "L0P-03",
+      "L0P-03",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-02",
+      "L0P-05",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-03",
+      "L0P-08",
+      "no_endpoint"
+     ]
+    ],
+    "foreseen_flags_present": [],
+    "pythia": {
+     "models": [
+      "EleutherAI/pythia-1.4b",
+      "EleutherAI/pythia-1b",
+      "EleutherAI/pythia-410m"
+     ],
+     "union_size": 9,
+     "per_run_n": [
+      5,
+      5,
+      4
+     ],
+     "permutation_floor_p": 0.00390625,
+     "p_two_sided": 0.03474826258687066,
+     "T_studentized_mean": -1.894148349761963,
+     "mean_diff_nats": -1.1514584601723723,
+     "sd_diff_nats": 1.3371861933212499,
+     "n_pairs_pooled": 14
+    },
+    "olmo": {
+     "models": [
+      "allenai/OLMo-2-0425-1B"
+     ],
+     "union_size": 4,
+     "per_run_n": [
+      4
+     ],
+     "permutation_floor_p": 0.125,
+     "p_two_sided": 0.24753762311884406,
+     "T_studentized_mean": -1.5968085527420044,
+     "mean_diff_nats": -1.5479613001807593,
+     "sd_diff_nats": 1.9388187256443217,
+     "n_pairs_pooled": 4
+    },
+    "stouffer_z": -2.310563938771908,
+    "p_combined_two_sided": 0.020856953034811637,
+    "fires": true,
+    "direction_positive": false,
+    "tost": {
+     "sigma_did": 0.343,
+     "pythia": {
+      "pass": false,
+      "n": 14,
+      "bound_nats": 0.30870000000000003,
+      "mean_nats": -1.1514584601723723,
+      "se_nats": 0.3573780426951845,
+      "p_lower": 0.9826532702677991,
+      "p_upper": 0.000643527707627171,
+      "table_n": 16,
+      "below_table": false
+     },
+     "olmo": {
+      "pass": false,
+      "n": 4,
+      "bound_nats": 0.5145000000000001,
+      "mean_nats": -1.5479613001807593,
+      "se_nats": 0.9694093628221608,
+      "p_lower": 0.8177133123643299,
+      "p_upper": 0.061648799587514305,
+      "table_n": 8,
+      "below_table": true
+     },
+     "interpolation_rule": "取 >= n 的最小表格鍵（保守＝較窄邊界）",
+     "equivalent_IU": false
+    },
+    "effect_size": {
+     "mean_paired_diff_nats": -1.3497098801765657,
+     "in_sigma_units": -3.9350142279200164,
+     "calibration_ci_90": [
+      -2.0213387797189726,
+      -0.6780809806341589
+     ]
+    },
+    "status": "OK"
+   },
+   "provenance": {
+    "label": "provenance",
+    "band": "late",
+    "endpoint": "frac_present patched-minus-corrupted (numerator; v2.13 F)",
+    "exclusions": {
+     "too_few_probes": 8,
+     "missing_arm": 0,
+     "not_a_dict": 0
+    },
+    "source_file": "smoke_provenance_main_winB1.json",
+    "descriptive_models_excluded": [],
+    "n_skipped_pairs": 21,
+    "skipped": [
+     [
+      "EleutherAI/pythia-410m",
+      "L0-01",
+      "L0N-07",
+      "pool_too_small_final"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-02",
+      "L0N-04",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-15",
+      "L0N-06",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-17",
+      "L0N-03",
+      "pool_too_small_final"
+     ],
+     [
+      "EleutherAI/pythia-410m",
+      "L0-19",
+      "L0N-02",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-1b",
+      "L0-01",
+      "L0N-08",
+      "pool_too_small_final"
+     ],
+     [
+      "EleutherAI/pythia-1b",
+      "L0-02",
+      "L0N-02",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-1b",
+      "L0-15",
+      "L0N-06",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-1b",
+      "L0-19",
+      "L0N-03",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-1.4b",
+      "L0N-08",
+      null,
+      "unusable_frac_present"
+     ],
+     [
+      "EleutherAI/pythia-1.4b",
+      "L0-04",
+      "L0N-08",
+      "no_provenance_row"
+     ],
+     [
+      "EleutherAI/pythia-1.4b",
+      "L0-15",
+      "L0N-03",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-1.4b",
+      "L0-19",
+      "L0N-02",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-2.8b",
+      "L0-20",
+      null,
+      "unusable_frac_present"
+     ],
+     [
+      "EleutherAI/pythia-2.8b",
+      "L0N-08",
+      null,
+      "unusable_frac_present"
+     ],
+     [
+      "EleutherAI/pythia-2.8b",
+      "L0-15",
+      "L0N-02",
+      "rank_guard_zero_survivor"
+     ],
+     [
+      "EleutherAI/pythia-2.8b",
+      "L0-20",
+      "L0N-08",
+      "no_provenance_row"
+     ],
+     [
+      "allenai/OLMo-2-0425-1B",
+      "L0N-07",
+      null,
+      "unusable_frac_present"
+     ],
+     [
+      "allenai/OLMo-2-0425-1B",
+      "L0-17",
+      "L0N-07",
+      "no_provenance_row"
+     ],
+     [
+      "allenai/OLMo-2-0425-1B",
+      "L0-18",
+      "L0N-03",
+      "pool_too_small_final"
+     ],
+     [
+      "allenai/OLMo-2-0425-1B",
+      "L0-20",
+      "L0N-02",
+      "pool_too_small_final"
+     ]
+    ],
+    "pythia": {
+     "models": [
+      "EleutherAI/pythia-1.4b",
+      "EleutherAI/pythia-1b",
+      "EleutherAI/pythia-410m"
+     ],
+     "union_size": 5,
+     "per_run_n": [
+      2,
+      2,
+      2
+     ],
+     "permutation_floor_p": 0.0625,
+     "p_two_sided": 0.8735063246837658,
+     "T_studentized_mean": -0.18181820213794708,
+     "mean_diff_nats": -0.021697746697746715,
+     "sd_diff_nats": 0.12673066976984304,
+     "n_pairs_pooled": 6
+    },
+    "olmo": {
+     "error": "a run has fewer than 2 pairs; studentized statistic undefined",
+     "per_run_n": [
+      1.0
+     ],
+     "models": [
+      "allenai/OLMo-2-0425-1B"
+     ]
+    },
+    "status": "INCOMPLETE：家族統計量無法計算"
+   },
+   "descriptive_2p8b": {
+    "L0M": {
+     "status": "descriptive_only",
+     "reason": "v2.19：2.8b fp16 偏差不可量，退出主裁決但照實輸出",
+     "per_model": {
+      "EleutherAI/pythia-2.8b": {
+       "n_pairs": 7,
+       "mean_nats": 0.0880966338195971,
+       "sd_nats": 0.10039817647314019,
+       "items": [
+        "L0-01",
+        "L0-02",
+        "L0-04",
+        "L0-11",
+        "L0-16",
+        "L0-17",
+        "L0-20"
+       ]
+      }
+     }
+    },
+    "A_gold30": {
+     "status": "descriptive_only",
+     "reason": "v2.19：2.8b fp16 偏差不可量，退出主裁決但照實輸出",
+     "per_model": {
+      "EleutherAI/pythia-2.8b": {
+       "n_pairs": 9,
+       "mean_nats": 0.1467412563247813,
+       "sd_nats": 1.39018887810783,
+       "items": [
+        "L0-01",
+        "L0-02",
+        "L0-03",
+        "L0-04",
+        "L0-05",
+        "L0-06",
+        "L0-16",
+        "L0-17",
+        "L0-20"
+       ]
+      }
+     }
+    }
+   },
+   "joint_verdict_primary": {
+    "verdict": "R-entangled",
+    "why": "gold 軌等價；溯源軌【無資料】——依凍結規則溯源只約束 specific 的宣告，故不擋此裁決，但本判定是在沒有溯源證據的情況下作出的，須原樣披露",
+    "provenance_had_data": false,
+    "source": "v2.13 N-a（附錄 E2.1，含矛盾格）"
+   },
+   "joint_verdict_secondary_A": {
+    "verdict": "反方向點燃",
+    "why": "獨立一格，不併入 none（v0.7 教訓）",
+    "source": "v2.13 N-a（附錄 E2.1，含矛盾格）"
+   },
+   "joint_verdict_sensitivity_B": {
+    "verdict": "反方向點燃",
+    "why": "獨立一格，不併入 none（v0.7 教訓）",
+    "source": "v2.13 N-a（附錄 E2.1，含矛盾格）"
+   },
+   "sensitivity_bound_sentence": "本設計在最終題庫與量到的 σ_DiD=0.343 nats 下，每家族實際 n 對應的 80% 檢定力最小可偵測效應為 0.302 nats（純 fp32 臂，附錄 J7b）。低於 0.302 nats 的「無效應」不具資訊量。（本次觀察到的效應量小於該界線，因此本次的未點燃不得讀成「沒有效應」。）",
+   "frozen_narrative": "§11-B：在本設計的等價邊界內分不開記憶專屬與一般可預測性。等價邊界由 σ_DiD 與各家族實際 n 決定，非「沒有效應」。"
+  }
+ }
+}

@@ -1,0 +1,2517 @@
+{
+ "models": [
+  "EleutherAI/pythia-410m",
+  "EleutherAI/pythia-1b",
+  "EleutherAI/pythia-1.4b",
+  "allenai/OLMo-2-0425-1B"
+ ],
+ "cells": {
+  "verb_universal": {
+   "class": "verb",
+   "column": "universal",
+   "overall": {
+    "n_total_attempted": 31,
+    "n_entered": 14,
+    "n_adequacy_excluded": 0,
+    "n_pool_too_small_flagged": 3,
+    "n_other_error": 0,
+    "adequacy_excluded_items": [],
+    "pool_too_small_items": [
+     "L0N-09::allenai/OLMo-2-0425-1B",
+     "L0N-12::EleutherAI/pythia-1b",
+     "L0N-12::allenai/OLMo-2-0425-1B"
+    ],
+    "other_error_items": [],
+    "n_survivors_total": 259,
+    "n_candidates_total": 332,
+    "p_candidate_level": 0.7801204819277109,
+    "drop_median_nats": 1.4009429812431335,
+    "adequacy_floor_nats": 0.001434,
+    "condition_A_adequate": true,
+    "stop_rule_flagged_fraction": 0.0967741935483871,
+    "stop_rule_threshold": 0.4,
+    "stop_rule_triggered": false,
+    "per_item": {
+     "L0-11::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 24,
+      "n_candidates": 24,
+      "pool_too_small": false,
+      "selected_drop_launch": 1.7530153170228004,
+      "meets_adequacy": true
+     },
+     "L0-19::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     },
+     "L0-20::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     },
+     "L0N-06::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 18,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 2.5684213638305664,
+      "meets_adequacy": true
+     },
+     "L0N-09::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 23,
+      "n_candidates": 24,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.6887636780738831,
+      "meets_adequacy": true
+     },
+     "L0N-10::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-11::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     },
+     "L0N-12::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0-11::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 24,
+      "n_candidates": 24,
+      "pool_too_small": false,
+      "selected_drop_launch": 2.5205131955444813,
+      "meets_adequacy": true
+     },
+     "L0-19::EleutherAI/pythia-1b": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     },
+     "L0-20::EleutherAI/pythia-1b": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     },
+     "L0N-06::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 23,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 1.440198540687561,
+      "meets_adequacy": true
+     },
+     "L0N-09::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 23,
+      "n_candidates": 24,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.7418383359909058,
+      "meets_adequacy": true
+     },
+     "L0N-10::EleutherAI/pythia-1b": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-11::EleutherAI/pythia-1b": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     },
+     "L0N-12::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 1,
+      "n_candidates": 24,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.4926943778991699,
+      "meets_adequacy": true
+     },
+     "L0-11::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 23,
+      "n_candidates": 24,
+      "pool_too_small": false,
+      "selected_drop_launch": 2.6578496731817722,
+      "meets_adequacy": true
+     },
+     "L0-19::EleutherAI/pythia-1.4b": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     },
+     "L0-20::EleutherAI/pythia-1.4b": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     },
+     "L0N-06::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 19,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 1.4705256223678589,
+      "meets_adequacy": true
+     },
+     "L0N-09::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 23,
+      "n_candidates": 24,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.24504166841506958,
+      "meets_adequacy": true
+     },
+     "L0N-10::EleutherAI/pythia-1.4b": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-11::EleutherAI/pythia-1.4b": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     },
+     "L0N-12::EleutherAI/pythia-1.4b": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0-11::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 22,
+      "n_candidates": 24,
+      "pool_too_small": false,
+      "selected_drop_launch": 2.678834415972233,
+      "meets_adequacy": true
+     },
+     "L0-19::allenai/OLMo-2-0425-1B": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     },
+     "L0-20::allenai/OLMo-2-0425-1B": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     },
+     "L0N-06::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 23,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 1.361687421798706,
+      "meets_adequacy": true
+     },
+     "L0N-09::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 11,
+      "n_candidates": 24,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.11188128590583801,
+      "meets_adequacy": true
+     },
+     "L0N-11::allenai/OLMo-2-0425-1B": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     },
+     "L0N-12::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 2,
+      "n_candidates": 24,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.76568603515625,
+      "meets_adequacy": true
+     }
+    }
+   },
+   "L0": {
+    "n_total_attempted": 12,
+    "n_entered": 4,
+    "n_adequacy_excluded": 0,
+    "n_pool_too_small_flagged": 0,
+    "n_other_error": 0,
+    "adequacy_excluded_items": [],
+    "pool_too_small_items": [],
+    "other_error_items": [],
+    "n_survivors_total": 93,
+    "n_candidates_total": 96,
+    "p_candidate_level": 0.96875,
+    "drop_median_nats": 2.5891814343631268,
+    "adequacy_floor_nats": 0.001434,
+    "condition_A_adequate": true,
+    "stop_rule_flagged_fraction": 0.0,
+    "stop_rule_threshold": 0.4,
+    "stop_rule_triggered": false,
+    "per_item": {
+     "L0-11::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 24,
+      "n_candidates": 24,
+      "pool_too_small": false,
+      "selected_drop_launch": 1.7530153170228004,
+      "meets_adequacy": true
+     },
+     "L0-19::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     },
+     "L0-20::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     },
+     "L0-11::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 24,
+      "n_candidates": 24,
+      "pool_too_small": false,
+      "selected_drop_launch": 2.5205131955444813,
+      "meets_adequacy": true
+     },
+     "L0-19::EleutherAI/pythia-1b": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     },
+     "L0-20::EleutherAI/pythia-1b": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     },
+     "L0-11::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 23,
+      "n_candidates": 24,
+      "pool_too_small": false,
+      "selected_drop_launch": 2.6578496731817722,
+      "meets_adequacy": true
+     },
+     "L0-19::EleutherAI/pythia-1.4b": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     },
+     "L0-20::EleutherAI/pythia-1.4b": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     },
+     "L0-11::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 22,
+      "n_candidates": 24,
+      "pool_too_small": false,
+      "selected_drop_launch": 2.678834415972233,
+      "meets_adequacy": true
+     },
+     "L0-19::allenai/OLMo-2-0425-1B": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     },
+     "L0-20::allenai/OLMo-2-0425-1B": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     }
+    }
+   },
+   "L0N": {
+    "n_total_attempted": 19,
+    "n_entered": 10,
+    "n_adequacy_excluded": 0,
+    "n_pool_too_small_flagged": 3,
+    "n_other_error": 0,
+    "adequacy_excluded_items": [],
+    "pool_too_small_items": [
+     "L0N-09::allenai/OLMo-2-0425-1B",
+     "L0N-12::EleutherAI/pythia-1b",
+     "L0N-12::allenai/OLMo-2-0425-1B"
+    ],
+    "other_error_items": [],
+    "n_survivors_total": 166,
+    "n_candidates_total": 236,
+    "p_candidate_level": 0.7033898305084746,
+    "drop_median_nats": 0.7537621855735779,
+    "adequacy_floor_nats": 0.001434,
+    "condition_A_adequate": true,
+    "stop_rule_flagged_fraction": 0.15789473684210525,
+    "stop_rule_threshold": 0.4,
+    "stop_rule_triggered": false,
+    "per_item": {
+     "L0N-06::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 18,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 2.5684213638305664,
+      "meets_adequacy": true
+     },
+     "L0N-09::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 23,
+      "n_candidates": 24,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.6887636780738831,
+      "meets_adequacy": true
+     },
+     "L0N-10::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-11::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     },
+     "L0N-12::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-06::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 23,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 1.440198540687561,
+      "meets_adequacy": true
+     },
+     "L0N-09::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 23,
+      "n_candidates": 24,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.7418383359909058,
+      "meets_adequacy": true
+     },
+     "L0N-10::EleutherAI/pythia-1b": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-11::EleutherAI/pythia-1b": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     },
+     "L0N-12::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 1,
+      "n_candidates": 24,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.4926943778991699,
+      "meets_adequacy": true
+     },
+     "L0N-06::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 19,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 1.4705256223678589,
+      "meets_adequacy": true
+     },
+     "L0N-09::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 23,
+      "n_candidates": 24,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.24504166841506958,
+      "meets_adequacy": true
+     },
+     "L0N-10::EleutherAI/pythia-1.4b": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-11::EleutherAI/pythia-1.4b": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     },
+     "L0N-12::EleutherAI/pythia-1.4b": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-06::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 23,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 1.361687421798706,
+      "meets_adequacy": true
+     },
+     "L0N-09::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 11,
+      "n_candidates": 24,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.11188128590583801,
+      "meets_adequacy": true
+     },
+     "L0N-11::allenai/OLMo-2-0425-1B": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     },
+     "L0N-12::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 2,
+      "n_candidates": 24,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.76568603515625,
+      "meets_adequacy": true
+     }
+    }
+   }
+  },
+  "verb_corrected": {
+   "class": "verb",
+   "column": "corrected",
+   "overall": {
+    "n_total_attempted": 31,
+    "n_entered": 15,
+    "n_adequacy_excluded": 0,
+    "n_pool_too_small_flagged": 3,
+    "n_other_error": 0,
+    "adequacy_excluded_items": [],
+    "pool_too_small_items": [
+     "L0-19::allenai/OLMo-2-0425-1B",
+     "L0N-11::allenai/OLMo-2-0425-1B",
+     "L0N-12::allenai/OLMo-2-0425-1B"
+    ],
+    "other_error_items": [],
+    "n_survivors_total": 250,
+    "n_candidates_total": 298,
+    "p_candidate_level": 0.8389261744966443,
+    "drop_median_nats": 1.303269386291504,
+    "adequacy_floor_nats": 0.001434,
+    "condition_A_adequate": true,
+    "stop_rule_flagged_fraction": 0.0967741935483871,
+    "stop_rule_threshold": 0.4,
+    "stop_rule_triggered": false,
+    "per_item": {
+     "L0-11::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 23,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 1.5265459194779396,
+      "meets_adequacy": true
+     },
+     "L0-19::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0-20::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     },
+     "L0N-06::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 16,
+      "n_candidates": 22,
+      "pool_too_small": false,
+      "selected_drop_launch": 2.0702123641967773,
+      "meets_adequacy": true
+     },
+     "L0N-09::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 22,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.8301590085029602,
+      "meets_adequacy": true
+     },
+     "L0N-10::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-11::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     },
+     "L0N-12::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0-11::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 22,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 3.7234019227325916,
+      "meets_adequacy": true
+     },
+     "L0-19::EleutherAI/pythia-1b": {
+      "status": "no_candidate",
+      "error": "no_positive_drop"
+     },
+     "L0-20::EleutherAI/pythia-1b": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     },
+     "L0N-06::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 20,
+      "n_candidates": 22,
+      "pool_too_small": false,
+      "selected_drop_launch": 1.1037017107009888,
+      "meets_adequacy": true
+     },
+     "L0N-09::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 22,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.8615117073059082,
+      "meets_adequacy": true
+     },
+     "L0N-10::EleutherAI/pythia-1b": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-11::EleutherAI/pythia-1b": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     },
+     "L0N-12::EleutherAI/pythia-1b": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0-11::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 23,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 2.384902361780405,
+      "meets_adequacy": true
+     },
+     "L0-19::EleutherAI/pythia-1.4b": {
+      "status": "no_candidate",
+      "error": "no_positive_drop"
+     },
+     "L0-20::EleutherAI/pythia-1.4b": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     },
+     "L0N-06::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 19,
+      "n_candidates": 22,
+      "pool_too_small": false,
+      "selected_drop_launch": 1.7568439245224,
+      "meets_adequacy": true
+     },
+     "L0N-09::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 20,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.19339972734451294,
+      "meets_adequacy": true
+     },
+     "L0N-10::EleutherAI/pythia-1.4b": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-11::EleutherAI/pythia-1.4b": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     },
+     "L0N-12::EleutherAI/pythia-1.4b": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0-11::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 20,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 2.4708018079400063,
+      "meets_adequacy": true
+     },
+     "L0-19::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 1,
+      "n_candidates": 1,
+      "pool_too_small": true,
+      "selected_drop_launch": 1.2693764567375183,
+      "meets_adequacy": true
+     },
+     "L0-20::allenai/OLMo-2-0425-1B": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     },
+     "L0N-06::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 22,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 1.6490979194641113,
+      "meets_adequacy": true
+     },
+     "L0N-09::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 16,
+      "n_candidates": 24,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.09723109006881714,
+      "meets_adequacy": true
+     },
+     "L0N-11::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 1,
+      "n_candidates": 1,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.8834550380706787,
+      "meets_adequacy": true
+     },
+     "L0N-12::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 3,
+      "n_candidates": 22,
+      "pool_too_small": true,
+      "selected_drop_launch": 1.303269386291504,
+      "meets_adequacy": true
+     }
+    }
+   },
+   "L0": {
+    "n_total_attempted": 12,
+    "n_entered": 5,
+    "n_adequacy_excluded": 0,
+    "n_pool_too_small_flagged": 1,
+    "n_other_error": 0,
+    "adequacy_excluded_items": [],
+    "pool_too_small_items": [
+     "L0-19::allenai/OLMo-2-0425-1B"
+    ],
+    "other_error_items": [],
+    "n_survivors_total": 89,
+    "n_candidates_total": 93,
+    "p_candidate_level": 0.956989247311828,
+    "drop_median_nats": 2.384902361780405,
+    "adequacy_floor_nats": 0.001434,
+    "condition_A_adequate": true,
+    "stop_rule_flagged_fraction": 0.08333333333333333,
+    "stop_rule_threshold": 0.4,
+    "stop_rule_triggered": false,
+    "per_item": {
+     "L0-11::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 23,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 1.5265459194779396,
+      "meets_adequacy": true
+     },
+     "L0-19::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0-20::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     },
+     "L0-11::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 22,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 3.7234019227325916,
+      "meets_adequacy": true
+     },
+     "L0-19::EleutherAI/pythia-1b": {
+      "status": "no_candidate",
+      "error": "no_positive_drop"
+     },
+     "L0-20::EleutherAI/pythia-1b": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     },
+     "L0-11::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 23,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 2.384902361780405,
+      "meets_adequacy": true
+     },
+     "L0-19::EleutherAI/pythia-1.4b": {
+      "status": "no_candidate",
+      "error": "no_positive_drop"
+     },
+     "L0-20::EleutherAI/pythia-1.4b": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     },
+     "L0-11::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 20,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 2.4708018079400063,
+      "meets_adequacy": true
+     },
+     "L0-19::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 1,
+      "n_candidates": 1,
+      "pool_too_small": true,
+      "selected_drop_launch": 1.2693764567375183,
+      "meets_adequacy": true
+     },
+     "L0-20::allenai/OLMo-2-0425-1B": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     }
+    }
+   },
+   "L0N": {
+    "n_total_attempted": 19,
+    "n_entered": 10,
+    "n_adequacy_excluded": 0,
+    "n_pool_too_small_flagged": 2,
+    "n_other_error": 0,
+    "adequacy_excluded_items": [],
+    "pool_too_small_items": [
+     "L0N-11::allenai/OLMo-2-0425-1B",
+     "L0N-12::allenai/OLMo-2-0425-1B"
+    ],
+    "other_error_items": [],
+    "n_survivors_total": 161,
+    "n_candidates_total": 205,
+    "p_candidate_level": 0.7853658536585366,
+    "drop_median_nats": 0.9935783743858337,
+    "adequacy_floor_nats": 0.001434,
+    "condition_A_adequate": true,
+    "stop_rule_flagged_fraction": 0.10526315789473684,
+    "stop_rule_threshold": 0.4,
+    "stop_rule_triggered": false,
+    "per_item": {
+     "L0N-06::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 16,
+      "n_candidates": 22,
+      "pool_too_small": false,
+      "selected_drop_launch": 2.0702123641967773,
+      "meets_adequacy": true
+     },
+     "L0N-09::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 22,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.8301590085029602,
+      "meets_adequacy": true
+     },
+     "L0N-10::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-11::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     },
+     "L0N-12::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-06::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 20,
+      "n_candidates": 22,
+      "pool_too_small": false,
+      "selected_drop_launch": 1.1037017107009888,
+      "meets_adequacy": true
+     },
+     "L0N-09::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 22,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.8615117073059082,
+      "meets_adequacy": true
+     },
+     "L0N-10::EleutherAI/pythia-1b": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-11::EleutherAI/pythia-1b": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     },
+     "L0N-12::EleutherAI/pythia-1b": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-06::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 19,
+      "n_candidates": 22,
+      "pool_too_small": false,
+      "selected_drop_launch": 1.7568439245224,
+      "meets_adequacy": true
+     },
+     "L0N-09::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 20,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.19339972734451294,
+      "meets_adequacy": true
+     },
+     "L0N-10::EleutherAI/pythia-1.4b": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-11::EleutherAI/pythia-1.4b": {
+      "status": "no_candidate",
+      "error": "no_valid_corrupt_candidate"
+     },
+     "L0N-12::EleutherAI/pythia-1.4b": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-06::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 22,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 1.6490979194641113,
+      "meets_adequacy": true
+     },
+     "L0N-09::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 16,
+      "n_candidates": 24,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.09723109006881714,
+      "meets_adequacy": true
+     },
+     "L0N-11::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 1,
+      "n_candidates": 1,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.8834550380706787,
+      "meets_adequacy": true
+     },
+     "L0N-12::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 3,
+      "n_candidates": 22,
+      "pool_too_small": true,
+      "selected_drop_launch": 1.303269386291504,
+      "meets_adequacy": true
+     }
+    }
+   }
+  },
+  "proper_universal": {
+   "class": "proper",
+   "column": "universal",
+   "overall": {
+    "n_total_attempted": 49,
+    "n_entered": 34,
+    "n_adequacy_excluded": 0,
+    "n_pool_too_small_flagged": 17,
+    "n_other_error": 0,
+    "adequacy_excluded_items": [],
+    "pool_too_small_items": [
+     "L0-06::EleutherAI/pythia-1.4b",
+     "L0-06::EleutherAI/pythia-1b",
+     "L0-06::EleutherAI/pythia-410m",
+     "L0-06::allenai/OLMo-2-0425-1B",
+     "L0-10::EleutherAI/pythia-1.4b",
+     "L0-10::EleutherAI/pythia-1b",
+     "L0-10::EleutherAI/pythia-410m",
+     "L0-11::EleutherAI/pythia-1.4b",
+     "L0-11::EleutherAI/pythia-1b",
+     "L0-11::EleutherAI/pythia-410m",
+     "L0-17::EleutherAI/pythia-1.4b",
+     "L0-17::EleutherAI/pythia-1b",
+     "L0N-08::EleutherAI/pythia-1.4b",
+     "L0N-11::EleutherAI/pythia-1.4b",
+     "L0N-11::EleutherAI/pythia-1b",
+     "L0N-11::EleutherAI/pythia-410m",
+     "L0N-11::allenai/OLMo-2-0425-1B"
+    ],
+    "other_error_items": [],
+    "n_survivors_total": 550,
+    "n_candidates_total": 703,
+    "p_candidate_level": 0.7823613086770982,
+    "drop_median_nats": 0.2606097459793091,
+    "adequacy_floor_nats": 0.001434,
+    "condition_A_adequate": true,
+    "stop_rule_flagged_fraction": 0.3469387755102041,
+    "stop_rule_threshold": 0.4,
+    "stop_rule_triggered": false,
+    "per_item": {
+     "L0-03::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 23,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.04083236702717841,
+      "meets_adequacy": true
+     },
+     "L0-05::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 22,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 1.1937021017074585,
+      "meets_adequacy": true
+     },
+     "L0-06::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 1,
+      "n_candidates": 1,
+      "pool_too_small": true,
+      "selected_drop_launch": 1.1632041782140732,
+      "meets_adequacy": true
+     },
+     "L0-10::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 2,
+      "n_candidates": 4,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.02858138084411621,
+      "meets_adequacy": true
+     },
+     "L0-11::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 1,
+      "n_candidates": 1,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.7037328854203224,
+      "meets_adequacy": true
+     },
+     "L0-15::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0-17::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-02::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-03::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-04::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 24,
+      "n_candidates": 36,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.10333132743835449,
+      "meets_adequacy": true
+     },
+     "L0N-08::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_positive_drop"
+     },
+     "L0N-11::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 5,
+      "n_candidates": 13,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.14235901832580566,
+      "meets_adequacy": true
+     },
+     "L0-03::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 23,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.31826301664114,
+      "meets_adequacy": true
+     },
+     "L0-05::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 21,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 1.8618613332509995,
+      "meets_adequacy": true
+     },
+     "L0-06::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 1,
+      "n_candidates": 1,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.2401671838015318,
+      "meets_adequacy": true
+     },
+     "L0-10::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 2,
+      "n_candidates": 4,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.08013049513101578,
+      "meets_adequacy": true
+     },
+     "L0-11::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 1,
+      "n_candidates": 1,
+      "pool_too_small": true,
+      "selected_drop_launch": 2.0117904134094715,
+      "meets_adequacy": true
+     },
+     "L0-15::EleutherAI/pythia-1b": {
+      "status": "no_candidate",
+      "error": "no_positive_drop"
+     },
+     "L0-17::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 2,
+      "n_candidates": 23,
+      "pool_too_small": true,
+      "selected_drop_launch": 4.061891794204712,
+      "meets_adequacy": true
+     },
+     "L0N-02::EleutherAI/pythia-1b": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-03::EleutherAI/pythia-1b": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-04::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 32,
+      "n_candidates": 36,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.08122920989990234,
+      "meets_adequacy": true
+     },
+     "L0N-08::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 36,
+      "n_candidates": 46,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.4913923740386963,
+      "meets_adequacy": true
+     },
+     "L0N-11::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 3,
+      "n_candidates": 13,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.1641852855682373,
+      "meets_adequacy": true
+     },
+     "L0-03::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 23,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.06813951162621379,
+      "meets_adequacy": true
+     },
+     "L0-05::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 23,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 1.8432430922985077,
+      "meets_adequacy": true
+     },
+     "L0-06::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 1,
+      "n_candidates": 1,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.1300211250782013,
+      "meets_adequacy": true
+     },
+     "L0-10::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 2,
+      "n_candidates": 4,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.11590373516082764,
+      "meets_adequacy": true
+     },
+     "L0-11::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 1,
+      "n_candidates": 1,
+      "pool_too_small": true,
+      "selected_drop_launch": 1.5839673317968845,
+      "meets_adequacy": true
+     },
+     "L0-15::EleutherAI/pythia-1.4b": {
+      "status": "no_candidate",
+      "error": "no_positive_drop"
+     },
+     "L0-17::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 8,
+      "n_candidates": 23,
+      "pool_too_small": true,
+      "selected_drop_launch": 4.096466362476349,
+      "meets_adequacy": true
+     },
+     "L0N-02::EleutherAI/pythia-1.4b": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-03::EleutherAI/pythia-1.4b": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-04::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 33,
+      "n_candidates": 36,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.05502676963806152,
+      "meets_adequacy": true
+     },
+     "L0N-08::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 4,
+      "n_candidates": 46,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.026600122451782227,
+      "meets_adequacy": true
+     },
+     "L0N-11::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 8,
+      "n_candidates": 13,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.2586390972137451,
+      "meets_adequacy": true
+     },
+     "L0-03::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 23,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 1.0063005993142724,
+      "meets_adequacy": true
+     },
+     "L0-05::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 23,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.9553843438625336,
+      "meets_adequacy": true
+     },
+     "L0-06::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 1,
+      "n_candidates": 1,
+      "pool_too_small": true,
+      "selected_drop_launch": 1.4283362326677889,
+      "meets_adequacy": true
+     },
+     "L0-10::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 70,
+      "n_candidates": 70,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.10895109921693802,
+      "meets_adequacy": true
+     },
+     "L0-11::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 23,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.34940413385629654,
+      "meets_adequacy": true
+     },
+     "L0-14::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 23,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 1.8987870384007692,
+      "meets_adequacy": true
+     },
+     "L0-15::allenai/OLMo-2-0425-1B": {
+      "status": "no_candidate",
+      "error": "no_positive_drop"
+     },
+     "L0-17::allenai/OLMo-2-0425-1B": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-02::allenai/OLMo-2-0425-1B": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-03::allenai/OLMo-2-0425-1B": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-04::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 36,
+      "n_candidates": 38,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.22839975357055664,
+      "meets_adequacy": true
+     },
+     "L0N-08::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 44,
+      "n_candidates": 46,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.26258039474487305,
+      "meets_adequacy": true
+     },
+     "L0N-11::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 5,
+      "n_candidates": 15,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.19116544723510742,
+      "meets_adequacy": true
+     }
+    }
+   },
+   "L0": {
+    "n_total_attempted": 29,
+    "n_entered": 23,
+    "n_adequacy_excluded": 0,
+    "n_pool_too_small_flagged": 12,
+    "n_other_error": 0,
+    "adequacy_excluded_items": [],
+    "pool_too_small_items": [
+     "L0-06::EleutherAI/pythia-1.4b",
+     "L0-06::EleutherAI/pythia-1b",
+     "L0-06::EleutherAI/pythia-410m",
+     "L0-06::allenai/OLMo-2-0425-1B",
+     "L0-10::EleutherAI/pythia-1.4b",
+     "L0-10::EleutherAI/pythia-1b",
+     "L0-10::EleutherAI/pythia-410m",
+     "L0-11::EleutherAI/pythia-1.4b",
+     "L0-11::EleutherAI/pythia-1b",
+     "L0-11::EleutherAI/pythia-410m",
+     "L0-17::EleutherAI/pythia-1.4b",
+     "L0-17::EleutherAI/pythia-1b"
+    ],
+    "other_error_items": [],
+    "n_survivors_total": 320,
+    "n_candidates_total": 365,
+    "p_candidate_level": 0.8767123287671232,
+    "drop_median_nats": 0.9553843438625336,
+    "adequacy_floor_nats": 0.001434,
+    "condition_A_adequate": true,
+    "stop_rule_flagged_fraction": 0.41379310344827586,
+    "stop_rule_threshold": 0.4,
+    "stop_rule_triggered": true,
+    "per_item": {
+     "L0-03::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 23,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.04083236702717841,
+      "meets_adequacy": true
+     },
+     "L0-05::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 22,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 1.1937021017074585,
+      "meets_adequacy": true
+     },
+     "L0-06::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 1,
+      "n_candidates": 1,
+      "pool_too_small": true,
+      "selected_drop_launch": 1.1632041782140732,
+      "meets_adequacy": true
+     },
+     "L0-10::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 2,
+      "n_candidates": 4,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.02858138084411621,
+      "meets_adequacy": true
+     },
+     "L0-11::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 1,
+      "n_candidates": 1,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.7037328854203224,
+      "meets_adequacy": true
+     },
+     "L0-15::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0-17::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0-03::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 23,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.31826301664114,
+      "meets_adequacy": true
+     },
+     "L0-05::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 21,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 1.8618613332509995,
+      "meets_adequacy": true
+     },
+     "L0-06::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 1,
+      "n_candidates": 1,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.2401671838015318,
+      "meets_adequacy": true
+     },
+     "L0-10::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 2,
+      "n_candidates": 4,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.08013049513101578,
+      "meets_adequacy": true
+     },
+     "L0-11::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 1,
+      "n_candidates": 1,
+      "pool_too_small": true,
+      "selected_drop_launch": 2.0117904134094715,
+      "meets_adequacy": true
+     },
+     "L0-15::EleutherAI/pythia-1b": {
+      "status": "no_candidate",
+      "error": "no_positive_drop"
+     },
+     "L0-17::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 2,
+      "n_candidates": 23,
+      "pool_too_small": true,
+      "selected_drop_launch": 4.061891794204712,
+      "meets_adequacy": true
+     },
+     "L0-03::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 23,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.06813951162621379,
+      "meets_adequacy": true
+     },
+     "L0-05::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 23,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 1.8432430922985077,
+      "meets_adequacy": true
+     },
+     "L0-06::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 1,
+      "n_candidates": 1,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.1300211250782013,
+      "meets_adequacy": true
+     },
+     "L0-10::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 2,
+      "n_candidates": 4,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.11590373516082764,
+      "meets_adequacy": true
+     },
+     "L0-11::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 1,
+      "n_candidates": 1,
+      "pool_too_small": true,
+      "selected_drop_launch": 1.5839673317968845,
+      "meets_adequacy": true
+     },
+     "L0-15::EleutherAI/pythia-1.4b": {
+      "status": "no_candidate",
+      "error": "no_positive_drop"
+     },
+     "L0-17::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 8,
+      "n_candidates": 23,
+      "pool_too_small": true,
+      "selected_drop_launch": 4.096466362476349,
+      "meets_adequacy": true
+     },
+     "L0-03::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 23,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 1.0063005993142724,
+      "meets_adequacy": true
+     },
+     "L0-05::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 23,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.9553843438625336,
+      "meets_adequacy": true
+     },
+     "L0-06::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 1,
+      "n_candidates": 1,
+      "pool_too_small": true,
+      "selected_drop_launch": 1.4283362326677889,
+      "meets_adequacy": true
+     },
+     "L0-10::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 70,
+      "n_candidates": 70,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.10895109921693802,
+      "meets_adequacy": true
+     },
+     "L0-11::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 23,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.34940413385629654,
+      "meets_adequacy": true
+     },
+     "L0-14::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 23,
+      "n_candidates": 23,
+      "pool_too_small": false,
+      "selected_drop_launch": 1.8987870384007692,
+      "meets_adequacy": true
+     },
+     "L0-15::allenai/OLMo-2-0425-1B": {
+      "status": "no_candidate",
+      "error": "no_positive_drop"
+     },
+     "L0-17::allenai/OLMo-2-0425-1B": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     }
+    }
+   },
+   "L0N": {
+    "n_total_attempted": 20,
+    "n_entered": 11,
+    "n_adequacy_excluded": 0,
+    "n_pool_too_small_flagged": 5,
+    "n_other_error": 0,
+    "adequacy_excluded_items": [],
+    "pool_too_small_items": [
+     "L0N-08::EleutherAI/pythia-1.4b",
+     "L0N-11::EleutherAI/pythia-1.4b",
+     "L0N-11::EleutherAI/pythia-1b",
+     "L0N-11::EleutherAI/pythia-410m",
+     "L0N-11::allenai/OLMo-2-0425-1B"
+    ],
+    "other_error_items": [],
+    "n_survivors_total": 230,
+    "n_candidates_total": 338,
+    "p_candidate_level": 0.6804733727810651,
+    "drop_median_nats": 0.1641852855682373,
+    "adequacy_floor_nats": 0.001434,
+    "condition_A_adequate": true,
+    "stop_rule_flagged_fraction": 0.25,
+    "stop_rule_threshold": 0.4,
+    "stop_rule_triggered": false,
+    "per_item": {
+     "L0N-02::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-03::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-04::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 24,
+      "n_candidates": 36,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.10333132743835449,
+      "meets_adequacy": true
+     },
+     "L0N-08::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_positive_drop"
+     },
+     "L0N-11::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 5,
+      "n_candidates": 13,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.14235901832580566,
+      "meets_adequacy": true
+     },
+     "L0N-02::EleutherAI/pythia-1b": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-03::EleutherAI/pythia-1b": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-04::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 32,
+      "n_candidates": 36,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.08122920989990234,
+      "meets_adequacy": true
+     },
+     "L0N-08::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 36,
+      "n_candidates": 46,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.4913923740386963,
+      "meets_adequacy": true
+     },
+     "L0N-11::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 3,
+      "n_candidates": 13,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.1641852855682373,
+      "meets_adequacy": true
+     },
+     "L0N-02::EleutherAI/pythia-1.4b": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-03::EleutherAI/pythia-1.4b": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-04::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 33,
+      "n_candidates": 36,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.05502676963806152,
+      "meets_adequacy": true
+     },
+     "L0N-08::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 4,
+      "n_candidates": 46,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.026600122451782227,
+      "meets_adequacy": true
+     },
+     "L0N-11::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 8,
+      "n_candidates": 13,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.2586390972137451,
+      "meets_adequacy": true
+     },
+     "L0N-02::allenai/OLMo-2-0425-1B": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-03::allenai/OLMo-2-0425-1B": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-04::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 36,
+      "n_candidates": 38,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.22839975357055664,
+      "meets_adequacy": true
+     },
+     "L0N-08::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 44,
+      "n_candidates": 46,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.26258039474487305,
+      "meets_adequacy": true
+     },
+     "L0N-11::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 5,
+      "n_candidates": 15,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.19116544723510742,
+      "meets_adequacy": true
+     }
+    }
+   }
+  },
+  "proper_corrected": {
+   "class": "proper",
+   "column": "corrected",
+   "overall": {
+    "n_total_attempted": 49,
+    "n_entered": 33,
+    "n_adequacy_excluded": 0,
+    "n_pool_too_small_flagged": 14,
+    "n_other_error": 0,
+    "adequacy_excluded_items": [],
+    "pool_too_small_items": [
+     "L0-06::EleutherAI/pythia-1.4b",
+     "L0-06::EleutherAI/pythia-1b",
+     "L0-06::EleutherAI/pythia-410m",
+     "L0-06::allenai/OLMo-2-0425-1B",
+     "L0-10::EleutherAI/pythia-1.4b",
+     "L0-10::EleutherAI/pythia-410m",
+     "L0-11::EleutherAI/pythia-1.4b",
+     "L0-11::EleutherAI/pythia-1b",
+     "L0-11::EleutherAI/pythia-410m",
+     "L0N-08::EleutherAI/pythia-410m",
+     "L0N-11::EleutherAI/pythia-1.4b",
+     "L0N-11::EleutherAI/pythia-1b",
+     "L0N-11::EleutherAI/pythia-410m",
+     "L0N-11::allenai/OLMo-2-0425-1B"
+    ],
+    "other_error_items": [],
+    "n_survivors_total": 548,
+    "n_candidates_total": 727,
+    "p_candidate_level": 0.7537826685006878,
+    "drop_median_nats": 0.20976662635803223,
+    "adequacy_floor_nats": 0.001434,
+    "condition_A_adequate": true,
+    "stop_rule_flagged_fraction": 0.2857142857142857,
+    "stop_rule_threshold": 0.4,
+    "stop_rule_triggered": false,
+    "per_item": {
+     "L0-03::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 20,
+      "n_candidates": 21,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.07701474078930914,
+      "meets_adequacy": true
+     },
+     "L0-05::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 18,
+      "n_candidates": 18,
+      "pool_too_small": false,
+      "selected_drop_launch": 1.3667184114456177,
+      "meets_adequacy": true
+     },
+     "L0-06::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 5,
+      "n_candidates": 5,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.5203548520803452,
+      "meets_adequacy": true
+     },
+     "L0-10::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 8,
+      "n_candidates": 15,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.016506090760231018,
+      "meets_adequacy": true
+     },
+     "L0-11::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 6,
+      "n_candidates": 6,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.8360432162880898,
+      "meets_adequacy": true
+     },
+     "L0-15::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0-17::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-02::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-03::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-04::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 35,
+      "n_candidates": 46,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.09033846855163574,
+      "meets_adequacy": true
+     },
+     "L0N-08::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 8,
+      "n_candidates": 26,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.21800470352172852,
+      "meets_adequacy": true
+     },
+     "L0N-11::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 6,
+      "n_candidates": 20,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.03574681282043457,
+      "meets_adequacy": true
+     },
+     "L0-03::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 21,
+      "n_candidates": 21,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.28438787907361984,
+      "meets_adequacy": true
+     },
+     "L0-05::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 12,
+      "n_candidates": 18,
+      "pool_too_small": false,
+      "selected_drop_launch": 3.325282797217369,
+      "meets_adequacy": true
+     },
+     "L0-06::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 4,
+      "n_candidates": 5,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.05697655491530895,
+      "meets_adequacy": true
+     },
+     "L0-10::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 13,
+      "n_candidates": 15,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.04804801940917969,
+      "meets_adequacy": true
+     },
+     "L0-11::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 6,
+      "n_candidates": 6,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.9218275137245655,
+      "meets_adequacy": true
+     },
+     "L0-15::EleutherAI/pythia-1b": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0-17::EleutherAI/pythia-1b": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-02::EleutherAI/pythia-1b": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-03::EleutherAI/pythia-1b": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-04::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 35,
+      "n_candidates": 46,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.05796003341674805,
+      "meets_adequacy": true
+     },
+     "L0N-08::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 18,
+      "n_candidates": 26,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.58774733543396,
+      "meets_adequacy": true
+     },
+     "L0N-11::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 8,
+      "n_candidates": 20,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.1194312572479248,
+      "meets_adequacy": true
+     },
+     "L0-03::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 19,
+      "n_candidates": 21,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.03158916486427188,
+      "meets_adequacy": true
+     },
+     "L0-05::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 17,
+      "n_candidates": 18,
+      "pool_too_small": false,
+      "selected_drop_launch": 1.8405310809612274,
+      "meets_adequacy": true
+     },
+     "L0-06::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 4,
+      "n_candidates": 5,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.06426072120666504,
+      "meets_adequacy": true
+     },
+     "L0-10::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 8,
+      "n_candidates": 15,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.06437347829341888,
+      "meets_adequacy": true
+     },
+     "L0-11::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 6,
+      "n_candidates": 6,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.7805680073797703,
+      "meets_adequacy": true
+     },
+     "L0-15::EleutherAI/pythia-1.4b": {
+      "status": "no_candidate",
+      "error": "no_positive_drop"
+     },
+     "L0-17::EleutherAI/pythia-1.4b": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-02::EleutherAI/pythia-1.4b": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-03::EleutherAI/pythia-1.4b": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-04::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 32,
+      "n_candidates": 46,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.07209038734436035,
+      "meets_adequacy": true
+     },
+     "L0N-08::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 13,
+      "n_candidates": 26,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.31394290924072266,
+      "meets_adequacy": true
+     },
+     "L0N-11::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 2,
+      "n_candidates": 20,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.020167112350463867,
+      "meets_adequacy": true
+     },
+     "L0-03::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 21,
+      "n_candidates": 21,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.6882959315553308,
+      "meets_adequacy": true
+     },
+     "L0-05::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 21,
+      "n_candidates": 22,
+      "pool_too_small": false,
+      "selected_drop_launch": 2.127379983663559,
+      "meets_adequacy": true
+     },
+     "L0-06::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 2,
+      "n_candidates": 2,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.12147264904342592,
+      "meets_adequacy": true
+     },
+     "L0-10::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 57,
+      "n_candidates": 66,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.1595287099480629,
+      "meets_adequacy": true
+     },
+     "L0-11::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 17,
+      "n_candidates": 17,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.3573487773537636,
+      "meets_adequacy": true
+     },
+     "L0-14::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 22,
+      "n_candidates": 22,
+      "pool_too_small": false,
+      "selected_drop_launch": 2.5757278371602297,
+      "meets_adequacy": true
+     },
+     "L0-15::allenai/OLMo-2-0425-1B": {
+      "status": "no_candidate",
+      "error": "no_positive_drop"
+     },
+     "L0-17::allenai/OLMo-2-0425-1B": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-02::allenai/OLMo-2-0425-1B": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-03::allenai/OLMo-2-0425-1B": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-04::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 39,
+      "n_candidates": 47,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.18829870223999023,
+      "meets_adequacy": true
+     },
+     "L0N-08::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 35,
+      "n_candidates": 38,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.3259916305541992,
+      "meets_adequacy": true
+     },
+     "L0N-11::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 10,
+      "n_candidates": 21,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.20976662635803223,
+      "meets_adequacy": true
+     }
+    }
+   },
+   "L0": {
+    "n_total_attempted": 29,
+    "n_entered": 21,
+    "n_adequacy_excluded": 0,
+    "n_pool_too_small_flagged": 9,
+    "n_other_error": 0,
+    "adequacy_excluded_items": [],
+    "pool_too_small_items": [
+     "L0-06::EleutherAI/pythia-1.4b",
+     "L0-06::EleutherAI/pythia-1b",
+     "L0-06::EleutherAI/pythia-410m",
+     "L0-06::allenai/OLMo-2-0425-1B",
+     "L0-10::EleutherAI/pythia-1.4b",
+     "L0-10::EleutherAI/pythia-410m",
+     "L0-11::EleutherAI/pythia-1.4b",
+     "L0-11::EleutherAI/pythia-1b",
+     "L0-11::EleutherAI/pythia-410m"
+    ],
+    "other_error_items": [],
+    "n_survivors_total": 307,
+    "n_candidates_total": 345,
+    "p_candidate_level": 0.8898550724637682,
+    "drop_median_nats": 0.3573487773537636,
+    "adequacy_floor_nats": 0.001434,
+    "condition_A_adequate": true,
+    "stop_rule_flagged_fraction": 0.3103448275862069,
+    "stop_rule_threshold": 0.4,
+    "stop_rule_triggered": false,
+    "per_item": {
+     "L0-03::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 20,
+      "n_candidates": 21,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.07701474078930914,
+      "meets_adequacy": true
+     },
+     "L0-05::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 18,
+      "n_candidates": 18,
+      "pool_too_small": false,
+      "selected_drop_launch": 1.3667184114456177,
+      "meets_adequacy": true
+     },
+     "L0-06::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 5,
+      "n_candidates": 5,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.5203548520803452,
+      "meets_adequacy": true
+     },
+     "L0-10::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 8,
+      "n_candidates": 15,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.016506090760231018,
+      "meets_adequacy": true
+     },
+     "L0-11::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 6,
+      "n_candidates": 6,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.8360432162880898,
+      "meets_adequacy": true
+     },
+     "L0-15::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0-17::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0-03::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 21,
+      "n_candidates": 21,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.28438787907361984,
+      "meets_adequacy": true
+     },
+     "L0-05::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 12,
+      "n_candidates": 18,
+      "pool_too_small": false,
+      "selected_drop_launch": 3.325282797217369,
+      "meets_adequacy": true
+     },
+     "L0-06::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 4,
+      "n_candidates": 5,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.05697655491530895,
+      "meets_adequacy": true
+     },
+     "L0-10::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 13,
+      "n_candidates": 15,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.04804801940917969,
+      "meets_adequacy": true
+     },
+     "L0-11::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 6,
+      "n_candidates": 6,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.9218275137245655,
+      "meets_adequacy": true
+     },
+     "L0-15::EleutherAI/pythia-1b": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0-17::EleutherAI/pythia-1b": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0-03::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 19,
+      "n_candidates": 21,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.03158916486427188,
+      "meets_adequacy": true
+     },
+     "L0-05::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 17,
+      "n_candidates": 18,
+      "pool_too_small": false,
+      "selected_drop_launch": 1.8405310809612274,
+      "meets_adequacy": true
+     },
+     "L0-06::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 4,
+      "n_candidates": 5,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.06426072120666504,
+      "meets_adequacy": true
+     },
+     "L0-10::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 8,
+      "n_candidates": 15,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.06437347829341888,
+      "meets_adequacy": true
+     },
+     "L0-11::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 6,
+      "n_candidates": 6,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.7805680073797703,
+      "meets_adequacy": true
+     },
+     "L0-15::EleutherAI/pythia-1.4b": {
+      "status": "no_candidate",
+      "error": "no_positive_drop"
+     },
+     "L0-17::EleutherAI/pythia-1.4b": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0-03::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 21,
+      "n_candidates": 21,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.6882959315553308,
+      "meets_adequacy": true
+     },
+     "L0-05::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 21,
+      "n_candidates": 22,
+      "pool_too_small": false,
+      "selected_drop_launch": 2.127379983663559,
+      "meets_adequacy": true
+     },
+     "L0-06::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 2,
+      "n_candidates": 2,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.12147264904342592,
+      "meets_adequacy": true
+     },
+     "L0-10::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 57,
+      "n_candidates": 66,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.1595287099480629,
+      "meets_adequacy": true
+     },
+     "L0-11::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 17,
+      "n_candidates": 17,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.3573487773537636,
+      "meets_adequacy": true
+     },
+     "L0-14::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 22,
+      "n_candidates": 22,
+      "pool_too_small": false,
+      "selected_drop_launch": 2.5757278371602297,
+      "meets_adequacy": true
+     },
+     "L0-15::allenai/OLMo-2-0425-1B": {
+      "status": "no_candidate",
+      "error": "no_positive_drop"
+     },
+     "L0-17::allenai/OLMo-2-0425-1B": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     }
+    }
+   },
+   "L0N": {
+    "n_total_attempted": 20,
+    "n_entered": 12,
+    "n_adequacy_excluded": 0,
+    "n_pool_too_small_flagged": 5,
+    "n_other_error": 0,
+    "adequacy_excluded_items": [],
+    "pool_too_small_items": [
+     "L0N-08::EleutherAI/pythia-410m",
+     "L0N-11::EleutherAI/pythia-1.4b",
+     "L0N-11::EleutherAI/pythia-1b",
+     "L0N-11::EleutherAI/pythia-410m",
+     "L0N-11::allenai/OLMo-2-0425-1B"
+    ],
+    "other_error_items": [],
+    "n_survivors_total": 241,
+    "n_candidates_total": 382,
+    "p_candidate_level": 0.6308900523560209,
+    "drop_median_nats": 0.15386497974395752,
+    "adequacy_floor_nats": 0.001434,
+    "condition_A_adequate": true,
+    "stop_rule_flagged_fraction": 0.25,
+    "stop_rule_threshold": 0.4,
+    "stop_rule_triggered": false,
+    "per_item": {
+     "L0N-02::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-03::EleutherAI/pythia-410m": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-04::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 35,
+      "n_candidates": 46,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.09033846855163574,
+      "meets_adequacy": true
+     },
+     "L0N-08::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 8,
+      "n_candidates": 26,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.21800470352172852,
+      "meets_adequacy": true
+     },
+     "L0N-11::EleutherAI/pythia-410m": {
+      "status": "entered",
+      "n_survivors": 6,
+      "n_candidates": 20,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.03574681282043457,
+      "meets_adequacy": true
+     },
+     "L0N-02::EleutherAI/pythia-1b": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-03::EleutherAI/pythia-1b": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-04::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 35,
+      "n_candidates": 46,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.05796003341674805,
+      "meets_adequacy": true
+     },
+     "L0N-08::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 18,
+      "n_candidates": 26,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.58774733543396,
+      "meets_adequacy": true
+     },
+     "L0N-11::EleutherAI/pythia-1b": {
+      "status": "entered",
+      "n_survivors": 8,
+      "n_candidates": 20,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.1194312572479248,
+      "meets_adequacy": true
+     },
+     "L0N-02::EleutherAI/pythia-1.4b": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-03::EleutherAI/pythia-1.4b": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-04::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 32,
+      "n_candidates": 46,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.07209038734436035,
+      "meets_adequacy": true
+     },
+     "L0N-08::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 13,
+      "n_candidates": 26,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.31394290924072266,
+      "meets_adequacy": true
+     },
+     "L0N-11::EleutherAI/pythia-1.4b": {
+      "status": "entered",
+      "n_survivors": 2,
+      "n_candidates": 20,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.020167112350463867,
+      "meets_adequacy": true
+     },
+     "L0N-02::allenai/OLMo-2-0425-1B": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-03::allenai/OLMo-2-0425-1B": {
+      "status": "no_candidate",
+      "error": "no_candidate_within_rank_guard"
+     },
+     "L0N-04::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 39,
+      "n_candidates": 47,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.18829870223999023,
+      "meets_adequacy": true
+     },
+     "L0N-08::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 35,
+      "n_candidates": 38,
+      "pool_too_small": false,
+      "selected_drop_launch": 0.3259916305541992,
+      "meets_adequacy": true
+     },
+     "L0N-11::allenai/OLMo-2-0425-1B": {
+      "status": "entered",
+      "n_survivors": 10,
+      "n_candidates": 21,
+      "pool_too_small": true,
+      "selected_drop_launch": 0.20976662635803223,
+      "meets_adequacy": true
+     }
+    }
+   }
+  }
+ },
+ "delta_verb_proper_per_cell": {
+  "delta_verb_universal": {
+   "status": "OK",
+   "p_L0": 0.96875,
+   "p_L0N": 0.7033898305084746,
+   "delta_verb_pp": 26.53601694915254,
+   "ci_90_pp": [
+    9.017857142857144,
+    52.08333333333333
+   ],
+   "B": 20000,
+   "n_items_L0": 1,
+   "n_items_L0N": 3,
+   "midpoint_pp": 15.7,
+   "anchor_verb_subset_pp": 0.8,
+   "anchor_full_pool_pp": 30.6,
+   "note": "只備料：CI 端點與兩個既有錨並列，格①②③④映射由主線按 §2/§5 執行"
+  },
+  "delta_verb_corrected": {
+   "status": "OK",
+   "p_L0": 0.956989247311828,
+   "p_L0N": 0.7853658536585366,
+   "delta_verb_pp": 17.16233936532914,
+   "ci_90_pp": [
+    9.193840579710145,
+    71.6989247311828
+   ],
+   "B": 20000,
+   "n_items_L0": 2,
+   "n_items_L0N": 4,
+   "midpoint_pp": 15.7,
+   "anchor_verb_subset_pp": 0.8,
+   "anchor_full_pool_pp": 30.6,
+   "note": "只備料：CI 端點與兩個既有錨並列，格①②③④映射由主線按 §2/§5 執行"
+  },
+  "delta_proper_universal": {
+   "status": "OK",
+   "p_L0": 0.8767123287671232,
+   "p_L0N": 0.6804733727810651,
+   "delta_verb_pp": 19.623895598605813,
+   "ci_90_pp": [
+    -4.392099292673168,
+    45.588998443175925
+   ],
+   "B": 20000,
+   "n_items_L0": 7,
+   "n_items_L0N": 3,
+   "midpoint_pp": 15.7,
+   "anchor_verb_subset_pp": 0.8,
+   "anchor_full_pool_pp": 30.6,
+   "note": "只備料：CI 端點與兩個既有錨並列，格①②③④映射由主線按 §2/§5 執行"
+  },
+  "delta_proper_corrected": {
+   "status": "OK",
+   "p_L0": 0.8898550724637682,
+   "p_L0N": 0.6308900523560209,
+   "delta_verb_pp": 25.896502010774725,
+   "ci_90_pp": [
+    12.853754792504478,
+    50.06632991479157
+   ],
+   "B": 20000,
+   "n_items_L0": 6,
+   "n_items_L0N": 3,
+   "midpoint_pp": 15.7,
+   "anchor_verb_subset_pp": 0.8,
+   "anchor_full_pool_pp": 30.6,
+   "note": "只備料：CI 端點與兩個既有錨並列，格①②③④映射由主線按 §2/§5 執行"
+  }
+ },
+ "delta_pool_per_class": {
+  "delta_pool_verb": {
+   "status": "OK",
+   "p_L0": 0.7801204819277109,
+   "p_L0N": 0.8389261744966443,
+   "delta_verb_pp": -5.880569256893342,
+   "ci_90_pp": [
+    -33.00119543994924,
+    18.692416725726435
+   ],
+   "B": 20000,
+   "n_items_L0": 4,
+   "n_items_L0N": 6,
+   "midpoint_pp": 15.7,
+   "anchor_verb_subset_pp": 0.8,
+   "anchor_full_pool_pp": 30.6,
+   "note": "Δ_pool = p_通用 - p_修正（同類，L0+L0N 題集池化）。只備料：CI 端點與兩個既有錨並列，格①②③④映射由主線按 §2/§5 執行"
+  },
+  "delta_pool_proper": {
+   "status": "OK",
+   "p_L0": 0.7823613086770982,
+   "p_L0N": 0.7537826685006878,
+   "delta_verb_pp": 2.857864017641043,
+   "ci_90_pp": [
+    -14.378882640758674,
+    18.80218125738063
+   ],
+   "B": 20000,
+   "n_items_L0": 10,
+   "n_items_L0N": 9,
+   "midpoint_pp": 15.7,
+   "anchor_verb_subset_pp": 0.8,
+   "anchor_full_pool_pp": 30.6,
+   "note": "Δ_pool = p_通用 - p_修正（同類，L0+L0N 題集池化）。只備料：CI 端點與兩個既有錨並列，格①②③④映射由主線按 §2/§5 執行"
+  }
+ }
+}

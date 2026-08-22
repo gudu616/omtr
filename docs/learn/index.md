@@ -40,6 +40,16 @@
 - [24 裁決規則的可點燃性](24-decision-rule-reachability.md) — 預註冊的門要先確認打得開
 - [25 文獻檢索的紀律](25-literature-search.md) — 摘要只能篩選，判定必須全文；查詢字串要留檔
 
+### 第五部：因果階段的儀器與紀律
+- [26 腐蝕-恢復 patching](26-corrupt-and-restore.md) — 弄壞一個詞、把健康版本的內部狀態貼回去、量恢復多少
+- [27 TOST 等價檢定](27-tost-equivalence.md) — 「沒顯著差異」≠「相等」，要證明相等得反過來考兩次
+- [28 fp16 kernel 噪音](28-fp16-kernel-noise.md) — 儀器噪音比要量的東西大時，尺就不是尺
+- [29 共模抵消與它的失效](29-common-mode-cancellation.md) — 配對相減能消掉共同偏差，但這招會隨模型大小失效
+- [30 外推兩點法](30-two-point-extrapolation.md) — 跨模型外推的參數要在相隔一個量級的兩個模型上量過才可承載判定
+- [31 介面契約](31-interface-contracts.md) — 兩份程式對同一份資料的形狀想像不同就會靜默出錯，等它炸是最貴的做法
+- [32 Tokenizer 的記帳方式](32-tokenizer-bookkeeping.md) — BOS 與前導空格是逐模型家族的慣例；「大家都這樣」要逐家量，不能用印象推
+- [33 盲推對答案](33-blind-rederivation.md) — 裁量決定的檢查法：第二人不看理由從頭推；附「模擬估計量不是模擬擔憂」的顆粒度教訓
+
 ## 維護規則
 
 研究每進一個新階段，用到新概念就補卡；卡片內容與程式碼衝突時，以程式碼為準並回頭修卡。
