@@ -3,7 +3,7 @@
 > **Disclosure first:** this research was conceived, directed, and decided by the author;
 > literature review, engineering, experiments, review, verification and adversarial
 > red-teaming, and the papers' text were executed by AI agents (Claude) under the author's
-> direction. Full statement: [DISCLOSURE.md](DISCLOSURE.md).
+> direction. Full statement: [DISCLOSURE.md](DISCLOSURE.md) (English + Chinese).
 
 A study in two open-corpus model families (Pythia 410M–2.8B, OLMo-2-1B) asking whether
 verbatim recall can be distinguished from merely predictable generation — behaviorally,
@@ -11,8 +11,11 @@ corpus-side, or causally. Ground truth for "memorized" comes from corpus frequen
 queries (infini-gram) against the models' actual training corpora, with
 construction-matched and predictability-matched controls.
 
-**Current status — v1.0 (2026-08-22).** Three instrument generations, three preregistered
-non-separations. The causal phase intervened rather than watched: corrupt one prompt token,
+**Current status — v1.0 (2026-08-22).** Three instrument generations, none of which
+separated recall from predictable generation. The first was exploratory and not
+preregistered — it was withdrawn by its own self-test; the two that followed were
+preregistered, and so was each of the follow-up instruments reported with them.
+The causal phase intervened rather than watched: corrupt one prompt token,
 restore the clean activation at one of three layer bands, measure what the patch recovers.
 On the arm built to remove the predictability confound, recovering the memorized
 association and recovering a merely predictable continuation are **indistinguishable in
@@ -77,7 +80,8 @@ registration itself, as results.
 | [`docs/WRITEUP_v0.6_ZH.md`](docs/WRITEUP_v0.6_ZH.md) | Independent Chinese version of v0.6 (not a translation) |
 | [`docs/WRITEUP_v0.3_EN.md`](docs/WRITEUP_v0.3_EN.md) | The frozen version that passed adversarial review |
 | [`docs/PREREG_L0P.md`](docs/PREREG_L0P.md) | The L0P preregistration — committed before any L0P measurement existed |
-| [`planning/CAUSAL_PREREG_v1.md`](planning/CAUSAL_PREREG_v1.md) | The causal-phase preregistration (stage 1), frozen before any GPU measurement |
+| [`planning/CAUSAL_PREREG_v1.md`](planning/CAUSAL_PREREG_v1.md) **(Chinese)** | The causal-phase preregistration (stage 1), frozen before any GPU measurement. Its content is summarized in English in `docs/WRITEUP_v1.0_EN.md` §4 |
+| [`docs/CORRECTION_20260821_ANCHOR.md`](docs/CORRECTION_20260821_ANCHOR.md) **(English + Chinese)** | The published v0.7.1 correction: what the "corpus duplication counts" anchor actually measures |
 
 ## Verify the numbers yourself
 
@@ -123,16 +127,17 @@ the v0.7.1 correction).
   reconciliation gate, and the script that assembles this bundle
 - `battery/` — the 104-item task battery (v2.1) with per-corpus verification evidence
 - `planning/` — the causal-phase preregistration
-  ([`planning/CAUSAL_PREREG_v1.md`](planning/CAUSAL_PREREG_v1.md)) and the frozen pairing
-  table used at run time (`planning/battery_expansion/`)
+  ([`planning/CAUSAL_PREREG_v1.md`](planning/CAUSAL_PREREG_v1.md), **Chinese**; summarized
+  in English in the paper's §4) and the frozen pairing table used at run time
+  (`planning/battery_expansion/`)
 - `results/` — raw per-item outputs, analyses, figures; `results/causal/` holds the
   frozen verdict outputs the v1.0 paper quotes
 - `docs/` — papers, item-level appendix, per-entry citation verification log
-  ([`docs/CITATIONS_VERIFIED.md`](docs/CITATIONS_VERIFIED.md)), 33 plain-language
-  learning cards (`docs/learn/`, Chinese)
+  ([`docs/CITATIONS_VERIFIED.md`](docs/CITATIONS_VERIFIED.md))
 - `notes/` — the two AI-oriented briefings named above
-- [`PROCESS_LOG.md`](PROCESS_LOG.md) — the full process log the papers cite, including
-  every mistake we made and fixed
+- [`PROCESS_LOG.md`](PROCESS_LOG.md) **(Chinese)** — the full process log the papers
+  cite, including every mistake we made and fixed. English readers: §2 and §9 of
+  `docs/WRITEUP_v1.0_EN.md` summarize what it records
 - `RUNS.md` — exact per-model run configurations
 
 Some working records referenced by the papers are internal and do not ship (they are named
@@ -140,7 +145,9 @@ as such where they are cited). Every value that carries a verdict is quoted in t
 itself, so no claim here rests on a file you cannot open. Shipped harness copies redact
 a few internal-process comment phrases; execution-identical — the code logic matches the
 frozen originals character for character, only a handful of source-code comments were
-edited to remove internal workflow terminology.
+edited to remove internal workflow terminology. The plain-language concept cards that
+accompany this project are likewise withheld from this release pending English
+translation.
 
 ## Licenses
 

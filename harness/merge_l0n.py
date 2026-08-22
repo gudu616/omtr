@@ -8,6 +8,7 @@ import numpy as np
 PROJ = Path(__file__).resolve().parent.parent
 RAW = PROJ / "results" / "raw"
 NEW = PROJ / "results" / "raw_l0n_v21"
+ARCHIVE_RAW = PROJ / "archive" / "raw"  # 歷史對照組備份的落點（GPT 二審後移出 results/）
 
 TAGS = ["EleutherAI_pythia-410m", "EleutherAI_pythia-1b", "EleutherAI_pythia-1.4b",
         "EleutherAI_pythia-2.8b", "allenai_OLMo-2-0425-1B"]
@@ -28,7 +29,8 @@ def main():
         if not (main_p.exists() and new_p.exists()):
             print(f"skip {tag}: missing {'main' if not main_p.exists() else 'new'}")
             continue
-        shutil.copy2(main_p, main_p.with_suffix(".json.bak_pre_v21"))
+        ARCHIVE_RAW.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(main_p, ARCHIVE_RAW / f"pilot_{tag}.json.bak_pre_v21")
         main = json.load(open(main_p, encoding="utf-8"))
         new = json.load(open(new_p, encoding="utf-8"))
         kept = [r for r in main["records"] if r.get("level") != "L0N"]

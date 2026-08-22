@@ -2,7 +2,8 @@
 
 Reviewer: night-shift adversarial verification pass. Date: 2026-08-20.
 Inputs: `results/night/tf_depth_*.json` (R1), `results/raw/pilot_*.json` (frozen greedy
-pilot), `results/analysis_*.json`, `results/followup_report.json`, `battery/battery.json`,
+pilot), `results/analysis_*.json`, `archive/followup_report.json` (relocated since this
+pass was written; historical, not current canonical), `battery/battery.json`,
 `battery/l0_verification.json`. Scripts: `results/night/R1_verify_part1.py`, `R1_verify_part2.py`.
 All numbers below were recomputed from source; none are quoted from the R1 summary.
 
@@ -121,7 +122,7 @@ Cross-check that the x-variable is unchanged between the greedy pilot and R1
 Two-sided p<.05 in 1/5 models: ['OLMo-2-0425-1B']
 One-sided p<.05 in 3/5 models: ['pythia-410m', 'pythia-1b', 'OLMo-2-0425-1B']
 
-Same test on the reviewed greedy numbers (from results/followup_report.json T1):
+Same test on the reviewed greedy numbers (from archive/followup_report.json T1):
 
 | model | greedy rho L0 | greedy rho L0N | z | p |
 |---|---|---|---|---|

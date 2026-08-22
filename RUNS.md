@@ -64,14 +64,14 @@ python harness/merge_l0n.py
 ```
 
 `harness/merge_l0n.py` backs up each pre-merge file to
-`results/raw/pilot_<model>.json.bak_pre_v21`, drops the superseded L0N records
+`archive/raw/pilot_<model>.json.bak_pre_v21`, drops the superseded L0N records
 from the main file, and appends the v2.1 ones (with matching merges of the two
 `.npz` residual-stream files). The `.bak_pre_v21` files are physical evidence
 that the control rebuild predates the adversarial review of the results — keep
-them; do not delete or silently overwrite them. (In the shipped package these
-already-generated backup files ship at `archive/raw/`, not `results/raw/` —
-they are historical evidence, not a current canonical input; a fresh run of
-the command above would still write them to `results/raw/` as described.)
+them; do not delete or silently overwrite them. They live in `archive/`, not
+`results/raw/` — historical evidence, not a current canonical input; a fresh
+run of the command above writes there too, since this is a one-time historical
+merge (the v2.1 L0N rebuild), not a step in the current pipeline.
 
 ## Reproducibility caveats
 

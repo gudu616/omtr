@@ -6,19 +6,24 @@
 
 ## What this work is
 
-An independent, preregistered attempt to distinguish **recall**
+An independent attempt to distinguish **recall**
 (verbatim memorization) from **ideation** (predictable generation) in
 small open LLMs (Pythia 410M–1.4B fp32 adjudication arm, 3.4× span;
 plus 2.8B descriptive and OLMo-2-1B; 6.8× full span — under one order
 of magnitude, so **no scale claims are made or licensed**). Author:
-Leo Gudu. Consumer hardware (8GB GPU). All criteria were
-frozen before the data existed; what you can verify from outside is
-the Zenodo version chain's timestamps, the public repository, and the
+Leo Gudu. Consumer hardware (8GB GPU). **The first generation was
+exploratory and not preregistered** (and was withdrawn by its own
+self-test); from the second generation onward, criteria were frozen
+before the data existed. What you can verify from outside is the
+Zenodo version chain's timestamps, the public repository, and the
 two preregistration documents shipped with it — `docs/PREREG_L0P.md`
-and `planning/CAUSAL_PREREG_v1.md` (the causal phase's freeze commits
-and its second-stage freeze record stay in a local history: a record,
-not a reference you can resolve; every value it froze is quoted in the
-writeup's §4). One published correction (v0.7.1) was
+(shipped as frozen) and `planning/CAUSAL_PREREG_v1.md` (**a public
+rendition**: scientific content unchanged, internal workflow
+references visibly masked in place; the frozen original stays a local
+record). The causal phase's freeze commits and its second-stage freeze
+record likewise stay in a local history: a record, not a reference you
+can resolve; every value that record froze is quoted in the writeup's
+§4. One published correction (v0.7.1) was
 issued by the author against the author's own anchor.
 
 ## The findings, with their qualifiers welded on

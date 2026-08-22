@@ -191,7 +191,7 @@ P("increment in explained variance. Both, side by side, tf vs greedy.")
 P("")
 P("| model | tf dz (L0-L0N) | greedy dz | tf dR2 cond | tf partial rho cond\\|gold |")
 P("|---|---|---|---|---|")
-fup = json.load(open(PROJ / "results" / "followup_report.json", encoding="utf-8"))
+fup = json.load(open(PROJ / "archive" / "followup_report.json", encoding="utf-8"))
 for t in TAGS:
     l0, l0n = sub(t, "L0"), sub(t, "L0N")
     r0 = spearmanr(col(l0, G), col(l0, D))[0]; r1 = spearmanr(col(l0n, G), col(l0n, D))[0]

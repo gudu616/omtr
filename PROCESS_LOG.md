@@ -15,6 +15,11 @@
 > memorization can be separated from ordinary predictability. Superseded passages are
 > kept verbatim rather than rewritten — showing how the thinking changed is what this
 > log is for. For what the work currently claims, read `docs/WRITEUP_v1.0_EN.md`.
+>
+> **This log is written in Chinese.** If you read only English, the two sections
+> that summarize what it records are `docs/WRITEUP_v1.0_EN.md` **§2** (the three
+> instrument generations, in order) and **§9** (the corrections history — every
+> reversal, with what was wrong and what replaced it).
 
 > 這份文件用白話文記錄整個研究的製作過程：每一步做了什麼、為什麼這樣做、
 > 翻了什麼車、從裡面學到什麼。技術細節放在程式碼與 `RUNS.md`；這裡負責把

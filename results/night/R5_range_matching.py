@@ -2,7 +2,8 @@
 
 Scoped to the frozen claim: within-condition dose-response on depth_tau_0.1 from
 results/raw/pilot_*.json, the values shipped in results/analysis_*.json and
-results/followup_report.json. Asks whether "the matched control stayed flat" is a
+archive/followup_report.json (relocated since this pass was written). Asks whether
+"the matched control stayed flat" is a
 property of the control condition or of its restricted gold range / tied depth values.
 """
 import json

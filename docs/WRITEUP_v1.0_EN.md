@@ -1,6 +1,6 @@
 # Recall is not separable from predictability in small open LLMs
 
-### Three instrument generations, three preregistered non-separations, and a corpus-side measurement of a reason it is hard here
+### Three instrument generations — the first exploratory, the later two preregistered — three failures to separate, and a corpus-side measurement of a reason it is hard here
 
 **Leo Gudu** · 2026-08-22 · v1.0
 
@@ -13,9 +13,10 @@ under preregistered protocols; every number carries a rerun command.*
 
 Can verbatim recall be told apart from plausible generation inside a small
 open-corpus language model? This document reports the end state of a project
-that asked that question three times with three different instruments, froze
-its decision rules before each look at the data, and got a separation out of
-none of them.
+that asked that question three times with three different instruments and got a
+separation out of none of them. The first generation was exploratory and not
+preregistered; from the second onward, the decision rules were frozen before
+each look at the data.
 
 The first instrument — a threshold-crossing "convergence depth" read off the
 logit lens — produced a significant, externally anchored, five-run correlation,
@@ -89,6 +90,11 @@ reason is measurable rather than merely asserted.
 ## 2. Three instrument generations and their verdicts
 
 ### 2.1 Generation one: convergence depth (v0.5 → v0.6) — withdrawn by self-test
+
+**This generation was exploratory and not preregistered** — the within-condition
+contrast, the threshold, and the comparison framing were all chosen after a
+pooled analysis had been inspected, and the sequence is in the process log.
+Preregistration begins with generation two.
 
 The first instrument scored, for each item, the layer at which the model's
 next-token distribution stopped changing by more than a fixed 0.1-nat KL
@@ -246,11 +252,14 @@ them, and it also fails.
 
 ### 4.1 What was done and what was frozen first
 
-The causal phase does what v0.5 committed to: corrupt a single real-word token
-in the prompt, restore the clean run's residual state at one of three layer
-bands (early / mid / late) at the cue neighbourhood, and measure how much of
-the model's teacher-forced gold log-probability over the first two continuation
-tokens (ΔY, in nats) the patch recovers. Corruption strength is calibrated per
+v0.5 committed to a *direction* — that the next phase would move from observing
+to intervening, by activation patching — and named a kill condition for it. It
+did not specify the operation. Everything operational below was defined and
+frozen afterwards, in the causal preregistration and its second stage: corrupt a
+single real-word token in the prompt, restore the clean run's residual state at
+one of three layer bands (early / mid / late) at the cue neighbourhood, and
+measure how much of the model's teacher-forced gold log-probability over the
+first two continuation tokens (ΔY, in nats) the patch recovers. Corruption strength is calibrated per
 item at the q = 0.75 quantile of surviving candidates, with a top-50 rank
 guard.
 
@@ -906,7 +915,7 @@ document requires trusting the process that produced it.
   `results/gate/gate_decay.json` and `battery/l0_verification.json`.
   Depth-instrument reversal: `results/relative_depth/`.
 - **Environment.** Python 3.12 virtual environment at the repository root,
-  torch cu126, one 8 GB consumer GPU; the fp32 paths that carry the
+  torch cu124, one 8 GB consumer GPU; the fp32 paths that carry the
   adjudication run on CPU where they must.
 - **Freeze order is part of the evidence, and here is exactly how much of it
   you can check.** What is independently verifiable from published artifacts is
@@ -935,10 +944,16 @@ v0.7.1 (the last of which is the public anchor correction, DOI
 
 ## Closing
 
-This document reports one positive corpus-side measurement, one instrument
-withdrawn by its own self-test, three preregistered non-separations, and one
-hypothesis rejected on a single fragile cell. The negative results are the
-product, not the residue.
+This document reports one positive corpus-side measurement; a first-generation
+instrument — exploratory, not preregistered — withdrawn by its own self-test;
+three preregistered tests that each failed to separate recall from
+predictability — the crossed control of generation two, the causal phase of
+generation three, and the position test run inside that same phase; and one
+hypothesis rejected on a single fragile cell. (The subtitle's count is of
+*generations*, three, of which the first was not preregistered; the count here
+is of *preregistered tests*, also three, because generation three contributed
+two of them. The two counts are of different things.) The
+negative results are the product, not the residue.
 
 The question "can recall be told apart from ideation in a small open model?"
 now has a specific answer rather than a vague one: not with these three

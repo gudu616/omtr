@@ -134,8 +134,8 @@ P(f"One-sided p<.05 in {len(sig1)}/5 models: {sig1 or 'none'}")
 P("")
 
 # same for greedy, for comparison
-P("Same test on the reviewed greedy numbers (from results/followup_report.json T1):")
-fup = json.load(open(PROJ / "results" / "followup_report.json", encoding="utf-8"))
+P("Same test on the reviewed greedy numbers (from archive/followup_report.json T1):")
+fup = json.load(open(PROJ / "archive" / "followup_report.json", encoding="utf-8"))
 P("")
 P("| model | greedy rho L0 | greedy rho L0N | z | p |")
 P("|---|---|---|---|---|")

@@ -4,13 +4,17 @@
 這支程式讓那句話變成可執行的斷言，而不是一句自我宣告。
 
 鐵律——只讀原始資料：
-  results/raw/pilot_*.json（逐項紀錄）＋ *.bak_pre_v21（v2.1 前的對照組，供歷史值對帳）
+  results/raw/pilot_*.json（逐項紀錄，current canonical——每次重跑會更新這裡）
+  archive/raw/*.bak_pre_v21（v2.1 前的對照組，供歷史值對帳；historical——
+    不是現行輸入，重跑不會改它，只用來核對「這個舊數字當時確實是這樣」）
   battery/battery.json、battery/l0_verification.json（題庫與語料查證）
-  results/novelty_report.json（L5 溯源查詢的原始回傳；frac_present 是量測值不是統計量，
-    而且 infini-gram 查詢無法離線重跑，所以它算 primary，不算中間值）
-**絕不**讀 results/followup_report.json 或 results/analysis_*.json：那兩份存的是
-`round(rho, 3)` 之後的中間值，拿它當真相會二次進位，等於認證掉自己要抓的錯
-（審查團就有兩位審查員被 followup_report.json 的 0.645 騙過）。
+  archive/novelty_report.json（L5 溯源查詢的原始回傳，historical；frac_present
+    是量測值不是統計量，而且 infini-gram 查詢無法離線重跑，所以它算 primary，
+    不算中間值——歷史位置不改變它的 primary 地位，只是不再放在 results/ 底下）
+**絕不**讀 archive/followup_report.json（已遷移，historical，不在 results/ 底下）
+或 results/analysis_*.json：那兩份存的是 `round(rho, 3)` 之後的中間值，拿它當
+真相會二次進位，等於認證掉自己要抓的錯（審查團就有兩位審查員被
+followup_report.json 的 0.645 騙過）。
 
 兩層覆蓋，缺一不可：
   1. anchor 檢查——認得句子，能判斷「這個位置該放哪個統計量」，最精確。
@@ -19,10 +23,11 @@
      值域掃描是那時候唯一還在工作的東西，也是「0 命中卻印通過」的解藥。
 
 用法：
-    .venv/Scripts/python.exe harness/reconcile.py docs/WRITEUP_v0.5_EN.md
-    .venv/Scripts/python.exe harness/reconcile.py docs/WRITEUP_v0.5_EN.md docs/learn/*.md
+    .venv/Scripts/python.exe harness/reconcile.py docs/WRITEUP_v0.7_EN.md
     .venv/Scripts/python.exe harness/reconcile.py --dump-stats      # 印出全部重算值
-    .venv/Scripts/python.exe harness/reconcile.py --list-uncovered docs/learn/08-kl-depth.md
+    .venv/Scripts/python.exe harness/reconcile.py --list-uncovered docs/WRITEUP_v0.7_EN.md
+    # docs/learn/*.md 範例已移除：作者令 B2（2026-08-22）該目錄整批不出貨
+    # （全中文、待英譯），倉內原檔還在、對帳邏輯仍可對它跑，只是不寫進用法範例
 
 離開碼：0 = 全部對帳通過；1 = 有不符；2 = 用法或資料錯誤。
 
@@ -81,16 +86,18 @@ class Raw:
                               json.load(open(ver_path, encoding="utf-8"))}
                              if ver_path.exists() else None)
         # v2.1 前的 raw：F17 要公布的舊對照組相關就從這裡重算，不是抄舊報告
+        # （historical——archive/，不是 results/。current canonical 輸入才在 results/）
         self.pre_v21 = {}
         for short, tag in TAGS.items():
-            p = proj / "results" / "raw" / f"pilot_{tag}.json.bak_pre_v21"
+            p = proj / "archive" / "raw" / f"pilot_{tag}.json.bak_pre_v21"
             if p.exists():
                 self.pre_v21[short] = [r for r in json.load(open(p, encoding="utf-8"))["records"]
                                        if "error" not in r]
-        nov = proj / "results" / "novelty_report.json"
+        nov = proj / "archive" / "novelty_report.json"
         self.novelty = json.load(open(nov, encoding="utf-8")) if nov.exists() else None
         # 盲評分數：逐題 pass/score 的原始評分，不是統計量，所以算 primary
-        jp = proj / "results" / "judge_scores.json"
+        # （historical——archive/；跟上面兩項同一批 v1 release 修訂單項次 1 遷移）
+        jp = proj / "archive" / "judge_scores.json"
         self.judge = json.load(open(jp, encoding="utf-8"))["scores"] if jp.exists() else None
 
     def level(self, short: str, lv: str):

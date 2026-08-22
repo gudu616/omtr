@@ -7,8 +7,8 @@
     },
     {
       "path": "RUNS.md",
-      "bytes": 4439,
-      "sha256": "c7ff5b2f29c1913581146abe7e37be40a4f8ddded5a26736da9c86419cad7bc6"
+      "bytes": 4434,
+      "sha256": "840051aa46964b5e153c91e5f8265b83843e9f751b2d7a089ef6dea1f496c6bc"
     },
     {
       "path": "LICENSE-CODE.md",
@@ -86,21 +86,6 @@
       "sha256": "36e6ee5ba887a7da72517ae9f617a5b3f5661418c19c27b9173a87d98552cfc1"
     },
     {
-      "path": "results/followup_report.json",
-      "bytes": 4107,
-      "sha256": "e2b3dfc6d59b2face852995336f1a1d0b3282d75c561d9e372ffbf25fb7aea6b"
-    },
-    {
-      "path": "archive/novelty_report.json",
-      "bytes": 11213,
-      "sha256": "a8bd09cbdc790965f77f95438e81e1cf86c6d97e901923113b8bf6d75320d0be"
-    },
-    {
-      "path": "archive/judge_scores.json",
-      "bytes": 36824,
-      "sha256": "b3a57c1d4b336ddaa136725d4e39603abe2cfe459477cd732ac2a9e462e9d258"
-    },
-    {
       "path": "docs/CORRECTION_20260821_ANCHOR.md",
       "bytes": 10063,
       "sha256": "555c3e29b0789ce2cb196f3d7c655b7e1d55b82263e7494f2bd41e4b3a06c42c"
@@ -112,18 +97,18 @@
     },
     {
       "path": "docs/WRITEUP_v1.0_EN.md",
-      "bytes": 55351,
-      "sha256": "ca467dee7435e33ddacc26daddff8dd4b0a5d2ad56ec70c8b20164a1b1df94e7"
+      "bytes": 56502,
+      "sha256": "2756560a34858d33a9da20cbde8c0f728e4692cba774ead284ee394703964b93"
     },
     {
       "path": "notes/FOR_YOUR_AI.md",
-      "bytes": 4600,
-      "sha256": "3ae825a7a3960bb40c9ed39d807fcacac387c84052f3af3c39aa9d53e73c654b"
+      "bytes": 4909,
+      "sha256": "3a81043e0a46fe2ea72eca834ff8c41fda008aa060cf23fe1f1bcf1eb7373713"
     },
     {
       "path": "notes/AI_READER_GUIDE.md",
-      "bytes": 5838,
-      "sha256": "30599737253647522b84b42e0c15c0d929e96d5f79e749f2922e942d463ba79f"
+      "bytes": 6537,
+      "sha256": "b271805d6cb7183216511b53e1394bd08b701a2742e609432db62ceb90f45ce5"
     },
     {
       "path": "planning/CAUSAL_PREREG_v1.md",
@@ -194,6 +179,21 @@
       "path": "archive/README.md",
       "bytes": 247,
       "sha256": "5775763b4a7a81c528ded3f1d503bd1e0f0368e5d05bcfef09450ff88f5cdfb0"
+    },
+    {
+      "path": "archive/judge_scores.json",
+      "bytes": 36824,
+      "sha256": "b3a57c1d4b336ddaa136725d4e39603abe2cfe459477cd732ac2a9e462e9d258"
+    },
+    {
+      "path": "archive/novelty_report.json",
+      "bytes": 11213,
+      "sha256": "a8bd09cbdc790965f77f95438e81e1cf86c6d97e901923113b8bf6d75320d0be"
+    },
+    {
+      "path": "archive/followup_report.json",
+      "bytes": 4107,
+      "sha256": "e2b3dfc6d59b2face852995336f1a1d0b3282d75c561d9e372ffbf25fb7aea6b"
     },
     {
       "path": "harness/analyze_pilot.py",
@@ -272,8 +272,8 @@
     },
     {
       "path": "harness/check_l5_novelty.py",
-      "bytes": 2471,
-      "sha256": "2d62387c8979645ad46637d345bc3bfed56d0706227eb7b11823ccf1aab1333a"
+      "bytes": 2668,
+      "sha256": "c6b9ecb3dcd3f054e59aee9c012cb38da63e76d507c9a0c26ddaac7d82319609"
     },
     {
       "path": "harness/followup_analysis.py",
@@ -317,8 +317,8 @@
     },
     {
       "path": "harness/merge_l0n.py",
-      "bytes": 1802,
-      "sha256": "62b26abd19b0fbcb532739598abb78843ef7d9f7a3156927138bb2314790cee0"
+      "bytes": 1970,
+      "sha256": "7b3e6c8d17b28be530ad7931c8f93900464e41b7ea7719ff7293f65ddfa241a6"
     },
     {
       "path": "harness/pooled_anchor_analysis.py",
@@ -337,8 +337,8 @@
     },
     {
       "path": "harness/reconcile.py",
-      "bytes": 88422,
-      "sha256": "b1f99170878aa3c747d698ec439f2c4ef05eac1366817036623fea35e88ec38c"
+      "bytes": 89092,
+      "sha256": "6bb056bbe22e4361a715b1a699930c72faf18b6e104e6f28ff7e7b605b4ab956"
     },
     {
       "path": "harness/relative_depth_analysis.py",
@@ -412,173 +412,8 @@
     },
     {
       "path": "docs/CITATIONS_VERIFIED.md",
-      "bytes": 11010,
-      "sha256": "30f35b03479175b235c789a2c7c9ae79410491add9ef779cb9b44ed0ee025026"
-    },
-    {
-      "path": "docs/learn/01-next-token.md",
-      "bytes": 4728,
-      "sha256": "2ce917a0daec3f66304768cc5e8c28812dc149edc7109eb99b2baf43dec5c260"
-    },
-    {
-      "path": "docs/learn/02-tokenizer.md",
-      "bytes": 5663,
-      "sha256": "a3041f1c16d6de31f17501132acab70f3aa08da941aee5a555cb08667050547a"
-    },
-    {
-      "path": "docs/learn/03-base-vs-instruct.md",
-      "bytes": 4873,
-      "sha256": "250062e4922481a8f5e73e4764d3311a435dfb4da576b3a514a1a844bf30039a"
-    },
-    {
-      "path": "docs/learn/04-residual-stream.md",
-      "bytes": 4815,
-      "sha256": "c380c4f574688208fac4df7f38c23abbce7e8db457dc18a89dd057809f5e04f5"
-    },
-    {
-      "path": "docs/learn/05-cloze-scaffold.md",
-      "bytes": 5586,
-      "sha256": "c3b28927c08eaf0281707ba1d9181c18cfabb170b14e398e76eacb687d8d2c33"
-    },
-    {
-      "path": "docs/learn/06-logit-lens.md",
-      "bytes": 2368,
-      "sha256": "bef0a67c95a994225249d734b9aac41d72b1354f232348a4927fb2024dbedda5"
-    },
-    {
-      "path": "docs/learn/07-entropy.md",
-      "bytes": 3933,
-      "sha256": "bd209f35f95dc2c3d30926b6efa2db28da2652a8b741e6c3e13170c9cbf5e284"
-    },
-    {
-      "path": "docs/learn/08-kl-depth.md",
-      "bytes": 5943,
-      "sha256": "da280996a695d034081033ba46e9a059085a38c6c64f8d9a94857d151fdbb825"
-    },
-    {
-      "path": "docs/learn/09-gold-logprob.md",
-      "bytes": 5010,
-      "sha256": "cf6fc2363aad537656fed196eee0482541e6f27bbad3a608e23238e08a253d79"
-    },
-    {
-      "path": "docs/learn/10-separation.md",
-      "bytes": 5136,
-      "sha256": "49c148332b68fd1b178adc315ab0696a50dec261541915535684b47a4ad81781"
-    },
-    {
-      "path": "docs/learn/11-control-confound.md",
-      "bytes": 3948,
-      "sha256": "157f1e7710807da181fd3b45b8f206d1a997ef9347d008fd1331d2d3ff5ba3dd"
-    },
-    {
-      "path": "docs/learn/12-task-ladder.md",
-      "bytes": 4698,
-      "sha256": "7de43a6ebdac20eeaa38f497fb75a3b5f99ce6bfb5f70175d2c330a83c3e3281"
-    },
-    {
-      "path": "docs/learn/13-memorization-generalization.md",
-      "bytes": 4954,
-      "sha256": "4b189dc690814d6ac02957e7ea69c5d0d2406cd70a83f10b6f1281187578853e"
-    },
-    {
-      "path": "docs/learn/14-provenance.md",
-      "bytes": 4448,
-      "sha256": "8dbfb5d58e505edf5b1ba954e5541777c64b3bffb58b4972514575b5290ea3cf"
-    },
-    {
-      "path": "docs/learn/15-three-hypotheses.md",
-      "bytes": 5591,
-      "sha256": "11f3e2cd3b37a17daceb8d92b4449d110ed22e6af7a14941759273928cfdd8d7"
-    },
-    {
-      "path": "docs/learn/16-effect-size-dose.md",
-      "bytes": 6066,
-      "sha256": "da608a0f38759f8cab8aad8f8bfb9ee57bfe3303607696204afa8a5af687ea1d"
-    },
-    {
-      "path": "docs/learn/17-manipulation-check.md",
-      "bytes": 5298,
-      "sha256": "372e7da47c39e2028be497121ea2b04dce548db01f01ce43d343829f8bfe647e"
-    },
-    {
-      "path": "docs/learn/18-adversarial-review.md",
-      "bytes": 4119,
-      "sha256": "4c7a121dccbd3fd9648273db7a65943ec632b5e0fe88876be5f9e6041880cd37"
-    },
-    {
-      "path": "docs/learn/20-patching-sae.md",
-      "bytes": 6020,
-      "sha256": "08ef3494d9771b412b5f3fd3fb99452e3cc5fcbc9215b83d6d1f376e03e86ad5"
-    },
-    {
-      "path": "docs/learn/21-double-rounding.md",
-      "bytes": 3266,
-      "sha256": "9b7f7cee08791622746af4f48bfb795864c595f47b0eda48ea7d1b967d0d0ca3"
-    },
-    {
-      "path": "docs/learn/22-tie-ceiling.md",
-      "bytes": 2954,
-      "sha256": "adc7b9d6445d51348dda95fa757129c9fc365e628c192649bbf2d1f95afa75c0"
-    },
-    {
-      "path": "docs/learn/23-permutation-calibration.md",
-      "bytes": 4751,
-      "sha256": "fa36c6499e72f98e032753e8df4f4235810fc189bbf1d5f725f12a97136a4735"
-    },
-    {
-      "path": "docs/learn/24-decision-rule-reachability.md",
-      "bytes": 4651,
-      "sha256": "c8961642403b2896faab62f324621b6de1ce5132fa77d3bf9b4d407dea741bc2"
-    },
-    {
-      "path": "docs/learn/25-literature-search.md",
-      "bytes": 4909,
-      "sha256": "39a85d5cbffc3e2bc080e1a62621ec6073a17952062141a67c13f40aaa526c39"
-    },
-    {
-      "path": "docs/learn/26-corrupt-and-restore.md",
-      "bytes": 4456,
-      "sha256": "1322a507fa1950f4b6f2c624a91499df5a39a05ee9e32d566d4be17f02d53fac"
-    },
-    {
-      "path": "docs/learn/27-tost-equivalence.md",
-      "bytes": 4286,
-      "sha256": "d505883877339d4c3aaa295bfc0370d768f6b6ed8f0e8a48dcc6342ac5cdb089"
-    },
-    {
-      "path": "docs/learn/28-fp16-kernel-noise.md",
-      "bytes": 4514,
-      "sha256": "cda2c239fce0796cbd6c042f72b1dfcb22746b95393f0feef84efc8fd4349d55"
-    },
-    {
-      "path": "docs/learn/29-common-mode-cancellation.md",
-      "bytes": 4998,
-      "sha256": "48a418c9706194024238f422f15b90748e39a859c4f7437808d8cf4eb71358a9"
-    },
-    {
-      "path": "docs/learn/30-two-point-extrapolation.md",
-      "bytes": 5461,
-      "sha256": "410ec315e3fe7bb81029bd0bda955d7df364183787a91abe2b49b44c130fbf89"
-    },
-    {
-      "path": "docs/learn/31-interface-contracts.md",
-      "bytes": 5377,
-      "sha256": "9f615260215552694ab0ef9276e7e34acade490ad19c5cdb33ee2d49ce0ea13f"
-    },
-    {
-      "path": "docs/learn/32-tokenizer-bookkeeping.md",
-      "bytes": 1579,
-      "sha256": "3f8882f8c9625cab68b4b48e58148b001e6d1b8460e0e41836a921faae781ae8"
-    },
-    {
-      "path": "docs/learn/33-blind-rederivation.md",
-      "bytes": 1663,
-      "sha256": "2bc22302d924f275d5c3164370befbc43c9f42b955419f6d3cd7c3e23d264f42"
-    },
-    {
-      "path": "docs/learn/index.md",
-      "bytes": 4201,
-      "sha256": "d599fec58e81d1ed9ab1a824ef7e1f8117437f5598e42eca351bd0145644a014"
+      "bytes": 12881,
+      "sha256": "4f746a5f4a93eb5cba83f74f61c7118407655a5a889d76b27a565466bb9c2737"
     },
     {
       "path": "results/analysis_allenai_OLMo-2-0425-1B.json",
@@ -748,22 +583,22 @@
     {
       "path": "results/night/R1_verify_part1.py",
       "bytes": 16953,
-      "sha256": "959e095fe27d21a1346dc846d553134a623899f2b59a739107ffd49c1357d148"
+      "sha256": "eb119d769e1e12d7e34373bf85666caaeefa0557038bf11f204db80992a635d1"
     },
     {
       "path": "results/night/R1_verify_part2.py",
       "bytes": 9648,
-      "sha256": "efd79bea7fdc7398a05e1acb058f38b5f2202d8e8321501349651ccc30615a0d"
+      "sha256": "858114498caff898fc01226a775e53c9112608d9df12ea620884775bc114b245"
     },
     {
       "path": "results/night/R5_range_matching.py",
-      "bytes": 8856,
-      "sha256": "122889f41b4584a93bafc9d2ab1eee8271ee2ab0630428254ac90a2e4c5e4fcd"
+      "bytes": 8896,
+      "sha256": "df634ddf5f861b4dd8aea7313933c883964f37c92dc36cecb4dbccd80fbed88e"
     },
     {
       "path": "results/night/R1_verification.md",
-      "bytes": 46004,
-      "sha256": "a23918b842107d211ea84b17742d5242eccc8b7c8b7cc2e3fb96857d9d4331da"
+      "bytes": 46080,
+      "sha256": "926eb8dde07427d9f0f0e24e919c6dcee35be4ec651be1f5c0535343a9333738"
     },
     {
       "path": "results/figures/fig1_dose_response.png",
@@ -847,15 +682,15 @@
     },
     {
       "path": "PROCESS_LOG.md",
-      "bytes": 51539,
-      "sha256": "95b0f7951ccbdda62c6c50bf55a08350494fdbc05e639ec0ca978fa0a94323a2"
+      "bytes": 51847,
+      "sha256": "f660ba7e4758ab55ecae0b530ff9a3a78a99abc72488ec7db7d9b03196d7b088"
     },
     {
       "path": "README.md",
-      "bytes": 11091,
-      "sha256": "d5159b54e74aa4735e8c50c338d867bce0c751351d0923571cbf6eacea687672"
+      "bytes": 11844,
+      "sha256": "df4dbb82349a73afecb52e72a4cf77adb06e22a8e52be06a5aabe77c2cb09064"
     }
   ],
-  "count": 171,
-  "total_bytes": 25233501
+  "count": 138,
+  "total_bytes": 25089475
 }

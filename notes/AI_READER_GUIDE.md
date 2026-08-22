@@ -23,11 +23,15 @@ hence most predictable.**
 1. `docs/WRITEUP_v1.0_EN.md` — read the Abstract. (`STORY_ZH.md` covers
    the same arc in plain language but is an internal record, not
    shipped with this package.)
-2. `docs/learn/index.md` — 33 concept cards; read titles, open only
-   what you need.
+2. `docs/WRITEUP_v1.0_EN.md` §2–§3 — the three instrument generations
+   and the corpus-side entanglement finding. This is the conceptual
+   grounding every later step assumes. (Plain-language concept cards
+   covering these ideas one at a time are withheld from this release
+   pending English translation.)
 3. **Verdict documents (the load-bearing conclusions):**
    - v0.7 behavioral verdict + v0.7.1 anchor correction:
-     `docs/CORRECTION_20260821_ANCHOR.md` (published, DOI'd)
+     `docs/CORRECTION_20260821_ANCHOR.md` (published, DOI'd; **English +
+     Chinese**, the English section comes first)
    - Causal main experiment unblinding: `results/causal/analysis_main_winB1.json`
      (frozen analyzer output; narrative in `docs/WRITEUP_v1.0_EN.md` §4)
    - Position test (§7.7): the blind-frozen mapping document
@@ -52,9 +56,16 @@ hence most predictable.**
    shipped with this package — freeze order and amendment history are
    summarized in `docs/WRITEUP_v1.0_EN.md` §4.1 and §9–§10. Two
    preregistration documents ship, one per phase:
-   `docs/PREREG_L0P.md` (behavioral phase, public since v0.7 as commit
-   `459710c`) and `planning/CAUSAL_PREREG_v1.md` (causal phase,
-   stage 1; confidential-term scan clean, shipped unmodified).
+   `docs/PREREG_L0P.md` (behavioral phase, **English**, public since v0.7
+   as commit `459710c`, shipped as frozen) and
+   `planning/CAUSAL_PREREG_v1.md` (causal phase, stage 1, **Chinese** —
+   its content is summarized in English in `docs/WRITEUP_v1.0_EN.md` §4)
+   — the latter is a **public rendition**, not
+   the frozen original: its scientific content is unchanged, and
+   internal workflow sentences and references to unshipped working
+   records are masked in place with a visible
+   `[redacted: internal workflow note]` marker. The frozen original
+   remains a local record and does not ship.
    The causal phase's **second-stage** freeze record
    (`planning/CAUSAL_STAGE2_FREEZE.md`) does **not** ship
    (confidential-term scan: one hit, an internal-process phrase in an
@@ -91,7 +102,7 @@ hence most predictable.**
 ## Reproduction quickstart
 
 Each `harness/*.py` header lists its rerun command. Environment:
-Python 3.12 venv at repo root, torch cu126, 8GB consumer GPU (fp32
+Python 3.12 venv at repo root, torch cu124, 8GB consumer GPU (fp32
 paths run on CPU). Frozen constants live in `harness/causal_analysis.py`
 (B=20000, seed=20260822) — single source, do not re-derive.
 

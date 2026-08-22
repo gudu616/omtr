@@ -13,6 +13,35 @@ separate rows below because they are separate claims.
 
 18 distinct reference entries, 19 URLs checked (one entry carries two URLs).
 
+## Scope — what this log does and does not cover
+
+**Which documents it covers.** This log verifies the reference list carried by the
+writeup through v0.5 → v0.6 → v0.7. It covers both the bibliographic facts (title,
+authors, date, live URL, re-fetched 2026-08-21) and the claim level: full text was
+obtained for 18/18 sources and each claim the draft made about a source was given a
+verdict — 44 HOLDS, 9 QUALIFIED, 2 CONTRADICTED — with the corrections applied to the
+draft in both languages (see the closing section).
+
+**Where v1.0 stands.** **v1.0 introduces no new references.** It does not restate the
+related-work discussion; it points readers to the v0.7 document's "Why this question"
+section, and the twelve works cited there are all present in the table below. That
+coverage check was done on 2026-08-22 by matching each cited work against this table —
+**it is a coverage check, not a fresh re-verification**; the substantive verification
+of those entries is the 2026-08-21 pass recorded here, and no source was re-fetched on
+2026-08-22.
+
+**The rule for anything new.** A source must be read in full and entered in this table,
+with a check date, before it may be cited in the writeup. A source that does not appear
+below is not cited in the paper — that is the invariant this file exists to make
+checkable, and it is why v1.0's body contains no citations of its own rather than
+informal ones.
+
+**What this log does not claim.** It is not self-refreshing. Links verified on
+2026-08-21 can rot afterwards, and nothing here re-checks them; a reader finding a dead
+link is finding link rot, not a retracted verification. The QUALIFIED verdicts are also
+part of the record rather than footnotes to it: where a characterization needed
+narrowing, the narrowing is listed at the end of this file and was applied to the text.
+
 ## Verification table
 
 | Entry | URL | Status | Date checked | Note |

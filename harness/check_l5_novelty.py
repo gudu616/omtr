@@ -4,7 +4,8 @@
 對應各模型自己的訓練語料索引。輸出連續量（frac_present 等），不做二元判定。
 
 用法： .venv/Scripts/python.exe harness/check_l5_novelty.py
-輸出： results/novelty_report.json
+輸出： archive/novelty_report.json（historical，GPT 二審後移出 results/；
+       這是一次性的 L5 溯源查證，不是現行 pipeline 的一步，故落點跟著移）
 """
 import json
 import sys
@@ -47,7 +48,8 @@ def main():
                 fp = nv["frac_present"]
                 print(f"  -> frac_present={fp if fp is None else round(fp, 2)} "
                       f"max_count={nv['max_count']}", flush=True)
-    out = PROJ / "results" / "novelty_report.json"
+    out = PROJ / "archive" / "novelty_report.json"
+    out.parent.mkdir(parents=True, exist_ok=True)
     with open(out, "w", encoding="utf-8") as f:
         json.dump(report, f, ensure_ascii=False, indent=2)
     ok = [r for r in report if r.get("frac_present") is not None]
