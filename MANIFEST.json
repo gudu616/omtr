@@ -112,8 +112,8 @@
     },
     {
       "path": "docs/WRITEUP_v1.0_EN.md",
-      "bytes": 55200,
-      "sha256": "1d1523c6459589ab46f75f801bd8a88ca967b6eb790e842aa03bb8b8674b6357"
+      "bytes": 55321,
+      "sha256": "d15aa53667b35a81668c7dc176e129b65650f20473ea1cc7cb9215f04e836573"
     },
     {
       "path": "docs/FOR_YOUR_AI.md",
@@ -847,8 +847,8 @@
     },
     {
       "path": "PROCESS_LOG.md",
-      "bytes": 50253,
-      "sha256": "384492bfd8cb5ed7ab49ef6e4fcb4ff28afc6447e6d9f4618fed7a93e433480e"
+      "bytes": 50224,
+      "sha256": "b548af3fb86b21423f810333451b84bf6c1964c0ce57b935c5164ed6dbcb3dcd"
     },
     {
       "path": "README.md",
@@ -857,5 +857,5 @@
     }
   ],
   "count": 171,
-  "total_bytes": 25234503
+  "total_bytes": 25234595
 }

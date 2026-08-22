@@ -2,7 +2,7 @@
 
 ### Three instrument generations, three preregistered non-separations, and a corpus-side measurement of a reason it is hard here
 
-**Leo Gudu** · 2026-08-22 · v1.0d
+**Leo Gudu** · 2026-08-22 · v1.0
 
 *Disclosure: research conducted by the author with extensive AI-agent assistance
 under preregistered protocols; every number carries a rerun command.*
@@ -736,6 +736,9 @@ track was emptied by its own quality gates (§4.6).
 ---
 
 ## 9. Corrections history
+
+*Letter suffixes below (b, c, d) denote pre-release drafting iterations of
+this document; the released version is v1.0.*
 
 The project's public record includes its reversals. Each was published with the
 original text struck through rather than rewritten.
